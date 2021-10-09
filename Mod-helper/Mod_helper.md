@@ -46,4 +46,4 @@ HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支
 
 Ⅲ.如果你的能力很优秀，也可以直接查看游戏日志来找出问题的原因。
 
-Ⅳ.如果无法理解日志内容，那么请将/.minecraft/crash-reports和/.minecraft/log文件夹打包发给其他人寻求帮助
+Ⅳ.如果无法理解日志内容，那么请将/.minecraft/crash-reports和/.minecraft/log文件夹打包发给其他人寻求帮助。
