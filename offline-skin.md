@@ -18,9 +18,9 @@ toc: true
 
 打开HMCL, 进入 **账号列表** , 点击如图红框处
 
-![](./assets/img/docs/offline-skin/img1.png)
+![](/assets/img/docs/offline-skin/img1.png)
 
-![](./assets/img/docs/offline-skin/img2.png)
+![](/assets/img/docs/offline-skin/img2.png)
 
 > 默认: 使用默认随机的皮肤显示
 >
@@ -34,7 +34,7 @@ toc: true
 
 点击 **本地皮肤图片文件** , 设置 **皮肤/披风** 路径, 点击 **确认**, 即可
 
-![](./assets/img/docs/offline-skin/img3.png)
+![](/assets/img/docs/offline-skin/img3.png)
 
 ## LittleSkin
 
@@ -42,24 +42,24 @@ toc: true
 
 然后前往 [角色管理](https://littleskin.cn/user/player), 查看您的角色名, 如果没有, 请点击 **添加新角色** 进行添加
 
-![](./assets/img/docs/offline-skin/img4.png)
+![](/assets/img/docs/offline-skin/img4.png)
 
 在HMCL中创建的离线账户的 账户名 **必须 **和角色名相等, 如果不相等, 请 **重新在HMCL中创建离线账户**
 
-![](./assets/img/docs/offline-skin/img5.png)
+![](/assets/img/docs/offline-skin/img5.png)
 
 确认相等后, 点击 **LittleSkin** 即可
 
-![](./assets/img/docs/offline-skin/img6.png)
+![](/assets/img/docs/offline-skin/img6.png)
 
 ## Blessing Skin 服务器
 
 登录Blessing Skin 服务器, 进入 **角色管理** , 查看角色名 , 确认 **角色名** 和 **HMCL中创建的离线账号角色名** 相同, 如果不相等, 请 **重新在HMCL中创建离线账户**
 
-![](./assets/img/docs/offline-skin/img7.png)
+![](/assets/img/docs/offline-skin/img7.png)
 
 进入 **配置生成**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可
 
 > 注意: **V3.4.205及以下**需要把末尾的 / 去掉, 这个BUG将会在**下个版本**修复
 
-![](./assets/img/docs/offline-skin/img8.png)
+![](/assets/img/docs/offline-skin/img8.png)
