@@ -1,4 +1,12 @@
-# HMCL 联机教程 v1.0
+---
+title:  "多人联机教程"
+permalink: /help/launcher/multiplayer/help.html
+date:   2021-10-09 23:18:02 +0800
+categories: HMCL
+toc: true
+---
+
+> 本文由 wifi-left 编写。
 
 ## 注意
 
@@ -16,7 +24,7 @@ HMCL 联机模块使用了第三方软件 [Cato](https://noin.cn/71.html)，所�
 
 左键此处，您将会打开联机页面。
 
-![多人联机界面](F:\Website-Wiki\pages\HMCL\img1.png)
+![多人联机界面](/assets/img/docs/multiplayer/help/img1.png)
 
 
 
@@ -66,13 +74,13 @@ HMCL 此时不会关闭界面。
 
 设置好所有内容后，点击确认按钮后，将会出现对局域网开放成功的信息。（如下图红色边框内的信息）
 
-![游戏地图创建局域网成功画面](F:\Website-Wiki\pages\HMCL\In-game.png)
+![游戏地图创建局域网成功画面](/assets/img/docs/multiplayer/help/In-game.png)
 
 此时，请回到 HMCL 多人联机界面。点击 `创建房间` ，您将看到您的局域网游戏已经被正确识别。
 
 单击确认按钮，即可创建房间。
 
-![create-room](create-room.png)
+![create-room](/assets/img/docs/multiplayer/help/create-room.png)
 
 创建完毕后，点击 `复制邀请码` ，将邀请码复制到您的粘贴板内。
 

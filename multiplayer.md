@@ -1,4 +1,12 @@
-# HMCL 联机帮助
+---
+title:  "多人联机帮助"
+permalink: /help/launcher/multiplayer/
+date:   2021-10-09 23:18:02 +0800
+categories: HMCL
+toc: true
+---
+
+> 本文由 wifi-left 编写。
 
 ## 注意
 
@@ -12,5 +20,5 @@ HMCL 联机模块使用了第三方软件 [Cato](https://noin.cn/71.html)，所�
 
 ## 索引
 
-[HMCL 联机教程](./Help/Multi_Help.md)
+[HMCL 联机教程](help.html)
 

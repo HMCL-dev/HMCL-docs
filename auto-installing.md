@@ -1,10 +1,18 @@
-# MOD
+---
+title:  "自动安装与模组下载简介"
+permalink: /help/launcher/auto-installing.html
+date:   2021-10-09 23:18:02 +0800
+categories: HMCL
+toc: true
+---
+
+> 本文由 asdqp233 编写。
 
 ## 安装Mod加载器
 
 当你在安装新的游戏客户端时候，会看到其中有forge，liteloader，fabric这3个mod加载器可供选择。
 
-![mod_loader](C:\Users\Administrator\Desktop\mod_loader.png)
+![mod_loader](/assets/img/docs/auto-installing/mod_loader.png)
 
 当你使用1.14及以上的游戏版本时，推荐使用fabric，1.14以下的版本推荐使用forge。liteloader只适用1.12及以前的版本(目前已停更)。
 
@@ -22,7 +30,7 @@ HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支
 
 **注意：请区分*Forge Mod* 和*Fabric Mod*，大部分mod在文件名中会注明，请不要选择错误，否则mod无法被正确加载。**
 
-![mod_install](C:\Users\Administrator\Desktop\mod_install.png)
+![mod_install](/assets/img/docs/auto-installing/mod_install.png)
 
 ### Fabric Mod
 
@@ -40,10 +48,10 @@ HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支
 
 造成游戏报错的原因有很多，比如mod之间不兼容，fabric api的版本过高，缺少前置mod等等。
 
-Ⅰ.新版本的HMCL拥有错误分析功能，可以根据HMCL的提示来排查原因。
+1. 新版本的HMCL拥有错误分析功能，可以根据HMCL的提示来排查原因。
 
-Ⅱ.也可以使用二分法来解决——每次加入/删除一半的mod，挨个排除，直到找到导致游戏报错的mod为止。
+2. 也可以使用二分法来解决——每次加入/删除一半的mod，挨个排除，直到找到导致游戏报错的mod为止。
 
-Ⅲ.如果你的能力很优秀，也可以直接查看游戏日志来找出问题的原因。
+3. 如果你的能力很优秀，也可以直接查看游戏日志来找出问题的原因。
 
-Ⅳ.如果无法理解日志内容，那么请将/.minecraft/crash-reports和/.minecraft/log文件夹打包发给其他人寻求帮助。
+4. 如果无法理解日志内容，那么请将/.minecraft/crash-reports和/.minecraft/log文件夹打包发给其他人寻求帮助。
