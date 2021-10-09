@@ -7,69 +7,59 @@ toc: true
 ---
 
 > 本文由 今天 HMCL 更新了吗？ 编写。
+> qiaoshouzi 对其进行了重写
 
-**注意：**
+# 离线模式下更换皮肤
 
-**Ⅰ.本文档仅适用于HMCL3.4.205及以上版本，不支持**HMCL3.3.188**，请在设置→启动器更新中点击【测试版】升级为3.4.205及以上版本。**
+> 1. 本文档仅适用于V3.4.205及以上版本, **不支持V3.3.188**, 请在 设置→通用→启动器更新 中选择 **测试版** 并升级到V3.4.205及以上版本
+>
+> 2. 使用 默认、Steve、Alex、本地皮肤图片文件: 多人联机下其他玩家无法看到您的皮肤  
+> 使用 LittleSkin、Blessing Skin 服务器: 多人联机下和您使用相同方式的玩家可以看到您的皮肤, 其他玩家不可以
 
-**Ⅱ.多人联机下其他玩家无法看到你的皮肤！**
+打开HMCL, 进入 **账号列表** , 点击如图红框处
 
-## 方法
+![](./assets/img/docs/offline-skin/1.png)
 
-在HMCL中点击***账户列表***
+![](./assets/img/docs/offline-skin/2.png)
 
-如图：
+> 默认: 使用默认随机的皮肤显示
+>
+> Steve: 使用Steve(史蒂夫)皮肤显示
+>
+> Alex: 使用Alex(艾利克斯)皮肤显示
+>
+> [本地皮肤图片文件](#本地皮肤图片文件)、[LittleSkin](#LittleSkin)、[Blessing Skin 服务器](#Blessing Skin 服务器): 见下面
 
-![clip_image001](/assets/img/docs/offline-skin/clip_image001.png)
+## 本地皮肤图片文件
 
-点击已新建好的***离线账户***的这个**`衣叉图标`**：
+点击 **本地皮肤图片文件** , 设置 **皮肤/披风** 路径, 点击 **确认**, 即可
 
-![clip_image003](/assets/img/docs/offline-skin/clip_image003.png)
+![](./assets/img/docs/offline-skin/3.png)
 
-跳出此页面：
+## LittleSkin
 
-![clip_image005](/assets/img/docs/offline-skin/clip_image005.png)
+首先您需要一个LittleSkin的账号, [登录](https://littleskin.cn/auth/login)|[注册](https://littleskin.cn/auth/register)
 
-**分别意思：**
+然后前往[角色管理](https://littleskin.cn/user/player), 查看您的角色名, 如果没有, 请点击 **添加新角色** 进行添加
 
-Ⅰ.默认：使用默认随机的皮肤显示
+![](./assets/img/docs/offline-skin/4.png)
 
-Ⅱ.Steve：使用Steve（史蒂夫）皮肤显示
+在HMCL中创建的离线账户的 **账户名必须和角色名相等**, 如果不相等, 请 **重新在HMCL中创建离线账户**
 
-Ⅲ.Alex：使用Alex（艾利克斯）皮肤显示
+![](./assets/img/docs/offline-skin/5.png)
 
-Ⅳ.本地皮肤图片文件：
+确认相等后, 点击 **LittleSkin** 即可
 
-## 从本地选择皮肤或披风
+![](./assets/img/docs/offline-skin/6.png)
 
-点击这个按钮即可从本地选择皮肤或披风图
+## Blessing Skin 服务器
 
-![clip_image007](/assets/img/docs/offline-skin/clip_image007.png)
+登录Blessing Skin 服务器, 进入 **角色管理** , 查看角色名 , 确认 **角色名** 和 **HMCL中创建的离线账号角色名** 相同
 
-### Littleskin
+![](./assets/img/docs/offline-skin/7.png)
 
-在右下角点击***[Littleskin皮肤站]((https://mcskin.littleservice.cn/))***转到网站注册/登录
+进入 **配置生成**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可
 
-![clip_image009](/assets/img/docs/offline-skin/clip_image009.png)
+> 注意: V3.4.205之前需要把末尾的 / 去掉, 这个BUG将会在下个版本修复
 
-先在**`Littleskin——角色管理`** 里将你想弄的角色ID记住（如我这里是kitefly）
-
-如果无角色，点击![clip_image011](/assets/img/docs/offline-skin/clip_image011.png)新增角色
-
-![clip_image013](/assets/img/docs/offline-skin/clip_image013.png)
-
-你可在**`Littleskin——我的衣柜`**里修改角色的皮肤（不做过多演示）
-
-
-
-回到HMCL里新建一个离线账号，名字填刚刚在Littleskin账号名称（如我这里是kitefly）如图：
-
-![clip_image015](/assets/img/docs/offline-skin/clip_image015.png)
-
-点击已新建好的***离线账户***的这个**`衣叉图标`**：
-
-![clip_image017](/assets/img/docs/offline-skin/clip_image017.jpg)
-
-将**`默认`**改成**`Littleskin`**，然后就会显示***Littleskin***里设置的皮肤
-
-![clip_image018](/assets/img/docs/offline-skin/clip_image018.png)
+![](./assets/img/docs/offline-skin/8.png)
