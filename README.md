@@ -4,6 +4,11 @@ Hello Minecraft! Launcher 帮助文档仓库
 您可以通过对本仓库提交 Pull Request 的方式来为 HMCL 帮助文档贡献自己的力量！
 本仓库内容使用 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) 协议（附带额外条款）开放，协议内容请参见 LICENSE 文件。
 
+## Markdown
+每篇文章由 Markdown 编写。如果你不知道什么是 Markdown，我们推荐你先大概了解一下这个排版工具。
+
+我们推荐你使用 Typora 编写 Markdown 文章，该软件的使用方法和 Word 等传统文字排版软件相似，易于使用。
+
 ## 贡献
 本仓库组织方式为一篇文章放在一个目录中。如果你要提交 PR，请不要将 md 文件直接放在根目录下。
 
