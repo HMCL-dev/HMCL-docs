@@ -6,6 +6,8 @@ categories: HMCL
 toc: true
 ---
 
+> 本文由 huanghongxun 编写。
+
 ## 前言
 
 HMCL 会检测你的网络的 NAT 类型，一般为以下 5 种：
