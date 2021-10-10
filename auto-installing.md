@@ -24,7 +24,9 @@ toc: true
 
 ## 安装Mod
 
-### Forge Mod
+### 自动安装
+
+#### Forge Mod
 
 HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支持中文搜索（匹配结果不一定准确）。点开mod下载页面，最上方会显示当前mod需要的前置mod（如果有的话），以及mod支持的全部版本，请根据你当前安装的游戏版本选择恰当的版本。
 
@@ -32,17 +34,27 @@ HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支
 
 ![mod_install](/assets/img/docs/auto-installing/mod_install.png)
 
-### Fabric Mod
+#### Fabric Mod
 
 *Fabric Mod* 的安装和*Forge Mod*的安装类似，参照上文。
 
 **注意：所有的*Fabric Mod*都需要*Fabric API*（前置mod）在安装Mod加载器时候如果没有选择，请先安装*Fabric API*（安装方法和普通mod安装方法相同），否则*Fabric Mod*无法被加载！**
 
-### LiteLoader Mod
+#### LiteLoader Mod
 
 *LiteLoader Mod*安装和*Forge Mod*的安装类似，参照上文。
 
 **注意：LiteLoader 只能加载文件后缀为litemod的模组，Forge Mod修改后缀后LiteLoader无法检测。**
+
+### 手动安装
+
+一般的Mod文件后缀为`jar`或者`litemod`。
+
+将这个jar文件复制到`\.minecraft\mods`文件夹中即可 (没有这个文件夹就自己新建一个)。如果开了版本隔离，那么文件夹是`\.minecraft\version\<客户端名称>/mods`。
+
+或者在HMCL中`游戏管理页面—模组管理`页面点击添加模组或直接将文件拖入启动器窗口。
+
+![mod_add](assets/img/docs/auto-installing/mod_add.png)
 
 ## 安装Mod后游戏报错/无法启动
 
@@ -55,3 +67,4 @@ HMCL内置了Curseforge源和 Modrinth源的搜索和下载功能，目前已支
 3. 如果你的能力很优秀，也可以直接查看游戏日志来找出问题的原因。
 
 4. 如果无法理解日志内容，那么请将/.minecraft/crash-reports和/.minecraft/log文件夹打包发给其他人寻求帮助。
+
