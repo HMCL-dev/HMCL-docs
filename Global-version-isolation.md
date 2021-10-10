@@ -35,4 +35,5 @@ title:  "全局版本隔离"
 在做完版本隔离的设置后，hmcl 的快速打开各个游戏文件夹的功能就会显得十分重要。
 ![](assets/img/docs/Global-version-isolation/img2.png)
 
+
 善用该功能也可为你的磁盘剩下不少的空间
