@@ -19,7 +19,7 @@ title:  "全局版本隔离"
 |*libraries
 |*versions
     \1.16.5-optifine
-        |*1.16.5-optifine.jar
+        |1.16.5-optifine.jar
         |*saves
         |*resourcepacks
         |*logs
