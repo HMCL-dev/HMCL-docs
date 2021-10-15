@@ -56,13 +56,13 @@ toc: true
 
 ## Blessing Skin 服务器
 
-[注册](https://skin.prinzeugen.net/auth/register)并[登录](https://skin.prinzeugen.net/auth/login)**Blessing Skin 服务器, 进入 **[角色管理](https://skin.prinzeugen.net/user/player)** , 查看角色名 , 确认 **角色名** 和 **HMCL中创建的离线账号角色名** 相同, 如果不相等, **请重新在HMCL中创建离线账户**
+**Blessing Skin 服务器, 进入 **角色管理** , 查看角色名 , 确认 **角色名** 和 **HMCL中创建的离线账号角色名** 相同, 如果不相等, **请重新在HMCL中创建离线账户**
 
-你可在 [我的衣柜](https://skin.prinzeugen.net/user/closet) 修改此账户名的皮肤与披风
+你可在 我的衣柜 修改此账户名的皮肤与披风
 
 ![](/assets/img/docs/offline-skin/img4_1.png)
 
-进入 **[配置生成](https://skin.prinzeugen.net/user/config)**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可同步在Blessing Skin 服务器上此账户名的皮肤
+进入 **配置生成**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可同步在Blessing Skin 服务器上此账户名的皮肤
 
 > 注意: **V3.4.205**需把链接末尾的 / 去掉, 这个BUG已经在**V3.4.206**修复
 
