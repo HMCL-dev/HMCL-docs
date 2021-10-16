@@ -10,7 +10,7 @@
 
 ## 关于游戏的下载
 __想必你注意到我了，记住上面讲的话__
-首先 minecraft 的下载有着 hmcl 十分的简单  
+首先 Minecraft 的下载有着 HMCL 十分的简单  
 首先打开你的 hmcl   
 ![](assets/img/docs/about-questions/img.png)
 找到 `下载`  
@@ -38,7 +38,7 @@ __想必你注意到我了，记住上面讲的话__
 资源包详细资料   [跳转](https://minecraft.fandom.com/zh/wiki/%E8%B5%84%E6%BA%90%E5%8C%85)
 
 ## 关于游戏的 mods 
-mods 是基于 modloader 的一个从文件上更改游戏的内容的外置组件  
+mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组件  
 你可以在这获得 __更多的游戏内容__、__更好的游戏体验__、__更好的游戏观感__ 等等
 
 关于 mods 的详细使用方法 [跳转](auto-installing.md)
@@ -49,7 +49,7 @@ mods 是基于 modloader 的一个从文件上更改游戏的内容的外置组�
 ## 关于游戏的 Java 选择
 这边你一般先使用默认的 Java  
 
-进阶一些的话，考虑 jdk11+
+进阶一些的话，考虑 Java11+
 选择其他方法：
 > 先保证你有其他的Java
 > 进入 设置-->全局游戏设置-->Java路径--->选择自定义并找到你需要的 jdk 的路径后确定
