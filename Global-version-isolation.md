@@ -1,8 +1,11 @@
 ---
 title:  "全局版本隔离"
+permalink: /help/launcher/isolation.html
+date:   2021-10-09 23:18:02 +0800
+categories: HMCL
+toc: true
 ---
 > 本文由 LIPiston 编写。
-# 全局版本隔离
 这是一个游戏客户端很多不方便寻找的最佳解决方案<br/>
 **注意：改方法会改变默认的 minecraft 文件结构**
 
