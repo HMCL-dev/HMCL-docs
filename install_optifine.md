@@ -2,7 +2,7 @@
 
 ## 安装Optifine
 
-### 方式一
+### 方式一（推荐）
 
 当你在安装新的游戏客户端时候，会看到有个`Optifine`的选项。
 
@@ -14,7 +14,7 @@
 
 选择完合适的版本之后就可以点击右下角的`安装`继续进行安装。
 
-### 方式二
+    **或者**
 
 在对应的游戏版本管理页面，点击`自动安装`，你会看到有个`Optifine`的选项。
 
@@ -22,9 +22,21 @@
 
 点开之后选择合适的版本然后等待安装完成即可。
 
+
+
+### 方法二（推荐，可在当列表无Optifine或Optifine不是最新时使用）
+
+在[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
+
+
+在对应的游戏版本管理页面，点击自动安装，再点击【从本地文件安装/升级】，此时HMCL会弹出文件选择窗口，选择刚才下载的文件，等待HMCL安装完毕即可
+
+![Method5](https://user-images.githubusercontent.com/64117916/147845121-25a8429d-5593-4d85-a627-35039575e8d2.png)
+
+
 ### 方式三
 
-在[Optifine官网](https://www.optifine.net/)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
+在[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
 
 双击打开或者使用`java -jar 文件名` 的方式打开，然后你就会看到这个界面。
 
@@ -34,7 +46,7 @@
 
 ### 方式四
 
-从[Optifine官网](https://www.optifine.net/)上下载的jar文件本身也可作为Mod被加载，具体方法见 [Mod安装教程](auto-installing.html)
+从[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载的jar文件本身也可作为Mod被加载，具体方法见 [Mod安装教程](auto-installing.html)
 
 注意：
 
