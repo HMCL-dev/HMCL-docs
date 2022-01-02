@@ -46,7 +46,7 @@
 
 ### 方式四
 
-从[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载的jar文件本身也可作为Mod被加载，具体方法见 [Mod安装教程](auto-installing.html)
+从[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载的jar文件本身也可作为Mod被加载，具体方法见 [Mod安装教程](auto-installing.md)
 
 注意：
 
