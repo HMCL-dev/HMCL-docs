@@ -26,7 +26,7 @@
 
 ### 方法二（推荐，可在当列表无Optifine或Optifine不是最新时使用）
 
-在[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
+在[Optifine官网](https://optifine.net/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
 
 
 在对应的游戏版本管理页面，点击自动安装，再点击【从本地文件安装/升级】，此时HMCL会弹出文件选择窗口，选择刚才下载的文件，等待HMCL安装完毕即可
@@ -36,7 +36,7 @@
 
 ### 方式三
 
-在[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
+在[Optifine官网](https://optifine.net/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
 
 双击打开或者使用`java -jar 文件名` 的方式打开，然后你就会看到这个界面。
 
@@ -46,13 +46,13 @@
 
 ### 方式四
 
-从[Optifine官网](https://optifine.net/downloads)或[Optifine中文网](https://optifine.cn/downloads)上下载的jar文件本身也可作为Mod被加载，具体方法见 [Mod安装教程](auto-installing.md)
+从[Optifine官网](https://optifine.net/downloads)上下载的jar文件，该文件本身也可作为Mod被加载，具体操作方法见 [Mod安装教程](auto-installing.md)
 
 注意：
 
-1.Fabric和Optifine本身并不能共存，必须同时安装[Optifabric](https://www.curseforge.com/minecraft/mc-mods/optifabric)（一个Mod）。
+1.Fabric和Optifine本身并不能共存，必须同时安装[Optifabric](https://www.curseforge.com/minecraft/mc-mods/optifabric)（一个Mod），具体操作方法见 [Mod安装教程](auto-installing.md)
 
-2.1.14-1.16的Forge和Optifine会出现不兼容的情况，请使用[Optiforge](https://www.curseforge.com/minecraft/mc-mods/optiforge)（一个Mod）解决。
+2.1.14-1.16的Forge和Optifine会出现不兼容的情况，请使用[Optiforge](https://www.curseforge.com/minecraft/mc-mods/optiforge)（一个Mod）解决，具体操作方法见 [Mod安装教程](auto-installing.md)
 
 ## 安装光影
 
