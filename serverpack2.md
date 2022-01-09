@@ -59,7 +59,7 @@
 
   ![](/assets/img/docs/serverpack2/2.7.jpg)
 
-- **按照图中所写添加，懒的话按照图2，想要安全的话按照图1**
+- **按照图中所写添加，想要安全的话按照图1，懒的话按照图2**
 
 - 回到那个黑黑的界面里输入 `yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh` ，按下回车
 
