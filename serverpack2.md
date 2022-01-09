@@ -29,7 +29,9 @@
 
 - 以腾讯云举例，阿里云同理
 
-- 打开控制台面板，找到刚才租的学生机![](/assets/img/docs/serverpack2/2.1.jpg)
+- 打开控制台面板，找到刚才租的学生机
+
+  ![](/assets/img/docs/serverpack2/2.1.jpg)
 
 - 选择重置密码
 
