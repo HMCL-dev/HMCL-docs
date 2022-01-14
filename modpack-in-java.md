@@ -66,14 +66,14 @@
 
 ## 一些疑问
 
-Q：jre-x64 文件夹中具体该放些什么，直接复制就行了吗？
+1Q：jre-x64 文件夹中具体该放些什么，直接复制就行了吗？
 
-A：是的，复制 jre 内的所有东西就行
+1A：是的，复制 jre 内的所有东西就行
 
+——————————————————————————————————————————————————
 
+2Q：去哪里找Java？
 
-Q：去哪里找Java？
-
-A：有很多的Java提供选择，如[Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)和[Oracle openJDK](http://jdk.java.net/)
+2A：有很多的Java提供选择，如[Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)和[Oracle openJDK](http://jdk.java.net/)
 
 只需要在下载时下载**.zip的压缩包文件**，且将压缩包内的所有内容放入`jre-x64`或`jre-x86`即可
