@@ -5,7 +5,8 @@ pipeline:
       - touch Gemfile.lock
       - chmod a+w Gemfile.lock
       - chown -R jekyll:jekyll /drone
-      - gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+      - gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
+      - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
       - bundle install
       - bundle exec jekyll build
 
