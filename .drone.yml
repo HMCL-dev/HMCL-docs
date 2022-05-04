@@ -26,7 +26,7 @@ steps:
 volumes:
 - name: dist
   host:
-    path: /home/ubuntu/docs.hmcl.net
+    path: /home/ubuntu/docs.hmcl.net/site
 - name: cache
   host:
-    path: /home/ubuntu/cache/docs.hmcl.net
+    path: /home/ubuntu/docs.hmcl.net/cache
