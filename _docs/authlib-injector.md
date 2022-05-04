@@ -1,6 +1,6 @@
 ---
 title:  "Authlib-Injector 服务器设置指南"
-permalink: /help/launcher/authlib-injector.html
+permalink: /launcher/authlib-injector.html
 date:   2021-08-22 23:18:02 +0800
 categories: HMCL
 toc: true
