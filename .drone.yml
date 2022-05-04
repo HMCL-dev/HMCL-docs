@@ -23,4 +23,4 @@ steps:
 volumes:
 - name: dist
   host:
-    path: ~/docs.hmcl.net
+    path: /home/ubuntu/docs.hmcl.net
