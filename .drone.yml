@@ -16,6 +16,7 @@ steps:
     - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
     - bundle install
     - bundle exec jekyll build
+    - bash scripts/copy_index_json.sh
   volumes:
   - name: dist
     path: /drone/src/_site
