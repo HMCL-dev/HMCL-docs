@@ -25,7 +25,7 @@
 
 ### 方式三：官网安装
 
-在[Optifine官网](https://www.optifine.net/)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
+在[Optifine官网](https://optifine.net/downloads)上下载合适版本的Optifine（下载完应为`OptiFine_<游戏版本>_<Optifine版本>.jar`）。
 
 双击打开或者使用`java -jar 文件名` 的方式打开，然后你就会看到这个界面。
 
@@ -47,7 +47,7 @@
 2. Forge和Optifine会出现不兼容的情况，但大多数情况下，forge 和 optifine 是相互支持的（多半是后者修改后能兼容前者）。
 3. 若出现不兼容的情况，请使用[Optiforge](https://www.curseforge.com/minecraft/mc-mods/optiforge)（一个Forge Mod）解决。
 
-## 安装光影
+## 安装光影包
 
 一般光影是一个zip格式的文件，将光影文件放入`\.minecraft\shaders`文件夹中即可 (没有这个文件夹就自己新建一个)。如果开了版本隔离，那么文件夹是`\.minecraft\version\<客户端名称>/shaders`
 
