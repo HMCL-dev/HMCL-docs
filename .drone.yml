@@ -5,12 +5,13 @@ pipeline:
       - touch Gemfile.lock
       - chmod a+w Gemfile.lock
       - chown -R jekyll:jekyll /drone
+      - gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
       - gem update --system
       - gem install bundler
       - bundle install
       - bundle exec jekyll build
 
-  deploy:
+  deploy-site:
     image: drillster/drone-rsync
     source: _site/*
     target: ~/docs.hmcl.net
