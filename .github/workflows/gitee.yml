@@ -13,7 +13,7 @@ jobs:
         with:
           src: github/huanghongxun
           dst: gitee/huanghongxun
-          static_list: 'HMCL'
+          static_list: 'HMCL-docs'
           force_update: true
           debug: true
           dst_key: ${{ secrets.GITEE_SYNC_BOT_PRIVATE_KEY }}
