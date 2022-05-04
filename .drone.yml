@@ -22,11 +22,13 @@ steps:
     path: /drone/src/_site
   - name: cache
     path: /drone/src/.jekyll-cache
+  when:
+    branch: [main]
 
 volumes:
 - name: dist
   host:
-    path: /home/ubuntu/docs.hmcl.net/site
+    path: /home/ubuntu/docs.hmcl.net/www
 - name: cache
   host:
     path: /home/ubuntu/docs.hmcl.net/cache

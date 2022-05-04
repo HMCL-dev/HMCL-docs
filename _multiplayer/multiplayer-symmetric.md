@@ -1,8 +1,8 @@
 ---
 title: "NAT 网络检测为差的时候怎么办？"
-permalink: /help/launcher/multiplayer-symmetric.html
+permalink: /multiplayer/symmetric.html
 date: 2021-10-09 23:18:02 +0800
-categories: HMCL
+categories: 多人联机
 toc: true
 ---
 

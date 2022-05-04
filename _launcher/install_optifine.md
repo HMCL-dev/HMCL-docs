@@ -1,3 +1,10 @@
+---
+title:  "光影和Optifine"
+permalink: /launcher/optifine.html
+date:   2021-10-09 23:18:02 +0800
+categories: 启动器
+toc: true
+---
 # 光影和Optifine
 
 ## 安装Optifine

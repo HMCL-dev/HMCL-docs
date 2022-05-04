@@ -1,8 +1,8 @@
 ---
-title: 文档
+title: 整合包
 layout: collection
-permalink: /docs/
-collection: docs
+permalink: /modpack/
+collection: modpack
 entries_layout: grid
 classes: wide
 ---

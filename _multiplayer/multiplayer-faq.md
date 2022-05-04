@@ -1,3 +1,10 @@
+---
+title:  "HMCL 多人联机常见问题"
+permalink: /multiplayer/faq.html
+date:   2021-10-09 23:18:02 +0800
+categories: 多人联机
+toc: true
+---
 # ![](icon.png)**HMCL 多人联机常见问题**
 
 > 本篇文章由 Zkitefly 编写。

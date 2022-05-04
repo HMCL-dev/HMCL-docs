@@ -1,8 +1,8 @@
 ---
-title: 文档
+title: 启动器
 layout: collection
-permalink: /docs/
-collection: docs
+permalink: /launcher/
+collection: launcher
 entries_layout: grid
 classes: wide
 ---

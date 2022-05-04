@@ -1,8 +1,8 @@
 ---
 title:  "自动安装与模组下载简介"
-permalink: /help/launcher/auto-installing.html
+permalink: /launcher/auto-installing.html
 date:   2021-10-09 23:18:02 +0800
-categories: HMCL
+categories: 启动器
 toc: true
 ---
 

@@ -1,4 +1,11 @@
- # 整合包自带 Java 教程
+---
+title:  "整合包自带 Java 教程"
+permalink: /modpack/bundled-java.html
+date:   2021-10-09 23:18:02 +0800
+categories: 整合包
+toc: true
+---
+# 整合包自带 Java 教程
 
 ## 背景
 

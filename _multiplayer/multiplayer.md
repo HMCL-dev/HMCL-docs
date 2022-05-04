@@ -1,8 +1,8 @@
 ---
 title:  "多人联机帮助"
-permalink: /help/launcher/multiplayer.html
+permalink: /multiplayer/
 date:   2021-10-09 23:18:02 +0800
-categories: HMCL
+categories: 多人联机
 toc: true
 ---
 

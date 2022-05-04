@@ -52,6 +52,18 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  launcher:
+    output: true
+    permalink: /:collection/:path/
+
+  modpack:
+    output: true
+    permalink: /:collection/:path/
+
+  multiplayer:
+    output: true
+    permalink: /:collection/:path/
+
 defaults:
   - scope:
       path: "assets/img"
@@ -64,6 +76,15 @@ defaults:
   - scope:
       path: "_docs"
       type: docs
+  - scope:
+      path: "_launcher"
+      type: launcher
+  - scope:
+      path: "_modpack"
+      type: modpack
+  - scope:
+      path: "_multiplayer"
+      type: multiplayer
     values:
       layout: single
       read_time: false
