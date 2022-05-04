@@ -3,19 +3,64 @@
         "title": "启动器",
         "items": [
             {
-                "title": "Authlib-Injector 服务器设置指南",
-                "subtitle": "手动打包整合包后，初次打开动器时直接弹出对应的账号登录页",
-                "url": "https://hmcl.huangyuhui.net/help/launcher/authlib-injector.html"
-            },
-            {
                 "title": "数据包制作指南",
                 "subtitle": "制作可以由 HMCL 导入的数据包",
-                "url": "https://hmcl.huangyuhui.net/help/launcher/datapack.html"
+                "url": "https://docs.hmcl.net/launcher/datapack.html"
+            },
+            {
+                "title": "OptiFine 与光影",
+                "subtitle": "OptiFine 与光影的安装方法",
+                "url": "https://docs.hmcl.net/launcher/optifine.html"
+            },
+            {
+                "title": "离线模式下更换皮肤",
+                "subtitle": "如何在离线模式下使用自定义角色皮肤",
+                "url": "https://docs.hmcl.net/launcher/offline-skin.html"
+            },
+            {
+                "title": "自动安装与模组下载",
+                "subtitle": "安装 Forge、LiteLoader、Fabric；安装 Mod 教程",
+                "url": "https://docs.hmcl.net/launcher/auto-installing.html"
+            },
+            {
+                "title": "版本隔离",
+                "subtitle": "避免多个游戏版本存档和 Mod 配置冲突的解决方案",
+                "url": "https://docs.hmcl.net/launcher/isolation.html"
+            }
+        ]
+    },
+    {
+        "title": "整合包",
+        "items": [
+            {
+                "title": "Authlib-Injector 服务器设置指南",
+                "subtitle": "手动打包整合包后，初次打开动器时直接弹出对应的账号登录页",
+                "url": "https://docs.hmcl.net/launcher/authlib-injector.html"
             },
             {
                 "title": "服务端自动更新整合包制作教程",
                 "subtitle": "服务端自动更新整合包允许启动器根据服主配置强制更新玩家游戏客户端",
-                "url": "https://hmcl.huangyuhui.net/help/launcher/serverpack.html"
+                "url": "https://docs.hmcl.net/modpack/serverpack.html"
+            }
+        ]
+    },
+    {
+        "title": "多人联机",
+        "items": [
+            {
+                "title": "多人联机常见问题",
+                "subtitle": "多人联机常见问题",
+                "url": "https://docs.hmcl.net/multiplayer/faq.html"
+            },
+            {
+                "title": "多人联机教程",
+                "subtitle": "多人联机教程端",
+                "url": "https://docs.hmcl.net/multiplayer/help.html"
+            },
+            {
+                "title": "NAT 网络检测为差的时候怎么办？",
+                "subtitle": "NAT 网络检测为差的时候怎么办？",
+                "url": "https://docs.hmcl.net/multiplayer/symmetric.html"
             }
         ]
     }
