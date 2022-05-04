@@ -2,8 +2,11 @@ kind: pipeline
 type: docker
 name: default
 
+clone:
+  depth: 1
+
 steps:
-- name: jekyll-build
+- name: build
   image: jekyll/jekyll:4.2.2
   commands:
     - touch Gemfile.lock
@@ -14,13 +17,10 @@ steps:
     - bundle install
     - bundle exec jekyll build
 
-- name: deploy-site
+- name: rsync
   image: drillster/drone-rsync
   settings:
     source: _site/*
     target: ~/docs.hmcl.net
     recursive: true
     delete: true
-  when:
-    branch: [master]
-    event: [push]
