@@ -19,8 +19,13 @@ steps:
   volumes:
   - name: dist
     path: /drone/src/_site
+  - name: cache
+    path: /drone/src/.jekyll-cache
 
 volumes:
 - name: dist
   host:
     path: /home/ubuntu/docs.hmcl.net
+- name: cache
+  host:
+    path: /home/ubuntu/cache/docs.hmcl.net
