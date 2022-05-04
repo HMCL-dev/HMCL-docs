@@ -1,21 +1,26 @@
-pipeline:
-  jekyll-build:
-    image: jekyll/jekyll:4.2.2
-    commands:
-      - touch Gemfile.lock
-      - chmod a+w Gemfile.lock
-      - chown -R jekyll:jekyll /drone
-      - gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
-      - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
-      - bundle install
-      - bundle exec jekyll build
+kind: pipeline
+type: docker
+name: default
 
-  deploy-site:
-    image: drillster/drone-rsync
+steps:
+- name: jekyll-build
+  image: jekyll/jekyll:4.2.2
+  commands:
+    - touch Gemfile.lock
+    - chmod a+w Gemfile.lock
+    - chown -R jekyll:jekyll /drone
+    - gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
+    - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+    - bundle install
+    - bundle exec jekyll build
+
+- name: deploy-site
+  image: drillster/drone-rsync
+  settings:
     source: _site/*
     target: ~/docs.hmcl.net
     recursive: true
     delete: true
-    when:
-      branch: [master]
-      event: [push]
+  when:
+    branch: [master]
+    event: [push]
