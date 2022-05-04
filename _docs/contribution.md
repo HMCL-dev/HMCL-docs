@@ -1,6 +1,6 @@
 ---
 title:  "为 HMCL 帮助文档出一份力"
-permalink: /contribution.html
+permalink: /launcher/contribution.html
 date:   2021-10-09 23:18:02 +0800
 categories: HMCL
 toc: true
