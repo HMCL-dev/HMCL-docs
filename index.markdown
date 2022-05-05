@@ -23,7 +23,7 @@ You can also submit your suggestions here.
 
 ## HMCL 问题集合
 
-1. [新手问题](/launcher/faq.html)
+1. [新手问题](/faq.html)
 1. [启动器使用相关](/launcher/)
 2. [整合包帮助](/modpack/)
 2. [多人联机帮助](/multiplayer/)
@@ -44,7 +44,7 @@ You can also submit your suggestions here.
 
    他将告诉你如何设置一个属于自己的离线皮肤。
 
-4. [HMCL 的自动安装使用教程](/launcher/auto-installing.md)
+4. [HMCL 的自动安装使用教程](/launcher/auto-installing.html)
 
    它将告诉你如何用 HMCL 安装 Forge、Fabric、Fabric API、LiteLoader、Optifine 以及 模组 等。
 
@@ -68,7 +68,7 @@ You can also submit your suggestions here.
 
 ## 其他
 
-1. [为 HMCL 做出贡献](/launcher/contribution.html)
+1. [为 HMCL 做出贡献](/contribution.html)
 2. [HMCL GitHub 地址](http://github.com/huanghongxun/HMCL)
 3. [HMCL 帮助文档 GitHub 地址](http://github.com/huanghongxun/HMCL-docs)
 4. [HMCL 官网](http://hmcl.huangyuhui.net)

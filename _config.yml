@@ -76,12 +76,36 @@ defaults:
   - scope:
       path: "_docs"
       type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
   - scope:
       path: "_launcher"
       type: launcher
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "launcher"
   - scope:
       path: "_modpack"
       type: modpack
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "modpack"
   - scope:
       path: "_multiplayer"
       type: multiplayer
@@ -92,7 +116,7 @@ defaults:
       share: false
       comments: false
       sidebar:
-        nav: "docs"
+        nav: "multiplayer"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
