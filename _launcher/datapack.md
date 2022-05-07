@@ -1,8 +1,8 @@
 ---
 title:  "数据包制作指南"
-permalink: /help/launcher/datapack.html
+permalink: /launcher/datapack.html
 date:   2021-08-22 23:18:02 +0800
-categories: HMCL
+categories: 启动器
 toc: true
 ---
 

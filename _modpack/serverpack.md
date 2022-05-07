@@ -1,8 +1,8 @@
 ---
 title:  "服务端自动更新整合包制作教程"
-permalink: /help/launcher/serverpack.html
+permalink: /modpack/serverpack.html
 date:   2021-08-22 23:18:02 +0800
-categories: HMCL
+categories: 整合包
 toc: true
 ---
 

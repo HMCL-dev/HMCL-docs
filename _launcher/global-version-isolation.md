@@ -1,8 +1,8 @@
 ---
 title:  "全局版本隔离"
-permalink: /help/launcher/isolation.html
+permalink: /launcher/isolation.html
 date:   2021-10-09 23:18:02 +0800
-categories: HMCL
+categories: 启动器
 toc: true
 ---
 > 本文由 LIPiston 编写。

@@ -1,3 +1,11 @@
+---
+title:  "各大问题集合"
+permalink: /faq.html
+date:   2021-10-09 23:18:02 +0800
+categories: 启动器
+toc: true
+---
+
 > 本文由 LIiston 编写。
 
 # 各大问题集合
@@ -41,9 +49,9 @@ __想必你注意到我了，记住上面讲的话__
 mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组件  
 你可以在这获得 __更多的游戏内容__、__更好的游戏体验__、__更好的游戏观感__ 等等
 
-关于 mods 的详细使用方法 [跳转](auto-installing.md)
+关于 mods 的详细使用方法 [跳转](/launcher/auto-installing.html)
 ### 关于 mods 的报错解决方法
-在 [此文](auto-installing.md) 末尾中的确讲到了一定的解决方法
+在 [此文](/launcher/auto-installing.html) 末尾中的确讲到了一定的解决方法
 
 但是我还是建议你看看更为详细的内容 [目前未写该教程，请等待]()
 ## 关于游戏的 Java 选择

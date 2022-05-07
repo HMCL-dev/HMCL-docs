@@ -1,0 +1,34 @@
+kind: pipeline
+type: docker
+name: default
+
+clone:
+  depth: 1
+
+steps:
+- name: build
+  image: jekyll/jekyll:4.2.2
+  commands:
+    - touch Gemfile.lock
+    - chmod a+w Gemfile.lock
+    - chown -R jekyll:jekyll /drone
+    - gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
+    - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+    - bundle install
+    - bundle exec jekyll build
+    - bash scripts/copy_index_json.sh
+  volumes:
+  - name: dist
+    path: /drone/src/_site
+  - name: cache
+    path: /drone/src/.jekyll-cache
+  when:
+    branch: [main]
+
+volumes:
+- name: dist
+  host:
+    path: /home/ubuntu/docs.hmcl.net/www
+- name: cache
+  host:
+    path: /home/ubuntu/docs.hmcl.net/cache

@@ -1,0 +1,147 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+title: Hello Minecraft! Launcher 帮助文档
+email: hmcl@huangyuhui.net
+description: >- # this means to ignore newlines until "baseurl:"
+  HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://docs.hmcl.net"
+twitter_username: huanghongxun
+github_username:  huanghongxun
+breadcrumbs: true
+
+# Build settings
+#theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-archives
+  - jekyll-seo-tag
+
+include:
+  - _pages
+
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+  launcher:
+    output: true
+    permalink: /:collection/:path/
+
+  modpack:
+    output: true
+    permalink: /:collection/:path/
+
+  multiplayer:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "assets/css"
+    values:
+      css: true
+  - scope:
+      path: "_docs"
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
+  - scope:
+      path: "_launcher"
+      type: launcher
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "launcher"
+  - scope:
+      path: "_modpack"
+      type: modpack
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "modpack"
+  - scope:
+      path: "_multiplayer"
+      type: multiplayer
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "multiplayer"
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Outputting
+permalink: /:categories/:title/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
