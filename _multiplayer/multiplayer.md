@@ -12,7 +12,7 @@ toc: true
 
 请在使用多人联机模块之前您需要同意 [HMCL 用户协议](https://hmcl.huangyuhui.net/eula)。
 
-HMCL 联机模块使用了第三方软件 [Cato](https://noin.cn/71.html)，所以您也需要同意 [用户协议与免责声明  - 这里 (noin.cn)](https://noin.cn/agreement)。
+HMCL 联机模块使用了第三方软件 [HiPer](https://mcer.cn/104.html)。
 
 联机需要使用网络，请确保您的网络通畅。
 
@@ -22,3 +22,8 @@ HMCL 联机模块使用了第三方软件 [Cato](https://noin.cn/71.html)，所�
 
 1. [HMCL 联机教程](/multiplayer/help.html)
 2. [NAT 网络类型为差怎么办？](/multiplayer/symmetric.html)
+
+## 使用授权
+
+多人联机服务由速聚提供：
+![img](/assets/img/docs/multiplayer/授权书_HMCL.png)
