@@ -21,7 +21,7 @@ HMCL 联机模块使用了第三方软件 [HiPer](https://mcer.cn/104.html)。
 ## 索引
 
 1. [HMCL 联机教程](/multiplayer/help.html)
-2. [NAT 网络类型为差怎么办？](/multiplayer/symmetric.html)
+2. [参与者账户问题（无正版能玩吗）](/multiplayer/account.html)
 
 ## 使用授权
 
