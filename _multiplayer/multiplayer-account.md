@@ -42,7 +42,7 @@ toc: true
 
 ## 四、大功告成
 
-你已经完成了配置外置登录账户的操作，只需按照[此处](/multiplayer/help.html#%E5%8F%82%E4%B8%8E%E8%80%85)
+你已经完成了配置外置登录账户的操作，只需按照[此处](/multiplayer/help.html#%E5%8F%82%E4%B8%8E%E8%80%85)继续操作即可！
 
 # 创建方
 
@@ -69,3 +69,7 @@ toc: true
 (true为开启，false为关闭，在视频中我输入错了QAQ)
 
 [***视频***](https://zkitefly.github.io/hiper-d/p/25.mp4)
+
+## 三、大功告成
+
+你已经完成了关闭正版认证的操作，参与者可使用任意账户加入游戏了！
