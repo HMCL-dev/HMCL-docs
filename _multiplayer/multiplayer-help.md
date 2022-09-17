@@ -12,7 +12,7 @@ toc: true
 
 请在使用多人联机模块之前您需要同意 [HMCL 用户协议](https://hmcl.huangyuhui.net/eula) 
 
-HMCL 联机模块使用了第三方软件 HiPer
+HMCL 联机模块使用了第三方软件 HiPer，所以您也需要同意 [用户协议与免责声明](https://hmcl.huangyuhui.net/api/redirect/multiplayer-agreement)。
 
 联机需要使用网络，请确保您的网络通畅。
 
