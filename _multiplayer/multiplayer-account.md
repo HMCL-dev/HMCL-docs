@@ -56,7 +56,7 @@ toc: true
 
 另一个是：[简单联机(Server.Properties for LAN， 1.7.2-1.12.2)](https://www.mcmod.cn/class/1158.html)
 
-下载并安装相应模组加载器，并将模组放置 mods 文件夹即可
+下载并安装相应模组加载器，将模组放置 mods 文件夹即可
 
 ## 二、按照如下图或视频的操作方法关闭正版认证：
 
