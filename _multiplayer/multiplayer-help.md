@@ -18,13 +18,17 @@ HMCL 联机模块使用了第三方软件 HiPer
 
 请注意，**HMCL 只负责提供功能，在法律许可范围内，开发者不对本软件提供任何保证。用户使用本软件所造成的的风险均由用户自行承担。**
 
+## 售后
+
+[**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](https://mcer.cn)
+
 ## 使用步骤
 
 ### 零、使用管理员权限启动 HMCL
 
 *这一步的原因是 HiPer 的底层原理需要管理员权限*
 
-以下分为两类平台，一般用户请选择 Windows 平台
+以下分为两类平台，**一般用户请观看 Windows 平台**
 
 #### Windows 平台
 
@@ -34,7 +38,7 @@ HMCL 联机模块使用了第三方软件 HiPer
 
 若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”
 
-![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/1.png)
+![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/00.png)
 
 #### 非 Windows 平台
 
@@ -52,23 +56,29 @@ java -jar HMCL.jar
 sudo java -jar HMCl.jar
 ```
 
-#### 一、申请并输入凭证，启动 HiPer
+### 一、申请并输入凭证，启动 HiPer
 
 [申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
-*公众号中显示的“索引码”就是凭证*
+*注：公众号中显示的“索引码”就是我们说的**凭证***
 
-获得后将凭证输入到平针输入框，并点击“启动 HiPer”
+[**公众号相关问题可以在此处加入 官方交流QQ群 获得反馈**](https://mcer.cn)
+
+获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
 
 启动后你会看到该该页面
 
-![启动 HiPer 效果图](/assets/img/docs/multiplayer/1.png)
+![启动 HiPer 效果图](/assets/img/docs/multiplayer/help/1.png)
+
+**接下来分为[创建方](#创建方)和[参与者](#参与者)**
 
 ### 创建方
 
 #### 二、启动游戏
 
 点击多人联机页面的“启动游戏”即可
+
+*注：使用其他的启动器启动游戏也是可以的*
 
 #### 三、选择单人游戏模式进入一个存档
 
@@ -86,7 +96,7 @@ sudo java -jar HMCl.jar
 
 ![创建一个局域网世界](/assets/img/docs/multiplayer/help/5.png)
 
-此时你会在聊天框中显示开放端口
+此时你会在聊天框中看到游戏开放的端口
 
 ![开放端口](/assets/img/docs/multiplayer/help/6.png)
 
@@ -95,6 +105,8 @@ sudo java -jar HMCl.jar
 将开放的端口输入至 端口号 输入框中，之后在点击拷贝，将其发送给参与者
 
 ![将开放的端口输入至 端口号 输入框中，之后在点击拷贝，将其发送给参与者](/assets/img/docs/multiplayer/help/7.png)
+
+
 
 ### 参与者
 
@@ -115,6 +127,4 @@ sudo java -jar HMCl.jar
 
 2.一般情况下，参与者的游戏版本、模组要必须与创建方的一致，否则加入失败。
 
-## 存在问题
-
-**请到 [GitHub](https://github.com/huanghongxun/HMCL) 进行反馈！**
+3.[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](https://mcer.cn)
