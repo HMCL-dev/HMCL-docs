@@ -1,6 +1,6 @@
 ---
 title:  "参与者账户问题"
-permalink: /multiplayer/help.html
+permalink: /multiplayer/account.html
 date:   2022-09-17 11:00 +0800
 categories: 多人联机
 toc: true
