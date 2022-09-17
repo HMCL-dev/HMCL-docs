@@ -16,7 +16,13 @@ toc: true
 
 一般情况下，参与者的游戏账户必须是** 微软账户（及正版） 或 外置登录账户（如 Little Skin）**，否则加入失败
 
-接下来讲解参与者如何配置外置登录账户（以 Little Skin 为例）
+
+
+接下来讲解创建方关闭正版认证**或**参与者如何配置外置登录账户（以 Little Skin 为例）
+
+# 参与者配置
+
+只需参与者配置，创建方无需配置
 
 ## 一、进入账户列表页面，注册 Little Skin 账户，并验证邮箱
 
@@ -38,5 +44,28 @@ toc: true
 
 你已经完成了配置外置登录账户的操作，只需按照[此处](/multiplayer/help.html#%E5%8F%82%E4%B8%8E%E8%80%85)
 
+# 创建方
 
+只需创建方配置，参与者无需配置
 
+## 一、选择相应模组并安装
+
+有两个模组
+
+一个是：[自定义局域网联机(Lan Server Properties， 1.12-最新)](https://www.mcmod.cn/class/2754.html)
+
+另一个是：[简单联机(Server.Properties for LAN， 1.7.2-1.12.2)](https://www.mcmod.cn/class/1158.html)
+
+下载并安装相应模组加载器，并将模组放置 mods 文件夹即可
+
+## 二、按照如下图或视频的操作方法关闭正版认证：
+
+自定义局域网联机 Lan Server Properties：
+
+![img](/assets/img/docs/multiplayer-account/1.png)
+
+简单联机 Server.Properties for LAN：
+
+(true为开启，false为关闭，在视频中我输入错了QAQ)
+
+[***视频***](https://zkitefly.github.io/hiper-d/p/25.mp4)
