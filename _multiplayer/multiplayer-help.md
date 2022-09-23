@@ -30,6 +30,8 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 *这一步的原因是 HiPer 的底层原理需要管理员权限*
 
+**创建方 和 参与者都要做的**
+
 以下分为两类平台，**一般用户请观看 Windows 平台**
 
 #### Windows 平台
@@ -38,7 +40,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ![只需右键 HMCL.exe 点击“以管理员身份运行”即可](/assets/img/docs/multiplayer/help/0.png)
 
-若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”
+若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”，点击“确定”保存修改，之后正常打开即是管理员身份启动！
 
 ![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/help/00.png)
 
