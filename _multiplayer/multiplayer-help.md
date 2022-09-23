@@ -18,6 +18,8 @@ HMCL 联机模块使用了第三方软件 HiPer，所以您也需要同意 [用�
 
 请注意，**HMCL 只负责提供功能，在法律许可范围内，开发者不对本软件提供任何保证。用户使用本软件所造成的的风险均由用户自行承担。**
 
+The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/huanghongxun/HMCL-docs/pulls. Or you can enable your translation tool to read. 
+
 ## 售后
 
 [**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](https://mcer.cn)
@@ -62,7 +64,7 @@ sudo java -jar HMCl.jar
 
 *注：公众号中显示的“索引码”就是我们说的**凭证***
 
-[**公众号相关问题可以在此处加入 官方交流QQ群 获得反馈**](https://mcer.cn)
+[**公众号相关问题可以在此处加入 官方交流QQ群 获得反馈**](/multiplayer/feedback.html)
 
 获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
 
@@ -127,4 +129,4 @@ sudo java -jar HMCl.jar
 
 2.一般情况下，参与者的游戏版本、模组要必须与创建方的一致，否则加入失败。
 
-3.[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](https://mcer.cn)
+3.[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](/multiplayer/feedback.html)

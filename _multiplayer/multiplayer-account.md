@@ -8,17 +8,17 @@ toc: true
 
 > 本篇文章由 Zkitefly 编写。
 
+> The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/huanghongxun/HMCL-docs/pulls . Or you can enable your translation tool to read.
+
 # 售后
 
-[加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答](https://mcer.cn)
+[加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答](/multiplayer/feedback.html)
 
 # 前言
 
-一般情况下，参与者的游戏账户必须是** 微软账户（及正版） 或 外置登录账户（如 Little Skin）**，否则加入失败
+一般情况下，若创建方未关闭正版认证，那么参与者的游戏账户必须是** 微软账户（及正版） 或 外置登录账户（如 Little Skin）**，否则加入失败！
 
-
-
-接下来讲解创建方关闭正版认证**或**参与者如何配置外置登录账户（以 Little Skin 为例）
+接下来讲解 创建方关闭正版认证 **或** 参与者如何配置外置登录账户（以 Little Skin 为例）
 
 # 参与者配置
 

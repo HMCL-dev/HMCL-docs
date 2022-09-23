@@ -5,6 +5,9 @@ date:   2021-10-09 23:18:02 +0800
 categories: 多人联机
 toc: true
 ---
+
+# 此页面已过期，请勿阅读
+
 # ![](icon.png)**HMCL 多人联机常见问题**
 
 > 本篇文章由 Zkitefly 编写。
