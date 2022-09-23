@@ -62,6 +62,8 @@ sudo java -jar HMCl.jar
 
 ### 一、申请并输入凭证，启动 HiPer
 
+**创建方 和 参与者都要做的**
+
 [申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
 *注：公众号中显示的“索引码”就是我们说的**凭证***
@@ -69,6 +71,8 @@ sudo java -jar HMCl.jar
 [**公众号相关问题可以在此处加入 官方交流QQ群 获得反馈**](/multiplayer/feedback.html)
 
 获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
+
+**需要注意的是，凭证不能同时在线两个设备，也就是说，创建方 和 参与者 的凭证不能一致，否则启动 HiPer 失败！**
 
 启动后你会看到该该页面
 
