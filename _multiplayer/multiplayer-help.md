@@ -36,11 +36,11 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 只需右键 HMCL.exe 点击“以管理员身份运行”即可
 
-![只需右键 HMCL.exe 点击“以管理员身份运行”即可](/assets/img/docs/multiplayer/0.png)
+![只需右键 HMCL.exe 点击“以管理员身份运行”即可](/assets/img/docs/multiplayer/help/0.png)
 
 若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”
 
-![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/00.png)
+![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/help/00.png)
 
 #### 非 Windows 平台
 
