@@ -26,6 +26,10 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 使用步骤
 
+### 操作概览图
+
+![](/assets/img/docs/multiplayer/help/-0.png)
+
 ### 零、使用管理员权限启动 HMCL
 
 *这一步的原因是 HiPer 的底层原理需要管理员权限*
@@ -108,7 +112,7 @@ sudo java -jar HMCl.jar
 
 ![开放端口](/assets/img/docs/multiplayer/help/6.png)
 
-#### 五、输入端口，拷贝加入IP
+#### 五、输入游戏开放端口，拷贝加入IP，并发送给参与者
 
 将开放的端口输入至 端口号 输入框中，之后在点击拷贝，将其发送给参与者
 
