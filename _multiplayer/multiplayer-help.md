@@ -119,24 +119,22 @@ sudo java -jar HMCl.jar
 ![将开放的端口输入至 端口号 输入框中，之后在点击拷贝，将其发送给参与者](/assets/img/docs/multiplayer/help/7.png)
 
 
-
 ### 参与者
 
 #### 二、启动游戏
 
 点击多人联机页面的“启动游戏”即可
 
-#### 三、选择多人游戏模式，选择添加服务器
+#### 三、在“创建方服务器地址”中输入创建方发来的服务器地址，并点击加入
 
-点击“多人游戏”，“添加服务器”
+在“创建方服务器地址”中输入创建方发来的服务器地址
 
-游戏会要求你输入服务器地址，你只需要向创建方索要服务器地址并输入，并进入服务器即可。
-![输入服务器地址](/assets/img/docs/multiplayer/help/8.png)
+[输入创建方发来的服务器地址](/assets/img/docs/multiplayer/help/8.png)
 
-## 注意
+#### 三、选择多人游戏模式，加入房间
 
-1.一般情况下，参与者的游戏账户必须是** 微软账户 或 外置登录账户（如 Little Skin）**，否则加入失败，具体操作方法详见[此处](multiplayer/account.html)
+点击“多人游戏”，不出意外你会在“本地局域网检测”中找到HMCL房间（HMCL Multiplayer Session），进入服务器即可。
 
-2.一般情况下，参与者的游戏版本、模组要必须与创建方的一致，否则加入失败。
+## 反馈
 
-3.[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](/multiplayer/feedback.html)
+[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](/multiplayer/feedback.html)
