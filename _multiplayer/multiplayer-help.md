@@ -22,7 +22,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 售后
 
-[**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](https://mcer.cn)
+[**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](/multiplayer/feedback.html)
 
 ## 使用步骤
 
