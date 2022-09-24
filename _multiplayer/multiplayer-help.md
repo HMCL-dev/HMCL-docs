@@ -36,7 +36,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 *这一步的原因是 HiPer 的底层原理需要管理员权限*
 
-**创建方 和 参与者都要做的**
+**注意：创建方 和 参与者都要做的**
 
 以下分为两类平台，**一般用户请观看 Windows 平台**
 
@@ -68,7 +68,7 @@ sudo java -jar HMCl.jar
 
 ### 一、申请并输入凭证，启动 HiPer
 
-**创建方 和 参与者都要做的**
+**注意：创建方 和 参与者都要做的**
 
 [申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
@@ -80,7 +80,7 @@ sudo java -jar HMCl.jar
 
 **需要注意的是，凭证不能同时在线两个设备，也就是说，创建方 和 参与者 的凭证不能一致，否则启动 HiPer 失败！**
 
-启动后你会看到该该页面
+启动后你会看到该页面：
 
 ![启动 HiPer 效果图](/assets/img/docs/multiplayer/help/1.png)
 
@@ -127,6 +127,8 @@ sudo java -jar HMCl.jar
 #### 二、启动游戏
 
 点击多人联机页面的“启动游戏”即可
+
+*注：使用其他的启动器启动游戏也是可以的*
 
 #### 三、选择多人游戏模式，选择添加服务器
 
