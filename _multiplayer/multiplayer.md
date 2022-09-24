@@ -22,11 +22,9 @@ HMCL 联机模块使用了第三方软件 HiPer，所以您也需要同意 [用�
 
 1. [**HMCL 联机教程**](/multiplayer/help.html)
 
-2. [账户问题（无正版能玩吗）](/multiplayer/account.html)
+2. [反馈](/multiplayer/feedback.html)
 
-3. [反馈](/multiplayer/feedback.html)
-
-4. [获取凭证](/multiplayer/token.html)
+3. [获取凭证](/multiplayer/token.html)
 
 ## 使用授权
 
