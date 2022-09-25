@@ -14,6 +14,8 @@ toc: true
 
 HMCL 联机模块使用了第三方软件 HiPer，所以您也需要同意 [用户协议与免责声明](https://hmcl.huangyuhui.net/api/redirect/multiplayer-agreement)。
 
+你需要了解，HMCL 仅为 速聚 提供多人联机服务入口，使用中遇到的任何问题由 速聚 负责处理。您在使用多人联机服务过程中所遇到的任何问题与纠纷（包括其付费业务）均与 HMCL 无关，应与 速聚 协商解决。
+
 联机需要使用网络，请确保您的网络通畅。
 
 请注意，**HMCL 只负责提供功能，在法律许可范围内，开发者不对本软件提供任何保证。用户使用本软件所造成的的风险均由用户自行承担。**
@@ -22,7 +24,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 售后
 
-[**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](https://mcer.cn)
+[**加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答**](/multiplayer/feedback.html)
 
 ## 使用步骤
 
@@ -34,7 +36,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 *这一步的原因是 HiPer 的底层原理需要管理员权限*
 
-**创建方 和 参与者都要做的**
+**注意：创建方 和 参与者都要做的**
 
 以下分为两类平台，**一般用户请观看 Windows 平台**
 
@@ -44,7 +46,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ![只需右键 HMCL.exe 点击“以管理员身份运行”即可](/assets/img/docs/multiplayer/help/0.png)
 
-若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”，点击“确定”保存修改，之后正常打开即是管理员身份启动！
+若不想每次这样操作，只需右键点击属性，切换到上方的“兼容性”选项卡，并勾选“以管理员身份运行程序”，点击“确定”保存修改，之后正常打开即是管理员身份启动！
 
 ![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/help/00.png)
 
@@ -66,7 +68,7 @@ sudo java -jar HMCl.jar
 
 ### 一、申请并输入凭证，启动 HiPer
 
-**创建方 和 参与者都要做的**
+**注意：创建方 和 参与者都要做的**
 
 [申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
@@ -78,7 +80,7 @@ sudo java -jar HMCl.jar
 
 **需要注意的是，凭证不能同时在线两个设备，也就是说，创建方 和 参与者 的凭证不能一致，否则启动 HiPer 失败！**
 
-启动后你会看到该该页面
+启动后你会看到该页面：
 
 ![启动 HiPer 效果图](/assets/img/docs/multiplayer/help/1.png)
 
@@ -126,6 +128,8 @@ sudo java -jar HMCl.jar
 
 点击多人联机页面的“启动游戏”即可
 
+*注：使用其他的启动器启动游戏也是可以的*
+
 #### 三、选择多人游戏模式，选择添加服务器
 
 点击“多人游戏”，“添加服务器”
@@ -135,7 +139,7 @@ sudo java -jar HMCl.jar
 
 ## 注意
 
-1.一般情况下，参与者的游戏账户必须是** 微软账户 或 外置登录账户（如 Little Skin）**，否则你需要将服务器地址输入至下方的输入框中并点击“加入”，在游戏中选择多人游戏模式，进入局域网世界方可加入！
+1.一般情况下，参与者的游戏账户必须是 微软账户 或 外置登录账户（如 Little Skin），否则你需要将服务器地址输入至下方的输入框中并点击“加入”，在游戏中选择多人游戏模式，进入局域网世界方可加入！
 
 ![](/assets/img/docs/multiplayer/help/9.png)
 
