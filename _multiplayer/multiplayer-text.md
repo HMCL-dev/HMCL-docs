@@ -12,7 +12,11 @@ toc: true
 
 请启动 HiPer ，然后点击下方的图片，查看是否正常加载图片
 
+
+------------------------
 [https://the.bb/wp-content/uploads/thumb/2022/09/fill_w192_h192_g0_mark_96ae577c641f63_1_avatar.jpeg](https://the.bb/wp-content/uploads/thumb/2022/09/fill_w192_h192_g0_mark_96ae577c641f63_1_avatar.jpeg)
+
+------------------------
 
 **如果 创建方 和 参与者 能够正常加载图片，那么就代表能够正常联机！**
 
