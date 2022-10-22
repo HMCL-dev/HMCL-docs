@@ -36,7 +36,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
 
-**索引码一人一码。如果你的朋友需要，强烈建议让你的朋友自己获取，而不是帮他获取，因为每天第二次获取授权会变得更贵，[详情](/multiplayer/token.html##%E5%90%8E%E7%BB%AD%E8%8E%B7%E5%8F%96%E7%B4%A2%E5%BC%95%E7%A0%81)**
+**索引码需一人一码（各自不同的），因为索引码代表一个网络IP，若一个设备已经用了这个IP，网络已经有了这个IP，那么其他设备就不能用这个IP，因为他已经被占用了。如果你的朋友需要，强烈建议让你的朋友自己获取，而不是帮他获取，因为每天第二次获取授权会变得更贵，[详情](/multiplayer/token.html##%E5%90%8E%E7%BB%AD%E8%8E%B7%E5%8F%96%E7%B4%A2%E5%BC%95%E7%A0%81)**
 
 启动后你会看到该页面：
 
@@ -113,7 +113,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ### 2.加入世界后掉入虚空，然后显示连接终止怎么办
 
-请[关闭防火墙](#3如何关闭防火墙)），然后回到HMCL多人联机页面，将“创建服务器地址”一行点击 退出，并再次点击 加入，然后回到游戏进行加入
+请[关闭防火墙](#3如何关闭防火墙)，然后回到HMCL多人联机页面，将“创建服务器地址”一行点击 退出，并再次点击 加入，然后回到游戏进行加入
 
 ### 3.如何关闭防火墙
 
