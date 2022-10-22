@@ -10,16 +10,15 @@ toc: true
 
 # 测试能否联机
 
-**请启动 HiPer** ，然后点击下方的图片，查看是否正常加载图片
-
+**请启动 HiPer** ，然后点击下方的链接，查看是否正常加载网页
 
 ------------------------
-[https://the.bb/wp-content/uploads/thumb/2022/09/fill_w192_h192_g0_mark_96ae577c641f63_1_avatar.jpeg](https://the.bb/wp-content/uploads/thumb/2022/09/fill_w192_h192_g0_mark_96ae577c641f63_1_avatar.jpeg)
+[https://zkitefly.github.io/r/hipertest.html](https://zkitefly.github.io/r/hipertest.html)
 
 ------------------------
 
 **如果 创建方 和 参与者 都能够正常加载图片，那么就代表能够互相正常联机！**
 
-如果不能，请尝试关闭设备的网络防火墙，或将 HiPer 通过
+如果不能，请尝试[关闭设备的防火墙]()，或将 HiPer 通过
 
 [若任然不能，请到此处加入 官方交流 QQ 群](/multiplayer/feedback.html)

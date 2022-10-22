@@ -28,44 +28,6 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 使用步骤
 
-### 操作概览图
-
-![](/assets/img/docs/multiplayer/help/-0.png)
-
-### 零、使用管理员权限启动 HMCL
-
-*这一步的原因是 HiPer 的底层原理需要管理员权限*
-
-**注意：创建方 和 参与者都要做的**
-
-以下分为两类平台，**一般用户请观看 Windows 平台**
-
-#### Windows 平台
-
-只需右键 HMCL.exe 点击“以管理员身份运行”即可
-
-![只需右键 HMCL.exe 点击“以管理员身份运行”即可](/assets/img/docs/multiplayer/help/0.png)
-
-若不想每次这样操作，只需右键点击属性，切换到上方的“兼容性”选项卡，并勾选“以管理员身份运行程序”，点击“确定”保存修改，之后正常打开即是管理员身份启动！
-
-![若不想每次这样操作，只需右键点击属性，切换到上方到“兼容性”选项卡，并勾选“以管理员身份运行程序”](/assets/img/docs/multiplayer/help/00.png)
-
-#### 非 Windows 平台
-
-只需在启动命令前添加 `sudo` 指令，并输入用户密码（输入时不显示密码）回车即可
-
-如正常的启动命令是
-
-```
-java -jar HMCL.jar
-```
-
-那么在该命令前添加 `sudo` 指令即可
-
-```
-sudo java -jar HMCl.jar
-```
-
 ### 一、申请并输入凭证，启动 HiPer
 
 **注意：创建方 和 参与者都要做的**
@@ -146,3 +108,24 @@ sudo java -jar HMCl.jar
 2.一般情况下，参与者的游戏版本、模组要必须与创建方的一致，否则加入失败。
 
 3.[若遇到问题，可以加入 官方交流QQ群（HiPer）获得帮助](/multiplayer/feedback.html)
+
+## 常见问题
+
+### 1.显示连接终止怎么办
+
+请回到 HMCL 多人联机页面，将“创建服务器地址”一行点击 退出 ，并再次点击 加入 ，然后回到游戏进行加入
+
+### 2.加入世界后掉入虚空，然后显示连接终止怎么办
+
+请关闭防火墙（[_点击此处在右侧点击 下载 并运行该脚本即可_](https://gitcode.net/chearlai/f/-/blob/master/%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E8%84%9A%E6%9C%AC.bat)），然后回到HMCL多人联机页面，将“创建服务器地址”一行点击退出，并再次点击加入，然后回到游戏进行加入
+
+### 3.如何关闭防火墙
+
+#### 自动关闭
+
+[_点击此处在右侧点击 下载 并运行该脚本即可_](https://gitcode.net/chearlai/f/-/blob/master/%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E8%84%9A%E6%9C%AC.bat)
+
+#### 手动关闭
+
+[_请点击此处查看相关文章进行关闭_](https://cn.bing.com/search?q=%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99+Microsoft)
+
