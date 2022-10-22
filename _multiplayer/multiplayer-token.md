@@ -6,17 +6,108 @@ categories: 多人联机
 toc: true
 ---
 
-> 本文由 huanghongxun 编写。
+> 本文由 huanghongxun / zkitefly 编写。
 
-# 微信扫描下方二维码 或 微信搜索公众号 `速聚` ，关注 “速聚” 微信公众号，完成登记注册，即可领取使用授权
+# 微信扫描下方二维码 或 微信搜索公众号 `速聚` ，关注 “速聚” 微信公众号，完成登记注册，即可领取使用授权码
 
 > Scan the QR code below on WeChat or search the official account `速聚` on WeChat, follow the "速聚" WeChat official account (Chinese), complete the registration, and then you can get the token .
 
-[**帮助文档 (Docs)**](/multiplayer/help.html)
+![QR](/assets/img/docs/multiplayer-token/qrcode.jpg)
 
-[**联机相关问题可以在此处加入 官方交流QQ群 获得反馈 (Help)**](/multiplayer/feedback.html)
+# 详细
+
+> 引用自：https://shimo.im/docs/KrkEVXz1K0frowAJ/read
+
+## 初次获取索引码
+
+### 1、使用微信扫描下方二维码 或 微信搜索公众号“速聚”
 
 ![QR](/assets/img/docs/multiplayer-token/qrcode.jpg)
+
+### 2、关注公众号，然后点击“发消息”
+
+![](/assets/img/docs/multiplayer-token/2.png)
+
+### 3、在下方选择“获取授权”→“3/24 小时”
+
+![](/assets/img/docs/multiplayer-token/1.png)
+
+### 4、根据提示完成手机号验证，并登记 QQ 号（点击左下角的键盘图标即可输入文字）
+
+[没有收到验证短信码]()
+
+### 5、接下来会进入付款激活步骤
+
+![](/assets/img/docs/multiplayer-token/3.png)
+
+### 6、完成付款后，再次按 [第三步操作](#3在下方选择获取授权→324-小时) 获取授权，将红框中的内容输入 HMCL 即可
+
+> 索引码一人一码。如果你的朋友需要，强烈建议让你的朋友自己获取，而不是帮他获取，因为**每天第二次获取授权会变得更贵**，详见后文的说明
+
+- 虽然到这里就结束了，但我建议接着往下看一点，搞懂获取喵点的方式↓
+- 如果搞不懂 HMCL 里的后续操作，可以查看[联机教程](/multiplayer/help.html)
+- 如果遇到问题，可以在[这里询问](/multiplayer/feedback.html)
+
+## 后续获取索引码
+
+在第一次的复杂操作之后，再获取就很简单了……选择“获取授权”→“3/24 小时”就行。
+
+![](/assets/img/docs/multiplayer-token/1.png)
+
+不过，每次获取授权会消耗喵点（如果用完了就得充钱），你可以在“个人中心”→“我的信息”中查看余额。
+
+以 0 点为界，每天**第一次获取授权会消耗 5 喵点**获得 3 小时使用时间，**第二次及之后会消耗 20 喵点**获得 24 小时使用时间。因此没有特殊需求的话，个人强烈不建议第二次获取授权。
+
+每天都可以选择“个人中心”→“每日打卡”，获取随机量的喵点。
+
+> 一般没有这么多，这次是我运气好……
+
+![](/assets/img/docs/multiplayer-token/4.png)
+
+如果打卡的喵点依然不够用，可以将上图中的“幸运码”发给你的朋友。你的朋友首先先选择一次“个人中心”→“每日打卡”签到，然后在公众号上输入你的幸运码后（每次都要这样），你可以获得随机量的喵点。
+
+![](/assets/img/docs/multiplayer-token/5.png)
+
+因为从幸运码获取喵点是不限量的，所以理论上每天获取 5 个喵点续 3 个小时是没问题的……
+
+## 公众号相关问题
+
+### 1.微信无法扫描二维码
+
+请检查 微信扫一扫 的扫描方式，为 扫码 ，而不是识物
+
+![](/assets/img/docs/multiplayer-token/6.png)
+
+### 2.没有收到验证短信码
+
+请检查输入的手机号码是否正确
+
+**请认真按照公众号给出的提示进行相应发送指定的内容**
+
+你可以尝试按照公众号上提供的提示，自行发送短信到指定号码验证（及发送短信给短信网关）
+
+![](/assets/img/docs/multiplayer-token/7.png)
+
+### 3.公众号的 vip 有什么用?
+
+- 兑换折扣（除抽奖与活动外）最低八折，
+- 凭证最低从3小时升级为24小时，
+- 抽奖及打卡额外几率提升。
+- 年会员（点十次“加入会员”得十二个月）有其它特权（[需要加入 QQ 群了解详情](/multiplayer/feedback.html)）
+
+### 4.公众号的收费模式
+
+![](/assets/img/docs/multiplayer-token/8.png)
+
+### 5.HMCL 多人联机相关常见问题
+
+[请移步至此处](/multiplayer/help.html#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+
+
+#### 更多
+
+[请移步至此处](https://shimo.im/docs/5rk9dplRrYuYXjqx#anchor-o7yX)
+
 
 # 注意
 

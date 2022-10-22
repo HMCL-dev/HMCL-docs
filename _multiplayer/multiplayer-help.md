@@ -34,13 +34,9 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 [申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
-*注：公众号中显示的“索引码”就是我们说的**凭证***
-
-[**公众号相关问题可以在此处加入 官方交流QQ群 获得反馈**](/multiplayer/feedback.html)
-
 获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
 
-**需要注意的是，凭证不能同时在线两个设备，也就是说，创建方 和 参与者 的凭证不能一致，必须各自有各自的凭证，否则启动 HiPer 失败！**
+**索引码一人一码。如果你的朋友需要，强烈建议让你的朋友自己获取，而不是帮他获取，因为每天第二次获取授权会变得更贵，[详情](/multiplayer/token.html##%E5%90%8E%E7%BB%AD%E8%8E%B7%E5%8F%96%E7%B4%A2%E5%BC%95%E7%A0%81)**
 
 启动后你会看到该页面：
 
@@ -101,7 +97,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 注意
 
-1.一般情况下，参与者的游戏账户必须是 微软账户 或 外置登录账户（如 Little Skin），否则你需要将服务器地址输入至下方的输入框中并点击“加入”，在游戏中选择多人游戏模式，进入局域网世界方可加入！
+1.一般情况下，参与者的游戏账户必须是 微软账户 或 [外置登录账户（如 Little Skin）](/multiplayer/account.html)，否则你需要将服务器地址输入至下方的输入框中并点击“加入”，在游戏中选择多人游戏模式，进入局域网世界方可加入！
 
 ![](/assets/img/docs/multiplayer/help/9.png)
 
@@ -117,7 +113,7 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ### 2.加入世界后掉入虚空，然后显示连接终止怎么办
 
-请关闭防火墙（[_点击此处在右侧点击 下载 并运行该脚本即可_](https://gitcode.net/chearlai/f/-/blob/master/%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E8%84%9A%E6%9C%AC.bat)），然后回到HMCL多人联机页面，将“创建服务器地址”一行点击退出，并再次点击加入，然后回到游戏进行加入
+请[关闭防火墙](#3如何关闭防火墙)），然后回到HMCL多人联机页面，将“创建服务器地址”一行点击 退出，并再次点击 加入，然后回到游戏进行加入
 
 ### 3.如何关闭防火墙
 
@@ -128,4 +124,44 @@ The passages were written in Simplified Chinese. If you want to help translate t
 #### 手动关闭
 
 [_请点击此处查看相关文章进行关闭_](https://cn.bing.com/search?q=%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99+Microsoft)
+
+### 4.HiPer意外退出出/无法创建网络
+
+![](/assets/img/docs/multiplayer/help/10.png)
+
+![](/assets/img/docs/multiplayer/help/11.png)
+
+有以下可能：
+
+- 启动器获取管理员权限失败（需要手动以管理员身份启动HMCL）
+- 有杀毒软件拦截 HiPer
+- 索引码过期，或输错了
+
+无上述可能，请尝试[下载](https://gitcode.net/chearlai/f/-/blob/master/%E5%87%BA%E7%8E%B0_HiPer%E6%97%A0%E6%B3%95%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87_%E5%8F%AF%E8%83%BD%E6%98%AFHiPer%E5%B7%B2%E7%BB%8F%E5%90%AF%E5%8A%A8%E6%88%96%E7%BC%BA%E5%B0%91%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90_%E8%AF%B7%E5%8F%8C%E5%87%BB%E6%88%91_.bat)该脚本，并运行，然后回到 HMCL 再试
+
+### 5.游戏加入失败，显示：Connection timed out: no further information
+
+![](/assets/img/docs/multiplayer/help/12.png)
+
+双方[关闭防火墙](#3如何关闭防火墙)
+如果尝试无效，请尝试通知创建方重新启动 HiPer
+
+### 6.游戏加入失败，显示：登录失败:无效会话(请尝试重启游戏及启动器) | 无效的个人信息公钥签名。请尝试重启游戏。
+
+![](/assets/img/docs/multiplayer/help/13.png)
+
+![](/assets/img/docs/multiplayer/help/14.png)
+
+
+一般情况下，参与者的游戏账户必须是 微软账户 或 外置登录账户（如 Little Skin），否则你需要将服务器地址输入至下方的输入框中并点击“加入”，在游戏中选择多人游戏模式，进入局域网世界方可加入！
+
+![](/assets/img/docs/multiplayer/help/9.png)
+
+### 7.公众号相关问题
+
+[请移步至此处](/multiplayer/token.html#%E5%85%AC%E4%BC%97%E5%8F%B7%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98)
+
+### 更多
+
+[请移步至此处](https://shimo.im/docs/5rk9dplRrYuYXjqx#anchor-fZRj)
 

@@ -10,9 +10,6 @@ toc: true
 
 > The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/huanghongxun/HMCL-docs/pulls . Or you can enable your translation tool to read.
 
-
-# 已荒废，可能是过期的！
-
 # 售后
 
 [加入 官方交流QQ群 ，你所有的问题都可以在这里帮助你解答](/multiplayer/feedback.html)
