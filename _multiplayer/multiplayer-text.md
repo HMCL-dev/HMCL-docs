@@ -14,11 +14,10 @@ toc: true
 
 ------------------------
 [https://zkitefly.github.io/r/hipertest.html](https://zkitefly.github.io/r/hipertest.html)
-
 ------------------------
 
-**如果 创建方 和 参与者 都能够正常加载图片，那么就代表能够互相正常联机！**
+**如果 创建方 和 参与者 都能够正常加载网页，那么就代表能够互相正常联机！**
 
-如果不能，请尝试[关闭设备的防火墙]()，或将 HiPer 通过
+如果不能，请尝试[关闭设备的防火墙](https://docs.hmcl.net/multiplayer/help.html#3%E5%A6%82%E4%BD%95%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99)
 
 [若任然不能，请到此处加入 官方交流 QQ 群](/multiplayer/feedback.html)
