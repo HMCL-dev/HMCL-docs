@@ -28,13 +28,13 @@ The passages were written in Simplified Chinese. If you want to help translate t
 
 ## 使用步骤
 
-### 一、申请并输入凭证，启动 HiPer
+### 一、申请并输入索引码，启动 HiPer
 
 **注意：创建方 和 参与者都要做的**
 
-[申请凭证请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
+[申请索引码请前往此处获取](https://hmcl.huangyuhui.net/api/redirect/multiplayer-static-token)
 
-获得后将凭证输入到 凭证 输入框，并点击“启动 HiPer”
+获得后将索引码输入到 索引码 输入框，并点击“启动 HiPer”
 
 **索引码需一人一码（各自不同的），因为索引码代表一个网络IP，若一个设备已经用了这个IP，网络已经有了这个IP，那么其他设备就不能用这个IP，因为他已经被占用了。如果你的朋友需要，强烈建议让你的朋友自己获取，而不是帮他获取，因为每天第二次获取授权会变得更贵，[详情](/multiplayer/token.html##%E5%90%8E%E7%BB%AD%E8%8E%B7%E5%8F%96%E7%B4%A2%E5%BC%95%E7%A0%81)**
 
