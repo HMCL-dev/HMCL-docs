@@ -56,6 +56,10 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  changelog:
+    output: true
+    permalink: /:collection/:path/
+
   modpack:
     output: true
     permalink: /:collection/:path/
@@ -117,6 +121,17 @@ defaults:
       comments: false
       sidebar:
         nav: "multiplayer"
+  - scope:
+      path: "_changelog"
+      type: multiplayer
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "changelog"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
