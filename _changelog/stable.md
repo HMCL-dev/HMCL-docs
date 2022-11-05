@@ -1,4 +1,9 @@
 ---
+title:  "稳定版更新日志"
+permalink: /changelog/stable.html
+date:   2021-08-22 23:18:02 +0800
+categories: 更新日志
+toc: true
 ---
 
 <p>Notice: changelogs are written in Chinese.</p>
@@ -318,4 +323,4 @@
       <li>修复导入整合包时的乱码问题</li>
     </ul>
   </li>
-</ul></body></html>
+</ul>

@@ -1,11 +1,11 @@
 ---
+title:  "开发版更新日志"
+permalink: /changelog/dev.html
+date:   2021-08-22 23:18:02 +0800
+categories: 更新日志
+toc: true
 ---
 
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-</head>
-<body>
 <p>Notice: changelogs are written in Chinese.</p>
 <h1>HMCL 3.5.3.223</h1>
 <ul>
@@ -777,5 +777,3 @@
   <li>更新 authlib-injector</li>
   <li>从 Cursemeta 上下载 Curse 上被删除的 Mod 文件</li>
 </ul>
-</body>
-</html>
