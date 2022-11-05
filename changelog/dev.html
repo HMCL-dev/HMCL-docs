@@ -1,0 +1,893 @@
+<!-- saved from url=(0046)https://hmcl.docs.net/changelog/dev.html -->
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+html {
+    color-scheme: dark !important;
+}
+html, body, input, textarea, select, button, dialog {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast(90%); }</style></head><body><p>Notice: changelogs are written in Chinese.</p>
+<h1>HMCL 3.5.3.223</h1>
+<ul>
+  <li>在启动游戏时刷新账户失败时提示重试登录</li>
+  <li>修复在授权过期时不会显示重新登录对话框</li>
+  <li>微软登录相关优化</li>
+  <li>修复通过自动安装更新游戏时的崩溃</li>
+  <li>支持 Github Action 的构建产物微软登录</li>
+  <li>更多平台的原生适配</li>
+  <li>修复在找不到合适的 Java 时启动时卡住的问题</li>
+  <li>支持在 linux-loongarch64_ow 上自动下载 JavaFX</li>
+  <li>更新翻译</li>
+  <li>添加 sh 二进制文件支持</li>
+  <li>修复 Modrinth 整合包安装</li>
+  <li>更新多人联机</li>
+  <li>日志分析器显示相关优化</li>
+  <li>修复 Modrinth 格式的 Quilt 整合包安装错误</li>
+  <li>修复 Modrinth 模组包解析错误</li>
+  <li>Quilt 自动安装相关调整</li>
+  <li>修复下载 Java 链接错误</li>
+</ul>
+<h1>HMCL 3.5.3.222</h1>
+<ul>
+  <li>修复翻译错误</li>
+  <li>适配 Apple Silicon Mac 与龙芯平台</li>
+  <li>修复不会自动补全缺失的 OptiFine 文件的问题</li>
+  <li>更新官方下载源链接</li>
+  <li>修复 Optifine 自动安装后启动崩溃的问题</li>
+  <li>微软账户相关调整</li>
+  <li>添加世界信息界面（允许玩家在启动器内查看更详细的世界信息以及调整一些基本设置）</li>
+  <li>修复使用 Java 9+ 编译时的错误</li>
+  <li>修复资源搜索获取信息失败相关问题</li>
+  <li>添加 Quilt 自动安装</li>
+  <li>回滚 HMCLauncher.exe ,减少杀毒软件报毒</li>
+  <li>为非 x86 平台提供开箱即用的启动支持</li>
+  <li>更新自动安装页面</li>
+  <li>修复在创建账户页面下认证服务器未知的问题</li>
+</ul>
+<h1>HMCL 3.5.3.221</h1>
+<ul>
+  <li>支持在文件管理器中显示文件，或者在 Linux 中直接打开父目录。</li>
+  <li>默认开启“自动选择合适的 Java”</li>
+  <li>修复部分 UI 问题</li>
+  <li>修复更换资源类别后不更新列表的问题</li>
+  <li>修复无法获取前置模组信息</li>
+  <li>更新翻译</li>
+  <li>修复整合包的 mcmod 网址不正确问题</li>
+  <li>修复无法将 mrpack 文件拖拽至主页面安装整合包的问题</li>
+  <li>在 JDK 安装不完整时提醒重新安装</li>
+  <li>修改微软账户上传皮肤链接</li>
+</ul>
+<h1>HMCL 3.5.3.220</h1>
+<ul>
+  <li>修复 CurseForge 整合包无法下载安装的问题</li>
+</ul>
+<h1>HMCL 3.5.3.219</h1>
+<ul>
+  <li>支持整合包下载页使用中文搜索</li>
+  <li>支持下载安装 Modrinth 整合包</li>
+  <li>修复在语言为英文时仍翻译 Mod 名称的问题</li>
+  <li>修复离线模式帐户无法使用 LittleSkin 皮肤站的问题</li>
+  <li>修复下载 Mod 和整合包时，没有显示下载进度的问题</li>
+  <li>修复在 MacOS 和 Linux 系统下不能打开模组文件路径的问题</li>
+  <li>修复部分情况下因 Zip 包编码无法检测，以致无法安装整合包的问题</li>
+  <li>修复无法启动包含 LabyMod 的游戏的问题</li>
+  <li>在系统内没有检测到 Java 时，自动尝试安装 Java，而不只提示用户手动安装</li>
+  <li>更新 cato 网站链接</li>
+</ul>
+<h1>HMCL 3.5.2.216</h1>
+<ul>
+  <li>修复在包含等于号的路径下运行时无法正确加载漏洞修复工具的问题</li>
+  <li>修复 Mod 下载页选择 Modrinth 源时，排序选项不可用的问题</li>
+  <li>修复下载游戏向导中，在某些情况下加载了错误的 Fabric API 列表的问题</li>
+  <li>修复启动游戏时，如果 Java 版本不正确，某些情况下会导致启动器崩溃的问题</li>
+  <li>修复某些情况下不能更新游戏版本为 Minecraft 1.18 所安装的 Forge</li>
+  <li>修复多人联机页面在快速点击打开房间时导致启动器崩溃的问题</li>
+  <li>修复删除离线帐户使用的本地皮肤文件后游戏不能启动的问题</li>
+</ul>
+<h1>HMCL 3.5.0.214</h1>
+<ul>
+  <li>重命名某个游戏版本后，该游戏版本将会被选中为当前游戏版本</li>
+  <li>修复 cato 选项名称错误的问题</li>
+  <li>修复 1.17/1.18 Forge 客户端不能启动的问题</li>
+  <li>修复在定制离线帐户皮肤后，导出的游戏脚本不能正常启动游戏的问题</li>
+  <li>修复 Mod 下载页面加载失败后点击刷新页面提示无反应的问题</li>
+  <li>修复游戏崩溃分析窗口内显示了不知道是什么库的版本号的问题</li>
+  <li>修复 Fabric-API 下载不完整的问题</li>
+  <li>修复 Fabric-API 列表中存在与游戏版本不匹配的版本的问题</li>
+</ul>
+<h1>HMCL 3.5.0.213</h1>
+<ul>
+  <li>修复 Log4j 远程代码执行漏洞</li>
+  <li>更新 cato 至 1.2.0</li>
+</ul>
+<h1>HMCL 3.4.212</h1>
+<ul>
+  <li>修复 Log4j 远程代码执行漏洞</li>
+  <li>修复取消启动警告框后，启动游戏进度框不退出的问题</li>
+</ul>
+<h1>HMCL 3.4.211</h1>
+<ul>
+  <li>修复 Log4j 远程代码执行漏洞</li>
+  <li>修复解压 zip 文件时丢失文件属性的问题</li>
+</ul>
+<h1>HMCL 3.4.210</h1>
+<ul>
+  <li>提示下载 Java 时，额外提供手动下载链接</li>
+  <li>更新 cato 至 1.1.0</li>
+  <li>修复部分页面进入时崩溃的问题</li>
+  <li>修复设置系统环境变量 classpath 后游戏无法启动的问题</li>
+  <li>修复删除所有游戏文件夹配置项后崩溃的问题</li>
+  <li>修复删除游戏版本后不退出游戏设置页面的问题</li>
+  <li>修复重命名游戏版本后游戏设置页面未刷新的问题</li>
+</ul>
+<h1>HMCL 3.4.209</h1>
+<ul>
+  <li>不再翻译 id 为 examplemod 的 Mod 名称以避免歧义</li>
+  <li>如果在 macOS/Windows ARM 设备上使用 HMCL，HMCL 会优先使用 x86 的 JDK 运行游戏</li>
+  <li>提供更多预设的游戏版本图标以供设置</li>
+  <li>完善显卡驱动问题提示语</li>
+  <li>完善 Linux 用户因使用 Java9+ 版本导致游戏崩溃的提示语</li>
+  <li>导出游戏启动脚本时，可以导出 PowerShell 格式的脚本</li>
+  <li>支持游戏需要 Java 8 时提示并下载 Java 8</li>
+  <li>下载 Mod 时，可以自定义文件名称</li>
+  <li>添加透明背景选项</li>
+  <li>添加日语翻译</li>
+  <li>更新俄语翻译</li>
+  <li>兼容 TLauncher 游戏客户端</li>
+  <li>联机：修复使用 32 位 Java 时提示多人联机不支持当前平台的问题</li>
+  <li>联机：修复 NAT 检测状态一直为检测中的问题</li>
+  <li>联机：支持 Windows ARM64 平台</li>
+  <li>联机：更新 cato 至 1.1.1</li>
+  <li>联机：校验 cato 可执行文件的完整性，避免病毒等程序篡改 cato 导致安全风险</li>
+  <li>联机：缩短联机码长度，避免联机码中因为包含斜杠，与 QQ 的表情转义符冲突的问题</li>
+  <li>修复 macOS 上不能启动远古版本游戏的问题</li>
+  <li>修复启动器打开时提示找不到 DST ROOT CA X3 证书的问题</li>
+  <li>修复因为调整了游戏进程优先级设置，导致游戏不能运行，提示命令行过长的问题</li>
+  <li>修复游戏版本名过长时布局混乱的问题</li>
+  <li>修复离线帐户披风显示错误的问题</li>
+  <li>修复不能复制游戏实例的问题</li>
+  <li>修复不能选择自定义 Java 路径的问题</li>
+  <li>修复不能修改没有 jar 文件的游戏实例的问题</li>
+  <li>修复远古测试版启动时提示需要 Java 7 的问题</li>
+  <li>修复背景网址不合法时启动器背景全透明的问题</li>
+  <li>修复 Linux 下无法启动在中文目录下的游戏的问题</li>
+  <li>修复下载 Java 失败时提示启动器崩溃的问题</li>
+  <li>修复取消下载 Java 时无法取消游戏启动进程的问题</li>
+</ul>
+<h1>HMCL 3.4.208</h1>
+<ul>
+  <li>运行环境缺少 JavaFX 时，直接开始下载而不是等待用户选择下载源</li>
+  <li>修复联机断联的问题</li>
+</ul>
+<h1>HMCL 3.4.207</h1>
+<ul>
+  <li>在杀毒软件删除 cato 时，弹出警告提示，而不是崩溃启动器</li>
+  <li>资源包下载页面添加版本选择</li>
+  <li>微软账号登录时被服务器要求重新手动登录时弹出登录提示框而不是登录失败</li>
+  <li>修复运行在 32 位 Java 上时不能正确提示游戏不应使用 32 位 Java 运行的问题</li>
+  <li>修复模组页、游戏下载页等页面标签错乱的问题</li>
+  <li>修复游戏崩溃报告窗口不显示内存和 Java 版本的问题</li>
+  <li>修复联机加入房间失败时将连接无法建立显示为被房主踢出的问题</li>
+</ul>
+<h1>HMCL 3.4.206</h1>
+<ul>
+  <li>联机：更新 cato 至 1.0.c，支持 macOS M1 芯片设备</li>
+  <li>联机：网络测试改用快速测试方法</li>
+  <li>联机：添加加入申请选项，默认不再需要房主手动同意加入申请</li>
+  <li>联机：在需要房主手动同意加入申请时，提供 30 秒超时，超时后自动拒绝申请</li>
+  <li>在调试选项下和本地目录设置下显示警告信息</li>
+  <li>离线账户皮肤选择本地文件时，允许修改人物模型为 Slim</li>
+  <li>启用标题栏透明选项时，标题栏背景色调为半透明</li>
+  <li>现启动器更新通道将与启动器本身发布为开发版或稳定版绑定，避免玩家使用开发版时因为忘记调整更新通道，不能收到后续开发版更新推送</li>
+  <li>修改页面跳转动画</li>
+  <li>修复游戏崩溃报告页面崩溃的问题</li>
+  <li>修复进入联机页面时没有下载 cato 的问题</li>
+  <li>修复离线账户皮肤选择 Blessing Skin 时，网址末尾添加斜杠会无法加载皮肤的问题</li>
+  <li>修复复制游戏实例时崩溃的问题</li>
+  <li>修复点击反馈页面空白处弹出反馈详细信息页面的问题</li>
+  <li>修复批量更新模组时，将 Forge Mod 更新为 Fabric Mod 的问题</li>
+</ul>
+<h1>HMCL 3.4.205</h1>
+<ul>
+  <li>添加联机房间准入功能，房主同意后玩家才能加入房间</li>
+  <li>添加联机房间管理功能，可以查看已经在房间中的玩家</li>
+  <li>添加联机 Token 设置和中继模式</li>
+  <li>联机时不再需要正版登录，但玩家必须在多人游戏页面直连 HMCL 多人联机房间</li>
+  <li>添加修改离线账户皮肤的功能，允许使用本地图片和 LittleSkin 等皮肤站</li>
+  <li>添加自动选择 Java 选项，省去提示用户需要更改 Java 版本的步骤</li>
+  <li>添加模组批量更新功能</li>
+  <li>修改页面跳转动画</li>
+  <li>支持导入由玩家手动打包的包含 .minecraft 文件夹的整合包</li>
+  <li>Fabric Mod 崩溃时提示 Mod 冲突或缺失前置 Mod 原因</li>
+  <li>在全局游戏设置中提示当前版本正在使用游戏独立设置，以避免玩家在错误的地方修改设置</li>
+  <li>支持 1.17 下 OptiFine 与 Forge 同时安装</li>
+  <li>修复由于 Java 损坏导致无法检测 Java 版本时，启动游戏卡死的问题</li>
+  <li>修复 Mojang 账号和 Authlib-Injector 账号登录时卡死，看不到密码框的问题</li>
+  <li>修复 Mojang 账号和 Authlib-Injector 账号刷新时崩溃的问题</li>
+</ul>
+<h1>HMCL 3.4.203</h1>
+<ul>
+  <li>添加多人联机，由于处于试验阶段，如果出现问题请反馈</li>
+  <li>调整界面外观</li>
+  <li>背景路径支持网络链接</li>
+  <li>允许修改启动器字体</li>
+  <li>添加崩溃分析报告窗口，尽量分析崩溃信息，而不是直接打开日志窗口</li>
+  <li>Mod 下载页面按游戏版本分类</li>
+  <li>Mod 下载页面显示前置 Mod</li>
+  <li>EXE 版本优先选择独立显卡</li>
+  <li>打开不检查游戏完整性选项时，同时不检查服务端自动更新整合包的更新</li>
+  <li>修复点击 Mod 列表页 Mod 文件夹按钮后不能打开正确文件夹的问题</li>
+  <li>修复下载 Mod 时无法取消的问题</li>
+  <li>修复不能正确识别 MCBBS V2 整合包的问题</li>
+  <li>修复 PATH 格式不正确时导致启动器崩溃的问题</li>
+</ul>
+<h1>HMCL 3.4.202</h1>
+<ul>
+  <li>更新至 JavaFX 17，额外支持 Mac M1 设备下自动下载 JavaFX</li>
+  <li>Authlib-Injector 认证服务器管理页面移动至账户管理页侧边栏</li>
+  <li>支持修改离线账户的 UUID</li>
+  <li>Mod 管理页面和下载页面尽可能显示 Mod 的中文名称</li>
+  <li>Mod 下载页面允许中文搜索</li>
+  <li>Mod 下载页面允许选择搜索 CurseForge 或者 Modrinth</li>
+  <li>Mod 下载页面允许查看 Mod 的 MC 百科页面与 MCBBS 页面</li>
+  <li>Mod 下载页面允许选择要安装到的目标游戏版本</li>
+  <li>下载页面首页修改为游戏安装页，而不是 Mod 下载页</li>
+  <li>自动安装 Fabric-API 至新游戏的 Mod 目录</li>
+  <li>微软登录时无法自动打开浏览器时允许手动复制链接</li>
+  <li>修复微软登录时提示 NullPointerException 或者部分情况下的无法连接认证服务器的问题</li>
+  <li>修复安装新游戏失败的问题</li>
+  <li>修复自动选择内存大小后内存大小过小的问题</li>
+  <li>修复返回主页卡死的问题</li>
+  <li>修复 Mod 下载页无法显示 Emoji 字符的问题</li>
+</ul>
+<h1>HMCL 3.3.201</h1>
+<ul>
+  <li>添加帮助页面</li>
+  <li>添加修改游戏进程优先级的功能</li>
+  <li>任意页面按 ESC 键可返回上一页</li>
+  <li>支持自动选择游戏内存大小</li>
+  <li>添加 Linux 下使用系统 GLFW 及 OpenAL 的功能</li>
+  <li>添加自动选择下载源的功能</li>
+  <li>允许修改默认的下载并发数</li>
+  <li>添加单独的下载页面，额外支持资源包和存档的下载功能</li>
+  <li>更换默认背景图</li>
+  <li>调整界面外观</li>
+  <li>支持自动安装 Fabric-API（该功能尚未完成，需要在 Java 虚拟机参数中添加 -Dfabric.development 方能使用）</li>
+  <li>修复微软登录成功页乱码的问题</li>
+  <li>修复微软账号年龄不满 18 岁显示的错误信息不易于阅读等问题</li>
+  <li>修复不能启动 PCL 安装的部分游戏的问题</li>
+  <li>修复不能启动 Fabric 安装器安装的 1.18 版本的问题</li>
+  <li>修复模组下载页面没有按时间排序的问题</li>
+  <li>修复 Java 11 以上滚动条的样式问题</li>
+  <li>修复部分 Linux 发行版下不能打开微软登录页面的问题</li>
+</ul>
+<h1>HMCL 3.3.200</h1>
+<ul>
+  <li>修复微软登录超时后崩溃的问题</li>
+</ul>
+<h1>HMCL 3.3.199</h1>
+<ul>
+  <li>在整合包下载页按回车也可以发起搜索</li>
+  <li>支持我的世界中文论坛整合包规范第二版，兼容 CurseForge 整合包格式，允许导入 MultiMC</li>
+  <li>重新设计关于页面</li>
+  <li>修改创建账号页面</li>
+  <li>新增赞助列表页面</li>
+  <li>修复微软登录页可能白屏的问题</li>
+  <li>修复微软登录很快过期的问题</li>
+  <li>修复错误检测 Forge 版本号以至于不能导出正确的整合包的问题</li>
+  <li>修复在主页按多次回车键会重复启动游戏的问题</li>
+  <li>修复安装整合包时没有检查名字是否符合 Windows 文件名规范的问题</li>
+  <li>修复 Forge 安装器部分内容仍需从官方源下载的问题</li>
+</ul>
+<h1>HMCL 3.3.197</h1>
+<ul>
+  <li>修复不能启动 Forge 1.17.1-37.0.29 及以上版本的问题</li>
+  <li>修复英文语言设置下版本管理页面的标题错误的问题</li>
+</ul>
+<h1>HMCL 3.3.196</h1>
+<ul>
+  <li>修复进入 Mod 下载页面时崩溃的问题</li>
+</ul>
+<h1>HMCL 3.3.195</h1>
+<ul>
+  <li>添加查看模组详细介绍及打开其官方页面的功能</li>
+  <li>Mod 下载列表会按照发布时间排序</li>
+  <li>修复 Mod 下载页面存在空白区域的问题</li>
+  <li>修复操作账户时崩溃的问题</li>
+</ul>
+<h1>HMCL 3.3.194</h1>
+<ul>
+  <li>支持 CurseForge 整合包和 Mod 下载</li>
+  <li>改进版本管理和游戏设置的界面</li>
+  <li>修复不能启动 BakaXL 安装后的游戏的问题</li>
+</ul>
+<h1>HMCL 3.3.192</h1>
+<ul>
+  <li>支持 1.17 Forge 的自动安装与游戏启动</li>
+  <li>修复不能正常启动 Minecraft 1.5 及以下版本的问题（需要手动删除 options.txt）</li>
+</ul>
+<h1>HMCL 3.3.189</h1>
+<ul>
+  <li>支持使用 Fabric 作为 Mod 加载器的 CurseForge 整合包</li>
+  <li>修复尝试下载 Java16 时只有确定没有取消按钮的问题</li>
+  <li>修复下载 Java16 时取消下载过程后启动器崩溃的问题</li>
+  <li>自动选择新添加的 Authlib-injector 服务器</li>
+  <li>修复安装整合包时可能崩溃的问题</li>
+  <li>压缩了启动器本体文件大小</li>
+  <li>修复 MCBBS 整合包实现不符合规范的问题</li>
+  <li>允许在 Minecraft 自定义参数内使用 ${game_directory} 等占位符</li>
+  <li>支持官方启动器为 Minecraft 启动参数提供的一些占位符</li>
+  <li>允许在 Java 自定义参数内覆盖启动器默认提供的启动参数，而不需要再禁止启动器生成默认参数</li>
+</ul>
+<h1>HMCL 3.3.188</h1>
+<ul>
+  <li>自定义本地库路径，允许 M1 设备运行 ARM 版本的 Minecraft</li>
+  <li>自动检测系统内安装的 OpenJDK，包括 Liberica/Microsoft/Zulu/AdoptOpenJDK</li>
+  <li>修复 exe 版本不能正常下载 JavaFX 的问题</li>
+  <li>修复 Windows 下打开使用 Unicode UTF-8 提供全球语言支持选项后启动器无法打开的问题</li>
+</ul>
+<h1>HMCL 3.3.186</h1>
+<ul>
+  <li>解决 Java 16 下部分 mod 不能正常运行的问题</li>
+  <li>修复对系统平台的识别错误导致部分平台不能正确下载 JavaFX 的问题</li>
+  <li>启动 Minecraft 1.17 时自动下载官方提供的 Java 16</li>
+</ul>
+<h1>HMCL 3.3.184</h1>
+<ul>
+  <li>修复 macOS 下启动器图标和 Finder 相同的问题，仅在 Java 9+ 生效</li>
+  <li>修复与 Java 16 的兼容性问题</li>
+  <li>允许在导出的整合包内包含启动器程序</li>
+</ul>
+<h1>HMCL 3.3.183</h1>
+<ul>
+  <li>修复服务端自动更新整合包不能更新游戏、Forge 版本的问题</li>
+  <li>兼容 Java11+，在 Java 11+ 上运行时会自动下载 JavaFX</li>
+  <li>修复不能识别部分数据包的问题</li>
+  <li>刷新账户时将显示进度条</li>
+  <li>上传皮肤时自动检测 Steve、Alex 模型</li>
+</ul>
+<h1>HMCL 3.3.181</h1>
+<ul>
+  <li>微软登录页添加加载进度条</li>
+  <li>修复整合包导出页无法点击下一步的问题</li>
+</ul>
+<h1>HMCL 3.3.180</h1>
+<ul>
+  <li>支持我的世界中文论坛整合包标准</li>
+  <li>修复下载失败的问题</li>
+</ul>
+<h1>HMCL 3.3.179</h1>
+<ul>
+  <li>修复微软账号在设置了皮肤之后不能登录的问题</li>
+  <li>修复不能显示微软账号皮肤的问题</li>
+</ul>
+<h1>HMCL 3.3.178</h1>
+<ul>
+  <li>修复不能检测 20w45a+ 以上游戏的版本号</li>
+  <li>修复同时只有一个文件在下载的问题</li>
+</ul>
+<h1>HMCL 3.3.177</h1>
+<ul>
+  <li>修复下载失败导致游戏无法启动的问题</li>
+</ul>
+<h1>HMCL 3.3.176</h1>
+<ul>
+  <li>支持微软正版账户登录</li>
+  <li>支持 Authlib-injector 账户上传皮肤</li>
+  <li>支持 Authlib-injector 服务器用邮箱以外的账户登录</li>
+  <li>尝试修复在游戏启动后启动器直接关闭时导致游戏卡死的问题</li>
+  <li>修复启动器设置 HTTP 代理后，游戏无法访问网络的问题</li>
+  <li>修复下载支持库文件失败时启动器崩溃的问题</li>
+</ul>
+<h1>HMCL 3.3.175</h1>
+<ul>
+  <li>修复部分情况误修改 options.txt 的问题</li>
+</ul>
+<h1>HMCL 3.3.174</h1>
+<ul>
+  <li>允许第三方修改 HMCL 的 BMCLAPI 下载源，从而支持第三方下载源</li>
+  <li>自动设置游戏的默认语言为中文</li>
+  <li>修复因为线程过多导致在 macOS 系统上运行崩溃的问题</li>
+  <li>修复重命名游戏版本点击移动窗口而不是移动光标的问题</li>
+</ul>
+<h1>HMCL 3.3.173</h1>
+<ul>
+  <li>修复启动 Minecraft 1.0 时不会停止等待游戏启动的问题</li>
+  <li>更新游戏整合包后会显示新的版本号</li>
+  <li>修复更新整合包下载地址不能使用在线下载自动更新整合包的问题</li>
+  <li>修复首次打开整合包会弹出 3 个新建账户窗口的问题</li>
+  <li>配置文件会优先选择启动器同目录而不是工作目录</li>
+  <li>修复运行在 Java 12+ 时列表和下拉菜单不能正常显示的问题</li>
+  <li>修复鼠标指针不正常的问题</li>
+  <li>修复添加外置登录的正版账号后会与普通正版账号冲突的问题</li>
+</ul>
+<h1>HMCL 3.3.172</h1>
+<ul>
+  <li>添加窗口阴影</li>
+  <li>添加为正版账号上传皮肤的功能</li>
+  <li>现在会校验资源索引文件的完整性</li>
+  <li>现在启动器代理设置对启动后的游戏有效</li>
+  <li>自动安装页面将提示不兼容的第三方库，比如 Forge 和 Fabric 不兼容</li>
+  <li>添加启动器的 JVM 参数 -Dhmcl.font.override=fontfamily 以允许 Linux 用户更换字体以解决白屏问题</li>
+  <li>修复无法安装 Curse 整合包的问题</li>
+  <li>修复下载资源文件时不能自动切换下载源的问题</li>
+  <li>修复 1.5.2 及以下版本不能下载资源文件的问题</li>
+  <li>修复 1.5.2 及以下版本安装 Forge 后启动失败的问题</li>
+  <li>修复不能在 Java 17 下载 Forge 和自动更新的问题</li>
+  <li>修复整合包配置丢失后整合包游戏版本不能修改配置的问题</li>
+</ul>
+<h1>HMCL 3.3.170</h1>
+<ul>
+  <li>修复部分情况下崩溃的问题</li>
+  <li>支持同时安装 Minecraft 1.14.4 及以上版本的 Forge 和 OptiFine</li>
+</ul>
+<h1>HMCL 3.3.169</h1>
+<ul>
+  <li>修复 1.12.2 同时安装 Forge, OptiFine 时无法进入游戏存档的问题</li>
+  <li>修复服务器自动更新整合包更新时可能会出现 AccessDeniedException 的问题</li>
+  <li>现在会记住启动器上次使用的窗口大小</li>
+  <li>游戏设置页面也可以安装游戏、添加整合包和刷新版本列表</li>
+  <li>游戏设置页面可以修改默认启动游戏版本</li>
+  <li>使用外置登录账户时，主页面的账户将显示认证服务器名称</li>
+</ul>
+<h1>HMCL 3.3.168</h1>
+<ul>
+  <li>将主界面的版本列表弹框的滚动条改为黑色</li>
+  <li>修复某些情况下启动游戏时，提示 NullPointerException 的问题</li>
+  <li>允许使用在启动器同目录下的 authlib-injector.jar 文件</li>
+  <li>修复刷新下载列表时可能提示 ConcurrentModificationException 的问题</li>
+  <li>修复重命名被依赖的版本后，会破坏其他依赖这个版本的版本的问题</li>
+  <li>更正重命名版本时，输入不合法的新名字后的错误提示</li>
+  <li>修复在自定义游戏运行目录时，输入不合法的路径会导致崩溃的问题</li>
+  <li>修复在输入特定错误的 authlib-injector 服务器地址时会导致启动器崩溃的问题</li>
+</ul>
+<h1>HMCL 3.3.166</h1>
+<ul>
+  <li>修复进入游戏设置后无法重命名部分游戏版本的问题</li>
+  <li>修复 Curse 整合包下载时遗漏 Mod 的问题</li>
+  <li>修复部分情况下弹框消失的问题</li>
+  <li>在 OptiFine 库缺失时可以自动补全</li>
+</ul>
+<h1>HMCL 3.3.165</h1>
+<ul>
+  <li>修复无法自动更新的问题</li>
+</ul>
+<h1>HMCL 3.3.164</h1>
+<ul>
+  <li>更新俄语翻译</li>
+  <li>修复在“在游戏启动后关闭启动器”启用时游戏无法启动的问题</li>
+  <li>修复弹出对话框时无法拖动窗口的问题</li>
+</ul>
+<h1>HMCL 3.3.163</h1>
+<ul>
+  <li>修复日志窗口无法清除日志的问题</li>
+  <li>检查下载的 Fabric 安装包是否完整，避免 MCBBS 源带来的错误</li>
+  <li>启动提示内存过大时允许停止启动</li>
+</ul>
+<h1>HMCL 3.3.162</h1>
+<ul>
+  <li>修复无法下载资源文件的问题</li>
+  <li>修复无法同时安装 Forge 1.12.2 2852 和 OptiFine 的问题</li>
+  <li>加强对支持库文件完整/损坏的检查能力</li>
+</ul>
+<h1>HMCL 3.3.161</h1>
+<ul>
+  <li>调整界面细节</li>
+  <li>修复无法安装 Forge 1.12.2 2852 的问题</li>
+  <li>提升与 ServerSync 的兼容性</li>
+  <li>安装游戏向导内可直接切换下载源，而不需要返回启动器设置页面</li>
+</ul>
+<h1>HMCL 3.3.160</h1>
+<ul>
+  <li>主界面标题栏透明</li>
+  <li>游戏崩溃后弹出的日志窗口直接显示游戏崩溃报告（而不是游戏日志）</li>
+  <li>修复游戏崩溃后弹出的日志窗口无法显示日志的问题</li>
+</ul>
+<h1>HMCL 3.3.159</h1>
+<ul>
+  <li>调整界面细节</li>
+  <li>在日志窗口添加导出游戏日志功能</li>
+  <li>修复复制游戏实例后的新游戏无效的问题</li>
+</ul>
+<h1>HMCL 3.3.158</h1>
+<ul>
+  <li>调整界面细节</li>
+  <li>修复游戏安装失败时提示安装完成的问题</li>
+  <li>在自动安装 Forge、OptiFine 等库时若下载失败，自动重试其他下载源</li>
+</ul>
+<h1>HMCL 3.3.157</h1>
+<ul>
+  <li>更新俄语翻译</li>
+  <li>在游戏设置页面添加重命名等只能在游戏列表操作的功能</li>
+  <li>在自动安装页面可以删除已选择安装的第三方库</li>
+  <li>添加复制游戏实例功能</li>
+</ul>
+<h1>HMCL 3.3.156</h1>
+<ul>
+  <li>修复 3.3.155 导致的启动失败问题</li>
+  <li>在修改游戏版本时要求重新安装相关库</li>
+</ul>
+<h1>HMCL 3.3.155</h1>
+<ul>
+  <li>修复 3.3.154 导致的启动失败问题</li>
+</ul>
+<h1>HMCL 3.3.154</h1>
+<ul>
+  <li>修复 3.3.153 导致的启动失败问题</li>
+</ul>
+<h1>HMCL 3.3.153</h1>
+<ul>
+  <li>调整界面样式</li>
+  <li>提升自动安装功能与其他启动器的兼容性</li>
+  <li>修复快速切换游戏时可能导致的一些问题</li>
+  <li>支持调整启动器窗口大小</li>
+</ul>
+<h1>HMCL 3.3.152</h1>
+<ul>
+  <li>调整界面样式</li>
+  <li>修改默认下载源为 MCBBS</li>
+  <li>允许在启动游戏按钮上滑动鼠标滚轮切换游戏</li>
+  <li>显示资源和 Curse Mod 下载总进度</li>
+</ul>
+<h1>HMCL 3.2.151</h1>
+<ul>
+  <li>修复 3.2.150 部分游戏启动失败的问题</li>
+  <li>修改 Mod、数据包页面的界面样式</li>
+  <li>修复终止游戏后启动器不会停止等待的问题</li>
+</ul>
+<h1>HMCL 3.2.150</h1>
+<ul>
+  <li>加快界面动画速度</li>
+  <li>改善游戏下载速度</li>
+  <li>添加清理缓存文件夹按钮</li>
+  <li>修改安装游戏向导的界面</li>
+  <li>在启动游戏、安装游戏等界面显示总下载速度</li>
+  <li>在资源索引文件为空时自动重新下载资源文件</li>
+  <li>在当前下载源下载失败后自动重试其他下载源</li>
+  <li>在删除 Mod、世界、数据包时弹出删除确认提示</li>
+  <li>在启动游戏、安装游戏等界面显示明确的安装步骤</li>
+  <li>在游戏崩溃后的第二次启动时自动检查资源和支持库文件是否完整</li>
+  <li>修复启动器崩溃时可能再次崩溃的问题</li>
+  <li>修复部分整合包无法修改启动时游戏窗口大小的问题</li>
+  <li>修复在 Curse 整合包安装部分成功时删除游戏的问题</li>
+  <li>修复从 MCBBS 下载源下载文件可能会下载到空文件的问题</li>
+</ul>
+<h1>HMCL 3.2.149</h1>
+<ul>
+  <li>在主界面账户栏添加鼠标悬浮提示以查看完整游戏名</li>
+  <li>在主界面账户栏添加鼠标滚轮便捷切换游戏账户</li>
+</ul>
+<h1>HMCL 3.2.148</h1>
+<ul>
+  <li>更新 Fabric 的 BMCLAPI 和 MCBBS 下载源支持</li>
+  <li>更新繁体中文语言文件</li>
+  <li>当 Curse 整合包部分 Mod 因服务器上文件不存在而下载失败时不删除游戏</li>
+</ul>
+<h1>HMCL 3.2.147</h1>
+<ul>
+  <li>修复正版登录失败的问题</li>
+  <li>修复无法正常显示错误信息的问题</li>
+</ul>
+<h1>HMCL 3.2.146</h1>
+<ul>
+  <li>改进部分错误提示</li>
+  <li>更新繁体中文语言文件</li>
+  <li>修复重复下载游戏依赖文件的问题</li>
+  <li>修复原版游戏用熔炉图标标识的问题</li>
+  <li>修复取消登录时导致启动器崩溃的问题</li>
+  <li>修复无法取消启动过程和安装过程的问题</li>
+  <li>修复无法正常更新 authlib-injector 的问题</li>
+  <li>修复在缺失资源索引文件时无法启动游戏的问题</li>
+  <li>现官方下载源下载 Forge 时依赖文件不再强制从 BMCLAPI 下载</li>
+</ul>
+<h1>HMCL 3.2.145</h1>
+<ul>
+  <li>修复无法取消下载的问题</li>
+  <li>添加 MCBBS 下载源</li>
+  <li>在资源索引文件不合法时尝试重新下载</li>
+  <li>修复切换游戏版本后启动失败的问题</li>
+</ul>
+<h1>HMCL 3.2.144</h1>
+<ul>
+  <li>修复导入 HMCL 整合包时无法安装 Forge 的问题</li>
+  <li>修复无法下载 Curse 整合包部分 Mod（如潘马斯）的问题</li>
+  <li>修复下载 Curse 整合包 Mod 失败后会删除整合包的问题</li>
+  <li>修复无法启动使用 Vivecraft 安装器新安装的游戏的问题</li>
+  <li>修复启动 1.15 时不会停止等待的问题</li>
+  <li>修复 Windows 下导出启动脚本对双引号的错误转义</li>
+  <li>修复部分正版账号登录 1.7.10 会导致游戏崩溃的问题</li>
+</ul>
+<h1>HMCL 3.2.143</h1>
+<ul>
+  <li>修复关闭 JVM 检查时仍然会检查 java.exe 是否合法的问题</li>
+  <li>修复下载服务端整合包没有对链接转义而无法下载的问题</li>
+  <li>修复下载游戏时可能出现的 “HTTP 302” 错误</li>
+  <li>导出整合包时将剔除所有日志文件和 CustomSkinLoader 的缓存</li>
+</ul>
+<h1>HMCL 3.2.139</h1>
+<ul>
+  <li>修复服务器整合包下载时可能丢失文件的问题</li>
+  <li>修复读取 authlib-injectors.json 时对链接格式要求过严的问题</li>
+</ul>
+<h1>HMCL 3.2.138</h1>
+<ul>
+  <li>添加服务器自动更新整合包，允许服务器远程更新游戏客户端</li>
+  <li>允许直接从给定链接下载整合包并安装</li>
+  <li>日志窗口允许关闭自动滚动</li>
+  <li>更新了英语翻译</li>
+  <li>修复了部分情况下可能导致崩溃的问题</li>
+  <li>修复了无法获取使用 authlib-injectors.json 添加的服务器的服务器名称的问题</li>
+</ul>
+<h1>HMCL 3.2.137</h1>
+<ul>
+  <li>更新了英语和俄语翻译</li>
+  <li>修复了一些导致启动器崩溃的问题</li>
+  <li>修复了无法识别 Java 12 的问题</li>
+  <li>修复了无法下载 Curse 整合包模组的问题</li>
+  <li>修复了下载 Curse 整合包失败后删除了对应版本的问题</li>
+</ul>
+<h1>HMCL 3.2.136</h1>
+<ul>
+  <li>修复 tryCacheLibrary 可能导致崩溃的问题</li>
+  <li>修复无法安装 1.14.4 及 1.15 快照的问题</li>
+</ul>
+<h1>HMCL 3.2.135</h1>
+<ul>
+  <li>添加 authlib-injectors.json，允许服主将添加账号页面更改为默认添加指定服务器的 Authlib Injector 账户</li>
+  <li>访问 <a href="http://www.huangyuhui.net/index.php/2019/09/09/109/">http://www.huangyuhui.net/index.php/2019/09/09/109/</a> 以查看添加方法</li>
+  <li>检查安装游戏时输入的名称是否符合 Windows 系统需求</li>
+  <li>修复导出整合包导入时无法安装 1.13 Forge 和 OptiFine 的问题</li>
+  <li>修复部分情况下无法下载 Forge 安装包的问题</li>
+</ul>
+<h1>HMCL 3.2.134</h1>
+<ul>
+  <li>修复了某些情况下无法安装 1.12.2 及以下版本的 Forge 的问题</li>
+  <li>修复输入某些错误的 Java 路径时导致的崩溃</li>
+  <li>修复了浏览 Mod 列表时可能出现的崩溃问题</li>
+</ul>
+<h1>HMCL 3.2.133</h1>
+<ul>
+  <li>新安装的游戏支持修改游戏版本</li>
+  <li>支持在打开启动器后的主页面按回车键启动游戏</li>
+  <li>支持游戏列表内点击列表项进入游戏设置，右键列表项打开游戏管理菜单</li>
+  <li>修复 OptiFine 自动安装（需要重新安装 OptiFine 生效）</li>
+  <li>修复无法从本地安装 OptiFine 的问题</li>
+  <li>修复同时安装 Forge 和 OptiFine 自动安装失败的问题</li>
+  <li>不再强制使用 java.exe</li>
+</ul>
+<h1>HMCL 3.2.132</h1>
+<ul>
+  <li>添加 Fabric 自动安装</li>
+  <li>添加西班牙语</li>
+  <li>支持导出 MultiMC 整合包</li>
+  <li>修复无法下载 Curse 模组的问题</li>
+</ul>
+<h1>HMCL 3.2.130</h1>
+<ul>
+  <li>添加对 Fabric 模组的管理支持</li>
+  <li>将游戏依赖的动态链接库解压到 .minecraft 中而不是系统临时文件夹</li>
+  <li>在遇到 SocketTimeoutException 时弹窗提示用户超时</li>
+  <li>在遇到 404 时提示用户找不到文件而不是 IOException</li>
+  <li>在 HMCL 本体不完整时提示用户而不是崩溃</li>
+  <li>在启动器更新时显示更新日志</li>
+  <li>禁止导出 1.13.2 游戏整合包</li>
+  <li>修复删除游戏版本时消息框重复显示的问题</li>
+  <li>修复删除模组时可能出现的 NullPointerException</li>
+  <li>修复尝试更新 OptiFine 时却没有可用版本时导致的崩溃</li>
+  <li>修复刷新数据包列表时崩溃的问题</li>
+  <li>修复不能导入 Fabric 官方网站提供的 MultiMC 整合包的问题</li>
+  <li>修复启动器皮肤预览异常的问题</li>
+  <li>修复 macOS 无法安装 1.13.2 Forge 的问题</li>
+</ul>
+<h1>HMCL 3.2.129</h1>
+<ul>
+  <li>在未安装 Mod API 的情况下禁用模组管理面板</li>
+  <li>为自动安装中的 Forge、LiteLoader、OptiFine 添加更新按钮</li>
+  <li>忽略游戏存档名中的颜色转移符</li>
+  <li>隐藏游戏版本不匹配的游戏存档</li>
+  <li>允许数据包列表页面多选</li>
+  <li>修复无法下载安装 Forge 的问题</li>
+  <li>修复下载失败后无法删除游戏版本的问题</li>
+  <li>修复设置页面下方有大面积空白区域的问题</li>
+  <li>回滚 JFoenix 组件库以修复一些 UI 的细节问题</li>
+</ul>
+<h1>HMCL 3.2.127</h1>
+<ul>
+  <li>禁止用户同时安装 Forge 1.13.2 和 OptiFine</li>
+</ul>
+<h1>HMCL 3.2.126</h1>
+<ul>
+  <li>重构任务执行器</li>
+  <li>修复填写账号时崩溃的问题</li>
+  <li>修复添加账号面板中认证服务器列表显示不正确的问题</li>
+  <li>修复刷新版本列表时的卡顿问题</li>
+  <li>修复无法刷新 Forge 列表的问题</li>
+  <li>修复 Forge 1.13 安装问题</li>
+</ul>
+<h1>HMCL 3.2.124</h1>
+<ul>
+  <li>修复无法正版登录的问题</li>
+  <li>修复 mods 不是文件夹时无法安装模组的问题</li>
+</ul>
+<h1>HMCL 3.2.123</h1>
+<ul>
+  <li>启动前检查是否是 Java 8~10</li>
+  <li>模组管理面板支持多选</li>
+  <li>下载库文件失败时提供更友好的提示</li>
+  <li>只从 BMCLAPI 获取 Forge 列表</li>
+  <li>添加 BMCLAPI 赞助信息</li>
+  <li>修复头像不显示头盔层的问题</li>
+</ul>
+<h1>HMCL 3.2.121</h1>
+<ul>
+  <li>支持 Forge 1.13 的自动安装</li>
+  <li>安装游戏时更新资源文件</li>
+  <li>启动时下载缺失的 Minecraft 本体文件</li>
+  <li>支持自动检测整合包自带的 Java 运行时</li>
+  <li>更新 authlib-injector</li>
+  <li>下载库文件失败时提供更友好的提示</li>
+  <li>重构正版登录</li>
+  <li>修复启动按钮无法根据背景颜色更改字体颜色的问题</li>
+</ul>
+<h1>HMCL 3.2.120</h1>
+<ul>
+  <li>修复打开版本管理时的崩溃</li>
+</ul>
+<h1>HMCL 3.2.119</h1>
+<ul>
+  <li>添加提示部分版本的 Forge 和 LiteLoader 不兼容的问题</li>
+  <li>在模组管理面板添加加载进度条</li>
+  <li>支持整合包拖拽到主页面打开安装向导</li>
+  <li>支持新版 MultiMC 整合包的导入</li>
+  <li>删除在版本管理页面中的删除游戏和重命名按钮</li>
+  <li>加载游戏存档过程更加流畅</li>
+  <li>在登录对话框中添加注册链接</li>
+  <li>修复标题栏中没有显示返回主页按钮的问题</li>
+  <li>修复保存设置时的潜在问题</li>
+</ul>
+<h1>HMCL 3.2.117</h1>
+<ul>
+  <li>提醒用户在修改版本独立选项时需要注意游戏文件的转移</li>
+  <li>修复 Java 10 上 UI 错位的问题</li>
+  <li>修复游戏认证服务器列表的渲染问题</li>
+  <li>修复启动 Curse 整合包时尝试下载被禁用的模组的问题</li>
+</ul>
+<h1>HMCL 3.2.116</h1>
+<ul>
+  <li>在缓存目录无效时自动更改设置</li>
+  <li>在安装游戏失败时删除不完全的游戏</li>
+  <li>自动检测整合包、游戏存档、数据包的编码以增强兼容性</li>
+  <li>在更新整合包时进行游戏文件的备份</li>
+  <li>添加打开存档文件夹的菜单</li>
+  <li>添加刷新模组列表的按钮</li>
+  <li>支持拖拽游戏存档压缩包到游戏界面以便安装游戏存档</li>
+  <li>修复皮肤图片文件损坏时导致的崩溃问题</li>
+  <li>修复配置文件格式不正确时导致的崩溃问题</li>
+  <li>修复 Curse 整合包更新失败的问题</li>
+  <li>修复自动更新弹出气泡的界面错乱问题</li>
+</ul>
+<h1>HMCL 3.2.115</h1>
+<ul>
+  <li>修复安装游戏后不显示游戏的问题</li>
+  <li>修复下载资源文件时潜在的崩溃问题</li>
+</ul>
+<h1>HMCL 3.2.114</h1>
+<ul>
+  <li>修复导入整合包时的乱码问题</li>
+  <li>更新 authlib-injector</li>
+  <li>从 Cursemeta 上下载 Curse 上被删除的 Mod 文件</li>
+</ul></body></html>
