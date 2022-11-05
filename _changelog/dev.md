@@ -7,6 +7,16 @@ toc: true
 ---
 
 <p>Notice: changelogs are written in Chinese.</p>
+<h1>HMCL 3.5.3.227</h1>
+<ul>
+  <li>多人联机功能暂停维护(<a href="https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate">https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate</a>)</li>
+  <li>修复中文路径下启动 <= 1.12.2 的版本没有声音的问题</li>
+  <li>修复提示弹窗的文本显示问题</li>
+  <li>更新相关翻译</li>
+  <li>离线账户添加新的官方皮肤</li>
+  <li>优化未存在 Java 环境启动 HMCL 时提示用户下载 Java 的提示</li>
+  <li>微软账户登录窗口添加“忘记密码”按钮</li>
+</ul>
 <h1>HMCL 3.5.3.223</h1>
 <ul>
   <li>在启动游戏时刷新账户失败时提示重试登录</li>
