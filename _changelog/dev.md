@@ -9,7 +9,7 @@ toc: true
 <p>Notice: changelogs are written in Chinese.</p>
 <h1>HMCL 3.5.3.227</h1>
 <ul>
-  <li>多人联机功能暂停维护(<a href="https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate">https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate</a>)</li>
+  <li>多人联机功能暂时下线维护(<a href="https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate">https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate</a>)</li>
   <li>修复中文路径下启动 <= 1.12.2 的版本没有声音的问题</li>
   <li>修复提示弹窗的文本显示问题</li>
   <li>更新相关翻译</li>
