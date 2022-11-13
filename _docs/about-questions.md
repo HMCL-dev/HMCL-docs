@@ -45,12 +45,12 @@ __想必你注意到我了，记住上面讲的话__
 
 资源包详细资料   [跳转](https://minecraft.fandom.com/zh/wiki/%E8%B5%84%E6%BA%90%E5%8C%85)
 
-## 关于游戏的 mods 
+## 关于游戏的 Mods 
 mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组件  
 你可以在这获得 __更多的游戏内容__、__更好的游戏体验__、__更好的游戏观感__ 等等
 
-关于 mods 的详细使用方法 [跳转](/launcher/auto-installing.html)
-### 关于 mods 的报错解决方法
+关于 Mods 的详细使用方法 [跳转](/launcher/auto-installing.html)
+### 关于 Mods 的报错解决方法
 在 [此文](/launcher/auto-installing.html) 末尾中的确讲到了一定的解决方法
 
 但是我还是建议你看看更为详细的内容 [目前未写该教程，请等待]()
