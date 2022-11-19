@@ -7,7 +7,7 @@ toc: true
 ---
 
 *Notice: changelogs are written in Chinese.*
-# HMCL 3.5.3
+# HMCL 3.5.3 {#nowchange}
 
 - 启动器
   - 支持多人联机
