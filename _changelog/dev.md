@@ -23,6 +23,7 @@ toc: true
 - 在离线账户添加窗口中添加相关命名提示
 - 添加更多日志分析规则，优化日志分析器
 - 修复修改 HMCL 设置时反复保存配置文件的问题
+- 修复 Java 8 中账户无法登录问题
 
 # HMCL 3.5.3.227
 - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
