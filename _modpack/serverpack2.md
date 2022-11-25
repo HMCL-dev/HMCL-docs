@@ -5,15 +5,13 @@ date:   2021-08-22 23:18:02 +0800
 categories: 整合包
 toc: true
 ---
-# **使用HMCL启动器配置服务器客户端自动更新**
 
 ## 备注
 
-- **文章原作者：[hy黑影](https://www.mcbbs.net/home.php?mod=space&uid=3051111)**
-- **转载：Zkitfly**
-- **部分内容进行了稍作打磨**
-- **本教程转载至https://www.mcbbs.net/thread-1103864-1-1.html?action=printable**
-- **标题: [综合]使用HMCL配置服务器客户端自动更新——再也不用担心玩家不会更新客户端了**
+> 文章原作者：[hy黑影](https://www.mcbbs.net/home.php?mod=space&uid=3051111)
+> 转载：Zkitfly
+> 部分内容进行了稍作打磨
+> 本教程转载至[https://www.mcbbs.net/thread-1103864-1-1.html?action=printable](https://www.mcbbs.net/thread-1103864-1-1.html?action=printable)
 
 ## **前言**
 

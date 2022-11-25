@@ -69,25 +69,3 @@ toc: true
 ![](/assets/img/docs/offline-skin/img4_2.png)
 
 ![](/assets/img/docs/offline-skin/img4_3.png)
-
-## 以下内容为测试
-
-<div class="note">
-  <h5>提示™帮助你更好的使用 Jekyll</h5>
-  <p>这里有各种小技巧让你成为 Jekyll 大神</p>
-</div>
-
-<div class="note info">
-  <h5>说明包含一些有用的信息</h5>
-  <p>这里提供一些帮助你理解 Jekyll 的内容</p>
-</div>
-
-<div class="note warning">
-  <h5>警告帮助你不出错</h5>
-  <p>如果不想出错，请注意这类消息</p>
-</div>
-
-<div class="note unreleased">
-  <h5>尚未发布的功能</h5>
-  <p>这部分内容针对 Jekyll 尚未发布的版本</p>
-</div>
