@@ -9,24 +9,24 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 <h1 id="nowchange">HMCL 3.5.228</h1>
 
-- 性能、内存、UI 卡顿资源占用与后台内存分配等优化
-- 整合包、模组、资源包、世界搜索中的 游戏版本 与 类别 标签更新
+- 性能、内存、UI 卡顿、资源占用与后台内存分配等优化
 - 修复无法正确处理带有 Quilt 的 MultiMC 整合包的问题
 - 修复在 Java 8 上启动器标题显示 @develop@ 的问题
 - 修复回滚 Mod 时不隐藏弹出菜单导致报错的问题
-- 修复修改 HMCL 设置时反复保存配置文件的问题
+- 修复调整 HMCL 设置时反复保存配置文件的问题
 - 修复 Java 18+ Minecraft 日志乱码的问题
-- 添加微软账户登录弹窗中 忘记密码 按钮
-- 弃用作为临时加固措施的 log4j-patch
 - 修复 macOS Dock 中的图标的显示问题
 - 修复 macOS 上下载 Java 失败的问题
-- 优化自动安装的 Quilt 列表图标显示
 - 修复 Java 8 中账户无法登录问题
-- 在离线账户添加相关命名提示
 - 修复更新模组时崩溃的问题
 - 修复 Java 下载相关问题
-- 支持加载 GIF 背景图
 - 微软登录提示改进
+- 弃用作为临时加固措施的 log4j-patch
+- 整合包、模组、资源包、世界搜索中的 游戏版本 与 类别 标签更新
+- 添加微软账户登录弹窗中 忘记密码 按钮
+- 优化自动安装的 Quilt 列表图标显示
+- 在离线账户添加相关命名提示
+- 支持加载 GIF 背景图
 
 # HMCL 3.5.3.227
 - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
