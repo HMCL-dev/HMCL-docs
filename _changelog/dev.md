@@ -7,8 +7,34 @@ toc: true
 ---
 
 *Notice: changelogs are written in Chinese.*
-<h1 id="nowchange">HMCL 3.5.3.227</h1>
+<h1 id="nowchange">HMCL 3.5.228</h1>
 
+- 优化启动器资源占用
+- 支持使用 Gif 作为背景图
+- 改进高分辨率屏幕上图标的显示效果
+- 改进微软账户登录相关提示
+- 在微软账户登录弹窗中添加 忘记密码 按钮
+- 添加关于离线账户命名的提示
+- 更新整合包、模组、资源包、世界搜索中页面游戏版本与类别标签
+
+错误修复：
+- 修复下载页卡顿的问题
+- 修复自动下载 Java 相关问题
+- 修复使用 Java 18+ 运行 Minecraft 时日志乱码的问题
+- 修复更新模组时可能崩溃的问题
+- 修复回滚 Mod 时不隐藏弹出菜单导致报错的问题
+- 修复无法正确处理带有 Quilt 的 MultiMC 整合包的问题
+- 修复 Quilt 版本选择页未显示 Quilt 图标的问题
+- 修复 Mcbbs 整合包中 JVM 参数覆盖版本设置的问题
+- 修复使用 Java 8 运行时启动器标题显示 @develop@ 的问题
+- 修复使用 Java 8 运行时账户无法登录的问题
+- 修复使用 Java 8 运行时无法从 CurseForge 下载 Mod 的问题
+- 修复 macOS 上 Dock 中没有正确显示图标的问题
+- 修复导出整合包时在导出路径生成大量临时文件的问题
+- 修复修改版本设置时反复保存配置文件的问题
+- 修复未过滤部分整合包简介中颜色代码的问题
+
+# HMCL 3.5.3.227
 - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
 - 修复中文路径下启动 <= 1.12.2 的版本没有声音的问题
 - 修复 提示弹窗 的文本显示问题
