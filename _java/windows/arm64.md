@@ -5,7 +5,7 @@ date:   2022-12-03 17:30:00 +0800
 categories: Java 下载
 toc: falst
 ---
-### Java 安装包已开始下载，请等待下载完成，然后按照提示安装
+### Java 安装包已开始下载，请等待 Java 安装程序下载完成，最后启动安装程序，依照提示安装 Java。
 
 ### 没有下载？[点击此处开始下载](https://aka.ms/download-jdk/microsoft-jdk-17-windows-aarch64.msi)
 
