@@ -7,7 +7,7 @@ toc: true
 ---
 
 *Notice: changelogs are written in Chinese.*
-<h1 id="nowchange">HMCL 3.5.228</h1>
+<h1 id="nowchange">HMCL 3.5.3.228</h1>
 
 - 优化启动器资源占用
 - 支持使用 Gif 作为背景图
