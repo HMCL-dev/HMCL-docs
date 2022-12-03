@@ -1,6 +1,6 @@
 ---
 title:  "下载 HMCL 和 Minecraft 依赖的 Java"
-permalink: /downloads/java.html
+permalink: /downloads/windows/arm32.html
 date:   2022-12-03 17:30:00 +0800
 categories: Java 下载
 toc: falst
