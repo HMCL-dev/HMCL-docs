@@ -13,7 +13,7 @@ toc: falst
 
 ### The Java installation package has started to download. Please wait for the download to complete, and then follow the prompts to install
 
-### Not traveling? [Click here to start downloading](https://download.bell-sw.com/java/17.0.5+8/bellsoft-jre17.0.5+8-linux-arm32-vfp-hflt-full.deb)
+### No download? [Click here to start downloading](https://download.bell-sw.com/java/17.0.5+8/bellsoft-jre17.0.5+8-linux-arm32-vfp-hflt-full.deb)
 
 ### Want to use another installer? [DMG](https://download.bell-sw.com/java/17.0.5+8/bellsoft-jre17.0.5+8-linux-arm32-vfp-hflt-full.deb) | [PKG](https://download.bell-sw.com/java/17.0.5+8/bellsoft-jre17.0.5+8-linux-arm32-vfp-hflt-full.rpm) | [TAR.GZ](https://download.bell-sw.com/java/17.0.5+8/bellsoft-jre17.0.5+8-linux-arm32-vfp-hflt-full.tar.gz)
 
