@@ -34,6 +34,7 @@ toc: true
 - 修复导出整合包时在导出路径生成大量临时文件的问题
 - 修复修改版本设置时反复保存配置文件的问题
 - 修复未过滤部分整合包简介中颜色代码的问题
+- 修复 Mcbbs 整合包 JVM 参数覆盖版本设置的问题
 
 # HMCL 3.5.3.227
 - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
