@@ -68,6 +68,10 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  downloads:
+    output: true
+    permalink: /:collection/:path/
+
 defaults:
   - scope:
       path: "assets/img"
