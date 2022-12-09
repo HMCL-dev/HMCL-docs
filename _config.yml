@@ -132,6 +132,17 @@ defaults:
       comments: false
       sidebar:
         nav: "changelog"
+  - scope:
+      path: "_downloads"
+      type: downloads
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "downloads"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
