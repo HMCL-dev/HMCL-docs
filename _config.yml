@@ -64,6 +64,10 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  eula:
+    output: true
+    permalink: /:collection/:path/
+
   multiplayer:
     output: true
     permalink: /:collection/:path/
@@ -110,6 +114,17 @@ defaults:
       comments: false
       sidebar:
         nav: "modpack"
+  - scope:
+      path: "_eula"
+      type: eula
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "eula"
   - scope:
       path: "_multiplayer"
       type: multiplayer
