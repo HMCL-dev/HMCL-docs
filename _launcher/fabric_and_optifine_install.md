@@ -14,7 +14,7 @@ toc: true
 
 原理是安装 OptiFabric 这个 Fabric 模组，该模组的作用是采用官方的 OptiFine 并在运行时与 Fabric 兼容来实现这一点。
 
-**如果你使用 OptiFine 纯粹是为了提高性能、使用缩放按钮或动态照明，那么还有[其他模组](http://webtrans.yodao.com/webTransPc/index.html?from=en&to=zh-CHS&type=1&url=https%3A%2F%2Flambdaurora.dev%2Foptifine_alternatives#/)可以单独实现这些功能，具有更可靠的兼容性。**
+**如果你使用 OptiFine 纯粹是为了提高性能、使用缩放按钮或动态照明，那么还有[其他模组](http://webtrans.yodao.com/webTransPc/index.html?from=en&to=zh-CHS&type=2&url=https%3A%2F%2Flambdaurora.dev%2Foptifine_alternatives#/)可以单独实现这些功能，具有更可靠的兼容性。**
 
 ## 操作方法
 
