@@ -28,7 +28,11 @@ toc: true
 
 #### 获取
 
-- **1）获取 OptiFabric ，可以在他的 [CurseForge 页面](https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all) 或在 HMCL 的模组搜索中下载**
+- **1）获取 OptiFabric ，可以在他的 [MC百科下载页面（推荐）](https://www.mcmod.cn/download/1703.html) [CurseForge 页面](https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all) 或在 HMCL 的模组搜索中下载**
+
+[MC百科下载页面（推荐）](https://www.mcmod.cn/download/1703.html)
+
+![MC百科下载页面](/assets/img/docs/fabric_and_optifine_install/2.png)
 
 [CurseForge页面](https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all) 下载操作：
 
