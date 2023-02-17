@@ -10,7 +10,7 @@ toc: true
 <h1 id="nowchange">HMCL 3.5.4</h1>
 
 - 启动器
-  - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
+  - 多人联机功能暂时下线维护 [详情](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
   - 修复在 MacOS 和 Linux 系统下不能打开模组文件路径的问题
   - 修复离线模式帐户无法使用 LittleSkin 皮肤站的问题
   - 修复无法启动包含 LabyMod 的游戏的问题
