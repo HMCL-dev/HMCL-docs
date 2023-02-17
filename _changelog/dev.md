@@ -8,14 +8,28 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.3.229</h1>
+<h1 id="nowchange">HMCL 3.5.3.230</h1>
+
+- Quilt 相关功能完善
+- 默认将搜索排序修改为“热度”
+- 更新语言文件
+- 减小 JAR 文件体积
+- 优化性能，轻微降低内存占用
+- 不将默认的日志行数保存到配置中，使其导出崩溃日志中的 minecraft.log 不会受其行数限制
+
+错误修复：
+
+- 修复 GIF 动图加载占用主线程的问题
+- 修复一些崩溃问题
+- 修复下载源选择框过长的问题
+- 修复添加冗余 G1 参数的问题
+
+# HMCL 3.5.3.229
 
 - 更新整合包、模组、资源包、世界搜索中页面游戏版本标签，并修改类别的顺序
 - 将 Little skin 更改为可选的登录选项
-- 优化内存占用
 - 启动时检查 HMCL 是否在临时路径中
 - 优化 Mod 列表加载速度
-- 减小 JAR 文件体积
 - 改善了高分屏上图标的显示质量
 - 在更新整合包中包含的 Mod 时弹出警告
 - 支持导出更多崩溃日志
@@ -60,7 +74,6 @@ toc: true
 - 修复导出整合包时在导出路径生成大量临时文件的问题
 - 修复修改版本设置时反复保存配置文件的问题
 - 修复未过滤部分整合包简介中颜色代码的问题
-- 修复 Mcbbs 整合包 JVM 参数覆盖版本设置的问题
 
 # HMCL 3.5.3.227
 - 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
