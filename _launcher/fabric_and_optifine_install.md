@@ -54,11 +54,11 @@ HMCL 模组搜索下载操作：
 
 Optifine [页面](https://optifine.net/downloads) 操作：
 
-![Optifine页面操作](/assets/img/docs/fabric_and_optifine_install/5.png)
+![Optifine页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
 
 Optifine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
 
-![Optifine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
+![Optifine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/4.png)
 
 #### 安装
 
