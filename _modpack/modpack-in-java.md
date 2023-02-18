@@ -6,6 +6,8 @@ categories: 整合包
 toc: true
 ---
 
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fmodpack%2Fbundled-java.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
+
 ## 背景
 
 想必有些服务器主为此头疼了许久。由于玩家的电脑环境多变，甚至可能仍然有安装着 Java 7 的电脑而无法启动 1.12.2 以上的游戏、或者  Mod 客户端。因此服务器主希望能在整合包中自带一个 Java 运行时（或者叫 JRE），从而取代电脑自带的 JVM。接下来本文将介绍两种方法。

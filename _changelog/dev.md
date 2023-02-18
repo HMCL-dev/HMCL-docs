@@ -6,6 +6,8 @@ categories: 更新日志
 toc: true
 ---
 
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fchangelog%2Fdev.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
+
 *Notice: changelogs are written in Chinese.*
 
 <h1 id="nowchange">HMCL 3.5.3.229</h1>

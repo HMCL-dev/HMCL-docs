@@ -6,6 +6,8 @@ categories: 启动器
 toc: true
 ---
 
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Ffabric_and_optifine_install.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
+
 > 本文由 zkitefly 编写。
 
 在 HMCL 的自动安装中，如果先选择了 Fabric 或 Optifine ，HMCL 就会提示他们互不兼容。
