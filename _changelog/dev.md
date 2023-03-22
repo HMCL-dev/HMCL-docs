@@ -10,7 +10,18 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.3.230</h1>
+<h1 id="nowchange">HMCL 3.5.4.232</h1>
+
+- 添加环境变量设置
+- 添加渲染器设置
+- 将版本高级设置拆分至单独页面中
+- 在 Linux 上支持 `MESA_LOADER_DRIVER_OVERRIDE` 环境变量，适配 Zink 驱动程序
+
+错误修复：
+
+- 修复日志分析窗口的渲染问题
+
+# HMCL 3.5.3.230
 
 - Quilt 相关功能完善
 - 默认将搜索排序修改为“热度”
