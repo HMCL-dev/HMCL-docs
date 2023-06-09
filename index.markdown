@@ -54,6 +54,10 @@ You can also submit your suggestions here.
 
    他将告诉你如何安装 Optifine 来使用光影。
 
+6. [设置项详解](/launcher/set-item-details.html)
+
+   这篇文章针对于HMCL的各个设置项进行了详细的解释。
+
 ### 对于开发者
 
 1. [制作 HMCL 格式的数据包](/launcher/datapack.html)
