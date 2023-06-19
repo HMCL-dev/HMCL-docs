@@ -64,11 +64,15 @@ toc: true
 
 在高版本的Optifine中，Optifine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与Optifine不兼容，注意依赖关系，Oculus需要前置Rubidium
 
+![Oculus](/assets/img/docs/shader/oculus.png)
+
 相关链接：[ Oculus Curseforge ](https://www.curseforge.com/minecraft/mc-mods/oculus)，[ Oculus Modrinth ](https://modrinth.com/mod/oculus)，[ Rubidium Curseforge ](https://www.curseforge.com/minecraft/mc-mods/rubidium)，[ Rubidium Modrinth ](https://modrinth.com/mod/rubidium)
 
 ## 安装Iris Shaders（一个Fabric Mod）
 
 在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium
+
+![Iris](/assets/img/docs/shader/iris.png)
 
 相关链接：[ Iris Shaders官网 ](https://irisshaders.dev/)，[ Iris Shaders Modrinth ](https://modrinth.com/mod/iris)，[ Iris Shaders Curseforge（不再更新，请到官网或Modrinth下载最新版本） ](https://www.curseforge.com/minecraft/mc-mods/irisshaders)，[ Sodium Modrinth ](https://modrinth.com/mod/sodium)，[ Sodium Curseforge（不再更新，请在Modrinth下载） ](https://www.curseforge.com/minecraft/mc-mods/sodium)
 
