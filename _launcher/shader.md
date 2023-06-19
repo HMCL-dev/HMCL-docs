@@ -9,6 +9,7 @@ toc: true
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Foptifine.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
 > 本文由hejiehao修改
+
 ## 安装 OptiFine
 
 ### 方式一: 全新安装
@@ -55,12 +56,27 @@ toc: true
 
 2. Forge 和 OptiFine 会出现不兼容的情况，但大多数情况下，Forge 和 OptiFine 是相互支持的。在[ Optifine 官网下载页面 ](https://optifine.net/downloads)可以查看Optifine与Forge的兼容情况，位置见下图的红框位置。
 
-![Optifine_Compability]
+![Optifine_Compatibility](/assets/img/docs/shader/optifine_compatibility.png)
+
 3. 若出现不兼容的情况，请使用[ OptiForge ](https://www.curseforge.com/minecraft/mc-mods/optiforge) (一个 Forge Mod ) 或者等待Optifine兼容Forge解决。
+
+## 安装Oculus
+
+在高版本的Optifine中，Optifine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与Optifine不兼容，注意依赖关系，Oculus需要前置Rubidium
+
+相关链接：[ Oculus Curseforge ](https://www.curseforge.com/minecraft/mc-mods/oculus)，[ Oculus Modrinth ](https://modrinth.com/mod/oculus)，[ Rubidium Curseforge ](https://www.curseforge.com/minecraft/mc-mods/rubidium)，[ Rubidium Modrinth ](https://modrinth.com/mod/rubidium)
+
+## 安装Iris Shaders
+
+在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium
+
+相关链接：[ Iris Shaders官网 ](https://irisshaders.dev/)，[ Iris Shaders Modrinth ](https://modrinth.com/mod/iris)，[ Iris Shaders Curseforge（不再更新，请到官网或Modrinth下载最新版本） ](https://www.curseforge.com/minecraft/mc-mods/irisshaders)，[ Sodium Modrinth ](https://modrinth.com/mod/sodium)，[ Sodium Curseforge（不再更新，请在Modrinth下载） ](https://www.curseforge.com/minecraft/mc-mods/sodium)
 
 ## 安装光影包
 
-一般光影是一个 Zip 格式的文件，将光影文件放入 `\.minecraft\shaderpacks` 文件夹中即可 (没有这个文件夹就自己新建一个) 。如果开了版本隔离，那么文件夹是 `\.minecraft\version\<客户端名称>\shaderpacks` 
+一般光影是一个 Zip 格式的文件，将光影文件放入 `\.minecraft\shaderpacks` 文件夹中即可 (没有这个文件夹就自己新建一个) 。如果开了版本隔离，那么文件夹是 `\.minecraft\version\<客户端名称>\shaderpacks`。若你不知道游戏文件夹在哪，在HMCL中打开游戏文件夹。
+
+![Game_Dir](/assets/img/docs/shader/game_dir.png)
 
 如果你不知道版本隔离是啥，也不会创建文件夹，那么请打开游戏，依次点击 `设置—视频设置—光影—光影包文件夹` ，在里面放入光影包，然后点击你要加载的光影，最后点击 `完成` 即可
 
