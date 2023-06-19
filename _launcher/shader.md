@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Foptifine.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
-> 本文由hejiehao修改
+> 本文由 hejiehao 修改
 
 ## 安装 OptiFine
 
@@ -60,13 +60,13 @@ toc: true
 
 3. 若出现不兼容的情况，请使用[ OptiForge ](https://www.curseforge.com/minecraft/mc-mods/optiforge) (一个 Forge Mod ) 或者等待Optifine兼容Forge解决。
 
-## 安装Oculus
+## 安装Oculus（一个 Forge Mod）
 
 在高版本的Optifine中，Optifine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与Optifine不兼容，注意依赖关系，Oculus需要前置Rubidium
 
 相关链接：[ Oculus Curseforge ](https://www.curseforge.com/minecraft/mc-mods/oculus)，[ Oculus Modrinth ](https://modrinth.com/mod/oculus)，[ Rubidium Curseforge ](https://www.curseforge.com/minecraft/mc-mods/rubidium)，[ Rubidium Modrinth ](https://modrinth.com/mod/rubidium)
 
-## 安装Iris Shaders
+## 安装Iris Shaders（一个Fabric Mod）
 
 在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium
 
