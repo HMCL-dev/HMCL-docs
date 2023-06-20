@@ -68,7 +68,7 @@ toc: true
 
 相关链接：[ Oculus Curseforge ](https://www.curseforge.com/minecraft/mc-mods/oculus)，[ Oculus Modrinth ](https://modrinth.com/mod/oculus)，[ Rubidium Curseforge ](https://www.curseforge.com/minecraft/mc-mods/rubidium)，[ Rubidium Modrinth ](https://modrinth.com/mod/rubidium)
 
-## 安装Iris Shaders（一个Fabric Mod）
+## 安装Iris Shaders（一个Fabric/Quilt Mod）
 
 在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium
 
