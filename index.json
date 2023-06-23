@@ -13,6 +13,11 @@
                 "url": "https://docs.hmcl.net/launcher/optifine.html"
             },
             {
+                "title": "设置项详解",
+                "subtitle": "这篇文章针对于HMCL的各个设置项进行了详细的解释",
+                "url": "https://docs.hmcl.net/launcher/set-item-details.html"
+            },
+            {
                 "title": "离线模式下更换皮肤",
                 "subtitle": "如何在离线模式下使用自定义角色皮肤",
                 "url": "https://docs.hmcl.net/launcher/offline-skin.html"
