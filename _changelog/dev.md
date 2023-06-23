@@ -10,7 +10,30 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.4.232</h1>
+<h1 id="nowchange">HMCL 3.5.4.234</h1>
+
+- 拒绝在被 Fractureiser 病毒感染的设备上启动 HMCL（若检测到将会提示并退出，[详情](https://github.com/fractureiser-investigation/fractureiser#readme)）
+- 检测 HMCL 是否处于 macOS 上的 App Translocation（macOS 使用了 [App Translocation](https://lapcatsoftware.com/articles/app-translocation.html) 机制，可能会自动将 HMCL 移动至 `/private/var/folders` 中的临时文件夹内，导致用户关闭 HMCL 后游戏数据和设置丢失）
+- 添加 Linux RISC-V 64 平台支持
+- 日志分析窗口中显示物理内存大小
+- 更新 Minecraft 购买链接
+- 添加删除游戏资源文件按钮
+- 优化 SSL 异常报错信息
+- 添加更多日志分析规则
+- 更新搜索版本号
+- 更新游戏版本号检测性能
+- 添加隐藏测试版提示开关
+- 更新翻译
+
+错误修复：
+
+- 修复在 Minecraft 1.20 不能正常使用游戏内聊天功能的问题
+- 修复在 Windows on ARM 平台上的启动问题
+- 修复使用系统 GLFW 选项对 1.19+ 不生效的问题
+- 修复无法使用 macOS aarch64 JRE 启动部分版本的问题
+- 修复一些崩溃问题
+
+# HMCL 3.5.4.232
 
 - 添加环境变量设置
 - 添加渲染器设置
@@ -101,7 +124,7 @@ toc: true
 - 修复 Mcbbs 整合包 JVM 参数覆盖版本设置的问题
 
 # HMCL 3.5.3.227
-- 多人联机功能暂时下线维护[https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
+- 多人联机功能暂时下线维护[详情](https://hmcl.huangyuhui.net/api/redirect/multiplayer-migrate)
 - 修复中文路径下启动 <= 1.12.2 的版本没有声音的问题
 - 修复 提示弹窗 的文本显示问题
 - 更新相关翻译
