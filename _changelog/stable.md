@@ -45,9 +45,6 @@ toc: true
 - 修复无法使用 macOS aarch64 JRE 启动部分版本的问题
 - 修复一些崩溃问题
 
-
-此外，本版本包含数百项错误修复，详情请查看[测试版更新日志](https://docs.hmcl.net/changelog/dev.html)。
-
 # HMCL 3.5.4
 
 - 启动器
