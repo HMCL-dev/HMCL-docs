@@ -82,6 +82,10 @@ defaults:
     values:
       image: true
   - scope:
+      path: "assets/downloads"
+    values:
+      image: true
+  - scope:
       path: "assets/css"
     values:
       css: true
