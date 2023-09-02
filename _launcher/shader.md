@@ -54,15 +54,15 @@ toc: true
 1. Fabric 和 OptiFine 本身并不能共存，必须同时安装[ OptiFabric ](https://www.curseforge.com/minecraft/mc-mods/optifabric) (一个 Fabric Mod ) 。
   OptiFabric 目前 1.17 仅支持 `OptiFine HD U G9` ，`Fabric` 最高支持的版本为 `0.11.7` 。
 
-2. Forge 和 OptiFine 会出现不兼容的情况，但大多数情况下，Forge 和 OptiFine 是相互支持的。在[ Optifine 官网下载页面 ](https://optifine.net/downloads)可以查看Optifine与Forge的兼容情况，位置见下图的红框位置。
+2. Forge 和 OptiFine 会出现不兼容的情况，但大多数情况下，Forge 和 OptiFine 是相互支持的。在[ OptiFine 官网下载页面 ](https://optifine.net/downloads)可以查看OptiFine与Forge的兼容情况，位置见下图的红框位置。
 
-![Optifine_Compatibility](/assets/img/docs/shader/optifine_compatibility.png)
+![OptiFine_Compatibility](/assets/img/docs/shader/optifine_compatibility.png)
 
-3. 若出现不兼容的情况，请使用[ OptiForge ](https://www.curseforge.com/minecraft/mc-mods/optiforge) (一个 Forge Mod ) 或者等待Optifine兼容Forge解决。
+3. 若出现不兼容的情况，请使用[ OptiForge ](https://www.curseforge.com/minecraft/mc-mods/optiforge) (一个 Forge Mod ) 或者等待OptiFine兼容Forge解决。
 
 ## 安装Oculus（一个 Forge Mod）
 
-在高版本的Optifine中，Optifine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与Optifine不兼容，注意依赖关系，Oculus需要前置Rubidium
+在高版本的OptiFine中，OptiFine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与OptiFine不兼容，注意依赖关系，Oculus需要前置Rubidium
 
 ![Oculus](/assets/img/docs/shader/oculus.png)
 

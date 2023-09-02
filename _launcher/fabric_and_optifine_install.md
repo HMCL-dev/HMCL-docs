@@ -1,5 +1,5 @@
 ---
-title:  "同时安装 Fabric & Optifine"
+title:  "同时安装 Fabric & OptiFine"
 permalink: /launcher/fabric_and_optifine_install.html
 date:   2023-01-04 11:30:00 +0800
 categories: 启动器
@@ -10,9 +10,9 @@ toc: true
 
 > 本文由 zkitefly 编写。
 
-在 HMCL 的自动安装中，如果先选择了 Fabric 或 Optifine ，HMCL 就会提示他们互不兼容。
+在 HMCL 的自动安装中，如果先选择了 Fabric 或 OptiFine ，HMCL 就会提示他们互不兼容。
 
-但在本文档中，通过一些简单的操作就可以同时安装 Fabric & Optifine 的客户端。
+但在本文档中，通过一些简单的操作就可以同时安装 Fabric & OptiFine 的客户端。
 
 原理是安装 OptiFabric 这个 Fabric 模组，该模组的作用是采用官方的 OptiFine 并在运行时与 Fabric 兼容来实现这一点。
 
@@ -26,7 +26,7 @@ toc: true
 
 *注：如果你想放置其他的 Fabric 模组，建议一并安装 **Fabric API** ，有些 Fabric 模组会依赖他。*
 
-### 2.获取并安装 OptiFabric 模组 & Optifine
+### 2.获取并安装 OptiFabric 模组 & OptiFine
 
 #### 获取
 
@@ -52,22 +52,22 @@ HMCL 模组搜索下载操作：
 
 *注：如果你在HMCL模组搜索中下载时，另存该模组，那么就需要按照下面的模组安装方法来安装。*
 
-- **2）获取 Optifine ，可以在他的 [页面](https://optifine.net/downloads) 或非官方 [中文页面](https://optifine.cn/downloads) 中可以下载**
+- **2）获取 OptiFine ，可以在他的 [页面](https://optifine.net/downloads) 或非官方 [中文页面](https://optifine.cn/downloads) 中可以下载**
 
-Optifine [页面](https://optifine.net/downloads) 操作：
+OptiFine [页面](https://optifine.net/downloads) 操作：
 
-![Optifine页面操作](/assets/img/docs/fabric_and_optifine_install/5.png)
+![OptiFine页面操作](/assets/img/docs/fabric_and_optifine_install/5.png)
 
-Optifine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
+OptiFine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
 
-![Optifine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
+![OptiFine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
 
 #### 安装
 
-进入 要安装模组的游戏版本 的 游戏管理 ，切换到 模组管理 ，在这个页面将 OptiFabric 模组 & Optifine 添加即可
+进入 要安装模组的游戏版本 的 游戏管理 ，切换到 模组管理 ，在这个页面将 OptiFabric 模组 & OptiFine 添加即可
 
 ![安装模组](/assets/img/docs/fabric_and_optifine_install/11.gif)
 
-**然后在 模组管理 中检查是否有 OptiFabric 模组 & Optifine !**
+**然后在 模组管理 中检查是否有 OptiFabric 模组 & OptiFine !**
 
 检查完后，至此就完成啦，直接启动游戏即可。
