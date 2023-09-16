@@ -1,5 +1,7 @@
+# https://github.com/zkitefly/Minecraft.Download-data
 import os
 import requests
+import json
 
 def download_file(url, save_path):
     response = requests.get(url)
@@ -19,12 +21,15 @@ def main():
     with open("version.json", 'r') as file:
         version_data = file.read()
 
-    import json
     version_json = json.loads(version_data)
+    # versions = [v for v in version_json["versions"] if v["type"] == "release"]
     versions = version_json["versions"]
 
     if not os.path.exists("versions"):
         os.makedirs("versions")
+
+    assetindex_data = {"assetindex": []}  # Initialize the assetindex data structure
+    seen_asset_indexes = set()  # Initialize a set to keep track of seen asset indexes
 
     for version in versions:
         version_url = version["url"]
@@ -32,16 +37,31 @@ def main():
         save_path = os.path.join("versions", filename)
         download_file(version_url, save_path)
 
-    # Step 3: Read versions' json files and download the assetIndex
+        # Read the version's JSON file and extract asset index information
+        with open(save_path, 'r') as file:
+            version_data = json.load(file)
+
+        asset_index = version_data["assetIndex"]
+        asset_index_url = asset_index["url"]
+
+        # Check if we have already seen this asset index URL, and skip if it's a duplicate
+        if asset_index_url not in seen_asset_indexes:
+            seen_asset_indexes.add(asset_index_url)
+            assetindex_data["assetindex"].append(asset_index)
+
+    # Save the assetindex data structure to assetindex.json
+    with open("assetindex.json", 'w') as asset_index_file:
+        json.dump(assetindex_data, asset_index_file, indent=4)
+
+    # Step 4: Read assetindex.json and download the asset indexes
+    with open("assetindex.json", 'r') as asset_index_file:
+        asset_index_data = json.load(asset_index_file)
+
     if not os.path.exists("indexes"):
         os.makedirs("indexes")
 
-    for version_file in os.listdir("versions"):
-        with open(os.path.join("versions", version_file), 'r') as file:
-            version_data = file.read()
-
-        version_json = json.loads(version_data)
-        asset_index_url = version_json["assetIndex"]["url"]
+    for asset_index in asset_index_data["assetindex"]:
+        asset_index_url = asset_index["url"]
         filename = asset_index_url.split('/')[-1]
         save_path = os.path.join("indexes", filename)
         download_file(asset_index_url, save_path)
