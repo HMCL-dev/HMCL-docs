@@ -43,9 +43,8 @@ def main():
     # Step 3: Download versions in parallel
     download_versions(versions)
 
-    # Step 4: Read versions' JSON files and extract unique asset index URLs
-    asset_index_data = {"assetindex": []}
-    unique_asset_index_urls = set()
+    # Step 4: Read versions' JSON files and create a dictionary of asset indexes with "id" as keys
+    asset_indexes_dict = {}
 
     for version in versions:
         version_file_path = os.path.join("versions", version["id"] + ".json")
@@ -53,18 +52,16 @@ def main():
             version_data = json.load(file)
 
         asset_index = version_data["assetIndex"]
-        asset_index_url = asset_index["url"]
+        asset_index_id = asset_index["id"]
 
-        if asset_index_url not in unique_asset_index_urls:
-            unique_asset_index_urls.add(asset_index_url)
-            asset_index_data["assetindex"].append(asset_index)
+        asset_indexes_dict[asset_index_id] = asset_index
 
     # Step 5: Download asset indexes in parallel
-    download_asset_indexes(asset_index_data["assetindex"])
+    download_asset_indexes(asset_indexes_dict.values())
 
-    # Step 6: Save the unique asset index data structure to assetindex.json
+    # Step 6: Save the asset indexes dictionary to assetindex.json
     with open("assetindex.json", 'w') as asset_index_file:
-        json.dump(asset_index_data, asset_index_file, indent=4)
+        json.dump(asset_indexes_dict, asset_index_file, indent=4)
 
 if __name__ == "__main__":
     main()
