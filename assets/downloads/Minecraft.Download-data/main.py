@@ -2,6 +2,7 @@
 import os
 import requests
 import json
+import concurrent.futures
 
 def download_file(url, save_path):
     response = requests.get(url)
@@ -11,6 +12,20 @@ def download_file(url, save_path):
         print(f'Downloaded: {save_path}')
     else:
         print(f'Failed to download: {url}')
+
+def download_versions(versions):
+    if not os.path.exists("versions"):
+        os.makedirs("versions")
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future_to_version = {executor.submit(download_file, version["url"], os.path.join("versions", version["id"] + ".json")): version for version in versions}
+
+def download_asset_indexes(asset_indexes):
+    if not os.path.exists("indexes"):
+        os.makedirs("indexes")
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future_to_asset_index = {executor.submit(download_file, asset_index["url"], os.path.join("indexes", asset_index["id"] + ".json")): asset_index for asset_index in asset_indexes}
 
 def main():
     # Step 1: Download version_manifest.json and save it as version.json
@@ -25,46 +40,31 @@ def main():
     # versions = [v for v in version_json["versions"] if v["type"] == "release"]
     versions = version_json["versions"]
 
-    if not os.path.exists("versions"):
-        os.makedirs("versions")
+    # Step 3: Download versions in parallel
+    download_versions(versions)
 
-    assetindex_data = {"assetindex": []}  # Initialize the assetindex data structure
-    seen_asset_indexes = set()  # Initialize a set to keep track of seen asset indexes
+    # Step 4: Read versions' JSON files and extract unique asset index URLs
+    asset_index_data = {"assetindex": []}
+    unique_asset_index_urls = set()
 
     for version in versions:
-        version_url = version["url"]
-        filename = version_url.split('/')[-1]
-        save_path = os.path.join("versions", filename)
-        download_file(version_url, save_path)
-
-        # Read the version's JSON file and extract asset index information
-        with open(save_path, 'r') as file:
+        version_file_path = os.path.join("versions", version["id"] + ".json")
+        with open(version_file_path, 'r') as file:
             version_data = json.load(file)
 
         asset_index = version_data["assetIndex"]
         asset_index_url = asset_index["url"]
 
-        # Check if we have already seen this asset index URL, and skip if it's a duplicate
-        if asset_index_url not in seen_asset_indexes:
-            seen_asset_indexes.add(asset_index_url)
-            assetindex_data["assetindex"].append(asset_index)
+        if asset_index_url not in unique_asset_index_urls:
+            unique_asset_index_urls.add(asset_index_url)
+            asset_index_data["assetindex"].append(asset_index)
 
-    # Save the assetindex data structure to assetindex.json
+    # Step 5: Download asset indexes in parallel
+    download_asset_indexes(asset_index_data["assetindex"])
+
+    # Step 6: Save the unique asset index data structure to assetindex.json
     with open("assetindex.json", 'w') as asset_index_file:
-        json.dump(assetindex_data, asset_index_file, indent=4)
-
-    # Step 4: Read assetindex.json and download the asset indexes
-    with open("assetindex.json", 'r') as asset_index_file:
-        asset_index_data = json.load(asset_index_file)
-
-    if not os.path.exists("indexes"):
-        os.makedirs("indexes")
-
-    for asset_index in asset_index_data["assetindex"]:
-        asset_index_url = asset_index["url"]
-        filename = asset_index_url.split('/')[-1]
-        save_path = os.path.join("indexes", filename)
-        download_file(asset_index_url, save_path)
+        json.dump(asset_index_data, asset_index_file, indent=4)
 
 if __name__ == "__main__":
     main()
