@@ -49,7 +49,7 @@ __想必你注意到我了，记住上面讲的话__
 
 简单的讲，就是用 `破坏` 和 `创造` 来进行游玩
 
-详细请看 [Minecraft Wiki](https://wiki.biligame.com/mc/%E6%95%99%E7%A8%8B/%E6%96%B0%E6%89%8B%E6%89%8B%E5%86%8C)
+详细请看 [Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B/%E6%96%B0%E6%89%8B%E6%89%8B%E5%86%8C)
 
 ## 关于游戏的资源包
 下载完了，也玩了会  
@@ -62,7 +62,7 @@ __想必你注意到我了，记住上面讲的话__
 
 ![大致示意图](assets/img/docs/about-questions/img4.jpg)
 
-[资源包详细资料 ](https://wiki.biligame.com/mc/%E8%B5%84%E6%BA%90%E5%8C%85)
+[资源包详细资料 ](https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85)
 
 ## 关于游戏的 Mods 
 
