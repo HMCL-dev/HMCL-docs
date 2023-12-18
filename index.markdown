@@ -34,7 +34,7 @@ You can also submit your suggestions here.
 
 ### 对于使用者
 
-1. [版本隔离](/_launcher/global-version-isolation.html)
+1. [版本隔离](/_launcher/global-version-isolation.md)
 
    它可以帮助你更好的分离地图、模组等。
 
