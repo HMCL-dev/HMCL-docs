@@ -63,7 +63,7 @@ toc: true
   - 更新反馈页面
   - 默认加入 Little Skin 登录选项
   - 为 Linux 提供 sh 格式构建
-  - 新添加 JVM 选项 `hmcl.home`，允许用户自行指定 HMCL_DIRECTORY
+  - 新添加 JVM 选项 `-Dhmcl.home`，允许用户自行指定 HMCL_DIRECTORY
 
 - 下载
   - 支持整合包下载页使用中文搜索
