@@ -72,7 +72,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 **注意: LiteLoader 只能加载文件后缀为 litemod 的模组, *Forge Mod*、*Fabric Mod* 和 *Quilt Mod*等修改后缀的方法 LiteLoader 是无法检测。**
 
-#### Optifine
+#### OptiFine
 
 [详情请查阅此](/launcher/optifine.html)
 
