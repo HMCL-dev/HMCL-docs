@@ -13,13 +13,13 @@ layout: home
 
 ## 注意 Notice
 
-The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/huanghongxun/HMCL-docs/pulls. Or you can enable your translation tool to read.
+The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/HMCL-dev/HMCL-docs/pulls. Or you can enable your translation tool to read.
 
-If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HMCL/issues](http://github.com/huanghongxun/HMCL/issues).
+If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues).
 
 You can also submit your suggestions here.
 
-如果您遇到 BUG，请及时在 [GitHub: huanghongxun/HMCL/issues](http://github.com/huanghongxun/HMCL/issues) 发送反馈。
+如果您遇到 BUG，请及时在 [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 发送反馈。
 
 您也可以在这里提交您的建议。
 
@@ -75,6 +75,6 @@ You can also submit your suggestions here.
 ## 其他
 
 1. [为 HMCL 做出贡献](/contribution.html)
-2. [HMCL GitHub 地址](http://github.com/huanghongxun/HMCL)
-3. [HMCL 帮助文档 GitHub 地址](http://github.com/huanghongxun/HMCL-docs)
-4. [HMCL 官网](http://hmcl.huangyuhui.net)
+2. [HMCL GitHub 地址](https://github.com/HMCL-dev/HMCL)
+3. [HMCL 帮助文档 GitHub 地址](https://github.com/HMCL-dev/HMCL-docs)
+4. [HMCL 官网](https://hmcl.huangyuhui.net)

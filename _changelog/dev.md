@@ -684,7 +684,7 @@ toc: true
 
 # HMCL 3.2.135
 - 添加 authlib-injectors.json，允许服主将添加账号页面更改为默认添加指定服务器的 Authlib Injector 账户
-- 访问 <a href="http://www.huangyuhui.net/index.php/2019/09/09/109/">http://www.huangyuhui.net/index.php/2019/09/09/109/</a> 以查看添加方法
+- 访问 <a href="https://www.huangyuhui.net/index.php/2019/09/09/109/">https://www.huangyuhui.net/index.php/2019/09/09/109/</a> 以查看添加方法
 - 检查安装游戏时输入的名称是否符合 Windows 系统需求
 - 修复导出整合包导入时无法安装 1.13 Forge 和 OptiFine 的问题
 - 修复部分情况下无法下载 Forge 安装包的问题

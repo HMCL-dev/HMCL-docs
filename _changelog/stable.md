@@ -290,9 +290,9 @@ toc: true
 
 - 服主功能
   - 添加 authlib-injectors.json，允许服主将添加账号页面更改为默认添加指定服务器的 Authlib Injector 账户
-  - 访问 [http://www.huangyuhui.net/index.php/2019/09/09/109/](http://www.huangyuhui.net/index.php/2019/09/09/109/) 以查看添加方法
+  - 访问 [https://www.huangyuhui.net/index.php/2019/09/09/109/](https://www.huangyuhui.net/index.php/2019/09/09/109/) 以查看添加方法
   - 添加服务器自动更新整合包，允许服务器远程更新游戏客户端
-  - 访问 [http://www.huangyuhui.net/index.php/2019/11/12/118/](http://www.huangyuhui.net/index.php/2019/11/12/118/) 以查看添加方法
+  - 访问 [https://www.huangyuhui.net/index.php/2019/11/12/118/](https://www.huangyuhui.net/index.php/2019/11/12/118/) 以查看添加方法
 
 
 # HMCL 3.2.130
@@ -300,7 +300,7 @@ toc: true
 - 启动器
   - 在启动器更新时显示更新日志
   - 启动前检查是否是 Java 8~10
-  - [http://www.huangyuhui.net/index.php/2019/01/27/83/](http://www.huangyuhui.net/index.php/2019/01/27/83/)支持整合包自带 Java 运时
+  - [https://www.huangyuhui.net/index.php/2019/01/27/83/](https://www.huangyuhui.net/index.php/2019/01/27/83/)支持整合包自带 Java 运时
   - 在缓存目录无效时自动更改设置
   - 在登录对话框中添加注册链接
   - 将游戏依赖的动态链接库解压到 .minecraft 中而不是系统临时文件夹
