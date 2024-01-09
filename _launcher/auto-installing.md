@@ -74,7 +74,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 #### OptiFine
 
-[详情请查阅此](/launcher/optifine.html)
+[详情请查阅此](/launcher/shader.html)
 
 ### 手动安装
 
