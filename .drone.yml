@@ -12,8 +12,8 @@ steps:
     - touch Gemfile.lock
     - chmod a+w Gemfile.lock
     - chown -R jekyll:jekyll /drone
-    - gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
-    - bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+    - gem sources --add https://mirrors.cloud.tencent.com/rubygems/ --remove https://rubygems.org/
+    - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
     - bundle install
     - bundle exec jekyll build
     - bash scripts/copy_index_json.sh
