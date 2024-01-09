@@ -19,6 +19,6 @@ toc: falst
 <script>
     setTimeout(function() {
         window.location.href = "https://bell-sw.com/pages/downloads/?version=java-17&os=macos&architecture=arm&package=jre-full&bitness=64#:~:text=DownloadLiberica%20JDK";
-    }, 3000); // 等待 3 秒.
+    }, 5000); // 等待 5 秒.
 </script>
 

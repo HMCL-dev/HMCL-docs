@@ -20,5 +20,5 @@ toc: falst
 <script>
     setTimeout(function() {
         window.location.href = "https://hmcl-snapshot-update.netlify.app/";
-    }, 3000); // 等待 3 秒.
+    }, 5000); // 等待 5 秒.
 </script>

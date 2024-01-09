@@ -13,5 +13,5 @@ The page has moved to [/downloads/linux/loongarch64](/downloads/linux/loongarch6
 <script>
     setTimeout(function() {
         window.location.href = "/downloads/linux/loongarch64.html";
-    }, 3000); // 等待 3 秒.
+    }, 5000); // 等待 5 秒.
 </script>

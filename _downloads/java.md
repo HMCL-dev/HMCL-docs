@@ -20,6 +20,6 @@ toc: falst
 <script>
     setTimeout(function() {
         window.location.href = "https://www.java.com/download";
-    }, 3000); // 等待 3 秒.
+    }, 5000); // 等待 5 秒.
 </script>
 
