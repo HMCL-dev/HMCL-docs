@@ -18,6 +18,8 @@ toc: falst
 
 
 <script>
-    window.location.href = "https://www.java.com/download";
+    setTimeout(function() {
+        window.location.href = "https://www.java.com/download";
+    }, 5000); // 等待 5 秒.
 </script>
 

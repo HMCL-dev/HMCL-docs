@@ -13,13 +13,13 @@ layout: home
 
 ## 注意 Notice
 
-The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/huanghongxun/HMCL-docs/pulls. Or you can enable your translation tool to read.
+The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/HMCL-dev/HMCL-docs/pulls. Or you can enable your translation tool to read.
 
-If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HMCL/issues](http://github.com/huanghongxun/HMCL/issues).
+If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues).
 
 You can also submit your suggestions here.
 
-如果您遇到 BUG，请及时在 [GitHub: huanghongxun/HMCL/issues](http://github.com/huanghongxun/HMCL/issues) 发送反馈。
+如果您遇到 BUG，请及时在 [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 发送反馈。
 
 您也可以在这里提交您的建议。
 
@@ -50,9 +50,9 @@ You can also submit your suggestions here.
 
    它将告诉你如何用 HMCL 安装 Forge、Fabric、Fabric API、LiteLoader、Optifine 以及 模组 等。
 
-5. [安装 Optifine / 光影](/_launcher/shader.md)
+5. [安装 OptiFine / 光影](/_launcher/shader.md)
 
-   他将告诉你如何安装 Optifine 来使用光影。
+   他将告诉你如何安装 OptiFine 来使用光影。
 
 6. [设置项详解](/_launcher/set-item-details.md)
 
@@ -75,6 +75,6 @@ You can also submit your suggestions here.
 ## 其他
 
 1. [为 HMCL 做出贡献](/contribution.html)
-2. [HMCL GitHub 地址](http://github.com/huanghongxun/HMCL)
-3. [HMCL 帮助文档 GitHub 地址](http://github.com/huanghongxun/HMCL-docs)
-4. [HMCL 官网](http://hmcl.huangyuhui.net)
+2. [HMCL GitHub 地址](https://github.com/HMCL-dev/HMCL)
+3. [HMCL 帮助文档 GitHub 地址](https://github.com/HMCL-dev/HMCL-docs)
+4. [HMCL 官网](https://hmcl.huangyuhui.net)

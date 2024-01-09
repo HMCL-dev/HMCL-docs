@@ -1,5 +1,5 @@
 ---
-title:  "下载 HMCL 和 Minecraft 依赖的 Java"
+title:  "下载适用于 Windows ARM32 的 HMCL 和 Minecraft 依赖的 Java"
 permalink: /downloads/windows/arm64.html
 date:   2022-12-03 17:30:00 +0800
 categories: Java 下载
@@ -18,6 +18,8 @@ toc: falst
 
 
 <script>
-    window.location.href = "https://aka.ms/download-jdk/microsoft-jdk-17-windows-aarch64.msi";
+    setTimeout(function() {
+        window.location.href = "https://aka.ms/download-jdk/microsoft-jdk-17-windows-aarch64.msi";
+    }, 5000); // 等待 5 秒.
 </script>
 
