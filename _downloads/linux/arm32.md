@@ -10,12 +10,12 @@ toc: falst
 
 ### 点下面的链接以下载 Java ，然后使用软件包管理器或者手动解压安装
 
-### [DEB](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.deb) | [RPM](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.rpm) | [TAR.GZ](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.tar.gz)
+### [链接](https://bell-sw.com/pages/downloads/?version=java-17&os=linux&package=jre-full&bitness=32&architecture=arm#:~:text=DownloadLiberica%20JDK)
 
 ### 或者你也可以根据[教程](https://bell-sw.com/pages/repositories/)来添加仓库到你的软件包管理器。
 
 ### Click one of the following links to download Java, and then use the package or unzip it manually to install Java.
 
-### [DEB](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.deb) | [RPM](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.rpm) | [TAR.GZ](https://download.bell-sw.com/java/17.0.8+7/bellsoft-jre17.0.8+7-linux-arm32-vfp-hflt-full.tar.gz)
+### [Link](https://bell-sw.com/pages/downloads/?version=java-17&os=linux&package=jre-full&bitness=32&architecture=arm#:~:text=DownloadLiberica%20JDK)
 
 ### Or you can add the repository to the package manager according to the [wiki](https://bell-sw.com/pages/repositories/).
