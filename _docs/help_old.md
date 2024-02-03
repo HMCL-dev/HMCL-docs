@@ -10,6 +10,12 @@ toc: true
 
 > 本文由 zkitefly 编写。
 
+## 第三方游戏崩溃分析通道
+
+该通道由 Hello Minecraft! Launcher 维护者之一 @ZekerZhayard 创建，如有游戏崩溃问题可到此处寻求帮助。
+
+[点击前往](https://gitee.com/huanghongxun/HMCL/issues/I8VVWQ)
+
 ## KOOK 频道
 
 Hello Minecraft! Launcher 的官方 KOOK 频道。
