@@ -36,7 +36,7 @@ toc: true
 - 不默认修改设置 `forceUnicodeFont` 游戏设置
 - 更新对 ARM 平台的支持
 - 优化无效依赖的提示
-- 更新启动器图标，新增 OptiFine 图标，由 @ShulkerSakura 制作
+- 更新了启动器图标，由 @ShulkerSakura 制作
 - 支持查看 NBT 文件，将 NBT 文件拖动至主页面即可
 - 添加龙芯新世界支持
 - 添加了更多的日志分析规则
@@ -50,6 +50,7 @@ toc: true
 - 在模组管理页面点击搜索按钮时自动将光标定位到输入框
 - 将网络超时设置为 8000 毫秒
 - 为 Linux/FreeBSD 提供移动至回收站支持
+- 新增 OptiFine 图标
 - 优化日志性能
 - 支持复制账户的 UUID
 - 支持 FreeBSD x86-64
