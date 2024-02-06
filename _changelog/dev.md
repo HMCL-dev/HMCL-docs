@@ -10,7 +10,70 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.4.234</h1>
+
+<h1 id="nowchange">HMCL 3.5.4.235</h1>
+
+- 完善 Quilt 支持
+- 添加了对 NeoForge 的支持
+- 打开启动器时验证 JavaFX 完整性
+- 放弃 EXE 版本与 Windows XP 的兼容性，如果需要可以使用 JAR 版本
+- 更新了启动器图标，由 @ShulkerSakura 制作
+- 支持查看 NBT 文件，将 NBT 文件拖动至主页面即可
+- 添加龙芯新世界支持
+- 添加了更多的日志分析规则
+- 支持导出待更新模组列表
+- 支持导出游戏运行栈文件
+- 对多个语言文件进行了更新和修正
+- 优化游戏进程被 SIGKILL 信号终止时的提示
+- 支持从 Modrinth 更新模组，会比对 CurseForge 和 Modrinth 取最新版本
+- 支持在模组管理和模组搜索中显示所支持的加载器
+- 添加帮助按钮
+- 支持日志窗口中的复制操作，选中要复制的行，按 Ctrl+C 即可
+- 将阿里镜像源替换至腾讯云镜像源
+- 不默认修改设置 `forceUnicodeFont` 游戏设置
+- 更新对 ARM 平台的支持
+- 优化无效依赖的提示
+- 日志窗口默认显示行数调整至 1000
+- 添加光影包文件夹和日志文件夹打开按钮
+- 在离线账户创建时对不合法的账户名做出警告
+- 支持复制账户的 UUID
+- 支持 FreeBSD x86-64
+- 游戏安装界面现在会隐藏不可用的模组管理器
+- 优化日志性能
+- 现在系统 GLFW 和系统 OpenAL 也可在 Windows 上使用
+- 在出现 InternalError 的时候提示用户 Java 损坏
+- 添加了翻页按钮，用户可以按照 50 个一页分页查找
+- 在从 CurseForge 上按照“名称”搜索排序时能正确按照相关度显示
+- 在中文搜索时会额外按照中文相关度排序
+- 移动依赖信息显示到模组/整合包/资源包文件详情界面，分依赖类型显示文件依赖详情
+- 资源选择页面会根据所选版本的模组加载器、游戏版本推荐最新的合适资源
+- 整合包安装界面添加跳转至搜索整合包页面的按钮
+- 支持 Gzip 解压
+- 等待启动游戏时显示假进度条
+- 记忆窗口位置，打开程序时会按照上次的窗口位置
+- 在模组管理页面点击搜索按钮时自动将光标定位到输入框
+- 将网络超时设置为 8000 毫秒
+- 为 Linux/FreeBSD 提供移动至回收站支持
+- 新增 OptiFine 图标
+
+错误修复：
+
+- 修复自定义命令的一些问题
+- 修复游戏语言自动切换功能与不同版本的兼容性问题
+- 修复一些崩溃问题
+- 修复一些 MultiMC 整合包时不会导入包内的文件
+- 修复高版本自动进入服务器功能失效的问题
+- 修复标题黑白颜色不跟随主题设置
+- 修复对 Windows ARM64 的支持
+- 修复对 Linux ARM64 的支持
+- 修复 CurseForge 整合包中包含资源包时 HMCL 不能正确识别的问题
+- 修复不会自动刷新微软账户的问题
+- 修复对于 Minecraft 1.19+ 在中文路径启动失败的问题
+- 修复搜索模组/整合包/资源包等页面图标不会换成的问题
+- 修复自动选择下载源功能的一些问题
+- 修复在资源下载详情界面链接文字显示不完整的问题
+
+# HMCL 3.5.4.234
 
 - 拒绝在被 Fractureiser 病毒感染的设备上启动 HMCL（若检测到将会提示并退出，[详情](https://github.com/fractureiser-investigation/fractureiser#readme)）
 - 检测 HMCL 是否处于 macOS 上的 App Translocation（macOS 使用了 [App Translocation](https://lapcatsoftware.com/articles/app-translocation.html) 机制，可能会自动将 HMCL 移动至 `/private/var/folders` 中的临时文件夹内，导致用户关闭 HMCL 后游戏数据和设置丢失）
