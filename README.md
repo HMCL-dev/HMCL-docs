@@ -6,7 +6,7 @@ Hello Minecraft! Launcher 帮助文档仓库
 
 ## 相关链接
 
-[Hello Minecraft! Launcher 帮助文档仓库网站版（推荐）](https://wifi-left.github.io/HMCL-docs-website/)
+[Hello Minecraft! Launcher 帮助文档仓库网站](https://docs.hmcl.net)
 
 ## Markdown
 
