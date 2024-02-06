@@ -11,7 +11,7 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.4.235</h1>
+<h1 id="nowchange">HMCL 3.5.5.235</h1>
 
 - 完善 Quilt 支持
 - 添加了对 NeoForge 的支持
