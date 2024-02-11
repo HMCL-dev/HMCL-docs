@@ -33,6 +33,7 @@ Hello Minecraft! Launcher 的官方 Discord 频道。
 前往爱发电赞助 HMCL。赞助后可以申请加入官方 QQ 群反馈问题。
 
 [点击前往](https://afdian.net/@huanghongxun)
+
 <!--
 ## Bug 反馈
 
