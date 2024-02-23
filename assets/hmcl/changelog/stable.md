@@ -2,7 +2,7 @@
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.5</h1>
+# HMCL 3.5.5
 
 - 启动器
   - 拒绝在被 Fractureiser 病毒感染的设备上启动 HMCL（若检测到将会提示并退出，[详情](https://github.com/fractureiser-investigation/fractureiser#readme)）

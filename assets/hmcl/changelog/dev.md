@@ -2,7 +2,7 @@
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.5.236</h1>
+# HMCL 3.5.5.236
 
 - GP-2836：更新启动器发布页至官网，而不是 MCBBS
 - GP-2700：优化游戏版本比较规则，现在模组下载界面能够正常排序 Minecraft 正式版、快照版或其他版本了
