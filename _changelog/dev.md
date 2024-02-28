@@ -11,7 +11,18 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.5.236</h1>
+<h1 id="nowchange">HMCL 3.5.5.237</h1>
+
+错误修复：
+
+- 修复搜索页面的翻页的一些问题
+- 修复 Linux RISC-V 64 平台的支持
+- 修复使用 Java 19+ 启动游戏时控制台乱码的问题
+- 修复自动安装无法获得游戏版本
+- 修复启动游戏时拼接游戏参数错误导致游戏崩溃的问题
+- 修复自定义命令的一些问题
+
+# HMCL 3.5.5.236
 
 - GP-2836：更新启动器发布页至官网，而不是 MCBBS
 - GP-2700：优化游戏版本比较规则，现在模组下载界面能够正常排序 Minecraft 正式版、快照版或其他版本了
