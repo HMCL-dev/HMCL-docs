@@ -11,7 +11,15 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.5.237</h1>
+<h1 id="nowchange">HMCL 3.5.5.238</h1>
+
+- GP-2864: 改善 在非 Windows 平台任务栏图标的质量
+
+错误修复：
+
+- GP-2859: 修复 Forge 和 NeoForge 安装失败的问题
+
+# HMCL 3.5.5.237
 
 错误修复：
 
