@@ -13,7 +13,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.5.5.238</h1>
 
-- GP-2864: 改善 在非 Windows 平台任务栏图标的质量
+- GP-2864: 改善在非 Windows 平台任务栏图标的质量
 
 错误修复：
 
