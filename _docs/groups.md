@@ -1,5 +1,5 @@
 ---
-title:  "社交"
+title:  "我们的社交"
 permalink: /groups.html
 date:   2024-03-05 17:00:00 +0800
 categories: 启动器
@@ -11,10 +11,8 @@ toc: true
 > 本文由 Glavo 编写。  
 
 欢迎加入 HMCL 用户群，入群请遵守群规。
+* [![Static Badge](https://img.shields.io/badge/HMCL_用户交流群-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/fvJueufsvC)
 
 如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入
+* [![Static Badge](https://img.shields.io/badge/HMCL_非主流硬件交流群-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/C935haj8xW)
 
-* <img src=https://qq-web.cdn-go.cn//im.qq.com_new/7bce6d6d/asset/favicon.ico width=32 height=32 /> [HMCL 非主流硬件用户群](https://qm.qq.com/q/C935haj8xW)。
-
-如果你不知道加入什么群，请加入以下群
-* <img src=https://qq-web.cdn-go.cn//im.qq.com_new/7bce6d6d/asset/favicon.ico width=32 height=32 /> [HMCL 用户群](https://qm.qq.com/q/fvJueufsvC)
