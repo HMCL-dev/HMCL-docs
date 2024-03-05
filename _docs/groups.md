@@ -21,7 +21,7 @@ toc: true
 
 * HMCL 用户群 ①：[633640264](https://qm.qq.com/q/fvJueufsvC)
 
-如果你遇到了游戏崩溃，欢迎加入 [Minecraft 报错崩溃交流群](https://qm.qq.com/q/nG0Ti1kJri)（666546887）。
+如果你遇到了游戏崩溃，欢迎加入 [Minecraft 报错崩溃交流群](https://qm.qq.com/q/nG0Ti1kJri)（666546887）咨询解决办法。
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他用户群讨论。**
 
 如果你正在使用 ARM64、RISC-V、龙芯、FreeBSD 等非 Mojang 官方支持的平台，欢迎加入 [HMCL 灵车交流群](https://qm.qq.com/q/C935haj8xW)（737461713）。
