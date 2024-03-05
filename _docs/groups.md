@@ -1,5 +1,5 @@
 ---
-title:  "我们的社交"
+title:  "加入 HMCL 用户群"
 permalink: /groups.html
 date:   2024-03-05 17:00:00 +0800
 categories: 启动器
