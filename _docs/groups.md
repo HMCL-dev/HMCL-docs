@@ -24,4 +24,4 @@ toc: true
 
 如果你遇到了游戏崩溃，欢迎加入 [Minecraft 报错崩溃交流](https://qm.qq.com/q/nG0Ti1kJri)。
 
-如果你正在使用 ARM64、RISC-V、龙芯等特殊的小众硬件，欢迎加入[HMCL 非主流硬件用户群](https://qm.qq.com/q/C935haj8xW)。
+如果你正在使用 ARM64、RISC-V、龙芯等特殊的小众硬件，欢迎加入 [HMCL 非主流硬件用户群](https://qm.qq.com/q/C935haj8xW)。
