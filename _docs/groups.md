@@ -14,13 +14,13 @@ toc: true
 
 1. 禁止谈论政治相关、色情、金钱往来等敏感内容；
 2. 禁止辱骂、恶俗、开盒等涉及人身攻击的行为；
-3. 禁止讨论精神疾病、LGBT 等话题，请尊重每一个人；
+3. 禁止讨论精神疾病、LGBT 等话题，请尊重每个人；
 4. 本群主题是 Minecraft，不要过多讨论其他游戏内容；
 5. 禁止发布与 Minecraft 无关的广告，可以适当宣传服务器、整合包等与 Minecraft 相关的内容，每项内容每人每周最多宣传一次；
 
 以下 QQ 群欢迎所有用户加入，请不要重复加群：
 
-* [HMCL 用户群 ①](https://qm.qq.com/q/fvJueufsvC)
+* HMCL 用户群 ①：[633640264](https://qm.qq.com/q/fvJueufsvC)
 
 如果你遇到了游戏崩溃，欢迎加入 [Minecraft 报错崩溃交流](https://qm.qq.com/q/nG0Ti1kJri)。
 
