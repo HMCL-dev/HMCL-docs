@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
-> 本文由 Glavo 编写。  
+> 本文由 Glavo 编写，8Mi_Yile 润色了部分内容
 
 欢迎加入 HMCL 用户群，入群请遵守群规。
 * [![Static Badge](https://img.shields.io/badge/HMCL_用户交流群-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/fvJueufsvC)
