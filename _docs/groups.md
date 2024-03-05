@@ -13,7 +13,8 @@ toc: true
 欢迎加入 HMCL 用户群，入群请遵守群规。
 
 如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入
-* [QQ-非主流硬件用户群](https://qm.qq.com/q/C935haj8xW)。
+
+* <img src=https://qq-web.cdn-go.cn//im.qq.com_new/7bce6d6d/asset/favicon.ico width=32 height=32 /> [HMCL 非主流硬件用户群](https://qm.qq.com/q/C935haj8xW)。
 
 如果你不知道加入什么群，请加入以下群
-* [QQ-用户群](https://qm.qq.com/q/fvJueufsvC)
+* <img src=https://qq-web.cdn-go.cn//im.qq.com_new/7bce6d6d/asset/favicon.ico width=32 height=32 /> [HMCL 用户群](https://qm.qq.com/q/fvJueufsvC)
