@@ -11,7 +11,22 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.5.238</h1>
+<h1 id="nowchange">HMCL 3.5.6.240</h1>
+
+- GP-2862: 默认不进行降级更新
+- GP-2881: 支持安装带有 NeoForge 的 Modrinth 整合包
+- GP-2888: 移除赞助页面
+- GP-2889: 删除 Mojang 登录支持
+- GP-2897: 引导用户加入官方 QQ 群
+
+错误修复：
+
+- GP-2869: 修复下载 Java 不会尝试备用下载源的问题
+- GP-2871: 修复导出启动脚本时无法正确处理“游戏启动前执行命令”和“游戏结束后执行命令”的问题
+
+
+
+# HMCL 3.5.5.238
 
 - GP-2864: 改善在非 Windows 平台任务栏图标的质量
 
