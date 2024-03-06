@@ -29,5 +29,5 @@ toc: true
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他用户群讨论。**
 
 如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入
-* [![Static Badge](https://img.shields.io/badge/HMCL_非主流硬件交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/C935haj8xW)
+* [![Static Badge](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/C935haj8xW)
 
