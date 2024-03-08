@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
-> 本文由 Glavo 编写，8Mi_Yile 润色了部分内容
+> 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：
 
@@ -18,14 +18,22 @@ toc: true
 4. 用户群交流主题为 Minecraft，请不要过多讨论其他游戏内容。
 
 
-以下 QQ 群 欢迎所有用户加入闲聊（请不要重复添加）：
+## 用户群
 
-* [![QQ](https://img.shields.io/badge/HMCL_用户交流群（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/fvJueufsvC)
+以下为闲聊群，欢迎所有用户加入（请不要重复添加）：
 
-如果你遇到了游戏崩溃，欢迎加入以下群咨询解决方案。<br>
-* [![QQ](https://img.shields.io/badge/Minecraft_报错崩溃交流群（666546887）-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/nG0Ti1kJri)<br>
-**本群仅处理游戏报错崩溃问题，无关话题请前往其他用户群讨论。**
+- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
 
-如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入
-* [![Static Badge](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=red&label=加入)](https://qm.qq.com/q/C935haj8xW)
+## 报错崩溃交流群
 
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案。
+
+**本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
+
+- [![Minecraft_报错崩溃交流群（666546887）](https://img.shields.io/badge/Minecraft_报错崩溃交流群（666546887）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/nG0Ti1kJri)
+
+## 灵车交流群
+
+如果你在用 Linux、FreeBSD 等系统，或者 ARM64、RISC-V、龙芯等非 x86 平台的设备，欢迎加入 HMCL 灵车交流群。
+
+- [![HMCL_灵车交流群（737461713）](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/C935haj8xW)
