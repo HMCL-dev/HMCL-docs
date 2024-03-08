@@ -1,7 +1,7 @@
 ---
 title:  "寻求帮助"
 permalink: /help.html
-date:   2023-08-09 11:12:00 +0800
+date:   2024-03-08 17:00:00 +0800
 categories: 启动器
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 > 本文由 zkitefly 编写。
 
-## HMCL 用户群
+## QQ 群聊
 
 Hello Minecraft! Launcher 的官方 QQ 群聊。
 
