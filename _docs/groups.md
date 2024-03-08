@@ -28,12 +28,12 @@ toc: true
 
 - [![Minecraft_报错崩溃交流群（666546887）](https://img.shields.io/badge/Minecraft_报错崩溃交流群（666546887）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/nG0Ti1kJri)
 
+## 用户群
+
+- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
+
 ## 灵车交流群
 
 如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入灵车交流群。
 
 - [![HMCL_灵车交流群（737461713）](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/C935haj8xW)
-
-## 用户群
-
-- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
