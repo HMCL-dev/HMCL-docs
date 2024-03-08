@@ -22,18 +22,15 @@ toc: true
 
 以下为闲聊群，欢迎所有用户加入（请不要重复添加）：
 
-- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
+- [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)
+
 
 ## 报错崩溃交流群
 
-如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案。
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
-- [![Minecraft_报错崩溃交流群（666546887）](https://img.shields.io/badge/Minecraft_报错崩溃交流群（666546887）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/nG0Ti1kJri)
-
 ## 灵车交流群
 
-如果你在用 Linux、FreeBSD 等系统，或者 ARM64、RISC-V、龙芯等非 x86 平台的设备，欢迎加入 HMCL 灵车交流群。
-
-- [![HMCL_灵车交流群（737461713）](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/C935haj8xW)
+如果你在用 Linux、FreeBSD 等系统，或者 ARM64、RISC-V、龙芯等非 x86 平台的设备，欢迎加入 HMCL 灵车交流群：[HMCL 灵车交流群 (737461713)](https://qm.qq.com/q/C935haj8xW)
