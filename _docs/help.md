@@ -1,7 +1,7 @@
 ---
 title:  "寻求帮助"
 permalink: /help.html
-date:   2024-03-08 17:00:00 +0800
+date:   2023-08-09 11:12:00 +0800
 categories: 启动器
 toc: true
 ---
