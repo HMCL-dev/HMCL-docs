@@ -20,6 +20,10 @@ toc: true
 
 以下为 QQ 群聊，欢迎所有用户加入闲聊（请不要重复添加）：
 
+## 用户群
+
+- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
+
 ## 报错崩溃交流群
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案。
@@ -27,10 +31,6 @@ toc: true
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
 - [![Minecraft_报错崩溃交流群（666546887）](https://img.shields.io/badge/Minecraft_报错崩溃交流群（666546887）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/nG0Ti1kJri)
-
-## 用户群
-
-- [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
 
 ## 灵车交流群
 
