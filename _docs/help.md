@@ -10,11 +10,11 @@ toc: true
 
 > 本文由 zkitefly 编写。
 
-## 第三方游戏崩溃分析通道
+## HMCL 用户群
 
-该通道由 Hello Minecraft! Launcher 维护者之一 @ZekerZhayard 创建，如有游戏崩溃问题可到此处寻求帮助。
+Hello Minecraft! Launcher 的官方 QQ 群聊。
 
-[点击前往](https://gitee.com/huanghongxun/HMCL/issues/I8VVWQ)
+[点击前往](/groups.html)
 
 ## KOOK 频道
 
@@ -27,9 +27,3 @@ Hello Minecraft! Launcher 的官方 KOOK 频道。
 Hello Minecraft! Launcher 的官方 Discord 频道。
 
 [点击前往](https://discord.gg/jVvC7HfM6U)
-
-## 赞助通道
-
-前往爱发电赞助 HMCL。赞助后可以申请加入官方 QQ 群反馈问题。
-
-[点击前往](https://afdian.net/@huanghongxun)
