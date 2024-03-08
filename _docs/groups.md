@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
-> 本文由 Glavo 编写，8Mi_Yile 润色了部分内容
+> 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：
 
@@ -20,7 +20,7 @@ toc: true
 
 ## 用户群
 
-以下为 QQ 群聊，欢迎所有用户加入闲聊（请不要重复添加）：
+以下为闲聊群，欢迎所有用户加入（请不要重复添加）：
 
 - [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
 
@@ -34,6 +34,6 @@ toc: true
 
 ## 灵车交流群
 
-如果你正在使用 ARM64、RISC-V、龙芯等特殊的计算机硬件，欢迎加入灵车交流群。
+如果你在用 Linux、FreeBSD 等系统，或者 ARM64、RISC-V、龙芯等非 x86 平台的设备，欢迎加入 HMCL 灵车交流群。
 
 - [![HMCL_灵车交流群（737461713）](https://img.shields.io/badge/HMCL_灵车交流群（737461713）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/C935haj8xW)
