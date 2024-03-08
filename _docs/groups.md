@@ -18,9 +18,9 @@ toc: true
 4. 用户群交流主题为 Minecraft，请不要过多讨论其他游戏内容。
 
 
-以下为 QQ 群聊，欢迎所有用户加入闲聊（请不要重复添加）：
-
 ## 用户群
+
+以下为 QQ 群聊，欢迎所有用户加入闲聊（请不要重复添加）：
 
 - [![HMCL_用户群①（633640264）](https://img.shields.io/badge/HMCL_用户交流群①（633640264）-blue?style=for-the-badge&logo=tencentqq&logoColor=blue&label=加入)](https://qm.qq.com/q/fvJueufsvC)
 
