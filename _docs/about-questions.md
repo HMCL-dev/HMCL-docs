@@ -21,7 +21,7 @@ toc: true
 ## 关于游戏的下载
 __想必你注意到我了，记住上面讲的话__
 
-首先 Minecraft 的下载有着 HMCL 十分的简单 
+使用 HMCL 下载 Minecraft 十分简单。
 
 首先打开你的 hmcl   
 
@@ -80,14 +80,18 @@ mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组
 
 ## 关于游戏的 Java 选择
 
-这边你一般先使用默认的 Java  
+如果已经安装了合适版本的Java，那么您可以直接启动。
 
-进阶一些的话，考虑 Java17
+否则，您可以通过以下途径安装Java：
 
-选择其他方法：
+- [JAVA 8](https://www.java.com/en/download/) 可用于 Minecraft 1.15 以前的版本
+- [JAVA 17](https://www.oracle.com/cn/java/technologies/downloads/#java17) 可用于 Minecraft 1.16 及以后的版本
+
+选择非全局Java版本：
 
 > 先保证你有其他的Java
 
 > 进入 设置-->全局游戏设置-->Java路径--->选择自定义并找到你需要的 jdk 的路径后确定
+> 选择的 JDK 一般为您的Java安装路径下的`bin\java.exe`(Windows)或`bin/java`(Linux/Unix)
 
 __如果出现任何的游戏崩溃问题请返回默认的 Java__
