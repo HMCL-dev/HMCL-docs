@@ -11,7 +11,21 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.6.240</h1>
+<h1 id="nowchange">HMCL 3.5.6.241</h1>
+
+- GP-2904：更新语言文件
+- GP-2905：更改语言应在重启后生效
+- GP-2916：在 CurseForge 下载源中搜索时，始终对结果进行排序
+- GP-2885：Linux 系统在未知桌面环境时禁用删除至回收站功能
+- GP-2915：更新文本和链接
+
+错误修复：
+
+- GP-2908：修复微软账户刷新失败的问题
+- GP-2804：修复游戏非正常退出提示弹窗崩溃原因显示错误的问题
+- GP-2906：修复未初始化 fileDownloadProvider 的问题
+
+# HMCL 3.5.6.240
 
 - GP-2862: 默认不进行降级更新（手动切换更新源时依然会正常提示)
 - GP-2888: 移除设置 - 赞助页面
