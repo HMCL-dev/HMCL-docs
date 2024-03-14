@@ -11,7 +11,19 @@ toc: true
 *Notice: changelogs are written in Chinese.*
 
 
-<h1 id="nowchange">HMCL 3.5.6.241</h1>
+<h1 id="nowchange">HMCL 3.5.6.242</h1>
+
+- GP-2917：不再尝试下载 .pack.xz 文件
+- GP-2912：当系统属性 `java.net.useSystemProxies` 被设置为 `false` 时不再使用系统代理
+- GP-2856：当加载网络背景图片超时时回退至默认背景，解决启动时卡死的问题
+- GP-2912：当下载失败时，打印重定向链至日志
+
+错误修复
+
+- GP-2919：修复 Minecraft 1.6 之前的版本没有声音的问题
+- GP-2920：修复了在 CurseForge 下载源中使用中文搜索无法呈现结果的问题
+
+# HMCL 3.5.6.241
 
 - GP-2904、GP-2915：更新语言文件，使表达更精确
 - GP-2905：更改语言选项添加重启后生效的提示
