@@ -84,7 +84,7 @@ mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组
 
 否则，您可以通过以下途径安装Java：
 
-- [JAVA 8](https://www.java.com/en/download/) 可用于 Minecraft 1.15 以前的版本
+- [JAVA 8](https://bell-sw.com/pages/downloads/#jdk-8-lts) 可用于 Minecraft 1.15 以前的版本
 - [JAVA 17](https://www.oracle.com/cn/java/technologies/downloads/#java17) 可用于 Minecraft 1.16 及以后的版本
 
 选择非全局Java版本：
