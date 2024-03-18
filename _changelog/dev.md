@@ -10,8 +10,19 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
+<h1 id="nowchange">HMCL 3.5.6.243</h1>
 
-<h1 id="nowchange">HMCL 3.5.6.242</h1>
+- GP-2929：更新 Modrinth 翻译
+
+错误修复：
+
+- GP-2939：修复 DefaultLauncher 会多次添加包装命令的问题
+- GP-2936：修复无法读取远古版本版本号的问题
+- GP-2933：修复高版本变更离线皮肤可能不生效的问题
+- GP-2928：修复自动更新整合包导出页面教程链接错误问题
+
+
+# HMCL 3.5.6.242
 
 - GP-2917：不再尝试下载 .pack.xz 文件
 - GP-2912：当系统属性 `java.net.useSystemProxies` 被设置为 `false` 时不再使用系统代理
