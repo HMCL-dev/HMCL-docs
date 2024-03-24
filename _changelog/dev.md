@@ -10,7 +10,17 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.6.243</h1>
+<h1 id="nowchange">HMCL 3.5.7.244</h1>
+
+- GP-2942: 支持更多格式的版本图标
+- GP-2943: 更新默认皮肤
+- GP-2948: 优化 I18n
+
+错误修复: 
+
+- GP-2521: 添加外置登录时，应该请求并显示当前语言的外置登录服务端名称，而不是默认英文名称
+
+# HMCL 3.5.6.243
 
 - GP-2929: 更新 Modrinth 翻译
 
