@@ -19,16 +19,16 @@ toc: true
 
 ## 用户群
 
-![](/assets/img/docs/groups/user-group.jpg)
+![](/assets/img/docs/groups/user-group.png)
 
 以下为闲聊群，欢迎所有用户加入（请不要重复添加）：
 
-- [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)
+- [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)（已满）
 - [HMCL 用户群 ② (203232161)](https://qm.qq.com/q/N7hgdNYfy)
 
 ## 报错崩溃交流群
 
-![](/assets/img/docs/groups/crash.jpg)
+![](/assets/img/docs/groups/crash.png)
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 
