@@ -10,7 +10,13 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.7.244</h1>
+<h1 id="nowchange">HMCL 3.5.7.245</h1>
+
+- GP-2950: 未设置字体时会尝试从当前路径寻找 `font.ttf` 或 `font.otf` 并加载为默认字体
+- GP-2953: 清理残余 MCBBS 相关内容
+- GP-2951: 重新实现日志记录，保留最近 20 次启动的日志文件，退出时会压缩日志，并优化日志性能表现
+
+# HMCL 3.5.7.244
 
 - GP-2942: 支持更多格式的版本图标
 - GP-2943: 添加更多默认皮肤，目前已与最新 Minecraft 保持一致
