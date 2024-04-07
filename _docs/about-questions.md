@@ -88,9 +88,9 @@ mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组
 
 > 先保证你有其他的Java
 
-> 进入 设置-->全局游戏设置-->Java路径
-> HMCL会列出已安装的Java，你可以从中选择合适的版本（推荐）
-> 如果你的Java未列出，可以通过**自定义**选择本地的Java
-> 选择的Java可执行文件一般为您的Java安装路径下的`bin\java.exe`(Windows)或`bin/java`(Linux/Unix)
+- 进入 设置-->全局游戏设置-->Java路径
+- HMCL会列出已安装的Java，你可以从中选择合适的版本（推荐） 
+- 如果你的Java未列出，可以通过**自定义**选择本地的Java
+- 选择的Java可执行文件一般为您的Java安装路径下的`bin\java.exe`(Windows)或`bin/java`(Linux/Unix)
 
 __如果出现任何的游戏崩溃问题请设置回默认的 Java__
