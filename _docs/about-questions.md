@@ -19,7 +19,6 @@ toc: true
 > __如果标注粗体，请不要刻意询问他人，以免造成不必要的麻烦__
 
 ## 关于游戏的下载
-__想必你注意到我了，记住上面讲的话__
 
 使用 HMCL 下载 Minecraft 十分简单。
 
@@ -40,8 +39,6 @@ __版本从上往下由高到低__
 
 ![](assets/img/docs/about-questions/img3.png)
 ## 关于游戏的游玩
-
-__想必你注意到我了，记住上面讲的话__ 
 
 等待游戏的下载过程中    
 
@@ -84,14 +81,16 @@ mods 是基于 mod_loader 的一个从文件上更改游戏的内容的外置组
 
 否则，您可以通过以下途径安装Java：
 
-- [JAVA 8](https://bell-sw.com/pages/downloads/#jdk-8-lts) 可用于 Minecraft 1.15 以前的版本
-- [JAVA 17](https://www.oracle.com/cn/java/technologies/downloads/#java17) 可用于 Minecraft 1.16 及以后的版本
+- [JAVA 8](https://bell-sw.com/pages/downloads/#jdk-8-lts) 适合 Minecraft 1.15 及以前的版本
+- [JAVA 17](https://www.oracle.com/cn/java/technologies/downloads/#java17) 适合 Minecraft 1.16 及以后的版本
 
 选择非全局Java版本：
 
 > 先保证你有其他的Java
 
-> 进入 设置-->全局游戏设置-->Java路径--->选择自定义并找到你需要的 jdk 的路径后确定
-> 选择的 JDK 一般为您的Java安装路径下的`bin\java.exe`(Windows)或`bin/java`(Linux/Unix)
+> 进入 设置-->全局游戏设置-->Java路径
+> HMCL会列出已安装的Java，你可以从中选择合适的版本
+> 如果你的Java未列出，可以通过**自定义**选择本地的Java JRE/JDK
+> 选择的Java可执行文件一般为您的Java安装路径下的`bin\java.exe`(Windows)或`bin/java`(Linux/Unix)
 
-__如果出现任何的游戏崩溃问题请返回默认的 Java__
+__如果出现任何的游戏崩溃问题请设置回默认的 Java__
