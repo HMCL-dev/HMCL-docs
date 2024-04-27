@@ -12,19 +12,43 @@ toc: true
 
 想必有些服务器主为此头疼了许久。由于玩家的电脑环境多变，甚至可能仍然有安装着 Java 7 的电脑而无法启动 1.12.2 以上的游戏、或者  Mod 客户端。因此服务器主希望能在整合包中自带一个 Java 运行时（或者叫 JRE），从而取代电脑自带的 JVM。接下来本文将介绍两种方法。
 
-# 方法一：使用 HMCL-3.2.122 或以上版本
+# 方法一：使用最新版本（推荐）
 
-**HMCL-3.2.122** 或更新的版本的 Windows 版本**（必须是 Windows 版本，或者说 exe 文件）**会直接检查同级文件夹下的 `jre-x64` 和 `jre-x86` 文件夹。
+## EXE 版本
 
-如果玩家电脑的操作系统是 32 位的，那么将优先使用 `jre-x86` 内的 Java 运行时启动游戏。如果是 64 位的，将优先选择 `jre-x64` 文件夹内的 Java 运行时启动游戏（但不会选择 `jre-x86`）。
+EXE 版本在 Windows 系统下打开会首先检查**同级文件夹**下的 `jre-arm64`、`jre-x64` 和 `jre-x86` 文件夹。
 
-如果你放弃 32 位操作系统的玩家，那么你的整合包内只需要携带 `jre-x64` 即可。文件夹结构如下：
+检查顺序从上到下依次是：
+- `jre-arm64` （ARM 64 位）
+- `jre-x64` （X86 64 位）
+- `jre-x86` （X86 32 位）
 
-![](assets/img/docs/modpack-in-java/1-1.png)
+如果玩家电脑的操作系统不是 X86 或 ARM 64 位的，那么将优先使用 `jre-x86` 内的 Java 运行时启动 HMCL；如果是，将优先根据系统架构选择 `jre-x64` 或 `jre-arm64` 文件夹内的 Java 运行时启动 HMCL（但不会选择 `jre-x86`）。
+
+如果你放弃 ARM 64 位或 X86 32 位操作系统的玩家，那么你的整合包内只需要携带 `jre-x64` 即可。
+
+如果你想在任何情况下使用该 Java 运行时启动 HMCL，只携带 `jre-x86` 即可，此时无论玩家电脑的操作系统是什么架构都会尝试使用该运行时。
+
+## SH 版本
+
+SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下的 `jre-loongarch64`、`jre-arm32`、`jre-arm64`、`jre-x64` 和 `jre-x86` 文件夹。
+
+检查顺序从上到下依次是：
+- `jre-x64` （X86 64 位）
+- `jre-x86` （X86 32 位）
+- `jre-arm64` （ARM 64 位）
+- `jre-arm32` （ARM 32 位）
+- `jre-loongarch64` （Loongarch 64 位）
+
+会根据玩家电脑的操作系统架构选择对应文件夹内的 Java 运行时启动 HMCL。
+
+如果你想只携带一个 Java 运行时同时支持 X86 64 和 32 位操作系统的玩家，那么你的整合包内只需要携带 `jre-x86` 即可。
+
+注意：在启动器内更新升级本体时，只会更新 Jar 部分，并不会将 EXE 或 SH 本体（即 HMCLauncher，用于自动寻找 Java 运行时并启动 HMCL 本体的外壳）更新，因此建议在制作整合包时重新下载 EXE 或 SH 版本以更新 HMCLauncher！
 
 ## 方法二：创建快捷方式
 
-对于低于 HMCL 3.2.119 的版本，需要采用方法一。
+对于在 Windows 下使用 Jar 版本启动 HMCL 的可以采用方法二。
 
 ### 目录结构
 
@@ -74,14 +98,16 @@ toc: true
 
 ## 一些疑问
 
-1Q：jre-x64 文件夹中具体该放些什么，直接复制就行了吗？
+1Q：这些 Java 文件夹中具体该放些什么，直接复制就行了吗？
 
-1A：是的，复制 jre 内的所有东西就行
+1A：是的，复制 jre 内的所有东西就行，可以根据下图参考：
+
+![](/assets/img/docs/modpack-in-java/2-3.png)
 
 ——————————————————————————————————————————————————
 
 2Q：去哪里找Java？
 
-2A：有很多的Java提供选择，如[Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)和[Oracle openJDK](https://jdk.java.net/)
+2A：有很多的Java提供选择，如 [Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) 和 [Oracle openJDK](https://jdk.java.net/) 等
 
-只需要在下载时下载**.zip的压缩包文件**，且将压缩包内的所有内容放入`jre-x64`或`jre-x86`即可
+只需要在下载时下载**.zip 压缩包文件**，且将压缩包内的所有内容放入对应文件夹即可
