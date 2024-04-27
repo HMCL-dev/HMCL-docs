@@ -145,7 +145,7 @@ toc: true
 - 完善 Quilt 支持
 - 添加了对 NeoForge 的支持
 - 打开启动器时会验证 JavaFX 完整性
-- 放弃 EXE 版本与 Windows XP 的兼容性，如果需要可以使用 JAR 版本
+- 放弃 EXE 版本与 Windows XP 的兼容性，如果需要可以使用 JAR 版本（当前版本的 EXE 版本并未放弃，在不久的将来会构建不支持 Windows XP 的 HMCLauncher 并分发。如果是从旧版本通过启动器更新升级到最新版本，则 HMCLauncher 并不会被覆盖修改，仍然支持 Windows XP）
 - 支持从 Modrinth 更新模组，会比对 CurseForge 和 Modrinth 取最新版本
 - 支持在模组管理和模组搜索中显示所支持的模组加载器
 - 支持日志窗口中的复制操作，选中要复制的行，按 Ctrl+C 即可
