@@ -125,6 +125,6 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 **2Q**：去哪里找 Java？
 
-**2A**：有很多的Java提供选择，如 [Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) 和 [Oracle openJDK](https://jdk.java.net/) 等
+**2A**：有很多的Java提供选择，如 [Liberica JDK](https://bell-sw.com/pages/downloads/?package=jre-full) 、[Microsoft JDK](https://microsoft.com/openjdk)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/)、[中文 Java 镜像站](https://injdk.cn/ "对中国大陆的访问速度更友好") 和 [Oracle openJDK](https://jdk.java.net/) 等
 
 只需要在下载时下载**.zip 压缩包文件**，且将压缩包内的所有内容放入对应文件夹即可
