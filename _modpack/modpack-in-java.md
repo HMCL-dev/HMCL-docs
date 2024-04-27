@@ -123,7 +123,7 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 ——————————————————————————————————————————————————
 
-**2Q**：去哪里找Java？
+**2Q**：去哪里找 Java？
 
 **2A**：有很多的Java提供选择，如 [Liberica JDK](https://bell-sw.com/pages/downloads/?os=Windows&package=jdk-full) 、[Microsoft JDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) 和 [Oracle openJDK](https://jdk.java.net/) 等
 
