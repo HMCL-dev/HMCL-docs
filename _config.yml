@@ -20,6 +20,7 @@
 
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+locale: "zh-CN"
 
 title: Hello Minecraft! Launcher 帮助文档
 email: hmcl@huangyuhui.net

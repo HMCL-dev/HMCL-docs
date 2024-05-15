@@ -2,18 +2,18 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: single
+title: HMCL 新手导航
+toc: true
 ---
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
 > 由 wifi-left 进行整理
 
-# HMCL 新手导航
-
 ## 注意 Notice
 
-The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on https://github.com/HMCL-dev/HMCL-docs/pulls. Or you can enable your translation tool to read.
+The passages were written in Simplified Chinese. If you want to help translate them, please send a pull request on <https://github.com/HMCL-dev/HMCL-docs/pulls>. Or you can enable your translation tool to read.
 
 If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues).
 
