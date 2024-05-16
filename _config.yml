@@ -79,6 +79,11 @@ collections:
 
 defaults:
   - scope:
+      path: ""
+    values:
+      sidebar:
+        nav: docs
+  - scope:
       path: "assets/img"
     values:
       image: true
@@ -95,8 +100,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "docs"
   - scope:
       path: "_launcher"
       type: launcher
@@ -106,8 +109,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "launcher"
   - scope:
       path: "_modpack"
       type: modpack
@@ -117,8 +118,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "modpack"
   - scope:
       path: "_eula"
       type: eula
@@ -128,8 +127,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "eula"
   - scope:
       path: "_multiplayer"
       type: multiplayer
@@ -139,8 +136,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "multiplayer"
   - scope:
       path: "_changelog"
       type: changelog
@@ -150,8 +145,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "changelog"
   - scope:
       path: "_downloads"
       type: downloads
@@ -161,8 +154,6 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar:
-        nav: "downloads"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

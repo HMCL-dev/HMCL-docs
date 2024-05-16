@@ -1,0 +1,49 @@
+main:
+  - title: 常见问题
+    url: /faq.html
+  - title: GitHub
+    url: https://github.com/HMCL-dev/HMCL
+
+docs:
+  - title: 问题集合
+    children:
+      - title: 常见问题
+        url: /faq.html
+      - title: 启动器使用相关
+        url: /launcher/
+      - title: 整合包帮助
+        url: /modpack/
+      - title: 多人联机帮助
+        url: /multiplayer/
+  - title: 使用者帮助
+    children:
+      - title: 版本隔离
+        url: /launcher/isolation.html
+      - title: 多人联机帮助
+        url: /multiplayer/
+      - title: 设置离线皮肤
+        url: /launcher/offline-skin.html
+      - title: HMCL 的自动安装使用教程
+        url: /launcher/auto-installing.html
+      - title: 安装 Optifine / 光影
+        url: /launcher/shader.html
+      - title: 设置项详解
+        url: /launcher/set-item-details.html
+  - title: 开发者帮助
+    children:
+      - title: 制作 HMCL 格式的数据包
+        url: /launcher/datapack.html
+      - title: 制作整合包
+        url: /modpack/serverpack.html
+      - title: 添加默认 authalic-injector 验证服务器
+        url: /launcher/authlib-injector.html
+  - title: 其他
+    children:
+      - title: 为 HMCL 做出贡献
+        url: /contribution.html
+      - title: HMCL GitHub 地址
+        url: https://github.com/HMCL-dev/HMCL
+      - title: HMCL 帮助文档 GitHub 地址
+        url: https://github.com/HMCL-dev/HMCL-docs
+      - title: HMCL 官网
+        url: https://hmcl.huangyuhui.net
