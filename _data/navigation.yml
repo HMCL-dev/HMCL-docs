@@ -19,24 +19,33 @@ docs:
     children:
       - title: 版本隔离
         url: /launcher/isolation.html
+        description: 本文可以帮助你更好的分离地图、模组等。
       - title: 多人联机帮助
         url: /multiplayer/
+        description: 本文将告诉你如何进行多人联机，以及一些问题。
       - title: 设置离线皮肤
         url: /launcher/offline-skin.html
+        description: 本文将告诉你如何设置一个属于自己的离线皮肤。
       - title: HMCL 的自动安装使用教程
         url: /launcher/auto-installing.html
+        description: 本文将告诉你如何用 HMCL 安装 Forge、Fabric、Fabric API、LiteLoader、Optifine 以及 模组 等。
       - title: 安装 Optifine / 光影
         url: /launcher/shader.html
+        description: 本文将告诉你如何安装 Optifine 来使用光影。
       - title: 设置项详解
         url: /launcher/set-item-details.html
+        description: 这篇文章针对 HMCL 的各个设置项进行了详细的解释。
   - title: 开发者帮助
     children:
       - title: 制作 HMCL 格式的数据包
         url: /launcher/datapack.html
+        description: 本文将告诉你如何制作 HMCL 能够识别的数据包（Datapacks）。
       - title: 制作整合包
         url: /modpack/serverpack.html
+        description: 本文将告诉你如何制作整合包。
       - title: 添加默认 authalic-injector 验证服务器
         url: /launcher/authlib-injector.html
+        description: 本文将告诉你如何设置默认的验证服务器。
   - title: 其他
     children:
       - title: 为 HMCL 做出贡献
