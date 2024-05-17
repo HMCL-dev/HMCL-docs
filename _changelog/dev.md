@@ -13,7 +13,7 @@ toc: true
 <h1 id="nowchange">HMCL 3.5.7.247</h1>
 
 - GP-2990: 更新指向 XZ 主页的链接
-- GP-3017: 增加对 Cinnamon 桌面的支持
+- GP-3017: 在 Linux 系统上删除文件至回收站增加对 Cinnamon 桌面环境的支持
 - GP-3042: 对日志中 `Someone is closing me!` 不做检测（这是正常退出的提示）
 - GP-3045: 支持自动安装 Java 21
 - GP-3035: 在 macOS 环境下支持查找 Homebrew 安装的 Java
