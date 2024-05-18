@@ -18,7 +18,7 @@ toc: true
   - GP-2942: 游戏版本的图标现在支持 JPG、GIF 等格式
   - GP-2950: 启动器启动后，将自动加载同目录下的 `font.ttf` 或 `font.otf`
 - 下载
-  - GP-2958: 还原对 MCBBS 的鸣谢。感谢你，MCBBS！
+  - GP-2958: 还原对 MCBBS 的鸣谢。谢谢你，MCBBS！
   - GP-3031: 适配新版本 NeoForge 模组，修复部分模组无法被正确识别的问题
   - GP-3045: 支持自动安装 Java 21
 - 错误修复
