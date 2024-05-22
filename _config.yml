@@ -20,6 +20,7 @@
 
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+locale: "zh-CN"
 
 title: Hello Minecraft! Launcher 帮助文档
 email: hmcl@huangyuhui.net
@@ -78,6 +79,16 @@ collections:
 
 defaults:
   - scope:
+      path: ""
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: docs
+  - scope:
       path: "assets/img"
     values:
       image: true
@@ -85,83 +96,6 @@ defaults:
       path: "assets/css"
     values:
       css: true
-  - scope:
-      path: "_docs"
-      type: docs
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "docs"
-  - scope:
-      path: "_launcher"
-      type: launcher
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "launcher"
-  - scope:
-      path: "_modpack"
-      type: modpack
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "modpack"
-  - scope:
-      path: "_eula"
-      type: eula
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "eula"
-  - scope:
-      path: "_multiplayer"
-      type: multiplayer
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "multiplayer"
-  - scope:
-      path: "_changelog"
-      type: changelog
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "changelog"
-  - scope:
-      path: "_downloads"
-      type: downloads
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "downloads"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
