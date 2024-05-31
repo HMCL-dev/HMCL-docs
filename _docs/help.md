@@ -16,12 +16,6 @@ Hello Minecraft! Launcher 的官方 QQ 群聊。
 
 [点击前往](/groups.html)
 
-## KOOK 频道
-
-Hello Minecraft! Launcher 的官方 KOOK 频道。
-
-[点击前往](https://kook.top/Kx7n3t)
-
 ## Discord 频道
 
 Hello Minecraft! Launcher 的官方 Discord 频道。
