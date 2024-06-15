@@ -10,7 +10,11 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.8.248</h1>
+<h1 id="nowchange">HMCL 3.5.8.249</h1>
+
+- GP-3113: \[重要\]: 修复 3.5.8.248 无法安装启动部分带 Forge 版本的问题
+
+# HMCL 3.5.8.248
 
 - GP-3023: `特定游戏设置 - 自动安装` 中禁止升级或卸载由其他启动器安装的游戏组件
 - GP-3089: 优化 `下载 - 模组` 中模组版本推荐逻辑
