@@ -31,7 +31,8 @@ toc: true
 - [HMCL 用户群 ③ (201034984)](https://qm.qq.com/q/7sbMrFm9CE)（已满）
 - [HMCL 用户群 ④ (533529045)](https://qm.qq.com/q/ACmZa98tGg)（已满）
 - [HMCL 用户群 ⑤ (744304553)](https://qm.qq.com/q/MlVArSCMwM)（已满）
-- [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)
+- [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)（已满）
+- [HMCL 用户群 ⑦ (482624681)](https://qm.qq.com/q/WFsZ65F6MY)
 
 我们会不定期清理用户群中超过三个月没有发言的非活跃成员，每次清理前我们会提前一周在群内发布公告。
 
