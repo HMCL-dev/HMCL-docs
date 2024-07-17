@@ -49,7 +49,7 @@ toc: true
 
 ## 灵车交流群
 
-我们为 Linux、FreeBSD 等系统以及 ARM、RISC-V、龙芯等设备的用户建立了一个独立的交流群。
+我们为 Linux、FreeBSD 等系统以及 ARM（不包括 macOS）、RISC-V、龙芯等设备的用户建立了一个独立的交流群。
 如果你正在使用这些平台，欢迎加入 HMCL 灵车交流群：[HMCL 灵车交流群 (737461713)](https://qm.qq.com/q/C935haj8xW)。
 
 本群不适合一般 Windows 和 macOS 用户加入。如果你不关心上面提到的这些平台，请移步[用户群](#用户群)。
