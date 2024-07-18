@@ -7,7 +7,7 @@ clone:
 
 steps:
 - name: build
-  image: jekyll/jekyll:4.3.3
+  image: jekyll/jekyll:4.2.2
   commands:
     - touch Gemfile.lock
     - chmod a+w Gemfile.lock
