@@ -15,7 +15,7 @@ steps:
     - gem sources --add https://mirrors.cloud.tencent.com/rubygems/ --remove https://rubygems.org/
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
     - bundle install
-    - bundle exec jekyll build --trace
+    - bundle exec jekyll build --trace --verbose
     - bash scripts/copy_index_json.sh
   volumes:
   - name: dist
