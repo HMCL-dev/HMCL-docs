@@ -22,7 +22,7 @@ toc: true
 
 - 登录页面会询问使用何种登录方法，这时我们选择“使用我的密码”，并使用密码登录即可。
 
-_（如果没有“使用我的密码”选项，或者忘记了密码，[请继续往下看](#添加更改密码)）_
+_如果没有“使用我的密码”选项，或者忘记了密码，[请看下方教程](#添加更改密码)_
 
 ![选择“使用我的密码”](/assets/img/docs/use-password-login-microsoft-account/2.png)
 
@@ -37,3 +37,5 @@ _（如果没有“使用我的密码”选项，或者忘记了密码，[请继
 ![添加密码](/assets/img/docs/use-password-login-microsoft-account/3.png)
 
 ![修改密码](/assets/img/docs/use-password-login-microsoft-account/4.png)
+
+完成后按照 [上方教程](#如何使用密码登录微软账户) 即可使用密码登录微软账户。
