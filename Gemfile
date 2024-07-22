@@ -10,6 +10,7 @@ source "https://gems.ruby-china.com"
 gem "jekyll", "~> 4.2.2"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minimal-mistakes-jekyll"
+gem "logger", "1.4.2"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
