@@ -27,7 +27,7 @@ toc: true
 - GP-3128: 修复 1.21 NeoForge 无法下载的问题
 - GP-3130: 修复 1.8 及 1.9 可能无法安装 OptiFine 的问题
 - GP-3133、GP-3136: 修复 1.7.10-pre4 版本 Forge 安装问题
-- GP-3160: 修复 LauncherHelper NPE 问题
+- GP-3160: 修复游戏启动过程中部分情况下点击取消按钮会导致启动器出错的问题
 - GP-3197: 修复部分平台无法运行 1.14 ~ 1.14.2 的问题
 - GP-3198: 修复无法同时安装 LiteLoader 与 Forge 的问题
 - GC-7d5d74d: 修复 Linux/FreeBSD 系统无法找到 Mojang 提供的 Java 的问题
