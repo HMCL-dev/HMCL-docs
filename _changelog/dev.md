@@ -30,7 +30,7 @@ toc: true
 - GP-3160: 修复游戏启动过程中部分情况下点击取消按钮会导致启动器出错的问题
 - GP-3197: 修复部分平台无法运行 1.14 ~ 1.14.2 的问题
 - GP-3198: 修复无法同时安装 LiteLoader 与 Forge 的问题
-- GC-7d5d74d: 修复 Linux/FreeBSD 系统无法找到 Mojang 提供的 Java 的问题
+- GC-7d5d74d: 修复 Linux 系统无法找到 Mojang 提供的 Java 的问题
 
 # HMCL 3.5.8.249
 
