@@ -10,7 +10,11 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.8.250</h1>
+<h1 id="nowchange">HMCL 3.5.8.251</h1>
+
+- **GP-3201 \[重要\]: 修复 HMCL 在 Java 8 上运行时游戏安装界面卡片布局的问题**
+
+# HMCL 3.5.8.250
 
 - **GP-3121、GP-3194 \[重要\]: 微软登录界面对 Xbox 400 错误给予提示**
 - GP-3197: 优化对 Linux RISC-V 64、FreeBSD x86-64 平台的支持
