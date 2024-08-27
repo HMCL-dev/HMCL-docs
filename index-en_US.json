@@ -26,27 +26,27 @@
             },
             {
                 "title": "Change Skin in Offline Mode",
-                "subtitle": "How to use custom character skins in offline mode",
+                "subtitle": "How to use custom player skins in offline mode",
                 "url": "https://docs.hmcl.net/launcher/offline-skin.html"
             },
             {
                 "title": "Automatic Installation and Mod Downloads",
-                "subtitle": "Tutorial on installing Forge, LiteLoader, Fabric; How to install mods",
+                "subtitle": "Tutorials for installing Forge, LiteLoader, Fabric, and installing mods",
                 "url": "https://docs.hmcl.net/launcher/auto-installing.html"
             },
             {
-                "title": "Version Isolation",
-                "subtitle": "Solutions to avoid conflicts between saves and mod configurations of different game versions",
+                "title": "Instance Isolation",
+                "subtitle": "Solutions to avoid conflicts between saves and mod configurations of different game instances",
                 "url": "https://docs.hmcl.net/launcher/isolation.html"
             }
         ]
     },
     {
-        "title": "Modpacks",
+        "title": "Modpack",
         "items": [
             {
                 "title": "Authlib-Injector Server Setup Guide",
-                "subtitle": "How to configure the launcher to display the login page upon first opening after manually packaging a modpack",
+                "subtitle": "How to configure the launcher to display the login page upon first opening after manually archiving a modpack",
                 "url": "https://docs.hmcl.net/launcher/authlib-injector.html"
             },
             {
