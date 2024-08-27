@@ -4,7 +4,7 @@
         "items": [
             {
                 "title": "資料包製作指南",
-                "subtitle": "製作可以由 HMCL 導入的資料包",
+                "subtitle": "製作可以由 HMCL 匯入的資料包",
                 "url": "https://docs.hmcl.net/launcher/datapack.html"
             },
             {
@@ -14,47 +14,47 @@
             },
             {
                 "title": "設定項詳解",
-                "subtitle": "這篇文章針對於 HMCL 的各個設定項進行了詳細的解釋",
+                "subtitle": "這篇文章針對 HMCL 的各個設定項進行了詳細的解釋",
                 "url": "https://docs.hmcl.net/launcher/set-item-details.html"
             },
             {
-                "title": "離線模式下更換皮膚",
-                "subtitle": "如何在離線模式下使用自定義角色皮膚",
+                "title": "離線模式下更換外觀",
+                "subtitle": "如何在離線模式下使用自訂角色外觀",
                 "url": "https://docs.hmcl.net/launcher/offline-skin.html"
             },
             {
                 "title": "自動安裝與模組下載",
-                "subtitle": "安裝 Forge、LiteLoader、Fabric；安裝 Mod 教程",
+                "subtitle": "安裝 Forge、LiteLoader、Fabric 及安裝模組的教學",
                 "url": "https://docs.hmcl.net/launcher/auto-installing.html"
             },
             {
-                "title": "版本隔離",
-                "subtitle": "避免多個遊戲版本存檔和 Mod 配置衝突的解決方案",
+                "title": "實例隔離",
+                "subtitle": "避免多個遊戲實例存檔和模組配置衝突的解決方案",
                 "url": "https://docs.hmcl.net/launcher/isolation.html"
             }
         ]
     },
     {
-        "title": "整合包",
+        "title": "模組包",
         "items": [
             {
                 "title": "Authlib-Injector 伺服器設定指南",
-                "subtitle": "手動打包整合包後，初次打開啟動器時直接彈出對應的賬號登入頁",
+                "subtitle": "手動打包模組包後，初次打開啟動器時直接彈出對應的帳戶登入頁",
                 "url": "https://docs.hmcl.net/launcher/authlib-injector.html"
             },
             {
-                "title": "伺服端自動更新整合包製作教程",
-                "subtitle": "伺服端自動更新整合包允許啟動器根據服主配置強制更新玩家遊戲客戶端",
+                "title": "伺服端自動更新模組包製作教學",
+                "subtitle": "伺服端自動更新模組包允許啟動器根據服主配置強制更新玩家遊戲用戶端",
                 "url": "https://docs.hmcl.net/modpack/serverpack.html"
             }
         ]
     },
     {
-        "title": "多人聯機",
+        "title": "多人連線",
         "items": [
             {
-                "title": "多人聯機服務維護",
-                "subtitle": "多人聯機服務維護",
+                "title": "多人連線服務維護",
+                "subtitle": "多人連線服務維護",
                 "url": "https://www.bilibili.com/read/cv19553778"
             }
         ]
