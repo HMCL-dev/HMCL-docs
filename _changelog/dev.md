@@ -10,7 +10,17 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.8.251</h1>
+<h1 id="nowchange">HMCL 3.5.9.252</h1>
+
+- GP-3251、GP-3259: 支持 Forge 官方源
+
+错误修复:
+
+- GP-3224: 正确解析 JSON 中包含 hash 的版本号，修复此类版本无法安装的问题
+- GP-3227: 修复模组详情页图标问题
+- GP-3260: 修复缺失的 CurseForge 类别 i18n 翻译
+
+# HMCL 3.5.8.251
 
 - **GP-3201 \[重要\]: 修复 HMCL 在 Java 8 上运行时游戏安装界面卡片布局的问题**
 
