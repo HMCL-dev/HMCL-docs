@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.5.9.252</h1>
 
-- GP-3251、GP-3259: 支持从 Forge 官方源下载
+- GP-3251、GP-3259: 支持从官方源下载 Forge
 
 错误修复:
 
