@@ -35,7 +35,7 @@ layout: default
             userPrompt.innerHTML = `请复制代码 <span class="selectable" id="userCode">${userCode}</span> <br>并前往 <a href="${verificationUri}">${verificationUri}</a>，输入代码允许访问并登录微软账户。`;
             qrcodeContainer.appendChild(userPrompt);
         } else {
-            const currentUrl = window.location.href + '?login=1';
+            const currentUrl = window.location.href + '&login=1';
             console.log("currentUrl: ", currentUrl);
             const canvas = document.createElement('canvas');
             QRCode.toCanvas(canvas, currentUrl, function (error) {
