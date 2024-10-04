@@ -10,7 +10,11 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.252</h1>
+<h1 id="nowchange">HMCL 3.5.9.254</h1>
+
+- GP-3256: 选择要安装的 Forge 版本时显示版本发布时间
+
+# HMCL 3.5.9.252
 
 - GP-3251、GP-3259: 支持从官方源下载 Forge
 
