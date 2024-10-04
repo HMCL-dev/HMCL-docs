@@ -10,7 +10,19 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.254</h1>
+<h1 id="nowchange">HMCL 3.5.9.255</h1>
+
+- GP-3233: 在 Linux/FreeBSD 平台打开日志、模组等位置时会选中该文件
+- GP-3274: 优化日志窗口
+- GP-3062: 支持从 SDKMAN! 默认目录查找可用 Java 路径
+- GP-3271: 隐藏版本管理的 Fabric API 和 QSL/QFAPI 自动安装选项
+- GP-3306: 模组等资源版本图标会根据标签自动调整样式
+
+错误修复:
+
+- GP-3142: 修复日志窗口错误地将 authlib-injector 日志识别为 ERROR 类型
+
+# HMCL 3.5.9.254
 
 - GP-3256: 选择要安装的 Forge 版本时显示版本发布时间
 
