@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.5.9.257</h1>
 
-- GP-2988: 添加 Java 管理页面，优化查找、下载、自动选择 Java 等功能
+- GP-2988: 添加 Java 管理页面，优化查找、下载、自动选择 Java 等功能 （[BV1WvCUY4EwK](https://www.bilibili.com/video/BV1WvCUY4EwK)）
 - GP-3262: 优化模组下载页面按钮的翻译文本
 - GP-3313: 启动时不再检测 Fractureiser 病毒
 - GP-3280: 在删除账户和认证服务器时弹出确认提示
