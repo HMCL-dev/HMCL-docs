@@ -22,6 +22,8 @@ toc: true
 
 ## 用户群
 
+![](/assets/img/docs/groups/group-2.png)
+
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
 - [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)（已满）
