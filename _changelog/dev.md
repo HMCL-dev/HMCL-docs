@@ -10,7 +10,32 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.257</h1>
+<h1 id="nowchange">HMCL 3.5.9.259</h1>
+
+- GP-3378: 优化首页公告，添加隐藏按钮
+- 优化文本描述
+
+错误修复:
+
+- GP-3379: 修复部分按钮无法用键盘触发的问题
+- GP-3380: 修复部分控件响应鼠标任意按钮点击的问题
+
+# HMCL 3.5.9.258
+
+- GP-3342, GP-3369, GP-3371: 优化 Java 下载功能
+- GP-3363: 支持下载 IBM Semeru Runtime (OpenJ9)
+- GP-3375: 支持微软账户上传皮肤
+- GP-3032: 检查模组更新界面加入全选/取消全选复选框
+- GP-3347: 当整合包没有描述时，隐藏查看整合包描述按钮
+- GP-3373: 更新模组下载页游戏版本列表至 1.21.3
+- GP-3364: 将自动下载的 JavaFX 版本提升至 17.0.13
+- GP-3287: 优化文本描述
+
+错误修复:
+
+- GP-3352: 修复无法安装 `zip` 格式的 Java 安装包的问题
+
+# HMCL 3.5.9.257
 
 - GP-2988: 添加 Java 管理页面，优化查找、下载、自动选择 Java 等功能 （[BV1WvCUY4EwK](https://www.bilibili.com/video/BV1WvCUY4EwK)）
 - GP-3262: 优化模组下载页面按钮的翻译文本
