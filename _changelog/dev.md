@@ -23,7 +23,7 @@ toc: true
 # HMCL 3.5.9.258
 
 - GP-3342, GP-3369, GP-3371: 优化 Java 下载功能
-- GP-3363: 支持下载 IBM Semeru Runtime (OpenJDK)
+- GP-3363: 支持下载 IBM Semeru Runtime (OpenJ9)
 - GP-3375: 支持微软账户上传皮肤
 - GP-3032: 检查模组更新界面加入全选/取消全选复选框
 - GP-3347: 当整合包没有描述时，隐藏查看整合包描述按钮
