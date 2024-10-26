@@ -10,7 +10,7 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.250</h1>
+<h1 id="nowchange">HMCL 3.5.9.259</h1>
 
 - GP-3378: 优化首页公告，添加隐藏按钮
 - 优化文本描述
