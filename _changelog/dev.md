@@ -10,7 +10,15 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.260</h1>
+<h1 id="nowchange">HMCL 3.5.9.261</h1>
+
+- GP-3428: 优化文本描述
+
+错误修复:
+
+- GP-3430: 修复使用高版本 Java 启动低版本 MC 时提示对话框中的文本错误
+
+# HMCL 3.5.9.260
 
 - GP-3232: 支持在模组管理页面通过右键单击模组查看模组详情
 - GP-3396、GP-3397、GP-3406: 优化账户列表页面按钮图标
