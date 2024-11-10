@@ -10,7 +10,15 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.261</h1>
+<h1 id="nowchange">HMCL 3.5.9.262</h1>
+
+错误修复:
+
+- GP-3308: 修复启动时自动补全 Modrinth 整合包中已禁用模组的问题
+- GP-3434: 修复为游戏 1.20.5+Forge 自动选择 Java 17 的问题
+- GP-3437: 修复“关于”页面编码错误的问题
+
+# HMCL 3.5.9.261
 
 - GP-3428: 优化文本描述
 
