@@ -10,7 +10,20 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.262</h1>
+<h1 id="nowchange">HMCL 3.5.9.263</h1>
+
+- GP-2969: 在启动器日志中打印 mods 文件夹内的文件和子文件夹
+- GP-3450: 使最小化按钮居中
+- GP-3435: 在游戏下载列表中添加 Minecraft Wiki 链接
+- 优化文本描述
+
+错误修复:
+
+- GP-3030: 修复导入 MultiMC 格式整合包时没有恰当处理 JVM 参数导致游戏崩溃的问题
+- GP-3439: 修复 Minecraft 1.20.2+Forge 默认图标错误的问题
+- GP-3461: 回退 macOS 上自动下载的 JavaFX 至 19.0.2.1，解决游戏崩溃问题
+
+# HMCL 3.5.9.262
 
 错误修复:
 
