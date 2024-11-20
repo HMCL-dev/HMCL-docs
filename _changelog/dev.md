@@ -10,7 +10,20 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.262</h1>
+<h1 id="nowchange">HMCL 3.5.9.263</h1>
+
+- GP-3435: 在游戏下载列表中添加 Minecraft Wiki 链接
+- GP-3450: 使最小化按钮居中
+- 优化文本描述
+
+错误修复:
+
+- GP-3030: 修复导入 MultiMC 整合包时 JVM 参数未移除引号的问题
+- GP-3439: 修复 Minecraft 1.20.2+Forge 默认图标错误的问题
+- GP-3451: 修复检查模组更新失败对话框未翻译的问题
+- GP-3461: 修复 macOS 上点击按钮时虚拟机崩溃的问题
+
+# HMCL 3.5.9.262
 
 错误修复:
 
