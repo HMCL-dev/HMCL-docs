@@ -10,7 +10,16 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.5.9.263</h1>
+<h1 id="nowchange">HMCL 3.6.11.264</h1>
+
+- GP-3457: 实验性支持 WebP 格式的背景图片
+- GP-3476: 在 Linux RISC-V 平台添加 [banshanjdk-8](https://www.zthread.cn/) 的下载地址
+
+错误修复:
+
+- GP-3470: 修复无法读取部分 Forge 模组信息的问题
+
+# HMCL 3.5.9.263
 
 - GP-3435: 在游戏下载列表中添加 Minecraft Wiki 链接
 - GP-3450: 使最小化按钮居中
