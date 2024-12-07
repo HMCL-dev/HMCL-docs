@@ -22,13 +22,13 @@ toc: true
 
 ## 用户群
 
-![](/assets/img/docs/groups/group-3.png)
+![](/assets/img/docs/groups/group-4.png)
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
 - [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)（已满）
 - [HMCL 用户群 ② (203232161)](https://qm.qq.com/q/N7hgdNYfy)（已满）
-- [HMCL 用户群 ③ (201034984)](https://qm.qq.com/q/7sbMrFm9CE)
+- [HMCL 用户群 ③ (201034984)](https://qm.qq.com/q/7sbMrFm9CE)（已满）
 - [HMCL 用户群 ④ (533529045)](https://qm.qq.com/q/ACmZa98tGg)
 - [HMCL 用户群 ⑤ (744304553)](https://qm.qq.com/q/MlVArSCMwM)
 - [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)
