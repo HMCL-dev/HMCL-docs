@@ -19,7 +19,7 @@ toc: falst
 
 <script>
     setTimeout(function() {
-        window.location.href = "https://aka.ms/download-jdk/microsoft-jdk-17-windows-aarch64.msi";
+        window.location.href = "https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi";
     }, 5000); // 等待 5 秒.
 </script>
 
