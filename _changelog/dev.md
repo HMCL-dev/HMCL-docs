@@ -10,7 +10,25 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.11.264</h1>
+<h1 id="nowchange">HMCL 3.6.11.265</h1>
+
+- GP-3458: 降低窗口阴影质量以改善性能
+- GP-3484: 更新模组下载页游戏版本列表至 1.21.4
+
+错误修复:
+
+- GP-3490: 修复 OAuth 登录时轮询过于频繁的问题
+- GP-3464: 修复在更新日志界面无法拖动启动器窗口的问题
+- GP-3503: 使用 Zink 渲染器时禁用 DRI3
+- GC-`5fd52bb`: 皮肤缓存不再保存到 .minecraft 目录
+- GP-`d5408c3`: 版本特定游戏设置从全局设置复制
+- GC-`81b3911`: 修复按 ESC 键时文本框内的值没有保存的问题
+- GC-`260f4b6`: 修复输入对话框中 ESC 键不起作用的问题
+- GC-`7d12ef6`: 修复内存滑块提示被设备内存进度条覆盖的问题
+- GC-`78e15d1`: 修复游戏设置中内存没有实时刷新的问题
+- GC-`6f53da1`: 完善模组下载界面
+
+# HMCL 3.6.11.264
 
 - GP-3457: 实验性支持 WebP 格式的背景图片
 - GP-3476: 在 Linux RISC-V 平台添加 [banshanjdk-8](https://www.zthread.cn/) 的下载地址
