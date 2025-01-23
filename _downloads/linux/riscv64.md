@@ -3,7 +3,7 @@ title:  "下载适用于 Linux RISC-V 64 的 HMCL 和 Minecraft 依赖的 Java"
 permalink: /downloads/linux/riscv64.html
 date:   2024-10-06 22:00:00 +0800
 categories: Java 下载
-toc: falst
+toc: false
 ---
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Flinux%2Friscv64.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
