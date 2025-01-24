@@ -10,7 +10,22 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.11.265</h1>
+<h1 id="nowchange">HMCL 3.6.11.266</h1>
+
+- GP-3517: 游戏下载页面添加搜索功能
+- GP-3244: 安装新游戏/整合包时检查版本名称是否包含非 ASCII 字符
+- GP-3523: 模组列表页中按下 ESC 键时取消选中
+- GP-3536: 优化对 Linux RISC-V 64 平台的支持
+- 优化文本描述
+
+错误修复
+
+- GP-3252: 修复无法补全部分第三方 Minecraft 客户端游戏资源的问题
+- GC-`56d20a5`, GC-`397edae`: 修复 Linux 平台调整窗口大小的问题
+- GP-3531: 修复在 FreeBSD x86-64 平台未正确替换 LWJGL 本地库的问题
+- GP-3541: 修复安装 MultiMC 整合包后没有设置图标的问题
+
+# HMCL 3.6.11.265
 
 - GP-3458: 降低窗口阴影质量以改善性能
 - GP-3484: 更新模组下载页游戏版本列表至 1.21.4
