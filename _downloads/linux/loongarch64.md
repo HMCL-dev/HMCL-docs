@@ -42,7 +42,7 @@ Please execute `uname -r` in terminal to check the Linux kernel version. Please 
 
 ## Old World
 
-If you are using the old world Loongson system, please go to the Loongson Open Source Community to download Loongson Java 17.
+If you are using an Old World Loongson system, please go to Loongson Open Source Community to download Loongson Java 17.
 
 [Click here to go to the download page](https://www.loongnix.cn/zh/api/java/downloads-jdk17/index.html)
 
