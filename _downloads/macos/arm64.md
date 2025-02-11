@@ -16,7 +16,7 @@ toc: false
 
 ---
 
-Going to Java download page, scroll down and click `DMG` installation package download button, then wait for Java installer download to complete, finally launch installer, follow the prompts to install Java.
+You are going to the Java download page. Please scroll down and click `DMG` download button, then wait for the Java installer to finish downloading, and finally open the installer and follow the prompts to install Java.
 
 No redirect? [Click here to start downloading](https://bell-sw.com/pages/downloads/?version=java-21&os=macos&architecture=arm&package=jre-full&bitness=64#:~:text=All%20versions)
 
