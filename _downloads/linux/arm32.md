@@ -16,7 +16,7 @@ toc: false
 
 ---
 
-Click one of the following links to download Java, and then use the package or unzip it manually to install Java.
+Click one of the following links to download Java, and then use the package or extract it manually to install Java.
 
 [Link](https://bell-sw.com/pages/downloads/?version=java-17&os=linux&package=jre-full&bitness=32&architecture=arm#:~:text=All%20versions)
 
