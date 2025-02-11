@@ -36,7 +36,7 @@ sudo pacman -S jre17-openjdk
 
 ---
 
-There are two ABIs on the Loongson platform: **New World** and **Old World**. Java with different ABIs are not compatible with each other for the time being.
+There are two ABIs on Loongson platform: **New World** and **Old World**. Java with different ABIs are not compatible with each other for the time being.
 
 Please execute the command `uname -r` in the terminal to check the Linux kernel version. If your kernel version is 4.x, please download [Old World](#old-world) Java, otherwise please download [New World](#new-world) Java.
 
