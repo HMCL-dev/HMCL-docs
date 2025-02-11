@@ -8,7 +8,7 @@ toc: false
 
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Flinux%2Floongarch64.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
 
-龙芯平台存在 **新世界** 和 **旧世界** 两个 ABI，不同 ABI 的 Java 暂时互不兼容。
+龙芯平台存在 “**新世界**” 和 “**旧世界**” 两个 ABI，不同 ABI 的 Java 暂时互不兼容。
 
 请在终端中输入 `uname -r` 命令查看 Linux 内核版本。如果你的内核版本为 4.x 请下载[旧世界](#旧世界) Java，否则请下载[新世界](#新世界) Java。
 
