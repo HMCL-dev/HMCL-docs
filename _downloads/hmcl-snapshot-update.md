@@ -16,7 +16,7 @@ toc: false
 
 Going to HMCL-Snapshot download page, click Download.
 
-Not traveling? [Click here](https://hmcl-snapshot-update.netlify.app/)
+No redirect? [Click here](https://hmcl-snapshot-update.netlify.app/)
 
 
 <script>
