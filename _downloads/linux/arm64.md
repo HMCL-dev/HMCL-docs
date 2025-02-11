@@ -20,4 +20,4 @@ Click one of the following links to download Java, and then use the package or e
 
 [Link](https://bell-sw.com/pages/downloads/?version=java-21&os=linux&package=jre-full&bitness=64&architecture=arm#:~:text=All%20versions)
 
-Or you can add the repository to the package manager according to the [wiki](https://bell-sw.com/pages/repositories/).
+Or you can add the repository to the package manager according to the [instruction](https://bell-sw.com/pages/repositories/).
