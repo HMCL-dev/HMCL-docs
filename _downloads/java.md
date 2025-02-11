@@ -14,7 +14,7 @@ toc: false
 
 ---
 
-You are going to the Java download page, please click download, then wait for the Java installer to finish downloading, finally start the installer and follow the prompts to install Java.
+You are going to the Java download page. Please click download after redirecting, then wait for the Java installer to finish downloading, finally open the installer and follow the prompts to install Java.
 
 Not traveling? [Click here](https://www.java.com/download)
 
