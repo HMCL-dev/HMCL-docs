@@ -48,7 +48,7 @@ If you are using an Old World Loongson system, please go to Loongson Open Source
 
 ## New World
 
-If you are using a New World Loongson system, please use the system's package manager to install Java 17.
+If you are using a New World Loongson system, please install Java 17 by using system's package manager.
 
 **Loongnix**/Deepin/Debian/Ubuntu:
 
