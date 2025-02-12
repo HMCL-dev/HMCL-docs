@@ -23,7 +23,7 @@ No redirect? [Click here to start downloading](https://bell-sw.com/pages/downloa
 
 <script>
     setTimeout(function() {
-        window.location.href = "https://bell-sw.com/pages/downloads/?version=java-17&os=macos&architecture=arm&package=jre-full&bitness=64#:~:text=All%20versions";
+        window.location.href = "https://bell-sw.com/pages/downloads/?version=java-21&os=macos&architecture=arm&package=jre-full&bitness=64#:~:text=All%20versions";
     }, 5000); // 等待 5 秒.
 </script>
 
