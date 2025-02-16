@@ -10,7 +10,16 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.11.267</h1>
+<h1 id="nowchange">HMCL 3.6.11.268</h1>
+
+- GP-3613: 优化软件内日期时间格式
+- GP-3605: 添加 NeoForge 的 BMCLAPI 代理支持
+
+错误修复
+
+- GP-3612: 修复语言设置中英语选项名称错误的问题
+
+# HMCL 3.6.11.267
 
 - GP-3601: 更新模组数据
 - GP-3603: 支持临时隐藏预览版提示
