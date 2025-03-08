@@ -10,7 +10,24 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.11.270</h1>
+<h1 id="nowchange">HMCL 3.6.11.271</h1>
+
+版本介绍：[cv40935564](https://www.bilibili.com/opus/1041842019579723779)
+
+- GP-3689: 在世界管理界面显示世界图标
+- GP-3675: 更新 Microsoft 应用商店链接
+- GP-3700: 重新限制动画帧率至 60fps
+- GP-3701: 在 DDE 上禁用自绘窗口动画
+- GP-3695: 优化离线登录对话框
+- GP-3687: 更新全部图标至 Material Symbols
+- GP-3711: 优化世界管理界面，新增备份世界页面
+- 优化软件文案，修订翻译
+
+错误修复:
+
+- GP-3708: 修复更改游戏 Java 时路径显示错误的问题
+
+# HMCL 3.6.11.270
 
 版本介绍：[cv40898336](https://www.bilibili.com/opus/1040543870006329351)
 
