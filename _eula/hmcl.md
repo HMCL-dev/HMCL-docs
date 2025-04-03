@@ -6,7 +6,7 @@ categories: 协议
 toc: true
 ---
 
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdocs.hmcl.net%2Feula%2Fhmcl.html&count_bg=%233E4245&title_bg=%233E4245&icon=&icon_color=%23E7E7E7&title=%F0%9F%91%80&edge_flat=false)
+![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Feula%2Fhmcl.html)
 
 > 更新时间 2021 年 9 月 21 日
 
