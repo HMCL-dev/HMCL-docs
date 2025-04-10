@@ -22,7 +22,7 @@ toc: true
 
 ## 用户群
 
-![](/assets/img/docs/groups/group-6.png)
+![](/assets/img/docs/groups/group-7.png)
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
@@ -31,7 +31,7 @@ toc: true
 - [HMCL 用户群 ③ (201034984)](https://qm.qq.com/q/7sbMrFm9CE)（已满）
 - [HMCL 用户群 ④ (533529045)](https://qm.qq.com/q/ACmZa98tGg)（已满）
 - [HMCL 用户群 ⑤ (744304553)](https://qm.qq.com/q/MlVArSCMwM)（已满）
-- [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)
+- [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)（已满）
 - [HMCL 用户群 ⑦ (482624681)](https://qm.qq.com/q/WFsZ65F6MY)
 - [HMCL 用户群 ⑧ (991620626)](https://qm.qq.com/q/ECVKkslPqi)
 - [HMCL 用户群 ⑨ (657677715)](https://qm.qq.com/q/DVj9tTrwze)
