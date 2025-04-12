@@ -10,40 +10,59 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12.274</h1>
+<h1 id="nowchange">HMCL 3.6.12.275</h1>
 
-详细版本介绍：[cv41243757](https://www.bilibili.com/opus/1052394956088410133)
+详细版本介绍：[cv41320419](https://www.bilibili.com/opus/1055009465924845575)
 
-- GP-3247: 支持下载部分特殊版本（by zkitefly）
-- GP-3674: 更新链接为 Metadata 中的常量，优化代码可维护性（by zkitefly）
-- GP-3744: 更新模组下载页游戏版本列表至 1.21.5
-- GP-3781: 优化对 25w14craftmine 愚人节快照的支持（by Glavo）
-- GP-3734: 折叠高级设置中不适用于当前系统的选项（by Wulian233）
-- GP-3685: 优化软件文案，修订翻译（by 3gf8jv4dv）
+- GP-3080: 反序列化账户信息时优先将数字解析为 Long (by zly2006)
+- GP-3481: 使用 Kala Compress 替代 commons-compress (by Glavo)
+- GP-3799: 优化下载列表中特殊版本的版本号 (by zkitefly)
+- GP-3800: 优化整合包导出类型选择界面 (by Wulian233)
+- GP-3819: 将 mesa-loader-windows 更新至 25.0.3 (by Glavo)
 
 错误修复：
 
-- GP-3762: 修复离线账户皮肤 cslApi 为 null 时启动器崩溃的问题（by Glavo）
-- GP-3769: 修复离线账户切换模型时左侧 3D 预览不会即时更新的问题（by Burning_TNT）
-- GP-3770: 修复 Windows 平台部分语言编码下无法打开 Minecraft 中文 Wiki 的问题（by Burning_TNT）
-- GP-3771: 修复资源包和世界下载对话框标题为“模组下载”的问题（by 辞庐）
-- GP-3778: 修复 macOS 平台使用 Rosetta 2 转译运行启动器时无法正确识别系统架构的问题（by YiZhiMCQiu）
-- GP-3793: 修复启动器更新下载对话框中有两个相同进度条的问题（by Burning_TNT）
-- GP-3797: 修复无法打开游戏购买页面的问题（by zkitefly）
+- GP-3768: 修复模组下载界面无法正常翻页，以及类别会在切换下载源时出错的问题 (by Burning_TNT)
+- GP-3772: 修复模组管理内“安装到当前版本”与“下载到本地文件夹”实际效果相同的问题 (by Burning_TNT)
+- GP-3776: 修复 LiteLoader 下载相关问题 (by Burning_TNT)
+- GP-3806: 修复 RISC-V 平台游戏识别 CPU 名称出错的问题 (by Glavo)
+- GP-3814: 修复 Fabric Metadata 无效时 FabricInstallTask 抛出 NPE 的问题 (by Glavo)
+- GP-3817: 修复自定义背景图片路径包含无效字符时启动器崩溃的问题 (by Glavo)
+
+# HMCL 3.6.12.274
+
+详细版本介绍：[cv41243757](https://www.bilibili.com/opus/1052394956088410133)
+
+- GP-3247: 支持下载部分特殊版本 (by zkitefly)
+- GP-3674: 更新链接为 Metadata 中的常量，优化代码可维护性 (by zkitefly)
+- GP-3744: 更新模组下载页游戏版本列表至 1.21.5
+- GP-3781: 优化对 25w14craftmine 愚人节快照的支持 (by Glavo)
+- GP-3734: 折叠高级设置中不适用于当前系统的选项 (by Wulian233)
+- GP-3685: 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复：
+
+- GP-3762: 修复离线账户皮肤 cslApi 为 null 时启动器崩溃的问题 (by Glavo)
+- GP-3769: 修复离线账户切换模型时左侧 3D 预览不会即时更新的问题 (by Burning_TNT)
+- GP-3770: 修复 Windows 平台部分语言编码下无法打开 Minecraft 中文 Wiki 的问题 (by Burning_TNT)
+- GP-3771: 修复资源包和世界下载对话框标题为“模组下载”的问题 (by 辞庐)
+- GP-3778: 修复 macOS 平台使用 Rosetta 2 转译运行启动器时无法正确识别系统架构的问题 (by YiZhiMCQiu)
+- GP-3793: 修复启动器更新下载对话框中有两个相同进度条的问题 (by Burning_TNT)
+- GP-3797: 修复无法打开游戏购买页面的问题 (by zkitefly)
 
 # HMCL 3.6.11.273
 
 版本介绍：[cv41100626](https://www.bilibili.com/opus/1047507571079905315)
 
-- GP-3432: 优化滚动页面时的性能（by Glavo）
-- GP-3747: 在日志中记录编码信息（by Glavo）
-- GP-3749, GP-3750: 消除使用 Java 24 运行 HMCL 时控制台中的弃用警告（by Glavo）
-- GP-3755: 更新 macOS Dock 栏图标（by Shulker）
+- GP-3432: 优化滚动页面时的性能 (by Glavo)
+- GP-3747: 在日志中记录编码信息 (by Glavo)
+- GP-3749, GP-3750: 消除使用 Java 24 运行 HMCL 时控制台中的弃用警告 (by Glavo)
+- GP-3755: 更新 macOS Dock 栏图标 (by Shulker)
 
 错误修复：
 
-- GP-3752: 修复取消导出整合包时弹出报错对话框的问题（by Glavo）
-- GP-3759: 修复无法解析部分 Java 版本号的问题（by Glavo）
+- GP-3752: 修复取消导出整合包时弹出报错对话框的问题 (by Glavo)
+- GP-3759: 修复无法解析部分 Java 版本号的问题 (by Glavo)
 
 # HMCL 3.6.11.272
 
