@@ -36,7 +36,7 @@ HMCL/HMCLauncher 也支持一些环境变量来配置启动器的行为。你可
 |------|------|
 | `HMCL_JAVA_OPTS` | 自定义 HMCLauncher 所使用的 JVM 启动参数（默认为 `-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15`）|
 | `HMCL_JAVA_HOME` | 自定义 HMCLauncher 所使用的 Java 路径 |
-| `HMCL_FONT` | 指定启动器使用的字体族 |
+| `HMCL_FONT` | 指定启动器使用的字族 |
 | `HMCL_JRES` | 添加 HMCL 所使用的 Java 路径，支持写入多个路径 |
 
 ## 如何使用 JVM 选项
