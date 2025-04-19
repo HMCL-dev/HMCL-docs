@@ -92,7 +92,7 @@ java -Dhmcl.font.override="Noto Sans CJK SC" -jar HMCL.jar
 ### Linux/macOS 设置环境变量
 
 1. 编辑你的 Shell 配置文件（比如 `~/.bashrc`、`~/.zshrc` 等）
-2. 添加 export 语句：
+2. 添加 `export` 语句：
 
 ```bash
 export HMCL_JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
