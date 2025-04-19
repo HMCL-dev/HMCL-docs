@@ -38,7 +38,6 @@ HMCL/HMCLauncher 也支持一些环境变量来配置启动器的行为。你可
 | `HMCL_JAVA_HOME` | 自定义 HMCLauncher 所使用的 Java 路径 |
 | `HMCL_FONT` | 指定启动器使用的字体族 |
 | `HMCL_JRES` | 添加 HMCL 所使用的 Java 路径，支持写入多个路径 |
-| `HMCL_SIGNATURE_KEY` | 自定义 HMCL 签名密钥 |
 
 ## 如何使用 JVM 选项
 
