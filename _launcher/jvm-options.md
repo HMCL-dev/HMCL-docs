@@ -53,7 +53,7 @@ java -Dhmcl.home="D:/Games/HMCL" -jar HMCL.jar
 
 ### 方法二：创建启动脚本
 
-1. Windows 用户可以创建 `.bat` 文件:
+1. Windows 用户可以创建 `.cmd` 文件：
 ```batch
 @echo off
 java -Dhmcl.font.override="Microsoft YaHei" -jar HMCL.jar
