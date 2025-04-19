@@ -60,7 +60,7 @@ java -Dhmcl.font.override="Microsoft YaHei" -jar HMCL.jar
 pause
 ```
 
-2. Linux/macOS 用户可以创建 `.sh` 文件:
+2. Linux/macOS 用户可以创建 `.sh` 文件：
 ```bash
 #!/bin/bash
 java -Dhmcl.font.override="Noto Sans CJK SC" -jar HMCL.jar
