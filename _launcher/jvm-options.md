@@ -45,7 +45,7 @@ HMCL/HMCLauncher 也支持一些环境变量来配置启动器的行为。你可
 
 ### 方法一：直接在命令行中添加
 
-在启动 HMCL 时通过命令行添加参数，例如:
+在启动 HMCL 时通过命令行添加参数，例如：
 
 ```bash
 java -Dhmcl.home="D:/Games/HMCL" -jar HMCL.jar
