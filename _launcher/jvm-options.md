@@ -17,7 +17,7 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 | `-Dhmcl.home=<path>` | 覆盖 HMCL 数据文件夹路径 |
 | `-Dhmcl.self_integrity_check.disable=true` | 禁用启动器更新时的本体完整性检查 |
 | `-Dhmcl.bmclapi.override=<url>` | 自定义 BMCLAPI 的 API Root 地址（默认为 `https://bmclapi2.bangbang93.com`）|
-| `-Dhmcl.font.override=<font family>` | 指定启动器使用的字体族 |
+| `-Dhmcl.font.override=<font family>` | 指定启动器使用的字族 |
 | `-Dhmcl.version.override=<version>` | 手动指定启动器版本号 |
 | `-Dhmcl.update_source.override=<url>` | 自定义 HMCL 更新源地址 |
 | `-Dhmcl.authlibinjector.location=<path>` | 指定本地 authlib-injector 路径，不从网络下载 |
