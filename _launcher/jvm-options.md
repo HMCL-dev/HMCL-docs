@@ -101,7 +101,7 @@ export HMCL_JAVA_OPTS="-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15"
 
 3. 保存文件并重新加载配置：
 ```bash
-source ~/.bashrc  # 或 source ~/.zshrc
+source ~/.bashrc  # 或 `source ~/.zshrc`
 ```
 
 ### 使用注意事项
