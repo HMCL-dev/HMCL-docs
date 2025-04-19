@@ -27,7 +27,6 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 | `-Dhmcl.microsoft.auth.secret=<App Secret>` | 自定义 Microsoft OAuth 应用程序密钥 |
 | `-Dhmcl.curseforge.apikey=<key>` | 自定义 CurseForge API 密钥 |
 | `-Dhmcl.discoapi.override=<url>` | 自定义 DiscoAPI 的 API Root 地址（默认为 `https://api.foojay.io/disco/v3.0`）|
-| `-Dhmcl.offline.auth.restricted=true` | 开启限制离线账户功能（即使时区是 Asia/Shanghai 的设备） |
 
 ## 如何使用 JVM 选项
 
