@@ -69,7 +69,7 @@ java -Dhmcl.font.override="Noto Sans CJK SC" -jar HMCL.jar
 ### 使用注意事项
 
 - 可以同时使用多个参数，只需要用空格分隔
-- 包含空格的参数值需要用引号包裹
+- 包含空格的参数值需要用半角引号包裹
 - 确保 JVM 参数位于 `-jar HMCL.jar` 之前
 
 ## 如何使用环境变量
