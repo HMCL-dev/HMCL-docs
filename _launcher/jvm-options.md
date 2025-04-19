@@ -81,7 +81,7 @@ java -Dhmcl.font.override="Noto Sans CJK SC" -jar HMCL.jar
 3. 点击“环境变量”
 4. 在“用户变量”或“系统变量”中点击“新建”
 5. 输入变量名（如 `HMCL_JAVA_HOME`）和变量值
-6. 点击"确定"保存
+6. 点击“确定”保存
 
 示例值：
 ```
