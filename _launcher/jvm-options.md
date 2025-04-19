@@ -1,6 +1,6 @@
 ---
-title: "JVM 选项"
-permalink: /launcher/jvm-options.html
+title: "JVM 选项与环境变量"
+permalink: /launcher/jvm-options-and-env.html
 date: 2025-04-20 23:18:02 +0800
 categories: 启动器
 toc: true
@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fjvm-options.html)
 
-## 选项
+## JVM 选项
 
 HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMCL 时添加这些参数来使用这些功能。
 
@@ -21,13 +21,23 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 | `-Dhmcl.version.override=<version>` | 手动指定启动器版本号 |
 | `-Dhmcl.update_source.override=<url>` | 自定义 HMCL 更新源地址 |
 | `-Dhmcl.authlibinjector.location=<path>` | 指定本地 authlib-injector 路径，不从网络下载 |
-| `-Dhmcl.openjfx.repo=<maven repository url>` | 添加用于下载 OpenJFX 的自定义 Maven 仓库地址 |
+| `-Dhmcl.openjfx.repo=<maven repository url>` | 添加用于下载 OpenJFX 的自定义 Maven 仓库地址（默认为 `https://repo1.maven.org/maven2`）|
 | `-Dhmcl.native.encoding=<encoding>` | 指定系统原生编码 |
 | `-Dhmcl.microsoft.auth.id=<App ID>` | 自定义 Microsoft OAuth 应用程序 ID |
 | `-Dhmcl.microsoft.auth.secret=<App Secret>` | 自定义 Microsoft OAuth 应用程序密钥 |
 | `-Dhmcl.curseforge.apikey=<key>` | 自定义 CurseForge API 密钥 |
 | `-Dhmcl.discoapi.override=<url>` | 自定义 DiscoAPI 的 API Root 地址（默认为 `https://api.foojay.io/disco/v3.0`）|
 | `-Dhmcl.offline.auth.restricted=true` | 开启限制离线账户功能（即使时区是 Asia/Shanghai 的设备） |
+
+## 环境变量
+
+HMCL（HMCLauncher）也支持一些环境变量来配置启动器的行为。你可以在系统环境变量中添加这些变量。
+
+| 参数 | 描述 |
+|------|------|
+| `HMCL_JAVA_OPTS` | 自定义 HMCL（HMCLauncher）所使用的 JVM 启动参数（默认为 `-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15`）|
+| `HMCL_JAVA_HOME` | 自定义 HMCL（HMCLauncher）所使用的 Java 路径 |
+
 
 ## 如何使用 JVM 选项
 
@@ -61,4 +71,43 @@ java -Dhmcl.font.override="Noto Sans CJK SC" -jar HMCL.jar
 - 可以同时使用多个参数，只需要用空格分隔
 - 包含空格的参数值需要用引号包裹
 - 确保 JVM 参数位于 `-jar HMCL.jar` 之前
+
+## 如何使用环境变量
+
+### Windows 设置环境变量
+
+1. 右键点击"此电脑"/"我的电脑"，选择"属性"
+2. 点击"高级系统设置"
+3. 点击"环境变量"
+4. 在"系统变量"或"用户变量"中点击"新建"
+5. 输入变量名（如 `HMCL_JAVA_HOME`）和变量值
+6. 点击"确定"保存
+
+示例值：
+```
+变量名: HMCL_JAVA_HOME
+变量值: C:\Program Files\Java\jdk-17
+```
+
+### Linux/macOS 设置环境变量
+
+1. 编辑你的 Shell 配置文件（比如 `~/.bashrc`、`~/.zshrc` 等）
+2. 添加 export 语句：
+
+```bash
+export HMCL_JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export HMCL_JAVA_OPTS="-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15"
+```
+
+3. 保存文件并重新加载配置：
+```bash
+source ~/.bashrc  # 或 source ~/.zshrc
+```
+
+### 使用注意事项
+
+- 设置环境变量后需要重启 HMCL 才能生效
+- 如果同时设置了 JVM 参数和环境变量，JVM 参数优先级更高
+- Windows 用户注意使用分号(;)分隔多个路径
+- Linux/macOS 用户注意使用冒号(:)分隔多个路径
 
