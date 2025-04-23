@@ -6,7 +6,7 @@ categories: 启动器
 toc: true
 ---
 
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fjvm-options.html)
+![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fjvm-options-and-env.html)
 
 ## JVM 选项
 
