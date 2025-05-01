@@ -14,7 +14,8 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 
 | 参数 | 描述 |
 |------|------|
-| `-Dhmcl.home=<path>` | 覆盖 HMCL 数据文件夹路径 |
+| `-Dhmcl.home=<path>` | 覆盖 HMCL 全局数据文件夹路径 |
+| `-Dhmcl.dir=<path>` | 覆盖 HMCL 工作路径下的 .hmcl 文件夹路径 |
 | `-Dhmcl.self_integrity_check.disable=true` | 禁用启动器更新时的本体完整性检查 |
 | `-Dhmcl.bmclapi.override=<url>` | 自定义 BMCLAPI 的 API Root 地址（默认为 `https://bmclapi2.bangbang93.com`）|
 | `-Dhmcl.font.override=<font family>` | 指定启动器使用的字族 |
