@@ -28,7 +28,7 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 | `-Dhmcl.microsoft.auth.secret=<App Secret>` | 自定义 Microsoft OAuth 应用程序密钥 |
 | `-Dhmcl.curseforge.apikey=<key>` | 自定义 CurseForge API 密钥 |
 | `-Dhmcl.discoapi.override=<url>` | 自定义 DiscoAPI 的 API Root 地址（默认为 `https://api.foojay.io/disco/v3.0`）|
-| `-Dhmcl.native.backend=<auto/jna/none>` | 指定 HMCL 的本地后端类型。`auto`：自动选择（Windows 7+ 使用 JNA，其他使用原生）；`jna`：强制使用 JNA；`none`：禁用 JNA（默认为 `auto`）|
+| `-Dhmcl.native.backend=<auto/jna/none>` | 指定 HMCL 的本地后端类型。可选值：<br>- `auto`：自动选择（Windows 7+ 使用 JNA，其他系统不使用）<br>- `jna`：强制使用 JNA（如果 JNA 不可用会抛出异常）<br>- `none`：禁用 JNA<br>默认值：`auto` |
 
 ## 环境变量
 
