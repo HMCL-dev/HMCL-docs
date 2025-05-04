@@ -14,7 +14,8 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 
 | 参数 | 描述 |
 |------|------|
-| `-Dhmcl.home=<path>` | 覆盖 HMCL 数据文件夹路径 |
+| `-Dhmcl.home=<path>` | 覆盖 HMCL 全局数据文件夹路径 |
+| `-Dhmcl.dir=<path>` | 覆盖 HMCL 工作路径下的 .hmcl 文件夹路径 |
 | `-Dhmcl.self_integrity_check.disable=true` | 禁用启动器更新时的本体完整性检查 |
 | `-Dhmcl.bmclapi.override=<url>` | 自定义 BMCLAPI 的 API Root 地址（默认为 `https://bmclapi2.bangbang93.com`）|
 | `-Dhmcl.font.override=<font family>` | 指定启动器使用的字族 |
@@ -27,6 +28,7 @@ HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMC
 | `-Dhmcl.microsoft.auth.secret=<App Secret>` | 自定义 Microsoft OAuth 应用程序密钥 |
 | `-Dhmcl.curseforge.apikey=<key>` | 自定义 CurseForge API 密钥 |
 | `-Dhmcl.discoapi.override=<url>` | 自定义 DiscoAPI 的 API Root 地址（默认为 `https://api.foojay.io/disco/v3.0`）|
+| `-Dhmcl.native.backend=<auto/jna/none>` | 指定 HMCL 的本地后端类型。可选值：<br>- `auto`：自动选择（Windows 7+ 使用 JNA，其他系统不使用）<br>- `jna`：强制使用 JNA（如果 JNA 不可用会抛出异常）<br>- `none`：禁用 JNA<br>默认值：`auto` |
 
 ## 环境变量
 
