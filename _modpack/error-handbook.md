@@ -14,8 +14,8 @@ toc: true
 如果你开启了 [版本隔离](launcher/global-version-isolation.html) 那么你的文件夹结构如下  
 ```text
 .minecraft
-|*assets         # 游戏资源文件夹，存放材质、声音等资源
-|*libraries      # 依赖库文件夹，存放启动和运行所需的各种库
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
 |*versions       # 版本文件夹，包含所有已安装的Minecraft版本
     \1.16.5-optifine
         |1.16.5-optifine.jar   # 该版本的主程序jar文件
@@ -31,8 +31,8 @@ toc: true
 如果你没有开启则是这样  
 ```text
 .minecraft
-|*assets         # 游戏资源文件夹，存放材质、声音等资源
-|*libraries      # 依赖库文件夹，存放启动和运行所需的各种库
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
 |*saves          # 存档文件夹，所有版本共用
 |*resourcepacks  # 资源包文件夹，所有版本共用
 |*logs           # 日志文件夹，所有版本共用

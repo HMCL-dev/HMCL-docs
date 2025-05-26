@@ -9,7 +9,9 @@ toc: true
 ![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Ffaq.html)
 
 > 本文由 LIPiston 编写。
-> -----分割线-----
+
+---
+
 > 这是一个提供给新手及小白的阅读文档  
 > 我会尽量简单的提供一些指导  
 > 若是要更加深入的了解  
