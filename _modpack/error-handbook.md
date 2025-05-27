@@ -6,47 +6,42 @@ categories: 整合包
 toc: true
 ---
 
-> 本文由 LIiston 编写。
-
-# 模组包报错排查手册  
+> 本文由 LIPiston 编写。
 
 ## 文件夹结构
 
 首先我们需要先认识Minecraft的文件夹结构  
 如果你开启了 [版本隔离](launcher/global-version-isolation.html) 那么你的文件夹结构如下  
-
 ```text
 .minecraft
-|*asstes
-|*libraries
-|*versions
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
+|*versions       # 版本文件夹，包含所有已安装的Minecraft版本
     \1.16.5-optifine
-        |1.16.5-optifine.jar
-        |*saves
-        |*resourcepacks
-        |*logs
-        |*mods
-        |*config
-        |*saves
-        |*crash-reports
+        |1.16.5-optifine.jar   # 该版本的主程序jar文件
+        |*saves               # 存档文件夹，仅该版本可见
+        |*resourcepacks        # 资源包文件夹，仅该版本可见
+        |*logs                # 日志文件夹，仅该版本可见
+        |*mods                # 模组文件夹，仅该版本可见
+        |*config              # 配置文件夹，仅该版本可见
+        |*crash-reports       # 崩溃报告文件夹，仅该版本可见
         ...
 ```
 
 如果你没有开启则是这样  
 ```text
 .minecraft
-|*asstes
-|*libraries
-|*saves
-|*resourcepacks
-|*logs
-|*mods
-|*config
-|*saves
-|*crash-reports
-|*versions
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
+|*saves          # 存档文件夹，所有版本共用
+|*resourcepacks  # 资源包文件夹，所有版本共用
+|*logs           # 日志文件夹，所有版本共用
+|*mods           # 模组文件夹，所有版本共用
+|*config         # 配置文件夹，所有版本共用
+|*crash-reports  # 崩溃报告文件夹，所有版本共用
+|*versions       # 版本文件夹，包含所有已安装的Minecraft版本
     \1.16.5-optifine
-        |1.16.5-optifine.jar
+        |1.16.5-optifine.jar   # 该版本的主程序jar文件
         ...
 ```
 
@@ -76,3 +71,4 @@ toc: true
 ![报错示例截图](/assets/img/docs/error-handbook/image.png)
 在向他人求助时，建议将 `.minecraft` 文件夹下的 `crash-reports` 文件夹和 `logs` 文件夹中的相关文件（如最新的崩溃报告和日志文件）一并打包发送。  
 这样可以让对方更全面地了解你的运行环境和报错详情，从而更高效地帮助你分析和解决问题。请注意，发送前可先检查日志内容，避免泄露个人隐私信息。
+
