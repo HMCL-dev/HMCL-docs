@@ -12,8 +12,11 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.12.279</h1>
 
+详细版本介绍：[cv41864476](https://www.bilibili.com/opus/1073249101108215817)
+
 - GP-3927: 将 JavaFX 更新至 17.0.15/24.0.1 (by Glavo)
 - GP-3953: 更新 HMCLauncher for Windows 至 3.6.0.2 (by Glavo)
+- GP-3860: 添加 XBox 封禁相关提示 (by 辞庐)
 - GP-3875: 使用工作路径下的 .hmcl 文件夹存放所有配置文件 (by Glavo)
 - GP-3876: 优化代理设置功能 (by Glavo)
 - GP-3878: 将 OS X 重命名为 macOS (by Glavo)
@@ -42,7 +45,7 @@ toc: true
 
 # HMCL 3.6.12.278
 
-细版本介绍：[cv41495241](https://www.bilibili.com/opus/1060912529106010120)
+详细版本介绍：[cv41495241](https://www.bilibili.com/opus/1060912529106010120)
 
 - GP-3840: 将 HMCLauncher 拆分至独立项目 (by Glavo)
 - GP-3857: 将 Gradle 更新至 8.14 (by Glavo)
