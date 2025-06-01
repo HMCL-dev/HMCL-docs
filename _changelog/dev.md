@@ -26,7 +26,7 @@ toc: true
 - GP-3910: 重构 `Theme` (by Glavo)
 - GP-3922: 在 Linux 平台 通过 `fc-match` 查询默认字体 (by Glavo)
 - GP-3919: 在日志中将包名 `org.jackhuang.hmcl` 简化为 `@` (by Burning_TNT)
-- GP-3938: 使用 Java 8 启动启动器时弹出弃用警告 (by Glavo)
+- GP-3938: 使用 Java 8 打开启动器时弹出弃用警告 (by Glavo)
 - GP-3944、GP-3949: 优化版本列表为空时，主页切换版本菜单的显示效果 (by GeneralK1ng)
 - GP-3951: 新增“原理图管理”界面 (by Glavo)
 
