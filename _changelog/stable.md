@@ -10,7 +10,7 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-# HMCL 3.6.12
+<h1 id="nowchange">HMCL 3.6.12</h1>
 
 版本介绍：[cv41174209](https://www.bilibili.com/opus/1050013108961017859)
 
