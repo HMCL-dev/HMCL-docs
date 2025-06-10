@@ -10,7 +10,22 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12.279</h1>
+<h1 id="nowchange">HMCL 3.6.12.280</h1>
+
+详细版本介绍：[cv41943291](https://www.bilibili.com/opus/1076123117136379910)
+
+- GP-3979: 更新 HMCLauncher for Windows 至 3.6.0.3 (by Glavo)
+- GP-3547: 重构 MultiMC 整合包兼容功能 (by Burning_TNT)
+- GP-3929: 使用独立线程保存设置 (by Glavo)
+- GP-3978: 优化原理图管理功能 (by Glavo)
+- GP-3981: 忽略与版本 JSON 指定的 Java 相冲突的 Java 检测规则 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复：
+
+- GP-3968: 修复 Java 管理页面中无法添加 IKVM 的问题 (by Glavo)
+
+# HMCL 3.6.12.279
 
 详细版本介绍：[cv41864476](https://www.bilibili.com/opus/1073249101108215817)
 
