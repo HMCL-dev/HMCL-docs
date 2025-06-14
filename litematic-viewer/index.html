@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>Litematic Viewer</title>
+
+      <!-- Deepslate -->
+      <script src="https://npm.webcache.cn/deepslate@0.10.1/dist/deepslate.umd.js"></script>
+      <script src="https://npm.webcache.cn/gl-matrix@3.4.3/gl-matrix-min.js"></script>
+
+      <script src="resource/assets.js"></script>
+      <script src="resource/opaque.js"></script>
+
+      <!-- Materialize -->
+      <link href="https://font.alnk.cn/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.webstatic.cn/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/>
+
+      <!-- Icons -->
+      <script src="https://res.webcache.cn/kit.fontawesome.com/92330e144e.js" crossorigin="anonymous"></script>
+
+      <style>
+         @media (prefers-color-scheme: light) {
+           body {
+             background: #FFF;
+             color: #111;
+           }
+         }
+
+         @media (prefers-color-scheme: dark) {
+           body {
+             background: #111;
+             color: #FFF;
+           }
+            input#remote-url {
+               color: white;
+            }
+         }
+
+         /* 语言切换按钮样式 */
+         #language-switch {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+         }
+
+         #viewer {
+             position:fixed;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             z-index: -1;
+         }
+
+         .settings-section {
+            margin-bottom: 20px;
+            display: grid;
+            width: fit-content;
+            margin:auto;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+         }
+
+         #settings-button {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            z-index: 1;
+         }
+
+         #settings-panel {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            right: 0;
+            opacity: 90%;
+            background-color: #111; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+         }
+
+         /* Position and style the close button (top right corner) */
+         #settings-panel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+         }
+
+         #materialList {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            column-width: 200px;
+            max-height: 80vh;
+         }
+
+         #materialList .count-item {
+            display: grid;
+            background-color: #000;
+            grid-template-columns: 1fr auto;
+            gap: 0px;
+            padding: 5px;
+         }
+
+         #materialListButton {
+            position: absolute;
+            padding: 8px;
+         }
+
+         #sliders input[type="range"] {
+            writing-mode: vertical-lr;
+            direction: rtl;
+            appearance: slider-vertical;
+            position: absolute;
+            background-color: #000;
+            width: 20px;
+            top: 35px;
+            height: 90%;
+            vertical-align: bottom;
+         }
+
+         #sliders #maxy {
+            left: 25px;
+         }
+      </style>
+
+      <script src="src/deepslate-helpers.js"></script>
+      <script src="src/litematic-utils.js"></script>
+      <script src="src/main.js"></script>
+      <script src="src/settings.js"></script>
+      <script src="src/viewer.js"></script>
+
+      <script>
+         // 翻译内容
+         const translations = {
+            'en': {
+               'title': 'Litematic Viewer',
+               'select-files': 'Select file(s)',
+               'paste-link': 'or paste a .litematic link:',
+               'submit': 'Submit',
+               'powered-by': 'Powered by DeepSlate',
+               'known-issues': 'Known issues: Cannot render Banner, Bed, Chest, Decorated Pot, Sign, Shulker box',
+               'complain': 'Complain about this app',
+               'contribute': 'Contribute to the project',
+               'unload': 'Unload Schematic',
+               'controls': 'Controls',
+               'reset': 'Reset Settings',
+               'click-drag': 'Click-drag to:',
+               'move': 'Move',
+               'pan': 'Pan',
+               'invert': 'Invert',
+               'sensitivity': 'Sensitivity',
+               'middle-click-drag': 'Middle-click-drag to:',
+               'scroll-to': 'Scroll to:',
+               'zoom': 'Zoom',
+               'one-finger-drag': 'One finger touch drag to:',
+               'two-finger-drag': 'Two finger touch drag to:',
+               'move-with': 'Move with:',
+               'relative-movement': 'Make forwards movement relative to facing direction',
+               'not-working': 'These do not work yet:',
+               'wasd': 'WASD',
+               'arrow-keys': 'Arrow Keys',
+               'pinch': 'Pinch'
+            },
+            'zh': {
+               'title': 'Litematic 查看器',
+               'select-files': '选择文件',
+               'paste-link': '或粘贴.litematic链接:',
+               'submit': '提交',
+               'powered-by': '由 DeepSlate 驱动',
+               'known-issues': '已知问题: 无法渲染旗帜、床、箱子、装饰陶罐、告示牌、潜影盒',
+               'complain': '在这里反馈问题',
+               'contribute': '在这里参与项目贡献',
+               'unload': '卸载原理图',
+               'controls': '控制',
+               'reset': '重置设置',
+               'click-drag': '点击拖动以：',
+               'move': '移动',
+               'pan': '平移',
+               'invert': '反转',
+               'sensitivity': '灵敏度',
+               'middle-click-drag': '中键点击拖动以：',
+               'scroll-to': '滚轮以：',
+               'zoom': '缩放',
+               'one-finger-drag': '单指拖动以：',
+               'two-finger-drag': '双指拖动以：',
+               'move-with': '移动方式：',
+               'relative-movement': '使前进运动相对于面向方向',
+               'not-working': '以下功能暂不可用：',
+               'wasd': 'WASD 键',
+               'arrow-keys': '方向键',
+               'pinch': '缩放手势'
+            },
+            'zh-TW': {
+               'title': 'Litematic 檢視器',
+               'select-files': '選擇檔案',
+               'paste-link': '或貼上 .litematic 連結：',
+               'submit': '提交',
+               'powered-by': '由 DeepSlate 驅動',
+               'known-issues': '已知問題：無法渲染旗幟、床、箱子、裝飾陶罐、告示牌、潛影盒',
+               'complain': '在此回報問題',
+               'contribute': '在此貢獻項目',
+               'unload': '卸載示意圖',
+               'controls': '控制',
+               'reset': '重設設定',
+               'click-drag': '點擊拖曳以：',
+               'move': '移動',
+               'pan': '平移',
+               'invert': '反轉',
+               'sensitivity': '靈敏度',
+               'middle-click-drag': '中鍵點擊拖曳以：',
+               'scroll-to': '滾輪以：',
+               'zoom': '縮放',
+               'one-finger-drag': '單指拖曳以：',
+               'two-finger-drag': '雙指拖曳以：',
+               'move-with': '移動方式：',
+               'relative-movement': '使前進移動相對於面向方向',
+               'not-working': '以下功能尚未支援：',
+               'wasd': 'WASD 鍵',
+               'arrow-keys': '方向鍵',
+               'pinch': '縮放手勢'
+            },
+            'es': {
+               'title': 'Visor de Litematic',
+               'select-files': 'Seleccionar archivo(s)',
+               'paste-link': 'o pega un enlace .litematic:',
+               'submit': 'Enviar',
+               'powered-by': 'Desarrollado por DeepSlate',
+               'known-issues': 'Problemas conocidos: No puede renderizar banderas, camas, cofres, jarras decoradas, letreros, cajas de shulker',
+               'complain': 'Reporta problemas aquí',
+               'contribute': 'Contribuye al proyecto aquí',
+               'unload': 'Descargar esquema',
+               'controls': 'Controles',
+               'reset': 'Restablecer configuración',
+               'click-drag': 'Clic y arrastrar para:',
+               'move': 'Mover',
+               'pan': 'Desplazar',
+               'invert': 'Invertir',
+               'sensitivity': 'Sensibilidad',
+               'middle-click-drag': 'Clic medio y arrastrar para:',
+               'scroll-to': 'Desplazar para:',
+               'zoom': 'Zoom',
+               'one-finger-drag': 'Arrastrar con un dedo para:',
+               'two-finger-drag': 'Arrastrar con dos dedos para:',
+               'move-with': 'Mover con:',
+               'relative-movement': 'Hacer movimiento hacia adelante relativo a la dirección de mirada',
+               'not-working': 'Estas funciones aún no están disponibles:',
+               'wasd': 'Teclas WASD',
+               'arrow-keys': 'Flechas direccionales',
+               'pinch': 'Gesto de pellizcar para hacer zoom'
+            },
+            'ru': {
+               'title': 'Просмотрщик Litematic',
+               'select-files': 'Выбрать файл(ы)',
+               'paste-link': 'или вставьте ссылку на .litematic:',
+               'submit': 'Отправить',
+               'powered-by': 'Работает на DeepSlate',
+               'known-issues': 'Известные проблемы: Невозможно отобразить флаги, кровати, сундуки, украшенные горшки, таблички, шалкер-боксы',
+               'complain': 'Сообщить о проблеме здесь',
+               'contribute': 'Помочь проекту здесь',
+               'unload': 'Выгрузить схему',
+               'controls': 'Управление',
+               'reset': 'Сбросить настройки',
+               'click-drag': 'Клик и перетаскивание для:',
+               'move': 'Движение',
+               'pan': 'Панорамирование',
+               'invert': 'Инвертировать',
+               'sensitivity': 'Чувствительность',
+               'middle-click-drag': 'Средняя кнопка мыши и перетаскивание для:',
+               'scroll-to': 'Прокрутка для:',
+               'zoom': 'Увеличение',
+               'one-finger-drag': 'Перетаскивание одним пальцем для:',
+               'two-finger-drag': 'Перетаскивание двумя пальцами для:',
+               'move-with': 'Двигаться с помощью:',
+               'relative-movement': 'Сделать движение вперёд относительным направлению взгляда',
+               'not-working': 'Следующие функции пока не работают:',
+               'wasd': 'Клавиши WASD',
+               'arrow-keys': 'Стрелки',
+               'pinch': 'Жест сжатия для увеличения'
+            },
+            'ja': {
+               'title': 'Litematic ビューア',
+               'select-files': 'ファイルを選択',
+               'paste-link': 'または .litematic リンクを貼り付け:',
+               'submit': '送信',
+               'powered-by': 'DeepSlate によって提供',
+               'known-issues': '既知の問題: バナー、ベッド、チェスト、装飾された壺、看板、シュルカーボックスは表示できません',
+               'complain': 'ここで問題を報告',
+               'contribute': 'ここでプロジェクトに貢献',
+               'unload': 'スキーマをアンロード',
+               'controls': '操作方法',
+               'reset': '設定をリセット',
+               'click-drag': 'クリック＆ドラッグで：',
+               'move': '移動',
+               'pan': 'パン',
+               'invert': '反転',
+               'sensitivity': '感度',
+               'middle-click-drag': '中クリック＆ドラッグで：',
+               'scroll-to': 'スクロールで：',
+               'zoom': 'ズーム',
+               'one-finger-drag': '指一本でドラッグ：',
+               'two-finger-drag': '指二本でドラッグ：',
+               'move-with': '移動方法：',
+               'relative-movement': '前進移動を視線方向に合わせる',
+               'not-working': '以下の機能はまだ動作しません：',
+               'wasd': 'WASD キー',
+               'arrow-keys': '矢印キー',
+               'pinch': 'ピンチ操作'
+            }
+         };
+
+         // 切换语言函数
+         function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.title = translations[lang]['title'];
+            
+            // 更新所有带data-i18n属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+               const key = element.getAttribute('data-i18n');
+               if(translations[lang][key]) {
+                  element.innerHTML = translations[lang][key];
+               }
+            });
+            
+            // 保存语言选择
+            localStorage.setItem('preferred-language', lang);
+         }
+
+         // 初始化语言
+         document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-language') || 'zh';
+            switchLanguage(savedLang);
+         });
+
+         // Add listener to load resrouces from atlas
+         // TODO - move to index as an onload?
+         document.addEventListener("DOMContentLoaded", function(event) {
+
+           console.log("Adding loader")
+
+           const image = document.getElementById('atlas');
+           if (image.complete) {
+             console.log("Adding loader")
+             loadDeepslateResources(image);
+           } else {
+              console.log("Setting up load listener");
+              image.addEventListener('load', () => {
+                  console.log("Image load event triggered");
+                  loadDeepslateResources(image);
+              });
+           }
+
+           image.addEventListener('error', (error) => {
+             console.error("Error loading image:", error);
+           });
+
+         });
+
+         document.addEventListener("DOMContentLoaded", function(event) { 
+            const urlParams = new URLSearchParams(window.location.search);
+            const remoteUrl = urlParams.get('remote-url');
+
+            if (remoteUrl) {
+               console.log("Loading file from", remoteUrl);
+               readFileURL(remoteUrl);
+            }
+         });
+
+         function readFileInput(input) {
+            for (let i = 0; i < input.files.length; i++) {
+               let file = input.files[i];
+               loadAndProcessFile(file);
+            }
+         }
+
+         function readFileURL(url, useProxy=true) {
+            // TODO: This URL probably shouldn't be hardcoded
+            var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+            var request = new XMLHttpRequest();
+            request.responseType = 'blob';
+            request.onreadystatechange = function () {
+               if (request.readyState == XMLHttpRequest.DONE) {
+                  if (request.status === 200) {
+                     console.log("Loaded file from remote url");
+                     console.log(request.response);
+                     loadAndProcessFile(request.response);
+                  }
+                  else {
+                     console.log("Error loading litematic");
+                     console.log(request);
+                  }
+               }
+            };
+            request.open('GET', url, true);
+            request.send();
+         }
+
+         function dragOverHandler(ev) {
+           // Prevent default behavior (Prevent file from being opened)
+           ev.preventDefault();
+         }
+
+         function dropHandler(ev) {
+           console.log('File(s) dropped');
+
+           // Prevent default behavior (Prevent file from being opened)
+           ev.preventDefault();
+
+           if (ev.dataTransfer.items) {
+             // Use DataTransferItemList interface to access the file(s)
+             for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+               // If dropped items aren't files, reject them
+               if (ev.dataTransfer.items[i].kind === 'file') {
+                 const file = ev.dataTransfer.items[i].getAsFile();
+                 console.log('... file[' + i + '].name = ' + file.name);
+                 loadAndProcessFile(file);
+               }
+             }
+           } else {
+             // Use DataTransfer interface to access the file(s)
+             console.log('DataTransfer interface not implemented!')
+             for (let i = 0; i < ev.dataTransfer.files.length; i++) {
+               console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+             }
+
+           }
+         }
+
+      </script>
+
+   </head>
+
+   <body>
+
+      <!-- 语言切换按钮 -->
+      <div id="language-switch">
+         <button class="btn" onclick="switchLanguage('zh')">简体中文</button>
+         <button class="btn" onclick="switchLanguage('zh-TW')">繁體中文</button>
+         <button class="btn" onclick="switchLanguage('en')">English</button>
+         <button class="btn" onclick="switchLanguage('es')">Español</button>
+         <button class="btn" onclick="switchLanguage('ru')">Русский</button>
+         <button class="btn" onclick="switchLanguage('ja')">日本語</button>
+      </div>
+ 
+
+      <div id="viewer" width="100%"></div>
+
+      <div id="sliders" hidden></div>
+      <button id="materialListButton" hidden><span class="material-icons">list</span></button>
+      <div id="materialList" hidden></div>
+
+      <div id="main-content">
+
+         <div class="section no-pad-bot">
+            <div class="container">
+               <h3 class="header center" data-i18n="title">Litematic Viewer</h3>
+            </div>
+         </div>
+
+         <div class="container">
+            <div class="row">
+               <div class="col s12" id="file-loader-panel">
+                  <input id="file-upload" type="file" onchange="readFileInput(this)" hidden multiple />
+               
+                  <label for="file-upload" id="drop-zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" width="100%">
+                     <div class="card-panel center gray lighten-1">
+                        <h3 data-i18n="select-files">Select file(s)</h3>
+                        
+                        <span id="file-upload-btn" class="btn btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></span>
+
+                     </div>
+                  </label>
+
+                  <h3 data-i18n="paste-link">or paste a .litematic link:</h3>
+                  <form>
+                     <div class="input-field">
+                        <input id="remote-url" type="text" name="remote-url" class="validate">
+                        <label for="remote-url">URL</label>
+                        <button class="btn waves-effect waves-light" type="submit">
+                           <span data-i18n="submit">Submit</span>
+                           <i class="material-icons right">send</i>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col s12">
+               <h5 class="header light">
+                  <span data-i18n="powered-by">Powered by</span> 
+                  <a href="https://github.com/misode/deepslate">DeepSlate <i class="fa fa-github fa-1x"></i></a>
+               </h5>
+               <p data-i18n="known-issues">Known issues: Cannot render Banner, Bed, Chest, Decorated Pot, Sign, Shulker box</p>
+               <p><span data-i18n="complain">Complain about this app</span> <a href="https://discord.gg/GJckUsHsVB">here <i class="fab fa-discord"></i></a></p>
+               <p><span data-i18n="contribute">Contribute to the project</span> <a href="https://github.com/endingcredits/litematic-viewer/">here <i class="fa fa-github"></i></a></p>
+            </div>
+         </div>
+
+         <!-- Texture atlas -->
+         <img id="atlas" src="resource/atlas.png" alt="Texture atlas" crossorigin="anonymous" hidden>
+
+         <script>
+
+            // Add listener to load resrouces from atlas
+            // TODO - move to index as an onload?
+            document.addEventListener("DOMContentLoaded", function(event) {
+
+              console.log("Adding loader")
+
+              const image = document.getElementById('atlas');
+              if (image.complete) {
+                console.log("Adding loader")
+                loadDeepslateResources(image);
+              } else {
+                 console.log("Setting up load listener");
+                 image.addEventListener('load', () => {
+                     console.log("Image load event triggered");
+                     loadDeepslateResources(image);
+                 });
+              }
+
+              image.addEventListener('error', (error) => {
+                console.error("Error loading image:", error);
+              });
+
+            });
+
+            document.addEventListener("DOMContentLoaded", function(event) { 
+               const urlParams = new URLSearchParams(window.location.search);
+               const remoteUrl = urlParams.get('remote-url');
+
+               if (remoteUrl) {
+                  console.log("Loading file from", remoteUrl);
+                  readFileURL(remoteUrl);
+               }
+            });
+
+            function readFileInput(input) {
+               for (let i = 0; i < input.files.length; i++) {
+                  let file = input.files[i];
+                  loadAndProcessFile(file);
+               }
+            }
+
+            function readFileURL(url, useProxy=true) {
+               // TODO: This URL probably shouldn't be hardcoded
+               var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+               var request = new XMLHttpRequest();
+               request.responseType = 'blob';
+               request.onreadystatechange = function () {
+                  if (request.readyState == XMLHttpRequest.DONE) {
+                     if (request.status === 200) {
+                        console.log("Loaded file from remote url");
+                        console.log(request.response);
+                        loadAndProcessFile(request.response);
+                     }
+                     else {
+                        console.log("Error loading litematic");
+                        console.log(request);
+                     }
+                  }
+               };
+               request.open('GET', url, true);
+               request.send();
+            }
+
+            function dragOverHandler(ev) {
+              // Prevent default behavior (Prevent file from being opened)
+              ev.preventDefault();
+            }
+
+            function dropHandler(ev) {
+              console.log('File(s) dropped');
+
+              // Prevent default behavior (Prevent file from being opened)
+              ev.preventDefault();
+
+              if (ev.dataTransfer.items) {
+                // Use DataTransferItemList interface to access the file(s)
+                for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+                  // If dropped items aren't files, reject them
+                  if (ev.dataTransfer.items[i].kind === 'file') {
+                    const file = ev.dataTransfer.items[i].getAsFile();
+                    console.log('... file[' + i + '].name = ' + file.name);
+                    loadAndProcessFile(file);
+                  }
+                }
+              } else {
+                // Use DataTransfer interface to access the file(s)
+                console.log('DataTransfer interface not implemented!')
+                for (let i = 0; i < ev.dataTransfer.files.length; i++) {
+                  console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+                }
+
+              }
+            }
+
+         </script>
+
+      </div>
+
+      <!-- open settings panel button -->
+      <a href="javascript:void(0)" id="settings-button" class="openbtn" onclick="openSettings()"><i class="fa fa-cog"></i></a>
+
+      <div id="settings-panel" class="side-nav">
+         <!-- close button -->
+         <a href="javascript:void(0)" class="closebtn" onclick="closeSettings()">&times;</a>
+
+         <!-- add a button to remove the url query params -->
+         <button class="btn waves-effect waves-light red" type="submit" onclick="window.location.href = window.location.href.split('?')[0]">
+            <span data-i18n="unload">Unload Schematic</span>
+         </button>
+
+         <!-- TODO: Add a way to generate all this automagically -->
+         <p data-i18n="controls">Controls</p>
+         <div class="settings-section">
+            <div class="col settings-label">
+               <span data-i18n="click-drag">Click-drag to:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="click-drag" type="radio" class="with-gap setting" data-setting="click-drag" value="move" checked />
+                     <span class="reduced-padding" data-i18n="move">Move</span>
+                  </label>
+                  <label>
+                     <input name="click-drag" type="radio" class="with-gap setting" data-setting="click-drag" value="pan" />
+                     <span class="reduced-padding" data-i18n="pan">Pan</span>
+                  </label>
+               </div>
+            </div>
+            <div class="col">
+               <div>
+
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" class="setting" data-setting="click-drag-invert" />
+                        <span class="lever"></span>
+                        <span data-i18n="invert">Invert</span>
+                     </label>
+                  </span>
+               </div>
+            </div>
+
+            <div class="col">
+               <span class="slider">
+                  <label class="setting-label">
+                     <span data-i18n="sensitivity">Sensitivity</span>
+                     <p class="range-field">
+                        <input type="range" min="0" max="5" step="0.1" value="1" class="setting" data-setting="click-drag-sensitivity" />
+                     </p>
+                  </label>
+               </span>
+            </div>
+         
+
+            <div class="col settings-label">
+               <span data-i18n="middle-click-drag">Middle-click-drag to:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="middle-click-drag" type="radio" class="with-gap setting" data-setting="middle-click-drag" value="move"/>
+                     <span class="reduced-padding" data-i18n="move">Move</span>
+                  </label>
+                  <label>
+                     <input name="middle-click-drag" type="radio" class="with-gap setting" data-setting="middle-click-drag" value="pan" checked/>
+                     <span class="reduced-padding" data-i18n="pan">Pan</span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="col">
+               <div>
+
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" class="setting" data-setting="middle-click-drag-invert" />
+                        <span class="lever"></span>
+                        <span data-i18n="invert">Invert</span>
+                     </label>
+                  </span>
+               </div>
+
+            </div>
+            
+            <div class="col">
+               <span class="slider">
+                  <label class="setting-label">
+                     <span data-i18n="sensitivity">Sensitivity</span>
+                     <p class="range-field">
+                        <input type="range" min="0" max="5" step="0.1" value="1" class="setting" data-setting="middle-click-drag-sensitivity" />
+                     </p>
+                  </label>
+               </span>
+            </div>
+            
+            <div class="col" style="grid-column: span 4; text-align: center;">
+               <span data-i18n="not-working">These do not work yet:</span>
+            </div>
+
+            <div class="col settings-label">
+               <span data-i18n="scroll-to">Scroll to:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="scroll" type="radio" class="with-gap setting" data-setting="scroll" value="move" checked />
+                     <span class="reduced-padding" data-i18n="move">Move</span>
+                  </label>
+                  <label>
+                     <input name="scroll" type="radio" class="with-gap setting" data-setting="scroll" value="zoom" />
+                     <span class="reduced-padding" data-i18n="zoom">Zoom</span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="col">
+               <div>
+
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" id="invert-move" class="setting" data-setting="scroll-invert-move" />
+                        <span class="lever"></span>
+                        <span data-i18n="invert">Invert</span>
+                     </label>
+                  </span>
+               
+               </div>
+            </div>
+            
+            <div class="col">
+               <span class="slider">
+                  <label class="setting-label">
+                     <span data-i18n="sensitivity">Sensitivity</span>
+                     <p class="range-field">
+                        <input type="range" min="0" max="5" step="0.1" value="1" class="setting" data-setting="scroll-sensitivity" />
+                     </p>
+                  </label>
+               </span>
+            </div>
+
+            <div class="col settings-label">
+               <span data-i18n="one-finger-drag">One finger touch drag to:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="touch-drag" type="radio" class="with-gap setting" data-setting="touch-drag" value="move"/>
+                     <span class="reduced-padding" data-i18n="move">Move</span>
+                  </label>
+                  <label>
+                     <input name="touch-drag" type="radio" class="with-gap setting" data-setting="touch-drag" value="pan" checked/>
+                     <span class="reduced-padding" data-i18n="pan">Pan</span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="col">
+               
+               <div>
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" class="setting" data-setting="touch-drag-move-invert" />
+                        <span class="lever"></span>
+                        <span data-i18n="invert">Invert</span>
+                     </label>
+                  </span>
+               </div>
+
+            </div>
+            
+            <div class="col">
+               <span class="slider">
+                  <label class="setting-label">
+                     <span data-i18n="sensitivity">Sensitivity</span>
+                     <p class="range-field">
+                        <input type="range" min="0" max="5" step="0.1" value="1" class="setting" data-setting="touch-drag-sensitivity" />
+                     </p>
+                  </label>
+               </span>
+            </div>
+            
+            <div class="col settings-label">
+               <span data-i18n="two-finger-drag">Two finger touch drag to:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="two-finger-drag" type="radio" class="with-gap setting" data-setting="two-finger-drag" value="move" checked/>
+                     <span class="reduced-padding" data-i18n="move">Move</span>
+                  </label>
+                  <label>
+                     <input name="two-finger-drag" type="radio" class="with-gap setting" data-setting="two-finger-drag" value="pan"/>
+                     <span class="reduced-padding" data-i18n="pan">Pan</span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="col">
+               
+               <div>
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" class="setting" data-setting="gesture-move-invert" />
+                        <span class="lever"></span>
+                        <span data-i18n="invert">Invert</span>
+                     </label>
+                  </span>
+               </div>
+               
+            </div>
+            
+            <div class="col">
+               <span class="slider">
+                  <label class="setting-label">
+                     <span data-i18n="sensitivity">Sensitivity</span>
+                     <p class="range-field">
+                        <input type="range" min="0" max="5" step="0.1" value="1" class="setting" data-setting="gesture-sensitivity" />
+                     </p>
+                  </label>
+               </span>
+            </div>
+
+            <div class="col settings-label">
+               <span data-i18n="move-with">Move with:</span>
+            </div>
+            <div class="col">
+               <div>
+                  <label>
+                     <input name="wasd-move" type="checkbox" class="filled-in setting" data-setting="wasd-move" value="checked" checked/>
+                     <span class="reduced-padding" data-i18n="wasd">WASD</span>
+                  </label>
+               </div>
+               <div>
+                  <label>
+                     <input name="arrow-move" type="checkbox" class="filled-in setting" data-setting="arrow-move"/>
+                     <span class="reduced-padding" data-i18n="arrow-keys">Arrow Keys</span>
+                  </label>
+               </div>
+               <div>
+                  <label>
+                     <input name="pinch-move" type="checkbox" class="filled-in setting" data-setting="pinch-move" checked/>
+                     <span class="reduced-padding" data-i18n="pinch">Pinch</span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="col" style="grid-column: span 2;">
+               <div>
+
+                  <span class="switch">
+                     <label>
+                        <input type="checkbox" class="setting" data-setting="relative-forwards-movement"/>
+                        <span class="lever"></span>
+                        <span data-i18n="relative-movement">Make forwards movement relative to facing direciton</span>
+                     </label>
+                  </span>
+               
+               </div>
+
+            </div>
+         </div>
+
+         <button class="btn waves-effect waves-light" onclick="resetSettings()">
+            <span data-i18n="reset">Reset Settings</span>
+         </button>
+      </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.webstatic.cn/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   </body>
+</html>
