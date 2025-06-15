@@ -10,7 +10,27 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12.280</h1>
+<h1 id="nowchange">HMCL 3.6.12.281</h1>
+
+详细版本介绍：[cv42015225](https://www.bilibili.com/opus/1078682397931732992)
+
+- GP-3992: 更新 HMCLauncher for Windows 至 3.6.0.4 (by Glavo)
+- GP-2794: 支持下载光影 (by Burning_TNT)
+- GP-3836: 自动安装页面隐藏 mcbbs 项 (by 辞庐)
+- GP-3974: 更新日志中仅显示本次更新内容 (by Wulian233)
+- GP-3991: 创建世界管理页面 (by Glavo) ([BV1LrMCzXERZ](https://www.bilibili.com/video/BV1LrMCzXERZ))
+- GP-4003: 解析 MultiMC 整合包中未声明但在依赖链上的组件 (by Burning_TNT)
+- GP-4004: 更新加入群组链接至 B 站专栏 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复：
+
+- GP-3995: 修复 Controller 未能读取 JAVA_VERSION_TIP 的问题 (by Burning_TNT)
+- GP-3996: 修复在 schematics 文件夹不存在的情况下，打开投影管理页面会抛出异常的问题 (by Glavo)
+- GP-3998: 修复模组搜索返回结果为空时下载界面异常的问题 (by Burning_TNT)
+- GP-4001: 修复自动安装界面中更改 MC 版本后无法点击安装键的问题 (by Burning_TNT)
+
+# HMCL 3.6.12.280
 
 详细版本介绍：[cv41943291](https://www.bilibili.com/opus/1076123117136379910)
 
