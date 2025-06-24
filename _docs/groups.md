@@ -22,7 +22,7 @@ toc: true
 
 ## 用户群
 
-![](/assets/img/docs/groups/group-10.png)
+![](/assets/img/docs/groups/group-3.png)
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
@@ -34,8 +34,8 @@ toc: true
 - [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)
 - [HMCL 用户群 ⑦ (482624681)](https://qm.qq.com/q/WFsZ65F6MY)
 - [HMCL 用户群 ⑧ (991620626)](https://qm.qq.com/q/ECVKkslPqi)
-- [HMCL 用户群 ⑨ (657677715)](https://qm.qq.com/q/DVj9tTrwze)（已满）
-- [HMCL 用户群 ⑩ (775084843)](https://qm.qq.com/q/V5F9DswQEu)
+- [HMCL 用户群 ⑨ (657677715)](https://qm.qq.com/q/DVj9tTrwze)
+- [HMCL 用户群 ⑩ (775084843)](https://qm.qq.com/q/V5F9DswQEu)（已满）
 
 我们会不定期清理用户群中超过三个月没有发言的非活跃成员，每次清理前我们会提前一周在群内发布公告。
 
