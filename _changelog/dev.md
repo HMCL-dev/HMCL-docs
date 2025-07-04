@@ -10,7 +10,20 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12.282</h1>
+<h1 id="nowchange">HMCL 3.6.12.283</h1>
+
+详细版本介绍：
+
+- GP-4011: 更新模组下载页游戏版本列表至 1.21.6 (by 3gf8jv4dv)
+- GP-4032: 使用 Java 8 运行时禁止更新 (by Glavo)
+- GP-4040: 更新模组数据 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复：
+
+- 修复部分 Linux 环境中未正确选择默认字体的问题 (by Glavo)
+
+# HMCL 3.6.12.282
 
 详细版本介绍：[cv42087635](https://www.bilibili.com/opus/1081247270761922583)
 
