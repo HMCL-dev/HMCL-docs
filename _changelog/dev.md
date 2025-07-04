@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.12.283</h1>
 
-详细版本介绍：
+详细版本介绍：[cv42221199](https://www.bilibili.com/opus/1085763106775236609)
 
 - GP-4035: 更新模组下载页游戏版本列表至 1.21.7 (by Glavo)
 - GP-4032: 使用 Java 8 运行时禁止更新 (by Glavo)
