@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.14</h1>
 
-版本介绍: [TODO]()
+版本介绍: [cv42290390](https://www.bilibili.com/opus/1088221679199453185)
 
 - 启动器
   - GP-3938: 使用 Java 8 打开启动器时弹出弃用警告 (by Glavo)
