@@ -10,7 +10,80 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12</h1>
+<h1 id="nowchange">HMCL 3.6.14</h1>
+
+版本介绍: [cv42290390](https://www.bilibili.com/opus/1088221679199453185)
+
+- 启动器
+  - GP-3938: 使用 Java 8 打开启动器时弹出弃用警告 (by Glavo)
+  - GP-4032: 使用 Java 8 运行时禁止更新 (by Glavo)
+  - GP-3854: 右键主页“启动游戏”按钮时展开版本列表菜单 (by Glavo)
+  - GP-3875: 使用工作路径下的 .hmcl 文件夹存放所有配置文件 (by Glavo)
+  - GP-3914: 启动时在日志中记录用户设备的 CPU 信息 (by Glavo)
+  - GP-3893: 启动时在日志中记录用户设备的 GPU 信息 (by Glavo)
+  - GP-3974: 更新日志中仅显示本次更新内容 (by Wulian233)
+  - GP-4040: 更新模组数据 (by Glavo)
+- 游戏管理
+  - GP-3734: 折叠高级设置中不适用于当前系统的选项 (by Wulian233)
+  - GP-3951: 新增原理图管理界面 (by Glavo)
+  - GP-3991: 新增世界管理页面 (by Glavo)
+- 整合包
+  - GP-3547: 重构 MultiMC 整合包兼容功能 (by Burning_TNT)
+  - GP-3836: 自动安装页面隐藏 mcbbs 项 (by 辞庐)
+  - GP-3981: 忽略与版本 JSON 指定的 Java 相冲突的 Java 检测规则 (by Glavo)
+- 账户
+  - GP-3823: 默认限制境外地区使用离线账户功能 (by Glavo)
+  - GP-3853: 优化离线账户名称中包含非 ASCII 字符时的提示 (by Glavo)
+  - GP-3860: 添加 XBox 封禁相关提示 (by 辞庐)
+- 下载
+  - GP-2794: 支持下载光影 (by Burning_TNT)
+  - GP-3247, GP-3799: 支持下载部分特殊版本 (by zkitefly)
+  - GP-3830: 将模组/整合包/资源包的默认下载源调整为 Modrinth (by Burning_TNT)
+  - GP-3876: 优化代理设置功能 (by Glavo)
+  - GP-4011: 更新模组下载页游戏版本列表至 1.21.7 (by Glavo)
+- 外观
+  - GP-3800: 优化整合包导出类型选择界面 (by Wulian233)
+  - GP-3822: 统一导出和导入整合包页面样式 (by 辞庐)
+  - GP-3944、GP-3949: 优化版本列表为空时，主页切换版本菜单的显示效果 (by GeneralK1ng)
+- 本地化
+  - 优化软件文案，完善英语、西班牙语、俄语翻译
+- 错误修复
+  - GP-3768: 修复模组下载界面无法正常翻页，以及类别会在切换下载源时出错的问题 (by Burning_TNT)
+  - GP-3769: 修复离线账户切换模型时左侧 3D 预览不会即时更新的问题 (by Burning_TNT)
+  - GP-3770: 修复 Windows 平台部分语言编码下无法打开 Minecraft 中文 Wiki 的问题 (by Burning_TNT)
+  - GP-3771: 修复资源包和世界下载对话框标题为“模组下载”的问题 (by 辞庐)
+  - GP-3772: 修复模组管理内“安装到当前版本”与“下载到本地文件夹”实际效果相同的问题 (by Burning_TNT)
+  - GP-3776: 修复 LiteLoader 下载相关问题 (by Burning_TNT)
+  - GP-3778: 修复 macOS 平台使用 Rosetta 2 转译运行启动器时无法正确识别系统架构的问题 (by YiZhiMCQiu)
+  - GP-3793: 修复启动器更新下载对话框中有两个相同进度条的问题 (by Burning_TNT)
+  - GP-3797: 修复无法打开游戏购买页面的问题 (by zkitefly)
+  - GP-3806: 修复 RISC-V 平台游戏识别 CPU 名称出错的问题 (by Glavo)
+  - GP-3814: 修复 Fabric Metadata 无效时 FabricInstallTask 抛出 NPE 的问题 (by Glavo)
+  - GP-3817: 修复自定义背景图片路径包含无效字符时启动器崩溃的问题 (by Glavo)
+  - GP-3826: 修复无法正常解析 NeoForge 愚人节版本的问题 (by Burning_TNT)
+  - GP-3856: 修复导出过长日志时可能发生 OutOfMemoryError 的问题 (by Glavo)
+  - GP-3863: 修复游戏崩溃分析窗口乱码的问题 (by Glavo)
+  - GP-3866: 修复下载游戏内容页面搜索新内容时分页按钮未重置的问题 (by Wulian233)
+  - GP-3874: 修复在已安装游戏版本的自动安装界面中游戏版本名称报红的问题 (by e74yp8)
+  - GP-3877: 修复启动器退出时未压缩日志的问题 (by Glavo)
+  - GP-3883: 修复当离线账户用户名中包含中文字符时，无法使用 LittleSkin 皮肤的问题 (by e74yp8)
+  - GP-3888: 修复无法一键更新整合包的问题 (by mzdluo123)
+  - GP-3901: 修复模组/整合包下载界面无法完整显示多行信息的问题 (by e74yp8)
+  - GP-3922、GP-4036: 修复部分 Linux 环境中未正确选择默认字体的问题 (by Glavo)
+  - GP-3942: 修复无法正确处理版本服务器地址设置中的 IPv6 地址的问题 (by Glavo)
+  - GP-3968: 修复 Java 管理页面中无法添加 IKVM 的问题 (by Glavo)
+  - GP-3995: 修复 Controller 未能读取 JAVA_VERSION_TIP 的问题 (by Burning_TNT)
+  - GP-3996: 修复在 schematics 文件夹不存在的情况下，打开投影管理页面会抛出异常的问题 (by Glavo)
+  - GP-3998: 修复模组搜索返回结果为空时下载界面异常的问题 (by Burning_TNT)
+  - GP-4001: 修复自动安装界面中更改 MC 版本后无法点击安装键的问题 (by Burning_TNT)
+  - GP-4007: 修复光影下载页面中标签名称未翻译的问题 (by Glavo)
+  - GP-4009: 修复 macOS 上无法读取 CPU 信息的问题 (by Glavo)
+  - GP-4015: 修复代码中的拼写错误 (by kfatyuip)
+  - GP-4016: 修复 MultiMC 整合包中包含相同标识符的库时无法导入的问题 (by Burning_TNT)
+  - GP-4065: 修复添加游戏文件夹页面缺少灰色背景的问题 (by 辞庐)
+  - GP-4069: 修复使用 JavaFX 25 EA 时下载界面布局错位的问题 (by Glavo)
+
+# HMCL 3.6.12
 
 版本介绍：[cv41174209](https://www.bilibili.com/opus/1050013108961017859)
 
