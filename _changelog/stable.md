@@ -10,25 +10,27 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.13</h1>
+<h1 id="nowchange">HMCL 3.6.14</h1>
 
 版本介绍: [TODO]()
 
 - 启动器
-  - GP-3734: 折叠高级设置中不适用于当前系统的选项 (by Wulian233)
+  - GP-3938: 使用 Java 8 打开启动器时弹出弃用警告 (by Glavo)
+  - GP-4032: 使用 Java 8 运行时禁止更新 (by Glavo)
   - GP-3854: 右键主页“启动游戏”按钮时展开版本列表菜单 (by Glavo)
   - GP-3875: 使用工作路径下的 .hmcl 文件夹存放所有配置文件 (by Glavo)
   - GP-3914: 启动时在日志中记录用户设备的 CPU 信息 (by Glavo)
   - GP-3893: 启动时在日志中记录用户设备的 GPU 信息 (by Glavo)
-  - GP-3938: 使用 Java 8 打开启动器时弹出弃用警告 (by Glavo)
-  - GP-3951: 新增原理图管理界面 (by Glavo)
-  - GP-3547: 重构 MultiMC 整合包兼容功能 (by Burning_TNT)
-  - GP-3981: 忽略与版本 JSON 指定的 Java 相冲突的 Java 检测规则 (by Glavo)
-  - GP-3836: 自动安装页面隐藏 mcbbs 项 (by 辞庐)
   - GP-3974: 更新日志中仅显示本次更新内容 (by Wulian233)
-  - GP-3991: 新增世界管理页面 (by Glavo)
-  - GP-4032: 使用 Java 8 运行时禁止更新 (by Glavo)
   - GP-4040: 更新模组数据 (by Glavo)
+- 游戏管理
+  - GP-3734: 折叠高级设置中不适用于当前系统的选项 (by Wulian233)
+  - GP-3951: 新增原理图管理界面 (by Glavo)
+  - GP-3991: 新增世界管理页面 (by Glavo)
+- 整合包
+  - GP-3547: 重构 MultiMC 整合包兼容功能 (by Burning_TNT)
+  - GP-3836: 自动安装页面隐藏 mcbbs 项 (by 辞庐)
+  - GP-3981: 忽略与版本 JSON 指定的 Java 相冲突的 Java 检测规则 (by Glavo)
 - 账户
   - GP-3823: 默认限制境外地区使用离线账户功能 (by Glavo)
   - GP-3853: 优化离线账户名称中包含非 ASCII 字符时的提示 (by Glavo)
