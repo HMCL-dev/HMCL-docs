@@ -10,7 +10,19 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.12.283</h1>
+<h1 id="nowchange">HMCL 3.6.14.286</h1>
+
+详细版本介绍：[cv42361009](https://www.bilibili.com/opus/1090573792301809672)
+
+- GP-4086: 更新 HMCLauncher for Windows 至 3.6.0.6 (by Glavo)
+
+错误修复：
+
+- GP-4065: 修复添加游戏文件夹页面缺少灰色背景的问题 (by 辞庐)
+- GP-4069: 修复使用 JavaFX 25 EA 启动时下载界面布局错位的问题 (by Glavo)
+- GP-4074: 修复 Windows 平台无法使用部分中文字体的问题 (by Glavo)
+
+# HMCL 3.6.12.283
 
 详细版本介绍：[cv42221199](https://www.bilibili.com/opus/1085763106775236609)
 
