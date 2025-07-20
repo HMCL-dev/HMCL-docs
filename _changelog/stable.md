@@ -10,7 +10,16 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.14</h1>
+<h1 id="nowchange">HMCL 3.6.15</h1>
+
+- 下载
+  - GP-4085: 更新模组下载页游戏版本列表至 1.21.8 (by Glavo)
+- 错误修复
+  - GP-4086: 修复安装 Oracle JDK 后可能无法使用启动器的问题 (by Glavo)
+  - GP-4096: 修复无法使用部分日志字体的问题 (by Glavo)
+  - GP-4097: 修复 InstallersPage 可能意外地显示滚动条的问题 (by Glavo)
+
+# HMCL 3.6.14
 
 版本介绍: [cv42290390](https://www.bilibili.com/opus/1088221679199453185)
 
