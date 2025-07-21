@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         position: relative;
     `;
 
-    let timeLeft = 30 ; // 倒计时秒数
+    let timeLeft = 10 ; // 倒计时秒数
     const closeButton = document.createElement('button');
     closeButton.textContent = '我已了解';
     closeButton.style.cssText = `
