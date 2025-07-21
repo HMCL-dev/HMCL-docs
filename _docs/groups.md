@@ -41,9 +41,7 @@ toc: true
 
 ## 报错崩溃交流群
 
-![](/assets/img/docs/groups/crash.png)
-
-如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群](/crash-support-group.html)
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
