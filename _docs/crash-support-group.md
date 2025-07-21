@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         border-radius: 8px;
         max-width: 500px;
         width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
     `;
 
     let timeLeft = 30 ; // 倒计时秒数
