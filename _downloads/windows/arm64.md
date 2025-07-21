@@ -33,7 +33,7 @@ Can't download? [Click here to download (alternative)](https://alist.8mi.tech/d/
         const url = isZhCN 
             ? "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi" 
             : "https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi";
-        location.href = url;
+        window.location.href = url;
     }, 5000); // Wait 5 seconds
 </script>
 
