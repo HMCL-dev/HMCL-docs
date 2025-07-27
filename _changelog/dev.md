@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">3.6.15.287</h1>
 
-详细版本介绍：[TODO]()
+详细版本介绍：[cv42465621](https://www.bilibili.com/opus/1094172815950610439)
 
 - GP-4078: 使用 Java 11 构建 HMCL (by Glavo)
 - GP-4113: 更新 HMCLauncher for Windows 至 3.7.0.0 (by Glavo)
