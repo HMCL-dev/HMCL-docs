@@ -28,34 +28,12 @@ Can't download? [Click here to download (alternative)](https://alist.8mi.tech/d/
 
 
 <script>
-    async function checkUrl(url) {
-        try {
-            const response = await fetch(url, { method: 'HEAD' });
-            return response.ok;
-        } catch {
-            return false;
-        }
-    }
-
-    async function redirect() {
+    setTimeout(function() {
         const isZhCN = /^zh-CN/i.test(navigator.language);
-        const url1 = "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi";
-        const url2 = "https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi";
-
-        const [url1Available, url2Available] = await Promise.all([
-            checkUrl(url1),
-            checkUrl(url2)
-        ]);
-
-        if (url1Available && !url2Available) {
-            window.location.href = url1;
-        } else if (!url1Available && url2Available) {
-            window.location.href = url2;
-        } else {
-            window.location.href = isZhCN ? url1 : url2;
-        }
-    }
-
-    setTimeout(redirect, 5000); // Wait 5 seconds
+        const url = isZhCN 
+            ? "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi" 
+            : "https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi";
+        location.href = url;
+    }, 5000); // Wait 5 seconds
 </script>
 
