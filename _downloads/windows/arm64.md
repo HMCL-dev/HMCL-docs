@@ -37,3 +37,4 @@ Can't download? [Click here to download (alternative)](https://alist.8mi.tech/d/
     }, 5000); // Wait 5 seconds
 </script>
 
+
