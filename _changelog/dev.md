@@ -19,7 +19,7 @@ toc: true
 - GP-4088: 当离线账户名称超过 16 字符时弹出警告 (by ShulkerSakura)
 - GP-4142: 扫描 Java 时忽略 `%ProgramFiles%\Common Files\Oracle\Java` 中的 Java (by Glavo)
 - GP-4145: 在 Windows 平台优先使用注册表检测 GPU (by Glavo)
-- GP-4148: 当系统设置中禁用动画效果时关闭动画 (需要  22+) (by Glavo)
+- GP-4148: 当系统设置中禁用动画效果时关闭动画 (需要 JavaFX 22+) (by Glavo)
 - GP-4160: 缺少 Microsoft OAuth App ID 时禁用微软账户的刷新选项 (by 辞庐)
 - GP-4163: 通过主页右下角弹出菜单切换版本后隐藏菜单 (by Glavo)
 - GP-4169: 支持缓存更多来自 BMCLAPI 的资源 (by Glavo)
