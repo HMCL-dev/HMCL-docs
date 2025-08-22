@@ -10,7 +10,15 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.15</h1>
+<h1 id="nowchange">HMCL 3.6.16</h1>
+
+- 启动器
+    - GP-4262: 更新 AMD 显卡信息 (by Glavo)
+    - GP-4274: 更新 chunkbase 种子地图链接 (by Wulian233)
+- 错误修复：
+    - GP-4174: 修复无法从 BMCLAPI 下载部分 NeoForge 所需文件的问题 (by 辞庐)
+
+# HMCL 3.6.15
 
 - 下载
   - GP-4085: 更新模组下载页游戏版本列表至 1.21.8 (by Glavo)
