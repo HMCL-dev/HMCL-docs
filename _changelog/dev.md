@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.16.292</h1>
 
-详细版本介绍：[]()
+详细版本介绍：[cv42887511](https://www.bilibili.com/opus/1107280399014297618)
 
 - 添加文言文翻译 (by Glavo, Andypsl8, Wulian233) ([BV1vNh9zqEEP](https://www.bilibili.com/video/BV1vNh9zqEEP))
 - GP-4346: 添加乌克兰语翻译 (by BANSAFAn)
