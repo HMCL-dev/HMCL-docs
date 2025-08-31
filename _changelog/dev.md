@@ -10,7 +10,30 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.16.291</h1>
+<h1 id="nowchange">HMCL 3.6.16.2912</h1>
+
+详细版本介绍：[]()
+
+- 添加文言文翻译 (by Glavo, Andypsl8, Wulian233) ([BV1vNh9zqEEP](https://www.bilibili.com/video/BV1vNh9zqEEP))
+- GP-4346: 添加乌克兰语翻译 (by BANSAFAn)
+- GP-4294: 游戏崩溃窗口中增加对拍照的提醒 (by YuChuXi)
+- GP-4311: 使用 Java 11 打开启动器时显示弃用警告 (by Glavo)
+- GP-4338: 不对回环地址应用代理 (by Glavo)
+- GP-4340: 增加 TaskListPane 中任务条目之间的间距 (by Glavo)
+- GP-4341: 更严格地检测文件名合法性 (by Glavo)
+- GP-4342: 导出启动器日志时解压旧日志 (by Burning_TNT)
+- GP-4349: 启动游戏时隐藏 `GameAssetDownloadTask` (by Glavo)
+- GP-4353: 优化自动切换游戏语言功能 (by Glavo)
+
+错误修复：
+
+- GP-4321: 修复世界管理页面不支持显示极限模式的问题 (by Wulian233)
+- GP-4347: 修复 `TaskListPane.StatusChangeListener` 持有 `ListCell` 的强引用的问题 (by Glavo)
+- GP-4350: 修复无法识别部分简体中文环境的问题 (by Glavo)
+- GP-4365: 修复首次打开子页面时切换动画丢失的问题 (by Glavo)
+
+
+# HMCL 3.6.16.291
 
 详细版本介绍：[cv42815084](https://www.bilibili.com/opus/1105037713092902914)
 
