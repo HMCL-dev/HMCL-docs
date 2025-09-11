@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.17</h1>
 
-版本介绍: []()
+版本介绍: [cv43005407](https://www.bilibili.com/opus/1111270122956259346)
 
 - 启动器
     - GP-4422: 弃用 Java 11 支持 (by Glavo)
