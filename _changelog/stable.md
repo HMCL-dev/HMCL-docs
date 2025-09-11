@@ -10,7 +10,40 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.16</h1>
+<h1 id="nowchange">HMCL 3.6.17</h1>
+
+版本介绍: [cv43005407](https://www.bilibili.com/opus/1111270122956259346)
+
+- 启动器
+    - GP-4422: 弃用 Java 11 支持 (by Glavo)
+    - GP-4164: 支持通过环境变量强制使用 GPU 渲染和控制动画帧率 (by Glavo)
+    - GP-4179: 在 `./.hmcl/java` 中搜索 Java (by Glavo)
+    - GP-4365: 修复首次打开子页面时切换动画丢失的问题 (by Glavo)
+    - GP-4439: 更新模组和整合包数据 (by Glavo)
+    - GP-4414: 检测到配置文件由高版本启动器创建时禁止保存配置文件 (by Glavo)
+- 游戏管理
+    - GP-4224: 支持在 Windows 7/8/8.1 上使用软渲染器 (by Glavo)
+- 下载
+    - GP-4170: 模组下载列表翻页后自动回到顶部 (by 辞庐)
+    - GP-4171: 支持加载 WebP 图标，解决部分模组/整合包图标无法加载的问题 (by Glavo)
+- 外观
+    - GP-4185: 新增内存显示条禁用样式 (by OrzMiku)
+- 本地化
+    - GP-4376: 将“版本”重命名为“实例” (by 3gf8jv4dv)
+    - 优化软件文案，完善英语、西班牙语、俄语翻译
+- 错误修复
+    - GP-4121: 修复多次启动游戏时内存泄露的问题 (by roj234)
+    - GP-4066: 修复游戏版本列表错误地过滤掉部分版本的问题 (by Wulian233)
+    - GP-4152: 修复导入异常格式的数据包时启动器崩溃的问题 (by Glavo)
+    - GP-4241: 修复非 Windows 平台上游戏进程的 `user.home` 可能被设置为 `null` 的问题 (by Glavo)
+    - GP-4437: 修复 backgroundType 为 `null` 时启动器崩溃的问题 (by Glavo)
+    - GP-4153: 修复“下载线程数”的指示器被提示覆盖的问题 (by 辞庐)
+    - GP-4238: 修复 `RemoteMod::getIntegrityCheck` 未选择正确的算法的问题 (by Glavo)
+    - GP-4176: 修复整合包格式不匹配提示未被正确格式化的问题 (by 辞庐)
+    - GP-4321: 世界管理页面添加对极限模式的支持 (by Wulian233)
+    - GP-4192: 修复 LWJGL 路径显示错误的问题 (by 辞庐)
+
+# HMCL 3.6.16
 
 - 启动器
     - GP-4262: 更新 AMD 显卡信息 (by Glavo)
