@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.17.294</h1>
 
-详细版本介绍: [TODO]()
+详细版本介绍: [cv43036782](https://www.bilibili.com/opus/1112420907913052164)
 
 - GP-4452: 使用 Java 17 构建 HMCL (by Glavo)
 - GP-4415: 序列化不透明的 Color 时省略 Alpha 通道的值 (by Glavo)
@@ -20,7 +20,7 @@ toc: true
 - GP-4439: 更新模组和整合包数据 (by Glavo)
 - GP-4414: 检测到配置文件由高版本启动器创建时禁止保存配置文件 (by Glavo)
 - GP-4455: 优化对于 ISO 639-3 语言代码的支持 (by Glavo)
-- GP-4467: 在标签文本溢出时使用 Tooltip 显示完整文本 (by Glavo)
+- GP-4467: 在标签文本溢出时使用 Tooltip 显示完整文本 (需要 JavaFX 23+) (by Glavo)
 
 错误修复:
 
