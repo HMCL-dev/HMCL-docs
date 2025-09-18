@@ -30,7 +30,7 @@ toc: true
 
 ![](/assets/img/docs/about-questions/img.png)
 
-在下载页面，点击左侧顶部的「游戏」选项卡。这里会列出所有可用的游戏版本（**版本号从上到下由新到旧**）。选择一个你喜欢的版本，我们通常推荐最新的正式版。
+在下载页面，点击左侧顶部的「游戏」选项卡。这里会列出所有可用的游戏版本（**版本号从上到下/由新到旧排序**），选择一个你喜欢的版本。我们通常推荐最新的正式版。
 
 ![](/assets/img/docs/about-questions/img2.png)
 
@@ -46,7 +46,7 @@ toc: true
 
 在等待游戏下载时，不妨先了解一下它的核心玩法。 
 
-作为一款沙盒游戏，简单的讲，核心玩法就是**破坏**和**创造**，你可以自由地探索世界、收集资源、建造家园、挑战怪物。  
+作为一款沙盒游戏，简单的讲，核心玩法就是 **「破坏」** 和 **「创造」** 。你可以自由地探索世界、收集资源、建造家园、挑战怪物……  
 
 想学习更多？下面这些官方中文 Wiki 链接是你的最佳起点：
 - **新手入门必读**：[Minecraft Wiki 新手手册](https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B/%E6%96%B0%E6%89%8B%E6%89%8B%E5%86%8C)
@@ -54,11 +54,13 @@ toc: true
 
 ### 什么是资源包
 
-你可能听到有其他玩家讨论好看的“材质包”  
+你可能听到有其他玩家讨论好看的「材质包」。  
 
-`材质包` 一般是单指修改了游戏材质的 `资源包` ，正式译名为 `纹理包`。
+「材质包」一般是单指修改了游戏纹理的「资源包」，也是 Minecraft 1.5 及之前版本使用的称呼。
 
-`资源包` 是指可以修改游戏中的多种资源，如**纹理（贴图）、模型、音乐、音效、语言文件**等的文件，能够极大地改变游戏的外观和感觉，而一个好的资源包能极大地提升你的游戏视听体验。
+「材质」及「材质包」是以前的误译，目前的正式译名为「纹理」和「纹理包」。如果你看到有人讨论材质包，那么一般都是指纹理包。
+
+「资源包」是指可以修改游戏中的多种资源，如**纹理（贴图）、模型、音乐、音效、语言文件**等的文件，能够极大地改变游戏的外观和感觉。而一个好的资源包能极大地提升你的游戏视听体验。
 
 ![大致示意图](/assets/img/docs/about-questions/img5.jpg)
 
@@ -66,40 +68,40 @@ toc: true
 - **想制作自己的资源包？** 深入了解 [资源包详细资料](https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85)。
 
 你可以在下列网站获取资源包：
-- [curseforge](https://www.planetminecraft.com/texture-packs/)
-- [modrinth](https://modrinth.com/resourcepacks)
+- [curseforge](https://www.curseforge.com/minecraft/texture-packs)
+- [Modrinth](https://modrinth.com/resourcepacks)
 
 ### 什么是模组 (Mod)？
 
-你可能听说过我的世界拥有非常丰富的模组（mods），模组是从根本上改变或增加游戏内容的强大工具，它允许你修改游戏玩法，添加新方块/生物等。  
+你可能听说过我的世界拥有非常丰富的模组（Mod）。模组是从根本上改变或增加游戏内容的强大工具，它允许你修改游戏玩法，添加新方块/生物等。  
 
-你可以在这获得 **更多的游戏内容**、**更好的游戏体验**、**更好的游戏观感** 。
+你可以通过模组获得 **更多的游戏内容**、**更好的游戏体验**、**更好的游戏观感** 。
 
 你可以在下列网站获取模组信息，并在hmcl内下载和安装：
-- [mc百科](https://www.mcmod.cn/)
-- [curseforge](https://www.curseforge.com/minecraft/search?class=mc-mods)
-- [modrinth](https://modrinth.com/mods)
+- [MC 百科](https://www.mcmod.cn/)
+- [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
+- [Modrinth](https://modrinth.com/mods)
 
-HMCL 自动安装与使用 Mod 教程： [跳转](/launcher/auto-installing.html)
+HMCL 自动安装与使用模组教程： [跳转](/launcher/auto-installing.html)
 
 ### 安装模组后游戏报错怎么办？
 
 安装模组后游戏无法启动或崩溃是很常见的情况，通常是模组冲突或缺少前置模组导致的。别担心，大部分问题都能轻松解决。 
 
-在HMCL 自动安装与使用 Mod 教程的末尾讲到了常用的解决方法： [跳转](/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
+在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： [跳转](/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
 
-或者前往模组包报错排查手册中查看 [跳转](/modpack/error-handbook.html)
+或者前往模组包报错排查手册中查看: [跳转](/modpack/error-handbook.html)
 
 ### 如何选择游戏的 Java 版本？
 
-对于新手玩家，通常你不需要关心这个问题，hmcl会自动选择最合适的Java版本，没有特殊情况请使用默认选择的 Java，你不需要为此进行任何配置  
+对于新手玩家，通常你不需要关心这个问题，HMCL 会自动选择最合适的 Java 版本。没有特殊情况请使用默认选择的 Java，你不需要为此进行任何配置  
 
-如果你确实需要指定Java版本：
+如果你确实需要指定 Java 版本：
 
 1. 确保你的电脑上已安装了其他版本的 Java。
 2. 在 HMCL 中，进入 **设置 -> 全局游戏设置**。
-3. 找到 **Java 路径**，这里有两种情况，你安装的Java版本很可能已被hmcl识别，直接选择即可。
-4. 如果hmcl没有识别到你的Java，那么选择「自定义」。
+3. 找到 **Java 路径**。这里有两种情况，你安装的 Java 版本很可能已被 HMCL 识别，直接选择即可。
+4. 如果 HMCL 没有识别到你的 Java，那么选择「自定义」。
 5. 点击「浏览」，找到你需要的 Java 安装路径下的 `javaw.exe` 文件，然后点击确定。
 
 > **重要提示**：如果你在更换 Java 后遇到任何游戏崩溃或无法启动的问题，**请立即切换回 HMCL 默认的 Java 版本**。
