@@ -18,7 +18,7 @@ toc: true
 
 你需要使用微软账户购买游戏才能游玩 Minecraft，或者使用离线账户/外置账户。
 
-你可以在[我的世界官网](https://www.minecraft.com)购买游戏。
+你可以在 [Minecraft 官网](https://www.minecraft.com) 购买游戏。
 
 完成购买后，在 HMCL 主界面左上角，点击「账户」，然后点击左侧的「微软账户」登录你的账户，或者点击「离线登录」创建一个离线账户。
 
