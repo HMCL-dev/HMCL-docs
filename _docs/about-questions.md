@@ -68,7 +68,7 @@ toc: true
 - **想制作自己的资源包？** 深入了解 [资源包详细资料](https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85)。
 
 你可以在下列网站获取资源包：
-- [curseforge](https://www.curseforge.com/minecraft/texture-packs)
+- [CurseForge](https://www.curseforge.com/minecraft/texture-packs)
 - [Modrinth](https://modrinth.com/resourcepacks)
 
 ### 什么是模组 (Mod)
