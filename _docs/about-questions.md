@@ -1,14 +1,14 @@
 ---
 title:  "各大问题集合"
 permalink: /faq.html
-date:   2021-10-09 23:18:02 +0800
+date:   2025-09-19 13:40:00 +0800
 categories: 启动器
 toc: true
 ---
 
 ![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Ffaq.html)
 
-> 本文由 LIPiston 编写。
+> 本文由 LIPiston 编写，Mine-diamond 修改
 
 ---
 
