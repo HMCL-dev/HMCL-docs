@@ -8,7 +8,7 @@ toc: true
 
 ![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Ffaq.html)
 
-> 本文由 LIPiston 编写，Mine-diamond 修改
+> 本文由 LIPiston 编写，Mine-diamond 修改。
 
 ---
 
