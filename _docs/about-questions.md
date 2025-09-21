@@ -105,7 +105,7 @@ HMCL 会自动管理 Java，并针对不同版本的游戏自动选择合适的 
 **安装 Java：**
 1. 进入 **设置 -> Java 管理**，此处会展示 HMCL 安装的或系统中已安装的 Java。  
 2. 如果需要下载 Java，点击「下载 Java」，选择所需的版本，然后点击「确定」。  
-3. 如果你安装了 Java 但是没有被 HMCL 识别，选择「添加 Java」，找到你需要的 Java 安装路径下的 `java.exe` 文件（仅Windows）或 `java` 文件（仅Linux/MacOS），然后点击确定。  
+3. 如果你安装了 Java 但是没有被 HMCL 识别，选择「添加 Java」，找到你需要的 Java 安装路径下的 `java.exe` 文件（仅Windows）或 `java` 文件（仅Linux/macOS），然后点击确定。  
 
 **选择 Java：**
 - 如果希望所有实例都使用同一 Java 版本，进入「设置 -> 全局游戏设置」，选择要使用的 Java。该 Java 将用于所有使用全局游戏设置的实例（一般不推荐）。
