@@ -79,7 +79,7 @@ toc: true
 
 你可能听说过我的世界拥有丰富的模组（Mod）资源。模组是一类能改变或增加游戏内容的强大工具，它允许你新增方块、生物、物品与机制等内容。通过安装模组，你可以获得更丰富的内容、更顺手的玩法体验和更出色的视听表现。
 
-你可以在下列网站获取模组信息，并在hmcl内下载和安装：
+你可以在下列网站获取模组信息，并在 HMCL 内下载和安装：
 - [MC 百科](https://www.mcmod.cn/)
 - [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
 - [Modrinth](https://modrinth.com/mods)
