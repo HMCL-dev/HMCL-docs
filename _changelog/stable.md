@@ -10,7 +10,18 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.17</h1>
+<h1 id="nowchange">HMCL 3.6.18</h1>
+
+版本介绍: []()
+
+- 游戏管理
+    - GP-4515: 优化 Java 自动选择规则 (by Glavo)
+- 错误修复
+    - GP-4508: 修复使用 JavaFX 25 时游戏下载界面布局错误的问题 (by Glavo)
+    - GP-4465: 修复启用代理身份认证且未设置密码时启动器崩溃的问题 (by Glavo)
+    - GP-4466: 修复滚动切换游戏实例/账户功能 (by Glavo)
+
+# HMCL 3.6.17
 
 版本介绍: [cv43005407](https://www.bilibili.com/opus/1111270122956259346)
 
