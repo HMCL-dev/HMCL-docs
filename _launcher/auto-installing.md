@@ -22,7 +22,7 @@ toc: true
 2. *安装模组加载器（如 Forge, Fabric）。
 3. 安装你喜欢的模组。
 
-## 版本隔离
+## 启用版本隔离
 
 在安装模组之前，强烈推荐开启版本隔离以隔离为不同实例安装的模组，见 [全局版本隔离](/launcher/global-version-isolation.html)
 
@@ -31,17 +31,21 @@ toc: true
 首先，让我们先了解常见的模组加载器
 
 `Forge`,`NeoForge`,`Fabric`,`Quilt`,`Cleanroom`,`LiteLoader` 是 6 个常见的 Mod 加载器。  
-`Fabric API`,`QSL/QFAPI` 是两个随 Fabric 与 Quilt 的官方 API（实际是模组）。
+`Fabric API`,`QSL/QFAPI` 是两个随 `Fabric` 与 `Quilt` 的官方 API（实际是模组）。
 
 
 下面是简单介绍：  
-*Forge* 是老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装  
-*NeoForge* 是1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge  
-*Fabric* 是一个轻型模组加载器，如果你想简单安装一些优化模组或玩生电，Fabric非常合适  
-*Quilt* 是Fabric的一个分支，同样非常轻  
-*Fabric API, QSL/QFAPI* 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api
-*Cleanroom* 是1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。  
-*LiteLoader* 是一个轻量模组加载器，为Forge的轻量代替，现在已停止维护  
+
+| 模组加载器                 | 简单介绍                                                        |
+| --------------------- | ----------------------------------------------------------- |
+| Forge                 | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                           |
+| NeoForge              | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge                       |
+| Fabric                | 轻型模组加载器，如果你想简单安装一些优化模组或玩生电，Fabric非常合适                       |
+| Quilt                 | Fabric的一个分支，同样非常轻                                           |
+| Fabric API, QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api         |
+| Cleanroom             | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。 |
+| LiteLoader            | 轻量模组加载器，为Forge的轻量代替，现在已停止维护                                 |
+
 
 **支持版本：**  
 
