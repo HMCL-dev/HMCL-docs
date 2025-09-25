@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.18</h1>
 
-版本介绍: []()
+版本介绍: [cv43162536](https://www.bilibili.com/opus/1116529228834144258)
 
 - 游戏管理
     - GP-4515: 优化 Java 自动选择规则 (by Glavo)
