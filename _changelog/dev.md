@@ -10,7 +10,7 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.17.297</h1>
+<h1 id="nowchange">HMCL 3.6.18.297</h1>
 
 详细版本介绍: [TODO]()
 
