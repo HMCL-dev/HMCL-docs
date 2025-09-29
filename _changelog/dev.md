@@ -12,7 +12,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.6.18.297</h1>
 
-详细版本介绍: [TODO]()
+详细版本介绍: [cv43205532](https://www.bilibili.com/opus/1117948655408513026)
 
 - GP-4520: 将 Gradle 更新至 9.1.0 (by Glavo)
 - GP-4549: 将 JNA 更新至 5.18.0 (by Glavo)
