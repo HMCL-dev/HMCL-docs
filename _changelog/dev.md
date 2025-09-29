@@ -10,7 +10,28 @@ toc: true
 
 *Notice: changelogs are written in Chinese.*
 
-<h1 id="nowchange">HMCL 3.6.17.296</h1>
+<h1 id="nowchange">HMCL 3.6.17.297</h1>
+
+详细版本介绍: [TODO]()
+
+- GP-4520: 将 Gradle 更新至 9.1.0 (by Glavo)
+- GP-4549: 将 JNA 更新至 5.18.0 (by Glavo)
+- GP-4509: 支持在“实例管理”按钮上通过滚动滚轮切换游戏实例 (by Glavo)
+- GP-4525: 优化本地化支持 (by Glavo)
+- GP-4527: 支持颠倒的英语 (by Glavo)
+- GP-4532: 将 `boot.properties` 翻译至西班牙语 (by 3gf8jv4dv)
+- GP-4546: 重构 `FetchTask` 以使用 `HttpClient` 和虚拟线程 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复:
+
+- GP-4296: 修复切换下载源后需要重启启动器才会生效的问题 (by Glavo)
+- GP-4500: 修复删除世界时无法删除 zip 格式世界的问题 (by Wulian233)
+- GP-4514: 修复 `AdvancedListBox` 在非必要的情况下显示滚动条的问题 (by rootwhois)
+- GP-4528: 修复将空字符串注册为 access token 后日志输出异常的问题 (by Glavo)
+- GP-4517: 修复日志页面选中条目时 hover 背景闪烁两次的问题 (by rootwhois)
+
+# HMCL 3.6.17.296
 
 详细版本介绍: [cv43101143](https://www.bilibili.com/opus/1114532880771448834)
 
