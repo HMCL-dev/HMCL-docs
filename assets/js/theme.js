@@ -16,19 +16,18 @@ window.addEventListener("DOMContentLoaded", function () {
     var modes = ["light", "dark", "auto"];
     var modeNames = ["亮色", "暗色", "自动"];
     var switchers = document.getElementsByClassName("theme-switcher");
+    for (var i = 0; i < switchers.length; i++) {
+        switchers[i].addEventListener("click", function () {
+            themeApply(current + 1);
+        });
+    }
     function themeApply(index) {
-        index %= modes.length;
+        index = (Number(index) || 0) % modes.length;
         if (index === current) return;
         if (modes[current] === "auto") mediaQuery.removeEventListener("change", handler);
         current = index;
-        for (var switcher of switchers) {
-            if (!switcher.href) {
-                switcher.addEventListener("click", function () {
-                    themeApply(current + 1);
-                });
-                switcher.href = "javascript:;";
-            }
-            switcher.innerText = modeNames[current];
+        for (var i = 0; i < switchers.length; i++) {
+            switchers[i].innerText = modeNames[current];
         }
         var mode = modes[index];
         localStorage.setItem("theme", index);
@@ -39,9 +38,9 @@ window.addEventListener("DOMContentLoaded", function () {
             handler();
         }
     }
-    themeApply(Number(localStorage.getItem("theme")) || current);
+    themeApply(localStorage.getItem("theme"));
     window.addEventListener("storage", function (event) {
         if (event.key !== "theme") return;
-        themeApply(Number(event.newValue) || 0);
+        themeApply(event.newValue);
     });
 });
