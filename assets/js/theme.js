@@ -5,7 +5,7 @@ var alternateTheme = document.createElement("link");
 var dark = "stylesheet";
 var light = "stylesheet alternate";
 alternateTheme.rel = light;
-alternateTheme.href = "{{ '/assets/css/main.dark.css' | relative_url }}"
+alternateTheme.href = "{{ '/assets/css/main.dark.css' | relative_url }}";
 document.head.appendChild(alternateTheme);
 var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 function handler() {
