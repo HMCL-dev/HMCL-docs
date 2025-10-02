@@ -27,9 +27,9 @@ email: hmcl@huangyuhui.net
 description: >- # this means to ignore newlines until "baseurl:"
   HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://docs.hmcl.net"
-twitter_username: huanghongxun
-github_username:  huanghongxun
+url: https://docs.hmcl.net
+copyright: huanghongxun
+copyright_url: https://github.com/huanghongxun
 breadcrumbs: true
 
 # Build settings
@@ -124,3 +124,8 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+footer:
+  links:
+    - label: "粤ICP备18071565号"
+      url: "https://beian.miit.gov.cn"
