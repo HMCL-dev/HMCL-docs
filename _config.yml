@@ -124,3 +124,9 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+footer:
+  links:
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HMCL-dev/HMCL"
