@@ -3,7 +3,7 @@ layout: single
 ---
 
 {% if jekyll.environment == 'production' and page.hits %}
-<img src="https://hits.zkitefly.eu.org/?tag={{ page.permalink | absolute_url | url_encode }}" alt="Hits" decoding="async">
+<img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
 {% endif %}
 
 {% if page.note %}
@@ -11,3 +11,4 @@ layout: single
 {% endif %}
 
 {{ content }}
+
