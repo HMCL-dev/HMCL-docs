@@ -4,7 +4,7 @@ permalink: /launcher/use-password-login-microsoft-account.html
 date: 2024-07-21 17:50:00 +0800
 categories: 启动器
 note: 本文由 zkitefly 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fuse-password-login-microsoft-account.html
+hits: true
 toc: true
 ---
 

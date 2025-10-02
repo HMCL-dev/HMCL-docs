@@ -4,7 +4,7 @@ permalink: /eula/hmcl.html
 date: 2021-09-21 23:26:00 +0800
 categories: 协议
 note: 更新时间 2021 年 9 月 21 日
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Feula%2Fhmcl.html
+hits: true
 toc: true
 ---
 

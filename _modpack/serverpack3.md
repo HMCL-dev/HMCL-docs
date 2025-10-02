@@ -4,7 +4,7 @@ permalink: /modpack/serverpack3.html
 date: 2023-01-11 14:13:45 +0800
 categories: 整合包
 note: 本文由 buggzd 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fmodpack%2Fserverpack3.html
+hits: true
 toc: true
 ---
 

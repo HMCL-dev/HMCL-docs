@@ -4,7 +4,7 @@ permalink: /launcher/authlib-injector.html
 date: 2021-08-22 23:18:02 +0800
 categories: 启动器
 note: 本文由 huanghongxun 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fauthlib-injector.html
+hits: true
 toc: true
 ---
 

@@ -4,7 +4,7 @@ permalink: /faq.html
 date: 2025-09-19 13:40:00 +0800
 categories: 启动器
 note: 本文由 LIPiston 编写，Mine-diamond 修改。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Ffaq.html
+hits: true
 toc: true
 ---
 

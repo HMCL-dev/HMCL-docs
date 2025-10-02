@@ -4,7 +4,7 @@ permalink: /multiplayer/help.html
 date: 2022-11-20 09:02:00 +0800
 categories: 多人联机
 note: 本文由 zkitefly 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fmultiplayer%2Fhelp.html
+hits: true
 toc: true
 ---
 

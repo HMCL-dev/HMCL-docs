@@ -1,7 +1,7 @@
 ---
 title: HMCL 新手导航
 note: 由 wifi-left 进行整理。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net
+hits: true
 toc: true
 ---
 

@@ -4,7 +4,7 @@ permalink: /groups.html
 date: 2024-03-05 17:00:00 +0800
 categories: 启动器
 note: 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html
+hits: true
 toc: true
 ---
 

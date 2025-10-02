@@ -4,7 +4,7 @@ permalink: /changelog/stable.html
 date: 2021-08-22 23:18:02 +0800
 categories: 更新日志
 note: Changelogs are written in Chinese.
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fchangelog%2Fstable.html
+hits: true
 toc: true
 ---
 

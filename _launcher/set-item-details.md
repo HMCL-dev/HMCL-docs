@@ -4,7 +4,7 @@ permalink: /launcher/set-item-details.html
 date: 2023-6-09 10:26:00 +0800
 categories: 启动器
 note: 本文由 MemoryShadow 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fset-item-details.html
+hits: true
 toc: true
 ---
 

@@ -4,7 +4,7 @@ permalink: /launcher/fabric_and_optifine_install.html
 date: 2023-01-04 11:30:00 +0800
 categories: 启动器
 note: 本文由 zkitefly 编写。
-hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Ffabric_and_optifine_install.html
+hits: true
 toc: true
 ---
 
