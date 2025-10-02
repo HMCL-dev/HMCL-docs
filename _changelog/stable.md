@@ -1,14 +1,12 @@
 ---
-title:  "稳定版更新日志"
+title: 稳定版更新日志
 permalink: /changelog/stable.html
-date:   2021-08-22 23:18:02 +0800
+date: 2021-08-22 23:18:02 +0800
 categories: 更新日志
+note: Changelogs are written in Chinese.
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fchangelog%2Fstable.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fchangelog%2Fstable.html)
-
-*Notice: changelogs are written in Chinese.*
 
 <h1 id="nowchange">HMCL 3.6.18</h1>
 

@@ -1,14 +1,12 @@
 ---
-title:  "加入 HMCL 报错崩溃交流群"
+title: 加入 HMCL 报错崩溃交流群
 permalink: /crash-support-group.html
-date:   2024-03-05 17:00:00 +0800
+date: 2024-03-05 17:00:00 +0800
 categories: 启动器
+note: 本文由 zkitefly 编写。
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html)
-
-> 本文由 zkitefly 编写
 
 ![](/assets/img/docs/groups/crash.png)
 

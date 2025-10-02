@@ -1,14 +1,12 @@
 ---
-title:  "同时安装 Fabric & OptiFine"
+title: 同时安装 Fabric & OptiFine
 permalink: /launcher/fabric_and_optifine_install.html
-date:   2023-01-04 11:30:00 +0800
+date: 2023-01-04 11:30:00 +0800
 categories: 启动器
+note: 本文由 zkitefly 编写。
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Ffabric_and_optifine_install.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Ffabric_and_optifine_install.html)
-
-> 本文由 zkitefly 编写。
 
 在 HMCL 的自动安装中，如果先选择了 Fabric 或 OptiFine ，HMCL 就会提示他们互不兼容。
 

@@ -1,14 +1,12 @@
 ---
-title:  "全局版本隔离"
+title: 全局版本隔离
 permalink: /launcher/isolation.html
-date:   2021-10-09 23:18:02 +0800
+date: 2021-10-09 23:18:02 +0800
 categories: 启动器
+note: 本文由 LIPiston 编写。
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fisolation.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fisolation.html)
-
-> 本文由 LIPiston 编写。
 
 这是一个游戏客户端很多不方便寻找的最佳解决方案<br/>
 **注意：该方法会改变默认的 minecraft 文件结构**

@@ -1,14 +1,12 @@
 ---
-title:  "使用密码登录微软账户"
+title: 使用密码登录微软账户
 permalink: /launcher/use-password-login-microsoft-account.html
-date:   2024-07-21 17:50:00 +0800
+date: 2024-07-21 17:50:00 +0800
 categories: 启动器
+note: 本文由 zkitefly 编写。
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fuse-password-login-microsoft-account.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fuse-password-login-microsoft-account.html)
-
-> 本文由 zkitefly 编写
 
 # 为什么使用密码登录
 

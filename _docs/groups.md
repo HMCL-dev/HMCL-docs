@@ -1,14 +1,12 @@
 ---
-title:  "加入 HMCL 用户群"
+title: 加入 HMCL 用户群
 permalink: /groups.html
-date:   2024-03-05 17:00:00 +0800
+date: 2024-03-05 17:00:00 +0800
 categories: 启动器
+note: 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容。
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html)
-
-> 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：
 

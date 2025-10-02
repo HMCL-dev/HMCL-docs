@@ -1,12 +1,11 @@
 ---
-title:  "下载 HMCL 和 Minecraft 依赖的 Java"
+title: 下载 HMCL 和 Minecraft 依赖的 Java
 permalink: /downloads/linux/loongarch64.html
-date:   2023-09-05 14:00:00 +0800
+date: 2023-09-05 14:00:00 +0800
 categories: Java 下载
+hits-tag: https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Flinux%2Floongarch64.html
 toc: false
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Flinux%2Floongarch64.html)
 
 龙芯平台存在 “**新世界**” 和 “**旧世界**” 两个 ABI，不同 ABI 的 Java 暂时互不兼容。
 

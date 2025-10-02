@@ -81,7 +81,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: single
+      layout: document
       read_time: false
       author_profile: false
       share: false
