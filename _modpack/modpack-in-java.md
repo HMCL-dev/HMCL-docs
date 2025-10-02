@@ -1,12 +1,11 @@
 ---
-title:  "整合包自带 Java 教程"
+title: 整合包自带 Java 教程
 permalink: /modpack/bundled-java.html
-date:   2021-10-09 23:18:02 +0800
+date: 2021-10-09 23:18:02 +0800
 categories: 整合包
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fmodpack%2Fbundled-java.html)
 
 ## 背景
 

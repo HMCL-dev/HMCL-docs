@@ -1,0 +1,14 @@
+---
+layout: single
+---
+
+{% if jekyll.environment == 'production' and page.hits %}
+<img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
+{% endif %}
+
+{% if page.note %}
+<p class="notice--info">{{ page.note | escape_once }}</p>
+{% endif %}
+
+{{ content }}
+

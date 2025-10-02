@@ -1,12 +1,11 @@
 ---
-title:  "下载 HMCL-Snapshot 版本"
+title: 下载 HMCL-Snapshot 版本
 permalink: /downloads/hmcl-snapshot-update.html
-date:   2024-01-09 22:00:00 +0800
+date: 2024-01-09 22:00:00 +0800
 categories: 启动器
+hits: true
 toc: false
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Fhmcl-snapshot-update.html)
 
 正在前往 HMCL-Snapshot 下载页面，点击下载即可。
 

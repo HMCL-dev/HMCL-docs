@@ -1,20 +1,16 @@
 ---
-title:  "各大问题集合"
+title: 各大问题集合
 permalink: /faq.html
-date:   2025-09-19 13:40:00 +0800
+date: 2025-09-19 13:40:00 +0800
 categories: 启动器
+note: 本文由 LIPiston 编写，Mine-diamond 修改。
+hits: true
 toc: true
----
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Ffaq.html)
-
-> 本文由 LIPiston 编写，Mine-diamond 修改。
-
 ---
 
 > 这是一个提供给新手或小白的阅读文档，旨在用最简单的方式帮你快速上手 HMCL 启动器和 Minecraft 游戏。如需深入了解某个主题，可点击文中提供的链接查看详细文档。
 
-### 如何登陆账户
+### 如何登录账户
 
 你需要使用微软账户购买游戏才能游玩 Minecraft，或者使用离线账户/外置账户。
 
