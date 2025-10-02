@@ -1,12 +1,11 @@
 ---
-title:  "下载 HMCL 和 Minecraft 依赖的 Java"
+title: 下载 HMCL 和 Minecraft 依赖的 Java
 permalink: /downloads/java.html
-date:   2022-12-03 17:30:00 +0800
+date: 2022-12-03 17:30:00 +0800
 categories: Java 下载
+hits: true
 toc: false
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Fjava.html)
 
 正在前往 Java 下载页面，请点击下载，然后等待 Java 安装程序下载完成，最后启动安装程序，依照提示安装 Java。
 

@@ -1,14 +1,12 @@
 ---
-title:  "寻求帮助"
+title: 寻求帮助
 permalink: /help.html
-date:   2023-08-09 11:12:00 +0800
+date: 2023-08-09 11:12:00 +0800
 categories: 启动器
+note: 本文由 zkitefly 编写。
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fhelp.html)
-
-> 本文由 zkitefly 编写。
 
 ## QQ 群聊
 

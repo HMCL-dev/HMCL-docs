@@ -1,12 +1,11 @@
 ---
-title:  "下载适用于 Windows on Arm 的 HMCL 和 Minecraft 依赖的 Java"
+title: 下载适用于 Windows on Arm 的 HMCL 和 Minecraft 依赖的 Java
 permalink: /downloads/windows/arm64.html
-date:   2022-12-03 17:30:00 +0800
+date: 2022-12-03 17:30:00 +0800
 categories: Java 下载
+hits: true
 toc: false
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fdownloads%2Fwindows%2Farm64.html)
 
 Java 安装包已开始下载，请等待 Java 安装程序下载完成，最后启动安装程序，依照提示安装 Java。
 

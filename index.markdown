@@ -1,15 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: single
 title: HMCL 新手导航
+note: 由 wifi-left 进行整理。
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net)
-
-> 由 wifi-left 进行整理
 
 ## 注意 Notice
 
