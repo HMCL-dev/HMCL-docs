@@ -1,6 +1,5 @@
 ---
 title: 使用密码登录微软账户
-permalink: /launcher/use-password-login-microsoft-account.html
 date: 2024-07-21 17:50:00 +0800
 categories: 启动器
 note: 本文由 zkitefly 编写。

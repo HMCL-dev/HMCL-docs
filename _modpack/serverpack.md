@@ -1,6 +1,5 @@
 ---
 title: 服务端自动更新整合包制作教程
-permalink: /modpack/serverpack.html
 date: 2021-08-22 23:18:02 +0800
 categories: 整合包
 note: 本文由 huanghongxun 编写。

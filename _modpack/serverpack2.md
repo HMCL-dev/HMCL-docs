@@ -1,6 +1,5 @@
 ---
 title: 使用HMCL启动器配置服务器客户端自动更新
-permalink: /modpack/serverpack2.html
 date: 2021-08-22 23:18:02 +0800
 categories: 整合包
 hits: true
