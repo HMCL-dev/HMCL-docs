@@ -8,6 +8,8 @@ clone:
 steps:
 - name: build
   image: jekyll/jekyll:4.2.2
+  environment:
+    JEKYLL_ENV: production
   commands:
     - touch Gemfile.lock
     - chmod a+w Gemfile.lock
