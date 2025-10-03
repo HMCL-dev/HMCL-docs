@@ -1,8 +1,6 @@
 main:
   - title: 常见问题
     url: /faq.html
-  - title: GitHub
-    url: https://github.com/HMCL-dev/HMCL
 
 docs:
   - title: 问题集合

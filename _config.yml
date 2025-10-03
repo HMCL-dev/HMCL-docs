@@ -106,18 +106,11 @@ defaults:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - scripts/
+  - README.md
+  - LICENSE
 
 # Outputting
 permalink: /:categories/:title/
@@ -132,5 +125,8 @@ head_scripts:
 
 footer:
   links:
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HMCL-dev/HMCL"
     - label: "粤ICP备18071565号"
       url: "https://beian.miit.gov.cn"
