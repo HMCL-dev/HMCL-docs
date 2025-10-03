@@ -1,6 +1,5 @@
 ---
 title: 开发版更新日志
-permalink: /changelog/dev.html
 date: 2021-08-22 23:18:02 +0800
 categories: 更新日志
 note: Changelogs are written in Chinese.

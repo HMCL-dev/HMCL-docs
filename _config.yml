@@ -51,31 +51,31 @@ include:
 collections:
   docs:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:path.html
 
   launcher:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
   changelog:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
   modpack:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
   eula:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
   multiplayer:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
   downloads:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
 
 defaults:
   - scope:

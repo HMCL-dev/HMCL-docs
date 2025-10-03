@@ -1,6 +1,5 @@
 ---
 title: 下载 HMCL-Snapshot 版本
-permalink: /downloads/hmcl-snapshot-update.html
 date: 2024-01-09 22:00:00 +0800
 categories: 启动器
 hits: true
