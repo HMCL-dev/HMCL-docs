@@ -1,14 +1,11 @@
 ---
-title:  "自动安装与模组下载简介"
-permalink: /launcher/auto-installing.html
-date:   2021-10-09 23:18:02 +0800
+title: 自动安装与模组下载简介
+date: 2021-10-09 23:18:02 +0800
 categories: 启动器
+note: 本文由 asdqp233 编写。
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fauto-installing.html)
-
-> 本文由 asdqp233 编写。
 
 ## 安装 Mod 加载器
 

@@ -1,12 +1,10 @@
 ---
-title:  "使用HMCL启动器配置服务器客户端自动更新"
-permalink: /modpack/serverpack2.html
-date:   2021-08-22 23:18:02 +0800
+title: 使用HMCL启动器配置服务器客户端自动更新
+date: 2021-08-22 23:18:02 +0800
 categories: 整合包
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fmodpack%2Fserverpack2.html)
 
 ## 备注
 

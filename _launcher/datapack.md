@@ -1,14 +1,11 @@
 ---
-title:  "数据包制作指南"
-permalink: /launcher/datapack.html
-date:   2021-08-22 23:18:02 +0800
+title: 数据包制作指南
+date: 2021-08-22 23:18:02 +0800
 categories: 启动器
+note: 本文由 huanghongxun 编写。
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fdatapack.html)
-
-> 本文由 huanghongxun 编写。
 
 本指南只介绍如何制作一个 HMCL 可导入的数据包压缩包。
 
