@@ -60,6 +60,7 @@ collections:
   changelog:
     output: true
     permalink: /:collection/:path.html
+  changelogs:
 
   modpack:
     output: true
