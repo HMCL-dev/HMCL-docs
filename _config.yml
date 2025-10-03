@@ -59,7 +59,8 @@ collections:
 
   changelog:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path.html
+  changelogs:
 
   modpack:
     output: true
