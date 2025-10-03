@@ -1,14 +1,11 @@
 ---
-title:  "加入 HMCL 用户群"
-permalink: /groups.html
-date:   2024-03-05 17:00:00 +0800
+title: 加入 HMCL 用户群
+date: 2024-03-05 17:00:00 +0800
 categories: 启动器
+note: 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容。
+hits: true
 toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fgroups.html)
-
-> 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：
 
@@ -26,16 +23,9 @@ toc: true
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
-- [HMCL 用户群 ① (633640264)](https://qm.qq.com/q/fvJueufsvC)
-- [HMCL 用户群 ② (203232161)](https://qm.qq.com/q/N7hgdNYfy)
-- [HMCL 用户群 ③ (201034984)](https://qm.qq.com/q/7sbMrFm9CE)
-- [HMCL 用户群 ④ (533529045)](https://qm.qq.com/q/ACmZa98tGg)
-- [HMCL 用户群 ⑤ (744304553)](https://qm.qq.com/q/MlVArSCMwM)
-- [HMCL 用户群 ⑥ (282845310)](https://qm.qq.com/q/S782Skmu0U)
-- [HMCL 用户群 ⑦ (482624681)](https://qm.qq.com/q/WFsZ65F6MY)
-- [HMCL 用户群 ⑧ (991620626)](https://qm.qq.com/q/ECVKkslPqi)
-- [HMCL 用户群 ⑨ (657677715)](https://qm.qq.com/q/DVj9tTrwze)（已满）
-- [HMCL 用户群 ⑩ (775084843)](https://qm.qq.com/q/V5F9DswQEu)（已满）
+{% for group in site.data.groups -%}
+- [{{ group.name }}]({{ group.link }}){% if group.status %}（{{ group.status }}）{% endif %}
+{% endfor %}
 
 我们会不定期清理用户群中超过三个月没有发言的非活跃成员，每次清理前我们会提前一周在群内发布公告。
 

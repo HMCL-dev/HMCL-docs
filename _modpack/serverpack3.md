@@ -1,16 +1,14 @@
 ---
-title:  "Nginx作为静态资源服务器，使用HMCL启动器配置服务器客户端自动更新"
-permalink: /modpack/serverpack3.html
-date:   2023-01-11 14:13:45 +0800
+title: Nginx作为静态资源服务器，使用HMCL启动器配置服务器客户端自动更新
+date: 2023-01-11 14:13:45 +0800
 categories: 整合包
+note: 本文由 buggzd 编写。
+hits: true
 toc: true
 ---
 
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fmodpack%2Fserverpack3.html)
+> 阅读本文前，请先阅读HMCL官方文章：https://docs.hmcl.net/modpack/serverpack.html
 
-> 本文由 buggzd 编写。
-
-> 阅读本文前，请先阅读HMCL官方文章：https://hmcl.huangyuhui.net/help/launcher/serverpack.html
 # 前置知识
 阅读本文你需要具有以下知识储备：
 1. 掌握基础本的linux命令操作，比如cd，ls等指令。
