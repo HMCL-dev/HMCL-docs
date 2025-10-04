@@ -1,3 +1,12 @@
+include:
+  - _pages
+  - "*.en.md"
+exclude:
+  - data
+  - includes
+  - layouts
+  - "*.md"
+
 locale: en
 title: HMCL Document
 

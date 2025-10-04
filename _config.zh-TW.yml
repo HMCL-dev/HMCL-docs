@@ -1,3 +1,12 @@
+include:
+  - _pages
+  - "*.zh-TW.md"
+exclude:
+  - data
+  - includes
+  - layouts
+  - "*.md"
+
 locale: zh-TW
 title: HMCL 文檔
 
