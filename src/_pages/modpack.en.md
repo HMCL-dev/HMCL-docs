@@ -1,0 +1,4 @@
+---
+title: Modpack
+collection: modpack
+---

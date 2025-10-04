@@ -1,0 +1,14 @@
+include:
+  - _pages
+  - "*.zh-TW.md"
+exclude:
+  - data
+  - includes
+  - layouts
+  - "*.md"
+
+locale: zh-TW
+title: HMCL 文檔
+
+head_scripts:
+  - /assets/js/theme.zh-TW.js

@@ -1,0 +1,14 @@
+include:
+  - _pages
+  - "*.en.md"
+exclude:
+  - data
+  - includes
+  - layouts
+  - "*.md"
+
+locale: en
+title: HMCL Document
+
+head_scripts:
+  - /assets/js/theme.en.js
