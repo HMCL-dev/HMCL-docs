@@ -16,7 +16,7 @@ steps:
   - name: dist
     path: /drone/src/_site
   - name: cache
-    path: /drone/src/.jekyll-cache
+    path: /drone/src/src/.jekyll-cache
   when:
     branch: [main]
 
