@@ -1,7 +1,7 @@
 ---
-title: 新手導航
+title: 新手导航
+layout: document
 author: wifi-left
-permalink: /index.zh-TW.html
 breadcrumbs: false
 hits: true
 toc: true
@@ -9,9 +9,9 @@ toc: true
 
 ## 注意
 
-如果您遇到 BUG，請及時在 [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 髮送反饋。
+如果您遇到 BUG，请及时在 [GitHub: huanghongxun/HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 发送反馈。
 
-您也可以在這裡提交您的建議。
+您也可以在这里提交您的建议。
 
 {% for group in site.data.navigation.docs %}
 ## {{ group.title }}

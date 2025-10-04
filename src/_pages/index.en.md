@@ -1,6 +1,6 @@
 ---
 title: Getting Started Guide
-permalink: /index.en.html
+layout: document
 breadcrumbs: false
 hits: true
 toc: true
