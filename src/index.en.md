@@ -14,7 +14,7 @@ If you encounter a BUG, please send feedback in time to [GitHub: huanghongxun/HM
 
 You can also submit your suggestions here.
 
-{% for group in site.data.navigation.docs_en %}
+{% for group in site.data.navigation.docs %}
 ## {{ group.title }}
 
 {% for item in group.children %}
