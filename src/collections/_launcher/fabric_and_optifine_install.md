@@ -1,7 +1,7 @@
 ---
 title: 同时安装 Fabric & OptiFine
 date: 2023-01-04 11:30:00 +0800
-note: 本文由 zkitefly 创建。
+author: zkitefly
 hits: true
 toc: true
 ---

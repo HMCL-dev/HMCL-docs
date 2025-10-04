@@ -1,7 +1,7 @@
 ---
 title: 设置项详解
 date: 2023-6-09 10:26:00 +0800
-note: 本文由 MemoryShadow 创建。
+author: MemoryShadow
 hits: true
 toc: true
 ---

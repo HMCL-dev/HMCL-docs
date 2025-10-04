@@ -1,7 +1,8 @@
 ---
 title: 离线模式下更换皮肤
 date: 2021-10-09 23:18:02 +0800
-note: 本文由 qiaoshouzi 创建并由 kitefly 编辑。
+author: qiaoshouzi
+contributors: ['kitefly']
 hits: true
 toc: true
 ---

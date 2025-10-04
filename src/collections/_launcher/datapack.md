@@ -1,7 +1,7 @@
 ---
 title: 数据包制作指南
 date: 2021-08-22 23:18:02 +0800
-note: 本文由 huanghongxun 创建。
+author: huanghongxun
 hits: true
 toc: true
 ---

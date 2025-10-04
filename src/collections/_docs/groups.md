@@ -1,7 +1,8 @@
 ---
 title: 加入 HMCL 用户群
 date: 2024-03-05 17:00:00 +0800
-note: 本文由 Glavo 创建并由 8Mi_Yile, zkitefly 编辑。
+author: Glavo
+contributors: ['8Mi_Yile', 'zkitefly']
 hits: true
 toc: true
 ---

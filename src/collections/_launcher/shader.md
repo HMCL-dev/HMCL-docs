@@ -1,7 +1,7 @@
 ---
 title: 光影
 date: 2021-10-09 23:18:02 +0800
-note: 本文由 hejiehao 编辑。
+contributors: ['hejiehao']
 hits: true
 toc: true
 ---

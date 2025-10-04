@@ -22,6 +22,13 @@
 <img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
 {% endif %}
 
-{% if page.note %}
-<p class="notice--info">{{ page.note | escape_once }}</p>
+{% if page.author or page.contributors or page.note %}
+<div class="notice--info">
+    {% if page.author or page.contributors %}
+    <p>本文由{% if page.author %} {{ page.author }} 创建{% if page.contributors %}并由{% endif %}{% endif %}{% if page.contributors %} {{ page.contributors | join: ', ' }} 编辑{% endif %}。</p>
+    {% endif %}
+    {% if page.note %}
+    {{ page.note | markdownify }}
+    {% endif %}
+</div>
 {% endif %}
