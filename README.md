@@ -21,9 +21,9 @@ Hello Minecraft! Launcher 帮助文档仓库
 
 每篇文章结构如下：
 
-src/collections/_<collection>/<article>.md
+`src/collections/_<collection>/<article>.md`
 
-src/assets/img/docs/<article>:
+`src/assets/img/docs/<article>`
 
 - `img1.png`
 - `img2.png`
