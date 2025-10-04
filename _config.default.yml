@@ -1,0 +1,5 @@
+exclude:
+  - data
+  - includes
+  - layouts
+  - "*.*.md"

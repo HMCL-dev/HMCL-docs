@@ -109,9 +109,9 @@ defaults:
       comments: false
       sidebar:
         nav: docs
-      default_language: zh-CN
+      default_language: zh
       languages:
-        - zh-CN
+        - zh
         - en
   - scope:
       path: _pages
@@ -152,9 +152,9 @@ minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neo
 minimal_mistakes_skin_dark: dark
 
 # Site Settings
-locale: zh-CN
+locale: zh
 # rtl:
-title: HMCL 帮助文档
+title: HMCL 文档
 # title_separator: -
 # subtitle:
 # name: ""
