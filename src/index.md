@@ -1,6 +1,6 @@
 ---
 title: 新手导航
-note: 由 wifi-left 进行整理。
+note: 本文由 wifi-left 创建。
 permalink: /index.html
 breadcrumbs: false
 hits: true
