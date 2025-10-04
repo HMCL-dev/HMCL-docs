@@ -1,0 +1,33 @@
+---
+layout: single
+---
+
+{% if page.languages %}
+{% if site.locale == page.default_language %}
+{% assign origin_ext = '.html' %}
+{% else %}
+{% assign origin_ext = site.locale | append: '.html' %}
+{% endif %}
+{% for language in page.languages %}
+{% if site.locale == language %}
+<span>{{ language }}</span>
+{% else %}
+{% if language == page.default_language %}
+{% assign language_ext = '.html' %}
+{% else %}
+{% assign language_ext = '.' | append: language | append: '.html' %}
+{% endif %}
+<a href="{{ page.url | replace: origin_ext, language_ext | relative_url }}">{{ language }}</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if jekyll.environment == 'production' and page.hits %}
+<img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
+{% endif %}
+
+{% if page.note %}
+<p class="notice--info">{{ page.note | escape_once }}</p>
+{% endif %}
+
+{{ content }}

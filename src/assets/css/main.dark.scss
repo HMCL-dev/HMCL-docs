@@ -1,0 +1,9 @@
+---
+search: false
+---
+
+@charset "utf-8";
+
+$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin_dark | default: 'dark' }}"; // skin
+@import "minimal-mistakes"; // main partials

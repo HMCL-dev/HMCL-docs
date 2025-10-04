@@ -1,0 +1,5 @@
+title: HMCL Help Document
+locale: en
+
+head_scripts:
+  - /assets/js/theme.en.js
