@@ -1,7 +1,7 @@
 ---
 title: 各大问题集合
 date: 2025-09-19 13:40:00 +0800
-note: 本文由 LIPiston 编写，Mine-diamond 修改。
+note: 本文由 LIPiston 创建并由 Mine-diamond 编辑。
 hits: true
 toc: true
 ---

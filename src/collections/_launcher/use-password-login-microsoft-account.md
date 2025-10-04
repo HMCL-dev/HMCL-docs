@@ -1,8 +1,7 @@
 ---
 title: 使用密码登录微软账户
 date: 2024-07-21 17:50:00 +0800
-categories: 启动器
-note: 本文由 zkitefly 编写。
+note: 本文由 zkitefly 创建。
 hits: true
 toc: true
 ---

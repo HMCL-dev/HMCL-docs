@@ -1,6 +1,5 @@
 ---
 title: Getting Started Guide
-note: Organized by wifi-left.
 permalink: /index.en.html
 breadcrumbs: false
 hits: true

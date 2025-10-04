@@ -1,7 +1,6 @@
 ---
 title: 整合包自带 Java 教程
 date: 2021-10-09 23:18:02 +0800
-categories: 整合包
 hits: true
 toc: true
 ---

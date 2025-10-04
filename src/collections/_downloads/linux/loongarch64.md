@@ -1,7 +1,6 @@
 ---
 title: 下载 HMCL 和 Minecraft 依赖的 Java
 date: 2023-09-05 14:00:00 +0800
-categories: Java 下载
 hits: true
 toc: false
 ---
