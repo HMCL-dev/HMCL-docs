@@ -1,13 +1,12 @@
 ---
 title: 加入 HMCL 报错崩溃交流群
 date: 2024-03-05 17:00:00 +0800
-categories: 启动器
-note: 本文由 zkitefly 编写。
+note: 本文由 zkitefly 创建。
 hits: true
 toc: true
 ---
 
-![](/assets/img/docs/groups/crash.png)
+![]({{ '/assets/img/docs/groups/crash.png' | relative_url }})
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 

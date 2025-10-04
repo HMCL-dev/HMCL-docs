@@ -1,6 +1,7 @@
 ---
-title: 稳定版更新日志
+title: Stable Changelog
 date: 2021-08-22 23:18:02 +0800
+note: Changelogs are written in Chinese.
 hits: true
 toc: true
 ---

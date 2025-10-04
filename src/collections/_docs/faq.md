@@ -1,7 +1,6 @@
 ---
 title: 各大问题集合
 date: 2025-09-19 13:40:00 +0800
-categories: 启动器
 note: 本文由 LIPiston 编写，Mine-diamond 修改。
 hits: true
 toc: true
