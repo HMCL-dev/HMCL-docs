@@ -22,7 +22,7 @@ for config in ./_config.*.yml; do
             mv "$data" "$dest"
         done
         find src -type f -name "*.md" ! -name "*.$language.md" | while read -r file; do
-            target="${file%.md}.en.md"
+            target="${file%.md}.$language.md"
             if [ ! -f "$target" ]; then
                 cp "$file" "$target"
             fi
