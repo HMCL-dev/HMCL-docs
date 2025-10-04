@@ -117,8 +117,12 @@ permalink: /:categories/:title/
 
 compress_html:
   clippings: all
+  comments: all
   ignore:
     envs: development
+
+sass:
+  style: compressed
 
 head_scripts:
   - /assets/js/theme.js
