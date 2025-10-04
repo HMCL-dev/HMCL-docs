@@ -112,6 +112,7 @@ defaults:
       default_language: zh
       languages:
         - zh
+        - zh-TW
         - en
   - scope:
       path: _pages
