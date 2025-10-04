@@ -15,27 +15,27 @@ sass:
 collections:
   docs:
     output: true
-    permalink: /:path
+    permalink: /:path.html
   launcher:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
   changelog:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
   changelogs:
     output: false
   modpack:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
   eula:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
   multiplayer:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
   downloads:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:path.html
 
 # Handling Reading
 # safe: false
@@ -117,7 +117,7 @@ defaults:
       path: _pages
     values:
       layout: document-collection
-      permalink: /:basename
+      permalink: /:basename.html
   - scope:
       path: assets/img
     values:
