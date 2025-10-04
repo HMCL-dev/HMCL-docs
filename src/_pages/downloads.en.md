@@ -1,4 +1,4 @@
 ---
-title: 下载
+title: Downloads
 collection: downloads
 ---

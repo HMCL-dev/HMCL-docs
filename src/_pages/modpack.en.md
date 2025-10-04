@@ -1,4 +1,4 @@
 ---
-title: 整合包
+title: Modpack
 collection: modpack
 ---

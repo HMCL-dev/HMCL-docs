@@ -1,4 +1,4 @@
 ---
-title: 启动器
+title: Launcher
 collection: launcher
 ---

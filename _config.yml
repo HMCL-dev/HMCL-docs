@@ -15,27 +15,27 @@ sass:
 collections:
   docs:
     output: true
-    permalink: /:path.html
+    permalink: /:path
   launcher:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
   changelog:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
   changelogs:
     output: false
   modpack:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
   eula:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
   multiplayer:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
   downloads:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path
 
 # Handling Reading
 # safe: false
@@ -43,6 +43,8 @@ include:
   - _pages
 exclude:
   - data
+  - includes
+  - layouts
 # keep_files: [".git", ".svn"]
 # encoding: "utf-8"
 # markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -111,6 +113,11 @@ defaults:
       languages:
         - zh-CN
         - en
+  - scope:
+      path: _pages
+    values:
+      layout: document-collection
+      permalink: /:basename
   - scope:
       path: assets/img
     values:

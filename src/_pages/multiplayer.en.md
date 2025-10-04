@@ -1,4 +1,4 @@
 ---
-title: 多人联机
+title: Multiplayer
 collection: multiplayer
 ---

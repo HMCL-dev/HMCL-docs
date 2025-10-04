@@ -3,16 +3,16 @@ main:
     url: /faq.html
 
 docs:
-  - title: Collection of Questions
+  - title: Questions
     children:
       - title: FAQ
         url: /faq.html
       - title: Launcher
-        url: /launcher/
+        url: /launcher.html
       - title: Modpack
-        url: /modpack/
+        url: /modpack.html
       - title: Multiplayer
-        url: /multiplayer/
+        url: /multiplayer.html
   - title: User Guide
     children:
       - title: Isolation
@@ -35,13 +35,13 @@ docs:
         url: /launcher/authlib-injector.html
   - title: Other
     children:
-      - title: Change Log
-        url: /changelog/
-      - title: Contribution
+      - title: Changelog
+        url: /changelog.html
+      - title: Contribution Guide
         url: /contribution.html
-      - title: HMCL GitHub Link
-        url: https://github.com/HMCL-dev/HMCL
-      - title: HMCL Docs GitHub Link
-        url: https://github.com/HMCL-dev/HMCL-docs
-      - title: HMCL Website
+      - title: Website
         url: https://hmcl.huangyuhui.net
+      - title: GitHub
+        url: https://github.com/HMCL-dev/HMCL
+      - title: Docs GitHub
+        url: https://github.com/HMCL-dev/HMCL-docs

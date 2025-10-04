@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: /qr-login.html
 ---
 
 <style>

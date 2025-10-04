@@ -8,11 +8,11 @@ docs:
       - title: 常见问题
         url: /faq.html
       - title: 启动器使用相关
-        url: /launcher/
+        url: /launcher.html
       - title: 整合包帮助
-        url: /modpack/
+        url: /modpack.html
       - title: 多人联机帮助
-        url: /multiplayer/
+        url: /multiplayer.html
   - title: 使用者帮助
     children:
       - title: 版本隔离
@@ -44,12 +44,12 @@ docs:
   - title: 其他
     children:
       - title: 更新日志
-        url: /changelog/
-      - title: 为 HMCL 做出贡献
+        url: /changelog.html
+      - title: 贡献指南
         url: /contribution.html
-      - title: HMCL GitHub 地址
-        url: https://github.com/HMCL-dev/HMCL
-      - title: HMCL 帮助文档 GitHub 地址
-        url: https://github.com/HMCL-dev/HMCL-docs
-      - title: HMCL 官网
+      - title: 官网
         url: https://hmcl.huangyuhui.net
+      - title: 官方仓库
+        url: https://github.com/HMCL-dev/HMCL
+      - title: 帮助文档官方仓库
+        url: https://github.com/HMCL-dev/HMCL-docs

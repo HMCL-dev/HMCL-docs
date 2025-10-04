@@ -1,4 +1,4 @@
 ---
-title: 更新日志
+title: Changelog
 collection: changelog
 ---
