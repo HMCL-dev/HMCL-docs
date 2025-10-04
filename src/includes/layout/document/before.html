@@ -2,7 +2,7 @@
 {% if site.locale == page.default_language %}
 {% assign origin_ext = '.html' %}
 {% else %}
-{% assign origin_ext = site.locale | append: '.html' %}
+{% assign origin_ext = '.' | append: site.locale | append: '.html' %}
 {% endif %}
 {% for language in page.languages %}
 {% if site.locale == language %}
