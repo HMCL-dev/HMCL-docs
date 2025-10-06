@@ -1,4 +1,7 @@
 # HMCL-docs
+
+[![Build Status](https://drone.hmcl.net/api/badges/huanghongxun/HMCL-docs/status.svg)](https://drone.hmcl.net/huanghongxun/HMCL-docs)
+
 Hello Minecraft! Launcher 帮助文档仓库
 
 您可以通过对本仓库提交 Pull Request 的方式来为 HMCL 帮助文档贡献自己的力量！
@@ -14,27 +17,25 @@ Hello Minecraft! Launcher 帮助文档仓库
 
 我们推荐你使用 Typora 编写 Markdown 文章，该软件的使用方法和 Word 等传统文字排版软件相似，易于使用。
 
-请注意，你在使用 Typora 时，请在 文件->偏好设置->图像 中，将 `插入图片时...` 选项修改为复制到指定路径为 `/assets/img/docs/${filename}` 目录
+请注意，你在使用 Typora 时，请在 文件->偏好设置->图像 中，将 `插入图片时...` 选项修改为复制到指定路径为 `/src/assets/img/docs/${filename}` 目录。
 
 ## 贡献
-本仓库组织方式为一篇文章放在一个目录中。如果你要提交 PR，请不要将 md 文件直接放在根目录下。
+
+本仓库组织方式为一篇文章放在一个集合目录中。如果你要提交 PR，请不要将 md 文件直接放在根目录下。
 
 每篇文章结构如下：
-```
-_<category>/<article>.md
 
-assets
- * img
-   * docs
-     * <article>
-       * img1.png
-       * img2.png
-       * ...
-```
+`src/collections/_<collection>/<article>.md`
 
-其中，`<category>` 表示分类，如 `multiplayer` 表示多人游戏、`modpack` 表示整合包，`<article>` 表示你的文章的英文名（尖括号表示占位符，请替换为文章名称，不要直接提交 '`<article>`'），请仅使用英文字母、数字、中划线、下划线字符，不要使用空格、中文字符。请确保 md 文件名和文件夹名一致。具体可以参考已有文章目录格式。
+`src/assets/img/docs/<article>`
 
-每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成。文章的图片请放置到 `/assets/img/docs/<article>` 目录中。
+- `img1.png`
+- `img2.png`
+- ...
+
+其中，`<collection>` 表示集合名称，如 `multiplayer` 表示多人游戏、`modpack` 表示整合包，`<article>` 表示你的文章的英文名（尖括号表示占位符，请替换为文章名称，不要直接提交 '`<article>`'），请仅使用英文字母、数字、中划线、下划线字符，不要使用空格、中文字符。请确保 md 文件名和文件夹名一致，具体可以参考已有文章目录格式。
+
+每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成。文章的图片请放置到 `/src/assets/img/docs/<article>` 目录中。
 
 ### 添加新文章
 

@@ -17,6 +17,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+source: src
+# destination: _site
+collections_dir: collections
+# plugins_dir: _plugins
+layouts_dir: layouts
+data_dir: data
+includes_dir: includes
 
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin_dark: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
@@ -106,9 +113,9 @@ defaults:
 # their entries' file path in the `include:` list.
 
 exclude:
-  - scripts/
-  - README.md
-  - LICENSE
+  - data/
+  - includes/
+  - layouts/
 
 # Outputting
 permalink: /:categories/:title/

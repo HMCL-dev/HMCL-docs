@@ -21,7 +21,7 @@ steps:
   - name: vendor
     path: /drone/src/vendor
   - name: jekyll-cache
-    path: /drone/src/.jekyll-cache
+    path: /drone/src/src/.jekyll-cache
   when:
     branch: [main]
 
