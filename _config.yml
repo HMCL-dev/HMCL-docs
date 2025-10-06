@@ -18,7 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin_dark: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale: "zh-CN"
@@ -34,7 +33,7 @@ copyright_url: https://github.com/huanghongxun
 breadcrumbs: true
 
 # Build settings
-#theme: minimal-mistakes-jekyll
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -42,7 +41,6 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-remote-theme
   - jekyll-archives
   - jekyll-seo-tag
 
@@ -123,6 +121,9 @@ compress_html:
 
 sass:
   style: compressed
+  quiet_deps: true
+  silence_deprecations:
+    - import
 
 head_scripts:
   - /assets/js/theme.js

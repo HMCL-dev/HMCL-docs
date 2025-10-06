@@ -7,22 +7,20 @@ clone:
 
 steps:
 - name: build
-  image: jekyll/jekyll:4.2.2
+  image: ruby:3.4
   environment:
     JEKYLL_ENV: production
+    BUNDLE_PATH: vendor/bundle
   commands:
-    - touch Gemfile.lock
-    - chmod a+w Gemfile.lock
-    - chown -R jekyll:jekyll /drone
-    - gem sources --add https://mirrors.cloud.tencent.com/rubygems/ --remove https://rubygems.org/
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
-    - bundle install
+    - bundle install --verbose
     - bundle exec jekyll build --trace --verbose
-    - bash scripts/copy_index_json.sh
   volumes:
   - name: dist
     path: /drone/src/_site
-  - name: cache
+  - name: vendor
+    path: /drone/src/vendor
+  - name: jekyll-cache
     path: /drone/src/.jekyll-cache
   when:
     branch: [main]
@@ -31,6 +29,9 @@ volumes:
 - name: dist
   host:
     path: /home/ubuntu/docs.hmcl.net/www
-- name: cache
+- name: vendor
   host:
-    path: /home/ubuntu/docs.hmcl.net/cache
+    path: /home/ubuntu/docs.hmcl.net/cache/vendor
+- name: jekyll-cache
+  host:
+    path: /home/ubuntu/docs.hmcl.net/cache/jekyll-cache
