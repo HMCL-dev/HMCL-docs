@@ -1,13 +1,34 @@
 <p>
-{% for locale in site.locales %}
+{% assign default_locale = site.default_locale | default: 'zh' %}
+{% if site.locales %}
+{% assign locales = default_locale | split: ' ' | concat: site.locales %}
+{% for locale in locales %}
 {% assign language = site.data.common.layouts.document.language[locale] | default: locale %}
-{% if site.build and locale == site.locale %}
+{% if locale == site.locale %}
 <span>{{ language }}</span>
 {% else %}
-{% if locale == site.default_locale %}{% assign locale_ext = '.html' %}{% else %}{% assign locale_ext = '.' | append: locale | append: '.html' %}{% endif %}
+{% if locale == default_locale %}{% assign locale_ext = '.html' %}{% else %}{% assign locale_ext = '.' | append: locale | append: '.html' %}{% endif %}
 <a href="{{ page.url | split: '.' | first | append: locale_ext | relative_url }}">{{ language }}</a>
 {% endif %}
 {% endfor %}
+{% else %}
+{% if page.collection %}{% assign item_list = site[page.collection] %}{% else %}{% assign item_list = site.pages %}{% endif %}
+{% for item in item_list %}
+{% assign item_path = item.path | split: '.' %}
+{% if item_path.size > 1 and item_path.size < 4 %}
+{% assign current_path = page.path | split: '.' %}
+{% if current_path[0] == item_path[0] %}
+{% if item_path.size == 2 %}{% assign locale = default_locale %}{% else %}{% assign locale = item_path[1] %}{% endif %}
+{% assign language = site.data.common.layouts.document.language[locale] | default: locale %}
+{% if item.path == page.path %}
+<span>{{ language }}</span>
+{% else %}
+<a href="{{ item.url | relative_url }}">{{ language }}</a>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
 {% if jekyll.environment == 'production' and page.hits %}
 <img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
 {% endif %}

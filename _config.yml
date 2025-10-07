@@ -8,7 +8,7 @@
 # layouts_dir: _layouts
 # data_dir: _data
 # includes_dir: _includes
-cache_dir: .jekyll-cache/default
+cache_dir: .jekyll-cache/mixed
 sass:
   # sass_dir: _sass
   # minimal-mistakes
@@ -43,7 +43,7 @@ collections:
 include:
   - _pages
 exclude:
-  - scripts/
+  - build/
   - README.md
   - LICENSE
 keep_files: []
@@ -335,7 +335,3 @@ head_scripts:
   - /assets/js/theme.js
 
 default_locale: zh
-locales:
-  - zh
-  - zh-TW
-  - en
