@@ -49,7 +49,7 @@ exclude:
 keep_files: []
 encoding: "utf-8"
 # markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-strict_front_matter: false
+strict_front_matter: true
 
 # Filtering Content
 # show_drafts: null
