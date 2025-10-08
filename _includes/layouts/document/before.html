@@ -17,7 +17,7 @@
 {% assign item_path = item.path | split: '.' %}
 {% if item_path.size > 1 and item_path.size < 4 %}
 {% assign current_path = page.path | split: '.' %}
-{% if current_path[0] == item_path[0] %}
+{% if current_path[0] == item_path[0] and current_path[-1] == item_path[-1] %}
 {% if item_path.size == 2 %}{% assign locale = default_locale %}{% else %}{% assign locale = item_path[1] %}{% endif %}
 {% assign language = site.data.common.layouts.document.language[locale] | default: locale %}
 {% if item.path == page.path %}
