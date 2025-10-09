@@ -24,7 +24,7 @@ toc: true
 
 ## 启用版本隔离
 
-在安装模组之前，强烈推荐开启版本隔离以隔离为不同实例安装的模组，见 [全局版本隔离](/launcher/global-version-isolation.html)
+在安装模组之前，必须开启版本隔离以隔离为不同实例安装的模组，见 [全局版本隔离](/launcher/global-version-isolation.html)
 
 ## 安装模组加载器  
 
@@ -51,18 +51,18 @@ toc: true
 
 
 
-支持版本：  
+支持版本一览：  
 
 | 模组加载器  | 最老版本| 最新版本    |
 | ---------- | ------ | ------      |
-| Forge      | 1.5.2  | 游戏最新版本 |
-| NeoForge   | 1.20.1 | 游戏最新版本 |
-| Fabric     | 1.16.3 | 游戏最新版本 |
-| Fabric api | 1.16.3 | 游戏最新版本 |
-| Quilt      | 1.16.3 | 游戏最新版本 |
-| QSL/QFAPI  | 1.18.2 | 1.21        |
-| Cleanroom  | 1.12.2 |             |
-| LiteLoader | 1.5.2  | 1.12.2      |
+| <img src="/assets/img/docs/auto-installing/forge@2x.png" alt="Forge icon" width="16"> Forge      | 1.5.2  | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/neoforge@2x.png" alt="NeoForge icon" width="16"> NeoForge   | 1.20.1 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16"> Fabric     | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16"> Fabric api | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16"> Quilt Quilt      | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI  | 1.18.2 | 1.21        |
+| <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16"> Cleanroom  | 1.12.2 |             |
+| <img src="/assets/img/docs/auto-installing/chicken@2x.png" alt="LiteLoader icon" width="16"> LiteLoader | 1.5.2  | 1.12.2      |
 
 
 **兼容性：**
@@ -79,56 +79,56 @@ toc: true
 
 ![AutoInstaller_ModLoader](/assets/img/docs/auto-installing/AutoInstaller_ModLoader.png)
 
-进入任何选择版本页面后，若无特殊原因，建议选择最新正式版。  
-如果你选择`Fabric`或`Quilt`，那么推荐同时安装`Fabric API`或`QSL/QFAPI`。  
-选择完合适的Mod加载器之后就可以点击右下角的「安装」继续进行安装。  
+- 点击你想要的加载器（如 Fabric）。
+- 在弹出的版本选择页面，若无特殊需求，**选择最新稳定版**（通常是第一个）。
+- 如果你选择 `Fabric` 或 `Quilt`，最好同时安装`Fabric API` 或 `QSL/QFAPI`。
+- 点击「安装」即可。
 
-### 为已安装的实例安装/重新安装模组加载器
+### 为已有实例安装或更换模组加载器
 
-如果你需要安装/更换/更新已安装实例的模组加载器。
-在主页面点击「实例管理」，再点击对应实例。  
-点击左侧「自动安装」选项，切换到自动切换选项卡。  
+如果你想为已安装好的纯净版游戏添加加载器，或者更换、更新加载器版本：
+
+1.  在 HMCL 主界面，点击「实例管理」，然后选择你想要修改的游戏实例。
+2.  在左侧菜单中，点击「自动安装」。
 
 ![Auto_Install_Page](/assets/img/docs/auto-installing/Auto_Install_Page.png)
 
-如果你需要删除已安装的模组加载器，点击右边的「X」按钮以删除。  
-如果需要升级版本，点击已安装过的模组加载器，选择更新的版本并安装即可。  
-如果安装新模组加载器，先删除已安装的模组加载器，然后再点击对应的模组加载器，选择一个版本（推荐最新版）选择安装即可。    
+- **安装**：点击你想要的加载器图标（如 Forge），选择版本（推荐最新版），然后点击安装。
+- **更新**：点击已安装的加载器，选择一个更新的版本，然后点击安装。
+- **删除**：点击加载器右侧的「X」按钮即可删除。
+- **更换**：先删除旧的加载器，再安装新的。
 
-自动安装页面不支持`Fabric API, QSL/QFAPI`的安装和更新，请按照普通模组的逻辑进行安装和更新。
+> **注意**：此处的自动安装页面不支持安装 `Fabric API` 或 `QSL/QFAPI`。请将它们当作普通模组进行安装。
 
 
-## 安装 Mod
+## 安装模组
 
 安装好加载器后，就可以开始添加模组了。你可以在下列网站获取模组信息，并在 HMCL 内下载和安装：
-- [MC 百科](https://www.mcmod.cn/)
-- [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
-- [Modrinth](https://modrinth.com/mods)
+- [MC 百科](https://www.mcmod.cn/) - 中文社区，资料详尽。
+- [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods) - 最大的模组发布站之一。
+- [Modrinth](https://modrinth.com/mods) - 新兴的现代化模组发布站。
 
 在安装任何模组前，请先确认三件事：
 1.  **游戏版本**：模组是否支持你当前的游戏版本？(例如, 1.20.4)
 2.  **加载器类型**：模组是给 Forge、Fabric 还是其它模组加载器用的？
 3.  **前置模组**：模组是否需要其他模组作为前置？（模组页面通常会说明）
 
-### 自动安装
+### 自动安装 (推荐)
 
-你可以直接在 HMCL 内下载模组，HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 并支持中英文搜索 (匹配结果不一定准确) 。
+HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便。
 
-- 点开 Mod 下载页面(下载 -> 模组), 输入你想要下载的模组名并点击搜索，如果不能搜到，请切换下载源，如果还是不可以，那就说明模组没有在支持的下载源上架。  
-- 点击你想安装的模组，会进入下载页面，根据它显示支持的模组加载器和游戏版本选择你要安装的版本，点击该版本，  
-- 点击安装到当前实例将会安装到当前实例（HMCL 主界面 左侧“实例管理”显示的实例或实例列表中选中的实例即为当前实例）  
-- 点击下载到本地文件夹会弹出文件选择框选择下载的位置并将模组下载到该位置  
-- 如果模组有前置模组，会显示所有前置的模组，点击前置模组进行安装，安装前置模组后再安装该模组。  
+1.  在 HMCL 主界面，点击「下载」->「模组」。
+2.  在搜索框输入模组名（支持中英文），然后点击搜索。如果搜不到，可以尝试切换右上角的下载源。
+3.  点击你想要的模组，进入版本列表页面。
+4.  根据**游戏版本**和**加载器**，找到你需要的版本，点击并选择「安装到当前实例」。
+5.  如果该模组有前置，HMCL 会自动提示，请先安装所有前置模组（但是请不要重复安装前置模组）。
 
-注：点击模组下载页面 上方的蓝色的链接可以到对应的网站查看模组的信息，这会告诉你模组的功能和有可能会提示你些什么注意事项
+注：点击模组下载页面 上方的蓝色的链接可以到对应的网站查看模组的信息，这会告诉你模组的功能和有可能会提示你一些注意事项
 
 **注意: 请查看你要下载的模组是否正常你要安装的游戏版本以及模组加载器，否则模组无法被正常加载!**
 
 ![AddingModAutomatically](/assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png)
 
-### 安装OptiFine 或其它光影模组
-
-跳转 [光影安装](/launcher/shader.html)
 
 ### 手动安装
 
@@ -136,14 +136,23 @@ toc: true
 
 一般的 Mod 文件后缀为 `jar` 或者 `litemod`，请确认后缀是正确的。其中`jar`为大多数模组加载器支持的格式，`litemod`仅`LiteLoader`支持。  
 
-#### 通过 HMCL 模组管理页面安装
-进入`实例列表 -> 具体实例 -> 模组管理`，点击「添加模组」并选择你的模组文件或直接将模组文件拖入启动器窗口完成安装。  
+#### 通过模组管理页面
+
+1.  进入「实例管理」-> 选择你的游戏实例 ->「模组管理」。
+2.  点击「添加模组」并选择你的模组文件，或直接将文件拖拽到窗口内即可。  
 
 #### 通过模组文件夹安装
 
-在 HMCL 内通过`实例管理 -> 浏览 -> 模组文件夹`打开模组文件夹，或手动进入`\.minecraft\mods`（仅未开启版本隔离）或`\.minecraft\versions\<版本名称>\mods`（仅已开启版本隔离），讲这个 jar 文件复制到该文件夹中即可(没有这个文件夹就自己新建一个) 。 
+1.  进入「实例管理」-> 选择你的游戏实例 ->「浏览」->「模组文件夹」。
+2.  这会打开该实例的 `mods` 文件夹。
+3.  将你下载的 `.jar` 模组文件复制或移动到这个文件夹里。
+    （如果 `mods` 文件夹不存在，请自行创建一个。）
 
 ![AddingModManually](/assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png)
+
+### 安装OptiFine 或其它光影模组
+
+光影的安装方式略有不同，请参考专门的指南 [光影安装](/launcher/shader.html)
 
 ## 安装 Mod 后游戏报错/无法启动
 
