@@ -40,10 +40,10 @@ toc: true
 
 | 模组加载器             | 简单介绍                                                                                       |
 | --------------------- | -----------------------------------------------------------                                   |
-| Forge                 | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                                      |
+| ![](https://avatars0.githubusercontent.com/u/1390178?s=16&v=4) Forge                 | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                                      |
 | NeoForge              | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge                                              |
-| Fabric                | 轻型模组加载器，如果你想简单安装一些优化模组或玩生电，Fabric非常合适                                |
-| Quilt                 | Fabric的一个分支，同样非常轻                                                                     |
+| <img src="https://raw.githubusercontent.com/FabricMC/community/main/media/unascribed/png/fabric.png" alt="alt text" width="16"> Fabric                | 轻型模组加载器，非常适合安装优化模组或玩纯净生存增强类整合包。                                      |
+| Quilt                 | Fabric的一个分支，同样轻量                                                                      |
 | Fabric API, QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api                   |
 | Cleanroom             | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。  |
 | LiteLoader            | 轻量模组加载器，为Forge的轻量代替，现在已停止维护                                                  |
@@ -139,7 +139,7 @@ toc: true
 
 #### 通过模组文件夹安装
 
-在 HMCL 内通过`实例管理 -> 浏览 -> 模组文件夹`打开模组文件夹，或手动进入`\.minecraft\mods`（仅未开启版本隔离）或`\.minecraft\versions\<版本名称>\mods`（仅开启了版本隔离），讲这个 jar 文件复制到该文件夹中即可(没有这个文件夹就自己新建一个) 。 
+在 HMCL 内通过`实例管理 -> 浏览 -> 模组文件夹`打开模组文件夹，或手动进入`\.minecraft\mods`（仅未开启版本隔离）或`\.minecraft\versions\<版本名称>\mods`（仅已开启版本隔离），讲这个 jar 文件复制到该文件夹中即可(没有这个文件夹就自己新建一个) 。 
 
 ![AddingModManually](/assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png)
 
