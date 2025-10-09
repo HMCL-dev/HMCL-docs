@@ -38,15 +38,17 @@ toc: true
 
 下面是简单介绍：  
 
-| 模组加载器             | 简单介绍                                                                                       |
-| --------------------- | -----------------------------------------------------------                                   |
-| ![](https://avatars0.githubusercontent.com/u/1390178?s=16&v=4) Forge                 | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                                      |
-| NeoForge              | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge                                              |
-| <img src="https://raw.githubusercontent.com/FabricMC/community/main/media/unascribed/png/fabric.png" alt="alt text" width="16"> Fabric                | 轻型模组加载器，非常适合安装优化模组或玩纯净生存增强类整合包。                                      |
-| Quilt                 | Fabric的一个分支，同样轻量                                                                      |
-| Fabric API, QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api                   |
-| Cleanroom             | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。  |
-| LiteLoader            | 轻量模组加载器，为Forge的轻量代替，现在已停止维护                                                  |
+
+| 模组加载器                                                                                                                                                     | 简单介绍                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| <img src="/assets/img/docs/auto-installing/forge@2x.png" alt="Forge icon" width="16"> Forge                                                        | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                                                          |
+| NeoForge                                                                                                                                                  | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge                                                      |
+| <img src="https://raw.githubusercontent.com/FabricMC/community/main/media/unascribed/png/fabric.png" alt="Fabric icon" width="16"> Fabric                 | 轻型模组加载器，非常适合安装优化模组或玩纯净生存增强类整合包。                                                            |
+| <img src="https://raw.githubusercontent.com/QuiltMC/art/master/brand/svg/quilt_logo_dark.svg" alt="Quilt icon" width="16"> Quilt                          | Fabric的一个分支，同样轻量                                                                           |
+| Fabric API, QSL/QFAPI                                                                                                                                     | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api                                        |
+| Cleanroom                                                                                                                                                 | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。                                |
+| LiteLoader                                                                                                                                                | 轻量模组加载器，为Forge的轻量代替，现在已停止维护                                                                |
+
 
 
 支持版本：  
