@@ -43,10 +43,10 @@ toc: true
 | --------- | ------- |
 | <img src="/assets/img/docs/auto-installing/forge@2x.png" alt="Forge icon" width="16">Forge | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装。 |
 | <img src="/assets/img/docs/auto-installing/neoforge@2x.png" alt="NeoForge icon" width="16">NeoForge | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge。 |
-| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16">Fabric | 轻型模组加载器，非常适合安装优化模组或玩纯净生存增强类整合包。 |
+| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16">Fabric | 轻型模组加载器，非常适合安装优化模组或纯净生存增强类模组。 |
 | <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16">Quilt | Fabric的一个分支，同样轻量。 |
 | <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16">Fabric API <br> <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api。 |
-| <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16">Cleanroom | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。 |
+| <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16">Cleanroom | 1.12.2版本Forge的一个优化代替，提供了相对更强的功能，仅支持1.12.2。 |
 | <img src="/assets/img/docs/auto-installing/chicken@2x.png" alt="LiteLoader icon" width="16">LiteLoader | 轻量模组加载器，为Forge的轻量代替，现在已停止维护。 |
 
 
