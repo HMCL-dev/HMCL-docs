@@ -13,25 +13,22 @@ jbuild() {
 }
 
 jbuild_mixed() {
-    jbuild --destination build/mixed --config "$@"
+    jbuild --destination _site --config "$@"
+}
+
+jbuild_single() {
+    jbuild --destination _site_single --config "$@"
+    rm -rf build/single/{assets,feed.xml,robots.txt,sitemap.xml}
+    cp -r _site_single/* _site/
 }
 
 echo "=== build mixed version ==="
 jbuild_mixed _config.yml,build/locales.yml,$1
 
-jbuild_single() {
-    jbuild --destination build/single --config "$@"
-}
-
 echo "=== build default version ==="
 jbuild_single _config.yml,build/default.yml,build/locales.yml,$1
 
-rm -rf build/single/assets
-rm -rf build/single/feed.xml
-rm -rf build/single/robots.txt
-rm -rf build/single/sitemap.xml
-cp -r build/single/* build/mixed/
-
+rm -rf build/data
 cp -r _data build/data
 
 exclude_target=("_data" "_site" "_includes" "_layouts")
@@ -82,16 +79,6 @@ for config in build/config.*.yml; do
 
     jbuild_single _config.yml,build/config.$language.yml,build/single.yml,build/locales.yml,$1
 
-    rm -rf build/single/assets
-    rm -rf build/single/feed.xml
-    rm -rf build/single/robots.txt
-    rm -rf build/single/sitemap.xml
-    cp -r build/single/* build/mixed/
-
     rm -rf _data
     cp -r build/data _data
 done
-
-mkdir -p _site
-rm -rf _site/*
-cp -r build/mixed/* _site/
