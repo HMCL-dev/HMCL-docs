@@ -39,13 +39,13 @@ toc: true
 下面是简单介绍：  
 
 
-| 模组加载器                                                                                                                                            | 简单介绍                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------  |
+| 模组加载器 | 简单介绍 |
+| --------- | ------- |
 | <img src="/assets/img/docs/auto-installing/forge@2x.png" alt="Forge icon" width="16"> Forge                                                          | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装                                       |
 | <img src="/assets/img/docs/auto-installing/neoforge@2x.png" alt="NeoForge icon" width="16"> NeoForge                                                 | 1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge                                               |
 | <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16"> Fabric                                                       | 轻型模组加载器，非常适合安装优化模组或玩纯净生存增强类整合包。                                       |
 | <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16"> Quilt                                                          | Fabric的一个分支，同样轻量                                                                       |
-| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16"> Fabric API <br> <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api|
+| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16"> Fabric API <br> <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI | 由于`Fabric`和`Quilt`比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api  |
 | <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16"> Cleanroom                                              | 1.12.2版本Forge的一个优化代替，提供了更强的功能，仅支持1.12.2 ，给在此版本游玩的玩家一个更好的选择。   |
 | <img src="/assets/img/docs/auto-installing/chicken@2x.png" alt="LiteLoader icon" width="16"> LiteLoader                                              | 轻量模组加载器，为Forge的轻量代替，现在已停止维护                                                   |
 
@@ -167,9 +167,13 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 - **使用“二分法”**：在“模组管理”页面，先禁用一半的模组，看游戏能否启动或出错。如果可以，说明问题出在被禁用的那一半里。不断重复此过程，直到找到引发问题的具体模组。
 - **查看日志文件**：如果你有能力，可以自行查看游戏日志来定位问题。
 
-**第三步：寻求帮助**
-- **正确地求助**：如果无法解决，请**导出完整的日志文件（点击崩溃页面的“导出游戏日志”按钮）**，然后**带着日志文件**去社区、论坛或群里求助。
-> **切记**：千万不要只截图或说“出错了”。**请务必提供游戏日志**
+**第三步：有效求助**
+如果无法自行解决，你需要向社区求助。但请记住，一个有效的求助包含**完整的日志文件**。
 
-> 导出日志方法：点击崩溃页面的“导出游戏日志”即可  
+> **如何正确求助**
+> 1.  在游戏崩溃后，点击 HMCL 弹出的错误窗口上的「**导出游戏日志**」按钮，它会生成一个 `minecraft-exported-crash-info-时间戳.zip` 文件。
+> 2.  带着**这个文件**去社区、论坛或群里提问，并简单描述你遇到的问题。
+>
+> **切记**：不要只截图，不要只说“我崩了”。**没有日志，谁也帮不了你。**
+
 ![CrashReportPage](/assets/img/docs/auto-installing/Crash_Report_Page.png)
