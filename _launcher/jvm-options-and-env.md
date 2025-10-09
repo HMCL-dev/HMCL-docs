@@ -1,9 +1,7 @@
 ---
 title: JVM 选项与环境变量
+description: 配置 JVM 参数和环境变量的说明
 date: 2025-04-20 23:18:02 +0800
-categories: 启动器
-hits: true
-toc: true
 ---
 
 ## JVM 选项

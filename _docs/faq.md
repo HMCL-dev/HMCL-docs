@@ -1,13 +1,10 @@
 ---
 title: 各大问题集合
 date: 2025-09-19 13:40:00 +0800
-categories: 启动器
-note: 本文由 LIPiston 编写，Mine-diamond 修改。
-hits: true
-toc: true
+author: LIPiston
+contributors: [Mine-diamond]
+note: 这是一个提供给新手或小白的阅读文档，旨在用最简单的方式帮你快速上手 HMCL 启动器和 Minecraft 游戏。如需深入了解某个主题，可点击文中提供的链接查看详细文档。
 ---
-
-> 这是一个提供给新手或小白的阅读文档，旨在用最简单的方式帮你快速上手 HMCL 启动器和 Minecraft 游戏。如需深入了解某个主题，可点击文中提供的链接查看详细文档。
 
 ### 如何登录账户
 
@@ -79,15 +76,15 @@ toc: true
 - [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
 - [Modrinth](https://modrinth.com/mods)
 
-HMCL 自动安装与使用模组教程： [跳转](/launcher/auto-installing.html)
+HMCL 自动安装与使用模组教程： [跳转]({{ '/launcher/auto-installing.html' | relative_url }})
 
 #### 安装模组后游戏报错怎么办
 
 安装模组后游戏无法启动或崩溃是常见的情况，通常是模组冲突或缺少前置模组导致的。别担心，大部分问题都能轻松解决。 
 
-在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： [跳转](/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
+在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： [跳转]({{ '/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8' | relative_url }})
 
-或者前往模组包报错排查手册中查看： [跳转](/modpack/error-handbook.html)
+或者前往模组包报错排查手册中查看： [跳转]({{ '/modpack/error-handbook.html' | relative_url }})
 
 如果无法解决错误，尝试 [寻求帮助](help.html)
 

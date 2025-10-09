@@ -1,0 +1,19 @@
+---
+layout: null
+---
+[
+{%- assign pages = site.pages | where: "layout", "document-collection" | where_exp: "item", "item.collection" | where_exp: "item", "item.skip_index != true" -%}
+{%- for page in pages -%}
+{"title":"{{ page.title }}","items":[
+{%- for article in site[page.collection] -%}
+{"title":"{{ article.title }}","subtitle":"{{ article.description | default: '' }}","url":"{{ article.url | absolute_url }}"}
+{%- unless forloop.last -%}
+,
+{%- endunless -%}
+{%- endfor -%}
+]}
+{%- unless forloop.last -%}
+,
+{%- endunless -%}
+{%- endfor -%}
+]

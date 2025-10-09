@@ -1,0 +1,45 @@
+main:
+  - title: FAQ
+    url: /faq.en.html
+
+docs:
+  - title: Questions
+    children:
+      - title: FAQ
+        url: /faq.en.html
+      - title: Launcher
+        url: /launcher.en.html
+      - title: Modpack
+        url: /modpack.en.html
+  - title: User Guide
+    children:
+      - title: Isolation
+        url: /launcher/isolation.en.html
+      - title: Offline Skin
+        url: /launcher/offline-skin.en.html
+      - title: Automatic Installing
+        url: /launcher/auto-installing.en.html
+      - title: Shader
+        url: /launcher/shader.en.html
+      - title: Set Item Details
+        url: /launcher/set-item-details.en.html
+  - title: Developer Guide
+    children:
+      - title: Datapack
+        url: /launcher/datapack.en.html
+      - title: Serverpack
+        url: /modpack/serverpack.en.html
+      - title: Authlib Injector
+        url: /launcher/authlib-injector.en.html
+  - title: Other
+    children:
+      - title: Change Log
+        url: /changelog.en.html
+      - title: Contribution Guide
+        url: /contribution.en.html
+      - title: Official Website
+        url: https://hmcl.huangyuhui.net
+      - title: Project Repository
+        url: https://github.com/HMCL-dev/HMCL
+      - title: Document Repository
+        url: https://github.com/HMCL-dev/HMCL-docs

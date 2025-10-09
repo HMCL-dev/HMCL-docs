@@ -1,0 +1,9 @@
+byline:
+  author:
+    before: "This article was created by "
+    after: ""
+    unname: "unnamed user"
+  contributors:
+    before: " and edited by "
+    after: ""
+  end: "."

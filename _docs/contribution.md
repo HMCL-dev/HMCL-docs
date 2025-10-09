@@ -1,12 +1,7 @@
 ---
-title: 为 HMCL 帮助文档出一份力
+title: 贡献指南
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 huanghongxun 编写。
-hits: true
-toc: true
+author: huanghongxun
 ---
 
-如果你认为你有能力为 HMCL 添加高质量的帮助文档，或希望修改错误，你可以到 [https://github.com/HMCL-dev/HMCL-docs](https://github.com/HMCL-dev/HMCL-docs) 仓库中发 Pull Request，或者提 Issue。
-
-或者你可以进入我们的 [Discord](https://discord.gg/jVvC7HfM6U) 或 [HMCL 用户群](/groups.html) 群以向 HMCL 反馈。
+如果您有足够的能力为 HMCL 添加高质量的帮助文档或修复一些问题，欢迎您到 [Github](https://github.com/HMCL-dev/HMCL-docs) 中创建 Pull Request 或 Issue 此外您也可以在 [Discord](https://discord.gg/jVvC7HfM6U) 或 [HMCL 用户群]({{ '/groups.html' | relative_url }})中进行反馈。

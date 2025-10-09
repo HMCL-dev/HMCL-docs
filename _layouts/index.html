@@ -1,0 +1,17 @@
+---
+layout: document
+---
+
+{% for group in site.data.navigation.docs %}
+<h1 id="{{ group.title }}">{{ group.title }}</h1>
+<ul>
+{% for item in group.children %}
+<li>
+  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+  {% if item.description %}
+  <p>{{ item.description }}</p>
+  {% endif %}
+</li>
+{% endfor %}
+</ul>
+{% endfor %}

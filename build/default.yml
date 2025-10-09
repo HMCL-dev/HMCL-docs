@@ -1,0 +1,7 @@
+cache_dir: .jekyll-cache/default
+exclude:
+  - assets/
+  - build/
+  - README.md
+  - LICENSE
+  - "*.*.*"

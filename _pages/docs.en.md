@@ -1,0 +1,4 @@
+---
+title: Documents
+collection: docs
+---

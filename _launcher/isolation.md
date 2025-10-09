@@ -1,10 +1,8 @@
 ---
 title: 全局版本隔离
+description: 避免多个游戏版本的存档、模组和配置冲突
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 LIPiston 编写。
-hits: true
-toc: true
+author: LIPiston
 ---
 
 这是一个游戏客户端很多不方便寻找的最佳解决方案<br/>
@@ -40,4 +38,3 @@ toc: true
 ![](/assets/img/docs/Global-version-isolation/img1.png)
 
 ~~善用该功能也可为你的磁盘剩下不少的空间~~，现在反思过来其实都差不多
-

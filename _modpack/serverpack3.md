@@ -1,10 +1,8 @@
 ---
-title: Nginx作为静态资源服务器，使用HMCL启动器配置服务器客户端自动更新
+title: 使用 HMCL 配置服务器客户端自动更新
+description: 使用 Nginx 搭建整合包更新服务
 date: 2023-01-11 14:13:45 +0800
-categories: 整合包
-note: 本文由 buggzd 编写。
-hits: true
-toc: true
+author: buggzd
 ---
 
 > 阅读本文前，请先阅读HMCL官方文章：https://docs.hmcl.net/modpack/serverpack.html

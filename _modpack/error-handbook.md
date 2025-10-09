@@ -1,9 +1,8 @@
 ---
 title: 模组包报错排查手册
+description: 排查和解决整合包相关问题
 date: 2025-05-24 13:39:36 +0800
-categories: 整合包
-note: 本文由 LIPiston 编写。
-toc: true
+author: LIPiston
 ---
 
 ## 文件夹结构
@@ -43,7 +42,7 @@ toc: true
         ...
 ```
 
-我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转](/launcher/global-version-isolation.html)
+我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转]({{ '/launcher/global-version-isolation.html' | relative_url }})
 
 ## 简单排查
 

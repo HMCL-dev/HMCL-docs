@@ -1,10 +1,8 @@
 ---
 title: 设置项详解
+description: HMCL 各项设置的详细说明，包括全局游戏设置、外观、下载等
 date: 2023-6-09 10:26:00 +0800
-categories: 启动器
-note: 本文由 MemoryShadow 编写。
-hits: true
-toc: true
+author: MemoryShadow
 ---
 
 ## 引言
@@ -167,7 +165,7 @@ OpenAL是一个跨平台的3D音频API，可以用于在多个操作系统上播
 ## 参考文章
 
 - [什么是JRE?](https://www.ibm.com/cn-zh/topics/jre "点击查看")
-- [整合包自带 Java](/modpack/modpack-in-java.md "点击查看")
+- [整合包自带 Java]({{ '/modpack/modpack-in-java.md "点击查看"' | relative_url }})
 - [如何获取Minecraft的游戏日志?](https://memoryshadow.cn/index.php/2023/06/03/how-do-i-get-minecraft-game-logs/ "点击查看")
 - [什么是JVM?](https://www.ibm.com/support/pages/ibm-i-%E4%B8%8Ajava-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%80%E4%BB%8B "点击查看")
 - [什么是GC?](https://blog.csdn.net/weixin_44908159/article/details/123626886 "点击查看")

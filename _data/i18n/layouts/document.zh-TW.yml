@@ -1,0 +1,9 @@
+byline:
+  author:
+    before: "本文由 "
+    after: " 創建"
+    unname: 未署名用戶
+  contributors:
+    before: "並由 "
+    after: " 編輯"
+  end: "。"

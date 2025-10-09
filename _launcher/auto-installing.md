@@ -1,10 +1,8 @@
 ---
-title: 自动安装与模组下载简介
+title: 自动安装与模组下载
+description: 安装 Forge、Fabric、LiteLoader、OptiFine 及模组的教程
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 asdqp233 编写。
-hits: true
-toc: true
+author: asdqp233
 ---
 
 ## 安装 Mod 加载器
@@ -71,7 +69,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 #### OptiFine
 
-[详情请查阅此](/launcher/shader.html)
+[详情请查阅此]({{ '/launcher/shader.html' | relative_url }})
 
 ### 手动安装
 
