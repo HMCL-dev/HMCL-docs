@@ -119,6 +119,10 @@ defaults:
       type: downloads
     values:
       toc: false
+  - scope:
+      path: _pages
+    values:
+      permalink: /:basename.html
 
 # liquid:
 #   error_mode: warn
