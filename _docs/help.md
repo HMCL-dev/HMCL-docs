@@ -1,7 +1,7 @@
 ---
 title: 寻求帮助
 date: 2023-08-09 11:12:00 +0800
-note: 本文由 zkitefly 编写。
+author: zkitefly
 ---
 
 ## QQ 群聊

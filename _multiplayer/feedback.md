@@ -1,7 +1,7 @@
 ---
 title: HMCL x Terracotta | 陶瓦联机
 date: 2025-10-07 18:44:00 +0800
-note: 本文由 Burning_TNT 编写。
+author: Burning_TNT
 ---
 
 ## 反馈
