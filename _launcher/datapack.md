@@ -1,10 +1,7 @@
 ---
 title: 数据包制作指南
 date: 2021-08-22 23:18:02 +0800
-categories: 启动器
-note: 本文由 huanghongxun 编写。
-hits: true
-toc: true
+author: huanghongxun
 ---
 
 本指南只介绍如何制作一个 HMCL 可导入的数据包压缩包。

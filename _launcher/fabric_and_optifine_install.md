@@ -1,10 +1,7 @@
 ---
 title: 同时安装 Fabric & OptiFine
 date: 2023-01-04 11:30:00 +0800
-categories: 启动器
-note: 本文由 zkitefly 编写。
-hits: true
-toc: true
+author: zkitefly
 ---
 
 在 HMCL 的自动安装中，如果先选择了 Fabric 或 OptiFine ，HMCL 就会提示他们互不兼容。

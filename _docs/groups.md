@@ -1,10 +1,10 @@
 ---
 title: 加入 HMCL 用户群
 date: 2024-03-05 17:00:00 +0800
-categories: 启动器
-note: 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容。
-hits: true
-toc: true
+author: Glavo
+contributors:
+  - 8Mi_Yile
+  - zkitefly
 ---
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：
