@@ -314,3 +314,12 @@ compress_html:
 
 head_scripts:
   - /assets/js/theme.js
+
+# jekyll-feed
+feed:
+  collections:
+    - docs
+    - launcher
+    - modpack
+    - eula
+    - multiplayer
