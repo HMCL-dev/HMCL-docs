@@ -1,0 +1,13 @@
+---
+layout: collection
+classes: wide
+toc: false
+---
+
+{%- if site.breadcrumbs -%}
+{%- unless page.breadcrumbs -%}
+<style>.breadcrumbs{display:none}</style>
+{%- endunless -%}
+{%- endif -%}
+
+{{ content }}

@@ -1,10 +1,7 @@
 ---
 title: 加入 HMCL 报错崩溃交流群
 date: 2024-03-05 17:00:00 +0800
-categories: 启动器
-note: 本文由 zkitefly 编写。
-hits: true
-toc: true
+author: zkitefly
 ---
 
 ![](/assets/img/docs/groups/crash.png)

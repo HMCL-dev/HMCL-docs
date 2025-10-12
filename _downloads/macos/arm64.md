@@ -1,9 +1,6 @@
 ---
 title: 下载适用于 macOS ARM64 的 HMCL 和 Minecraft 依赖的 Java
 date: 2022-12-03 17:30:00 +0800
-categories: Java 下载
-hits: true
-toc: false
 ---
 
 正在前往 Java 下载页面，请向下滚动点击 `DMG` 安装包下载按钮，然后等待 Java 安装程序下载完成，最后启动安装程序，依照提示安装 Java。

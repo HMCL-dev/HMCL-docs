@@ -1,10 +1,8 @@
 ---
 title: Authlib-Injector 服务器设置指南
+description: 配置默认的验证服务器
 date: 2021-08-22 23:18:02 +0800
-categories: 启动器
-note: 本文由 huanghongxun 编写。
-hits: true
-toc: true
+author: huanghongxun
 ---
 
 ## 背景
@@ -21,7 +19,7 @@ toc: true
 
 `authlib-injectors.json` 文件的示例如下
 
-```
+```json
 {
     "urls": [
         "https://example.yggdrasil.yushi.moe/"
