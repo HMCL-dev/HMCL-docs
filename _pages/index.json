@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 [
 {%- assign pages = site.pages | where: "layout", "document-collection" | where_exp: "item", "item.collection" | where_exp: "item", "item.skip_index != true" -%}
