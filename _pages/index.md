@@ -1,4 +1,5 @@
 ---
+layout: document
 title: HMCL 新手导航
 author: wifi-left
 ---

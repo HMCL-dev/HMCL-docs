@@ -122,7 +122,13 @@ defaults:
   - scope:
       path: _pages
     values:
+      layout: document-collection
       permalink: /:basename.html
+  - scope:
+      path: "_pages/*.json"
+    values:
+      layout: null
+      permalink: /:basename.json
 
 # liquid:
 #   error_mode: warn
