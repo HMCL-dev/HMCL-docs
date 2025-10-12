@@ -19,27 +19,27 @@ sass:
 collections:
   docs:
     output: true
-    permalink: /:path.html
+    permalink: /:path:output_ext
   launcher:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
   changelog:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
   changelogs:
     output: false
   modpack:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
   eula:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
   multiplayer:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
   downloads:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
 # Handling Reading
 # safe: false
@@ -92,7 +92,7 @@ baseurl: ""
 # show_dir_listing: false
 
 # Outputting
-permalink: /:categories/:title.html
+permalink: /:categories/:title:output_ext
 # paginate_path: /page:num
 timezone: Asia/Shanghai
 # minimal-mistakes (with jekyll-paginate)
@@ -123,12 +123,7 @@ defaults:
       path: _pages
     values:
       layout: document-collection
-      permalink: /:basename.html
-  - scope:
-      path: "_pages/*.json"
-    values:
-      layout: null
-      permalink: /:basename.json
+      permalink: /:basename:output_ext
 
 # liquid:
 #   error_mode: warn
