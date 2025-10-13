@@ -2,17 +2,10 @@
 layout: document
 ---
 
-{% assign root_version = '' %}
 {% assign channel = page.channel | default: 'stable' %}
 {% assign changelogs = site.changelogs | where_exp: "item", "item.relative_path contains channel" | reverse %}
 {% for item in changelogs %}
-  {% assign path = item.relative_path |  split: '/' %}
   {% assign version = item.slug %}
-  {% assign current_root_version = path[2] %}
-  {% if current_root_version != root_version %}
-  {% assign root_version = current_root_version %}
-  <h1 id="HMCL-{{ root_version }}">HMCL {{ root_version }}</h1>
-  {% endif %}
-  <h2 id="{% if forloop.first %}nowchange{% else %}HMCL-{{ version }}{% endif %}">HMCL {{ version }}</h2>
+  <h1 id="{% if version == page.nowchange %}nowchange{% elsif version == page.nowpreview %}nowpreview{% else %}HMCL-{{ version }}{% endif %}">HMCL {{ version }}</h1>
   <div>{{ item.content | markdownify }}</div>
 {% endfor %}
