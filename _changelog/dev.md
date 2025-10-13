@@ -8,7 +8,7 @@ hits: true
 toc: true
 ---
 
-<h1 id="nowchange">HMCL 3.7.0.300</h1>
+<h1 id="nowchange">HMCL 3.7.0.301</h1>
 
 详细版本介绍: [cv43345643](https://www.bilibili.com/opus/1123164528073244704)
 
