@@ -13,7 +13,7 @@ toc: true
 版本介绍: [cv43348716](https://www.bilibili.com/opus/1123235936240402439)
 
 - 启动器
-    - GP-4223: 在「设置 > 通用」添加“提前预览 HMCL 版本”选项 (by Glavo)<br>
+    - GP-4223: 在“设置 > 通用”添加“提前预览 HMCL 版本”选项 (by Glavo)<br>
       详情请见完整更新日志: [cv43348716](https://www.bilibili.com/opus/1123235936240402439)
     - GP-4088: 当离线账户名称超过 16 字符时弹出警告 (by ShulkerSakura)
 - 下载
