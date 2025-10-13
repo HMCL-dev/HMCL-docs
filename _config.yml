@@ -50,31 +50,34 @@ include:
 collections:
   docs:
     output: true
-    permalink: /:path.html
+    permalink: /:path:output_ext
 
   launcher:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
   changelog:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path:output_ext
+
+  changelogs:
+    output: false
 
   modpack:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
   eula:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
   multiplayer:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
   downloads:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:path:output_ext
 
 defaults:
   - scope:
