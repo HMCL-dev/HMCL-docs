@@ -8,7 +8,19 @@ hits: true
 toc: true
 ---
 
-<h1 id="nowchange">HMCL 3.6.18</h1>
+<h1 id="nowchange">HMCL 3.6.20</h1>
+
+版本介绍: [cv43348716](https://www.bilibili.com/opus/1123235936240402439)
+
+- 启动器
+    - GP-4223: 在“设置 > 通用”添加“提前预览 HMCL 版本”选项 (by Glavo)<br>
+      详情请见完整更新日志: [cv43348716](https://www.bilibili.com/opus/1123235936240402439)
+    - GP-4088: 当离线账户名称超过 16 字符时弹出警告 (by ShulkerSakura)
+- 下载
+    - GP-4120: 更新 unlisted-versions-of-minecraft 镜像源地址 (by 8Mi_Yile)
+    - GP-4626: 更新模组下载页游戏版本列表至 1.21.10 (by Glavo)
+
+# HMCL 3.6.18
 
 版本介绍: [cv43162536](https://www.bilibili.com/opus/1116529228834144258)
 
