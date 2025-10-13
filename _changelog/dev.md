@@ -10,7 +10,7 @@ toc: true
 
 <h1 id="nowchange">HMCL 3.7.0.300</h1>
 
-详细版本介绍: [TODO]()
+详细版本介绍: [cv43345643](https://www.bilibili.com/opus/1123164528073244704)
 
 - GP-4608: 更新陶瓦联机至 0.3.10 (by Burning_TNT)
 - GP-4617: 更新 authlib-injector 至 1.2.6 (by Wulian233)
@@ -24,6 +24,7 @@ toc: true
 - GP-4622: 优化模组加载器检测机制 (by Glavo)
 - GP-4635: 将模组中文译名中的小括号统一为半角括号 (by Glavo)
 - GP-4471: 在游戏下载界面提示版本支持状态 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
 
 错误修复:
 
