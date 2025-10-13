@@ -8,7 +8,58 @@ hits: true
 toc: true
 ---
 
-<h1 id="nowchange">HMCL 3.6.18.297</h1>
+<h1 id="nowchange">HMCL 3.7.0.301</h1>
+
+详细版本介绍: [cv43345643](https://www.bilibili.com/opus/1123164528073244704)
+
+- GP-4608: 更新陶瓦联机至 0.3.10 (by Burning_TNT)
+- GP-4617: 更新 authlib-injector 至 1.2.6 (by Wulian233)
+- GP-4626: 更新模组下载页游戏版本列表至 1.21.10 (by Glavo)
+- GP-4621, GP-4636, GP-4638, GP-4659: 优化模组管理页面 (by Glavo)
+- GP-4641, GP-4652, GP-4654, GP-4658: 支持读取更多模组的元数据 (by Glavo)
+- GP-3231: 优先使用模组名称匹配模组翻译 (by Zkitefly)
+- GP-4601: 在全局设置中储存是否曾向用户展示过陶瓦联机用户须知 (by Burning_TNT)
+- GP-4609: 隐藏空的陶瓦联机玩家列表 (by Burning_TNT)
+- GP-4611: 更新陶瓦联机时显示反馈收集表 (by Burning_TNT)
+- GP-4622: 优化模组加载器检测机制 (by Glavo)
+- GP-4635: 将模组中文译名中的小括号统一为半角括号 (by Glavo)
+- GP-4471: 在游戏下载界面提示版本支持状态 (by Glavo)
+- 优化软件文案，修订翻译 (by 3gf8jv4dv)
+
+错误修复:
+
+- GP-4585: 修复部分按钮点击后始终保持焦点状态的问题 (by Wulian233)
+- GP-4596: 修复 FetchTask 不遵循代理设置的问题 (by Glavo)
+- GP-4619: 修复陶瓦联机和部分 MacOS 版本的兼容性 (by Burning_TNT)
+- GP-4625: 修复本地安装升级 Cleanroom 相关问题 (by 辞庐)
+- GP-4631: 修复颠倒英语中括号显示错误的问题 (by Glavo)
+- GP-4624: 修复导出游戏崩溃信息后弹窗没有正常弹出的问题 (by 辞庐)
+- GP-4646: 修复 Minecraft 1.21.9+ 安装了 NeoForge 的实例未使用 NeoForge 图标作为实例图标的问题 (by 3gf8jv4dv)
+- GP-4648: 修复总是将同时兼容 Forge 和 NeoForge 的模组识别为 Forge 模组的问题 (by Glavo)
+- GP-4660: 修复模组下载页面在高分屏上图标模糊的问题 (by Glavo)
+
+# HMCL 3.7.0.300
+
+详细版本介绍: [cv43252149](https://www.bilibili.com/opus/1119832333534363699)
+
+- GP-4215: 在启动器中内置 Terracotta | 陶瓦联机 (by Burning_TNT)<br>
+  Terracotta | 陶瓦联机 是第三方提供的开源免费联机工具，基于 EasyTier 开源项目开发。
+  我们基于该工具为所有用户免费提供开箱即用的联机功能。<br>
+  详情请参见这篇文章: [HMCL x Terracotta | 陶瓦联机全面开放](https://www.bilibili.com/opus/1119528739516973063)
+- GP-4566: 更新模组下载页游戏版本列表至 1.21.9 (by 3gf8jv4dv)
+- GP-3229: 优化模组管理布局 (by zkitefly)
+- GP-4521: 支持通过环境变量控制 UI 缩放比例 (by Glavo)
+- GP-4577: 优化对颠倒的英语的支持 (by Glavo)
+- GP-4592: 更新中文（文言）环境中其他语言名称的译法 (by 3gf8jv4dv)
+
+错误修复:
+
+- GP-4568: 修复在短时间内连续点击“行按钮”只会更改一次状态的问题 (by 辞庐)
+- GP-4571: 修复「外观 - 不透明度」滑块的刻度线在不同滑块位置时排布不统一的问题 (by 辞庐)
+- GP-4583: 修复“不自动添加 Java 虚拟机优化参数”选项未保存至配置文件的问题 (by Glavo)
+
+
+# HMCL 3.6.18.297
 
 详细版本介绍: [cv43205532](https://www.bilibili.com/opus/1117948655408513026)
 
