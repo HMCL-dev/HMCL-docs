@@ -1,8 +1,7 @@
 ---
 title: 为 HMCL 帮助文档出一份力
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 huanghongxun 编写。
+author: huanghongxun
 hits: true
 toc: true
 ---
