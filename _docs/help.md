@@ -2,8 +2,6 @@
 title: 寻求帮助
 date: 2023-08-09 11:12:00 +0800
 author: zkitefly
-hits: true
-toc: true
 ---
 
 ## QQ 群聊

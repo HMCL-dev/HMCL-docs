@@ -2,8 +2,6 @@
 title: 加入 HMCL 报错崩溃交流群
 date: 2024-03-05 17:00:00 +0800
 author: zkitefly
-hits: true
-toc: true
 ---
 
 ![](/assets/img/docs/groups/crash.png)

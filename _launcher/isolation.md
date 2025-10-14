@@ -2,8 +2,6 @@
 title: 全局版本隔离
 date: 2021-10-09 23:18:02 +0800
 author: LIPiston
-hits: true
-toc: true
 ---
 
 这是一个游戏客户端很多不方便寻找的最佳解决方案<br/>

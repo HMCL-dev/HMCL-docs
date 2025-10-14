@@ -4,8 +4,6 @@ date: 2021-10-09 23:18:02 +0800
 author: qiaoshouzi
 contributors:
   - kitefly
-hits: true
-toc: true
 ---
 
 # 离线模式下更换皮肤

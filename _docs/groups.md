@@ -5,8 +5,6 @@ author: Glavo
 contributors:
   - 8Mi_Yile
   - zkitefly
-hits: true
-toc: true
 ---
 
 欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：

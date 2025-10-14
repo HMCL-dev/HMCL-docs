@@ -2,7 +2,6 @@
 title: 模组包报错排查手册
 date: 2025-05-24 13:39:36 +0800
 author: LIPiston
-toc: true
 ---
 
 ## 文件夹结构

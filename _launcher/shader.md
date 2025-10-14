@@ -3,8 +3,6 @@ title: 光影
 date: 2021-10-09 23:18:02 +0800
 contributors:
   - hejiehao
-hits: true
-toc: true
 ---
 
 ## 安装 OptiFine
