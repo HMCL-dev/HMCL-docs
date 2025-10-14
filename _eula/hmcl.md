@@ -1,7 +1,6 @@
 ---
 title: Hello Minecraft! Launcher 用户协议
 date: 2021-09-21 23:26:00 +0800
-categories: 协议
 note: 更新时间 2021 年 9 月 21 日
 hits: true
 toc: true

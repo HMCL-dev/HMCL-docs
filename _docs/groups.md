@@ -1,8 +1,10 @@
 ---
 title: 加入 HMCL 用户群
 date: 2024-03-05 17:00:00 +0800
-categories: 启动器
-note: 本文由 Glavo 编写，8Mi_Yile 和 zkitefly 润色了部分内容。
+author: Glavo
+contributors:
+  - 8Mi_Yile
+  - zkitefly
 hits: true
 toc: true
 ---

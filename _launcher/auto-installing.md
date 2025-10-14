@@ -1,8 +1,7 @@
 ---
 title: 自动安装与模组下载简介
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 asdqp233 编写。
+author: asdqp233
 hits: true
 toc: true
 ---

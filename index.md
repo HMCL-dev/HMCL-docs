@@ -1,6 +1,6 @@
 ---
 title: HMCL 新手导航
-note: 由 wifi-left 进行整理。
+author: wifi-left
 hits: true
 toc: true
 ---

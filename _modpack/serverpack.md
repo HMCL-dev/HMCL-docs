@@ -1,8 +1,7 @@
 ---
 title: 服务端自动更新整合包制作教程
 date: 2021-08-22 23:18:02 +0800
-categories: 整合包
-note: 本文由 huanghongxun 编写。
+author: huanghongxun
 hits: true
 toc: true
 ---
