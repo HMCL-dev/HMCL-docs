@@ -137,3 +137,12 @@ footer:
       url: "https://github.com/HMCL-dev/HMCL"
     - label: "粤ICP备18071565号"
       url: "https://beian.miit.gov.cn"
+
+# jekyll-feed
+feed:
+  collections:
+    - docs
+    - launcher
+    - modpack
+    - eula
+    - multiplayer
