@@ -2,8 +2,6 @@
 title: 数据包制作指南
 date: 2021-08-22 23:18:02 +0800
 author: huanghongxun
-hits: true
-toc: true
 ---
 
 本指南只介绍如何制作一个 HMCL 可导入的数据包压缩包。

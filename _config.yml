@@ -18,14 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin_dark: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-locale: "zh-CN"
+minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin_dark: dark
+locale: zh
 
-title: Hello Minecraft! Launcher 帮助文档
-email: hmcl@huangyuhui.net
-description: >- # this means to ignore newlines until "baseurl:"
-  HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
+title: HMCL 文档
+description: HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://docs.hmcl.net
 copyright: huanghongxun
@@ -91,14 +89,14 @@ defaults:
       comments: false
       sidebar:
         nav: docs
+      hits: true
+      toc: true
+      toc_sticky: true
   - scope:
-      path: "assets/img"
+      path: ""
+      type: downloads
     values:
-      image: true
-  - scope:
-      path: "assets/css"
-    values:
-      css: true
+      toc: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -109,7 +107,6 @@ defaults:
 # their entries' file path in the `include:` list.
 
 exclude:
-  - scripts/
   - README.md
   - LICENSE
 
@@ -133,11 +130,11 @@ head_scripts:
 
 footer:
   links:
-    - label: "Github"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/HMCL-dev/HMCL"
-    - label: "粤ICP备18071565号"
-      url: "https://beian.miit.gov.cn"
+    - label: Github
+      icon: fab fa-fw fa-github
+      url: https://github.com/HMCL-dev/HMCL
+    - label: 粤ICP备18071565号
+      url: https://beian.miit.gov.cn
 
 # jekyll-feed
 feed:

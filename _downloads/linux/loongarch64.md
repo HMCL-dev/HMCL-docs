@@ -1,8 +1,6 @@
 ---
 title: 下载 HMCL 和 Minecraft 依赖的 Java
 date: 2023-09-05 14:00:00 +0800
-hits: true
-toc: false
 ---
 
 龙芯平台存在 “**新世界**” 和 “**旧世界**” 两个 ABI，不同 ABI 的 Java 暂时互不兼容。

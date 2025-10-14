@@ -2,8 +2,6 @@
 title: Nginx作为静态资源服务器，使用HMCL启动器配置服务器客户端自动更新
 date: 2023-01-11 14:13:45 +0800
 author: buggzd
-hits: true
-toc: true
 ---
 
 > 阅读本文前，请先阅读HMCL官方文章：https://docs.hmcl.net/modpack/serverpack.html

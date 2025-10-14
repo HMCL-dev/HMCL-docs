@@ -1,8 +1,6 @@
 ---
 title: 下载 HMCL-Snapshot 版本
 date: 2024-01-09 22:00:00 +0800
-hits: true
-toc: false
 ---
 
 正在前往 HMCL-Snapshot 下载页面，点击下载即可。

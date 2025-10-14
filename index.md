@@ -1,8 +1,6 @@
 ---
 title: HMCL 新手导航
 author: wifi-left
-hits: true
-toc: true
 ---
 
 ## 注意 Notice

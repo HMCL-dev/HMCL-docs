@@ -2,8 +2,6 @@
 title: 设置项详解
 date: 2023-6-09 10:26:00 +0800
 author: MemoryShadow
-hits: true
-toc: true
 ---
 
 ## 引言

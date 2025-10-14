@@ -2,8 +2,6 @@
 title: HMCL x Terracotta | 陶瓦联机
 date: 2025-10-07 18:44:00 +0800
 author: Burning_TNT
-hits: true
-toc: true
 ---
 
 ## Terracotta | 陶瓦联机

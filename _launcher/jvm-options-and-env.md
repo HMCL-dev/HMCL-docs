@@ -1,8 +1,6 @@
 ---
 title: JVM 选项与环境变量
 date: 2025-04-20 23:18:02 +0800
-hits: true
-toc: true
 ---
 
 ## JVM 选项

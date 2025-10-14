@@ -4,8 +4,6 @@ date: 2025-09-19 13:40:00 +0800
 author: LIPiston
 contributors:
   - Mine-diamond
-hits: true
-toc: true
 ---
 
 > 这是一个提供给新手或小白的阅读文档，旨在用最简单的方式帮你快速上手 HMCL 启动器和 Minecraft 游戏。如需深入了解某个主题，可点击文中提供的链接查看详细文档。
