@@ -1,4 +1,7 @@
 # HMCL-docs
+
+[![Build Status](https://drone.hmcl.net/api/badges/huanghongxun/HMCL-docs/status.svg)](https://drone.hmcl.net/huanghongxun/HMCL-docs)
+
 Hello Minecraft! Launcher 帮助文档仓库
 
 您可以通过对本仓库提交 Pull Request 的方式来为 HMCL 帮助文档贡献自己的力量！
@@ -17,11 +20,12 @@ Hello Minecraft! Launcher 帮助文档仓库
 请注意，你在使用 Typora 时，请在 文件->偏好设置->图像 中，将 `插入图片时...` 选项修改为复制到指定路径为 `/assets/img/docs/${filename}` 目录
 
 ## 贡献
+
 本仓库组织方式为一篇文章放在一个目录中。如果你要提交 PR，请不要将 md 文件直接放在根目录下。
 
 每篇文章结构如下：
 ```
-_<category>/<article>.md
+_<collection>/<article>.md
 
 assets
  * img
@@ -32,9 +36,9 @@ assets
        * ...
 ```
 
-其中，`<category>` 表示分类，如 `multiplayer` 表示多人游戏、`modpack` 表示整合包，`<article>` 表示你的文章的英文名（尖括号表示占位符，请替换为文章名称，不要直接提交 '`<article>`'），请仅使用英文字母、数字、中划线、下划线字符，不要使用空格、中文字符。请确保 md 文件名和文件夹名一致。具体可以参考已有文章目录格式。
+其中，`<collection>` 表示集合，如 `multiplayer` 表示多人游戏、`modpack` 表示整合包，`<article>` 表示你的文章的英文唯一标识（尖括号表示占位符，不要直接提交 `<article>`，请确保其唯一且简短）请仅使用英文字母、数字、中划线、下划线字符作为唯一标识，不要使用空格、英文句点、中文字符。请确保资源文件夹名和 md 文件名一致，具体可以参考已有文章目录格式。
 
-每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成。文章的图片请放置到 `/assets/img/docs/<article>` 目录中。
+每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成（文章的图片请放置到 `/assets/img/docs/<article>` 目录中）在 Markdown 文件中请确保包含 [Front Matter](https://jekyllrb.com/docs/front-matter/) 其中应提供文章的一些元数据（如标题 `title` 更新日期 `date` 等）在 `_config.yml` 的 `defaults` 中配置有默认值的可以不指定。
 
 ### 添加新文章
 
@@ -49,3 +53,57 @@ assets
 ### 更新索引
 
 在添加或修改文章后，请更新索引文件 `index.json`，以便 HMCL 展示你新添加的文件。
+
+### 本地部署
+
+项目是基于 Jekyll 实现的静态网站，使用 Minimal Mistakes 主题。
+
+如何您想更深入的参与项目文档的维护，可参阅以下内容。
+
+#### 前置条件
+
+- `Ruby` 版本大于等于 `3.1` （项目构建版本 `3.4`）
+
+#### 安装 bundle
+
+> 环境中已安装 `bundle` 可跳过本节
+
+```shell
+gem install bundler
+```
+
+#### 下载源码
+
+> 以 `git` 为例，您也可以通过 `github` 下载源码压缩包或其它方式下载源码。
+
+```shell
+# 克隆项目到本地
+git clone https://github.com/HMCL-dev/HMCL-docs.git
+# 进入项目根目录
+cd HMCL-docs
+```
+
+#### 安装依赖
+
+```shell
+# 配置镜像（请自行根据网络环境决定是否需要使用镜像，此处以腾讯云镜像为例）
+bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
+# 配置项目依赖安装路径
+bundle config path vendor/bundle
+# 安装项目依赖
+bundle install
+```
+
+#### 启动本地开发服务器
+
+```shell
+bundle exec jekyll serve
+```
+
+#### 本地构建产物
+
+> 根据需要配置环境变量，配置 `JEKYLL_ENV=production` 表示生产环境构建。
+
+```shell
+bundle exec jekyll build
+```
