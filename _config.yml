@@ -30,6 +30,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://docs.hmcl.net
 copyright: huanghongxun
 copyright_url: https://github.com/huanghongxun
+logo: /assets/img/hmcl.png
 breadcrumbs: true
 
 # Build settings
