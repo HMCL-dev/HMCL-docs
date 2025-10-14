@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         position: relative;
     `;
 
-    let timeLeft = 10 ; // 倒计时秒数
+    let timeLeft = 10 ; /* 倒计时秒数 */
     const closeButton = document.createElement('button');
     closeButton.textContent = '我已了解';
     closeButton.style.cssText = `
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.appendChild(modalContent);
     document.body.appendChild(modal);
 
-    // 倒计时功能
+    /* 倒计时功能 */
     const countdownInterval = setInterval(() => {
         timeLeft--;
         document.getElementById('countdown').textContent = timeLeft;
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 1000);
 
-    // 添加关闭按钮事件
+    /* 添加关闭按钮事件 */
     closeButton.addEventListener('click', () => {
         if (!closeButton.disabled) {
             document.body.removeChild(modal);

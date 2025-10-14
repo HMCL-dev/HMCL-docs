@@ -18,8 +18,9 @@ No redirect? [Click here](https://www.java.com/download)
 
 
 <script>
+    /* 等待 5 秒. */
     setTimeout(function() {
         window.location.href = "https://www.java.com/download";
-    }, 5000); // 等待 5 秒.
+    }, 5000);
 </script>
 

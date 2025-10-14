@@ -12,7 +12,8 @@ toc: false
 The page has moved to [/downloads/linux/loongarch64](/downloads/linux/loongarch64.html)
 
 <script>
+    /* 等待 5 秒. */
     setTimeout(function() {
         window.location.href = "{{ '/downloads/linux/loongarch64.html' | relative_url  }}";
-    }, 5000); // 等待 5 秒.
+    }, 5000);
 </script>
