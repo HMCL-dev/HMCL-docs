@@ -23,11 +23,12 @@ author: Burning_TNT
 需要特别提醒的是：联机功能不会更不能取代 Minecraft: Java Edition 服务器。
 它的主要目标依然是让朋友之间能共同游玩，而不是长时间的对外开放。
 
-最后，我想感谢一切参与到 EasyTier、Terracotta | 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 easytier.cn 深入了解这一项目。
+最后，我想感谢一切参与到 EasyTier、Terracotta \| 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 easytier.cn 深入了解这一项目。
 
 <script>
-    // TODO: Read info from query argument 'v' and 'launcher_version' to determine the 'channel' argument in url.
+    /* TODO: Read info from query argument 'v' and 'launcher_version' to determine the 'channel' argument in url. */
+    /* 等待 5 秒. */
     setTimeout(function() {
         window.location.href = "https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp";
-    }, 5000); // 等待 5 秒.
+    }, 5000);
 </script>

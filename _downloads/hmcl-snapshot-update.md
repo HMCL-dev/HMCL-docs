@@ -15,7 +15,8 @@ No redirect? [Click here](https://hmcl-snapshot-update.netlify.app/)
 
 
 <script>
+    /* 等待 5 秒. */
     setTimeout(function() {
         window.location.href = "https://hmcl-snapshot-update.netlify.app/";
-    }, 5000); // 等待 5 秒.
+    }, 5000);
 </script>
