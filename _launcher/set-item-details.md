@@ -1,10 +1,7 @@
 ---
 title: 设置项详解
 date: 2023-6-09 10:26:00 +0800
-categories: 启动器
-note: 本文由 MemoryShadow 编写。
-hits: true
-toc: true
+author: MemoryShadow
 ---
 
 ## 引言

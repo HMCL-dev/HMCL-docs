@@ -1,10 +1,7 @@
 ---
 title: 全局版本隔离
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 LIPiston 编写。
-hits: true
-toc: true
+author: LIPiston
 ---
 
 这是一个游戏客户端很多不方便寻找的最佳解决方案<br/>

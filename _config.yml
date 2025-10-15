@@ -1,84 +1,105 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# https://jekyllrb.com/docs/configuration/default/
+# https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml
 
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin_dark: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-locale: "zh-CN"
+# source: .
+# destination: _site
+# collections_dir: .
+# plugins_dir: _plugins
+# layouts_dir: _layouts
+# data_dir: _data
+# includes_dir: _includes
+# cache_dir: .jekyll-cache
+sass:
+  # sass_dir: _sass
+  # minimal-mistakes
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  quiet_deps: true
+  silence_deprecations:
+    - import
+collections:
+  docs:
+    output: true
+    permalink: /:path:output_ext
+  launcher:
+    output: true
+    permalink: /:collection/:path:output_ext
+  changelog:
+    output: true
+    permalink: /:collection/:path:output_ext
+  changelogs:
+    output: false
+  modpack:
+    output: true
+    permalink: /:collection/:path:output_ext
+  eula:
+    output: true
+    permalink: /:collection/:path:output_ext
+  multiplayer:
+    output: true
+    permalink: /:collection/:path:output_ext
+  downloads:
+    output: true
+    permalink: /:collection/:path:output_ext
 
-title: Hello Minecraft! Launcher 帮助文档
-email: hmcl@huangyuhui.net
-description: >- # this means to ignore newlines until "baseurl:"
-  HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
-baseurl: "" # the subpath of your site, e.g. /blog
-url: https://docs.hmcl.net
-copyright: huanghongxun
-copyright_url: https://github.com/huanghongxun
-breadcrumbs: true
+# Handling Reading
+# safe: false
+include:
+  - _pages
+exclude:
+  - README.md
+  - LICENSE
+keep_files: []
+encoding: "utf-8"
+# markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter: true
 
-# Build settings
-theme: minimal-mistakes-jekyll
+# Filtering Content
+# show_drafts: null
+# limit_posts: 0
+# future: false
+# unpublished: false
+
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
+  - jemoji
   - jekyll-archives
   - jekyll-seo-tag
+# minimal-mistakes (mimic GitHub Pages with --safe)
+# whitelist:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-gist
+#   - jekyll-feed
+#   - jekyll-include-cache
 
-include:
-  - _pages
+# Conversion
+# markdown: kramdown
+# highlighter: rouge
+# lsi: false
+# excerpt_separator: "\n\n"
+# incremental: false
 
-collections:
-  docs:
-    output: true
-    permalink: /:path:output_ext
+# Serving
+# detach: false
+# port: 4000
+# host: 127.0.0.1
+baseurl: ""
+# show_dir_listing: false
 
-  launcher:
-    output: true
-    permalink: /:collection/:path:output_ext
+# Outputting
+permalink: /:categories/:title:output_ext
+# paginate_path: /page:num
+timezone: Asia/Shanghai
+# minimal-mistakes (with jekyll-paginate)
+# paginate: 5
 
-  changelog:
-    output: true
-    permalink: /:collection/:path:output_ext
-
-  changelogs:
-    output: false
-
-  modpack:
-    output: true
-    permalink: /:collection/:path:output_ext
-
-  eula:
-    output: true
-    permalink: /:collection/:path:output_ext
-
-  multiplayer:
-    output: true
-    permalink: /:collection/:path:output_ext
-
-  downloads:
-    output: true
-    permalink: /:collection/:path:output_ext
-
+# quiet: false
+# verbose: false
 defaults:
   - scope:
       path: ""
@@ -90,50 +111,211 @@ defaults:
       comments: false
       sidebar:
         nav: docs
+      hits: true
+      toc: true
+      toc_sticky: true
   - scope:
-      path: "assets/img"
+      path: ""
+      type: downloads
     values:
-      image: true
-  - scope:
-      path: "assets/css"
-    values:
-      css: true
+      toc: false
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
+# liquid:
+#   error_mode: warn
+#   strict_filters: false
+#   strict_variables: false
 
-exclude:
-  - scripts/
-  - README.md
-  - LICENSE
+# Markdown Processors
+# kramdown:
+#   auto_ids: true
+#   entity_output: as_char
+#   toc_levels: [1, 2, 3, 4, 5, 6]
+#   smart_quotes: lsquo,rsquo,ldquo,rdquo
+#   input: GFM
+#   hard_wrap: false
+#   footnote_nr: 1
+#   show_warnings: false
+#   # minimal-mistakes
+#   enable_coderay: false 
 
-# Outputting
-permalink: /:categories/:title/
+# Theme Settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin_dark: dark
 
+# Site Settings
+locale: zh
+# rtl:
+title: HMCL 文档
+# title_separator: -
+# subtitle:
+# name: ""
+description: HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 八年历史 | 三亿次使用
+url: https://docs.hmcl.net
+# repository:
+# teaser:
+logo: /assets/img/hmcl.png
+# masthead_title:
+breadcrumbs: false
+# words_per_minute: 200
+enable_copy_code_button: true
+copyright: huanghongxun
+copyright_url: mailto:hmcl@huangyuhui.net
+
+comments:
+  provider: false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  # disqus:
+  #   shortname:
+  # discourse:
+  #   server:
+  # facebook:
+  #   appid:
+  #   num_posts:
+  #   colorscheme:
+  # utterances:
+  #   theme:
+  #   issue_term:
+  # giscus:
+  #   repo_id:
+  #   category_name:
+  #   category_id:
+  #   discussion_term:
+  #   reactions_enabled:
+  #   theme:
+  #   strict:
+  #   input_position:
+  #   emit_metadata:
+  #   lang:
+  #   lazy:
+  # staticman:
+  #   branch:
+  #   endpoint:
+# reCaptcha:
+#   siteKey:
+#   secret:
+# atom_feed:
+#   path:
+#   hide:
+# search:
+# search_full_content:
+# search_provider:
+# lunr:
+#   search_within_pages:
+# algolia:
+#   application_id:
+#   index_name:
+#   search_only_api_key:
+#   powered_by:
+# google:
+#   search_engine_id:
+#   instant_search:
+
+# SEO Related
+# google_site_verification:
+# bing_site_verification:
+# naver_site_verification:
+# yandex_site_verification:
+# baidu_site_verification:
+
+# Social Sharing
+# twitter:
+#   username:
+# facebook:
+#   username:
+#   app_id:
+#   publisher:
+# og_image:
+
+# For specifying social profiles
+# social:
+#   type:
+#   name:
+#   links:
+
+# Analytics
+analytics:
+  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+  # google:
+  #   tracking_id:
+  #   anonymize_ip:
+
+# Site Author
+# author:
+#   name: huangyuhui
+#   avatar:
+#   bio:
+#   location:
+#   email: hmcl@huangyuhui.net
+#   links:
+#     - label: Email
+#       icon: fas fa-fw fa-envelope-square
+#       url: mailto:hmcl@huangyuhui.net
+#     - label: GitHub
+#       icon: fab fa-fw fa-github
+#       url: https://github.com/huangyuhui
+
+# Site Footer
+footer:
+  links:
+    - label: Github
+      icon: fab fa-fw fa-github
+      url: https://github.com/HMCL-dev/HMCL
+    - label: 粤ICP备18071565号
+      url: https://beian.miit.gov.cn
+  # since:
+
+# minimal-mistakes (with jekyll-paginate-v2) https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
+# pagination:
+#   enabled: false
+#   debug: false
+#   collection: posts
+#   per_page: 10
+#   permalink: /page/:num/
+#   title: :title - page :num
+#   limit: 0
+#   sort_field: date
+#   sort_reverse: true
+#   category: posts
+#   tag: ""
+#   locale: ""
+#   trail:
+#     before: 2
+#     after: 2
+
+# Archives
+# category_archive:
+#   type: liquid
+#   path: /categories/
+# tag_archive:
+#   type: liquid
+#   path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+# HTML Compression (https://jch.penibelst.de/)
 compress_html:
   clippings: all
   comments: all
   ignore:
     envs: development
 
-sass:
-  style: compressed
-  quiet_deps: true
-  silence_deprecations:
-    - import
-
 head_scripts:
   - /assets/js/theme.js
 
-footer:
-  links:
-    - label: "Github"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/HMCL-dev/HMCL"
-    - label: "粤ICP备18071565号"
-      url: "https://beian.miit.gov.cn"
+# jekyll-feed
+feed:
+  collections:
+    - docs
+    - launcher
+    - modpack
+    - eula
+    - multiplayer

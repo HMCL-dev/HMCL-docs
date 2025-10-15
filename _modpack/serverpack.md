@@ -1,10 +1,7 @@
 ---
 title: 服务端自动更新整合包制作教程
 date: 2021-08-22 23:18:02 +0800
-categories: 整合包
-note: 本文由 huanghongxun 编写。
-hits: true
-toc: true
+author: huanghongxun
 ---
 
 HMCL 允许服务器管理员借助服务端自动更新整合包来实现自动分发整合包更新，这将大大方便有需要频繁更新游戏客户端 Mod、配置等信息的服务器管理员。

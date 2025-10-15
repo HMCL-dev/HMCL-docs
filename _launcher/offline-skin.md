@@ -1,10 +1,9 @@
 ---
 title: 离线模式下更换皮肤
 date: 2021-10-09 23:18:02 +0800
-categories: 启动器
-note: 本文由 qiaoshouzi 主要编写 kitefly 修改。
-hits: true
-toc: true
+author: qiaoshouzi
+contributors:
+  - kitefly
 ---
 
 # 离线模式下更换皮肤
