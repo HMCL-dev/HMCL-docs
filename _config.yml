@@ -66,9 +66,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jemoji
-  - jekyll-archives
-  - jekyll-seo-tag
 # minimal-mistakes (mimic GitHub Pages with --safe)
 # whitelist:
 #   - jekyll-paginate
