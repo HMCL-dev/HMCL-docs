@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButton.disabled = true;
 
     modalContent.innerHTML = `
-        <h1 class="text-center">⚠️加入群聊前请注意⚠️</h2>
+        <h1 class="text-center">⚠️加入群聊前请注意⚠️</h1>
         <ul>
             <li>游戏非正常退出时，请点击左下角 <img src="/assets/img/docs/groups/button-1.png" style="display: inline; height: 1.5em; vertical-align: middle;" title="导出游戏崩溃日志"> 按钮（不是 <img src="/assets/img/docs/groups/button-2.png" style="display: inline; height: 1.5em; vertical-align: middle;" title="日志"> 按钮），并完整发送生成的报错压缩包</li>
             <li>遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助</li>
