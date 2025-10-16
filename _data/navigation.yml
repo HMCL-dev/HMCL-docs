@@ -11,10 +11,8 @@ main:
     url: /eula.html
   - title: 帮助
     url: /help.html
-  - title: 开发版更新日志
-    url: /changelogs/dev.html
-  - title: 稳定版更新日志
-    url: /changelogs/stable.html
+  - title: 更新日志
+    url: /changelogs.html
 
 docs:
   - title: 使用者帮助

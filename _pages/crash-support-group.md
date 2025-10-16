@@ -12,6 +12,7 @@ author: zkitefly
 
 由于加群人数过多，我们会移出问题已解决的用户。如果你在被移出后遇到了新的问题需要求助，你可以再次加群。
 
+<!----{{ '>' }}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.createElement('div');
@@ -29,35 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
 
     const modalContent = document.createElement('div');
-    modalContent.style.cssText = `
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 500px;
-        width: 90%;
-        max-height: 80vh;
-        overflow-y: auto;
-        position: relative;
-    `;
+    modalContent.className = 'notice';
 
     let timeLeft = 10 ; /* 倒计时秒数 */
     const closeButton = document.createElement('button');
     closeButton.textContent = '我已了解';
-    closeButton.style.cssText = `
-        display: block;
-        margin: 15px auto 0;
-        padding: 8px 20px;
-        background: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: not-allowed;
-        opacity: 0.6;
-    `;
+    closeButton.className = 'align-center btn';
     closeButton.disabled = true;
 
     modalContent.innerHTML = `
-        <h1>⚠️加入群聊前请注意⚠️</h2>
+        <h1 class="text-center">⚠️加入群聊前请注意⚠️</h2>
         <ul>
             <li>游戏非正常退出时，请点击左下角 <img src="/assets/img/docs/groups/button-1.png" style="display: inline; height: 1.5em; vertical-align: middle;" title="导出游戏崩溃日志"> 按钮（不是 <img src="/assets/img/docs/groups/button-2.png" style="display: inline; height: 1.5em; vertical-align: middle;" title="日志"> 按钮），并完整发送生成的报错压缩包</li>
             <li>遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助</li>
@@ -71,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>因人数限制，已解决问题的用户会被移出群聊。如遇新问题可再次加入</li>
             <li>本群仅处理游戏崩溃相关问题，其他话题请到其他群讨论</li>
         </ul>
-        <p style="text-align: center; margin-top: 15px;">
+        <hr>
+        <p class="text-center">
             请等待 <span id="countdown">${timeLeft}</span> 秒，请认真阅读注意事项
         </p>
     `;
@@ -101,3 +84,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+{{ '<' }}!---->

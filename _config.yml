@@ -121,9 +121,11 @@ defaults:
       classes: wide
       permalink: /:basename:output_ext
   - scope:
-      path: _pages/changelogs
+      path: _pages/changelogs/
       type: pages
     values:
+      toc: true
+      classes: ""
       layout: changelog
       permalink: /changelogs/:basename:output_ext
   - scope:
@@ -137,7 +139,7 @@ defaults:
     values:
       channel: stable
   - scope:
-      path: _pages/collections
+      path: _pages/collections/
       type: pages
     values:
       layout: collection
