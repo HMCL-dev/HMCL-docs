@@ -17,9 +17,6 @@ sass:
   silence_deprecations:
     - import
 collections:
-  docs:
-    output: true
-    permalink: /:path:output_ext
   launcher:
     output: true
     permalink: /:collection/:path:output_ext
@@ -29,9 +26,6 @@ collections:
   changelogs:
     output: false
   modpack:
-    output: true
-    permalink: /:collection/:path:output_ext
-  eula:
     output: true
     permalink: /:collection/:path:output_ext
   multiplayer:
@@ -66,13 +60,15 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 # minimal-mistakes (mimic GitHub Pages with --safe)
-# whitelist:
-#   - jekyll-paginate
-#   - jekyll-sitemap
-#   - jekyll-gist
-#   - jekyll-feed
-#   - jekyll-include-cache
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-redirect-from
 
 # Conversion
 # markdown: kramdown
@@ -116,6 +112,36 @@ defaults:
       type: downloads
     values:
       toc: false
+      classes: wide
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      toc: false
+      classes: wide
+      permalink: /:basename:output_ext
+  - scope:
+      path: _pages/changelogs
+      type: pages
+    values:
+      layout: changelog
+      permalink: /changelogs/:basename:output_ext
+  - scope:
+      path: _pages/changelogs/dev
+      type: pages
+    values:
+      channel: dev
+  - scope:
+      path: _pages/changelogs/stable
+      type: pages
+    values:
+      channel: stable
+  - scope:
+      path: _pages/collections
+      type: pages
+    values:
+      layout: collection
+      permalink: /collections/:basename:output_ext
 
 # liquid:
 #   error_mode: warn
@@ -311,8 +337,6 @@ head_scripts:
 # jekyll-feed
 feed:
   collections:
-    - docs
     - launcher
     - modpack
-    - eula
     - multiplayer
