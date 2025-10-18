@@ -16,7 +16,7 @@
 
       if (!href) return;
 
-      var $info = $("<span class=\"redirect-info\"> (将在 <span class=\"time\">" + delay + "</span> 秒后自动跳转，您也可以<a href=\"javascript:;\" class=\"cancel-redirect\">取消自动跳转</a>) </span>");
+      var $info = $("<span class=\"redirect-info\"> (将在 <span class=\"time\">" + delay + "</span> 秒后自动跳转，您也可以手动<a href=\"javascript:;\" class=\"cancel-redirect\">取消跳转</a>) </span>");
       self.$el.after($info);
 
       self.timer = setInterval(function () {
