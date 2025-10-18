@@ -51,13 +51,13 @@ author: MemoryShadow
 
 ### Java路径
 
-众所周知, Minecraft是由Java编写的, 因此, 在启动游戏时, HMCL需要知道Java([JRE][1])的安装路径, 才能启动游戏.
+众所周知, Minecraft是由Java编写的, 因此, 在启动游戏时, HMCL需要知道Java([JRE][^1])的安装路径, 才能启动游戏.
 
 由于HMCL本身就是一个Java程序, 一般能正常启动HMCL就能至少在计算机上找到一个JRE. 但也会由于一些未知因素导致无法找到JRE, 这时, 就需要手动指定JRE的安装路径.
 
 我们先来讨论能够自动识别的情况:
 
-在HMCL启动时, 会根据注册表项, 环境变量, 以及[HMCL自身的启动路径][2]来寻找JRE. 如果找到了, 就会在"Java路径"这一栏显示出来, 并且在启动游戏时使用这个路径.
+在HMCL启动时, 会根据注册表项, 环境变量, 以及[HMCL自身的启动路径][^2]来寻找JRE. 如果找到了, 就会在"Java路径"这一栏显示出来, 并且在启动游戏时使用这个路径.
 
 上述的情况几乎涵盖了所有, 如果你希望HMCL能够自动找到Java, 就应该使用这些技巧配置好你的计算机环境.
 
@@ -73,7 +73,7 @@ author: MemoryShadow
 
 这是当前主流启动器都支持的功能, 这个功能能够在尽可能共享依赖库的前提下, 将不同的游戏版本隔离开来, 避免你安装的模组加载器被应用在错误的版本上或是加载到不兼容的版本, 同时最大程度的减少磁盘占用.
 
-此功能的底层原理不在此处过多赘述, 对于用户来说最大的区别就是游戏的实际目录发生了改变, 例如: [提取游戏日志的方式][3]被改变了
+此功能的底层原理不在此处过多赘述, 对于用户来说最大的区别就是游戏的实际目录发生了改变, 例如: [提取游戏日志的方式][^3]被改变了
 
 原本游戏目录默认应该在`.minecraft`文件夹, 但在开启版本隔离后, 你实际的游戏目录被切换到了`.minecraft/versions/游戏版本名称`, 这会给一些新手或是习惯于使用正版启动器的玩家带来额外的困惑.
 
@@ -83,7 +83,7 @@ author: MemoryShadow
 
 这与你计算机上的RAM存储器容量有关, 一般来说选择"自动分配内存"选项会得到一个相对合适的值. 但也许会有一些CPU性能较差希望用内存来交换的玩家愿意分配更多的内存.
 
-但我告诉您, 这里只是在调整[JVM][4]能够使用的最大内存容量, 只有在模组/Minecraft官方开发者没有手动控制[GC][5]行为的时候, 才能如你预期的通过内存交换CPU时间
+但我告诉您, 这里只是在调整[JVM][^4]能够使用的最大内存容量, 只有在模组/Minecraft官方开发者没有手动控制[GC][^5]行为的时候, 才能如你预期的通过内存交换CPU时间
 
 ### 启动器可见性
 
@@ -116,7 +116,7 @@ author: MemoryShadow
 
 ### JVM参数
 
-调整JVM参数能够更细腻的控制JVM的行为, 例如是否压缩指针(用CPU换内存), 是否频繁GC(还是用CPU换内存)等等, 这些一般都可以通过类似于[这篇文章][6]这样进行调整. 不过要注意的一点是, JVM参数是由实际实现决定的, 是否使用以及是否支持还要看具体的JVM实现.
+调整JVM参数能够更细腻的控制JVM的行为, 例如是否压缩指针(用CPU换内存), 是否频繁GC(还是用CPU换内存)等等, 这些一般都可以通过类似于[这篇文章][^6]这样进行调整. 不过要注意的一点是, JVM参数是由实际实现决定的, 是否使用以及是否支持还要看具体的JVM实现.
 
 ### 本地库路径
 
@@ -150,7 +150,7 @@ OpenAL是一个跨平台的3D音频API，可以用于在多个操作系统上播
 
 ### 下载源
 
-由于网络环境问题, 在之前下载Minecraft可能是一件麻烦事, 但在现在, 我们有了[BMCLAPI][7]项目, 该项目无偿为大陆地区用户提供Minecraft相关文件的镜像. 但有可能存在延迟, 可以按照自己的需求进行选择.
+由于网络环境问题, 在之前下载Minecraft可能是一件麻烦事, 但在现在, 我们有了[BMCLAPI][^7]项目, 该项目无偿为大陆地区用户提供Minecraft相关文件的镜像. 但有可能存在延迟, 可以按照自己的需求进行选择.
 
 ### 下载并发数
 
@@ -175,10 +175,10 @@ OpenAL是一个跨平台的3D音频API，可以用于在多个操作系统上播
 - [JVM 参数值](https://www.ibm.com/docs/zh/integration-bus/10.0?topic=command-jvm-parameter-values "点击查看")
 - [BMCLAPI](https://bmclapidoc.bangbang93.com/ "点击查看")
 
-[1]: https://www.ibm.com/cn-zh/topics/jre "什么是JRE?"
-[2]: /modpack/modpack-in-java.md "整合包自带 Java"
-[3]: https://memoryshadow.cn/index.php/2023/06/03/how-do-i-get-minecraft-game-logs/ "如何获取Minecraft的游戏日志?"
-[4]: https://www.ibm.com/support/pages/ibm-i-%E4%B8%8Ajava-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%80%E4%BB%8B "什么是JVM?"
-[5]: https://blog.csdn.net/weixin_44908159/article/details/123626886 "什么是GC?"
-[6]: https://www.ibm.com/docs/zh/integration-bus/10.0?topic=command-jvm-parameter-values "JVM 参数值"
-[7]: https://bmclapidoc.bangbang93.com/ "BMCLAPI"
+[^1]: https://www.ibm.com/cn-zh/topics/jre "什么是JRE?"
+[^2]: /modpack/modpack-in-java.md "整合包自带 Java"
+[^3]: https://memoryshadow.cn/index.php/2023/06/03/how-do-i-get-minecraft-game-logs/ "如何获取Minecraft的游戏日志?"
+[^4]: https://www.ibm.com/support/pages/ibm-i-%E4%B8%8Ajava-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%80%E4%BB%8B "什么是JVM?"
+[^5]: https://blog.csdn.net/weixin_44908159/article/details/123626886 "什么是GC?"
+[^6]: https://www.ibm.com/docs/zh/integration-bus/10.0?topic=command-jvm-parameter-values "JVM 参数值"
+[^7]: https://bmclapidoc.bangbang93.com/ "BMCLAPI"
