@@ -307,6 +307,8 @@ compress_html:
 
 head_scripts:
   - /assets/js/theme.js
+after_footer_scripts:
+  - /assets/js/plugins/jquery.auto-redirect.js
 
 # jekyll-feed
 feed:
