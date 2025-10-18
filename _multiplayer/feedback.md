@@ -1,14 +1,24 @@
 ---
-title: HMCL x Terracotta | 陶瓦联机
+title: 多人联机反馈
 date: 2025-10-07 18:44:00 +0800
 author: Burning_TNT
+classes: wide
+toc: false
 ---
 
-## 反馈
-
-您即将被重定向到反馈表界面。
-
 ## Terracotta | 陶瓦联机
+
+<!--{% comment %}-->
+> [!TIP]
+> 欢迎您填写[反馈表单](https://account.wps.cn/?cb=https%3A%2F%2Faccount.kdocs.cn%2Fpassport%2Fsinglesign%3Fcb%3Dhttps%253A%252F%252Ff.kdocs.cn%252Fksform%252Fw%252Fwrite%252FnjMwdtgD%253Fchannel%253Dmdlsjp%2523routePromt%26form%3Df.kdocs.cn&reload=true&from=v1-wap-wps-login&wxpluginappid=wx53f22ed6915cdf17&wxpluginpath=pages%2Fweb%2Fweb&wxpluginquery=url%3Dhttps%3A%2F%2Ff.wps.cn%2Fksform%2Fw%2Fwrite%2FnjMwdtgD%3Fchannel%3Dmdlsjp%23routePromt%26source%3Dweb_login&qrcode=kdocs&plusreffer=f.kdocs.cn)。
+<!--{% endcomment %}-->
+
+<!----{{ '>' }}
+
+> 欢迎您填写<a href="https://account.wps.cn/?cb=https%3A%2F%2Faccount.kdocs.cn%2Fpassport%2Fsinglesign%3Fcb%3Dhttps%253A%252F%252Ff.kdocs.cn%252Fksform%252Fw%252Fwrite%252FnjMwdtgD%253Fchannel%253Dmdlsjp%2523routePromt%26form%3Df.kdocs.cn&reload=true&from=v1-wap-wps-login&wxpluginappid=wx53f22ed6915cdf17&wxpluginpath=pages%2Fweb%2Fweb&wxpluginquery=url%3Dhttps%3A%2F%2Ff.wps.cn%2Fksform%2Fw%2Fwrite%2FnjMwdtgD%3Fchannel%3Dmdlsjp%23routePromt%26source%3Dweb_login&qrcode=kdocs&plusreffer=f.kdocs.cn" data-delay="10" data-redirect>反馈表单</a>。
+{: .notice--success }
+
+{{ '<' }}!---->
 
 我们注意到了 EasyTier 项目。它提供了一种简单、安全、去中心化的异地组网方案，足以承载 Minecraft 的联机需求。
 在 EasyTier 开发团队的帮助下，我们决定重新在启动器内提供联机服务。
@@ -24,11 +34,3 @@ author: Burning_TNT
 它的主要目标依然是让朋友之间能共同游玩，而不是长时间的对外开放。
 
 最后，我想感谢一切参与到 EasyTier、Terracotta \| 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 easytier.cn 深入了解这一项目。
-
-<script>
-    /* TODO: Read info from query argument 'v' and 'launcher_version' to determine the 'channel' argument in url. */
-    /* 等待 5 秒. */
-    setTimeout(function() {
-        window.location.href = "https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp";
-    }, 5000);
-</script>
