@@ -19,7 +19,7 @@ contributors:
 
 ## 用户群
 
-![](/assets/img/docs/groups/group-3.png)
+![](/assets/img/docs/groups/group-4.png)
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
