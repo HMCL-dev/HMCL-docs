@@ -168,7 +168,7 @@ OpenAL 是一个跨平台的 3D 音频 API，可以用于在多个操作系统�
 [^1]: [什么是JRE?](https://www.ibm.com/cn-zh/topics/jre "点击查看")
 
 <!--{% comment %}-->
-[^2]: [整合包自带 Java](/modpack/bundled-java.md "点击查看")
+[^2]: [整合包自带 Java](/_modpack/bundled-java.md "点击查看")
 <!--{% endcomment %}-->
 <!----{{ '>' }}
 [^2]: <a href="{% link _modpack/bundled-java.md %}" title="点击查看">整合包自带 Java</a>
