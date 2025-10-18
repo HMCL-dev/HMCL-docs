@@ -15,7 +15,7 @@ toc: false
 
 <!----{{ '>' }}
 
-> 欢迎您填写[反馈表单](https://account.wps.cn/?cb=https%3A%2F%2Faccount.kdocs.cn%2Fpassport%2Fsinglesign%3Fcb%3Dhttps%253A%252F%252Ff.kdocs.cn%252Fksform%252Fw%252Fwrite%252FnjMwdtgD%253Fchannel%253Dmdlsjp%2523routePromt%26form%3Df.kdocs.cn&reload=true&from=v1-wap-wps-login&wxpluginappid=wx53f22ed6915cdf17&wxpluginpath=pages%2Fweb%2Fweb&wxpluginquery=url%3Dhttps%3A%2F%2Ff.wps.cn%2Fksform%2Fw%2Fwrite%2FnjMwdtgD%3Fchannel%3Dmdlsjp%23routePromt%26source%3Dweb_login&qrcode=kdocs&plusreffer=f.kdocs.cn)<span id="feedback-auto-redirect"></span>。
+> 欢迎您填写<a href="https://account.wps.cn/?cb=https%3A%2F%2Faccount.kdocs.cn%2Fpassport%2Fsinglesign%3Fcb%3Dhttps%253A%252F%252Ff.kdocs.cn%252Fksform%252Fw%252Fwrite%252FnjMwdtgD%253Fchannel%253Dmdlsjp%2523routePromt%26form%3Df.kdocs.cn&reload=true&from=v1-wap-wps-login&wxpluginappid=wx53f22ed6915cdf17&wxpluginpath=pages%2Fweb%2Fweb&wxpluginquery=url%3Dhttps%3A%2F%2Ff.wps.cn%2Fksform%2Fw%2Fwrite%2FnjMwdtgD%3Fchannel%3Dmdlsjp%23routePromt%26source%3Dweb_login&qrcode=kdocs&plusreffer=f.kdocs.cn" data-delay="10" data-redirect>反馈表单</a>。
 {: .notice--success }
 
 {{ '<' }}!---->
@@ -34,22 +34,3 @@ toc: false
 它的主要目标依然是让朋友之间能共同游玩，而不是长时间的对外开放。
 
 最后，我想感谢一切参与到 EasyTier、Terracotta \| 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 easytier.cn 深入了解这一项目。
-
-<!----{{ '>' }}
-<script>
-  var countdown = 10;
-  var interval = setInterval(function() {
-    if (countdown > 0) {
-      document.getElementById("feedback-auto-redirect").innerHTML = "，页面将于 " + countdown-- + " 秒后自动跳转，您也可以手动<a href=\"javascript:;\" onclick=\"stopRedirect()\">取消跳转</a>";
-    }
-    else {
-      clearInterval(interval);
-      window.location.href = "https://account.wps.cn/?cb=https%3A%2F%2Faccount.kdocs.cn%2Fpassport%2Fsinglesign%3Fcb%3Dhttps%253A%252F%252Ff.kdocs.cn%252Fksform%252Fw%252Fwrite%252FnjMwdtgD%253Fchannel%253Dmdlsjp%2523routePromt%26form%3Df.kdocs.cn&reload=true&from=v1-wap-wps-login&wxpluginappid=wx53f22ed6915cdf17&wxpluginpath=pages%2Fweb%2Fweb&wxpluginquery=url%3Dhttps%3A%2F%2Ff.wps.cn%2Fksform%2Fw%2Fwrite%2FnjMwdtgD%3Fchannel%3Dmdlsjp%23routePromt%26source%3Dweb_login&qrcode=kdocs&plusreffer=f.kdocs.cn";
-    }
-  }, 1000);
-  function stopRedirect() {
-    clearInterval(interval);
-    document.getElementById("feedback-auto-redirect").innerHTML = "";
-  }
-</script>
-{{ '<' }}!---->
