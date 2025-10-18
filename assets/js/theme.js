@@ -3,7 +3,7 @@ layout: null
 ---
 var darkTheme = document.createElement("link");
 darkTheme.rel = "stylesheet alternate";
-darkTheme.href = "{{ '/assets/css/main.dark.css' | relative_url }}";
+darkTheme.href = "{{ '/assets/css/dark.css' | relative_url }}";
 document.head.appendChild(darkTheme);
 window.addEventListener("DOMContentLoaded", function () {
     var list = document.querySelector(".masthead .visible-links");
