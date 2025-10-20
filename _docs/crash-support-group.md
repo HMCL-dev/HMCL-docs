@@ -28,7 +28,7 @@ author: zkitefly
 <!----{{'>'}}
 {% endcapture %}
 {{ modal | markdownify }}
-<p class="text-center">请等待 <span id="countdown">5</span> 秒，请认真阅读注意事项</p>
+<p class="text-center">请等待 <span id="countdown">10</span> 秒，请认真阅读注意事项</p>
 <button id="close-btn" class="btn align-center" disabled>我已了解</button>
 </div>
 </div>
@@ -67,6 +67,11 @@ author: zkitefly
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("alert-modal");
+  var show = localStorage.getItem("crash-support-group.show");
+  if (show === "1") {
+    modal.style.display = "none";
+    return;
+  }
   var text = document.getElementById("countdown");
   var btn = document.getElementById("close-btn");
   var sec = parseInt(text.textContent, 10) || 10;
@@ -80,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000);
 
   btn.addEventListener("click", function () {
+    localStorage.setItem("crash-support-group.show", "1");
     modal.style.display = "none";
   }, false);
 });
