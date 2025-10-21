@@ -19,19 +19,24 @@ contributors:
 
 ## 用户群
 
-![](/assets/img/docs/groups/group-4.png)
+![][group-4-qrcode]
 
 以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：
 
+<!--{% comment %}-->
+> [!NOTE]
+> 构建时此处自动生成群列表
+<!--{% endcomment %}--{{ '>' }}
 {% for group in site.data.groups -%}
-- [{{ group.name }}]({{ group.link }}){% if group.status %}（{{ group.status }}）{% endif %}
+- [{{ group.name }}]({{ group.link | relative_url }}){% if group.status %}（{{ group.status }}）{% endif %}
 {% endfor %}
+<!---->
 
 我们会不定期清理用户群中超过三个月没有发言的非活跃成员，每次清理前我们会提前一周在群内发布公告。
 
 ## 报错崩溃交流群
 
-如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群](/crash-support-group.html)
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群][docs-crash-support-group]
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
@@ -40,12 +45,24 @@ contributors:
 ## 灵车交流群
 
 我们为 Linux、FreeBSD 等系统以及 ARM（不包括 macOS）、RISC-V、龙芯等设备的用户建立了一个独立的交流群。
-如果你正在使用这些平台，欢迎加入 HMCL 灵车交流群：[HMCL 灵车交流群 (737461713)](https://qm.qq.com/q/C935haj8xW)。
+如果你正在使用这些平台，欢迎加入 HMCL 灵车交流群：[HMCL 灵车交流群 (737461713)][hmcl-group-737461713]。
 
-本群不适合一般 Windows 和 macOS 用户加入。如果你不关心上面提到的这些平台，请移步[用户群](#用户群)。
+本群不适合一般 Windows 和 macOS 用户加入。如果你不关心上面提到的这些平台，请移步[用户群][]。
 
 ## 公测群
 
-如果你关心 HMCL 最新的开发进展，愿意积极测试 HMCL 的新功能并给出反馈，欢迎加入 HMCL 公测群：[HMCL 公测群 (954100320)](https://qm.qq.com/q/EO7Cx87Cz6)
+如果你关心 HMCL 最新的开发进展，愿意积极测试 HMCL 的新功能并给出反馈，欢迎加入 HMCL 公测群：[HMCL 公测群 (954100320)][hmcl-group-954100320]
 
-本群用于讨论 HMCL 的开发和测试，禁止闲聊，并且随时会清理未积极参与反馈的用户。如果你想闲聊，请移步[用户群](#用户群)。
+本群用于讨论 HMCL 的开发和测试，禁止闲聊，并且随时会清理未积极参与反馈的用户。如果你想闲聊，请移步[用户群][]。
+
+<!--{% comment %}-->
+[group-4-qrcode]: /assets/img/docs/groups/group-4.png
+[docs-crash-support-group]: /_docs/crash-support-group.md
+<!--{% endcomment %}--{{ '>' }}
+[group-4-qrcode]: {% link assets/img/docs/groups/group-4.png %}
+[docs-crash-support-group]: {% link _docs/crash-support-group.md %}
+<!---->
+
+[用户群]: #用户群
+[hmcl-group-737461713]: https://qm.qq.com/q/C935haj8xW
+[hmcl-group-954100320]: https://qm.qq.com/q/EO7Cx87Cz6

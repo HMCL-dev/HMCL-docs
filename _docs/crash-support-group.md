@@ -4,14 +4,15 @@ date: 2024-03-05 17:00:00 +0800
 author: zkitefly
 ---
 
-![](/assets/img/docs/groups/crash.png)
+![][hmcl-group-666546887-qrcode]
 
-如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)][hmcl-group-666546887]
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
 由于加群人数过多，我们会移出问题已解决的用户。如果你在被移出后遇到了新的问题需要求助，你可以再次加群。
 
+<!----{{'>'}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.createElement('div');
@@ -101,3 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+<!---->
+
+<!--{% comment %}-->
+[hmcl-group-666546887-qrcode]: /assets/img/docs/groups/crash.png
+<!--{% endcomment %}--{{ '>' }}
+[hmcl-group-666546887-qrcode]: {% link assets/img/docs/groups/crash.png %}
+<!---->
+
+[hmcl-group-666546887]: https://qm.qq.com/q/nG0Ti1kJri

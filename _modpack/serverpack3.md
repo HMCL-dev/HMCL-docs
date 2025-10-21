@@ -4,7 +4,7 @@ date: 2023-01-11 14:13:45 +0800
 author: buggzd
 ---
 
-> 阅读本文前，请先阅读[此文章](/modpack/serverpack.html)
+> 阅读本文前，请先阅读[服务端自动更新整合包制作教程][modpack-serverpack]
 
 # 前置知识
 
@@ -17,7 +17,7 @@ author: buggzd
 
 这里很基础（但是坑比较多）略过，可以看以下参考文档。
 
-> https://zhuanlan.zhihu.com/p/515069497
+> <https://zhuanlan.zhihu.com/p/515069497>
 
 # 新建静态资源文件夹
 
@@ -313,10 +313,16 @@ unzip /home/ftp/client2.0.zip -d /minecraftClientStatic/modepack
 
 # 参考资料
 
-- [nginx配置文件结构](https://blog.csdn.net/pibuliao8626/article/details/110449349)  
+- [nginx配置文件结构](https://blog.csdn.net/pibuliao8626/article/details/110449349)
 - [使用nginx如何部署静态资源](https://www.muzhuangnet.com/show/86630.html)
-- [Nginx 作为静态资源服务器](https://zhuanlan.zhihu.com/p/514547633)  
-- [nginx配置静态静态资源服务器](https://cloud.tencent.com/developer/article/2028983)  
-- [HMCL官方文章](https://hmcl.huangyuhui.net/help/launcher/serverpack.html)  
-- [使用Gitee作为静态资源服务器](https://www.kdocs.cn/l/ck0hwms5llq8)  
-- [Nginx配置静态资源服务器](https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/)
+- [Nginx 作为静态资源服务器](https://zhuanlan.zhihu.com/p/514547633)
+- [nginx配置静态静态资源服务器](https://cloud.tencent.com/developer/article/2028983)
+- [HMCL官方文章][modpack-serverpack]
+- [使用Gitee作为静态资源服务器](https://www.kdocs.cn/l/ck0hwms5llq8)
+- [Nginx配置静态资源服务器](https://buggzd.github.io/2023/01/11/Nginx静态资源服务器使用/)
+
+<!--{% comment %}-->
+[modpack-serverpack]: /_modpack/serverpack.md
+<!--{% endcomment %}--{{ '>' }}
+[modpack-serverpack]: {% link _modpack/serverpack.md %}
+<!---->

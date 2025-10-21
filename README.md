@@ -1,6 +1,6 @@
 # HMCL-docs
 
-[![Build Status](https://drone.hmcl.net/api/badges/huanghongxun/HMCL-docs/status.svg)](https://drone.hmcl.net/huanghongxun/HMCL-docs)
+[![Build Status][drone-build-badges]][drone-build-url]
 
 Hello Minecraft! Launcher 帮助文档仓库
 
@@ -9,7 +9,7 @@ Hello Minecraft! Launcher 帮助文档仓库
 
 ## 相关链接
 
-[Hello Minecraft! Launcher 帮助文档仓库网站](https://docs.hmcl.net)
+[HMCL 文档][hmcl-docs-url]
 
 ## Markdown
 
@@ -38,7 +38,7 @@ assets
 
 其中，`<collection>` 表示集合，如 `multiplayer` 表示多人游戏、`modpack` 表示整合包，`<article>` 表示你的文章的英文唯一标识（尖括号表示占位符，不要直接提交 `<article>`，请确保其唯一且简短）请仅使用英文字母、数字、中划线、下划线字符作为唯一标识，不要使用空格、英文句点、中文字符。请确保资源文件夹名和 md 文件名一致，具体可以参考已有文章目录格式。
 
-每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成（文章的图片请放置到 `/assets/img/docs/<article>` 目录中）在 Markdown 文件中请确保包含 [Front Matter](https://jekyllrb.com/docs/front-matter/) 其中应提供文章的一些元数据（如标题 `title` 更新日期 `date` 等）在 `_config.yml` 的 `defaults` 中配置有默认值的可以不指定。
+每篇文章由 Markdown 编写的 `<article>.md` 文件及附带图片组成（文章的图片请放置到 `/assets/img/docs/<article>` 目录中）在 Markdown 文件中请确保包含 [Front Matter][jekyll-docs-front-matter] 其中应提供文章的一些元数据（如标题 `title` 更新日期 `date` 等）在 `_config.yml` 的 `defaults` 中配置有默认值的可以不指定。
 
 ### 添加新文章
 
@@ -107,3 +107,8 @@ bundle exec jekyll serve
 ```shell
 bundle exec jekyll build
 ```
+
+[hmcl-docs-url]: https://docs.hmcl.net
+[drone-build-url]: https://drone.hmcl.net/huanghongxun/HMCL-docs
+[drone-build-badges]: https://drone.hmcl.net/api/badges/huanghongxun/HMCL-docs/status.svg
+[jekyll-docs-front-matter]: https://jekyllrb.com/docs/front-matter/
