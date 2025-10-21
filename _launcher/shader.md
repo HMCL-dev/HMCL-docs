@@ -1,14 +1,9 @@
 ---
-title:  "光影"
-permalink: /launcher/shader.html
-date:   2021-10-09 23:18:02 +0800
-categories: 启动器
-toc: true
+title: 光影
+date: 2021-10-09 23:18:02 +0800
+contributors:
+  - hejiehao
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Foptifine.html)
-
-> 本文由 hejiehao 修改
 
 ## 安装 OptiFine
 

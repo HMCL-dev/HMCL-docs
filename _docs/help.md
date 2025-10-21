@@ -1,14 +1,8 @@
 ---
-title:  "寻求帮助"
-permalink: /help.html
-date:   2023-08-09 11:12:00 +0800
-categories: 启动器
-toc: true
+title: 寻求帮助
+date: 2023-08-09 11:12:00 +0800
+author: zkitefly
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Fhelp.html)
-
-> 本文由 zkitefly 编写。
 
 ## QQ 群聊
 

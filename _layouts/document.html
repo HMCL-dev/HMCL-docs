@@ -1,0 +1,17 @@
+---
+layout: single
+---
+
+{% if jekyll.environment == 'production' and page.hits %}
+<img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
+{% endif %}
+
+<div class="notice--info">
+  <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
+  {%- if page.note -%}
+  <hr>
+  {{ page.note | markdownify }}
+  {%- endif -%}
+</div>
+
+{{ content }}

@@ -1,0 +1,11 @@
+---
+layout: document
+---
+
+{% assign channel = page.channel | default: 'stable' %}
+{% assign changelogs = site.changelogs | where_exp: "item", "item.relative_path contains channel" | reverse %}
+{% for item in changelogs %}
+  {% assign version = item.slug %}
+  <h1 id="{% if version == page.nowchange %}nowchange{% elsif version == page.nowpreview %}nowpreview{% else %}HMCL-{{ version }}{% endif %}">HMCL {{ version }}</h1>
+  <div>{{ item.content | markdownify }}</div>
+{% endfor %}

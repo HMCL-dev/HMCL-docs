@@ -1,12 +1,7 @@
 ---
-title: "JVM 选项与环境变量"
-permalink: /launcher/jvm-options-and-env.html
+title: JVM 选项与环境变量
 date: 2025-04-20 23:18:02 +0800
-categories: 启动器
-toc: true
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fjvm-options-and-env.html)
 
 ## JVM 选项
 

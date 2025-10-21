@@ -1,14 +1,8 @@
 ---
 title:  "自动安装与模组下载简介"
-permalink: /launcher/auto-installing.html
-date:   2025-09-21 13:56:00 +0800
-categories: 启动器
-toc: true
+date:   2021-10-09 23:18:02 +0800
+author: asdqp233,Mine-diamond
 ---
-
-![Hits](https://hits.zkitefly.eu.org/?tag=https%3A%2F%2Fdocs.hmcl.net%2Flauncher%2Fauto-installing.html)
-
-> 本文由 asdqp233 编写，Mine-diamond修改。
 
 要为 Minecraft 安装模组，你首先需要安装一个“模组加载器”（例如 NeoForge 或 Fabric），然后再安装你想要的模组。HMCL 为这两个步骤都提供了强大的支持。
 

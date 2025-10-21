@@ -1,12 +1,8 @@
 ---
-title:  "模组包报错排查手册"
-permalink: /modpack/error-handbook.html
-date:   2025-05-24 13:39:36 +0800
-categories: 整合包
-toc: true
+title: 模组包报错排查手册
+date: 2025-05-24 13:39:36 +0800
+author: LIPiston
 ---
-
-> 本文由 LIPiston 编写。
 
 ## 文件夹结构
 

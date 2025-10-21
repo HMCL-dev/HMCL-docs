@@ -1,0 +1,12 @@
+@import "minimal-mistakes";
+
+blockquote {
+  margin-inline: 0;
+  font-style: normal;
+}
+
+a, span, code, kbd, pre, em, strong, b, i {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
