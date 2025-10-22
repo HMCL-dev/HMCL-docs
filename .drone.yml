@@ -3,7 +3,7 @@ type: docker
 name: default
 
 clone:
-  depth: 1
+  disable: true
 
 steps:
 - name: build
@@ -12,16 +12,18 @@ steps:
     JEKYLL_ENV: production
     BUNDLE_PATH: vendor/bundle
   commands:
+    - "git -c http.sslVerify=false -c http.extraHeader=\"Host: git.hmcl.net\" clone --branch main --depth 1 https://host.docker.internal/huanghongxun/HMCL-docs.git HMCL-docs"
+    - cd HMCL-docs
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
     - bundle install --verbose
     - bundle exec jekyll build --trace --verbose
   volumes:
   - name: dist
-    path: /drone/src/_site
+    path: /drone/src/HMCL-docs/_site
   - name: vendor
-    path: /drone/src/vendor
+    path: /drone/src/HMCL-docs/vendor
   - name: jekyll-cache
-    path: /drone/src/.jekyll-cache
+    path: /drone/src/HMCL-docs/.jekyll-cache
   when:
     branch: [main]
 
