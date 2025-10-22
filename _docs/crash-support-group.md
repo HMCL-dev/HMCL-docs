@@ -12,7 +12,7 @@ author: zkitefly
 <!---->
 <h1 id="" align="center">加入群聊前请注意</h1>
 
-- 游戏非正常退出时，请点击左下角 ![](/assets/img/docs/groups/button-1.png "导出游戏崩溃日志") 按钮（不是 ![](/assets/img/docs/groups/button-2.png "日志") 按钮），并完整发送生成的报错压缩包
+- 游戏非正常退出时，请点击左下角 ![][button-1] 按钮（不是 ![][button-2] 按钮），并完整发送生成的报错压缩包
 - 遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助
 - 使用整合包时，请说明具体的整合包名称与版本
 - 请保持耐心，群管理和群友会协助解决问题。严禁辱骂、催促他人
@@ -61,14 +61,12 @@ author: zkitefly
   align-items: center;
   z-index: 20;
 }
-
 #alert-modal img {
   display: inline;
   height: 1.5em;
   vertical-align: middle;
 }
 </style>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("alert-modal");
@@ -88,11 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.disabled = false;
     }
   }, 1000);
-
   btn.addEventListener("click", function () {
     localStorage.setItem("crash-support-group.show", "1");
     modal.style.display = "none";
   }, false);
 });
 </script>
+<!---->
+
+<!--{% comment %}-->
+[button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
+[button-2]: /assets/img/docs/groups/button-2.png "日志"
+<!--{% endcomment %}--{{ '>' }}
+[button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
+[button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
 <!---->
