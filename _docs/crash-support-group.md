@@ -8,7 +8,7 @@ author: zkitefly
 <!----{{'>'}}
 <div id="alert-modal">
 <div class="notice">
-{% capture modal %}
+{% capture notice %}
 <!---->
 <h1 id="" align="center">加入群聊前请注意</h1>
 
@@ -25,9 +25,14 @@ author: zkitefly
 - 本群仅处理游戏崩溃相关问题，其他话题请到其他群讨论
 
 ---
-<!----{{'>'}}
+<!--{% comment %}-->
+[button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
+[button-2]: /assets/img/docs/groups/button-2.png "日志"
+<!--{% endcomment %}--{{'>'}}
+[button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
+[button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
 {% endcapture %}
-{{ modal | markdownify }}
+{{ notice | markdownify }}
 <p class="text-center">请等待 <span id="countdown">10</span> 秒，请认真阅读注意事项</p>
 <button id="close-btn" class="btn align-center" disabled>我已了解</button>
 </div>
@@ -92,12 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }, false);
 });
 </script>
-<!---->
-
-<!--{% comment %}-->
-[button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
-[button-2]: /assets/img/docs/groups/button-2.png "日志"
-<!--{% endcomment %}--{{ '>' }}
-[button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
-[button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
 <!---->
