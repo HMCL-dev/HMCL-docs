@@ -117,11 +117,11 @@ HMCL 会自动管理 Java，并针对不同版本的游戏自动选择合适的 
 [modpack-error-handbook]: /_modpack/error-handbook.md
 [docs-help]: /_docs/help.md
 <!--{% endcomment %}--{{ '>' }}
-[faq-img1]: {% link assets/img/docs/faq/img1.png %}
-[faq-img2]: {% link assets/img/docs/faq/img2.png %}
-[faq-img3]: {% link assets/img/docs/faq/img3.png %}
-[faq-img4]: {% link assets/img/docs/faq/img4.png %}
-[faq-img5]: {% link assets/img/docs/faq/img5.png %}
+[faq-img1]: {% link /assets/img/docs/faq/img1.png %}
+[faq-img2]: {% link /assets/img/docs/faq/img2.png %}
+[faq-img3]: {% link /assets/img/docs/faq/img3.png %}
+[faq-img4]: {% link /assets/img/docs/faq/img4.png %}
+[faq-img5]: {% link /assets/img/docs/faq/img5.png %}
 [launcher-auto-installing]: {% link _launcher/auto-installing.md %}
 [launcher-auto-installing-hash-1]: {% link /_launcher/auto-installing.md#安装-mod-后游戏报错无法启动 %}
 [modpack-error-handbook]: {% link _modpack/error-handbook.md %}

@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--{% comment %}-->
 [hmcl-group-666546887-qrcode]: /assets/img/docs/groups/crash.png
 <!--{% endcomment %}--{{ '>' }}
-[hmcl-group-666546887-qrcode]: {% link assets/img/docs/groups/crash.png %}
+[hmcl-group-666546887-qrcode]: {% link /assets/img/docs/groups/crash.png %}
 <!---->
 
 [hmcl-group-666546887]: https://qm.qq.com/q/nG0Ti1kJri

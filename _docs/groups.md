@@ -59,7 +59,7 @@ contributors:
 [group-4-qrcode]: /assets/img/docs/groups/group-4.png
 [docs-crash-support-group]: /_docs/crash-support-group.md
 <!--{% endcomment %}--{{ '>' }}
-[group-4-qrcode]: {% link assets/img/docs/groups/group-4.png %}
+[group-4-qrcode]: {% link /assets/img/docs/groups/group-4.png %}
 [docs-crash-support-group]: {% link _docs/crash-support-group.md %}
 <!---->
 
