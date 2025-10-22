@@ -15,15 +15,17 @@ steps:
     - "git -c http.sslVerify=false -c http.extraHeader=\"Host: git.hmcl.net\" clone --branch main --depth 1 https://host.docker.internal/huanghongxun/HMCL-docs.git HMCL-docs"
     - cd HMCL-docs
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
+    - bundle config path /drone/src/vendor/bundle
     - bundle install --verbose
-    - bundle exec jekyll build --trace --verbose
+    - echo "cache_dir: /drone/src/.jekyll-cache" > /drone/src/_cache_config.yml
+    - bundle exec jekyll build --trace --verbose --destination /drone/src/_site --config /drone/src/HMCL-docs/_config.yml,/drone/src/_cache_config.yml
   volumes:
   - name: dist
-    path: /drone/src/HMCL-docs/_site
+    path: /drone/src/_site
   - name: vendor
-    path: /drone/src/HMCL-docs/vendor
+    path: /drone/src/vendor
   - name: jekyll-cache
-    path: /drone/src/HMCL-docs/.jekyll-cache
+    path: /drone/src/.jekyll-cache
   when:
     branch: [main]
 
