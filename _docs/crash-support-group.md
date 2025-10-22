@@ -62,6 +62,7 @@ author: zkitefly
   height: 100%;
   padding: 1em;
   display: flex;
+  background: #00000090;
   justify-content: center;
   align-items: center;
   z-index: 20;
