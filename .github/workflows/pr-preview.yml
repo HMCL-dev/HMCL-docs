@@ -168,7 +168,7 @@ jobs:
             const { owner, repo } = context.repo;
             const pages = (await octokit.rest.repos.getPages({ owner, repo })).data;
             core.setOutput('domain', pages.cname || `${owner.toLowerCase()}.github.io`);
-            core.setOutput('pathname', pages.cname == null ? `/${repo}` : '');
+            core.setOutput('pathname', (pages.cname == null && repo.toLowerCase() !== `${owner.toLowerCase()}.github.io` ) ? `/${repo}` : '');
             const pr = context.payload.pull_request || (await github.rest.pulls.get({
               owner, repo,
               pull_number: context.issue.number
