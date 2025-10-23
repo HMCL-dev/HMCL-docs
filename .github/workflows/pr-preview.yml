@@ -281,7 +281,7 @@ jobs:
               repo: context.repo.repo,
               comment_id: context.payload.comment.id,
               issue_number: context.issue.number,
-              body: "Preview URL: ${{ env.PREVIEW_URL }}"
+              body: "${{ needs.preview-create-deploy.result == 'success' && format('Preview URL: {0}', env.PREVIEW_URL) || 'Preview failure.' }}"
             });
       - if: ${{ steps.comment-message.outcome == 'failure' }}
         name: Comment Message
@@ -294,7 +294,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: "Preview URL: ${{ env.PREVIEW_URL }}"
+              body: "${{ needs.preview-create-deploy.result == 'success' && format('Preview URL: {0}', env.PREVIEW_URL) || 'Preview failure.' }}"
             });
       - if: ${{ github.event_name == 'pull_request_target' }}
         name: Remove Label (pull_request_target)
