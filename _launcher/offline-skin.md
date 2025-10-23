@@ -16,9 +16,9 @@ contributors:
 
 打开HMCL, 进入 **账号列表** , 点击下图离线账号的【上传皮肤】红框处:
 
-![](/assets/img/docs/offline-skin/img1_1.png)
+![][~/assets/offline-skin/img2_1]
 
-![](/assets/img/docs/offline-skin/img1_2.png)
+![][~/assets/offline-skin/img2_2]
 
 > 默认: 使用默认随机的皮肤显示
 >
@@ -32,7 +32,7 @@ contributors:
 
 点击 **本地皮肤图片文件** , 设置 **皮肤/披风**皮肤图片 路径, 点击 **确认**, 即可
 
-![](/assets/img/docs/offline-skin/img2.png)
+![][~/assets/offline-skin/img2]
 
 ## LittleSkin
 
@@ -42,15 +42,15 @@ contributors:
 
 你可在 [我的衣柜](https://mcskin.littleservice.cn/user/closet) 修改此账户名的皮肤与披风
 
-![](/assets/img/docs/offline-skin/img3_1.png)
+![][~/assets/offline-skin/img3_1]
 
 在HMCL中创建的离线账户的 账户名 **必须**和角色名相等, 如果不相等, 请 **重新在HMCL中创建离线账户**
 
-![](/assets/img/docs/offline-skin/img3_2.png)
+![][~/assets/offline-skin/img3_2]
 
 确认相等后, 点击 **LittleSkin** 即可同步在LittleSkin上此账户名的皮肤
 
-![](/assets/img/docs/offline-skin/img3_3.png)
+![][~/assets/offline-skin/img3_3]
 
 ## Blessing Skin 服务器
 
@@ -58,12 +58,34 @@ contributors:
 
 你可在 我的衣柜 修改此账户名的皮肤与披风
 
-![](/assets/img/docs/offline-skin/img4_1.png)
+![][~/assets/offline-skin/img4_1]
 
 进入 **配置生成**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可同步在Blessing Skin 服务器上此账户名的皮肤
 
 > 注意: **V3.4.205**需把链接末尾的 / 去掉, 这个BUG已经在**V3.4.206**修复
 
-![](/assets/img/docs/offline-skin/img4_2.png)
+![][~/assets/offline-skin/img4_2]
 
-![](/assets/img/docs/offline-skin/img4_3.png)
+![][~/assets/offline-skin/img4_3]
+
+<!--{% comment %}-->
+[~/assets/offline-skin/img1_1]: /assets/img/docs/offline-skin/img1_1.png
+[~/assets/offline-skin/img1_2]: /assets/img/docs/offline-skin/img1_2.png
+[~/assets/offline-skin/img2]: /assets/img/docs/offline-skin/img2.png
+[~/assets/offline-skin/img3_1]: /assets/img/docs/offline-skin/img3_1.png
+[~/assets/offline-skin/img3_2]: /assets/img/docs/offline-skin/img3_2.png
+[~/assets/offline-skin/img3_3]: /assets/img/docs/offline-skin/img3_3.png
+[~/assets/offline-skin/img4_1]: /assets/img/docs/offline-skin/img4_1.png
+[~/assets/offline-skin/img4_2]: /assets/img/docs/offline-skin/img4_2.png
+[~/assets/offline-skin/img4_3]: /assets/img/docs/offline-skin/img4_3.png
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/offline-skin/img1_1]: {% link /assets/img/docs/offline-skin/img1_1.png %}
+[~/assets/offline-skin/img1_2]: {% link /assets/img/docs/offline-skin/img1_2.png %}
+[~/assets/offline-skin/img2]: {% link /assets/img/docs/offline-skin/img2.png %}
+[~/assets/offline-skin/img3_1]: {% link /assets/img/docs/offline-skin/img3_1.png %}
+[~/assets/offline-skin/img3_2]: {% link /assets/img/docs/offline-skin/img3_2.png %}
+[~/assets/offline-skin/img3_3]: {% link /assets/img/docs/offline-skin/img3_3.png %}
+[~/assets/offline-skin/img4_1]: {% link /assets/img/docs/offline-skin/img4_1.png %}
+[~/assets/offline-skin/img4_2]: {% link /assets/img/docs/offline-skin/img4_2.png %}
+[~/assets/offline-skin/img4_3]: {% link /assets/img/docs/offline-skin/img4_3.png %}
+<!---->

@@ -11,11 +11,11 @@ contributors:
 
 当你在安装新的游戏客户端时候，会看到有个 `OptiFine` 的选项。
 
-![OptiFine_Install](/assets/img/docs/shader/optifine_install.png)
+![OptiFine_Install][~/assets/shader/optifine_install]
 
 点开之后会看到有 3 个复选框，一般而言，`正式版` 会比 `测试版` 更加稳定。选择安装 `正式版` ，如果没有 `正式版` 那么再考虑 `测试版` 。
 
-![OptiFine_Selection](/assets/img/docs/shader/select_optifine.png)
+![OptiFine_Selection][~/assets/shader/select_optifine]
 
 选择完合适的版本之后就可以点击右下角的`安装`继续进行安装。
 
@@ -23,7 +23,7 @@ contributors:
 
 在对应的游戏版本管理页面，点击 `自动安装` ，你会看到有个 `OptiFine` 的选项。
 
-![OptiFine_AutoInstaller](/assets/img/docs/shader/install_auto-16338577874692.png)
+![OptiFine_AutoInstaller][~/assets/shader/install_auto-16338577874692]
 
 点开之后选择合适的版本然后等待安装完成即可。
 目前，如果要在  `Fabric` 使用 `OptiFine` ，需要通过 **方式四** 安装。
@@ -34,7 +34,7 @@ contributors:
 
 双击打开或者使用 `java -jar 文件名` 的方式打开，然后你就会看到这个界面。
 
-![Path_Selection](/assets/img/docs/shader/change_path.png)
+![Path_Selection][~/assets/shader/change_path]
 
 选择自己游戏的 `.minecraft 目录`（默认安装到 `\AppData\Roaming\.minecraft` 目录下），然后点击 `Install` 按钮，之后你在 HMCL 的版本列表中就可以找到含有 OptiFine 名字的客户端，启动即可。
 
@@ -51,7 +51,7 @@ contributors:
 
 2. Forge 和 OptiFine 会出现不兼容的情况，但大多数情况下，Forge 和 OptiFine 是相互支持的。在[ OptiFine 官网下载页面 ](https://optifine.net/downloads)可以查看OptiFine与Forge的兼容情况，位置见下图的红框位置。
 
-![OptiFine_Compatibility](/assets/img/docs/shader/optifine_compatibility.png)
+![OptiFine_Compatibility][~/assets/shader/optifine_compatibility]
 
 3. 若出现不兼容的情况，请使用[ OptiForge ](https://www.curseforge.com/minecraft/mc-mods/optiforge) (一个 Forge Mod ) 或者等待OptiFine兼容Forge解决。
 
@@ -59,7 +59,7 @@ contributors:
 
 在高版本的OptiFine中，OptiFine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与OptiFine不兼容，注意依赖关系，Oculus需要前置Rubidium
 
-![Oculus](/assets/img/docs/shader/oculus.png)
+![Oculus][~/assets/shader/oculus]
 
 相关链接：[ Oculus Curseforge ](https://www.curseforge.com/minecraft/mc-mods/oculus)，[ Oculus Modrinth ](https://modrinth.com/mod/oculus)，[ Rubidium Curseforge ](https://www.curseforge.com/minecraft/mc-mods/rubidium)，[ Rubidium Modrinth ](https://modrinth.com/mod/rubidium)
 
@@ -67,7 +67,7 @@ contributors:
 
 在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium
 
-![Iris](/assets/img/docs/shader/iris.png)
+![Iris][~/assets/shader/iris]
 
 相关链接：[ Iris Shaders官网 ](https://irisshaders.dev/)，[ Iris Shaders Modrinth ](https://modrinth.com/mod/iris)，[ Iris Shaders Curseforge（不再更新，请到官网或Modrinth下载最新版本） ](https://www.curseforge.com/minecraft/mc-mods/irisshaders)，[ Sodium Modrinth ](https://modrinth.com/mod/sodium)，[ Sodium Curseforge（不再更新，请在Modrinth下载） ](https://www.curseforge.com/minecraft/mc-mods/sodium)
 
@@ -75,10 +75,32 @@ contributors:
 
 一般光影是一个 Zip 格式的文件，将光影文件放入 `\.minecraft\shaderpacks` 文件夹中即可 (没有这个文件夹就自己新建一个) 。如果开了版本隔离，那么文件夹是 `\.minecraft\version\<客户端名称>\shaderpacks`。若你不知道游戏文件夹在哪，在HMCL中打开游戏文件夹。
 
-![Game_Dir](/assets/img/docs/shader/game_dir.png)
+![Game_Dir][~/assets/shader/game_dir]
 
 如果你不知道版本隔离是啥，也不会创建文件夹，那么请打开游戏，依次点击 `设置—视频设置—光影—光影包文件夹` ，在里面放入光影包，然后点击你要加载的光影，最后点击 `完成` 即可
 
-![Shader_Settings](/assets/img/docs/shader/shaders_setting.png)
+![Shader_Settings][~/assets/shader/shaders_setting]
 
 **注意：光影对于电脑配置的要求比较高，如果开了光影之后出现游戏画面很卡的情况，请升级电脑配置、使用低配置光影或者关闭光影。**
+
+<!--{% comment %}-->
+[~/assets/shader/optifine_install]: /assets/img/docs/shader/optifine_install.png
+[~/assets/shader/select_optifine]: /assets/img/docs/shader/select_optifine.png
+[~/assets/shader/install_auto-16338577874692]: /assets/img/docs/shader/install_auto-16338577874692.png
+[~/assets/shader/change_path]: /assets/img/docs/shader/change_path.png
+[~/assets/shader/optifine_compatibility]: /assets/img/docs/shader/optifine_compatibility.png
+[~/assets/shader/oculus]: /assets/img/docs/shader/oculus.png
+[~/assets/shader/iris]: /assets/img/docs/shader/iris.png
+[~/assets/shader/game_dir]: /assets/img/docs/shader/game_dir.png
+[~/assets/shader/shaders_setting]: /assets/img/docs/shader/shaders_setting.png
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/shader/optifine_install]: {% link /assets/img/docs/shader/optifine_install.png %}
+[~/assets/shader/select_optifine]: {% link /assets/img/docs/shader/select_optifine.png %}
+[~/assets/shader/install_auto-16338577874692]: {% link /assets/img/docs/shader/install_auto-16338577874692.png %}
+[~/assets/shader/change_path]: {% link /assets/img/docs/shader/change_path.png %}
+[~/assets/shader/optifine_compatibility]: {% link /assets/img/docs/shader/optifine_compatibility.png %}
+[~/assets/shader/oculus]: {% link /assets/img/docs/shader/oculus.png %}
+[~/assets/shader/iris]: {% link /assets/img/docs/shader/iris.png %}
+[~/assets/shader/game_dir]: {% link /assets/img/docs/shader/game_dir.png %}
+[~/assets/shader/shaders_setting]: {% link /assets/img/docs/shader/shaders_setting.png %}
+<!---->

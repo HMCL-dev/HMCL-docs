@@ -16,7 +16,7 @@ author: zkitefly
 
 ### 1.先选择一个版本，并选择 Fabric ，并安装。
 
-![安装fabric客户端](/assets/img/docs/fabric_and_optifine_install/1.gif)
+![安装fabric客户端][~/assets/fabric_and_optifine_install/1]
 
 *注：如果你想放置其他的 Fabric 模组，建议一并安装 **Fabric API** ，有些 Fabric 模组会依赖他。*
 
@@ -28,21 +28,21 @@ author: zkitefly
 
 [MC百科下载页面（推荐）](https://www.mcmod.cn/download/1703.html)
 
-![MC百科下载页面](/assets/img/docs/fabric_and_optifine_install/2.png)
+![MC百科下载页面][~/assets/fabric_and_optifine_install/2]
 
 [CurseForge页面](https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all) 下载操作：
 
-![CurseForge页面下载操作](/assets/img/docs/fabric_and_optifine_install/5.png)
+![CurseForge页面下载操作][~/assets/fabric_and_optifine_install/5]
 
 HMCL 模组搜索下载操作：
 
-![1](/assets/img/docs/fabric_and_optifine_install/6.png)
+![1][~/assets/fabric_and_optifine_install/6]
 
-![2](/assets/img/docs/fabric_and_optifine_install/7.png)
+![2][~/assets/fabric_and_optifine_install/7]
 
-![3](/assets/img/docs/fabric_and_optifine_install/8.png)
+![3][~/assets/fabric_and_optifine_install/8]
 
-![4](/assets/img/docs/fabric_and_optifine_install/9.png)
+![4][~/assets/fabric_and_optifine_install/9]
 
 *注：如果你在HMCL模组搜索中下载时，另存该模组，那么就需要按照下面的模组安装方法来安装。*
 
@@ -50,18 +50,36 @@ HMCL 模组搜索下载操作：
 
 OptiFine [页面](https://optifine.net/downloads) 操作：
 
-![OptiFine页面操作](/assets/img/docs/fabric_and_optifine_install/5.png)
+![OptiFine页面操作][~/assets/fabric_and_optifine_install/5]
 
 OptiFine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
-
-![OptiFine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
 
 #### 安装
 
 进入 要安装模组的游戏版本 的 游戏管理 ，切换到 模组管理 ，在这个页面将 OptiFabric 模组 & OptiFine 添加即可
 
-![安装模组](/assets/img/docs/fabric_and_optifine_install/11.gif)
+![安装模组][~/assets/fabric_and_optifine_install/11]
 
 **然后在 模组管理 中检查是否有 OptiFabric 模组 & OptiFine !**
 
 检查完后，至此就完成啦，直接启动游戏即可。
+
+<!--{% comment %}-->
+[~/assets/fabric_and_optifine_install/1]: /assets/img/docs/fabric_and_optifine_install/1.gif
+[~/assets/fabric_and_optifine_install/2]: /assets/img/docs/fabric_and_optifine_install/2.png
+[~/assets/fabric_and_optifine_install/5]: /assets/img/docs/fabric_and_optifine_install/5.png
+[~/assets/fabric_and_optifine_install/6]: /assets/img/docs/fabric_and_optifine_install/6.png
+[~/assets/fabric_and_optifine_install/7]: /assets/img/docs/fabric_and_optifine_install/7.png
+[~/assets/fabric_and_optifine_install/8]: /assets/img/docs/fabric_and_optifine_install/8.png
+[~/assets/fabric_and_optifine_install/9]: /assets/img/docs/fabric_and_optifine_install/9.png
+[~/assets/fabric_and_optifine_install/11]: /assets/img/docs/fabric_and_optifine_install/11.gif
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/fabric_and_optifine_install/1]: {% link /assets/img/docs/fabric_and_optifine_install/1.gif %}
+[~/assets/fabric_and_optifine_install/2]: {% link /assets/img/docs/fabric_and_optifine_install/2.png %}
+[~/assets/fabric_and_optifine_install/5]: {% link /assets/img/docs/fabric_and_optifine_install/5.png %}
+[~/assets/fabric_and_optifine_install/6]: {% link /assets/img/docs/fabric_and_optifine_install/6.png %}
+[~/assets/fabric_and_optifine_install/7]: {% link /assets/img/docs/fabric_and_optifine_install/7.png %}
+[~/assets/fabric_and_optifine_install/8]: {% link /assets/img/docs/fabric_and_optifine_install/8.png %}
+[~/assets/fabric_and_optifine_install/9]: {% link /assets/img/docs/fabric_and_optifine_install/9.png %}
+[~/assets/fabric_and_optifine_install/11]: {% link /assets/img/docs/fabric_and_optifine_install/11.gif %}
+<!---->

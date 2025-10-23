@@ -12,13 +12,13 @@ author: zkitefly
 
 - 在执行登录操作时，注意检查登录页面是否有“其他登录方式”的选项。一旦看到此选项，立即点击进行选择。
 
-![点击“其他登录方法”选项](/assets/img/docs/use-password-login-microsoft-account/1.png)
+![点击“其他登录方法”选项][~/assets/use-password-login-microsoft-account/1]
 
 - 在登录页面，系统会询问您希望采用哪种登录方式。此时，需要选择“使用我的密码”，然后输入密码完成登录。
 
 _如果没有“使用我的密码”选项，或者忘记了密码，请看 [下方教程](#添加更改密码)_
 
-![选择“使用我的密码”](/assets/img/docs/use-password-login-microsoft-account/2.png)
+![选择“使用我的密码”][~/assets/use-password-login-microsoft-account/2]
 
 # 添加/更改密码
 
@@ -28,8 +28,20 @@ _如果没有“使用我的密码”选项，或者忘记了密码，请看 [�
 
 - 在该页面按照指示添加密码即可。若忘记密码，可选择该页面“忘记密码了?”选项进行找回密码操作。
 
-![添加密码](/assets/img/docs/use-password-login-microsoft-account/3.png)
+![添加密码][~/assets/use-password-login-microsoft-account/3]
 
-![修改密码](/assets/img/docs/use-password-login-microsoft-account/4.png)
+![修改密码][~/assets/use-password-login-microsoft-account/4]
 
 完成上述操作后再按照 [上方教程](#如何使用密码登录微软账户) 操作即可使用密码登录微软账户。
+
+<!--{% comment %}-->
+[~/assets/use-password-login-microsoft-account/1]: /assets/img/docs/use-password-login-microsoft-account/1.png
+[~/assets/use-password-login-microsoft-account/2]: /assets/img/docs/use-password-login-microsoft-account/2.png
+[~/assets/use-password-login-microsoft-account/3]: /assets/img/docs/use-password-login-microsoft-account/3.png
+[~/assets/use-password-login-microsoft-account/4]: /assets/img/docs/use-password-login-microsoft-account/4.png
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/use-password-login-microsoft-account/1]: {% link /assets/img/docs/use-password-login-microsoft-account/1.png %}
+[~/assets/use-password-login-microsoft-account/2]: {% link /assets/img/docs/use-password-login-microsoft-account/2.png %}
+[~/assets/use-password-login-microsoft-account/3]: {% link /assets/img/docs/use-password-login-microsoft-account/3.png %}
+[~/assets/use-password-login-microsoft-account/4]: {% link /assets/img/docs/use-password-login-microsoft-account/4.png %}
+<!---->

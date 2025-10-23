@@ -12,7 +12,7 @@ author: asdqp233
 
 以及 `Fabric API, QSL/QFAPI` 这两个随 Fabric 与 Quilt 的 API（实际是模组）可供选择。
 
-![AutoInstaller_ModLoader](/assets/img/docs/auto-installing/AutoInstaller_ModLoader.png)
+![AutoInstaller_ModLoader][~/assets/auto-installing/AutoInstaller_ModLoader]
 
 当你使用 1.14 及以上的游戏版本时, 推荐使用 *Fabric*
 
@@ -48,7 +48,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 **建议点击上方的蓝色的 模组详情链接 查看模组的信息，这有可能会提示你些什么注意事项**
 
-![AddingModAutomatically](/assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png)
+![AddingModAutomatically][~/assets/auto-installing/AutoInstaller_ModAutoAdding]
 
 #### Fabric Mod / Quilt Mod
 
@@ -68,7 +68,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 #### OptiFine
 
-[详情请查阅此](/launcher/shader.html)
+[详情请查阅此][~/launcher/shader]
 
 ### 手动安装
 
@@ -80,7 +80,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 
 或者在 HMCL 的 `游戏管理页面—模组管理` 页面点击添加模组或直接将文件拖入启动器窗口。
 
-![AddingModManually](/assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png)
+![AddingModManually][~/assets/auto-installing/AutoInstaller_ModManualAdding]
 
 ## 安装 Mod 后游戏报错/无法启动
 
@@ -93,3 +93,15 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 3. 如果你的能力很优秀, 也可以直接查看游戏日志来找出问题的原因。
 
 4. 如果无法理解日志内容, 那么请将 `\.minecraft\crash-reports` 和 `\.minecraft\logs` 文件夹打包发给其他人寻求帮助。
+
+<!--{% comment %}-->
+[~/launcher/shader]: /_launcher/shader.md
+[~/assets/auto-installing/AutoInstaller_ModLoader]: /assets/img/docs/auto-installing/AutoInstaller_ModLoader.png
+[~/assets/auto-installing/AutoInstaller_ModAutoAdding]: /assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png
+[~/assets/auto-installing/AutoInstaller_ModManualAdding]: /assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png
+<!--{% endcomment %}--{{ '>' }}
+[~/launcher/shader]: {% link _launcher/shader.md %}
+[~/assets/auto-installing/AutoInstaller_ModLoader]: {% link /assets/img/docs/auto-installing/AutoInstaller_ModLoader.png %}
+[~/assets/auto-installing/AutoInstaller_ModAutoAdding]: {% link /assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png %}
+[~/assets/auto-installing/AutoInstaller_ModManualAdding]: {% link /assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png %}
+<!---->
