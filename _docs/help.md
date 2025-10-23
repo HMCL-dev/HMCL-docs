@@ -8,18 +8,16 @@ author: zkitefly
 
 Hello Minecraft! Launcher 的官方 QQ 群聊。
 
-[点击前往][docs-groups]
+[点击前往][~/docs/groups]
 
 ## Discord 频道
 
 Hello Minecraft! Launcher 的官方 Discord 频道。
 
-[点击前往][hmcl-discord]
+[点击前往](https://discord.gg/jVvC7HfM6U)
 
 <!--{% comment %}-->
-[docs-groups]: /_docs/groups.md
+[~/docs/groups]: /_docs/groups.md
 <!--{% endcomment %}--{{ '>' }}
-[docs-groups]: {% link _docs/groups.md %}
+[~/docs/groups]: {% link _docs/groups.md %}
 <!---->
-
-[hmcl-discord]: https://discord.gg/jVvC7HfM6U
