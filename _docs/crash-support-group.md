@@ -102,5 +102,5 @@ document.addEventListener("DOMContentLoaded", function () {
 <!--{% comment %}-->
 [~/assets/groups/crash]: /assets/img/docs/groups/crash.png
 <!--{% endcomment %}--{{'>'}}
-[~/assets/groups/crash]: {% /assets/img/docs/groups/crash.png %}
+[~/assets/groups/crash]: {% link /assets/img/docs/groups/crash.png %}
 <!---->
