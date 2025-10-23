@@ -330,7 +330,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: "${{ needs.preview-create-deploy.result == 'success' && format('Preview URL: {0}', env.PREVIEW_URL) || 'Preview failure.' }}"
+              body: "${{ needs.preview-create-deploy.result == 'success' && format('[Preview] {0}', env.PREVIEW_URL) || '[Preview] Failed, see logs for more information.' }}"
             });
       - if: ${{ contains(github.event.pull_request.labels.*.name, 'preview/create') || contains(github.event.issue.labels.*.name, 'preview/create') }}
         name: Remove Label (preview/create)
