@@ -18,6 +18,6 @@ Hello Minecraft! Launcher 的官方 Discord 频道。
 
 <!--{% comment %}-->
 [~/docs/groups]: /_docs/groups.md
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/docs/groups]: {% link _docs/groups.md %}
 <!---->

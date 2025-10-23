@@ -10,6 +10,6 @@ author: huanghongxun
 
 <!--{% comment %}-->
 [~/docs/groups]: /_docs/groups.md
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/docs/groups]: {% link _docs/groups.md %}
 <!---->

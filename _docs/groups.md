@@ -26,7 +26,7 @@ contributors:
 <!--{% comment %}-->
 > [!NOTE]
 > 构建时此处自动生成群列表
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 {% for group in site.data.groups -%}
 - [{{ group.name }}]({{ group.link | relative_url }}){% if group.status %}（{{ group.status }}）{% endif %}
 {% endfor %}
@@ -58,7 +58,7 @@ contributors:
 <!--{% comment %}-->
 [~/assets/groups/group-4]: /assets/img/docs/groups/group-4.png
 [~/docs/crash-support-group]: /_docs/crash-support-group.md
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/groups/group-4]: {% link /assets/img/docs/groups/group-4.png %}
 [~/docs/crash-support-group]: {% link _docs/crash-support-group.md %}
 <!---->
