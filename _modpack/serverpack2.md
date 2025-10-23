@@ -157,18 +157,18 @@ date: 2021-08-22 23:18:02 +0800
 [~/assets/serverpack2/5.1]: /assets/img/docs/serverpack2/5.1.jpg
 [~/assets/serverpack2/5.2]: /assets/img/docs/serverpack2/5.2.jpg
 <!--{% endcomment %}--{{ '>' }}
-[~/assets/serverpack2/2.1]: {% /assets/img/docs/serverpack2/2.1.jpg %}
-[~/assets/serverpack2/2.2]: {% /assets/img/docs/serverpack2/2.2.jpg %}
-[~/assets/serverpack2/2.3]: {% /assets/img/docs/serverpack2/2.3.jpg %}
-[~/assets/serverpack2/2.4]: {% /assets/img/docs/serverpack2/2.4.jpg %}
-[~/assets/serverpack2/2.5]: {% /assets/img/docs/serverpack2/2.5.jpg %}
-[~/assets/serverpack2/2.6]: {% /assets/img/docs/serverpack2/2.6.jpg %}
-[~/assets/serverpack2/2.7]: {% /assets/img/docs/serverpack2/2.7.jpg %}
-[~/assets/serverpack2/2.8]: {% /assets/img/docs/serverpack2/2.8.jpg %}
-[~/assets/serverpack2/3.1]: {% /assets/img/docs/serverpack2/3.1.jpg %}
-[~/assets/serverpack2/3.2]: {% /assets/img/docs/serverpack2/3.2.jpg %}
-[~/assets/serverpack2/4.1]: {% /assets/img/docs/serverpack2/4.1.jpg %}
-[~/assets/serverpack2/4.2]: {% /assets/img/docs/serverpack2/4.2.jpg %}
-[~/assets/serverpack2/5.1]: {% /assets/img/docs/serverpack2/5.1.jpg %}
-[~/assets/serverpack2/5.2]: {% /assets/img/docs/serverpack2/5.2.jpg %}
+[~/assets/serverpack2/2.1]: {% link /assets/img/docs/serverpack2/2.1.jpg %}
+[~/assets/serverpack2/2.2]: {% link /assets/img/docs/serverpack2/2.2.jpg %}
+[~/assets/serverpack2/2.3]: {% link /assets/img/docs/serverpack2/2.3.jpg %}
+[~/assets/serverpack2/2.4]: {% link /assets/img/docs/serverpack2/2.4.jpg %}
+[~/assets/serverpack2/2.5]: {% link /assets/img/docs/serverpack2/2.5.jpg %}
+[~/assets/serverpack2/2.6]: {% link /assets/img/docs/serverpack2/2.6.jpg %}
+[~/assets/serverpack2/2.7]: {% link /assets/img/docs/serverpack2/2.7.jpg %}
+[~/assets/serverpack2/2.8]: {% link /assets/img/docs/serverpack2/2.8.jpg %}
+[~/assets/serverpack2/3.1]: {% link /assets/img/docs/serverpack2/3.1.jpg %}
+[~/assets/serverpack2/3.2]: {% link /assets/img/docs/serverpack2/3.2.jpg %}
+[~/assets/serverpack2/4.1]: {% link /assets/img/docs/serverpack2/4.1.jpg %}
+[~/assets/serverpack2/4.2]: {% link /assets/img/docs/serverpack2/4.2.jpg %}
+[~/assets/serverpack2/5.1]: {% link /assets/img/docs/serverpack2/5.1.jpg %}
+[~/assets/serverpack2/5.2]: {% link /assets/img/docs/serverpack2/5.2.jpg %}
 <!---->
