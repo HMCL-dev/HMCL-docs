@@ -33,7 +33,7 @@ author: zkitefly
 [button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
 {% endcapture %}
 {{ notice | markdownify }}
-<p class="text-center">请等待 <span id="countdown">10</span> 秒，请认真阅读注意事项</p>
+<p class="text-center">请等待 <span id="countdown">5</span> 秒，请认真阅读注意事项</p>
 <button id="close-btn" class="btn align-center" disabled>我已了解</button>
 </div>
 </div>
