@@ -317,7 +317,7 @@ jobs:
               repo: context.repo.repo,
               comment_id: context.payload.comment.id,
               issue_number: context.issue.number,
-              body: "${{ needs.preview-create-deploy.result == 'success' && format('Preview URL: {0}', env.PREVIEW_URL) || 'Preview failure.' }}"
+              body: "${{ needs.preview-create-deploy.result == 'success' && format('[Preview] {0}', env.PREVIEW_URL) || '[Preview] Failed, see logs for more information.' }}"
             });
       - if: ${{ steps.comment-message.outcome == 'failure' }}
         name: Comment Message
