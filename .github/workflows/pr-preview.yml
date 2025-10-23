@@ -3,7 +3,7 @@ on:
   issue_comment:
     types: [created]
   pull_request_target:
-    types: [labeled, closed]
+    types: [labeled, synchronize, closed]
 concurrency:
   group: pr-preview
   cancel-in-progress: false
@@ -87,8 +87,8 @@ jobs:
               repo: context.repo.repo,
               key: "${{ steps.restore-pages.outputs.cache-matched-key }}"
             });
-      - if: ${{ github.event_name == 'pull_request_target' }}
-        name: Remove Label (pull_request_target)
+      - if: ${{ contains(github.event.pull_request.labels.*.name, 'preview/remove') || contains(github.event.issue.labels.*.name, 'preview/remove') }}
+        name: Remove Label (preview/remove)
         continue-on-error: true
         uses: actions/github-script@v8
         with:
@@ -99,17 +99,53 @@ jobs:
               issue_number: context.issue.number,
               name: "preview/remove"
             });
+      - if: ${{ contains(github.event.pull_request.labels.*.name, 'preview/watch') || contains(github.event.issue.labels.*.name, 'preview/watch') }}
+        name: Remove Label (preview/watch)
+        continue-on-error: true
+        uses: actions/github-script@v8
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: "preview/watch"
+            });
+  preview-watch:
+    if: >-
+      ${{
+        github.event.repository.fork &&
+        github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request &&
+        github.event.comment.body == '/preview watch' &&
+        contains('OWNER,MEMBER', github.event.comment.author_association)
+      }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Add Label
+        uses: actions/github-script@v8
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["preview/watch"]
+            });
   preview-create-init:
     if: >-
       ${{
         !github.event.repository.fork && (
-          ( github.event_name == 'pull_request_target' &&
-            github.event.action == 'labeled' &&
-            github.event.label.name == 'preview/create'
+          ( github.event_name == 'pull_request_target' && (
+              ( github.event.action == 'labeled' && contains('preview/create,preview/watch', github.event.label.name) ) ||
+              ( github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'preview/watch') )
+            )
           ) || (
             github.event_name == 'issue_comment' &&
             github.event.issue.pull_request &&
-            github.event.comment.body == '/preview create' &&
+            contains('/preview create,/preview watch', github.event.comment.body) &&
             contains('OWNER,MEMBER', github.event.comment.author_association)
           )
         )
