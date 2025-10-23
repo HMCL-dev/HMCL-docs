@@ -52,7 +52,7 @@ HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提
 [~/assets/serverpack/1-4]: /assets/img/docs/serverpack/1-4.png
 [~/assets/serverpack/1-5]: /assets/img/docs/serverpack/1-5.png
 [~/assets/serverpack/1-6]: /assets/img/docs/serverpack/1-6.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/serverpack/1-1]: {% link /assets/img/docs/serverpack/1-1.png %}
 [~/assets/serverpack/1-2]: {% link /assets/img/docs/serverpack/1-2.png %}
 [~/assets/serverpack/1-3]: {% link /assets/img/docs/serverpack/1-3.png %}

@@ -93,7 +93,7 @@ contributors:
 [~/assets/shader/iris]: /assets/img/docs/shader/iris.png
 [~/assets/shader/game_dir]: /assets/img/docs/shader/game_dir.png
 [~/assets/shader/shaders_setting]: /assets/img/docs/shader/shaders_setting.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/shader/optifine_install]: {% link /assets/img/docs/shader/optifine_install.png %}
 [~/assets/shader/select_optifine]: {% link /assets/img/docs/shader/select_optifine.png %}
 [~/assets/shader/install_auto-16338577874692]: {% link /assets/img/docs/shader/install_auto-16338577874692.png %}

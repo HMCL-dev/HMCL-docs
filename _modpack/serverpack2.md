@@ -156,7 +156,7 @@ date: 2021-08-22 23:18:02 +0800
 [~/assets/serverpack2/4.2]: /assets/img/docs/serverpack2/4.2.jpg
 [~/assets/serverpack2/5.1]: /assets/img/docs/serverpack2/5.1.jpg
 [~/assets/serverpack2/5.2]: /assets/img/docs/serverpack2/5.2.jpg
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/serverpack2/2.1]: {% link /assets/img/docs/serverpack2/2.1.jpg %}
 [~/assets/serverpack2/2.2]: {% link /assets/img/docs/serverpack2/2.2.jpg %}
 [~/assets/serverpack2/2.3]: {% link /assets/img/docs/serverpack2/2.3.jpg %}

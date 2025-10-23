@@ -33,7 +33,7 @@ Can't download? [Click here to download (alternative)](https://alist.8mi.tech/d/
 <!--{% comment %}-->
 [~/assets/downloads/windows/x86_64-1]: /assets/img/docs/downloads/windows/x86_64-1.gif
 [~/assets/downloads/windows/x86_64-2]: /assets/img/docs/downloads/windows/x86_64-2.gif
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/downloads/windows/x86_64-1]: {% link /assets/img/docs/downloads/windows/x86_64-1.gif %}
 [~/assets/downloads/windows/x86_64-2]: {% link /assets/img/docs/downloads/windows/x86_64-2.gif %}
 <!---->

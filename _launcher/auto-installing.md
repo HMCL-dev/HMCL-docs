@@ -99,7 +99,7 @@ HMCL 内置了 CurseForge 和 Modrinth 下载源的搜索和下载功能, 目前
 [~/assets/auto-installing/AutoInstaller_ModLoader]: /assets/img/docs/auto-installing/AutoInstaller_ModLoader.png
 [~/assets/auto-installing/AutoInstaller_ModAutoAdding]: /assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png
 [~/assets/auto-installing/AutoInstaller_ModManualAdding]: /assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/launcher/shader]: {% link _launcher/shader.md %}
 [~/assets/auto-installing/AutoInstaller_ModLoader]: {% link /assets/img/docs/auto-installing/AutoInstaller_ModLoader.png %}
 [~/assets/auto-installing/AutoInstaller_ModAutoAdding]: {% link /assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png %}

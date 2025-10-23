@@ -132,7 +132,7 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 [~/assets/docs/bundled-java/2-5]: /assets/img/docs/bundled-java/2-5.png
 [~/assets/docs/bundled-java/2-6]: /assets/img/docs/bundled-java/2-6.png
 [~/assets/docs/bundled-java/2-7]: /assets/img/docs/bundled-java/2-7.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/docs/bundled-java/2-1]: {% link /assets/img/docs/bundled-java/2-1.png %}
 [~/assets/docs/bundled-java/2-2]: {% link /assets/img/docs/bundled-java/2-2.png %}
 [~/assets/docs/bundled-java/2-3]: {% link /assets/img/docs/bundled-java/2-3.png %}

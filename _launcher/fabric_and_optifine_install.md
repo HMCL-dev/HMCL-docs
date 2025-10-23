@@ -73,7 +73,7 @@ OptiFine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
 [~/assets/fabric_and_optifine_install/8]: /assets/img/docs/fabric_and_optifine_install/8.png
 [~/assets/fabric_and_optifine_install/9]: /assets/img/docs/fabric_and_optifine_install/9.png
 [~/assets/fabric_and_optifine_install/11]: /assets/img/docs/fabric_and_optifine_install/11.gif
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/fabric_and_optifine_install/1]: {% link /assets/img/docs/fabric_and_optifine_install/1.gif %}
 [~/assets/fabric_and_optifine_install/2]: {% link /assets/img/docs/fabric_and_optifine_install/2.png %}
 [~/assets/fabric_and_optifine_install/5]: {% link /assets/img/docs/fabric_and_optifine_install/5.png %}

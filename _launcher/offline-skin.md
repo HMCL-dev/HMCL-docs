@@ -78,7 +78,7 @@ contributors:
 [~/assets/offline-skin/img4_1]: /assets/img/docs/offline-skin/img4_1.png
 [~/assets/offline-skin/img4_2]: /assets/img/docs/offline-skin/img4_2.png
 [~/assets/offline-skin/img4_3]: /assets/img/docs/offline-skin/img4_3.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/offline-skin/img1_1]: {% link /assets/img/docs/offline-skin/img1_1.png %}
 [~/assets/offline-skin/img1_2]: {% link /assets/img/docs/offline-skin/img1_2.png %}
 [~/assets/offline-skin/img2]: {% link /assets/img/docs/offline-skin/img2.png %}

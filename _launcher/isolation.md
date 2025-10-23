@@ -42,7 +42,7 @@ author: LIPiston
 [~/assets/isolation/img1]: /assets/img/docs/isolation/img1.png
 [~/assets/isolation/img2]: /assets/img/docs/isolation/img2.webp
 [~/assets/isolation/img3]: /assets/img/docs/isolation/img3.webp
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/isolation/img1]: {% link /assets/img/docs/isolation/img1.png %}
 [~/assets/isolation/img2]: {% link /assets/img/docs/isolation/img2.webp %}
 [~/assets/isolation/img3]: {% link /assets/img/docs/isolation/img3.webp %}

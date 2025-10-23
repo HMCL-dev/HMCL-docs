@@ -71,7 +71,7 @@ author: LIPiston
 <!--{% comment %}-->
 [~/launcher/isolation]: /_launcher/isolation.md
 [~/assets/error-handbook/image]: /assets/img/docs/error-handbook/image.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/launcher/isolation]: {% link _launcher/isolation.md %}
 [~/assets/error-handbook/image]: {% link /assets/img/docs/error-handbook/image.png %}
 <!---->

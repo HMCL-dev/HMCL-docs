@@ -28,6 +28,6 @@ author: huanghongxun
 
 <!--{% comment %}-->
 [~/assets/docs/authlib-injector/image]: /assets/img/docs/authlib-injector/image.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/docs/authlib-injector/image]: {% link /assets/img/docs/authlib-injector/image.png %}
 <!---->

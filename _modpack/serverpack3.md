@@ -323,6 +323,6 @@ unzip /home/ftp/client2.0.zip -d /minecraftClientStatic/modepack
 
 <!--{% comment %}-->
 [modpack-serverpack]: /_modpack/serverpack.md
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [modpack-serverpack]: {% link _modpack/serverpack.md %}
 <!---->

@@ -22,10 +22,9 @@ No redirect? [Click here to start downloading](https://bell-sw.com/pages/downloa
         window.location.href = "https://bell-sw.com/pages/downloads/?version=java-21&os=macos&architecture=arm&package=jre-full&bitness=64#:~:text=All%20versions";
     }, 5000);
 </script>
-<!---->
 
 <!--{% comment %}-->
 [~/assets/downloads/macos/arm64]: /assets/img/docs/downloads/macos/arm64.gif
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/downloads/macos/arm64]: {% link /assets/img/docs/downloads/macos/arm64.gif %}
 <!---->

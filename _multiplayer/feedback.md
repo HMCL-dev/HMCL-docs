@@ -9,9 +9,9 @@ author: Burning_TNT
 <!--{% comment %}-->
 > [!TIP]
 > <!--{% endcomment %}-->
-> <!----{{ '>' }} **提示** <br> <!---->
+> <!----{{'>'}} **提示** <br> <!---->
 > 欢迎您填写[反馈表单][feedback-form]。
-<!----{{ '>' }}
+<!----{{'>'}}
 {: .notice--success }
 <!---->
 
@@ -32,7 +32,7 @@ author: Burning_TNT
 
 <!--{% comment %}-->
 [feedback-form]: https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp "反馈表单"
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [feedback-form]: https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp "反馈表单"
 {: data-redirect="" data-delay="10" }
 <!---->

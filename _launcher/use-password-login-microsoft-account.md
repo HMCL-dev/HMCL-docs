@@ -39,7 +39,7 @@ _如果没有“使用我的密码”选项，或者忘记了密码，请看 [�
 [~/assets/use-password-login-microsoft-account/2]: /assets/img/docs/use-password-login-microsoft-account/2.png
 [~/assets/use-password-login-microsoft-account/3]: /assets/img/docs/use-password-login-microsoft-account/3.png
 [~/assets/use-password-login-microsoft-account/4]: /assets/img/docs/use-password-login-microsoft-account/4.png
-<!--{% endcomment %}--{{ '>' }}
+<!--{% endcomment %}--{{'>'}}
 [~/assets/use-password-login-microsoft-account/1]: {% link /assets/img/docs/use-password-login-microsoft-account/1.png %}
 [~/assets/use-password-login-microsoft-account/2]: {% link /assets/img/docs/use-password-login-microsoft-account/2.png %}
 [~/assets/use-password-login-microsoft-account/3]: {% link /assets/img/docs/use-password-login-microsoft-account/3.png %}
