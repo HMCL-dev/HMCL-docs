@@ -64,7 +64,7 @@ jobs:
               repo: context.repo.repo,
               comment_id: context.payload.comment.id,
               issue_number: context.issue.number,
-              body: "Remove Preview"
+              body: "[Preview] Preview has been removed."
             });
       - if: ${{ github.event_name == 'pull_request_target' || steps.comment-message.outcome == 'failure' }}
         name: Comment Message
