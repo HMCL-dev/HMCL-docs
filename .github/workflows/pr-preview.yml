@@ -139,13 +139,13 @@ jobs:
       ${{
         !github.event.repository.fork && (
           ( github.event_name == 'pull_request_target' && (
-              ( github.event.action == 'labeled' && contains('preview/create,preview/watch', github.event.label.name) ) ||
+              ( github.event.action == 'labeled' && contains(fromJSON('["preview/create", "preview/watch"]'), github.event.label.name) ) ||
               ( github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'preview/watch') )
             )
           ) || (
             github.event_name == 'issue_comment' &&
             github.event.issue.pull_request &&
-            contains('/preview create,/preview watch', github.event.comment.body) &&
+            contains(fromJSON('["/preview create", "/preview watch"]'), github.event.comment.body) &&
             contains('OWNER,MEMBER', github.event.comment.author_association)
           )
         )
