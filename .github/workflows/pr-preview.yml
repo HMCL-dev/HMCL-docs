@@ -332,8 +332,8 @@ jobs:
               issue_number: context.issue.number,
               body: "${{ needs.preview-create-deploy.result == 'success' && format('Preview URL: {0}', env.PREVIEW_URL) || 'Preview failure.' }}"
             });
-      - if: ${{ github.event_name == 'pull_request_target' }}
-        name: Remove Label (pull_request_target)
+      - if: ${{ contains(github.event.pull_request.labels.*.name, 'preview/create') || contains(github.event.issue.labels.*.name, 'preview/create') }}
+        name: Remove Label (preview/create)
         continue-on-error: true
         uses: actions/github-script@v8
         with:
