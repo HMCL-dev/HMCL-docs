@@ -10,15 +10,15 @@ HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提
 ## 第一步：导出整合包
 在 HMCL 中右键做好的客户端版本，选择`导出整合包`：
 
-![](/assets/img/docs/serverpack/1.png)
+![][~/assets/serverpack/1-1]
 
 选择导出为`服务器自动更新整合包`：
 
-![](/assets/img/docs/serverpack/1-1.png)
+![][~/assets/serverpack/1-2]
 
 填写整合包信息，整合包下载链接前缀如何填写请看下文
 
-![](/assets/img/docs/serverpack/1-2.png)
+![][~/assets/serverpack/1-3]
 
 选择需要包含在整合包内的文件后将产生整合包压缩文件
 
@@ -26,21 +26,37 @@ HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提
 
 接着创建一个全新的空文件夹，将启动器复制进去
 
-![](/assets/img/docs/serverpack/1-3.png)
+![][~/assets/serverpack/1-4]
 
 运行启动器，并导入刚才导出的整合包，导入完成后，这个文件夹（这里叫“新整合包”）可以打包发给玩家。
 
 ## 第三步，部署整合包更新服务器
 你可以借助 Apache、Nginx 等支持静态文件的 HTTP 服务器软件提供文件。首先，决定好整合包下载链接前缀，比如我希望 HMCL 从远程服务器的 http://www.site.com/modpack 目录下存放整合包的更新信息，则在之前导出整合包的整合包下载前缀中填写 http://www.site.com/modpack。
 
-![](/assets/img/docs/serverpack/1-4.png)
+![][~/assets/serverpack/1-5]
 
 上图为导出的服务器自动更新整合包压缩文件的内容，你需要将这个整合包解压到 http://www.site.com/modpack 下。也就是说，从 http://www.site.com/modpack/server-manifest.json 这个链接下载下来的文件必须和上图中整合包压缩文件中的 server-manifest.json 文件一致，并且，http://www.site.com/modpack/overrides 是一个文件夹，里面存放了整合包文件，比如：
 
-![](/assets/img/docs/serverpack/1-6.png)
+![][~/assets/serverpack/1-6]
 
 整合包压缩文件 test.zip/overrides/mods/Advancement_Book-1.12-1.0.3.jar 文件必须可以从 http://www.site.com/modpack/overrides/mods/Advancement_Book-1.12-1.0.3.jar 该目录下载下来，且文件内容一致。那么至此更新服务器就部署完成了。
 
 ## 第四步，更新整合包
 
 如果你需要更新整合包，那么将新的整合包经过第一步导出新的整合包压缩文件，并解压到类似 http://www.site.com/modpack 文件夹下即可完成新整合包的部署。
+
+<!--{% comment %}-->
+[~/assets/serverpack/1-1]: /assets/img/docs/serverpack/1-1.png
+[~/assets/serverpack/1-2]: /assets/img/docs/serverpack/1-2.png
+[~/assets/serverpack/1-3]: /assets/img/docs/serverpack/1-3.png
+[~/assets/serverpack/1-4]: /assets/img/docs/serverpack/1-4.png
+[~/assets/serverpack/1-5]: /assets/img/docs/serverpack/1-5.png
+[~/assets/serverpack/1-6]: /assets/img/docs/serverpack/1-6.png
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/serverpack/1-1]: {% /assets/img/docs/serverpack/1-1.png %}
+[~/assets/serverpack/1-2]: {% /assets/img/docs/serverpack/1-2.png %}
+[~/assets/serverpack/1-3]: {% /assets/img/docs/serverpack/1-3.png %}
+[~/assets/serverpack/1-4]: {% /assets/img/docs/serverpack/1-4.png %}
+[~/assets/serverpack/1-5]: {% /assets/img/docs/serverpack/1-5.png %}
+[~/assets/serverpack/1-6]: {% /assets/img/docs/serverpack/1-6.png %}
+<!---->

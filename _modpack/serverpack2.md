@@ -33,33 +33,33 @@ date: 2021-08-22 23:18:02 +0800
 
 - 打开控制台面板，找到刚才租的学生机
 
-  ![](/assets/img/docs/serverpack2/2.1.jpg)
+  ![][~/assets/serverpack2/2.1]
 
 - 选择重置密码
 
-  ![](/assets/img/docs/serverpack2/2.2.jpg)
+  ![][~/assets/serverpack2/2.2]
 
 - 点击右侧**登入**按钮，按照说明填写你刚刚重置的密码；之后应该会看到类似这样的提示
 
-  ![](/assets/img/docs/serverpack2/2.3.jpg)
+  ![][~/assets/serverpack2/2.3]
 
 - **不要慌，冷静。如果下面的部分教程失效请去[宝塔面板官网](https://www.bt.cn/)，点击Linux->立即安装**
 
-  ![](/assets/img/docs/serverpack2/2.4.jpg)
+  ![][~/assets/serverpack2/2.4]
 
 - 回到控制台面板，我们需要开放一些通道让面板通过，选择**安全组**
 
-  ![](/assets/img/docs/serverpack2/2.5.jpg)
+  ![][~/assets/serverpack2/2.5]
 
 - 点击**修改规则**，再点击**添加规则**
 
 - 图1：
 
-  ![](/assets/img/docs/serverpack2/2.6.jpg)
+  ![][~/assets/serverpack2/2.6]
 
 - 图2：
 
-  ![](/assets/img/docs/serverpack2/2.7.jpg)
+  ![][~/assets/serverpack2/2.7]
 
 - **按照图中所写添加，想要安全的话按照图1，懒的话按照图2**
 
@@ -69,7 +69,7 @@ date: 2021-08-22 23:18:02 +0800
 
 - 耐心等待五分钟左右，直到出现这个字样
 
-  ![](/assets/img/docs/serverpack2/2.8.jpg)
+  ![][~/assets/serverpack2/2.8]
 
 - 复制**外网面板地址**，在打开的页面中，用户名输入username后面的内容，密码输入password后面的内容
 
@@ -81,13 +81,13 @@ date: 2021-08-22 23:18:02 +0800
 
 - 等待安装完成后，选择**网站**，点击**添加网站**
 
-  ![](/assets/img/docs/serverpack2/3.1.jpg)
+  ![][~/assets/serverpack2/3.1]
 
 - 在弹出的页面填写网站IP，就是地址栏里面的那个；比如：我的是 https://233.88.233.44:8888/site ,那么我就填233.88.233.44
 
 - 另外，**租vps的同学请找服务商索要ip地址和开放的端口**，比如我要到的是123.21.123.21:6666，那我就把这个填上去
 
-  ![](/assets/img/docs/serverpack2/3.2.jpg)
+  ![][~/assets/serverpack2/3.2]
 
 - **其他保持不变，到此为止你已经搭建好了HTTP静态文件服务器✔**
 
@@ -97,13 +97,13 @@ date: 2021-08-22 23:18:02 +0800
 
 - 选择你的游戏版本，点击**导出整合包**
 
-  ![](/assets/img/docs/serverpack2/4.1.jpg)
+  ![][~/assets/serverpack2/4.1]
 
 - 选择**服务器自动更新整合包**
 
 - 填写相关信息：
 
-  ![](/assets/img/docs/serverpack2/4.2.jpg)
+  ![][~/assets/serverpack2/4.2]
 
 - 整合包下载链接前缀：比如我刚刚在【[第三步-搭建HTTP静态文件服务器](###第三步-搭建HTTP静态文件服务器)】宝塔里填的是233.88.233.44，我希望能有版本区分，这个版本代号是a；那么我就填https://233.88.233.44/a， **vps注意，端口号也要写▲**
 
@@ -115,11 +115,11 @@ date: 2021-08-22 23:18:02 +0800
 
 - 打开宝塔面板，选择**文件**，找到相应的目录，在相应IP目录下新建文件夹；比如我刚刚写的版本代号是a，那我就新建a这个文件夹
 
-  ![](/assets/img/docs/serverpack2/5.1.jpg)
+  ![][~/assets/serverpack2/5.1]
 
 - 在新建的文件夹里上传刚刚导出的整合包，并解压；成功后如下图
 
-  ![](/assets/img/docs/serverpack2/5.2.jpg)
+  ![][~/assets/serverpack2/5.2]
  
 - 要是更新整合包，请在解压时将该【a】这个文件夹内的文件覆盖处理
 
@@ -140,3 +140,35 @@ date: 2021-08-22 23:18:02 +0800
 - 更新覆盖的是整合包导出时的所有数据
 - **每次更新会从整合包提供的链接下载 server-manifest.json 来校验玩家本地的整合包。若校验到整合包里没有匹配这个名字的文件或整合包里这个文件匹配名字但哈希值不匹配，就会下载该文件，不会下载匹配名字且哈希值匹配的文件**
 - 出网带宽1MB我觉得够用了，除非你想让玩家自己下载全部内容（就是将整合包分发给他人前删除所有模组，玩家启动时就会开始下载回来，这样的好处是可见的整合包大小变小了）
+
+<!--{% comment %}-->
+[~/assets/serverpack2/2.1]: /assets/img/docs/serverpack2/2.1.jpg
+[~/assets/serverpack2/2.2]: /assets/img/docs/serverpack2/2.2.jpg
+[~/assets/serverpack2/2.3]: /assets/img/docs/serverpack2/2.3.jpg
+[~/assets/serverpack2/2.4]: /assets/img/docs/serverpack2/2.4.jpg
+[~/assets/serverpack2/2.5]: /assets/img/docs/serverpack2/2.5.jpg
+[~/assets/serverpack2/2.6]: /assets/img/docs/serverpack2/2.6.jpg
+[~/assets/serverpack2/2.7]: /assets/img/docs/serverpack2/2.7.jpg
+[~/assets/serverpack2/2.8]: /assets/img/docs/serverpack2/2.8.jpg
+[~/assets/serverpack2/3.1]: /assets/img/docs/serverpack2/3.1.jpg
+[~/assets/serverpack2/3.2]: /assets/img/docs/serverpack2/3.2.jpg
+[~/assets/serverpack2/4.1]: /assets/img/docs/serverpack2/4.1.jpg
+[~/assets/serverpack2/4.2]: /assets/img/docs/serverpack2/4.2.jpg
+[~/assets/serverpack2/5.1]: /assets/img/docs/serverpack2/5.1.jpg
+[~/assets/serverpack2/5.2]: /assets/img/docs/serverpack2/5.2.jpg
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/serverpack2/2.1]: {% /assets/img/docs/serverpack2/2.1.jpg %}
+[~/assets/serverpack2/2.2]: {% /assets/img/docs/serverpack2/2.2.jpg %}
+[~/assets/serverpack2/2.3]: {% /assets/img/docs/serverpack2/2.3.jpg %}
+[~/assets/serverpack2/2.4]: {% /assets/img/docs/serverpack2/2.4.jpg %}
+[~/assets/serverpack2/2.5]: {% /assets/img/docs/serverpack2/2.5.jpg %}
+[~/assets/serverpack2/2.6]: {% /assets/img/docs/serverpack2/2.6.jpg %}
+[~/assets/serverpack2/2.7]: {% /assets/img/docs/serverpack2/2.7.jpg %}
+[~/assets/serverpack2/2.8]: {% /assets/img/docs/serverpack2/2.8.jpg %}
+[~/assets/serverpack2/3.1]: {% /assets/img/docs/serverpack2/3.1.jpg %}
+[~/assets/serverpack2/3.2]: {% /assets/img/docs/serverpack2/3.2.jpg %}
+[~/assets/serverpack2/4.1]: {% /assets/img/docs/serverpack2/4.1.jpg %}
+[~/assets/serverpack2/4.2]: {% /assets/img/docs/serverpack2/4.2.jpg %}
+[~/assets/serverpack2/5.1]: {% /assets/img/docs/serverpack2/5.1.jpg %}
+[~/assets/serverpack2/5.2]: {% /assets/img/docs/serverpack2/5.2.jpg %}
+<!---->

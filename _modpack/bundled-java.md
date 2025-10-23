@@ -66,11 +66,11 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 首先我们假设整合包根文件夹是 `tutorial`（这个文件夹名字可以取别的），该文件夹内应该包含如下的文件：
 
-![](/assets/img/docs/modpack-in-java/2-1.png)
+![][~/assets/docs/bundled-java/2-1]
 
 其中，`.minecraft` 是 Minecraft 文件夹，`jre-x64` 是你的 Java 运行时，我们分别来看看这两个文件夹的内容：
 
-![](/assets/img/docs/modpack-in-java/2-2.png)
+![][~/assets/docs/bundled-java/2-2]
 
 上图是 `.minecraft` 文件夹的内容，里面包含着 `assets`、`libraries`、`versions` 等传统的文件夹。以及 `HMCL.jar`，这个文件是 HMCL 启动器的 `jar` 文件，可以在 https://hmcl.huangyuhui.net/download 里面下载 macOS 或者 Linux 版本（这两个版本的文件后缀名都是 `jar`，实际上是完全一样的东西，**也可以在 Windows 系统上双击运行**，没有平台限制）。
 
@@ -78,7 +78,7 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 **注意：HMCL 本体文件 HMCL.jar 请务必保持该文件名，HMCL-3.2.117.jar 等带有版本号的文件名是不可以的**
 
-![](/assets/img/docs/modpack-in-java/2-3.png)
+![][~/assets/docs/bundled-java/2-3]
 
 上图是 `jre-x64` 文件夹的内容，一看就是一个 JRE 的文件夹。
 
@@ -86,21 +86,21 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 接下来我们创建一个快捷方式来使得 HMCL 通过 `jre-x64` 文件夹里的 Java 运行时启动，并使得 Minecraft 也通过该 Java 运行时启动。
 
-![](/assets/img/docs/modpack-in-java/2-4.png)
+![][~/assets/docs/bundled-java/2-4]
 
 在 `tutorial` 文件夹内右击空白区域打开快捷菜单，创建快捷方式。
 
-![](/assets/img/docs/modpack-in-java/2-5.png)
+![][~/assets/docs/bundled-java/2-5]
 
 在弹出的窗口中（如上图所示），在输入框内输入：`cmd /c start .\jre-x64\bin\javaw.exe -jar .\.minecraft\HMCL.jar`，其中 `jre-x64` 和 `.minecraft\HMCL.jar` 根据实际情况修改，`jre-x64` 是你的 Java 运行时的路径，`.minecraft\HMCL.jar` 是 HMCL 本体文件。
 
-![](/assets/img/docs/modpack-in-java/2-6.png)
+![][~/assets/docs/bundled-java/2-6]
 
 接着给快捷方式取个名字就好了（如上图所示，`开始游戏` 是我取的名字）。
 
 生成好快捷方式后我们还要编辑一下属性，右键 `开始游戏` 这个新创建的快捷方式（如果你取了别的名字请选中那个文件编辑其属性），在弹出的快捷菜单中选择属性，会打开快捷方式的属性窗口如下图所示：
 
-![](/assets/img/docs/modpack-in-java/2-7.png)
+![][~/assets/docs/bundled-java/2-7]
 
 将起始位置内的文字删除干净，留空即可。保存退出该窗口。
 
@@ -114,7 +114,7 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 
 **1A**：是的，复制 jre 内的所有东西就行，可以根据下图参考：
 
-![](/assets/img/docs/modpack-in-java/2-3.png)
+![][~/assets/docs/bundled-java/2-3]
 
 ——————————————————————————————————————————————————
 
@@ -123,3 +123,21 @@ SH 版本在支持 Bash 的系统下打开会首先检查**同级文件夹**下�
 **2A**：有很多的Java提供选择，如 [Liberica JDK](https://bell-sw.com/pages/downloads/?package=jre-full) 、[Microsoft JDK](https://microsoft.com/openjdk)、[Oracle JDK](https://www.oracle.com/java/technologies/downloads/)、[中文 Java 镜像站](https://injdk.cn/ "对中国大陆的访问速度更友好") 和 [Oracle openJDK](https://jdk.java.net/) 等
 
 只需要在下载时下载**.zip 压缩包文件**，且将压缩包内的所有内容放入对应文件夹即可
+
+<!--{% comment %}-->
+[~/assets/docs/bundled-java/2-1]: /assets/img/docs/bundled-java/2-1.png
+[~/assets/docs/bundled-java/2-2]: /assets/img/docs/bundled-java/2-2.png
+[~/assets/docs/bundled-java/2-3]: /assets/img/docs/bundled-java/2-3.png
+[~/assets/docs/bundled-java/2-4]: /assets/img/docs/bundled-java/2-4.png
+[~/assets/docs/bundled-java/2-5]: /assets/img/docs/bundled-java/2-5.png
+[~/assets/docs/bundled-java/2-6]: /assets/img/docs/bundled-java/2-6.png
+[~/assets/docs/bundled-java/2-7]: /assets/img/docs/bundled-java/2-7.png
+<!--{% endcomment %}--{{ '>' }}
+[~/assets/docs/bundled-java/2-1]: {% link /assets/img/docs/bundled-java/2-1.png %}
+[~/assets/docs/bundled-java/2-2]: {% link /assets/img/docs/bundled-java/2-2.png %}
+[~/assets/docs/bundled-java/2-3]: {% link /assets/img/docs/bundled-java/2-3.png %}
+[~/assets/docs/bundled-java/2-4]: {% link /assets/img/docs/bundled-java/2-4.png %}
+[~/assets/docs/bundled-java/2-5]: {% link /assets/img/docs/bundled-java/2-5.png %}
+[~/assets/docs/bundled-java/2-6]: {% link /assets/img/docs/bundled-java/2-6.png %}
+[~/assets/docs/bundled-java/2-7]: {% link /assets/img/docs/bundled-java/2-7.png %}
+<!---->
