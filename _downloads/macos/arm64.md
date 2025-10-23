@@ -25,7 +25,7 @@ No redirect? [Click here to start downloading](https://bell-sw.com/pages/downloa
 <!---->
 
 <!--{% comment %}-->
-[~/assets/downloads/macos/arm64]: /assets/img/downloads/macos/arm64.gif
+[~/assets/downloads/macos/arm64]: /assets/img/docs/downloads/macos/arm64.gif
 <!--{% endcomment %}--{{ '>' }}
-[~/assets/downloads/macos/arm64]: {% link /assets/img/downloads/macos/arm64.gif %}
+[~/assets/downloads/macos/arm64]: {% link /assets/img/docs/downloads/macos/arm64.gif %}
 <!---->
