@@ -124,6 +124,6 @@ HMCL 会自动管理 Java，并针对不同版本的游戏自动选择合适的 
 [~/assets/faq/img5]: {% link /assets/img/docs/faq/img5.jpg %}
 [~/launcher/auto-installing]: {% link _launcher/auto-installing.md %}
 [~/launcher/auto-installing/hash1]: {% link _launcher/auto-installing.md %}#安装-mod-后游戏报错无法启动
-[~/modpack/error-handbook] ]: {% link _modpack/error-handbook.md %}
+[~/modpack/error-handbook]: {% link _modpack/error-handbook.md %}
 [~/docs/help]: {% link _docs/help.md %}
 <!---->
