@@ -12,7 +12,7 @@ author: zkitefly
 <!---->
 <h1 id="" align="center">加入群聊前请注意</h1>
 
-- 游戏非正常退出时，请点击左下角 ![][button-1] 按钮（不是 ![][button-2] 按钮），并完整发送生成的报错压缩包
+- 游戏非正常退出时，请点击左下角 ![][~/assets/groups/button-1] 按钮（不是 ![][~/assets/groups/button-2] 按钮），并完整发送生成的报错压缩包
 - 遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助
 - 使用整合包时，请说明具体的整合包名称与版本
 - 请保持耐心，群管理和群友会协助解决问题。严禁辱骂、催促他人
@@ -26,11 +26,11 @@ author: zkitefly
 
 ---
 <!--{% comment %}-->
-[button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
-[button-2]: /assets/img/docs/groups/button-2.png "日志"
+[~/assets/groups/button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
+[~/assets/groups/button-2]: /assets/img/docs/groups/button-2.png "日志"
 <!--{% endcomment %}--{{'>'}}
-[button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
-[button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
+[~/assets/groups/button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
+[~/assets/groups/button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
 {% endcapture %}
 {{ notice | markdownify }}
 <p class="text-center">请等待 <span id="countdown">5</span> 秒，请认真阅读注意事项</p>
@@ -41,7 +41,7 @@ author: zkitefly
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 
-![](/assets/img/docs/groups/crash.png)
+![][~/assets/groups/crash]
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
@@ -98,4 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }, false);
 });
 </script>
+
+<!--{% comment %}-->
+[~/assets/groups/crash]: /assets/img/docs/groups/crash.png
+<!--{% endcomment %}--{{'>'}}
+[~/assets/groups/crash]: {% /assets/img/docs/groups/crash.png %}
 <!---->
