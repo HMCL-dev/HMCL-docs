@@ -16,9 +16,9 @@ contributors:
 
 打开HMCL, 进入 **账号列表** , 点击下图离线账号的【上传皮肤】红框处:
 
-![][~/assets/offline-skin/img2_1]
+![][~/assets/offline-skin/img1_1]
 
-![][~/assets/offline-skin/img2_2]
+![][~/assets/offline-skin/img1_2]
 
 > 默认: 使用默认随机的皮肤显示
 >
