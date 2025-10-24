@@ -52,8 +52,8 @@ jobs:
           grep -rlw 'PR${{ env.GITHUB_PR_NUMBER }}' /home/runner/gh-pages/data/refs | xargs -r sed -i '/\<PR${{ env.GITHUB_PR_NUMBER }}\>/d'
           for ref in /home/runner/gh-pages/data/refs/*; do
             if [ ! -s "$ref" ]; then
-              base=$(basename "$ref" .txt)
-              rm -f "/home/runner/gh-pages/data/$base"
+              base=$(basename "$ref")
+              rm -f "/home/runner/gh-pages/data/files/$base"
               rm -f "$ref"
             fi
           done
@@ -273,12 +273,12 @@ jobs:
               rm -f "$file"
             fi
             ln -s "$target" "$file"
-            echo "PR${{ env.GITHUB_PR_NUMBER }}" >> "/home/runner/gh-pages/data/refs/$key.txt"
+            echo "PR${{ env.GITHUB_PR_NUMBER }}" >> "/home/runner/gh-pages/data/refs/$key"
           done
           for ref in /home/runner/gh-pages/data/refs/*; do
             if [ ! -s "$ref" ]; then
-              base=$(basename "$ref" .txt)
-              rm -f "/home/runner/gh-pages/data/$base"
+              base=$(basename "$ref")
+              rm -f "/home/runner/gh-pages/data/files/$base"
               rm -f "$ref"
             fi
           done
