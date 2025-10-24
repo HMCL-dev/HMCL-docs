@@ -45,8 +45,18 @@ jobs:
       - name: Prepare Pages
         run: |
           mkdir -p /home/runner/gh-pages
-          rm -rf /home/runner/gh-pages/.git
+          mkdir -p /home/runner/gh-pages/data
+          mkdir -p /home/runner/gh-pages/data/refs
+          mkdir -p /home/runner/gh-pages/data/files
           rm -rf /home/runner/gh-pages/PR${{ env.GITHUB_PR_NUMBER }}
+          grep -rlw 'PR${{ env.GITHUB_PR_NUMBER }}' /home/runner/gh-pages/data/refs | xargs -r sed -i '/\<PR${{ env.GITHUB_PR_NUMBER }}\>/d'
+          for ref in /home/runner/gh-pages/data/refs/*; do
+            if [ ! -s "$ref" ]; then
+              base=$(basename "$ref" .txt)
+              rm -f "/home/runner/gh-pages/data/$base"
+              rm -f "$ref"
+            fi
+          done
           echo "[$(date)] Remove Preview PR${{ env.GITHUB_PR_NUMBER }}" > /home/runner/gh-pages/index.html
       - name: Save Pages
         uses: actions/cache/save@v4
@@ -237,17 +247,42 @@ jobs:
           key: pages-${{ github.run_id }}
           path: /home/runner/gh-pages
           restore-keys: pages-
-      - name: Prepare Pages
+      - name: Merge Site Before
         run: |
           mkdir -p /home/runner/gh-pages
-          rm -rf /home/runner/gh-pages/.git
+          mkdir -p /home/runner/gh-pages/data
+          mkdir -p /home/runner/gh-pages/data/refs
+          mkdir -p /home/runner/gh-pages/data/files
           rm -rf /home/runner/gh-pages/PR${{ env.GITHUB_PR_NUMBER }}
-          echo "[$(date)] Preview PR${{ env.GITHUB_PR_NUMBER }}" > /home/runner/gh-pages/index.html
+          grep -rlw 'PR${{ env.GITHUB_PR_NUMBER }}' /home/runner/gh-pages/data/refs | xargs -r sed -i '/\<PR${{ env.GITHUB_PR_NUMBER }}\>/d'
       - name: Merge Site
         uses: actions/download-artifact@v5
         with:
           name: site
           path: /home/runner/gh-pages/PR${{ env.GITHUB_PR_NUMBER }}
+      - name: Merge Site After
+        run: |
+          find /home/runner/gh-pages/PR${{ env.GITHUB_PR_NUMBER }} -type f | while read file; do
+            hash=$(sha256sum "$file" | cut -d' ' -f1)
+            size=$(stat -c%s "$file")
+            key="${hash}-${size}"
+            target="/home/runner/gh-pages/data/files/$key"
+            if [ ! -f "$target" ]; then
+              mv "$file" "$target"
+            else
+              rm -f "$file"
+            fi
+            ln -s "$target" "$file"
+            echo "PR${{ env.GITHUB_PR_NUMBER }}" >> "/home/runner/gh-pages/data/refs/$key.txt"
+          done
+          for ref in /home/runner/gh-pages/data/refs/*; do
+            if [ ! -s "$ref" ]; then
+              base=$(basename "$ref" .txt)
+              rm -f "/home/runner/gh-pages/data/$base"
+              rm -f "$ref"
+            fi
+          done
+          echo "[$(date)] Preview PR${{ env.GITHUB_PR_NUMBER }}" > /home/runner/gh-pages/index.html          
       - id: upload-pages
         name: Upload Pages
         uses: actions/upload-pages-artifact@v4
