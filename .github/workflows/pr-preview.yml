@@ -325,7 +325,7 @@ jobs:
               artifact_id: "${{ needs.preview-create-build.outputs.artifact-id }}"
             });
   preview-create-finally:
-    if: ${{ !cancelled() && needs.preview-create-init.result == 'success' }}
+    if: ${{ always() && needs.preview-create-init.result == 'success' }}
     needs: [preview-create-init, preview-create-deploy]
     runs-on: ubuntu-latest
     permissions:
