@@ -118,29 +118,6 @@ jobs:
               issue_number: context.issue.number,
               name: "preview/watch"
             });
-  preview-watch:
-    if: >-
-      ${{
-        !github.event.repository.fork &&
-        github.event_name == 'issue_comment' &&
-        github.event.issue.pull_request &&
-        github.event.comment.body == '/preview watch' &&
-        contains('OWNER,MEMBER', github.event.comment.author_association)
-      }}
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - name: Add Label (preview/watch)
-        uses: actions/github-script@v8
-        with:
-          script: |
-            github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: ["preview/watch"]
-            });
   preview-create-init:
     if: >-
       ${{
@@ -160,6 +137,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       checks: write
+      pull-requests: write
     outputs:
       sha: ${{ steps.init.outputs.sha }}
       domain: ${{ steps.init.outputs.domain }}
@@ -195,6 +173,18 @@ jobs:
               }
             });
             core.setOutput('check-id', check.id);
+      - if: ${{ github.event_name == 'issue_comment' && github.event.comment.body == '/preview watch' }}
+        name: Add Label (preview/watch)
+        continue-on-error: true
+        uses: actions/github-script@v8
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["preview/watch"]
+            });
   preview-create-build:
     needs: preview-create-init
     runs-on: ubuntu-latest
