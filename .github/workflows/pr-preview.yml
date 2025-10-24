@@ -273,8 +273,6 @@ jobs:
         with:
           name: github-pages
           path: /home/runner/gh-pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Deploy Pages
         uses: actions/deploy-pages@v4
         with:
