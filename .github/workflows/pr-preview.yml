@@ -257,7 +257,7 @@ jobs:
             else
               rm -f "$file"
             fi
-            ln -s "$target" "$file"
+            ln -s "$(realpath --relative-to="$(dirname "$file")" "$target")" "$file"
             echo "PR${{ env.GITHUB_PR_NUMBER }}" >> "/home/runner/gh-pages/data/refs/$key"
           done
           for ref in /home/runner/gh-pages/data/refs/*; do
