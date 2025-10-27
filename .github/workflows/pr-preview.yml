@@ -203,6 +203,7 @@ jobs:
         with:
           ruby-version: "3.4"
           bundler-cache: true
+          cache-version: pr${{ env.GITHUB_PR_NUMBER }}
       - name: Jekyll Build
         run: |
           echo "url: https://${{ needs.preview-create-init.outputs.domain }}" > _action.yml
