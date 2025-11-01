@@ -108,4 +108,3 @@ source ~/.bashrc  # 或 `source ~/.zshrc`
 - 如果同时设置了 JVM 参数和环境变量，JVM 参数优先级更高
 - Windows 用户注意使用半角分号（;）分隔多个路径
 - Linux/macOS 用户注意使用半角冒号（:）分隔多个路径
-
