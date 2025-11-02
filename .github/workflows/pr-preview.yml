@@ -210,6 +210,8 @@ jobs:
           echo "baseurl: ${{ needs.preview-create-init.outputs.pathname }}/PR${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
           echo "source: ${{ github.workspace }}" >> _action.yml
           echo "destination: /home/runner/site" >> _action.yml
+          echo "preview:" >> _action.yml
+          echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
           bundle exec jekyll build --config _config.yml,_action.yml
       - id: upload-site
         name: Upload Site
