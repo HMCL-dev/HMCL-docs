@@ -192,12 +192,15 @@ jobs:
     outputs:
       artifact-id: ${{ steps.upload-site.outputs.artifact-id }}
     steps:
-      - name: Checkout PR
+      - name: Checkout
         uses: actions/checkout@v5
         with:
-          ref: ${{ needs.preview-create-init.outputs.sha }}
-          repository: ${{ needs.preview-create-init.outputs.repository }}
-          fetch-depth: 1
+          fetch-depth: 0
+      - name: Merge PR
+        run: |
+          git fetch https://github.com/${{ needs.preview-create-init.outputs.repository }} ${{ needs.preview-create-init.outputs.sha }}
+          git merge --squash ${{ needs.preview-create-init.outputs.sha }} --no-edit
+          git commit -m "Merge #${{ env.GITHUB_PR_NUMBER }} for preview build"
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
