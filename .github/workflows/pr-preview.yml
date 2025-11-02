@@ -198,6 +198,8 @@ jobs:
           fetch-depth: 0
       - name: Merge PR
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch https://github.com/${{ needs.preview-create-init.outputs.repository }} ${{ needs.preview-create-init.outputs.sha }}
           git merge --squash ${{ needs.preview-create-init.outputs.sha }} --no-edit
           git commit -m "Merge #${{ env.GITHUB_PR_NUMBER }} for preview build"
