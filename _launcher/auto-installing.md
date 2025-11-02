@@ -1,6 +1,6 @@
 ---
 title:  "自动安装与模组下载简介"
-date:   2021-10-09 23:18:02 +0800
+date:   2025-11-02 09:06:30 +0800
 author: asdqp233,Mine-diamond
 ---
 
@@ -13,7 +13,7 @@ author: asdqp233,Mine-diamond
 
 简单来说，为游戏安装模组总共分三步，本指南将带你逐一完成：
 1. 开启版本隔离，为模组创建一个独立干净的环境。
-2. *安装模组加载器（如 Forge, Fabric）。
+2. 安装模组加载器（如 Forge, Fabric）。
 3. 安装你喜欢的模组。
 
 ## 启用版本隔离
@@ -51,7 +51,7 @@ author: asdqp233,Mine-diamond
 | <img src="/assets/img/docs/auto-installing/neoforge@2x.png" alt="NeoForge icon" width="16"> NeoForge   | 1.20.1 | 游戏最新版本 |
 | <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16"> Fabric     | 1.16.3 | 游戏最新版本 |
 | <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16"> Fabric api | 1.16.3 | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16"> Quilt Quilt      | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16"> Quilt        | 1.16.3 | 游戏最新版本 |
 | <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI  | 1.18.2 | 1.21        |
 | <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16"> Cleanroom  | 1.12.2 |             |
 | <img src="/assets/img/docs/auto-installing/chicken@2x.png" alt="LiteLoader icon" width="16"> LiteLoader | 1.5.2  | 1.12.2      |
@@ -162,10 +162,10 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 **第三步：有效求助**
 如果无法自行解决，你需要向社区求助。但请记住，一个有效的求助包含**完整的日志文件**。
 
-> **如何正确求助**
-> 1.  在游戏崩溃后，点击 HMCL 弹出的错误窗口上的「**导出游戏日志**」按钮，它会生成一个 `minecraft-exported-crash-info-时间戳.zip` 文件。
-> 2.  带着**这个文件**去社区、论坛或群里提问，并简单描述你遇到的问题。
->
-> **切记**：不要只截图，不要只说“我崩了”。**没有日志，谁也帮不了你。**
+**如何正确求助**：
+1. 在游戏崩溃后，点击 HMCL 弹出的错误窗口上的「**导出游戏日志**」按钮，它会生成一个 `minecraft-exported-crash-info-时间戳.zip` 文件。
+2. 带着**这个文件**去社区、论坛或群里提问，并具体描述你遇到的问题。
+
+> **重要**：对于向他人求助，千万不要只截图，不要只说“游戏出错怎么办”这种及其笼统的话语。**没有日志，谁也帮不了你。**
 
 ![CrashReportPage](/assets/img/docs/auto-installing/Crash_Report_Page.png)
