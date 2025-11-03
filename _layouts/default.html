@@ -12,7 +12,7 @@ layout: compress
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
     {% if site.preview and site.preview.pr-number %}
-    <div class="notice--warning text-center m0">当前站点为预览构建而非官方文档，如需反馈问题请前往 <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a> 反馈。</div>
+    <div class="notice--warning text-center m0" style="position: sticky; top: 0; z-index: 999; padding: 0.4em;">当前站点为预览构建而非官方文档。如需反馈问题，请前往 <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a> 留言。</div>
     {% endif %}
 
     {% include_cached skip-links.html %}
