@@ -207,7 +207,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.4"
-          bundler-cache: true
+          bundler-cache: >-
+            ${{
+              contains(github.event.pull_request.labels.*.name, 'preview/watch') ||
+              contains(github.event.issue.labels.*.name, 'preview/watch') || (
+                github.event_name == 'issue_comment' &&
+                github.event.comment.body == '/preview watch'
+              )
+            }}
           cache-version: pr${{ env.GITHUB_PR_NUMBER }}
       - name: Jekyll Build
         run: |
