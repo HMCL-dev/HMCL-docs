@@ -12,7 +12,7 @@ env:
   JEKYLL_ENV: production
 jobs:
   preview-remove:
-    if: >-
+    if:
       ${{
         !github.event.repository.fork && (
           ( github.event_name == 'pull_request_target' && (
@@ -119,7 +119,7 @@ jobs:
               name: "preview/watch"
             });
   preview-create-init:
-    if: >-
+    if:
       ${{
         !github.event.repository.fork && (
           ( github.event_name == 'pull_request_target' && (
@@ -189,6 +189,15 @@ jobs:
   preview-create-build:
     needs: preview-create-init
     runs-on: ubuntu-latest
+    env:
+      PREVIEW_WATCH:
+        ${{
+          contains(github.event.pull_request.labels.*.name, 'preview/watch') ||
+          contains(github.event.issue.labels.*.name, 'preview/watch') || (
+            github.event_name == 'issue_comment' &&
+            github.event.comment.body == '/preview watch'
+          )
+        }}
     outputs:
       artifact-id: ${{ steps.upload-site.outputs.artifact-id }}
     steps:
@@ -207,8 +216,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.4"
-          bundler-cache: true
-          cache-version: pr${{ env.GITHUB_PR_NUMBER }}
+          bundler-cache: ${{ env.PREVIEW_WATCH }}
+          cache-version: PR-${{ env.GITHUB_PR_NUMBER }}
       - name: Jekyll Build
         run: |
           echo "url: https://${{ needs.preview-create-init.outputs.domain }}" > _action.yml
@@ -217,6 +226,7 @@ jobs:
           echo "destination: /home/runner/site" >> _action.yml
           echo "preview:" >> _action.yml
           echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
+          ${{ env.PREVIEW_WATCH }} || bundle install --jobs 4
           bundle exec jekyll build --config _config.yml,_action.yml
       - id: upload-site
         name: Upload Site
