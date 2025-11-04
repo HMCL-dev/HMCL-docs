@@ -138,13 +138,20 @@ defaults:
 #   # minimal-mistakes
 #   enable_coderay: false 
 
+# polyglot
+languages: ["en", "zh"]
+default_lang: "en"
+exclude_from_localization:
+  - assets
+  - _docs
+  - launcher
+
 # Theme Settings
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin_dark: dark
 
 # Site Settings
-locale: zh
 # rtl:
 title: HMCL 文档
 # title_separator: -
