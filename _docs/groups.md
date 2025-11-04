@@ -31,7 +31,7 @@ contributors:
 
 ## 报错崩溃交流群
 
-如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群](/crash-support-group.html)
+如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群](/_docs/crash-support-group.md)
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 

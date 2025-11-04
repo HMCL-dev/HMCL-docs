@@ -42,7 +42,7 @@ contributors:
 
 ### 方式四：OptiFine 与 Mod 加载器共存
 
-从[ OptiFine 官网](https://www.optifine.net/)上下载的 Jar 文件本身也可作为 Mod 被加载，可以用 Java 运行下载的文件并导出 Mod 版本。Mod 安装具体方法见 [ Mod 安装教程](auto-installing.html)
+从[ OptiFine 官网](https://www.optifine.net/)上下载的 Jar 文件本身也可作为 Mod 被加载，可以用 Java 运行下载的文件并导出 Mod 版本。Mod 安装具体方法见 [ Mod 安装教程](/_launcher/auto-installing.md)
 
 注意：
 

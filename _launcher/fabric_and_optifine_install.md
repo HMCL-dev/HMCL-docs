@@ -54,7 +54,7 @@ OptiFine [页面](https://optifine.net/downloads) 操作：
 
 OptiFine 非官方 [中文页面](https://optifine.cn/downloads) 操作：
 
-![OptiFine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png)
+<!-- ![OptiFine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png) -->
 
 #### 安装
 

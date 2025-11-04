@@ -78,15 +78,15 @@ contributors:
 - [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
 - [Modrinth](https://modrinth.com/mods)
 
-HMCL 自动安装与使用模组教程： [跳转](/launcher/auto-installing.html)
+HMCL 自动安装与使用模组教程： [跳转](/_launcher/auto-installing.md)
 
 #### 安装模组后游戏报错怎么办
 
 安装模组后游戏无法启动或崩溃是常见的情况，通常是模组冲突或缺少前置模组导致的。别担心，大部分问题都能轻松解决。 
 
-在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： [跳转](/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
+在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： [跳转](/_launcher/auto-installing.md#安装-mod-后游戏报错无法启动)
 
-或者前往模组包报错排查手册中查看： [跳转](/modpack/error-handbook.html)
+或者前往模组包报错排查手册中查看： [跳转](/_modpack/error-handbook.md)
 
 如果无法解决错误，尝试 [寻求帮助](help.html)
 
