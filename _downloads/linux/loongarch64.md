@@ -26,11 +26,8 @@ redirect_from:
   sudo apt install default-jre
   ```
 
-  > [!NOTE]
-  >
-  > Deepin 软件源中的 Java 不包含 JIT 编译器，使用它启动游戏性能将极其糟糕。
-  > 我们推荐 Deepin 用户直接下载 Java，而不是使用 APT 安装。
-
+  注意：Deepin 软件源中的 Java 不包含 JIT 编译器，使用它启动游戏性能将极其糟糕。我们推荐 Deepin 用户直接下载 Java，而不是使用 APT 安装。
+  
 - ArchLinux:
 
   ```bash
