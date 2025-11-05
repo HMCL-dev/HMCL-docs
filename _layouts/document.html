@@ -7,7 +7,12 @@ layout: single
 {% endif %}
 
 <div class="notice--info">
+  {% case page.lang | default: 'en' %}
+  {% when 'zh' %}
   <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
+  {% else %}
+  <p>This article was created by {{ page.author | default: 'Anonymous user' }}{% if page.contributors %}, and edited by {{ page.contributors | join: ' ' }}{% endif %}.</p>
+  {% endcase %}
   {%- if page.note -%}
   <hr>
   {{ page.note | markdownify }}
