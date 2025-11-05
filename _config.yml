@@ -143,7 +143,6 @@ languages: ["und", "en", "zh"]
 default_lang: "und"
 exclude_from_localization:
   - assets
-  - _docs
   - launcher
 
 # Theme Settings

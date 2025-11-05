@@ -1,0 +1,53 @@
+main:
+  - title: FAQ
+    url: /faq.html
+
+docs:
+  - title: Question Collection
+    children:
+      - title: Common Questions
+        url: /faq.html
+      - title: Launcher Usage
+        url: /launcher/
+      - title: Modpack Help
+        url: /modpack/
+      - title: Multiplayer Help
+        url: /multiplayer/
+  - title: User Help
+    children:
+      - title: Version Isolation
+        url: /launcher/isolation.html
+        description: This article can help you better separate maps, mods, and other content between versions.
+      - title: Set Offline Skin
+        url: /launcher/offline-skin.html
+        description: This article will tell you how to set your own offline skin.
+      - title: HMCL Auto Installation Guide
+        url: /launcher/auto-installing.html
+        description: This article will tell you how to use HMCL to install Forge, Fabric, Fabric API, LiteLoader, Optifine, and mods.
+      - title: Install Shaders
+        url: /launcher/shader.html
+        description: This article will tell you how to install shaders.
+      - title: Settings Details
+        url: /launcher/set-item-details.html
+        description: This article explains each setting item of HMCL in detail.
+  - title: Developer Help
+    children:
+      - title: Create HMCL Format Datapack
+        url: /launcher/datapack.html
+        description: This article will tell you how to create datapacks that HMCL can recognize.
+      - title: Create Modpack
+        url: /modpack/serverpack.html
+        description: This article will tell you how to create a modpack.
+      - title: Add Default authlib-injector Authentication Server
+        url: /launcher/authlib-injector.html
+        description: This article will tell you how to set the default authentication server.
+  - title: Others
+    children:
+      - title: Contribute to HMCL
+        url: /contribution.html
+      - title: HMCL GitHub Repository
+        url: https://github.com/HMCL-dev/HMCL
+      - title: HMCL Docs GitHub Repository
+        url: https://github.com/HMCL-dev/HMCL-docs
+      - title: HMCL Official Website
+        url: https://hmcl.huangyuhui.net

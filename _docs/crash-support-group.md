@@ -29,8 +29,8 @@ author: zkitefly
 [~/assets/groups/button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
 [~/assets/groups/button-2]: /assets/img/docs/groups/button-2.png "日志"
 <!--{% endcomment %}--{{'>'}}
-[~/assets/groups/button-1]: {% link /assets/img/docs/groups/button-1.png %} "导出游戏崩溃日志"
-[~/assets/groups/button-2]: {% link /assets/img/docs/groups/button-2.png %} "日志"
+[~/assets/groups/button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
+[~/assets/groups/button-2]: /assets/img/docs/groups/button-2.png "日志"
 {% endcapture %}
 {{ notice | markdownify }}
 <p class="text-center">请等待 <span id="countdown">5</span> 秒，请认真阅读注意事项</p>
@@ -102,5 +102,5 @@ document.addEventListener("DOMContentLoaded", function () {
 <!--{% comment %}-->
 [~/assets/groups/crash]: /assets/img/docs/groups/crash.png
 <!--{% endcomment %}--{{'>'}}
-[~/assets/groups/crash]: {% link /assets/img/docs/groups/crash.png %}
+[~/assets/groups/crash]: /assets/img/docs/groups/crash.png
 <!---->
