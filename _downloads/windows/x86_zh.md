@@ -15,13 +15,6 @@ permalink: downloads/windows/x86
 
 没有下载？[点击此处开始下载](https://bell-sw.com/pages/downloads/?version=java-21&os=windows&architecture=x86&bitness=32&package=jre-full#:~:text=All%20versions)
 
----
-
-You are going to the Java download page. Please scroll down and click `MSI` download button, then wait for the Java installer to finish downloading, and finally open the installer and follow the prompts to install Java.
-
-No redirect? [Click here to start downloading](https://bell-sw.com/pages/downloads/?version=java-21&os=windows&architecture=x86&bitness=32&package=jre-full#:~:text=All%20versions)
-
-
 <script>
     /* 等待 5 秒. */
     setTimeout(function() {
