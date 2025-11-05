@@ -139,8 +139,8 @@ defaults:
 #   enable_coderay: false 
 
 # polyglot
-languages: ["en", "zh"]
-default_lang: "en"
+languages: ["und", "en", "zh"]
+default_lang: "und"
 exclude_from_localization:
   - assets
   - _docs
