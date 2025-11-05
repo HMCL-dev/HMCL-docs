@@ -26,5 +26,5 @@
   </script>
   <meta name="robots" content="noindex">
   <h1>Redirecting&hellip;</h1>
-  <a href="/en/{{ relative_url }}">Click here if you are not redirected.</a>
+  <a {% static_href %}href="{{site.baseurl}}/en{{page_relative_path}}"{% endstatic_href %}>Click here if you are not redirected.</a>
 </html>
