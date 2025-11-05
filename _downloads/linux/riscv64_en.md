@@ -1,5 +1,5 @@
 ---
-title: 下载适用于 Linux RISC-V 64 的 HMCL 和 Minecraft 依赖的 Java
+title: Download HMCL and Minecraft Dependency Java for Linux RISC-V 64
 date: 2024-10-06 22:00:00 +0800
 lang: en
 permalink: downloads/linux/riscv64

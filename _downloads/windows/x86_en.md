@@ -1,5 +1,5 @@
 ---
-title: 下载适用于 Windows x86 的 HMCL 和 Minecraft 依赖的 Java
+title: Download HMCL and Minecraft Dependency Java for Windows x86
 date: 2022-12-03 17:30:00 +0800
 lang: en
 permalink: downloads/windows/x86

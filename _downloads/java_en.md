@@ -1,5 +1,5 @@
 ---
-title: 下载 HMCL 和 Minecraft 依赖的 Java
+title: Download HMCL and Minecraft Dependency Java
 date: 2022-12-03 17:30:00 +0800
 lang: en
 permalink: downloads/java
