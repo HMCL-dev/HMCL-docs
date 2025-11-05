@@ -1,5 +1,5 @@
 ---
-title: 下载 HMCL 和 Minecraft 依赖的 Java
+title: 下载适用于 Linux LoongArch64 的 HMCL 和 Minecraft 依赖的 Java
 date: 2023-09-05 14:00:00 +0800
 redirect_from:
   - /downloads/loongnix.html

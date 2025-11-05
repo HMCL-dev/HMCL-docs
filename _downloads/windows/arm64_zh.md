@@ -16,13 +16,8 @@ Java 安装包已开始下载，请等待 Java 安装程序下载完成，最后
 无法下载？[点击此处开始下载（备用）](https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi)
 
 <script>
-    /* 等待 5 秒. */
     setTimeout(function() {
-        const isZhCN = /^zh-CN/i.test(navigator.language);
-        const url = isZhCN 
-            ? "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi" 
-            : "https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi";
-        location.href = url;
+        location.href = "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi";
     }, 5000);
 </script>
 

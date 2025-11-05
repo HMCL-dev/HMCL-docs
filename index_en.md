@@ -1,6 +1,6 @@
 ---
 layout: home
-title: HMCL 新手导航
+title: HMCL Beginner's Guide
 author: wifi-left
 lang: en
 permalink: index
