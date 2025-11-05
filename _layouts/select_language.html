@@ -5,16 +5,19 @@
 <html>
   <meta charset="utf-8">
   <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="/en/{{ relative_url }}">
+  <link rel="canonical" {% static_href %}href="{{site.baseurl}}/en{{page.url}}"{% endstatic_href %}>
   {% for lang in site.languages %}{%- if lang != site.default_lang -%}
   <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page.url}}"{% endstatic_href %}>
   {% endif %}{%- endfor -%}
   <script>
     var lang = navigator.language || navigator.userLanguage;
-    var target = "/en/{{ relative_url }}";
-    if (lang.startsWith("zh")) {
-      target = "/zh/{{ relative_url }}";
+    var target = "{{site.baseurl}}/en{{page.url}}";
+    {% for lang in site.languages %}{%- if lang != site.default_lang -%}
+    if (lang.startsWith("{{ lang }}")) {
+      target = "{{site.baseurl}}/{{ lang }}{{page.url}}";
     }
+    {% endif %}{%- endfor -%}
+
     location = target;
   </script>
   <meta name="robots" content="noindex">
