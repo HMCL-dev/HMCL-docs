@@ -1,0 +1,23 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <title>Redirecting&hellip;</title>
+  <link rel="canonical" href="/en/{{ relative_url }}">
+  {% for lang in site.languages %}{%- if lang != site.default_lang -%}
+  <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page.url}}"{% endstatic_href %}>
+  {% endif %}{%- endfor -%}
+  <script>
+    var lang = navigator.language || navigator.userLanguage;
+    var target = "/en/{{ relative_url }}";
+    if (lang.startsWith("zh")) {
+      target = "/zh/{{ relative_url }}";
+    }
+    location = target;
+  </script>
+  <meta name="robots" content="noindex">
+  <h1>Redirecting&hellip;</h1>
+  <a href="/en/{{ relative_url }}">Click here if you are not redirected.</a>
+</html>
