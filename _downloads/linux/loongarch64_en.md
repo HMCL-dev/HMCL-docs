@@ -12,8 +12,8 @@ Java for different ABIs is temporarily incompatible.
 
 Please enter the `uname -r` command in the terminal to check your Linux kernel version:
 
-- If your kernel version is 5.10 or higher, please download the [New World](#新世界) Java;
-- If your kernel version is 4.19, please download the [Old World](#旧世界) Java.
+- If your kernel version is 5.10 or higher, please download the [New World](#new-world) Java;
+- If your kernel version is 4.19, please download the [Old World](#old-world) Java.
 
 ## New World
 

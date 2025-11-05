@@ -7,12 +7,15 @@
 {%- endif -%}
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8">
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" {% static_href %}href="{{site.baseurl}}/en{{page_relative_path}}"{% endstatic_href %}>
-  {% for lang in site.languages %}{%- if lang != site.default_lang -%}
-  <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page_relative_path}}"{% endstatic_href %}>
-  {% endif %}{%- endfor -%}
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>Redirecting&hellip;</title>
+    <link rel="canonical" {% static_href %}href="{{site.baseurl}}/en{{page_relative_path}}"{% endstatic_href %}>
+    {% for lang in site.languages %}{%- if lang != site.default_lang -%}
+    <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page_relative_path}}"{% endstatic_href %}>
+    {% endif %}{%- endfor -%}
+  </head>
   <script>
     var lang = navigator.language || navigator.userLanguage;
     var target = "{{site.baseurl}}/en{{page_relative_path}}";
@@ -24,7 +27,6 @@
 
     location = target;
   </script>
-  <meta name="robots" content="noindex">
   <h1>Redirecting&hellip;</h1>
   <a {% static_href %}href="{{site.baseurl}}/en{{page_relative_path}}"{% endstatic_href %}>Click here if you are not redirected.</a>
 </html>
