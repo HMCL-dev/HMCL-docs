@@ -1,20 +1,24 @@
 ---
 ---
-
+{%- if page.url == "/index" -%}
+{%- assign page_relative_path = "/" -%}
+{%- else -%}
+{%- assign page_relative_path = page.url -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html>
   <meta charset="utf-8">
   <title>Redirecting&hellip;</title>
-  <link rel="canonical" {% static_href %}href="{{site.baseurl}}/en{{page.url}}"{% endstatic_href %}>
+  <link rel="canonical" {% static_href %}href="{{site.baseurl}}/en{{page_relative_path}}"{% endstatic_href %}>
   {% for lang in site.languages %}{%- if lang != site.default_lang -%}
-  <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page.url}}"{% endstatic_href %}>
+  <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{site.baseurl}}/{{ lang }}{{page_relative_path}}"{% endstatic_href %}>
   {% endif %}{%- endfor -%}
   <script>
     var lang = navigator.language || navigator.userLanguage;
-    var target = "{{site.baseurl}}/en{{page.url}}";
+    var target = "{{site.baseurl}}/en{{page_relative_path}}";
     {% for lang in site.languages %}{%- if lang != site.default_lang -%}
     if (lang.startsWith("{{ lang }}")) {
-      target = "{{site.baseurl}}/{{ lang }}{{page.url}}";
+      target = "{{site.baseurl}}/{{ lang }}{{page_relative_path}}";
     }
     {% endif %}{%- endfor -%}
 
