@@ -5,18 +5,23 @@ layout: single
 {% if jekyll.environment == 'production' and page.hits %}
 <img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
 {% endif %}
-
+{%- if page.author or page.note -%}
 <div class="notice--info">
-  {% case page.lang | default: 'en' %}
-  {% when 'zh' %}
+  {%- if page.author -%}
+  {%- case page.lang | default: 'en' -%}
+  {%- when 'zh' -%}
   <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
-  {% else %}
+  {%- else -%}
   <p>This article was created by {{ page.author | default: 'Anonymous user' }}{% if page.contributors %}, and edited by {{ page.contributors | join: ' ' }}{% endif %}.</p>
-  {% endcase %}
+  {%- endcase -%}
+  {%- endif -%}
   {%- if page.note -%}
+  {%- if page.author -%}
   <hr>
+  {%- endif -%}
   {{ page.note | markdownify }}
   {%- endif -%}
 </div>
+{%- endif -%}
 
 {{ content }}
