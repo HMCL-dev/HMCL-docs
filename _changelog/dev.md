@@ -1,6 +1,5 @@
 ---
 layout: changelog
-lang: und
 permalink: changelog/dev
 channel: dev
 title: 开发版更新日志

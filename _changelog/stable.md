@@ -1,6 +1,5 @@
 ---
 layout: changelog
-lang: und
 permalink: changelog/stable
 channel: stable
 title: 稳定版更新日志
