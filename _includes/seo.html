@@ -35,7 +35,7 @@
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-<title>{{ seo_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+<title>{{ seo_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.active_lang].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
 {%- if author.name -%}
@@ -46,7 +46,7 @@
 {%- endif -%}
 
 <meta property="og:type" content="{{ og_type }}">
-<meta property="og:locale" content="{{ page.lang | replace: "-", "_" | default: "zh" }}">
+<meta property="og:locale" content="{{ site.active_lang | replace: "-", "_" | default: "en" }}">
 <meta property="og:site_name" content="{{ site.title | escape_once | strip }}">
 <meta property="og:title" content="{{ page_title }}">
 <meta property="og:url" content="{{ canonical_url }}">
