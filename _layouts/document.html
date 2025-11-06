@@ -8,7 +8,7 @@ layout: single
 {%- if page.author or page.note -%}
 <div class="notice--info">
   {%- if page.author -%}
-  {%- case page.lang | default: 'en' -%}
+  {%- case page.lang | default: 'zh' -%}
   {%- when 'zh' -%}
   <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
   {%- else -%}
