@@ -41,7 +41,7 @@ author: LIPiston
         ...
 ```
 
-我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转](/launcher/global-version-isolation.html)
+我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转](/_launcher/isolation.md)
 
 ## 简单排查
 

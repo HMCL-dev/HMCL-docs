@@ -4,7 +4,7 @@ date: 2023-01-11 14:13:45 +0800
 author: buggzd
 ---
 
-> 阅读本文前，请先阅读[此文章](/modpack/serverpack.html)
+> 阅读本文前，请先阅读[此文章](/_modpack/serverpack.md)
 
 # 前置知识
 
