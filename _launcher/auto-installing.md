@@ -100,25 +100,9 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 
 ![AddingModAutomatically](/assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png)
 
-#### Fabric Mod / Quilt Mod
+### 安装OptiFine 或其它光影模组
 
-*Fabric Mod* 和 *Quilt Mod* 的安装和 *Forge Mod* 的安装类似, [参照上文](#forge-mod)。
-
-**注意：**
-
-- **几乎所有的 *Fabric Mod* 或 *Quilt Mod* 都需要 *Fabric API* 或 *QSL/QFAPI*。在安装 Mod 加载器时候如果没有选择, 请选择安装 *Fabric API* 或 *QSL/QFAPI* , 否则 *Fabric Mod* 或 *Quilt Mod* 则有可能无法被加载!**
-
-- ***Fabric* 对应 *Fabric API* ，*Quilt Mod* 对应 *QSL/QFAPI* ，请不要搞错。**
-
-#### LiteLoader Mod
-
-*LiteLoader Mod* 安装和 *Forge Mod* 的安装类似, [参照上文](#forge-mod)。
-
-**注意: LiteLoader 只能加载文件后缀为 litemod 的模组, *Forge Mod*、*Fabric Mod* 和 *Quilt Mod*等修改后缀的方法 LiteLoader 是无法检测。**
-
-#### OptiFine
-
-[详情请查阅此](/_launcher/shader.md)
+光影的安装方式略有不同，请参考专门的指南 [光影安装](/_launcher/shader.html)
 
 ### 手动安装
 
@@ -171,6 +155,8 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 
 ## 补充：常见模组加载器简单介绍和支持版本一览  
 
+模组加载器简单介绍：  
+
 | 模组加载器 | 简单介绍 |
 | --------- | ------- |
 | <span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/forge.png" alt="Forge icon" width="16"> Forge</span> | 老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装。 |
@@ -182,15 +168,15 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 | <span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/chicken.png" alt="LiteLoader icon" width="16"> LiteLoader</span> | 轻量模组加载器，为Forge的轻量代替，现在已停止维护。 |
 
 
-支持版本：  
+支持版本一览：  
 
 | 模组加载器  | 最老版本| 最新版本    |
 | ---------- | ------ | ------      |
-| <img src="/assets/img/docs/auto-installing/forge@2x.png" alt="Forge icon" width="16"> Forge      | 1.5.2  | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/neoforge@2x.png" alt="NeoForge icon" width="16"> NeoForge   | 1.20.1 | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric icon" width="16"> Fabric     | 1.16.3 | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/fabric@2x.png" alt="Fabric api icon" width="16"> Fabric api | 1.16.3 | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="Quilt icon" width="16"> Quilt        | 1.16.3 | 游戏最新版本 |
-| <img src="/assets/img/docs/auto-installing/quilt@2x.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI  | 1.18.2 | 1.21        |
-| <img src="/assets/img/docs/auto-installing/cleanroom@2x.png" alt="Cleanroom icon" width="16"> Cleanroom  | 1.12.2 |             |
-| <img src="/assets/img/docs/auto-installing/chicken@2x.png" alt="LiteLoader icon" width="16"> LiteLoader | 1.5.2  | 1.12.2      |
+| <img src="/assets/img/docs/auto-installing/forge.png" alt="Forge icon" width="16"> Forge      | 1.5.2  | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/neoforge.png" alt="NeoForge icon" width="16"> NeoForge   | 1.20.1 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric icon" width="16"> Fabric     | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric api icon" width="16"> Fabric api | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/quilt.png" alt="Quilt icon" width="16"> Quilt        | 1.16.3 | 游戏最新版本 |
+| <img src="/assets/img/docs/auto-installing/quilt.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI  | 1.18.2 | 1.21        |
+| <img src="/assets/img/docs/auto-installing/cleanroom.png" alt="Cleanroom icon" width="16"> Cleanroom  | 1.12.2 |             |
+| <img src="/assets/img/docs/auto-installing/chicken.png" alt="LiteLoader icon" width="16"> LiteLoader | 1.5.2  | 1.12.2      |
