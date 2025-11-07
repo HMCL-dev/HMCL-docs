@@ -141,6 +141,7 @@ languages: ["und", "en", "zh"]
 default_lang: "und"
 exclude_from_localization:
   - assets
+  - sitemap.xml
 parallel_localization: false
 
 # Theme Settings
