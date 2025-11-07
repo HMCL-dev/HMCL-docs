@@ -16,4 +16,4 @@ Official Discord channel for Hello Minecraft! Launcher.
 
 Official QQ group chat for Hello Minecraft! Launcher.
 
-[Click to join](/groups.html)
+[Click to join](/_docs/groups.md)

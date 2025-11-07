@@ -7,7 +7,7 @@ author: LIPiston
 ## 文件夹结构
 
 首先我们需要先认识Minecraft的文件夹结构  
-如果你开启了 [版本隔离](launcher/global-version-isolation.html) 那么你的文件夹结构如下  
+如果你开启了 [版本隔离](/_launcher/auto-installing.md) 那么你的文件夹结构如下  
 ```text
 .minecraft
 |*assets         # 游戏资源文件夹，存放纹理、声音等资源
@@ -41,7 +41,7 @@ author: LIPiston
         ...
 ```
 
-我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转](/launcher/global-version-isolation.html)
+我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 [跳转](/_launcher/isolation.md)
 
 ## 简单排查
 

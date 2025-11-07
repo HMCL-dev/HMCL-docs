@@ -80,17 +80,17 @@ You can get mod information from the following websites and download and install
 - [CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods)
 - [Modrinth](https://modrinth.com/mods)
 
-HMCL automatic mod installation and usage tutorial: [Jump](/launcher/auto-installing.html)
+HMCL automatic mod installation and usage tutorial: [Jump](/_launcher/auto-installing.md)
 
 #### What to do if the game reports an error after installing mods
 
 It is common for the game to fail to start or crash after installing mods, usually due to mod conflicts or missing dependencies. Don't worry, most problems can be easily solved.
 
-Common solutions are mentioned at the end of HMCL's "Automatic Installation and Mod Download Introduction": [Jump](/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8)
+Common solutions are mentioned at the end of HMCL's "Automatic Installation and Mod Download Introduction": [Jump](/_launcher/auto-installing.md#安装-mod-后游戏报错无法启动)
 
-Or check the modpack error troubleshooting manual: [Jump](/modpack/error-handbook.html)
+Or check the modpack error troubleshooting manual: [Jump](/_modpack/error-handbook.md)
 
-If you can't solve the error, try [seeking help](help.html)
+If you can't solve the error, try [seeking help](/_docs/help.md)
 
 ### How to Choose the Java Version for the Game
 
