@@ -24,7 +24,7 @@ author: asdqp233,Mine-diamond
 
 ![Working_Directory](/assets/img/docs/auto-installing/Working_Directory.png)
 
-更详细的介绍见 [全局版本隔离](/launcher/isolation.html)
+更详细的介绍见 [全局版本隔离](/_launcher/isolation.html)
 
 ## 安装模组加载器  
 
@@ -126,7 +126,7 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 
 ### 安装OptiFine 或其它光影模组
 
-光影的安装方式略有不同，请参考专门的指南 [光影安装](/launcher/shader.html)
+光影的安装方式略有不同，请参考专门的指南 [光影安装](/_launcher/shader.html)
 
 ## 安装 Mod 后游戏报错/无法启动
 
