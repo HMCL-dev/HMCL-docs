@@ -62,7 +62,6 @@ strict_front_matter: true
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -71,7 +70,6 @@ plugins:
 # minimal-mistakes (mimic GitHub Pages with --safe)
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
