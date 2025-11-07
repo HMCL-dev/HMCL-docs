@@ -25,10 +25,6 @@ author: zkitefly
 - 本群仅处理游戏崩溃相关问题，其他话题请到其他群讨论
 
 ---
-<!--{% comment %}-->
-[~/assets/groups/button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
-[~/assets/groups/button-2]: /assets/img/docs/groups/button-2.png "日志"
-<!--{% endcomment %}--{{'>'}}
 [~/assets/groups/button-1]: /assets/img/docs/groups/button-1.png "导出游戏崩溃日志"
 [~/assets/groups/button-2]: /assets/img/docs/groups/button-2.png "日志"
 {% endcapture %}
