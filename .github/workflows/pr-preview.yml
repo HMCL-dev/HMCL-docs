@@ -227,7 +227,7 @@ jobs:
           echo "preview:" >> _action.yml
           echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
           ${{ env.PREVIEW_WATCH }} || bundle install --jobs 4
-          bundle exec jekyll build --config _config.yml,_action.yml
+          bundle exec jekyll build --trace --config _config.yml,_action.yml
       - id: upload-site
         name: Upload Site
         uses: actions/upload-artifact@v4
