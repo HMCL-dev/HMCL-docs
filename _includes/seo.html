@@ -11,7 +11,11 @@
 {%- assign page_title = page_title | markdownify | strip_html | strip_newlines | escape_once -%}
 {%- assign seo_title  = seo_title  | markdownify | strip_html | strip_newlines | escape_once -%}
 
-{%- assign canonical_url = page.canonical_url | default: page.url | replace: "/index.html", "/" | absolute_url %}
+{%- if site.active_lang == site.default_lang -%}
+{%- assign canonical_url = page.url | replace: "/index.html", "/" | absolute_url %}
+{%- else -%}
+{%- assign canonical_url = page.url | prepend: site.active_lang | prepend: '/' | replace: "/index.html", "/" | absolute_url %}
+{%- endif -%}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.data.info.description -%}
 {%- if seo_description -%}
