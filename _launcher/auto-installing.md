@@ -100,6 +100,25 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 
 ![AddingModAutomatically](/assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png)
 
+#### Fabric Mod / Quilt Mod
+
+*Fabric Mod* 和 *Quilt Mod* 的安装和 *Forge Mod* 的安装类似, [参照上文](#forge-mod)。
+
+**注意：**
+
+- **几乎所有的 *Fabric Mod* 或 *Quilt Mod* 都需要 *Fabric API* 或 *QSL/QFAPI*。在安装 Mod 加载器时候如果没有选择, 请选择安装 *Fabric API* 或 *QSL/QFAPI* , 否则 *Fabric Mod* 或 *Quilt Mod* 则有可能无法被加载!**
+
+- ***Fabric* 对应 *Fabric API* ，*Quilt Mod* 对应 *QSL/QFAPI* ，请不要搞错。**
+
+#### LiteLoader Mod
+
+*LiteLoader Mod* 安装和 *Forge Mod* 的安装类似, [参照上文](#forge-mod)。
+
+**注意: LiteLoader 只能加载文件后缀为 litemod 的模组, *Forge Mod*、*Fabric Mod* 和 *Quilt Mod*等修改后缀的方法 LiteLoader 是无法检测。**
+
+#### OptiFine
+
+[详情请查阅此](/_launcher/shader.md)
 
 ### 手动安装
 

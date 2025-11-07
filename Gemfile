@@ -16,6 +16,7 @@ group :jekyll_plugins do
   gem "jekyll-gist", "1.5.0"
   gem "jekyll-feed", "0.17.0"
   gem "jekyll-include-cache", "0.2.1"
+  gem "jekyll-redirect-from", "0.16.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -29,3 +30,7 @@ end
 gem "wdm", "0.2.0", :platforms => [:windows]
 
 gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
+
+# plugin dependencies
+gem "nokogiri", "1.18.10"
+gem "addressable", "2.8.7"

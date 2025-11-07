@@ -1,58 +1,43 @@
 ---
 title: 下载 HMCL 和 Minecraft 依赖的 Java
 date: 2023-09-05 14:00:00 +0800
+redirect_from:
+  - /downloads/loongnix.html
 ---
 
 龙芯平台存在 “**新世界**” 和 “**旧世界**” 两个 ABI，不同 ABI 的 Java 暂时互不兼容。
 
-请在终端中输入 `uname -r` 命令查看 Linux 内核版本。如果你的内核版本为 4.x 请下载[旧世界](#旧世界) Java，否则请下载[新世界](#新世界) Java。
+请在终端中输入 `uname -r` 命令查看 Linux 内核版本:
 
-## 旧世界
-
-如果你正在使用旧世界龙芯系统，请前往龙芯开源社区下载龙芯 Java 17。
-
-[点击此处前往下载页面](https://www.loongnix.cn/zh/api/java/downloads-jdk17/index.html)
+- 如果你的内核版本为 5.10 或更高版本，请下载[新世界](#新世界) Java；
+- 如果你的内核版本为 4.19，请下载[旧世界](#旧世界) Java。
 
 ## 新世界
 
-如果你正在使用新世界龙芯系统，请使用系统的包管理器安装 Java 17。
+如果你正在使用新世界龙芯系统，请下载新世界 Java。
 
-**Loongnix**/Deepin/Debian/Ubuntu:
+直接下载 (需自行安装)：[loongson25.1.5-fx-jdk25_36-linux-loongarch64-glibc2.34.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64-glibc2.34.tar.gz)
 
-```
-sudo apt install openjdk-17-jre
-```
+通过包管理器安装：
 
-Arch Linux:
+- AOSC OS/Debian/Ubuntu: 
 
-```
-sudo pacman -S jre17-openjdk
-```
+  ```bash
+  sudo apt install default-jre
+  ```
 
----
+  注意：Deepin 软件源中的 Java 不包含 JIT 编译器，使用它启动游戏性能将极其糟糕。我们推荐 Deepin 用户直接下载 Java，而不是使用 APT 安装。
+  
+- ArchLinux:
 
-There are two ABIs on Loongson platform: **New World** and **Old World**. Java with different ABIs are not compatible with each other for the time being.
+  ```bash
+  sudo pacman -S jre-openjdk
+  ```
 
-Please execute `uname -r` in terminal to check the Linux kernel version. Please download [Old World](#old-world) Java if your kernel version is 4.x, otherwise please download [New World](#new-world) Java.
+## 旧世界
 
-## Old World
+如果你正在使用旧世界龙芯系统，请下载旧世界 Java：
 
-If you are using an Old World Loongson system, please go to Loongson Open Source Community to download Loongson Java 17.
+- `.tar.gz`: [loongson25.1.5-fx-jdk25_36-linux-loongarch64.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64.tar.gz)
 
-[Click here to download](https://www.loongnix.cn/zh/api/java/downloads-jdk17/index.html)
-
-## New World
-
-If you are using a New World Loongson system, please install Java 17 by using system's package manager.
-
-**Loongnix**/Deepin/Debian/Ubuntu:
-
-```
-sudo apt install openjdk-17-jre
-```
-
-Arch Linux:
-
-```
-sudo pacman -S jre17-openjdk
-```
+- `.deb`: [loongson25.1.5-fx-jdk25_36-linux-loongarch64.deb](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64.deb)
