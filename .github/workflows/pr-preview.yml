@@ -73,7 +73,7 @@ jobs:
               issue_number: context.issue.number,
               body: "[Preview] Preview has been removed."
             });
-      - if: ${{ github.event_name == 'pull_request_target' || steps.comment-message.outcome == 'failure' }}
+      - if: ${{ (github.event_name == 'pull_request_target' && github.event.action != 'closed') || steps.comment-message.outcome == 'failure' }}
         name: Comment Message
         uses: actions/github-script@v8
         with:
