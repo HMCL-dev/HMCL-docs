@@ -2,13 +2,6 @@ name: PR Preview
 on:
   schedule:
     - cron: 0 0 * * *
-  workflow_dispatch:
-    inputs:
-      cache-refresh:
-        description: Cache Refresh
-        required: true
-        type: boolean
-        default: false
   issue_comment:
     types: [created]
   pull_request_target:
@@ -21,11 +14,7 @@ env:
   JEKYLL_ENV: production
 jobs:
   cache-refresh:
-    if:
-      ${{
-        ( github.event_name == 'schedule' && github.event.schedule == '0 0 * * *' ) ||
-        ( github.event_name == 'workflow_dispatch' && github.event.inputs.cache-refresh )
-      }}
+    if: ${{ github.event_name == 'schedule' && github.event.schedule == '0 0 * * *' }}
     runs-on: ubuntu-latest
     steps:
       - name: Cache Refresh
