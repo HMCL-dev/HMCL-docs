@@ -62,15 +62,14 @@ strict_front_matter: true
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll-polyglot
 # minimal-mistakes (mimic GitHub Pages with --safe)
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -137,13 +136,20 @@ defaults:
 #   # minimal-mistakes
 #   enable_coderay: false 
 
+# polyglot
+languages: ["und", "en", "zh"]
+default_lang: "und"
+exclude_from_localization:
+  - assets
+  - sitemap.xml
+parallel_localization: false
+
 # Theme Settings
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin_dark: dark
 
 # Site Settings
-locale: zh
 # rtl:
 title: HMCL 文档
 # title_separator: -

@@ -1,0 +1,24 @@
+---
+title: 下载适用于 Windows on Arm 的 HMCL 和 Minecraft 依赖的 Java
+date: 2022-12-03 17:30:00 +0800
+lang: zh
+permalink: downloads/windows/arm64
+---
+
+Java 安装包已开始下载，请等待 Java 安装程序下载完成，最后启动安装程序，依照提示安装 Java。
+
+![windows-x86_64-1](/assets/img/docs/java-download-pages/windows-x86_64-1.gif)
+
+![windows-x86_64-2](/assets/img/docs/java-download-pages/windows-x86_64-2.gif)
+
+没有下载？[点击此处开始下载](https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi)
+
+无法下载？[点击此处开始下载（备用）](https://aka.ms/download-jdk/microsoft-jdk-21-windows-aarch64.msi)
+
+<script>
+    setTimeout(function() {
+        location.href = "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-21-windows-aarch64.msi";
+    }, 5000);
+</script>
+
+

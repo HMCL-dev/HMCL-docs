@@ -14,7 +14,13 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     var current = 0;
     var modes = ["light", "dark", "auto"];
-    var modeNames = ["亮色", "暗色", "自动"];
+    const pageLang = document.documentElement.lang || "en";
+    let modeNames;
+    if (pageLang.startsWith("en")) {
+        modeNames = ["Light", "Dark", "Auto"];
+    } else {
+        modeNames = ["亮色", "暗色", "自动"]
+    }
     var switcher = document.createElement("a");
     switcher.className = "masthead__menu-item";
     switcher.innerText = modeNames[current];

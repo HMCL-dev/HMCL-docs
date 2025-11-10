@@ -1,53 +1,53 @@
 main:
-  - title: 常见问题
+  - title: FAQ
     url: /faq.html
 
 docs:
-  - title: 问题集合
+  - title: Question Collection
     children:
-      - title: 常见问题
+      - title: Common Questions
         url: /faq.html
-      - title: 启动器使用相关
+      - title: Launcher Usage
         url: /launcher/
-      - title: 整合包帮助
+      - title: Modpack Help
         url: /modpack/
-      - title: 多人联机帮助
+      - title: Multiplayer Help
         url: /multiplayer/
-  - title: 使用者帮助
+  - title: User Help
     children:
-      - title: 版本隔离
+      - title: Version Isolation
         url: /launcher/isolation.html
-        description: 本文可以帮助你更好的分离版本间的地图、模组等内容。
-      - title: 设置离线皮肤
+        description: This article can help you better separate maps, mods, and other content between versions.
+      - title: Set Offline Skin
         url: /launcher/offline-skin.html
-        description: 本文将告诉你如何设置一个属于自己的离线皮肤。
-      - title: HMCL 的自动安装使用教程
+        description: This article will tell you how to set your own offline skin.
+      - title: HMCL Auto Installation Guide
         url: /launcher/auto-installing.html
-        description: 本文将告诉你如何用 HMCL 安装 Forge、Fabric、Fabric API、LiteLoader、Optifine 以及 模组 等。
-      - title: 安装光影
+        description: This article will tell you how to use HMCL to install Forge, Fabric, Fabric API, LiteLoader, Optifine, and mods.
+      - title: Install Shaders
         url: /launcher/shader.html
-        description: 本文将告诉你如何安装光影。
-      - title: 设置项详解
+        description: This article will tell you how to install shaders.
+      - title: Settings Details
         url: /launcher/set-item-details.html
-        description: 这篇文章针对 HMCL 的各个设置项进行了详细的解释。
-  - title: 开发者帮助
+        description: This article explains each setting item of HMCL in detail.
+  - title: Developer Help
     children:
-      - title: 制作 HMCL 格式的数据包
+      - title: Create HMCL Format Datapack
         url: /launcher/datapack.html
-        description: 本文将告诉你如何制作 HMCL 能够识别的数据包（Datapacks）。
-      - title: 制作整合包
+        description: This article will tell you how to create datapacks that HMCL can recognize.
+      - title: Create Modpack
         url: /modpack/serverpack.html
-        description: 本文将告诉你如何制作整合包。
-      - title: 添加默认 authlib-injector 验证服务器
+        description: This article will tell you how to create a modpack.
+      - title: Add Default authlib-injector Authentication Server
         url: /launcher/authlib-injector.html
-        description: 本文将告诉你如何设置默认的验证服务器。
-  - title: 其他
+        description: This article will tell you how to set the default authentication server.
+  - title: Others
     children:
-      - title: 为 HMCL 做出贡献
+      - title: Contribute to HMCL
         url: /contribution.html
-      - title: HMCL GitHub 地址
+      - title: HMCL GitHub Repository
         url: https://github.com/HMCL-dev/HMCL
-      - title: HMCL 帮助文档 GitHub 地址
+      - title: HMCL Docs GitHub Repository
         url: https://github.com/HMCL-dev/HMCL-docs
-      - title: HMCL 官网
+      - title: HMCL Official Website
         url: https://hmcl.huangyuhui.net
