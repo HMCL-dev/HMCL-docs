@@ -4,8 +4,11 @@ layout: document
 
 {{ content }}
 
+{% assign nav_key = "docs_" | append: page.locale %}
+{% assign nav_docs = site.data.navigation[nav_key] | default: site.data.navigation.docs %}
+
 {% capture list %}
-{% for group in site.data.navigation.docs -%}
+{% for group in nav_docs -%}
 ## {{ group.title }}
 {% for item in group.children -%}
 1. [{{ item.title }}]({{ item.url | relative_url }})

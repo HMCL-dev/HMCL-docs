@@ -13,7 +13,9 @@
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
         </a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {% assign nav_key = "main_" | append: locale %}
+          {% assign nav_main = site.data.navigation[nav_key] | default: site.data.navigation.main %}
+          {%- for link in nav_main -%}
             <li class="masthead__menu-item">
               <a
                 href="{{ link.url | relative_url }}"
