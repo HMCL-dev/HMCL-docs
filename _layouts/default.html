@@ -5,15 +5,17 @@ layout: compress
 
 <!doctype html>
 {% include copyright.html %}
-<html lang="{{ locale | replace: "_", "-" | default: "en" }}" class="no-js">
+<html lang="{{ locale | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
-    {% if site.preview and site.preview.pr-number %}
-    <div class="notice--warning text-center m0" style="position: sticky; top: 0; z-index: 999; padding: 0.4em;">当前站点为预览构建而非官方文档。如需反馈问题，请前往 <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a> 留言。</div>
+    {% if site.preview and site.preview.enabled != false %}
+    {%- assign i18n_text = site.data.plugins.i18n | i18n: locale, "ui-text" %}
+    {%- assign i18n_preview = i18n_text.data.preview %}
+    <div class="notice--warning text-center m0" style="position: sticky; top: 0; z-index: 999; padding: 0.4em;" lang="{{ i18n_text.locale }}">{{ i18n_preview.before }}{% if site.preview.feedback and site.preview.feedback.name %}{{ i18n_preview.feedback.before }}{% if site.preview.feedback.url %}<a href="{{ site.preview.feedback.url | relative_url }}">{{ site.preview.feedback.name }}</a>{% else %}{{ site.preview.feedback.name }}{% endif %}{{ i18n_preview.feedback.after }}{% endif %}{{ i18n_preview.after }}</div>
     {% endif %}
 
     {% include_cached skip-links.html locale=locale %}

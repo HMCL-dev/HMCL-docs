@@ -1,13 +1,47 @@
 ---
 layout: single
 ---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
-{% if jekyll.environment == 'production' and page.hits %}
+{%- if jekyll.environment == "production" and page.hits -%}
 <img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
-{% endif %}
+{%- endif %}
 
-<div class="notice--info">
-  <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
+{%- assign i18n_text = site.data.plugins.i18n | i18n: locale, "ui-text" %}
+{%- assign i18n_locale = i18n_text.data.locale %}
+{%- if page.origin.locale and page.locale and page.origin.locale != page.locale -%}
+{%- assign i18n_locale_warning = i18n_text.data.locale_warning %}
+<div class="notice--warning" lang="{{ i18n_text.locale }}">{{ i18n_locale_warning.before }}{{ i18n_locale[page.origin.locale] }}{{ i18n_locale_warning.after }}</div>
+{%- endif %}
+
+<div class="notice--info" lang="{{ i18n_text.locale }}">
+  {%- assign i18n_info = i18n_text.data.info -%}
+  {{ i18n_info.byline.author.before }}{{ page.author | default: i18n_info.byline.author.default }}{{ i18n_info.byline.author.after }}
+  {%- if page.contributors %}{{ i18n_info.byline.contributors.before }}{{ page.contributors | join: ' ' }}{{ i18n_info.byline.contributors.after }}{% endif -%}
+  {%- assign translations = page.default.translations | where_exp: "item", "item.locale != page.locale" -%}
+  {%- assign translations_size = translations | size -%}
+  {%- assign fallbacks = page.default.fallbacks | where_exp: "item", "item.locale != page.locale" -%}
+  {%- assign fallbacks_size = fallbacks | size -%}
+  {%- assign size = translations_size | plus: fallbacks_size -%}
+  {%- if size > 0 -%}
+  {{ i18n_info.i18n.before }}
+  {%- if translations_size > 0 -%}
+  {%- assign i18n_translations = i18n_info.i18n.translations -%}
+  {%- capture i18n_translations_links %}{% for item in translations %}<a href="{{ item.url | relative_url }}">{{ i18n_locale[item.locale] }} {% assign i18n_item_text = site.data.plugins.i18n | i18n: item.locale, "ui-text" %}<small lang="{{ i18n_item_text.locale }}">{{ i18n_item_text.data.locale[item.locale] }}</small></a> {% endfor %}{% endcapture -%}
+  {{ i18n_translations.before }}{{ i18n_translations_links | strip }}{{ i18n_translations.after }}
+  {%- endif -%}
+  {%- if translations_size > 0 and fallbacks_size > 0 -%}
+  {{ i18n_info.i18n.between }}
+  {%- endif -%}
+  {%- if fallbacks_size > 0 -%}
+  {%- assign i18n_fallbacks = i18n_info.i18n.fallbacks -%}
+  {%- capture i18n_fallbacks_links %}{% for item in fallbacks %}<a href="{{ item.url | relative_url }}">{{ i18n_locale[item.locale] }} {% assign i18n_item_text = site.data.plugins.i18n | i18n: item.locale, "ui-text" %}<small lang="{{ i18n_item_text.locale }}">{{ i18n_item_text.data.locale[item.locale] }}</small></a> {% endfor %}{% endcapture -%}
+  {{ i18n_fallbacks.before }}{{ i18n_fallbacks_links | strip }}{{ i18n_fallbacks.after }}
+  {%- endif -%}
+  {{ i18n_info.i18n.after }}
+  {%- endif -%}
+  {{ i18n_info.end }}
+  {%- comment %}{% endcomment -%}
 </div>
 
 {{ content }}

@@ -1,0 +1,36 @@
+locale_warning:
+  before: "The current content was written in "
+  after: .
+
+locale:
+  en: English
+  zh-Hans: Simplified Chinese
+  zh-Hant: Traditional Chinese
+
+info:
+  byline:
+    author:
+      before: "The current content was created by "
+      after: ""
+      default: unattributed user
+    contributors:
+      before: " and edited by "
+      after: ""
+  i18n:
+    before: ", with"
+    after: ""
+    between: " and"
+    translations:
+      before: " translation versions available in "
+      after: ""
+    fallbacks:
+      before: " fallback versions available in "
+      after: ""
+  end: .
+
+preview:
+  before: The current site is a preview build rather than the official documentation
+  after: .
+  feedback:
+    before: ". You may submit feedback in "
+    after: ""
