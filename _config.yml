@@ -160,6 +160,7 @@ breadcrumbs: false
 enable_copy_code_button: true
 copyright: huanghongxun
 copyright_url: mailto:hmcl@huangyuhui.net
+date_format: "%Y-%m-%d"
 
 comments:
   provider: false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
