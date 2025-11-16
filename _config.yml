@@ -113,11 +113,24 @@ defaults:
       hits: true
       toc: true
       toc_sticky: true
+      i18n: true
   - scope:
       path: ""
       type: downloads
     values:
       toc: false
+  - scope:
+      path: assets
+    values:
+      i18n: false
+  - scope:
+      path: 404.md
+    values:
+      i18n: false
+  - scope:
+      path: robots.txt
+    values:
+      i18n: false
 
 # liquid:
 #   error_mode: warn
@@ -143,7 +156,8 @@ minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neo
 minimal_mistakes_skin_dark: dark
 
 # Site Settings
-locale: zh
+locale: zh-Hans
+locales: [zh-Hans, zh-Hant, en]
 # rtl:
 title: HMCL 文档
 # title_separator: -

@@ -1,0 +1,36 @@
+locale_warning:
+  before: 当前内容使用
+  after: 撰写。
+
+locale:
+  en: 英语
+  zh-Hans: 简体中文
+  zh-Hant: 繁体中文
+
+info:
+  byline:
+    author:
+      before: "当前内容由 "
+      after: " 创建"
+      default: 未署名用户
+    contributors:
+      before: "由 "
+      after: " 编辑"
+  i18n:
+    before: "并提供"
+    after: ""
+    between: "與"
+    translations:
+      before: " "
+      after: " 翻译版本"
+    fallbacks:
+      before: " "
+      after: " 回退版本"
+  end: 。
+
+preview:
+  before: 当前站点为预览构建而非官方文档
+  after: 。
+  feedback:
+    before: "，您可前往 "
+    after: " 反馈"
