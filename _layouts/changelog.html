@@ -2,6 +2,8 @@
 layout: document
 ---
 
+{{ content }}
+
 {% assign channel = page.channel | default: 'stable' %}
 {% assign changelogs = site.changelogs | where_exp: "item", "item.relative_path contains channel" | reverse %}
 {% for item in changelogs %}
