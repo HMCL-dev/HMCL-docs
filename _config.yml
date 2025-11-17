@@ -113,6 +113,7 @@ defaults:
       hits: true
       toc: true
       toc_sticky: true
+      excerpt: ""
   - scope:
       path: ""
       type: downloads
