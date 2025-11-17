@@ -1,8 +1,7 @@
 ---
-title: 启动器
+title: 多人聯機
 layout: collection
-permalink: /launcher/
-collection: launcher
+collection: multiplayer
 entries_layout: grid
 classes: wide
 ---

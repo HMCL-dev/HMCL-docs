@@ -1,8 +1,7 @@
 ---
-title: 启动器
+title: Modpack
 layout: collection
-permalink: /launcher/
-collection: launcher
+collection: modpack
 entries_layout: grid
 classes: wide
 ---

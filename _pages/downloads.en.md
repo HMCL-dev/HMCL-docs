@@ -1,8 +1,7 @@
 ---
-title: 启动器
+title: Downloads
 layout: collection
-permalink: /launcher/
-collection: launcher
+collection: downloads
 entries_layout: grid
 classes: wide
 ---
