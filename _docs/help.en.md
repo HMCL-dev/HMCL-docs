@@ -1,10 +1,10 @@
 ---
-title: 帮助
+title: Help
 date: 2023-08-09 11:12:00 +0800
 author: zkitefly
 ---
 
-## 帮助渠道
+## Help Channels
 
-- [QQ 群聊](/_docs/groups.md)
+- [QQ Groups](/_docs/groups.md)
 - [Discord](https://discord.gg/jVvC7HfM6U)
