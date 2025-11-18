@@ -135,10 +135,6 @@ defaults:
     values:
       i18n: false
   - scope:
-      path: 404.md
-    values:
-      i18n: false
-  - scope:
       path: robots.txt
     values:
       i18n: false
