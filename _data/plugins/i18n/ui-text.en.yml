@@ -35,6 +35,11 @@ preview:
     before: ". You may submit feedback in "
     after: ""
 
+site:
+  title: HMCL Docs
+  description: Hello! Minecraft Launcher | Cross-platform | Modpack management | Automatic installation | Twelve years of history | 300 million uses
+  date_format: "%B %-d, %Y"
+
 settings:
   appearance_color:
     title: Color Mode

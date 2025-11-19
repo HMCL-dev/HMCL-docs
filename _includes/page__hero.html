@@ -1,4 +1,6 @@
 {% assign locale = include.locale | default: page.locale | default: layout.locale | default: site.locale %}
+{%- assign i18n_text = site.data.plugins.i18n | i18n: page.locale, "ui-text" -%}
+{%- assign site_title = i18n_text.data.site.title | default: site.title -%}
 {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
 
 {% if page.header.overlay_filter contains "gradient" %}
@@ -26,9 +28,9 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+          {{ site_title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
         {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {{ page.title | default: site_title | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
       </h1>
       {% if page.tagline %}

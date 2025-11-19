@@ -35,6 +35,11 @@ preview:
     before: "，您可前往 "
     after: " 反饋"
 
+site:
+  title: HMCL 文檔
+  description: HMCL 啟動器 | 跨平颱 | 整合包管理 | 自動安裝 | 十二年曆史 | 三億次使用
+  date_format: "%Y 年 %m 月 %d 日"
+
 settings:
   appearance_color:
     title: 顏色模式

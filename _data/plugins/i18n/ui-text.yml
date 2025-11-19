@@ -35,6 +35,11 @@ preview:
     before: "，您可前往 "
     after: " 反馈"
 
+site:
+  title: HMCL 文档
+  description: HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 十二年历史 | 三亿次使用
+  date_format: "%Y 年 %m 月 %d 日"
+
 settings:
   appearance_color:
     title: 颜色模式
