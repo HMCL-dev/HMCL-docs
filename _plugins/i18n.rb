@@ -1,3 +1,11 @@
+module JekyllFeed
+  class Generator < Jekyll::Generator
+    def feed_source_path
+      @feed_source_path ||= File.expand_path "_layouts/feed.xml", @site.config["source"]
+    end
+  end
+end
+
 module I18nFilter
   def i18n(hash, locale, key)
     return nil unless hash.is_a?(Hash) && locale.is_a?(String) && key.is_a?(String)
