@@ -1,15 +1,18 @@
 {% assign locale = include.locale | default: page.locale | default: layout.locale | default: site.locale %}
-{% capture logo_path %}{{ site.logo }}{% endcapture %}
+{%- assign i18n_text = site.data.plugins.i18n | i18n: page.locale, "ui-text" -%}
+{%- assign site_title = i18n_text.data.site.title | default: site.title -%}
+{%- capture logo_path %}{{ site.logo }}{% endcapture -%}
+{%- capture home_url %}/{% if locale != site.locale %}{{ locale }}/{% endif %}{% endcapture -%}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ home_url | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site_title }}"></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title | escape_once | strip }}
+        <a class="site-title" href="{{ home_url | relative_url }}">
+          {{ site.masthead_title | default: site_title | escape_once | strip }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
         </a>
         <ul class="visible-links">

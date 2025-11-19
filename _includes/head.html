@@ -1,9 +1,12 @@
+{% assign locale = include.locale | default: page.locale | default: layout.locale | default: site.locale %}
+{%- assign i18n_text = site.data.plugins.i18n | i18n: page.locale, "ui-text" -%}
+{%- assign site_title = i18n_text.data.site.title | default: site.title -%}
 <meta charset="utf-8">
 
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}
-  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site_title }} Feed">
 {% endunless %}
 
 {%- comment %} https://docs.google.com/presentation/d/1rmxwWa9P6_xHqonmh5ONXRS-jPc5XKbnv99Rjkhe04s/present {% endcomment -%}
