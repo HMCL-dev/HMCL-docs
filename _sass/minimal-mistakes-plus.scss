@@ -1,5 +1,14 @@
 @import "minimal-mistakes";
 
+.masthead__menu-item a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.theme-color-switcher {
+  display: none !important;
+}
+
 blockquote {
   margin-inline: 0;
   font-style: normal;

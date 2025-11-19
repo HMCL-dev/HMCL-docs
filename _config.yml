@@ -318,9 +318,9 @@ compress_html:
   ignore:
     envs: development
 
-head_scripts:
-  - /assets/js/theme.js
+# head_scripts: []
 after_footer_scripts:
+  - /assets/js/theme.js
   - /assets/js/plugins/jquery.auto-redirect.js
 
 # jekyll-feed
