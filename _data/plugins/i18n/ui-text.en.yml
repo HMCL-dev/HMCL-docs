@@ -34,3 +34,40 @@ preview:
   feedback:
     before: ". You may submit feedback in "
     after: ""
+
+settings:
+  appearance_color:
+    title: Color Mode
+    description: Used to switch the site's theme color mode.
+    options:
+      light: Light
+      dark: Dark
+      auto: Auto
+  appearance_skin_light:
+    title: Light Skin
+    description: The skin applied in light mode.
+    options:
+      default: Default
+      air: Air
+      aqua: Aqua
+      contrast: Contrast
+      dark: Dark
+      dirt: Dirt
+      neon: Neon
+      mint: Mint
+      plum: Plum
+      sunrise: Sunrise
+  appearance_skin_dark:
+    title: Dark Skin
+    description: The skin applied in dark mode.
+    options:
+      default: Default
+      air: Air
+      aqua: Aqua
+      contrast: Contrast
+      dark: Dark
+      dirt: Dirt
+      neon: Neon
+      mint: Mint
+      plum: Plum
+      sunrise: Sunrise

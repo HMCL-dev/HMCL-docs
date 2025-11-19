@@ -1,11 +1,8 @@
----
-layout: null
----
 (function (global) {
   var PREFIX = "HMCL_DOCS_SETTINGS_";
   var data = {};
   var events = {};
-  var config = /*{%comment%}*/{}/*{%endcomment%}*//**{{'/'}}{{ site.data.settings | jsonify }}/**/;
+  var config = global.config.settings;
 
   global.addEventListener("storage", function (event) {
     if (!event.key) return;

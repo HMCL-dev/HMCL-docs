@@ -17,7 +17,8 @@
           {%- for link in navigation.data -%}
             <li class="masthead__menu-item" lang="{{ navigation.locale }}">
               <a
-                href="{{ link.url | relative_url }}"
+                {% if link.class %} class="{{ link.class }}"{% endif %}
+                {% if link.url %} href="{{ link.url | relative_url }}"{% endif %}
                 {% if link.description %} title="{{ link.description }}"{% endif %}
                 {% if link.target %} target="{{ link.target }}"{% endif %}
               >{{ link.title }}</a>

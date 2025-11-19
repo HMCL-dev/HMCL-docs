@@ -328,6 +328,7 @@ compress_html:
     envs: development
 
 head_scripts:
+  - /assets/js/config.js
   - /assets/js/settings.js
   - /assets/js/theme.js
 after_footer_scripts:

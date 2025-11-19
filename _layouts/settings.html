@@ -1,6 +1,7 @@
 ---
 layout: document
 ---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
 {% for group in page.data %}
 
@@ -8,12 +9,11 @@ layout: document
 
 ## {{ group.title }}
 
-{% for pair in group.settings %}
-{% assign name = pair[0] %}
-{% assign value = pair[1] %}
+{% for name in group.settings %}
 {% assign setting = site.data.settings[name] %}
-
 {% if setting.type == 'radio' %}
+{% assign i18n = site.data.plugins.i18n | i18n: locale, "ui-text" %}
+{% assign value = i18n.data.settings[name] %}
 <div class="notice">
   <ul class="task-list">
     <li><strong>{{ value.title }}</strong></li>

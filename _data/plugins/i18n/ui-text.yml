@@ -34,3 +34,40 @@ preview:
   feedback:
     before: "，您可前往 "
     after: " 反馈"
+
+settings:
+  appearance_color:
+    title: 颜色模式
+    description: 用于切换站点主题颜色模式。
+    options:
+      light: 亮色
+      dark: 暗色
+      auto: 自动
+  appearance_skin_light:
+    title: 亮色皮肤
+    description: 亮色模式下应用的皮肤。
+    options:
+      default: 默认
+      air: 天空
+      aqua: 水蓝
+      contrast: 高对比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出
+  appearance_skin_dark:
+    title: 暗色皮肤
+    description: 暗色模式下应用的皮肤。
+    options:
+      default: 默认
+      air: 天空
+      aqua: 水蓝
+      contrast: 高对比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出
