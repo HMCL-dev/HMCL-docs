@@ -1,0 +1,54 @@
+name: Auto Convert WebP
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - assets/img/docs/**/*.jpg
+      - assets/img/docs/**/*.png
+      - assets/img/docs/**/*.gif
+  workflow_dispatch:
+concurrency:
+  group: webp
+  cancel-in-progress: false
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q webp parallel
+      - name: Convert
+        run: |
+          find ./assets/img/docs -name '*.png' | parallel -j100% cwebp -lossless {} -o {}.webp
+          find ./assets/img/docs -name '*.jpg' | parallel -j100% cwebp -q 80 {} -o {}.webp
+          find ./assets/img/docs -name '*.gif' | parallel -j100% gif2webp -lossy -q 80 {} -o {}.webp
+      - name: Check
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "continue=true" >> $GITHUB_ENV
+          else
+            echo "continue=false" >> $GITHUB_ENV
+          fi
+      - name: Commit And Create PR
+        if: ${{ env.continue == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH_NAME="bot/webp"
+          git checkout -b "$BRANCH_NAME"
+          git add .
+          git commit -m "Auto Convert WebP"
+          git push origin -f "$BRANCH_NAME"
+          OPEN_PR=$(gh pr list --base main --head "$BRANCH_NAME" --state open --json number --jq '.[].number')
+          if [ -z "$OPEN_PR" ]; then
+            gh pr create --title "Auto Convert WebP" --fill --base main --head "$BRANCH_NAME"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
