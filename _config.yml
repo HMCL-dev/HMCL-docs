@@ -134,10 +134,6 @@ defaults:
       path: assets
     values:
       i18n: false
-  - scope:
-      path: robots.txt
-    values:
-      i18n: false
 
 # liquid:
 #   error_mode: warn

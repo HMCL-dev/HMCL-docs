@@ -7,6 +7,30 @@ module JekyllFeed
 end
 
 module Jekyll
+  class JekyllSitemap < Jekyll::Generator
+    def source_path(file = "sitemap.xml")
+      File.expand_path "_layouts/#{file}", @site.config["source"]
+    end
+
+    def sitemap
+      site_map = PageWithoutAFile.new(@site, __dir__, "", "sitemap.xml")
+      site_map.content = File.read(source_path).gsub(MINIFY_REGEX, "")
+      site_map.data["layout"] = nil
+      site_map.data["static_files"] = static_files.map(&:to_liquid)
+      site_map.data["xsl"] = file_exists?("sitemap.xsl")
+      site_map.data["i18n"] = false
+      site_map
+    end
+
+    def robots
+      robots = PageWithoutAFile.new(@site, __dir__, "", "robots.txt")
+      robots.content = File.read(source_path("robots.txt"))
+      robots.data["layout"] = nil
+      robots.data["i18n"] = false
+      robots
+    end
+  end
+
   class DataReader
     def sanitize_filename(name)
       name.gsub(%r![^\w\s.-]+|(?<=^|\b\s)\s+(?=$|\s?\b)!, "")
