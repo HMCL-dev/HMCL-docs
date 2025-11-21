@@ -1,5 +1,6 @@
 ---
 title: 自动安装与模组下载简介
+excerpt: 安装 Forge、Fabric、LiteLoader、OptiFine 及模组的教程
 date: 2021-10-09 23:18:02 +0800
 author: asdqp233
 ---
