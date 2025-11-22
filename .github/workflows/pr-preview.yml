@@ -232,12 +232,16 @@ jobs:
           cache-version: PR-${{ env.GITHUB_PR_NUMBER }}
       - name: Jekyll Build
         run: |
-          echo "url: https://${{ needs.preview-create-init.outputs.domain }}" > _action.yml
-          echo "baseurl: ${{ needs.preview-create-init.outputs.pathname }}/PR${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
-          echo "source: ${{ github.workspace }}" >> _action.yml
-          echo "destination: /home/runner/site" >> _action.yml
-          echo "preview:" >> _action.yml
-          echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
+          cat > _action.yml << EOF
+          url: https://${{ needs.preview-create-init.outputs.domain }}
+          baseurl: ${{ needs.preview-create-init.outputs.pathname }}/PR${{ env.GITHUB_PR_NUMBER }}
+          source: ${{ github.workspace }}
+          destination: /home/runner/site
+          preview:
+            feedback:
+              name: "#${{ env.GITHUB_PR_NUMBER }}"
+              url: https://github.com/${{ github.repository }}/pull/${{ env.GITHUB_PR_NUMBER }}
+          EOF
           ${{ env.PREVIEW_WATCH }} || bundle install --jobs 4
           bundle exec jekyll build --trace --config _config.yml,_action.yml
       - id: upload-site
