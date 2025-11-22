@@ -113,11 +113,16 @@ defaults:
       hits: true
       toc: true
       toc_sticky: true
+      i18n: true
   - scope:
       path: ""
       type: downloads
     values:
       toc: false
+  - scope:
+      path: assets
+    values:
+      i18n: false
 
 # liquid:
 #   error_mode: warn
@@ -143,7 +148,8 @@ minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neo
 minimal_mistakes_skin_dark: dark
 
 # Site Settings
-locale: zh
+locale: zh-Hans
+locales: [zh-Hans, zh-Hant, en]
 # rtl:
 title: HMCL 文档
 # title_separator: -
@@ -308,9 +314,9 @@ compress_html:
   ignore:
     envs: development
 
-head_scripts:
-  - /assets/js/theme.js
+# head_scripts: []
 after_footer_scripts:
+  - /assets/js/theme.js
   - /assets/js/plugins/jquery.auto-redirect.js
 
 # jekyll-feed

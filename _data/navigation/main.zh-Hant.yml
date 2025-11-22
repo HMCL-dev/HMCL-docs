@@ -1,0 +1,8 @@
+- title: 常見問題
+  url: /zh-Hant/faq.html
+- title: 亮色
+  class: theme-color-switcher theme-color-light
+- title: 暗色
+  class: theme-color-switcher theme-color-dark
+- title: 自動
+  class: theme-color-switcher theme-color-auto

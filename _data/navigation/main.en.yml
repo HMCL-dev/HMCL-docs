@@ -1,0 +1,8 @@
+- title: FAQ
+  url: /en/faq.html
+- title: Light
+  class: theme-color-switcher theme-color-light
+- title: Dark
+  class: theme-color-switcher theme-color-dark
+- title: Auto
+  class: theme-color-switcher theme-color-auto
