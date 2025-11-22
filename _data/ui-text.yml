@@ -1,0 +1,32 @@
+zh-TW: &PATCH_ZH_HANT
+  skip_links: 跳過連結
+  skip_primary_nav: 跳至主導覽
+  skip_content: 跳至內容
+  skip_footer: 跳至頁尾
+  pagination_previous: 上一頁
+  pagination_next: 下一頁
+  menu_label: 選單
+  search_label: 搜尋
+  toc_label: 本頁目錄
+  share_on_label: 分享至
+  comments_title: 留言
+  more_label: 閱讀更多
+  related_label: 您可能也會有興趣
+  follow_label: 追蹤：
+  feed_label: 訂閱 Feed
+  powered_by: 採用技術：
+  email_label: 電子郵件
+  undefined_wpm: 設定檔 (_config.yml) 中缺少 `words_per_minute` 參數
+  comment_form_info: 您的電子郵件不會被公開。必填欄位已標註星號 (*)
+  comment_form_comment_label: 留言
+  comment_form_name_label: 名稱
+  comment_form_email_label: 電子郵件地址
+  comment_form_website_label: 網站 (選填)
+  comment_error_msg: 抱歉，您提交的資料有誤。請確認所有必填欄位皆已正確填寫後再試一次。
+  search_label_text: 輸入您要搜尋的關鍵字...
+  search_placeholder_text: 輸入您要搜尋的關鍵字...
+  search_algolia_no_results: 找不到結果
+  results_found: 找到結果
+  back_to_top: 回到頁首
+zh-HK:
+  <<: *PATCH_ZH_HANT
