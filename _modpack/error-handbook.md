@@ -1,5 +1,6 @@
 ---
 title: 模组包报错排查手册
+excerpt: 排查和解决整合包相关问题
 date: 2025-05-24 13:39:36 +0800
 author: LIPiston
 ---

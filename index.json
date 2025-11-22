@@ -1,67 +1,19 @@
+---
+layout: null
+collections:
+  - name: launcher
+    title: 启动器
+  - name: modpack
+    title: 整合包
+---
 [
-    {
-        "title": "启动器",
-        "items": [
-            {
-                "title": "数据包制作指南",
-                "subtitle": "制作可以由 HMCL 导入的数据包",
-                "url": "https://docs.hmcl.net/launcher/datapack.html"
-            },
-            {
-                "title": "光影",
-                "subtitle": "光影的安装方法，包括 OptiFine、Oculus 和 Iris Shaders",
-                "url": "https://docs.hmcl.net/launcher/shader.html"
-            },
-            {
-                "title": "设置项详解",
-                "subtitle": "HMCL 各项设置的详细说明，包括全局游戏设置、外观、下载等", 
-                "url": "https://docs.hmcl.net/launcher/set-item-details.html"
-            },
-            {
-                "title": "离线模式下更换皮肤",
-                "subtitle": "使用本地皮肤文件、LittleSkin 或 Blessing Skin 设置离线皮肤",
-                "url": "https://docs.hmcl.net/launcher/offline-skin.html"
-            },
-            {
-                "title": "自动安装与模组下载",
-                "subtitle": "安装 Forge、Fabric、LiteLoader、OptiFine 及模组的教程",
-                "url": "https://docs.hmcl.net/launcher/auto-installing.html"
-            },
-            {
-                "title": "版本隔离",
-                "subtitle": "避免多个游戏版本的存档、模组和配置冲突",
-                "url": "https://docs.hmcl.net/launcher/isolation.html"
-            },
-            {
-                "title": "JVM 选项与环境变量",
-                "subtitle": "配置 JVM 参数和环境变量的说明",
-                "url": "https://docs.hmcl.net/launcher/jvm-options-and-env.html"
-            }
-        ]
-    },
-    {
-        "title": "整合包",
-        "items": [
-            {
-                "title": "Authlib-Injector 服务器设置指南",
-                "subtitle": "配置默认的验证服务器",
-                "url": "https://docs.hmcl.net/launcher/authlib-injector.html"
-            },
-            {
-                "title": "服务端自动更新整合包制作教程",
-                "subtitle": "创建可自动更新的服务器整合包",
-                "url": "https://docs.hmcl.net/modpack/serverpack.html"
-            },
-            {
-                "title": "使用 HMCL 配置服务器客户端自动更新",
-                "subtitle": "使用 Nginx 搭建整合包更新服务",
-                "url": "https://docs.hmcl.net/modpack/serverpack3.html"
-            },
-            {
-                "title": "模组包报错排查手册", 
-                "subtitle": "排查和解决整合包相关问题",
-                "url": "https://docs.hmcl.net/modpack/error-handbook.html"
-            }
-        ]
-    }
+{%- for collection in page.collections -%}
+{"title":"{{ collection.title }}","items":[
+{%- for document in site[collection.name] -%}
+{"title":"{{ document.title }}","subtitle":"{{ document.excerpt }}","url":"{{ document.url | absolute_url }}"}
+{%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+]}
+{%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
 ]

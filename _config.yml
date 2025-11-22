@@ -113,6 +113,7 @@ defaults:
       hits: true
       toc: true
       toc_sticky: true
+      excerpt: ""
   - scope:
       path: ""
       type: downloads
@@ -135,7 +136,7 @@ defaults:
 #   footnote_nr: 1
 #   show_warnings: false
 #   # minimal-mistakes
-#   enable_coderay: false 
+#   enable_coderay: false
 
 # Theme Settings
 theme: minimal-mistakes-jekyll

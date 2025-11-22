@@ -1,5 +1,6 @@
 ---
 title: 光影
+excerpt: 光影的安装方法，包括 OptiFine、Oculus 和 Iris Shaders
 date: 2021-10-09 23:18:02 +0800
 contributors:
   - hejiehao
