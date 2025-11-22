@@ -43,7 +43,7 @@ docs:
         description: 本文将告诉你如何设置默认的验证服务器。
   - title: 其他
     children:
-      - title: 为 HMCL 做出贡献
+      - title: 贡献指南
         url: /contribution.html
       - title: HMCL GitHub 地址
         url: https://github.com/HMCL-dev/HMCL
