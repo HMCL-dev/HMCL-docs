@@ -118,6 +118,16 @@ defaults:
       type: downloads
     values:
       toc: false
+  - scope:
+      path: _changelogs/dev
+      type: changelogs
+    values:
+      channel: dev
+  - scope:
+      path: _changelogs/stable
+      type: changelogs
+    values:
+      channel: stable
 
 # liquid:
 #   error_mode: warn
