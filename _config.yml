@@ -139,8 +139,6 @@ defaults:
 
 # Theme Settings
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin_dark: dark
 
 # Site Settings
 locale: zh
@@ -309,6 +307,7 @@ compress_html:
     envs: development
 
 head_scripts:
+  - /assets/js/settings.js
   - /assets/js/theme.js
 after_footer_scripts:
   - /assets/js/plugins/jquery.auto-redirect.js

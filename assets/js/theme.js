@@ -1,45 +1,70 @@
 ---
 layout: null
 ---
-var darkTheme = document.createElement("link");
-darkTheme.rel = "stylesheet alternate";
-darkTheme.href = "{{ '/assets/css/dark.css' | relative_url }}";
-document.head.appendChild(darkTheme);
 window.addEventListener("DOMContentLoaded", function () {
-    var list = document.querySelector(".masthead .visible-links");
-    if (!list) return;
-    var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    function handler() {
-        darkTheme.rel = mediaQuery.matches ? "stylesheet" : "stylesheet alternate";
+  var skinLink = document.getElementById("skin");
+  var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  function applyDarkSkin() {
+    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_dark", "dark") + ".css";
+  }
+  function applyLightSkin() {
+    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_light", "default") + ".css";
+  }
+  function autoSchemeHandler() {
+    if (darkModeQuery.matches) {
+      applyDarkSkin();
+    } else {
+      applyLightSkin();
     }
-    var current = 0;
-    var modes = ["light", "dark", "auto"];
-    var modeNames = ["亮色", "暗色", "自动"];
-    var switcher = document.createElement("a");
-    switcher.className = "masthead__menu-item";
-    switcher.innerText = modeNames[current];
-    switcher.href = "javascript:;";
-    switcher.onclick = function () {
-        themeApply(current + 1);
+  }
+  var activeModeIndex = 0;
+  var modeKeys = ["light", "dark", "auto"];
+  var modeLabels = ["亮色", "暗色", "自动"];
+
+  var menuList = document.querySelector(".masthead .visible-links");
+  var modeSwitcher = null;
+  if (menuList) {
+    modeSwitcher = document.createElement("a");
+    modeSwitcher.className = "masthead__menu-item";
+    modeSwitcher.textContent = modeLabels[activeModeIndex];
+    modeSwitcher.href = "javascript:;";
+    modeSwitcher.onclick = function () {
+      var nextIndex = (activeModeIndex + 1) % modeKeys.length;
+      settings.set("appearance_color", modeKeys[nextIndex]);
     }
-    list.appendChild(switcher);
-    function themeApply(index) {
-        index = (Number(index) || 0) % modes.length;
-        if (index === current) return;
-        if (modes[current] === "auto") mediaQuery.removeEventListener("change", handler);
-        current = index;
-        var mode = modes[current];
-        switcher.innerText = modeNames[current];
-        localStorage.setItem("theme", current);
-        if (mode === "light") darkTheme.rel = "stylesheet alternate";
-        else if (mode === "dark") darkTheme.rel = "stylesheet";
-        else {
-            mediaQuery.addEventListener("change", handler);
-            handler();
-        }
+    menuList.appendChild(modeSwitcher);
+  }
+  function applyTheme(mode) {
+    var newIndex = modeKeys.indexOf(mode);
+    if (newIndex < 0) newIndex = 0;
+
+    if (modeKeys[activeModeIndex] === "auto") {
+      darkModeQuery.removeEventListener("change", autoSchemeHandler);
     }
-    themeApply(localStorage.getItem("theme"));
-    window.addEventListener("storage", function (event) {
-        event.key === "theme" && themeApply(event.newValue);
-    });
+
+    activeModeIndex = newIndex;
+    var resolvedMode = modeKeys[activeModeIndex];
+
+    if (modeSwitcher) {
+      modeSwitcher.textContent = modeLabels[activeModeIndex];
+    }
+
+    if (resolvedMode === "light") {
+      applyLightSkin();
+    }
+    else if (resolvedMode === "dark") {
+      applyDarkSkin();
+    }
+    else {
+      darkModeQuery.addEventListener("change", autoSchemeHandler);
+      autoSchemeHandler();
+    }
+  }
+  settings.onChange("appearance_color", applyTheme);
+  settings.onChange("appearance_skin_dark", function () {
+    settings.refresh("appearance_color");
+  });
+  settings.onChange("appearance_skin_light", function () {
+    settings.refresh("appearance_color");
+  });
 });
