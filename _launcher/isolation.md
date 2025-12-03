@@ -1,7 +1,7 @@
 ---
 title: 全局版本隔离
-date: 2021-10-09 23:18:02 +0800
-last_modified_at: 
+date: 2021-10-09T23:18:02+0800
+last_modified_at: 2025-12-03T14:31:42+08:00
 author: LIPiston
 redirect_from:
   - /launcher/global-version-isolation.html
