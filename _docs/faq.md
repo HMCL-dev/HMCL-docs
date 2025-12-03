@@ -88,7 +88,7 @@ HMCL 自动安装与使用模组教程： [跳转](/_launcher/auto-installing.md
 
 或者前往模组包报错排查手册中查看： [跳转](/_modpack/error-handbook.md)
 
-如果无法解决错误，尝试 [寻求帮助](help.html)
+如果无法解决错误，尝试 [寻求帮助](/_docs/help.md)
 
 ### 如何选择游戏的 Java 版本
 
