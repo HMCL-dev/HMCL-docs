@@ -30,4 +30,4 @@ contributors:
 需要特别提醒的是：联机功能不会更不能取代 Minecraft: Java Edition 服务器。
 它的主要目标依然是让朋友之间能共同游玩，而不是长时间的对外开放。
 
-最后，我想感谢一切参与到 EasyTier、Terracotta \| 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 easytier.cn 深入了解这一项目。
+最后，我想感谢一切参与到 EasyTier、Terracotta \| 陶瓦联机开发和测试、为 EasyTier 提供打洞和中继服务器的社区志愿者。欢迎大家访问 [easytier.cn](https://easytier.cn) 深入了解这一项目。
