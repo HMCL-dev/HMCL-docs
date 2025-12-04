@@ -1,22 +1,21 @@
 ---
 title: 多人联机反馈
-date: 2025-12-03 16:39:00 +0800
+date: 2025-10-07T18:44:00+08:00
+last_modified_at: 2025-12-03T16:39:00+08:00
 author: Burning_TNT
 contributors:
-  -TyMxy
+  - TyMxy
 ---
 
 ## Terracotta | 陶瓦联机
 
 <!--{% comment %}-->
 > [!TIP]
-> 欢迎您填写[反馈表单](https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp)。
-<!--{% endcomment %}-->
-
-<!----{{ '>' }}
+> <!--{% endcomment %}-->
 > 欢迎您填写<a href="https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp" data-delay="10" data-redirect>反馈表单</a>。
+<!----{{'>'}}
 {: .notice--success }
-{{ '<' }}!---->
+<!---->
 
 我们注意到了 EasyTier 项目。它提供了一种简单、安全、去中心化的异地组网方案，足以承载 Minecraft 的联机需求。
 在 EasyTier 开发团队的帮助下，我们决定重新在启动器内提供联机服务。
