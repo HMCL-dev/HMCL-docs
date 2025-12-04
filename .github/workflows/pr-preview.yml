@@ -14,7 +14,7 @@ env:
   JEKYLL_ENV: production
 jobs:
   cache-refresh:
-    if: ${{ !github.event.repository.fork && github.event_name == 'schedule' && github.event.schedule == '0 0 */6 * *' }}
+    if: ${{ (!github.event.repository.fork || vars.PR_PREVIEW == 'enabled') && github.event_name == 'schedule' && github.event.schedule == '0 0 */6 * *' }}
     runs-on: ubuntu-latest
     steps:
       - name: Cache Refresh
@@ -26,7 +26,7 @@ jobs:
   preview-remove:
     if:
       ${{
-        !github.event.repository.fork && (
+        (!github.event.repository.fork || vars.PR_PREVIEW == 'enabled') && (
           ( github.event_name == 'pull_request_target' && (
               github.event.action == 'closed' || (
                 github.event.action == 'labeled' &&
@@ -133,7 +133,7 @@ jobs:
   preview-create-init:
     if:
       ${{
-        !github.event.repository.fork && (
+        (!github.event.repository.fork || vars.PR_PREVIEW == 'enabled') && (
           ( github.event_name == 'pull_request_target' && (
               ( github.event.action == 'labeled' && contains(fromJSON('["preview/create", "preview/watch"]'), github.event.label.name) ) ||
               ( github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'preview/watch') )
