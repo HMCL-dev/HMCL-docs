@@ -1,5 +1,6 @@
 ---
 title: 服务端自动更新整合包制作教程
+excerpt: 创建可自动更新的服务器整合包
 date: 2021-08-22 23:18:02 +0800
 author: huanghongxun
 ---

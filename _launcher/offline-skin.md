@@ -1,5 +1,6 @@
 ---
 title: 离线模式下更换皮肤
+excerpt: 使用本地皮肤文件、LittleSkin 或 Blessing Skin 设置离线皮肤
 date: 2021-10-09 23:18:02 +0800
 author: qiaoshouzi
 contributors:
