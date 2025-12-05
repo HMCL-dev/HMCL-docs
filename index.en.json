@@ -2,9 +2,9 @@
 layout: null
 collections:
   - name: launcher
-    title: 启动器
+    title: Launcher
   - name: modpack
-    title: 整合包
+    title: Modpack
 ---
 [
 {%- for collection in page.collections -%}

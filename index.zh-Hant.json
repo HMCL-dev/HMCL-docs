@@ -2,7 +2,7 @@
 layout: null
 collections:
   - name: launcher
-    title: 启动器
+    title: 啟動器
   - name: modpack
     title: 整合包
 ---
