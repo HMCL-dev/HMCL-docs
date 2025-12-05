@@ -119,6 +119,16 @@ defaults:
       type: downloads
     values:
       toc: false
+  - scope:
+      path: _changelogs/dev
+      type: changelogs
+    values:
+      channel: dev
+  - scope:
+      path: _changelogs/stable
+      type: changelogs
+    values:
+      channel: stable
 
 # liquid:
 #   error_mode: warn
@@ -140,8 +150,6 @@ defaults:
 
 # Theme Settings
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin_dark: dark
 
 # Site Settings
 locale: zh
@@ -310,6 +318,7 @@ compress_html:
     envs: development
 
 head_scripts:
+  - /assets/js/settings.js
   - /assets/js/theme.js
 after_footer_scripts:
   - /assets/js/plugins/jquery.auto-redirect.js

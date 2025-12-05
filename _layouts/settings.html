@@ -1,0 +1,46 @@
+---
+layout: document
+---
+
+{% for group in page.data %}
+
+{% capture notice %}
+
+## {{ group.title }}
+
+{% for pair in group.settings %}
+{% assign name = pair[0] %}
+{% assign value = pair[1] %}
+{% assign setting = site.data.settings[name] %}
+
+{% if setting.type == 'radio' %}
+<div class="notice">
+  <ul class="task-list">
+    <li><strong>{{ value.title }}</strong></li>
+    <li>{{ value.description }}</li>
+    {% for option in setting.options %}
+    <li class="task-list-item">
+      <input type="radio" class="task-list-item-checkbox" name="{{ name }}" value="{{ option }}" id="{{ name }}_{{ option }}"{% if setting.default == option %} checked{% endif %}><label for="{{ name }}_{{ option }}">{{ value.options[option] }}</label>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+  settings.onChange("{{ name }}", function (newValue, oldValue) {
+    var list = document.getElementsByName("{{ name }}");
+    for (var i = 0; i < list.length; i++) {
+      list[i].checked = list[i].value === newValue;
+      list[i].onchange = function () {
+        if (this.checked) {
+          settings.set(this.name, this.value);
+        }
+      }
+    }
+  });
+</script>
+{% endif %}
+{% endfor %}
+{% endcapture %}
+{{ notice | markdownify }}
+{% endfor %}
