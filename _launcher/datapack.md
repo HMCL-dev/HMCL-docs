@@ -1,5 +1,6 @@
 ---
 title: 数据包制作指南
+excerpt: 制作可以由 HMCL 导入的数据包
 date: 2021-08-22 23:18:02 +0800
 author: huanghongxun
 ---

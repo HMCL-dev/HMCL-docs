@@ -26,19 +26,19 @@ contributors:
 
 在主界面找到并点击左侧的「下载」按钮。
 
-![](/assets/img/docs/about-questions/img.png)
+![](/assets/img/docs/faq/img1.png)
 
 在下载页面，点击左侧顶部的「游戏」选项卡。这里会列出所有可用的游戏版本（**版本号从上到下/由新到旧排序**），选择一个你喜欢的版本。我们通常推荐最新的正式版。
 
-![](/assets/img/docs/about-questions/img2.png)
+![](/assets/img/docs/faq/img2.png)
 
 点击右下角的「安装」按钮，HMCL 就会自动为你完成下载和安装。
 
-![](/assets/img/docs/about-questions/img3.png)
+![](/assets/img/docs/faq/img3.png)
 
 现在回到主界面，点击右下角的 **「启动游戏」** 按钮，开始你的创造吧！
 
-![](/assets/img/docs/about-questions/img4.png)
+![](/assets/img/docs/faq/img4.png)
 
 ### 游戏玩法是什么
 
@@ -60,7 +60,7 @@ contributors:
 
 「资源包」是指可以修改游戏中的多种资源，如**纹理（贴图）、模型、音乐、音效、语言文件**等的文件，能够极大地改变游戏的外观和感觉。而一个好的资源包能极大地提升你的游戏视听体验。
 
-![大致示意图](/assets/img/docs/about-questions/img5.jpg)
+![大致示意图](/assets/img/docs/faq/img5.jpg)
 
 - **如何使用资源包？** 查看 [加载资源包教程](https://zh.minecraft.wiki/w/Tutorial:%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90%E5%8C%85)。
 - **想制作自己的资源包？** 深入了解 [资源包详细资料](https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85)。
@@ -88,7 +88,7 @@ HMCL 自动安装与使用模组教程： [跳转](/_launcher/auto-installing.md
 
 或者前往模组包报错排查手册中查看： [跳转](/_modpack/error-handbook.md)
 
-如果无法解决错误，尝试 [寻求帮助](help.html)
+如果无法解决错误，尝试 [寻求帮助](/_docs/help.md)
 
 ### 如何选择游戏的 Java 版本
 

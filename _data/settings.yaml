@@ -1,0 +1,35 @@
+appearance_color:
+  type: radio
+  default: light
+  options:
+    - light
+    - dark
+    - auto
+appearance_skin_light:
+  type: radio
+  default: default
+  options:
+    - default
+    - air
+    - aqua
+    - contrast
+    - dark
+    - dirt
+    - neon
+    - mint
+    - plum
+    - sunrise
+appearance_skin_dark:
+  type: radio
+  default: dark
+  options:
+    - default
+    - air
+    - aqua
+    - contrast
+    - dark
+    - dirt
+    - neon
+    - mint
+    - plum
+    - sunrise
