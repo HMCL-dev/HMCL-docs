@@ -125,10 +125,6 @@ HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便�
 
 ![AddingModManually](/assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png)
 
-### 安装OptiFine 或其它光影模组
-
-光影的安装方式略有不同，请参考专门的指南 [光影安装](/_launcher/shader.md)
-
 ## 安装 Mod 后游戏报错/无法启动
 
 造成游戏报错的原因有很多, 比如 Mod 之间不兼容, Fabric API 的版本过高, 缺少前置 Mod 等等。
