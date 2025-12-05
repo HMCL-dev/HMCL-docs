@@ -5,9 +5,15 @@ layout: document
 {{ content }}
 
 {% assign channel = page.channel | default: 'stable' %}
-{% assign changelogs = site.changelogs | where: "channel", channel | reverse %}
+{% assign changelogs = site.changelogs | where: "locale", page.locale | where: "channel", channel | sort: "slug" | reverse %}
 {% for item in changelogs %}
-  {% assign version = item.slug %}
-  <h1 id="{% if forloop.index == 1 %}nowchange{% else %}HMCL-{{ version }}{% endif %}" data-version="{{ version }}">HMCL {{ version }}</h1>
-  <div>{{ item.content | markdownify }}</div>
+  {% assign version = item.default.slug %}
+  <h1 id="{% if forloop.index == 1 %}nowchange{% else %}HMCL-{{ version }}{% endif %}" data-version="{{ version }}" lang="en">HMCL {{ version }}</h1>
+  {%- assign i18n_text = site.data.plugins.i18n | i18n: page.locale, "ui-text" %}
+  {%- if item.origin.locale != page.locale -%}
+  {%- assign i18n_locale = i18n_text.data.locale %}
+  {%- assign i18n_locale_warning = i18n_text.data.locale_warning %}
+  <div class="notice--warning" lang="{{ i18n_text.locale }}">{{ i18n_locale_warning.before }}{{ i18n_locale[item.origin.locale] }}{{ i18n_locale_warning.after }}</div>
+  {%- endif %}
+  <div lang="{{ item.origin.locale }}">{{ item.content | markdownify }}</div>
 {% endfor %}
