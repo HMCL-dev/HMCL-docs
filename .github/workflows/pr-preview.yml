@@ -1,5 +1,7 @@
 name: PR Preview
 on:
+  schedule:
+    - cron: 0 0 */6 * *
   issue_comment:
     types: [created]
   pull_request_target:
@@ -11,6 +13,16 @@ env:
   GITHUB_PR_NUMBER: ${{ github.event_name == 'issue_comment' && github.event.issue.number || github.event.pull_request.number }}
   JEKYLL_ENV: production
 jobs:
+  cache-refresh:
+    if: ${{ !github.event.repository.fork && github.event_name == 'schedule' && github.event.schedule == '0 0 */6 * *' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Refresh
+        uses: actions/cache/restore@v4
+        with:
+          key: pages-${{ github.run_id }}
+          path: /home/runner/gh-pages
+          restore-keys: pages-
   preview-remove:
     if:
       ${{
@@ -73,7 +85,7 @@ jobs:
               issue_number: context.issue.number,
               body: "[Preview] Preview has been removed."
             });
-      - if: ${{ github.event_name == 'pull_request_target' || steps.comment-message.outcome == 'failure' }}
+      - if: ${{ (github.event_name == 'pull_request_target' && github.event.action != 'closed') || steps.comment-message.outcome == 'failure' }}
         name: Comment Message
         uses: actions/github-script@v8
         with:
@@ -227,7 +239,7 @@ jobs:
           echo "preview:" >> _action.yml
           echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
           ${{ env.PREVIEW_WATCH }} || bundle install --jobs 4
-          bundle exec jekyll build --config _config.yml,_action.yml
+          bundle exec jekyll build --trace --config _config.yml,_action.yml
       - id: upload-site
         name: Upload Site
         uses: actions/upload-artifact@v4

@@ -1,5 +1,6 @@
 ---
 title: 模组包报错排查手册
+excerpt: 排查和解决整合包相关问题
 date: 2025-05-24 13:39:36 +0800
 author: LIPiston
 ---
@@ -7,7 +8,7 @@ author: LIPiston
 ## 文件夹结构
 
 首先我们需要先认识Minecraft的文件夹结构  
-如果你开启了 [版本隔离](launcher/global-version-isolation.html) 那么你的文件夹结构如下  
+如果你开启了 [版本隔离](/_launcher/isolation.md) 那么你的文件夹结构如下  
 ```text
 .minecraft
 |*assets         # 游戏资源文件夹，存放纹理、声音等资源

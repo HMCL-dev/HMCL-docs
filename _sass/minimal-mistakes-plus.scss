@@ -5,10 +5,18 @@ blockquote {
   font-style: normal;
 }
 
-a, span, code, kbd, pre, em, strong, b, i {
+* {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+}
+
+.notice ul:first-child {
+  margin-top: 0;
+}
+
+.task-list-item label {
+  display: inline
 }
 
 .m0 {
