@@ -1,19 +1,17 @@
 ---
 title: 离线模式下更换皮肤
 excerpt: 使用本地皮肤文件、LittleSkin 或 Blessing Skin 设置离线皮肤
-date: 2021-10-09 23:18:02 +0800
+date: 2025-12-05 22:25:00 +0800
 author: qiaoshouzi
 contributors:
   - kitefly
+  - TyMxy
 ---
 
 # 离线模式下更换皮肤
 **注意：**
-> 1. 本文档仅适用于**V3.4.205及以上版本**,不支持 **V3.3.188稳定版本**, 请在 启动器设置→启动器更新 或 设置→通用→启动器更新 中选择 **测试版** 并升级到**V3.4.205及以上版本**  [HMCL下载页面](https://hmcl.huangyuhui.net/download/)
-> 2. 使用 默认、Steve、Alex、本地皮肤图片文件: 多人联机下其他玩家无法看到您的皮肤  
+> 使用 Steve、Alex、本地皮肤图片文件: 可能无法加入多人联机，其他玩家可能看不到您的皮肤  
 > 使用 LittleSkin、Blessing Skin 服务器: 多人联机下和您使用 **相同方式** 的玩家可以看到您的皮肤, 其他玩家不可以
->
-> 3. 本文档在v3.4.208参考编写，有可能会的短时性的失效！
 
 打开HMCL, 进入 **账号列表** , 点击下图离线账号的【上传皮肤】红框处:
 
@@ -63,7 +61,6 @@ contributors:
 
 进入 **配置生成**, 按下图找到 `CustomSkinLoader` 中的网址, 复制到HMCL中即可同步在Blessing Skin 服务器上此账户名的皮肤
 
-> 注意: **V3.4.205**需把链接末尾的 / 去掉, 这个BUG已经在**V3.4.206**修复
 
 ![](/assets/img/docs/offline-skin/img4_2.png)
 
