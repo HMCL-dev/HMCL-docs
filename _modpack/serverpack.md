@@ -34,7 +34,7 @@ HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提
 
 运行启动器，并导入刚才导出的整合包，导入完成后，这个文件夹（这里叫“新整合包”）可以打包发给玩家。
 
-## 第三步，部署整合包更新服务器
+## 第三步：部署整合包更新服务器
 
 你可以借助 Apache、Nginx 等支持静态文件的 HTTP 服务器软件提供文件。首先，决定好整合包下载链接前缀，比如我希望 HMCL 从远程服务器的 http://www.site.com/modpack 目录下存放整合包的更新信息，则在之前导出整合包的整合包下载前缀中填写 http://www.site.com/modpack。
 
@@ -46,6 +46,6 @@ HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提
 
 整合包压缩文件 test.zip/overrides/mods/Advancement_Book-1.12-1.0.3.jar 文件必须可以从 http://www.site.com/modpack/overrides/mods/Advancement_Book-1.12-1.0.3.jar 该目录下载下来，且文件内容一致。那么至此更新服务器就部署完成了。
 
-## 第四步，更新整合包
+## 第四步：更新整合包
 
 如果你需要更新整合包，那么将新的整合包经过第一步导出新的整合包压缩文件，并解压到类似 http://www.site.com/modpack 文件夹下即可完成新整合包的部署。
