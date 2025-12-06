@@ -1,0 +1,78 @@
+locale_warning:
+  before: 當前內容使用
+  after: 撰冩。
+
+locale:
+  en: 英語
+  zh-Hans: 簡體中文
+  zh-Hant: 繁體中文
+
+info:
+  byline:
+    author:
+      before: "當前內容由 "
+      after: " 創建"
+      default: 未署名用戶
+    contributors:
+      before: "由 "
+      after: " 編輯"
+  i18n:
+    before: "並提供"
+    after: ""
+    between: "与"
+    translations:
+      before: " "
+      after: " 翻譯版本"
+    fallbacks:
+      before: " "
+      after: " 回退版本"
+  end: 。
+
+preview:
+  before: 當前站點爲預覽構建而非官方文檔
+  after: 。
+  feedback:
+    before: "，您可前往 "
+    after: " 反饋"
+
+site:
+  title: HMCL 文檔
+  description: HMCL 啟動器 | 跨平颱 | 整合包管理 | 自動安裝 | 十二年曆史 | 三億次使用
+  date_format: "%Y 年 %m 月 %d 日"
+
+settings:
+  appearance_color:
+    title: 顏色模式
+    description: 用於切換站點主題顏色模式。
+    options:
+      light: 亮色
+      dark: 暗色
+      auto: 自動
+  appearance_skin_light:
+    title: 亮色皮膚
+    description: 亮色模式下應用的皮膚。
+    options:
+      default: 默認
+      air: 天空
+      aqua: 水藍
+      contrast: 高對比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出
+  appearance_skin_dark:
+    title: 暗色皮膚
+    description: 暗色模式下應用的皮膚。
+    options:
+      default: 默認
+      air: 天空
+      aqua: 水藍
+      contrast: 高對比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出

@@ -1,0 +1,78 @@
+locale_warning:
+  before: 当前内容使用
+  after: 撰写。
+
+locale:
+  en: 英语
+  zh-Hans: 简体中文
+  zh-Hant: 繁体中文
+
+info:
+  byline:
+    author:
+      before: "当前内容由 "
+      after: " 创建"
+      default: 未署名用户
+    contributors:
+      before: "由 "
+      after: " 编辑"
+  i18n:
+    before: "并提供"
+    after: ""
+    between: "與"
+    translations:
+      before: " "
+      after: " 翻译版本"
+    fallbacks:
+      before: " "
+      after: " 回退版本"
+  end: 。
+
+preview:
+  before: 当前站点为预览构建而非官方文档
+  after: 。
+  feedback:
+    before: "，您可前往 "
+    after: " 反馈"
+
+site:
+  title: HMCL 文档
+  description: HMCL 启动器 | 跨平台 | 整合包管理 | 自动安装 | 十二年历史 | 三亿次使用
+  date_format: "%Y 年 %m 月 %d 日"
+
+settings:
+  appearance_color:
+    title: 颜色模式
+    description: 用于切换站点主题颜色模式。
+    options:
+      light: 亮色
+      dark: 暗色
+      auto: 自动
+  appearance_skin_light:
+    title: 亮色皮肤
+    description: 亮色模式下应用的皮肤。
+    options:
+      default: 默认
+      air: 天空
+      aqua: 水蓝
+      contrast: 高对比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出
+  appearance_skin_dark:
+    title: 暗色皮肤
+    description: 暗色模式下应用的皮肤。
+    options:
+      default: 默认
+      air: 天空
+      aqua: 水蓝
+      contrast: 高对比
+      dark: 暗色
+      dirt: 泥土
+      neon: 霓虹
+      mint: 薄荷
+      plum: 梅紫
+      sunrise: 日出

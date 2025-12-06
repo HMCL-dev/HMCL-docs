@@ -1,14 +1,11 @@
----
-layout: null
----
 window.addEventListener("DOMContentLoaded", function () {
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
   function applyDarkSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_dark", "dark") + ".css";
+    skinLink.href = config.baseurl + "assets/css/skins/" + settings.get("appearance_skin_dark", "dark") + ".css";
   }
   function applyLightSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_light", "default") + ".css";
+    skinLink.href = config.baseurl + "assets/css/skins/" + settings.get("appearance_skin_light", "default") + ".css";
   }
   function autoSchemeHandler() {
     if (darkModeQuery.matches) {
@@ -19,14 +16,13 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   var activeModeIndex = 0;
   var modeKeys = ["light", "dark", "auto"];
-  var modeLabels = ["亮色", "暗色", "自动"];
-
+  var modeLabels = config.i18n[config.locale || "default"].settings.appearance_color.options;
   var menuList = document.querySelector(".masthead .visible-links");
   var modeSwitcher = null;
   if (menuList) {
     modeSwitcher = document.createElement("a");
     modeSwitcher.className = "masthead__menu-item";
-    modeSwitcher.textContent = modeLabels[activeModeIndex];
+    modeSwitcher.textContent = modeLabels["light"];
     modeSwitcher.href = "javascript:;";
     modeSwitcher.onclick = function () {
       var nextIndex = (activeModeIndex + 1) % modeKeys.length;
@@ -46,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function () {
     var resolvedMode = modeKeys[activeModeIndex];
 
     if (modeSwitcher) {
-      modeSwitcher.textContent = modeLabels[activeModeIndex];
+      modeSwitcher.textContent = modeLabels[resolvedMode];
     }
 
     if (resolvedMode === "light") {

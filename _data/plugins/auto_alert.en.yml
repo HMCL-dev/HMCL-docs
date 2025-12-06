@@ -1,0 +1,15 @@
+note:
+  title: Note
+  class_name: notice--info
+tip:
+  title: Tip
+  class_name: notice--success
+important:
+  title: Important
+  class_name: notice--primary
+warning:
+  title: Warning
+  class_name: notice--warning
+caution:
+  title: Caution
+  class_name: notice--danger
