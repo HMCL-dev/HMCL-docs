@@ -4,7 +4,9 @@ Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
   next unless doc.output_ext == ".html"
   site = doc.site
   next unless site.data["plugins"]
-  alert_type = site.data["plugins"]["auto_alert"]
+  locale = doc.data["locale"]
+  alert_type = site.data["plugins"]["auto_alert.#{locale}"] if locale
+  alert_type = site.data["plugins"]["auto_alert"] unless alert_type
   next unless alert_type
 
   fragment = Nokogiri::HTML::DocumentFragment.parse(doc.content)
