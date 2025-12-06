@@ -1,3 +1,11 @@
+module JekyllFeed
+  class Generator < Jekyll::Generator
+    def feed_source_path
+      @feed_source_path ||= File.expand_path "_layouts/feed.xml", @site.config["source"]
+    end
+  end
+end
+
 module Jekyll
   class DataReader
     def sanitize_filename(name)
