@@ -15,12 +15,12 @@ Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
     next unless first_child
     next unless first_child.name == "p"
 
-    text = first_child.text.downcase
+    inner_html = first_child.inner_html.downcase
 
     # 遍历所有 alert 类型
     alert_type.each do |type, data|
       # 情况一：完整匹配 [!type] 形式 <p>[!NOTE]</p>
-      if text == "[!#{type}]"
+      if inner_html == "[!#{type}]"
         # 将 alert 类型对应的 class 加入 blockquote
         item['class'] = [item['class'], data["class_name"]].compact.join(" ")
 
@@ -30,13 +30,13 @@ Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
         break
 
       # 情况二：段落以 [!type]\n 开头 <p>[!NOTE]\n\n other content</p>
-      elsif text.start_with? "[!#{type}]\n"
+      elsif inner_html.start_with? "[!#{type}]\n"
         # 将 alert 类型对应的 class 加入 blockquote
         item['class'] = [item['class'], data["class_name"]].compact.join(" ")
         # 在原段落前插入标题 <div><strong>提示</strong></div><p>[!NOTE]\n\n other content</p>
         first_child.add_previous_sibling "<div><strong>#{data["title"]}</strong></div>"
         # 移除段落内容开头的 [!type]\n <div><strong>提示</strong></div><p>\n other content</p>
-        first_child.content = first_child.content.sub(/\A#{Regexp.escape("[!#{type}]\n")}/i, "")
+        first_child.inner_html = first_child.inner_html.sub(/\A#{Regexp.escape("[!#{type}]\n")}/i, "")
         break
       end
     end
