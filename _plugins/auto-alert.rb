@@ -15,14 +15,17 @@ Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
     next unless first_child
     next unless first_child.name == "p"
 
-    text = first_child.text.downcase
+    inner_html = first_child.inner_html.downcase
 
     # 遍历所有 alert 类型
     alert_type.each do |type, data|
+      prefix = "[!#{type}]"
+      prefix_with_newline = "#{prefix}\n"
+
       # 情况一：完整匹配 [!type] 形式 <p>[!NOTE]</p>
-      if text == "[!#{type}]"
+      if inner_html == prefix
         # 将 alert 类型对应的 class 加入 blockquote
-        item['class'] = [item['class'], data["class_name"]].compact.join(" ")
+        item["class"] = [item["class"], data["class_name"]].compact.join(" ")
 
         # 将 <p> 替换为 <div> 并插入标题
         first_child.name = "div"
@@ -30,13 +33,13 @@ Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
         break
 
       # 情况二：段落以 [!type]\n 开头 <p>[!NOTE]\n\n other content</p>
-      elsif text.start_with? "[!#{type}]\n"
+      elsif inner_html.start_with? prefix_with_newline
         # 将 alert 类型对应的 class 加入 blockquote
-        item['class'] = [item['class'], data["class_name"]].compact.join(" ")
+        item["class"] = [item["class"], data["class_name"]].compact.join(" ")
         # 在原段落前插入标题 <div><strong>提示</strong></div><p>[!NOTE]\n\n other content</p>
         first_child.add_previous_sibling "<div><strong>#{data["title"]}</strong></div>"
         # 移除段落内容开头的 [!type]\n <div><strong>提示</strong></div><p>\n other content</p>
-        first_child.content = first_child.content.sub(/\A#{Regexp.escape("[!#{type}]\n")}/i, "")
+        first_child.inner_html = first_child.inner_html[prefix_with_newline.length..-1] || ""
         break
       end
     end

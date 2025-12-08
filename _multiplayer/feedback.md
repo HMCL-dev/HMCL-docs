@@ -9,13 +9,8 @@ contributors:
 
 ## Terracotta | 陶瓦联机
 
-<!--{% comment %}-->
 > [!TIP]
-> <!--{% endcomment %}-->
 > 欢迎您填写<a href="https://f.kdocs.cn/ksform/w/write/njMwdtgD?channel=mdlsjp" data-delay="10" data-redirect>反馈表单</a>。
-<!----{{'>'}}
-{: .notice--success }
-<!---->
 
 我们注意到了 EasyTier 项目。它提供了一种简单、安全、去中心化的异地组网方案，足以承载 Minecraft 的联机需求。
 在 EasyTier 开发团队的帮助下，我们决定重新在启动器内提供联机服务。
