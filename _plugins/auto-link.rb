@@ -1,8 +1,8 @@
 require "nokogiri"
 require "addressable/uri"
 
-Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
-  next unless doc.output_ext == ".html"
+def auto_link(doc)
+  return unless doc.output_ext == ".html"
 
   site = doc.site
   liquid_context = Liquid::Context.new({}, {}, { site: site })
