@@ -16,7 +16,7 @@ redirect_from:
 
 如果你正在使用新世界龙芯系统，请下载新世界 Java。
 
-直接下载 (需自行安装)：[loongson25.1.5-fx-jdk25_36-linux-loongarch64-glibc2.34.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64-glibc2.34.tar.gz)
+直接下载 (需自行安装)：[loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64-glibc2.34.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64-glibc2.34.tar.gz)
 
 通过包管理器安装：
 
@@ -38,6 +38,8 @@ redirect_from:
 
 如果你正在使用旧世界龙芯系统，请下载旧世界 Java：
 
-- `.tar.gz`: [loongson25.1.5-fx-jdk25_36-linux-loongarch64.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64.tar.gz)
+- `.tar.gz`: [loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64.tar.gz](https://ftp.loongnix.cn/Java/openjdk25/loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64.tar.gz)
 
-- `.deb`: [loongson25.1.5-fx-jdk25_36-linux-loongarch64.deb](https://ftp.loongnix.cn/Java/openjdk25/loongson25.1.5-fx-jdk25_36-linux-loongarch64.deb)
+- `.deb`: [loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64.deb](https://ftp.loongnix.cn/Java/openjdk25/loongson25.2.22-fx-jdk25.0.1_8-linux-loongarch64.deb)
+
+- `.rpm`: [loongson25.2.22-fx-jdk25.0.1_8-linux.loongarch64.rpm](https://ftp.loongnix.cn/Java/openjdk25/loongson25.2.22-fx-jdk25.0.1_8-linux.loongarch64.rpm)
