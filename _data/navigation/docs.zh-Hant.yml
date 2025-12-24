@@ -1,0 +1,48 @@
+- title: 問題集合
+  children:
+    - title: 常見問題
+      url: /zh-Hant/faq.html
+    - title: 啟動器使用相關
+      url: /zh-Hant/launcher/
+    - title: 整合包幫助
+      url: /zh-Hant/modpack/
+    - title: 多人聯機幫助
+      url: /zh-Hant/multiplayer/
+- title: 使用者幫助
+  children:
+    - title: 版本隔離
+      url: /zh-Hant/launcher/isolation.html
+      description: 本文可以幫助你更好的分離版本間的地圖、模組等內容。
+    - title: 設置離線皮膚
+      url: /zh-Hant/launcher/offline-skin.html
+      description: 本文將告訴你如何設置一個屬於自己的離線皮膚。
+    - title: HMCL 的自動安裝使用教程
+      url: /zh-Hant/launcher/auto-installing.html
+      description: 本文將告訴你如何用 HMCL 安裝 Forge、Fabric、Fabric API、LiteLoader、Optifine 以及 模組 等。
+    - title: 安裝光影
+      url: /zh-Hant/launcher/shader.html
+      description: 本文將告訴你如何安裝光影。
+    - title: 設置項詳解
+      url: /zh-Hant/launcher/set-item-details.html
+      description: 這篇文章針對 HMCL 的各個設置項進行了詳細的解釋。
+- title: 開髮者幫助
+  children:
+    - title: 製作 HMCL 格式的數據包
+      url: /zh-Hant/launcher/datapack.html
+      description: 本文將告訴你如何製作 HMCL 能夠識別的數據包（Datapacks）。
+    - title: 製作整合包
+      url: /zh-Hant/modpack/serverpack.html
+      description: 本文將告訴你如何製作整合包。
+    - title: 添加默認 authlib-injector 驗証服務器
+      url: /zh-Hant/launcher/authlib-injector.html
+      description: 本文將告訴你如何設置默認的驗証服務器。
+- title: 其它
+  children:
+    - title: 貢獻指南
+      url: /zh-Hant/contribution.html
+    - title: 官方網站
+      url: https://hmcl.huangyuhui.net
+    - title: 項目倉庫
+      url: https://github.com/HMCL-dev/HMCL
+    - title: 文檔倉庫
+      url: https://github.com/HMCL-dev/HMCL-docs
