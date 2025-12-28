@@ -2,7 +2,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+/vendor/
 Gemfile.lock
 .bundle
 /.idea/

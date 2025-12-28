@@ -12,7 +12,7 @@ author: wifi-left
 > If you encounter a BUG, please send feedback in time to [HMCL/issues](https://github.com/HMCL-dev/HMCL/issues).\
 > You can also submit your suggestions here.
 <!----{{ '>' }}
-{: .notice--info }
+{: .alert.alert-info }
 <!---->
 
 > [!NOTE]

@@ -1,0 +1,19 @@
+@mixin color-mode($mode, $root: false) {
+  [data-bs-theme="#{$mode}"] {
+    @content;
+  }
+
+  @if $root == true {
+    @media (prefers-color-scheme: $mode) {
+      :root:not([data-bs-theme]) {
+        @content;
+      }
+    }
+  } @else {
+    @media (prefers-color-scheme: $mode) {
+      html:not([data-bs-theme]) {
+        @content;
+      }
+    }
+  }
+}

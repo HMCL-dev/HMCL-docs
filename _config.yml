@@ -63,17 +63,13 @@ strict_front_matter: true
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
   - jekyll-redirect-from
 # minimal-mistakes (mimic GitHub Pages with --safe)
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
   - jekyll-redirect-from
 
 # Conversion
@@ -147,9 +143,6 @@ defaults:
 #   show_warnings: false
 #   # minimal-mistakes
 #   enable_coderay: false
-
-# Theme Settings
-theme: minimal-mistakes-jekyll
 
 # Site Settings
 locale: zh
@@ -267,11 +260,13 @@ analytics:
 footer:
   links:
     - label: Github
-      icon: fab fa-fw fa-github
-      url: https://github.com/HMCL-dev/HMCL
-    - label: 粤ICP备18071565号
-      url: https://beian.miit.gov.cn
+      icon: bi bi-github
+      url: https://github.com/HMCL-dev/hmcl
   # since:
+
+icp:
+  name: 粤ICP备18071565号
+  url: https://beian.miit.gov.cn
 
 # minimal-mistakes (with jekyll-paginate-v2) https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 # pagination:
@@ -320,8 +315,6 @@ compress_html:
 head_scripts:
   - /assets/js/settings.js
   - /assets/js/theme.js
-after_footer_scripts:
-  - /assets/js/plugins/jquery.auto-redirect.js
 
 # jekyll-feed
 feed:

@@ -6,8 +6,6 @@ layout: single
 <img src="https://hits.zkitefly.eu.org/?tag={{ page.url | absolute_url | url_encode }}" alt="Hits" decoding="async">
 {% endif %}
 
-<div class="notice--info">
-  <p>本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</p>
-</div>
+<div class="alert alert-info">本文由 {{ page.author | default: '未署名用户' }} 创建{% if page.contributors %}，并由 {{ page.contributors | join: ' ' }} 编辑{% endif %}。</div>
 
 {{ content }}
