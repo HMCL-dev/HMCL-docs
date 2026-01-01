@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% if page.title %}
+<header class="container-fluid">
+  <h1><a class="text-body text-decoration-none" href="{{ page.url | absolute_url }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a></h1>
+</header>
+{% endif %}
+
+{% assign list = site[page.collection] | where_exp: "page", "page.hidden != true" %}
+
+<div class="container-fluid py-3">
+  <div class="list-group">
+    {%- for page in list -%}
+    <a href="{{ page.url | relative_url }}" class="list-group-item list-group-item-action" rel="permalink">
+      <h5 class="m-0">{{ page.title }}</h5>
+      {% if page.excerpt %}<p class="m-0 mt-1">{{ page.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    </a>
+    {%- endfor -%}
+  </div>
+</div>

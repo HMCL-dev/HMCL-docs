@@ -1,15 +1,15 @@
 note:
   title: 注意
-  class_name: notice--info
+  class_name: alert alert-info
 tip:
   title: 提示
-  class_name: notice--success
+  class_name: alert alert-success
 important:
   title: 重要
-  class_name: notice--primary
+  class_name: alert alert-primary
 warning:
   title: 警告
-  class_name: notice--warning
+  class_name: alert alert-warning
 caution:
   title: 谨慎
-  class_name: notice--danger
+  class_name: alert alert-danger

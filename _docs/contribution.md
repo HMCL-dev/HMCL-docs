@@ -2,7 +2,6 @@
 title: 贡献指南
 date: 2021-10-09 23:18:02 +0800
 author: huanghongxun
-classes: wide
 toc: false
 ---
 

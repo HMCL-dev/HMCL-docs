@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% if page.title %}
+<header>
+  <h1><a class="text-body text-decoration-none" href="{{ page.url | absolute_url }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a></h1>
+</header>
+{% endif %}
+
+<div class="d-flex gap-3">
+  <section{% if page.toc %} data-bs-spy="scroll" data-bs-target="#tocnav"{% endif %}>
+    {{ content }}
+  </section>
+  {% if page.toc %}
+  <div>
+    <div class="offcanvas-lg offcanvas-end flex-shrink-0 sticky-lg-top border d-flex flex-column" data-bs-scroll="true" data-bs-backdrop="true" id="toc" style="width: 240px; max-height: calc(100vh - 72px); top: 72px;">
+      <div class="container-fluid py-2 border-bottom fw-semibold">目录</div>
+      <nav id="tocnav" class="overflow-auto small flex-fill">
+        {% include toc.html class="list-unstyled list-group-item p-0 border-0 list-group small" submenu_class="list-unstyled list-group-item border-0 py-0 pe-0 list-group" anchor_class="border-0 list-group-item list-group-item-action" sanitize=true html=content h_min=1 h_max=6 skip_no_ids=true %}
+      </nav>
+    </div>
+  </div>
+  {% endif %}
+</div>
