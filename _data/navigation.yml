@@ -1,6 +1,4 @@
 main:
-  - title: 常见问题
-    url: /faq.html
   - title: 设置
     url: /settings.html
 
@@ -43,13 +41,21 @@ docs:
       - title: 添加默认 authlib-injector 验证服务器
         url: /launcher/authlib-injector.html
         description: 本文将告诉你如何设置默认的验证服务器。
+  - title: 更新日志
+    children:
+      - title: 稳定版
+        url: /changelog/stable.html
+      - title: 开发版
+        url: /changelog/dev.html
   - title: 其他
     children:
+      - title: 用户协议
+        url: /eula/hmcl.html
       - title: 贡献指南
         url: /contribution.html
-      - title: HMCL GitHub 地址
-        url: https://github.com/HMCL-dev/HMCL
-      - title: HMCL 帮助文档 GitHub 地址
-        url: https://github.com/HMCL-dev/HMCL-docs
-      - title: HMCL 官网
+      - title: 项目官网
         url: https://hmcl.huangyuhui.net
+      - title: 项目仓库
+        url: https://github.com/HMCL-dev/HMCL
+      - title: 文档仓库
+        url: https://github.com/HMCL-dev/HMCL-docs
