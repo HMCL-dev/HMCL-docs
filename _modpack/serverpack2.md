@@ -9,7 +9,7 @@ date: 2021-08-22 23:18:02 +0800
 > 文章原作者：[hy黑影](https://www.mcbbs.net/home.php?mod=space&uid=3051111)\
 > 转载：Zkitfly\
 > 部分内容进行了稍作打磨\
-> 本教程转载至 https://www.mcbbs.net/thread-1103864-1-1.html
+> 本教程转载自 https://www.mcbbs.net/thread-1103864-1-1.html
 
 ## **前言**
 
