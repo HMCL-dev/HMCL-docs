@@ -1,5 +1,6 @@
 ---
 title: 同时安装 Fabric & OptiFine
+excerpt: 本文介绍了如何在 HMCL 中同时安装 OptiFine 和 Fabric
 date: 2023-01-04 11:30:00 +0800
 author: zkitefly
 ---
