@@ -5,7 +5,7 @@ layout: document
 {{ content }}
 
 {% assign channel = page.channel | default: 'stable' %}
-{% assign changelogs = site.changelogs | where: "locale", page.locale | where: "channel", channel | sort: "slug" | reverse %}
+{% assign changelogs = site.changelogs | where: "locale", page.locale | where: "channel", channel | version_sort: "slug" | reverse %}
 {% for item in changelogs %}
   {% assign version = item.default.slug %}
   <h1 id="{% if forloop.index == 1 %}nowchange{% else %}HMCL-{{ version }}{% endif %}" data-version="{{ version }}" lang="en">HMCL {{ version }}</h1>
