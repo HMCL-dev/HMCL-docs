@@ -14,7 +14,7 @@ steps:
   commands:
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
     - bundle install --verbose
-    - bundle exec jekyll build --trace --verbose
+    - bundle exec jekyll build --trace --verbose --config _config.yml,_config.drone.yml
   volumes:
   - name: dist
     path: /drone/src/_site
