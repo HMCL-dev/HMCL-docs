@@ -13,7 +13,7 @@ trigger:
 
 steps:
   - name: deploy
-    image: alpine
+    image: alpine:3.23.2
     volumes:
       - name: site
         path: /site
