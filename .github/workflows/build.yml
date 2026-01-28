@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  JEKYLL_ENV: production
+
 jobs:
   run:
     if: ${{ github.repository_owner == 'HMCL-dev' }}
