@@ -18,8 +18,8 @@ steps:
       - name: site
         path: /site
     commands:
-      - apk add --no-cache rsync
-      - rsync -rtv --delete --exclude .git ./ /site/
+      - rm -rf /site/*
+      - cp -r ./* /site/
 
 volumes:
   - name: site
