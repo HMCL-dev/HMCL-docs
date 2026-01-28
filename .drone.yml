@@ -19,7 +19,7 @@ steps:
         path: /site
     commands:
       - rm -rf /site/*
-      - cp -r ./* /site/
+      - mv ./* /site/
 
 volumes:
   - name: site
