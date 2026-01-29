@@ -1,0 +1,41 @@
+---
+import Qrcode from "@components/Qrcode.astro";
+---
+
+<div>
+  <input type="checkbox" id="agree-crash-support-group-rules" />
+  <label for="agree-crash-support-group-rules">我同意遵守入群须知</label>
+  <div class="crash-support-group-info">
+    <p><a href="https://qm.qq.com/q/nG0Ti1kJri">Minecraft 报错崩溃交流群 (666546887)</a></p>
+    <Qrcode url="https://qm.qq.com/q/nG0Ti1kJri" />
+  </div>
+</div>
+
+<script>
+  const key = "agree-crash-support-group-rules";
+  const agree = document.getElementById(key);
+  if (agree && agree instanceof HTMLInputElement) {
+    const initValue = localStorage.getItem(key);
+    agree.checked = initValue === "true";
+    agree.addEventListener("change", () => {
+      localStorage.setItem(key, String(agree.checked));
+    });
+    window.addEventListener("storage", (event) => {
+      if (event.key === key) agree.checked = event.newValue === "true";
+    });
+  }
+</script>
+
+<style>
+  .crash-support-group-info {
+    display: none;
+  }
+  label,
+  input {
+    cursor: pointer;
+    user-select: none;
+  }
+  #agree-crash-support-group-rules:checked + label + .crash-support-group-info {
+    display: block;
+  }
+</style>

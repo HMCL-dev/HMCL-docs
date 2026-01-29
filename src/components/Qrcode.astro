@@ -1,0 +1,36 @@
+---
+import qrcode from "qrcode";
+
+export interface Props {
+  url: string;
+  size?: number;
+  color?: string;
+  background?: string;
+  margin?: number;
+}
+
+const {
+  url,
+  size = 256,
+  color = "var(--sl-color-text)",
+  background = "#00000000",
+  margin = 0,
+} = Astro.props;
+
+const svg = await qrcode.toString(url, {
+  type: "svg",
+  width: size,
+  margin,
+});
+---
+
+<div class="qrcode" set:html={svg} />
+
+<style define:vars={{ color, background }}>
+  .qrcode :global(svg) :global(path[stroke]) {
+    stroke: var(--color);
+  }
+  .qrcode :global(svg) :global(path[fill]) {
+    fill: var(--background);
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Qrcode from "@components/Qrcode.astro";
+
+const groups = await getCollection("groups");
+let flag = false;
+---
+
+{
+  groups.map(({ data }) => {
+    let open = false;
+    if (!flag && data.status === "") {
+      flag = true;
+      open = true;
+    }
+    return (
+      <details open={open}>
+        <summary>
+          <a href={data.link} title={data.id}>
+            {data.name}
+            {data.status.length > 0 && `(${data.status})`}
+          </a>
+        </summary>
+        <Qrcode url={data.link} />
+      </details>
+    );
+  })
+}
