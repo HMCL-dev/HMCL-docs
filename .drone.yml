@@ -6,32 +6,25 @@ clone:
   depth: 1
 
 steps:
-- name: build
-  image: ruby:3.4
-  environment:
-    JEKYLL_ENV: production
-    BUNDLE_PATH: vendor/bundle
-  commands:
-    - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
-    - bundle install --verbose
-    - bundle exec jekyll build --trace --verbose --config _config.yml,_config.drone.yml
-  volumes:
-  - name: dist
-    path: /drone/src/_site
-  - name: vendor
-    path: /drone/src/vendor
-  - name: jekyll-cache
-    path: /drone/src/.jekyll-cache
-  when:
-    branch: [main]
+  - name: build
+    image: node:24-alpine
+    environment:
+      PUBLIC_SITE_URL: "https://docs.hmcl.net"
+    commands:
+      - npm install
+      - npm run build
+    volumes:
+      - name: dist
+        path: /drone/src/dist
+      - name: node_modules
+        path: /drone/src/node_modules
+    when:
+      branch: [main]
 
 volumes:
-- name: dist
-  host:
-    path: /home/ubuntu/docs.hmcl.net/www
-- name: vendor
-  host:
-    path: /home/ubuntu/docs.hmcl.net/cache/vendor
-- name: jekyll-cache
-  host:
-    path: /home/ubuntu/docs.hmcl.net/cache/jekyll-cache
+  - name: dist
+    host:
+      path: /home/ubuntu/docs.hmcl.net/www
+  - name: node_modules
+    host:
+      path: /home/ubuntu/docs.hmcl.net/cache/node_modules
