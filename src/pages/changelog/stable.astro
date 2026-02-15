@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props {
+  channel: string;
+}
+
+const changelogs = await getCollection("changelogs").then((changelogs) =>
+  changelogs.filter(
+    (changelog) =>
+      changelog.rendered !== undefined &&
+      changelog.filePath !== undefined &&
+      changelog.filePath.includes(`/stable/`)
+  )
+);
+---
+
+{
+  changelogs.map((changelog, index) => {
+    const filename = changelog.filePath!.split("/").pop() as string;
+    const version = filename.slice(0, -3);
+    return (
+      <>
+        <h1
+          id={index === 0 ? "nowchange" : `HMCL-${version}`}
+          data-version={version}
+          set:text={`HMCL ${version}`}
+        />
+        <div set:html={changelog.rendered!.html} />
+      </>
+    );
+  })
+}
+
+<script>
+  location.href = "../changelogs/stable.html";
+</script>

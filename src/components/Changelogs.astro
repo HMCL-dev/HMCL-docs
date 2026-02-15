@@ -1,0 +1,27 @@
+---
+import AnchorHeading from "@astrojs/starlight/components/AnchorHeading.astro";
+let currentRootVersion: string | undefined = undefined;
+const list = Astro.locals.starlightRoute.entry.data.changelogs!;
+---
+
+{
+  list.map(({ rootVersion, version, html }) => {
+    const showRootVersion = currentRootVersion !== rootVersion;
+    if (showRootVersion) {
+      currentRootVersion = rootVersion;
+    }
+    return (
+      <>
+        {showRootVersion && (
+          <AnchorHeading level="1" id={`HMCL-${rootVersion}`}>
+            HMCL {rootVersion}
+          </AnchorHeading>
+        )}
+        <AnchorHeading level="2" id={`HMCL-${version}`}>
+          HMCL {version}
+        </AnchorHeading>
+        <div set:html={html} />
+      </>
+    );
+  })
+}

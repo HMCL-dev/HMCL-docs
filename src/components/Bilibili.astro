@@ -1,0 +1,32 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="responsive-video-container">
+  <iframe
+    src=`https://player.bilibili.com/player.html?bvid=${id}&page=1&as_wide=1&high_quality=1&danmaku=0`
+  ></iframe>
+</div>
+
+<style>
+  .responsive-video-container {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .responsive-video-container iframe {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>

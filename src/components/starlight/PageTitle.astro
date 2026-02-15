@@ -1,0 +1,49 @@
+---
+import HitsInfo from "@components/react/HitsInfo";
+import AutoRedirect from "@components/react/AutoRedirect";
+import DefaultPageTitle from "@astrojs/starlight/components/PageTitle.astro";
+
+let tag = Astro.url.href;
+if (!tag.endsWith("/") && !tag.endsWith(".html")) {
+  tag += ".html";
+}
+
+const { autoRedirect, contributors } = Astro.locals.starlightRoute.entry.data;
+const showContributors = Array.isArray(contributors) && contributors.length > 0;
+---
+
+{
+  autoRedirect && (
+    <AutoRedirect
+      client:only="react"
+      delay={autoRedirect.delay}
+      text={autoRedirect.text}
+      href={autoRedirect.href}
+    />
+  )
+}
+
+<DefaultPageTitle />
+
+<div class="info">
+  <div class="hits" data-pagefind-ignore>
+    <strong>{Astro.locals.t("page.hits.label")}</strong>
+    <HitsInfo
+      tag={tag}
+      today={Astro.locals.t("page.hits.today")}
+      total={Astro.locals.t("page.hits.total")}
+      ok={Astro.locals.t("page.hits.ok")}
+      error={Astro.locals.t("page.hits.error")}
+      loading={Astro.locals.t("page.hits.loading")}
+      client:only="react"
+    />
+  </div>
+  {
+    showContributors && (
+      <div class="contributors">
+        <strong data-pagefind-ignore>{Astro.locals.t("page.contributors")}</strong>{" "}
+        {contributors.join(" ")}
+      </div>
+    )
+  }
+</div>
