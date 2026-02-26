@@ -1,0 +1,47 @@
+---
+const year = new Date().getFullYear();
+
+const showICP = import.meta.env.PUBLIC_SITE_URL === "https://docs.hmcl.net";
+---
+
+<section class="sl-flex" data-pagefind-ignore>
+  {showICP && <a href="https://beian.miit.gov.cn">粤ICP备18071565号</a>}
+  <span
+    >© <span id="current-year">{year}</span>
+    <a href="mailto:hmcl@huangyuhui.net">huanghongxun</a></span
+  >
+</section>
+
+<script is:inline define:vars={{ year }}>
+  const currentYearSpan = document.getElementById("current-year");
+  if (currentYearSpan !== undefined) {
+    const currentYear = new Date().getFullYear();
+    if (currentYear > year) {
+      currentYearSpan.textContent = String(currentYear);
+    }
+  }
+</script>
+
+<style>
+  section {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: var(--sl-text-sm);
+  }
+
+  span {
+    color: var(--sl-color-gray-3);
+  }
+
+  a {
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  a:hover {
+    color: var(--sl-color-white);
+  }
+</style>
