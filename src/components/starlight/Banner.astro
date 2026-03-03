@@ -1,0 +1,10 @@
+---
+import DefaultBanner from "@astrojs/starlight/components/Banner.astro";
+import UnofficialSiteAlert from "@components/UnofficialSiteAlert.astro";
+
+const displayUnofficialSiteAlert = import.meta.env.PUBLIC_SITE_URL !== "https://docs.hmcl.net";
+---
+
+{displayUnofficialSiteAlert && <UnofficialSiteAlert />}
+
+<DefaultBanner />
