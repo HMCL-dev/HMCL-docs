@@ -1,7 +1,6 @@
 ---
-layout: home
-title: HMCL 新手导航
-author: wifi-left
+layout: splash
+title: 新手导航
 ---
 
 <!--{% comment %}-->
@@ -18,3 +17,15 @@ author: wifi-left
 > [!NOTE]
 > 如果您遇到 BUG，请及时在 [HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 发送反馈。\
 > 您也可以在这里提交您的建议。
+
+{% include toc %}
+
+{% for group in site.data.navigation.docs -%}
+## {{ group.title }}
+{% for item in group.children -%}
+1. [{{ item.title }}]({{ item.url | relative_url }})
+{%- if item.description %}\
+   {{ item.description }}
+{%- endif %}
+{% endfor %}
+{% endfor %}
