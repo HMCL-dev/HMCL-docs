@@ -1,101 +1,55 @@
 ---
 layout: null
 ---
-(function (global) {
-  var PREFIX = "HMCL_DOCS_SETTINGS_";
-  var data = {};
-  var events = {};
-  var configs = /*{%comment%}*/{}/*{%endcomment%}*//**{{'/'}}{{ site.data.settings | jsonify }}/**/;
-
-  global.addEventListener("storage", function (event) {
-    if (!event.key) return;
-    if (event.key.indexOf(PREFIX) !== 0) return;
-
-    var handlers = events[event.key];
-    if (!handlers) return;
-
-    var newValue = event.newValue;
-    var oldValue = event.oldValue;
-    if (oldValue === newValue) return;
-
-    data[event.key] = newValue;
-    for (var i = 0; i < handlers.length; i++) {
-      if (typeof handlers[i] === "function") {
-        handlers[i](newValue, oldValue);
-      }
-    }
+(function () {
+  const PREFIX = "HMCL_DOCS_SETTINGS_", data = {}, events = {}, configCache = {}, configs = /*{%comment%}*/ {}; /*{%endcomment%}*/ /**{{'/'}}{{ site.data.settings | jsonify }}/**/
+  window.addEventListener("storage", ({ key, newValue }) => {
+    if (key === null || !key.startsWith(PREFIX) || newValue === data[key]) return;
+    data[key] = newValue;
+    events[key]?.forEach((handler) => handler(newValue));
   });
-
-  var settings = {
-    set: function (name, value) {
-      var keys = name.split(".");
-      if (keys.length === 0) return;
-      var item = configs[keys[0]];
-      if (item === undefined) return;
-      for (var i = 1; i < keys.length; i++) {
-        if (item.children === undefined || item.children[keys[i]] === undefined) return;
-        item = item.children[keys[i]];
-      }
-      var strKey = (PREFIX + name).toUpperCase();
-      var newValue = value + "";
-      data[strKey] = newValue;
-      localStorage.setItem(strKey, newValue);
-      var handlers = events[strKey];
-      if (!handlers) return;
-      for (var i = 0; i < handlers.length; i++) {
-        if (typeof handlers[i] === "function") {
-          handlers[i](newValue);
-        }
-      }
-    },
-
-    get: function (name) {
-      var keys = name.split(".");
-      if (keys.length === 0) return;
-      var item = configs[keys[0]];
-      if (item === undefined) return;
-      for (var i = 1; i < keys.length; i++) {
-        if (item.children === undefined || item.children[keys[i]] === undefined) return;
-        item = item.children[keys[i]];
-      }
-      var strKey = (PREFIX + name).toUpperCase();
-      data.hasOwnProperty(strKey) || (data[strKey] = localStorage.getItem(strKey));
-      if (typeof item.default === "string" && data[strKey] === null) {
-        return item.default;
-      }
-      return data[strKey];
-    },
-
-    refresh: function (name) {
-      var keys = name.split(".");
-      if (keys.length === 0) return;
-      var item = configs[keys[0]];
-      if (item === undefined) return;
-      for (var i = 1; i < keys.length; i++) {
-        if (item.children === undefined || item.children[keys[i]] === undefined) return;
-        item = item.children[keys[i]];
-      }
-      settings.set(name, settings.get(name, item.default));
-    },
-
-    onChange: function (name, handler) {
-      var keys = name.split(".");
-      if (keys.length === 0) return;
-      var item = configs[keys[0]];
-      if (item === undefined) return;
-      for (var i = 1; i < keys.length; i++) {
-        if (item.children === undefined || item.children[keys[i]] === undefined) return;
-        item = item.children[keys[i]];
-      }
-      if (typeof handler !== "function") return;
-      var strKey = (PREFIX + name).toUpperCase();
-      handler(settings.get(name, item.default));
-      if (events[strKey] === undefined) {
-        events[strKey] = [handler];
-      } else {
-        events[strKey].push(handler);
-      }
+  const getConfig = (key) => {
+    if (typeof key !== "string") return undefined;
+    if (configCache[key] !== undefined) return configCache[key];
+    const keys = key.split(".");
+    let item = configs[keys[0]];
+    for (let i = 1; i < keys.length; i++) {
+      if (item.children?.[keys[i]] === undefined) return undefined;
+      item = item.children[keys[i]];
     }
+    return configCache[key] = JSON.parse(JSON.stringify({ ...configs[keys[0]], ...item }));
   };
-  global.settings = settings;
-})(window);
+  window.settings = {
+    set(key, value) {
+      const config = getConfig(key);
+      if (config === undefined) return;
+      const name = PREFIX + key.toUpperCase().replaceAll(".", "_");
+      localStorage.setItem(name, (data[name] = String(value)));
+      events[name]?.forEach(handler => handler(data[name]));
+    },
+    get(key) {
+      const config = getConfig(key);
+      if (config === undefined) return null;
+      const name = PREFIX + key.toUpperCase().replaceAll(".", "_");
+      if (data[name] === undefined) data[name] = localStorage.getItem(name);
+      if (typeof config.default === "string" && data[name] === null) return config.default;
+      return data[name];
+    },
+    refresh(key) {
+      const value = settings.get(key);
+      if (value !== null) settings.set(key, value);
+    },
+    onChange(key, handler) {
+      if (typeof handler !== "function") return;
+      const config = getConfig(key);
+      if (config === undefined) return;
+      const name = PREFIX + key.toUpperCase().replaceAll(".", "_");
+      handler(settings.get(key));
+      if (events[name] === undefined) {
+        events[name] = [handler];
+      } else {
+        events[name].push(handler);
+      }
+    },
+  };
+})();
