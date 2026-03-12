@@ -29,7 +29,7 @@ module Jekyll
       end
 
       def self.hash_file(file, short = true)
-        file_hash = file.is_a?(Jekyll::StaticFile) ? Digest::SHA256.file(file.path).hexdigest : Digest::SHA256.hexdigest(file.output).slice(0, 8)
+        file_hash = file.is_a?(Jekyll::StaticFile) ? Digest::SHA256.file(file.path).hexdigest : Digest::SHA256.hexdigest(file.output)
         short ? file_hash&.slice(0, 8) : file_hash
       end
     end
