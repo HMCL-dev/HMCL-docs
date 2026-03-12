@@ -5,23 +5,13 @@ appearance_color:
     - light
     - dark
     - auto
-appearance_skin_light:
-  type: radio
-  default: default
-  options:
-    - default
-    - air
-    - aqua
-    - contrast
-    - dark
-    - dirt
-    - neon
-    - mint
-    - plum
-    - sunrise
-appearance_skin_dark:
-  type: radio
-  default: dark
+appearance_skin:
+  type: multi-radio
+  children:
+    light:
+      default: default
+    dark:
+      default: dark
   options:
     - default
     - air

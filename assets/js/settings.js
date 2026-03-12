@@ -5,7 +5,7 @@ layout: null
   var PREFIX = "HMCL_DOCS_SETTINGS_";
   var data = {};
   var events = {};
-  var config = /*{%comment%}*/{}/*{%endcomment%}*//**{{'/'}}{{ site.data.settings | jsonify }}/**/;
+  var configs = /*{%comment%}*/{}/*{%endcomment%}*//**{{'/'}}{{ site.data.settings | jsonify }}/**/;
 
   global.addEventListener("storage", function (event) {
     if (!event.key) return;
@@ -27,15 +27,21 @@ layout: null
   });
 
   var settings = {
-    set: function (key, value) {
-      if (config[key] === undefined) return;
-      var strKey = (PREFIX + key).toUpperCase();
+    set: function (name, value) {
+      var keys = name.split(".");
+      if (keys.length === 0) return;
+      var item = configs[keys[0]];
+      if (item === undefined) return;
+      for (var i = 1; i < keys.length; i++) {
+        if (item.children === undefined || item.children[keys[i]] === undefined) return;
+        item = item.children[keys[i]];
+      }
+      var strKey = (PREFIX + name).toUpperCase();
       var newValue = value + "";
       data[strKey] = newValue;
       localStorage.setItem(strKey, newValue);
       var handlers = events[strKey];
       if (!handlers) return;
-
       for (var i = 0; i < handlers.length; i++) {
         if (typeof handlers[i] === "function") {
           handlers[i](newValue);
@@ -43,29 +49,48 @@ layout: null
       }
     },
 
-    get: function (key, defaultValue) {
-      if (config[key] === undefined) return;
-      var strKey = (PREFIX + key).toUpperCase();
+    get: function (name) {
+      var keys = name.split(".");
+      if (keys.length === 0) return;
+      var item = configs[keys[0]];
+      if (item === undefined) return;
+      for (var i = 1; i < keys.length; i++) {
+        if (item.children === undefined || item.children[keys[i]] === undefined) return;
+        item = item.children[keys[i]];
+      }
+      var strKey = (PREFIX + name).toUpperCase();
       data.hasOwnProperty(strKey) || (data[strKey] = localStorage.getItem(strKey));
-      if (typeof defaultValue === "string" && data[strKey] === null) {
-        return defaultValue;
+      if (typeof item.default === "string" && data[strKey] === null) {
+        return item.default;
       }
       return data[strKey];
     },
 
-    refresh: function (key) {
-      if (config[key] === undefined) return;
-      settings.set(key, settings.get(key, config[key].default));
+    refresh: function (name) {
+      var keys = name.split(".");
+      if (keys.length === 0) return;
+      var item = configs[keys[0]];
+      if (item === undefined) return;
+      for (var i = 1; i < keys.length; i++) {
+        if (item.children === undefined || item.children[keys[i]] === undefined) return;
+        item = item.children[keys[i]];
+      }
+      settings.set(name, settings.get(name, item.default));
     },
 
-    onChange: function (key, handler) {
-      if (config[key] === undefined) return;
-      if (typeof handler !== "function") return;
-      var strKey = (PREFIX + key).toUpperCase();
-      if (config[key].type === "radio") {
-        handler(settings.get(key, config[key].default));
+    onChange: function (name, handler) {
+      var keys = name.split(".");
+      if (keys.length === 0) return;
+      var item = configs[keys[0]];
+      if (item === undefined) return;
+      for (var i = 1; i < keys.length; i++) {
+        if (item.children === undefined || item.children[keys[i]] === undefined) return;
+        item = item.children[keys[i]];
       }
-      if (!events[strKey]) {
+      if (typeof handler !== "function") return;
+      var strKey = (PREFIX + name).toUpperCase();
+      handler(settings.get(name, item.default));
+      if (events[strKey] === undefined) {
         events[strKey] = [handler];
       } else {
         events[strKey].push(handler);
