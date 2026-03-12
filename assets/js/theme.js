@@ -70,4 +70,9 @@ window.addEventListener("DOMContentLoaded", function () {
   settings.onChange("appearance_skin.light", function () {
     settings.refresh("appearance_color");
   });
+  settings.onChange("appearance_color_switcher", function (value) {
+    if (modeSwitcher !== null) {
+      modeSwitcher.style.display = value === "enable" ? "" : "none";
+    }
+  });
 });

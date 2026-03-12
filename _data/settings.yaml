@@ -5,6 +5,12 @@ appearance_color:
     - light
     - dark
     - auto
+appearance_color_switcher:
+  type: radio
+  default: enable
+  options:
+    - enable
+    - disable
 appearance_skin:
   type: multi-radio
   children:
