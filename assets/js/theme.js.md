@@ -1,14 +1,31 @@
 ---
-layout: null
+layout: code
+permalink: /assets/js/theme.js
 ---
+
+{% assign skins = site.data.settings.appearance_skin_light.options | concat: site.data.settings.appearance_skin_dark.options | uniq %}
+{% capture hash -%}
+{
+{%- for skin in skins -%}
+"{{ skin }}":"{{ '/assets/css/skins/' | append: skin | append: '.css' | hash_file }}"
+{%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+}
+{%- endcapture %}
+
+```javascript
 window.addEventListener("DOMContentLoaded", function () {
+  var hash = /*{% comment %}*/{}/*{% endcomment %}*{{'/'}}{{ hash }}/**/;
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  function applySkin(skin) {
+    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + skin + ".css?hash=" + hash[skin];
+  }
   function applyDarkSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_dark", "dark") + ".css";
+    applySkin(settings.get("appearance_skin_dark", "dark"));
   }
   function applyLightSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_light", "default") + ".css";
+    applySkin(settings.get("appearance_skin_light", "default"));
   }
   function autoSchemeHandler() {
     if (darkModeQuery.matches) {
@@ -68,3 +85,4 @@ window.addEventListener("DOMContentLoaded", function () {
     settings.refresh("appearance_color");
   });
 });
+```
