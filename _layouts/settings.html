@@ -16,8 +16,7 @@ layout: single
   {% if setting.type == 'radio' %}
   {% for option in setting.options %}
   <label>
-    <input type="radio" {% if setting.default==option %}checked{% endif %} class="setting-item" name="{{ name }}"
-      value="{{ option }}">
+    <input type="radio"{% if setting.default == option %} checked{% endif %} class="setting-item" name="{{ name }}" value="{{ option }}">
     {{ value.options[option] }}
   </label>
   {% endfor %}
@@ -37,8 +36,7 @@ layout: single
       <tr>
         <th>{{ value.options[option] }}</th>
         {% for item in setting.children %}
-        <td><input class="setting-item" {% if item[1].default==option %} checked{% endif %} type="radio"
-            name="{{ name }}.{{ item[0] }}" value="{{ option }}"></td>
+        <td><input class="setting-item"{% if item[1].default == option %} checked{% endif %} type="radio" name="{{ name }}.{{ item[0] }}" value="{{ option }}"></td>
         {% endfor %}
       </tr>
       {% endfor %}
@@ -50,23 +48,10 @@ layout: single
 {% endfor %}
 
 <script>
-  var setting_items = document.getElementsByClassName("setting-item");
-  for (var i = 0; i < setting_items.length; i++) {
-    (function (setting_item) {
-      setting_item.addEventListener("change", function (event) {
-        settings.set(event.target.name, event.target.value);
-      });
-      settings.onChange(setting_item.name, function (newValue, oldValue) {
-        if (setting_item.value === newValue) {
-          setting_item.checked = true;
-        }
-      });
-    })(setting_items[i]);
+  for (const settingItem of document.getElementsByClassName("setting-item")) {
+    settingItem.addEventListener("change", ({ target }) => settings.set(target.name, target.value));
+    settings.onChange(settingItem.name, (value) => settingItem.type === "radio" && (settingItem.checked = settingItem.value === value));
   }
 </script>
 
-<style>
-  .notice label input {
-    display: inline
-  }
-</style>
+<style>.notice label input { display: inline }</style>
