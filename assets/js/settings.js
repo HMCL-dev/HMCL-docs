@@ -6,7 +6,7 @@ layout: null
   window.addEventListener("storage", ({ key, newValue }) => key !== null && key.startsWith(PREFIX) && newValue !== data[key] && bus.dispatchEvent(new CustomEvent(key, { detail: (data[key] = newValue) })));
   for (const [key, config] of Object.entries(configs)) {
     if (config.children === undefined) continue; 
-    for (const [childKey, child] of Object.entries(children)) {
+    for (const [childKey, child] of Object.entries(config.children)) {
       configs[`${key}.${childKey}`] = { ...config, ...child };
     }
   }
