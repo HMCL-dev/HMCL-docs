@@ -27,6 +27,9 @@ layout: null
       return config.default;
     },
     onChange(key, handler) {
+      const value = this.get(key);
+      if (value === null) return;
+      handler(value);
       bus.addEventListener(formatKey(key), (event) => handler(event.detail));
     },
   };

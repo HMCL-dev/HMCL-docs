@@ -64,7 +64,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
   settings.onChange("appearance_color", applyTheme);
-  applyTheme(settings.get("appearance_color"));
   settings.onChange("appearance_skin.dark", function () {
     applyTheme(settings.get("appearance_color"));
   });
