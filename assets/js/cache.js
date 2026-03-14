@@ -1,4 +1,5 @@
 ---
+layout: null
 permalink: /cache.js
 ---
 const CACHE_VERSION = 1;
