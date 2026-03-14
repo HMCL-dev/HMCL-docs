@@ -1,9 +1,6 @@
 ---
-layout: code
 permalink: /cache.js
 ---
-
-```javascript
 const CACHE_VERSION = 1;
 const CACHE_NAME = "assets-cache-" + CACHE_VERSION;
 
@@ -44,4 +41,3 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-```

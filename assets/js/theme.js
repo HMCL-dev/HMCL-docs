@@ -1,10 +1,8 @@
 ---
-layout: code
-permalink: /assets/js/theme.js
+layout: null
 ---
-
-{% assign skins = site.data.settings.appearance_skin_light.options | concat: site.data.settings.appearance_skin_dark.options | uniq %}
-{% capture hash -%}
+{%- assign skins = site.data.settings.appearance_skin_light.options | concat: site.data.settings.appearance_skin_dark.options | uniq -%}
+{%- capture hash -%}
 {
 {%- for skin in skins -%}
 "{{ skin }}":"{{ '/assets/css/skins/' | append: skin | append: '.css' | hash_file }}"
@@ -13,9 +11,8 @@ permalink: /assets/js/theme.js
 }
 {%- endcapture %}
 
-```javascript
 window.addEventListener("DOMContentLoaded", function () {
-  var hash = /*{% comment %}*/{}/*{% endcomment %}*{{'/'}}{{ hash }}/**/;
+  var hash = {{ hash }};
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
   function applySkin(skin) {
@@ -85,4 +82,3 @@ window.addEventListener("DOMContentLoaded", function () {
     settings.refresh("appearance_color");
   });
 });
-```
