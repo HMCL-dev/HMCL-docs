@@ -33,7 +33,7 @@ contributors:
 
 ## LittleSkin
 
-首先您需要一个 LittleSkin 的账号，[注册](https://mcskin.littleservice.cn/auth/register)并[登录](https://mcskin.littleservice.cn/auth/login)。
+首先您需要一个 LittleSkin 的账户，[注册](https://mcskin.littleservice.cn/auth/register)并[登录](https://mcskin.littleservice.cn/auth/login)。
 
 然后前往[角色管理](https://mcskin.littleservice.cn/user/player)，查看您的角色名，如果没有可以点击添加新角色按钮进行添加。
 
@@ -41,17 +41,17 @@ contributors:
 
 ![](/assets/img/docs/offline-skin/img3_1.png)
 
-角色名必须与 HMCL 中离线账号的角色名一致。如不一致，请在 HMCL 中切换至对应的离线账户，或新建与角色名匹配的离线账户。
+角色名必须与 HMCL 中离线模式账户的角色名一致。如不一致，请在 HMCL 中切换至对应的离线模式账户，或新建与角色名匹配的离线模式账户。
 
 ![](/assets/img/docs/offline-skin/img3_2.png)
 
-确认离线账号的角色名一致后，点击 **LittleSkin** 即可同步在 LittleSkin 上的皮肤。
+确认离线模式账户的角色名一致后，点击 **LittleSkin** 即可同步在 LittleSkin 上的皮肤。
 
 ![](/assets/img/docs/offline-skin/img3_3.png)
 
 ## Blessing Skin 服务器
 
-进入角色管理核对角色名与 HMCL 中离线账号的角色名是否一致。如不一致，请在 HMCL 中切换至对应的离线账户，或新建与角色名匹配的离线账户。
+进入角色管理核对角色名与 HMCL 中离线模式账户的角色名是否一致。如不一致，请在 HMCL 中切换至对应的离线模式账户，或新建与角色名匹配的离线模式账户。
 
 你可在我的衣柜修改此账户名的皮肤与披风。
 
