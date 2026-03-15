@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://docs.hmcl.net/feed/docs.xml" rel="self" type="application/atom+xml" /><link href="https://docs.hmcl.net/" rel="alternate" type="text/html" /><updated>2026-03-15T20:43:59+08:00</updated><id>https://docs.hmcl.net/feed/docs.xml</id><title type="html">HMCL 文档 | Docs</title><subtitle>HMCL 启动器 \| 跨平台 \| 整合包管理 \| 自动安装 \| 十二年历史 \| 三亿次使用</subtitle><entry><title type="html">各大问题集合</title><link href="https://docs.hmcl.net/faq.html" rel="alternate" type="text/html" title="各大问题集合" /><published>2025-09-19T13:40:00+08:00</published><updated>2025-09-19T13:40:00+08:00</updated><id>https://docs.hmcl.net/faq</id><content type="html" xml:base="https://docs.hmcl.net/faq.html"><![CDATA[<blockquote>
+  <p>这是一个提供给新手或小白的阅读文档，旨在用最简单的方式帮你快速上手 HMCL 启动器和 Minecraft 游戏。如需深入了解某个主题，可点击文中提供的链接查看详细文档。</p>
+</blockquote>
+
+<h3 id="如何登录账户">如何登录账户</h3>
+
+<p>你需要使用微软账户购买游戏才能游玩 Minecraft，或者使用离线账户/外置账户。</p>
+
+<p>你可以在 <a href="https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc?tabs=%7B%22details%22%3A0%7D">Minecraft 官网</a> 或 <a href="https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj">Xbox 商店</a> 购买游戏。</p>
+
+<p>完成购买后，在 HMCL 主界面左上角，点击「账户」，然后点击左侧的「微软账户」登录你的账户，或者点击「离线登录」创建一个离线账户。</p>
+
+<h3 id="如何下载游戏">如何下载游戏</h3>
+
+<p>使用 HMCL 下载 Minecraft 非常简单，只需几步即可完成。</p>
+
+<p>如果你尚未安装任何实例（即未安装过任何游戏版本），可以直接点击 <strong>「开始游戏」</strong>。HMCL 会自动安装最新正式版 Minecraft 并启动游戏。</p>
+
+<p>若想下载更多实例（首次下载也可以按此方式操作），请按以下步骤进行：</p>
+
+<p>在主界面找到并点击左侧的「下载」按钮。</p>
+
+<p><img src="/assets/img/docs/faq/img1.png" alt=""></p>
+
+<p>在下载页面，点击左侧顶部的「游戏」选项卡。这里会列出所有可用的游戏版本（<strong>版本号从上到下/由新到旧排序</strong>），选择一个你喜欢的版本。我们通常推荐最新的正式版。</p>
+
+<p><img src="/assets/img/docs/faq/img2.png" alt=""></p>
+
+<p>点击右下角的「安装」按钮，HMCL 就会自动为你完成下载和安装。</p>
+
+<p><img src="/assets/img/docs/faq/img3.png" alt=""></p>
+
+<p>现在回到主界面，点击右下角的 <strong>「启动游戏」</strong> 按钮，开始你的创造吧！</p>
+
+<p><img src="/assets/img/docs/faq/img4.png" alt=""></p>
+
+<h3 id="游戏玩法是什么">游戏玩法是什么</h3>
+
+<p>在等待游戏下载时，不妨先了解一下它的核心玩法。</p>
+
+<p>作为一款沙盒游戏，简单的说，核心玩法就是 <strong>「破坏」</strong> 和 <strong>「创造」</strong> 。你可以自由地探索世界、收集资源、建造家园、挑战怪物……</p>
+
+<p>对于新手而言，下面这些官方中文 Wiki 链接是你的最佳起点：</p>
+<ul>
+  <li>
+<strong>新手入门必读</strong>：<a href="https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B/%E6%96%B0%E6%89%8B%E6%89%8B%E5%86%8C">Minecraft Wiki 新手手册</a>
+</li>
+  <li>
+<strong>生存第一天指南</strong>：<a href="https://zh.minecraft.wiki/w/Tutorial:%E7%AC%AC%E4%B8%80%E5%A4%A9">教程：第一天怎么过</a>
+</li>
+</ul>
+
+<h3 id="什么是资源包">什么是资源包</h3>
+
+<p>你可能听到有其他玩家讨论好看的「材质包」。</p>
+
+<p>「材质包」一般是单指修改了游戏纹理的「资源包」，也是 Minecraft 1.5 及之前版本使用的称呼。</p>
+
+<p>「材质」及「材质包」是以前的误译，目前的正式译名为「纹理」和「纹理包」。如果你看到有人讨论材质包，那么一般都是指纹理包。</p>
+
+<p>「资源包」是指可以修改游戏中的多种资源，如<strong>纹理（贴图）、模型、音乐、音效、语言文件</strong>等的文件，能够极大地改变游戏的外观和感觉。而一个好的资源包能极大地提升你的游戏视听体验。</p>
+
+<p><img src="/assets/img/docs/faq/img5.jpg" alt="大致示意图"></p>
+
+<ul>
+  <li>
+<strong>如何使用资源包？</strong> 查看 <a href="https://zh.minecraft.wiki/w/Tutorial:%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90%E5%8C%85">加载资源包教程</a>。</li>
+  <li>
+<strong>想制作自己的资源包？</strong> 深入了解 <a href="https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85">资源包详细资料</a>。</li>
+</ul>
+
+<p>你可以在下列网站获取资源包：</p>
+<ul>
+  <li><a href="https://www.curseforge.com/minecraft/texture-packs">CurseForge</a></li>
+  <li><a href="https://modrinth.com/resourcepacks">Modrinth</a></li>
+</ul>
+
+<h3 id="什么是模组-mod">什么是模组 (Mod)</h3>
+
+<p>你可能听说过我的世界拥有丰富的模组（Mod）资源。模组是一类能改变或增加游戏内容的强大工具，它允许你新增方块、生物、物品与机制等内容。通过安装模组，你可以获得更丰富的内容、更顺手的玩法体验和更出色的视听表现。</p>
+
+<p>你可以在下列网站获取模组信息，并在 HMCL 内下载和安装：</p>
+<ul>
+  <li><a href="https://www.mcmod.cn/">MC 百科</a></li>
+  <li><a href="https://www.curseforge.com/minecraft/search?class=mc-mods">CurseForge</a></li>
+  <li><a href="https://modrinth.com/mods">Modrinth</a></li>
+</ul>
+
+<p>HMCL 自动安装与使用模组教程： <a href="/launcher/auto-installing.html">跳转</a></p>
+
+<h4 id="安装模组后游戏报错怎么办">安装模组后游戏报错怎么办</h4>
+
+<p>安装模组后游戏无法启动或崩溃是常见的情况，通常是模组冲突或缺少前置模组导致的。别担心，大部分问题都能轻松解决。</p>
+
+<p>在 HMCL《自动安装与模组下载简介》的末尾讲到了常用的解决方法： <a href="/launcher/auto-installing.html#%E5%AE%89%E8%A3%85-mod-%E5%90%8E%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8">跳转</a></p>
+
+<p>或者前往模组包报错排查手册中查看： <a href="/modpack/error-handbook.html">跳转</a></p>
+
+<p>如果无法解决错误，尝试 <a href="/help.html">寻求帮助</a></p>
+
+<h3 id="如何选择游戏的-java-版本">如何选择游戏的 Java 版本</h3>
+
+<p>HMCL 会自动管理 Java，并针对不同版本的游戏自动选择合适的 Java 版本。若在启动游戏时未检测到合适的 Java，HMCL 也会提示下载 Java（点击“下载”即可完成安装）。对于新手玩家，使用默认设置即可。</p>
+
+<p>如果你确实需要手动安装并指定 Java 版本：</p>
+
+<p><strong>安装 Java：</strong></p>
+<ol>
+  <li>进入 <strong>设置 -&gt; Java 管理</strong>，此处会展示 HMCL 安装的或系统中已安装的 Java。</li>
+  <li>如果需要下载 Java，点击「下载 Java」，选择所需的版本，然后点击「确定」。</li>
+  <li>如果你安装了 Java 但是没有被 HMCL 识别，选择「添加 Java」，找到你需要的 Java 安装路径下的 <code class="language-plaintext highlighter-rouge">java.exe</code> 文件（仅 Windows）或 <code class="language-plaintext highlighter-rouge">java</code> 文件（仅 Linux/macOS），然后点击确定。</li>
+</ol>
+
+<p><strong>选择 Java：</strong></p>
+<ul>
+  <li>如果希望所有实例都使用同一 Java 版本，进入「设置 -&gt; 全局游戏设置」，选择要使用的 Java。该 Java 将用于所有使用全局游戏设置的实例（一般不推荐）。</li>
+  <li>如果仅需为某个实例指定 Java 版本，进入该实例的「实例管理界面 -&gt; 游戏设置」（勾选“启用实例特定游戏设置”），然后选择要使用的 Java。该 Java 仅用于该实例的启动。</li>
+</ul>
+
+<blockquote>
+  <p><strong>重要提示</strong>：如果你在更换 Java 后遇到任何游戏崩溃或无法启动的问题，<strong>请立即切换回 HMCL 默认的 Java 版本</strong>。</p>
+</blockquote>]]></content><author><name>LIPiston</name></author></entry><entry><title type="html">加入 HMCL 用户群</title><link href="https://docs.hmcl.net/groups.html" rel="alternate" type="text/html" title="加入 HMCL 用户群" /><published>2024-03-05T17:00:00+08:00</published><updated>2024-03-05T17:00:00+08:00</updated><id>https://docs.hmcl.net/groups</id><content type="html" xml:base="https://docs.hmcl.net/groups.html"><![CDATA[<p>欢迎所有 Minecraft 玩家加入 HMCL 用户群，入群请遵守以下群规：</p>
+
+<ol>
+  <li>禁止谈论政治相关、色情、违法犯罪、金钱往来等敏感内容，禁止辱骂、造谣诽谤、恶俗等行为，禁止讨论精神疾病、LGBT 等话题，请尊重每一个人；</li>
+  <li>禁止刷屏、倒垃圾、引战、宣泄个人情绪、刻意误导等破坏讨论环境的行为；</li>
+  <li>禁止上传 EXE 和 APK 文件；</li>
+  <li>禁止使用第三方模块/插件在群聊中发送特殊消息；</li>
+  <li>禁止讨论多人游戏中的作弊工具；</li>
+  <li>禁止发布与 Minecraft 无关的广告，可以适当宣传服务器、整合包等相关内容，同一内容每人每周最多宣传一次；</li>
+  <li>用户群交流主题为 Minecraft，请不要过多讨论其他游戏内容。</li>
+</ol>
+
+<h2 id="用户群">用户群</h2>
+
+<p><img src="/assets/img/docs/groups/group-4.png" alt=""></p>
+
+<p>以下为闲聊群，欢迎所有用户加入（同时加入多个群聊会被踢出）：</p>
+
+<ul>
+  <li>
+<a href="https://qm.qq.com/q/fvJueufsvC">HMCL 用户群 ① (633640264)</a>（已满）</li>
+  <li><a href="https://qm.qq.com/q/N7hgdNYfy">HMCL 用户群 ② (203232161)</a></li>
+  <li>
+<a href="https://qm.qq.com/q/7sbMrFm9CE">HMCL 用户群 ③ (201034984)</a>（已满）</li>
+  <li>
+<a href="https://qm.qq.com/q/ACmZa98tGg">HMCL 用户群 ④ (533529045)</a>（已满）</li>
+  <li><a href="https://qm.qq.com/q/MlVArSCMwM">HMCL 用户群 ⑤ (744304553)</a></li>
+  <li>
+<a href="https://qm.qq.com/q/S782Skmu0U">HMCL 用户群 ⑥ (282845310)</a>（已满）</li>
+  <li><a href="https://qm.qq.com/q/WFsZ65F6MY">HMCL 用户群 ⑦ (482624681)</a></li>
+  <li>
+<a href="https://qm.qq.com/q/ECVKkslPqi">HMCL 用户群 ⑧ (991620626)</a>（已满）</li>
+  <li><a href="https://qm.qq.com/q/DVj9tTrwze">HMCL 用户群 ⑨ (657677715)</a></li>
+  <li>
+<a href="https://qm.qq.com/q/V5F9DswQEu">HMCL 用户群 ⑩ (775084843)</a>（已满）</li>
+</ul>
+
+<p>我们会不定期清理用户群中超过三个月没有发言的非活跃成员，每次清理前我们会提前一周在群内发布公告。</p>
+
+<h2 id="报错崩溃交流群">报错崩溃交流群</h2>
+
+<p>如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：<a href="/crash-support-group.html">Minecraft 报错崩溃交流群</a></p>
+
+<p><strong>本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。</strong></p>
+
+<p>由于加群人数过多，我们会移出问题已解决的用户。如果你在被移出后遇到了新的问题需要求助，你可以再次加群。</p>
+
+<h2 id="灵车交流群">灵车交流群</h2>
+
+<p>我们为 Linux、FreeBSD 等系统以及 ARM（不包括 macOS）、RISC-V、龙芯等设备的用户建立了一个独立的交流群。
+如果你正在使用这些平台，欢迎加入 HMCL 灵车交流群：<a href="https://qm.qq.com/q/C935haj8xW">HMCL 灵车交流群 (737461713)</a>。</p>
+
+<p>本群不适合一般 Windows 和 macOS 用户加入。如果你不关心上面提到的这些平台，请移步<a href="#%E7%94%A8%E6%88%B7%E7%BE%A4">用户群</a>。</p>
+
+<h2 id="公测群">公测群</h2>
+
+<p>如果你关心 HMCL 最新的开发进展，愿意积极测试 HMCL 的新功能并给出反馈，欢迎加入 HMCL 公测群：<a href="https://qm.qq.com/q/EO7Cx87Cz6">HMCL 公测群 (954100320)</a></p>
+
+<p>本群用于讨论 HMCL 的开发和测试，禁止闲聊，并且随时会清理未积极参与反馈的用户。如果你想闲聊，请移步<a href="#%E7%94%A8%E6%88%B7%E7%BE%A4">用户群</a>。</p>]]></content><author><name>Glavo</name></author></entry><entry><title type="html">加入 HMCL 报错崩溃交流群</title><link href="https://docs.hmcl.net/crash-support-group.html" rel="alternate" type="text/html" title="加入 HMCL 报错崩溃交流群" /><published>2024-03-05T17:00:00+08:00</published><updated>2024-03-05T17:00:00+08:00</updated><id>https://docs.hmcl.net/crash-support-group</id><content type="html" xml:base="https://docs.hmcl.net/crash-support-group.html"><![CDATA[<!---->
+<div id="alert-modal">
+<div class="notice">
+
+
+<!---->
+<h1 align="center">加入群聊前请注意</h1>
+
+<ul>
+  <li>游戏非正常退出时，请点击左下角 <img src="/assets/img/docs/groups/button-1.png" alt="" title="导出游戏崩溃日志"> 按钮（不是 <img src="/assets/img/docs/groups/button-2.png" alt="" title="日志"> 按钮），并完整发送生成的报错压缩包</li>
+  <li>遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助</li>
+  <li>使用整合包时，请说明具体的整合包名称与版本</li>
+  <li>请保持耐心，群管理和群友会协助解决问题。严禁辱骂、催促他人</li>
+  <li>禁止讨论政治、色情、违法、金钱交易等敏感内容，禁止人身攻击、造谣诽谤等行为</li>
+  <li>禁止刷屏、灌水、挑起争端、发泄情绪等影响群聊秩序的行为</li>
+  <li>禁止使用第三方插件发送特殊消息；禁止讨论多人游戏作弊工具</li>
+  <li>本群仅支持 HMCL 启动器相关问题。PCL 启动器用户请加入 978054335 群</li>
+  <li>请勿重复发送文件，如需重新获取关注，请引用之前发送的消息</li>
+  <li>因人数限制，已解决问题的用户会被移出群聊。如遇新问题可再次加入</li>
+  <li>本群仅处理游戏崩溃相关问题，其他话题请到其他群讨论</li>
+</ul>
+
+<hr>
+<!---->
+
+<p class="text-center">请等待 <span id="countdown">5</span> 秒，请认真阅读注意事项</p>
+<button id="close-btn" class="btn align-center" disabled>我已了解</button>
+</div>
+</div>
+<!---->
+
+<p>如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：<a href="https://qm.qq.com/q/nG0Ti1kJri">Minecraft 报错崩溃交流群 (666546887)</a></p>
+
+<p><img src="/assets/img/docs/groups/crash.png" alt=""></p>
+
+<p><strong>本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。</strong></p>
+
+<p>由于加群人数过多，我们会移出问题已解决的用户。如果你在被移出后遇到了新的问题需要求助，你可以再次加群。</p>
+
+<!---->
+<style>
+.initial-content {
+  position: relative;
+  z-index: 20;
+}
+
+#alert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  background: #00000090;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+#alert-modal img {
+  display: inline;
+  height: 1.5em;
+  vertical-align: middle;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("alert-modal");
+  var show = localStorage.getItem("crash-support-group.show");
+  if (show === "1") {
+    modal.style.display = "none";
+    return;
+  }
+  var text = document.getElementById("countdown");
+  var btn = document.getElementById("close-btn");
+  var sec = parseInt(text.textContent, 10) || 10;
+  var timer = setInterval(function () {
+    text.textContent = --sec;
+    if (sec <= 0) {
+      clearInterval(timer);
+      text.parentNode.textContent = "请点击下方按钮关闭";
+      btn.disabled = false;
+    }
+  }, 1000);
+  btn.addEventListener("click", function () {
+    localStorage.setItem("crash-support-group.show", "1");
+    modal.style.display = "none";
+  }, false);
+});
+</script>]]></content><author><name>zkitefly</name></author><summary type="html"><![CDATA[HMCL 报错崩溃交流群仅处理游戏报错与崩溃问题]]></summary></entry><entry><title type="html">寻求帮助</title><link href="https://docs.hmcl.net/help.html" rel="alternate" type="text/html" title="寻求帮助" /><published>2023-08-09T11:12:00+08:00</published><updated>2023-08-09T11:12:00+08:00</updated><id>https://docs.hmcl.net/help</id><content type="html" xml:base="https://docs.hmcl.net/help.html"><![CDATA[<h2 id="qq-群聊">QQ 群聊</h2>
+
+<p>Hello Minecraft! Launcher 的官方 QQ 群聊。</p>
+
+<p><a href="/groups.html">点击前往</a></p>
+
+<h2 id="discord-频道">Discord 频道</h2>
+
+<p>Hello Minecraft! Launcher 的官方 Discord 频道。</p>
+
+<p><a href="https://discord.gg/jVvC7HfM6U">点击前往</a></p>]]></content><author><name>zkitefly</name></author></entry><entry><title type="html">贡献指南</title><link href="https://docs.hmcl.net/contribution.html" rel="alternate" type="text/html" title="贡献指南" /><published>2021-10-09T23:18:02+08:00</published><updated>2021-10-09T23:18:02+08:00</updated><id>https://docs.hmcl.net/contribution</id><content type="html" xml:base="https://docs.hmcl.net/contribution.html"><![CDATA[<p>如果你认为你有能力为 HMCL 添加高质量的帮助文档，或希望修改错误，你可以到 <a href="https://github.com/HMCL-dev/HMCL-docs">https://github.com/HMCL-dev/HMCL-docs</a> 仓库中发 Pull Request，或者提 Issue。</p>
+
+<p>或者你可以进入我们的 <a href="https://discord.gg/jVvC7HfM6U">Discord</a> 或 <a href="/groups.html">HMCL 用户群</a> 群以向 HMCL 反馈。</p>]]></content><author><name>huanghongxun</name></author></entry></feed>

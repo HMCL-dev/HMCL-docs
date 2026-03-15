@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://docs.hmcl.net/feed/modpack.xml" rel="self" type="application/atom+xml" /><link href="https://docs.hmcl.net/" rel="alternate" type="text/html" /><updated>2026-03-15T20:43:59+08:00</updated><id>https://docs.hmcl.net/feed/modpack.xml</id><title type="html">HMCL 文档 | Modpack</title><subtitle>HMCL 启动器 \| 跨平台 \| 整合包管理 \| 自动安装 \| 十二年历史 \| 三亿次使用</subtitle><entry><title type="html">模组包报错排查手册</title><link href="https://docs.hmcl.net/modpack/error-handbook.html" rel="alternate" type="text/html" title="模组包报错排查手册" /><published>2025-05-24T13:39:36+08:00</published><updated>2025-05-24T13:39:36+08:00</updated><id>https://docs.hmcl.net/modpack/error-handbook</id><content type="html" xml:base="https://docs.hmcl.net/modpack/error-handbook.html"><![CDATA[<h2 id="文件夹结构">文件夹结构</h2>
+
+<p>首先我们需要先认识Minecraft的文件夹结构<br>
+如果你开启了 <a href="/launcher/isolation.html">版本隔离</a> 那么你的文件夹结构如下</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.minecraft
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
+|*versions       # 版本文件夹，包含所有已安装的Minecraft版本
+    \1.16.5-optifine
+        |1.16.5-optifine.jar   # 该版本的主程序jar文件
+        |*saves               # 存档文件夹，仅该版本可见
+        |*resourcepacks        # 资源包文件夹，仅该版本可见
+        |*logs                # 日志文件夹，仅该版本可见
+        |*mods                # 模组文件夹，仅该版本可见
+        |*config              # 配置文件夹，仅该版本可见
+        |*crash-reports       # 崩溃报告文件夹，仅该版本可见
+        ...
+</code></pre></div></div>
+
+<p>如果你没有开启则是这样</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.minecraft
+|*assets         # 游戏资源文件夹，存放纹理、声音等资源
+|*libraries      # 依赖库文件夹，存放运行游戏所需的各种库
+|*saves          # 存档文件夹，所有版本共用
+|*resourcepacks  # 资源包文件夹，所有版本共用
+|*logs           # 日志文件夹，所有版本共用
+|*mods           # 模组文件夹，所有版本共用
+|*config         # 配置文件夹，所有版本共用
+|*crash-reports  # 崩溃报告文件夹，所有版本共用
+|*versions       # 版本文件夹，包含所有已安装的Minecraft版本
+    \1.16.5-optifine
+        |1.16.5-optifine.jar   # 该版本的主程序jar文件
+        ...
+</code></pre></div></div>
+
+<p>我们极力推荐您打开版本隔离，因为这样能避免模组之间的一部分冲突 <a href="/launcher/isolation.html">跳转</a></p>
+
+<h2 id="简单排查">简单排查</h2>
+
+<p>在遇到报错时，您可以通过以下两种方式进行初步分析：</p>
+
+<ol>
+  <li>
+    <p><strong>使用社区分析工具</strong><br>
+ 访问 <a href="https://www.crashmc.com/analyzer">CrashMC 报错分析器</a>，将崩溃报告内容粘贴进去，工具会自动分析常见问题并给出建议。</p>
+  </li>
+  <li>
+    <p><strong>借助 AI 辅助分析</strong><br>
+ 可以将崩溃日志粘贴到 <a href="https://chat.deepseek.com/">DeepSeek Chat</a>，让 AI 帮助你解读报错内容和可能的解决方法。</p>
+  </li>
+  <li>
+    <p><strong>进入 HMCL 汉医堂</strong>
+ 可以在 HMCL 急诊群中向群友们寻求帮助，他们通常有丰富的经验，能够协助你分析报错并提供解决方案。</p>
+
+    <blockquote>
+      <p>qq : 666546887</p>
+    </blockquote>
+  </li>
+</ol>
+
+<p>这三种方式都能帮助您快速定位问题，提高排查效率。</p>
+
+<h2 id="求助他人">求助他人</h2>
+
+<p><em>游戏崩的时候会有个窗口，里面可以导出一个压缩包，可以发给别人让别人帮你看，你千万别截图那个窗口 *磕头</em></p>
+
+<p><img src="/assets/img/docs/error-handbook/image.png" alt="报错示例截图">
+在向他人求助时，建议将 <code class="language-plaintext highlighter-rouge">.minecraft</code> 文件夹下的 <code class="language-plaintext highlighter-rouge">crash-reports</code> 文件夹和 <code class="language-plaintext highlighter-rouge">logs</code> 文件夹中的相关文件（如最新的崩溃报告和日志文件）一并打包发送。<br>
+这样可以让对方更全面地了解你的运行环境和报错详情，从而更高效地帮助你分析和解决问题。请注意，发送前可先检查日志内容，避免泄露个人隐私信息。</p>]]></content><author><name>LIPiston</name></author><summary type="html"><![CDATA[排查和解决整合包相关问题]]></summary></entry><entry><title type="html">配置客户端自动更新 (Nginx)</title><link href="https://docs.hmcl.net/modpack/serverpack3.html" rel="alternate" type="text/html" title="配置客户端自动更新 (Nginx)" /><published>2023-01-11T14:13:45+08:00</published><updated>2023-01-11T14:13:45+08:00</updated><id>https://docs.hmcl.net/modpack/serverpack3</id><content type="html" xml:base="https://docs.hmcl.net/modpack/serverpack3.html"><![CDATA[<blockquote>
+  <p>阅读本文前，请先阅读<a href="/modpack/serverpack.html">此文章</a></p>
+</blockquote>
+
+<h1 id="前置知识">前置知识</h1>
+
+<p>阅读本文你需要具有以下知识储备：</p>
+
+<ol>
+  <li>掌握基础本的 <code class="language-plaintext highlighter-rouge">linux</code> 命令操作，比如 <code class="language-plaintext highlighter-rouge">cd</code> <code class="language-plaintext highlighter-rouge">ls</code> 等</li>
+  <li>拥有一个 <code class="language-plaintext highlighter-rouge">linux</code> 服务器（好像不算知识）</li>
+</ol>
+
+<h1 id="nginx-安装">Nginx 安装</h1>
+
+<p>这里很基础（但是坑比较多）略过，可以看以下参考文档。</p>
+
+<blockquote>
+  <p>https://zhuanlan.zhihu.com/p/515069497</p>
+</blockquote>
+
+<h1 id="新建静态资源文件夹">新建静态资源文件夹</h1>
+
+<p>我为了省事直接在/根目录下新建了一个 <code class="language-plaintext highlighter-rouge">MinecraftClientStatic</code> 文件夹，以后需要作为静态资源的文件都丢这里面。</p>
+
+<p>命令：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 到更目录</span>
+<span class="nb">cd</span> /
+<span class="c"># 新建文件夹</span>
+<span class="nb">mkdir </span>MinecraftClientStatic
+<span class="c"># 防止nginx无法访问，配置文件夹访问权限</span>
+<span class="nb">chmod </span>777 MinecraftClientStatic
+<span class="c"># 进入文件夹</span>
+<span class="nb">cd </span>MinecraftClientStatic
+<span class="c"># 新建一个测试用的文件</span>
+<span class="nb">touch </span>helloMC.html
+<span class="c"># 给文件权限</span>
+<span class="nb">chmod </span>777 helloMC.html
+<span class="c"># 编辑html内容</span>
+vim helloMC.html
+</code></pre></div></div>
+
+<p>这里为了测试静态资源是否配置成功，需要新建一个 <code class="language-plaintext highlighter-rouge">helloMC.html</code> 的静态测试文件，可以在这个文件内随意写两行字。</p>
+
+<p>例如：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- helloMC.html --&gt;</span>
+<span class="nt">&lt;h1&gt;</span>hello static!<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+
+<p>也可以整点炫的(可选)：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- helloMC.html --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>MC客户端静态资源<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;style&gt;</span>
+            <span class="k">@font-face</span><span class="p">{</span>
+                <span class="nl">font-family</span><span class="p">:</span><span class="s2">'calligraffittiregular'</span><span class="p">;</span>
+                <span class="nl">src</span><span class="p">:</span><span class="nf">url</span><span class="p">(</span><span class="s1">"fonts/calligraffitti-regular-webfont.ttf"</span><span class="p">)</span>
+            <span class="p">}</span>
+            
+            <span class="o">*</span> <span class="p">{</span>
+                <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+                <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+            <span class="nt">body</span> <span class="p">{</span>
+                <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+            <span class="nf">#content</span><span class="p">{</span>
+                <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+                <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+                <span class="nl">top</span><span class="p">:</span> <span class="m">30%</span><span class="p">;</span>
+                <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+                <span class="nl">margin-left</span><span class="p">:</span> <span class="m">-121px</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+            <span class="nt">p</span><span class="p">{</span>
+                <span class="nl">font-family</span><span class="p">:</span> <span class="n">calligraffittiregular</span>
+            <span class="p">}</span>
+            
+        <span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"font-size:  40px;font-weight: 1000;"</span><span class="nt">&gt;</span>MinecraftClientStatic<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"hacker"</span> <span class="na">style=</span><span class="s">"width:100%;height:100%;"</span><span class="nt">&gt;</span>请使用最新的浏览器<span class="nt">&lt;/canvas&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">color_array</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">#00FF00</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#00FF99</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#00FFCC</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#00FFFF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#00BBFF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#0066FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#0000FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#5500FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#7700FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#9900FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#CC00FF</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">#FF00FF</span><span class="dl">'</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="kd">function</span> <span class="nf">changColor</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">color</span> <span class="o">=</span> <span class="nx">color_array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">color_array</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nf">setTimeout</span><span class="p">(</span><span class="nx">changColor</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+        <span class="p">}</span>
+    
+        <span class="kd">var</span> <span class="nx">hacker</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">hacker</span><span class="dl">"</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">hacker</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">hacker</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">hacker</span><span class="p">.</span><span class="nf">getContext</span><span class="p">(</span><span class="dl">'</span><span class="s1">2d</span><span class="dl">'</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">ceil</span><span class="p">(</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">12</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">num</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nf">split</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">draw</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">rgba(0,0,0,.05)</span><span class="dl">'</span><span class="p">;</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nf">fillRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">font</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">12px Microsoft YaHei</span><span class="dl">'</span><span class="p">;</span>
+            <span class="nx">y</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">y1</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span>
+                <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nf">fromCharCode</span><span class="p">(</span><span class="mi">65</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">62</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">*</span> <span class="mi">12</span><span class="p">;</span>  
+                <span class="kd">var</span> <span class="nx">y1</span> <span class="o">=</span> <span class="nx">y</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+                <span class="nx">ctx</span><span class="p">.</span><span class="nf">fillText</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y1</span><span class="p">);</span>
+                <span class="nx">y</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">y1</span> <span class="o">&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">*</span> <span class="nx">height</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nx">y</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="mi">12</span> <span class="p">);</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+
+        <span class="nc">Run</span><span class="p">();</span>
+
+        <span class="kd">function</span> <span class="nf">Run</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nf">changColor</span><span class="p">();</span>
+            <span class="nx">Game_Interval</span> <span class="o">=</span> <span class="nf">setInterval</span><span class="p">(</span><span class="nx">draw</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h1 id="分配次级域名可选">分配次级域名(可选)</h1>
+
+<blockquote>
+  <p>如果你没有域名，那么这里可以跳过，后面需要域名的地方直接使用服务器ip地址</p>
+</blockquote>
+
+<p><strong>假设我们的域名是</strong> <code class="language-plaintext highlighter-rouge">buggzd.com</code></p>
+
+<p>在域名解析新建一个 <code class="language-plaintext highlighter-rouge">A</code> 记录（地址为 <code class="language-plaintext highlighter-rouge">ipv6</code> 时应使用 <code class="language-plaintext highlighter-rouge">AAAA</code> 记录），此处以 <code class="language-plaintext highlighter-rouge">minecraft.buggzd.com</code> 为例，配置记录名称为 <code class="language-plaintext highlighter-rouge">minecraft</code> 配置记录地址为服务器地址，如下图所示。</p>
+
+<p><img src="https://s2.loli.net/2023/01/11/8V1thbsZWgd6qxp.png" alt="image.png"></p>
+
+<p>这是我们就有了一个子域名 <code class="language-plaintext highlighter-rouge">minecraft.buggzd.com</code> 添加完成后可以使用 <code class="language-plaintext highlighter-rouge">cmd</code> 去 <code class="language-plaintext highlighter-rouge">ping</code> 一下这个域名<code class="language-plaintext highlighter-rouge">minecraft.buggzd.com</code> 如果返回了正确的ip地址就是已经分配成功了。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping minecraft.buggzd.com
+</code></pre></div></div>
+
+<h1 id="配置-nginxconf">配置 nginx.conf</h1>
+
+<p>查找 <code class="language-plaintext highlighter-rouge">nginx</code> 配置文件目录：（如果这里没有 <code class="language-plaintext highlighter-rouge">nginx</code> 指令，那么说明你 <code class="language-plaintext highlighter-rouge">nginx</code> 安装没有成功）</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx <span class="nt">-t</span>
+</code></pre></div></div>
+
+<p>输出</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+</code></pre></div></div>
+
+<p>这里 <code class="language-plaintext highlighter-rouge">/etc/nginx/nginx.conf</code> 就是 <code class="language-plaintext highlighter-rouge">Nginx</code> 配置文件的路径，然后 <code class="language-plaintext highlighter-rouge">cd</code> 到 <code class="language-plaintext highlighter-rouge">nginx</code> 配置目录。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /etc/nginx
+<span class="c"># 编写配置文件</span>
+vim nginx.conf
+</code></pre></div></div>
+
+<p>因为之前配置过博客反向代理 <code class="language-plaintext highlighter-rouge">nginx.conf</code> 会带有之前的配置记录不要把他们搞乱，<strong>理清层级关系很重要</strong>！</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 这是 nginx.conf 的层级目录
+# 每个 nginx.conf 配置文件都只有一个 http 块，所以如果之前配置过 nginx
+# 就只需要粘贴 server 块里的内容，把 server 块放到 http 块内部。
+</span><span class="n">http</span> {
+    <span class="n">server</span> { ... }
+    <span class="n">server</span> { ... }
+    <span class="n">server</span> { ... }
+}
+</code></pre></div></div>
+
+<p>需要填写的配置：</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">http</span> {
+    <span class="n">server</span> {
+        <span class="c"># 需要监听的端口号，可以不动
+</span>        <span class="n">listen</span> <span class="m">80</span>;       
+        <span class="c"># 这里需要把localhost改为上面分配好的域名
+</span>        <span class="n">server_name</span>  <span class="n">minecraft</span>.<span class="n">buggzd</span>.<span class="n">com</span>;
+        <span class="n">location</span> / {
+            <span class="c"># root后面是对应的静态资源文件夹的位置
+</span>            <span class="n">root</span> /<span class="n">MinecraftClientStatic</span>;
+            <span class="c"># 这里是默认加载的首页 html ，这里放的是刚刚新建的测试文件
+</span>            <span class="c"># 它是从 root 目录文件夹内开始查找的，所以不要写 /MinecraftClientStatic/helloMC.html
+</span>            <span class="n">index</span> <span class="n">helloMC</span>.<span class="n">html</span>;
+        }
+    }
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>Q:上面的配置干了什么事？<br>
+A:比如你访问 <code class="language-plaintext highlighter-rouge">http://minecraft.buggzd.com/test.png</code> 时，<code class="language-plaintext highlighter-rouge">nginx</code> 会访问本地的 <code class="language-plaintext highlighter-rouge">/MinecraftClientStatic/test.png</code> 然后返回。</p>
+</blockquote>
+
+<p>当正确编写完 <code class="language-plaintext highlighter-rouge">nginx.conf</code> 需要让 <code class="language-plaintext highlighter-rouge">nginx</code> 重新加载一下配置文件。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx <span class="nt">-s</span> reload
+</code></pre></div></div>
+
+<p>然后直接访问刚刚配置的域名 <code class="language-plaintext highlighter-rouge">minecraft.buggzd.com</code> 默认会跳转到编写好的 <code class="language-plaintext highlighter-rouge">helloMC.html</code> 页面，你也可以访问 <code class="language-plaintext highlighter-rouge">http://minecraft.buggzd.com/helloMC.html</code></p>
+
+<p><img src="https://s2.loli.net/2023/01/11/oAx4X1aDE3J6sup.png" alt="image.png"></p>
+
+<p>当页面出现 <code class="language-plaintext highlighter-rouge">helloMC.html</code> 的内容时，说明已经配置成功了！
+放张图片到静态资源文件夹试试。</p>
+
+<p><img src="https://s2.loli.net/2023/01/11/UCdr8tgq2EVDnP7.png" alt="image.png"></p>
+
+<p>访问成功，没问题！</p>
+
+<h1 id="导出整合包">导出整合包</h1>
+
+<p><img src="https://s2.loli.net/2023/01/11/JwLryPXjdU8HEKo.png" alt="image.png"></p>
+
+<p>选择服务器自动更新整合包</p>
+
+<p><img src="https://s2.loli.net/2023/01/11/Yr2e5N1qXAuMiIx.png" alt="image.png"></p>
+
+<p><strong>整合包下载链接前缀</strong>：填静态资源服务器的地址。
+我们需要先去静态资源文件夹下新建一个 <code class="language-plaintext highlighter-rouge">modepack</code> 文件夹（也就是 <code class="language-plaintext highlighter-rouge">/MinecraftClientStatic/modepack</code>）</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /MinecraftClientStatic
+<span class="nb">mkdir </span>modepack
+</code></pre></div></div>
+
+<p>然后整合包下载链接前缀这里填写 <code class="language-plaintext highlighter-rouge">http://minecraft.buggzd.com/modepack</code></p>
+
+<p><img src="https://s2.loli.net/2023/01/11/PQfCEkdVAoqm1Ru.png" alt="image.png"></p>
+
+<h1 id="上传整合包到静态资源服务器">上传整合包到静态资源服务器</h1>
+
+<p>假设我们刚刚打包的整合包名称为 <code class="language-plaintext highlighter-rouge">client1.0.zip</code>
+我们把 <code class="language-plaintext highlighter-rouge">client1.0.zip</code> 通过 <code class="language-plaintext highlighter-rouge">ftp</code> 上传到服务器中，然后使用解压命令将这个整合包解压到 <code class="language-plaintext highlighter-rouge">/MinecraftClientStatic/modepack</code> 文件夹中。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 假设我们把client1.0.zip上传到了/home/ftp文件夹中</span>
+<span class="c"># 把 /home/ftp/client1.0.zip 解压到 /minecraftClientStatic/modepack</span>
+unzip /home/ftp/client1.0.zip <span class="nt">-d</span> /minecraftClientStatic/modepack
+</code></pre></div></div>
+
+<p>解压完以后我们查看一下</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> /minecraftClientStatic/modepack
+</code></pre></div></div>
+
+<p>服务器返回：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>overrides server-manifest.json
+</code></pre></div></div>
+
+<p>其中 <code class="language-plaintext highlighter-rouge">overrides</code> 是一个文件夹 <code class="language-plaintext highlighter-rouge">server-manifest.json</code> 是整合包配置文件。</p>
+
+<h1 id="客户端初始化">客户端初始化</h1>
+
+<p>第一次使用客户端需要在一个空文件夹以 <code class="language-plaintext highlighter-rouge">newClientPackage</code> 为例，在文件夹中放一个 <code class="language-plaintext highlighter-rouge">hmcl</code> 启动器，打开 <code class="language-plaintext highlighter-rouge">hmcl</code> 导入刚刚做好的 <code class="language-plaintext highlighter-rouge">client1.0.zip</code> 整合包。
+然后就可以把这个文件夹 <code class="language-plaintext highlighter-rouge">newClientPackage</code> 打包成一个 <code class="language-plaintext highlighter-rouge">zip</code> 发给玩家了，以后玩家每次打开 <code class="language-plaintext highlighter-rouge">hmcl</code> 登录时，启动器就会自动向静态资源服务器中查询整合包配置信息，当发现更新时会自动下载。
+当缺少 <code class="language-plaintext highlighter-rouge">mod</code> 时会自动下载静态资源服务器上的 <code class="language-plaintext highlighter-rouge">mod</code></p>
+
+<p><img src="https://s2.loli.net/2023/01/11/WpD4Xm7i561YbIj.png" alt="image.png"></p>
+
+<h1 id="更新客户端">更新客户端</h1>
+
+<p>目前HMCL版本更新的步骤是这样的：</p>
+
+<ol>
+  <li>启动器对比本地的 <code class="language-plaintext highlighter-rouge">mod</code> 和服务器的 <code class="language-plaintext highlighter-rouge">mod</code> 名称，如发现本地不存在的 <code class="language-plaintext highlighter-rouge">mod</code> 则会从服务器上下载。</li>
+  <li>当 <code class="language-plaintext highlighter-rouge">mod</code> 的名称相同时，启动器会继续对比文件 <code class="language-plaintext highlighter-rouge">MD5</code> 哈希值，如果不匹配则重新下载。</li>
+  <li>在获得更新的时启动器会对比一次本地的文件，如果旧版本的模组在新版本中消失了，启动器会自动将本地的这个模组删除。</li>
+  <li>非远端服务器更新资源不会被更新删除，换句话说就是如果是玩家自己魔改整合包，往里面放的 <code class="language-plaintext highlighter-rouge">mod</code> 是不会被删除的。</li>
+</ol>
+
+<p>当想要添加新的 <code class="language-plaintext highlighter-rouge">mod</code> 时需要在添加之后重新导出整合包如 <code class="language-plaintext highlighter-rouge">client2.0.zip</code> 导出的整合包版本号增加，然后重新上传整合包到静态资源服务器。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /minecraftClientStatic
+<span class="c"># 建议直接删除该目录然后重新新建</span>
+<span class="nb">rm </span>modepack <span class="nt">-R</span>
+<span class="c"># 重新新建modepack文件夹</span>
+<span class="nb">mkdir </span>modepack
+<span class="c"># 解压新的客户端整合包</span>
+unzip /home/ftp/client2.0.zip <span class="nt">-d</span> /minecraftClientStatic/modepack
+</code></pre></div></div>
+
+<p>玩家启动 <code class="language-plaintext highlighter-rouge">hmcl</code> 后，启动器会检测到版本更新并自动更新模组。</p>
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+  <li><a href="https://blog.csdn.net/pibuliao8626/article/details/110449349">nginx配置文件结构</a></li>
+  <li><a href="https://www.muzhuangnet.com/show/86630.html">使用nginx如何部署静态资源</a></li>
+  <li><a href="https://zhuanlan.zhihu.com/p/514547633">Nginx 作为静态资源服务器</a></li>
+  <li><a href="https://cloud.tencent.com/developer/article/2028983">nginx配置静态静态资源服务器</a></li>
+  <li><a href="https://hmcl.huangyuhui.net/help/launcher/serverpack.html">HMCL官方文章</a></li>
+  <li><a href="https://www.kdocs.cn/l/ck0hwms5llq8">使用Gitee作为静态资源服务器</a></li>
+  <li><a href="https://buggzd.github.io/2023/01/11/Nginx%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">Nginx配置静态资源服务器</a></li>
+</ul>]]></content><author><name>buggzd</name></author><summary type="html"><![CDATA[本文介绍了如何使用 Nginx 服务器配置客户端自动更新]]></summary></entry><entry><title type="html">整合包自带 Java 教程</title><link href="https://docs.hmcl.net/modpack/bundled-java.html" rel="alternate" type="text/html" title="整合包自带 Java 教程" /><published>2021-10-09T23:18:02+08:00</published><updated>2021-10-09T23:18:02+08:00</updated><id>https://docs.hmcl.net/modpack/bundled-java</id><content type="html" xml:base="https://docs.hmcl.net/modpack/bundled-java.html"><![CDATA[<h2 id="背景">背景</h2>
+
+<p>想必有些服务器主为此头疼了许久。由于玩家的电脑环境多变，甚至可能仍然有安装着 Java 7 的电脑而无法启动 1.12.2 以上的游戏或者含有 Mod 的客户端。因此服务器主希望能在整合包中自带一个 Java 运行时（或者叫 JRE），从而取代电脑自带的 JVM。接下来本文将介绍两种方法。</p>
+
+<h2 id="名词解释">名词解释</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">JRE</code> <strong>Java Runtime Environment</strong>的缩写。通常可以认为是玩家所使用的 <code class="language-plaintext highlighter-rouge">Java</code>
+下文所指代的 Java 和 JRE 均可以认为是此版本。</li>
+</ul>
+
+<h1 id="方法一使用最新版本推荐">方法一：使用最新版本（推荐）</h1>
+
+<h2 id="exe-版本">EXE 版本</h2>
+
+<p>EXE 版本在 Windows 系统下打开会首先检查<strong>同级文件夹</strong>下的 <code class="language-plaintext highlighter-rouge">jre-arm64</code>、<code class="language-plaintext highlighter-rouge">jre-x64</code> 和 <code class="language-plaintext highlighter-rouge">jre-x86</code> 文件夹。</p>
+
+<p>检查顺序从上到下依次是：</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-arm64</code> （ARM 64 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-x64</code> （x86 64 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-x86</code> （x86 32 位）</li>
+</ul>
+
+<p>启动优先级如下：</p>
+<ul>
+  <li>如果玩家电脑的操作系统是<strong>x86 32位</strong>的，HMCL 将会优先使用 <code class="language-plaintext highlighter-rouge">jre-x86</code> 启动 HMCL。</li>
+  <li>如果玩家电脑的操作系统是<strong>x86 64位</strong>的，HMCL 将会优先使用 <code class="language-plaintext highlighter-rouge">jre-x64</code> 启动 HMCL。</li>
+  <li>如果玩家电脑的操作系统是<strong>ARM 64位</strong>的，HMCL 将会优先使用 <code class="language-plaintext highlighter-rouge">jre-arm64</code> 启动 HMCL。</li>
+</ul>
+
+<p>如果你不打算兼容<strong>ARM 64位</strong>和<strong>x86 32位</strong>操作系统的玩家（让 HMCL 使用系统 JRE 环境），那么你的整合包内只需要携带 <code class="language-plaintext highlighter-rouge">jre-x64</code> 即可。</p>
+
+<p>如果你想在任何情况下使用同一个 Java 启动 HMCL，只需要携带 <code class="language-plaintext highlighter-rouge">jre-x86</code> 即可，此时无论玩家电脑的操作系统是什么架构都会尝试使用该 Java。</p>
+
+<p>如果没有对应的版本，将会尝试使用系统自带的版本启动。</p>
+
+<p><strong>注意</strong>：</p>
+
+<p>使用 x86 32位的 Java 很可能会导致游戏出错、内存不够等问题。我们推荐您配备 <strong>x86 64位</strong>的 Java 而不是 <strong>x86 32位</strong>。</p>
+
+<h2 id="shell-sh版本">Shell （.sh）版本</h2>
+
+<p>SH 版本在支持 Bash 的系统下打开会首先检查<strong>同级文件夹</strong>下的 <code class="language-plaintext highlighter-rouge">jre-loongarch64</code>、<code class="language-plaintext highlighter-rouge">jre-arm32</code>、<code class="language-plaintext highlighter-rouge">jre-arm64</code>、<code class="language-plaintext highlighter-rouge">jre-x64</code> 和 <code class="language-plaintext highlighter-rouge">jre-x86</code> 文件夹。</p>
+
+<p>检查顺序从上到下依次是：</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-x64</code> （x86 64 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-x86</code> （x86 32 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-arm64</code> （ARM 64 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-arm32</code> （ARM 32 位）</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">jre-loongarch64</code> （Loongarch 64 位）</li>
+</ul>
+
+<p>会根据玩家电脑的操作系统架构选择对应文件夹内的 Java 运行时启动 HMCL。</p>
+
+<p>如果你想在<strong>x86 32位</strong>和<strong>x86 64位</strong>下使用同一个 Java 启动 HMCL，只需要携带 <code class="language-plaintext highlighter-rouge">jre-x86</code> 即可，此时如果玩家电脑的操作系统是<strong>x86 32位</strong>和<strong>x86 64位</strong>则会尝试使用该 Java 启动 HMCL。</p>
+
+<p>如果没有对应的版本，将会尝试使用系统自带的版本启动。</p>
+
+<p><strong>注意</strong>：</p>
+
+<p>在启动器内更新升级本体时，只会更新本体部分，并不会将 EXE外壳 或 SH 外壳（即 HMCLauncher）更新，因此建议在制作整合包时重新下载 EXE 或 SH 版本以确保能正常使用该功能。</p>
+
+<h2 id="方法二创建快捷方式">方法二：创建快捷方式</h2>
+
+<p>对于在 Windows 下使用 JAR 版本启动 HMCL 的可以采用方法二。</p>
+
+<h3 id="目录结构">目录结构</h3>
+
+<p>首先我们假设整合包根文件夹是 <code class="language-plaintext highlighter-rouge">tutorial</code>（这个文件夹名字可以取别的），该文件夹内应该包含如下的文件：</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-1.png" alt=""></p>
+
+<p>其中，<code class="language-plaintext highlighter-rouge">.minecraft</code> 是 Minecraft 文件夹，<code class="language-plaintext highlighter-rouge">jre-x64</code> 是你的 Java 运行时，我们分别来看看这两个文件夹的内容：</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-2.png" alt=""></p>
+
+<p>上图是 <code class="language-plaintext highlighter-rouge">.minecraft</code> 文件夹的内容，里面包含着 <code class="language-plaintext highlighter-rouge">assets</code>、<code class="language-plaintext highlighter-rouge">libraries</code>、<code class="language-plaintext highlighter-rouge">versions</code> 等传统的文件夹。以及 <code class="language-plaintext highlighter-rouge">HMCL.jar</code>，这个文件是 HMCL 启动器的 <code class="language-plaintext highlighter-rouge">jar</code> 文件，可以在 https://hmcl.huangyuhui.net/download 里面下载 macOS 或者 Linux 版本（这两个版本的文件后缀名都是 <code class="language-plaintext highlighter-rouge">jar</code>，实际上是完全一样的东西，<strong>也可以在 Windows 系统上双击运行</strong>，没有平台限制）。</p>
+
+<p>这个启动器文件我们接下来会使用到，借助整合包自带的 Java 运行时启动 HMCL。</p>
+
+<p><strong>注意：HMCL 本体文件 HMCL.jar 请务必保持该文件名，HMCL-3.2.117.jar 等带有版本号的文件名是不可以的</strong></p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-3.png" alt=""></p>
+
+<p>上图是 <code class="language-plaintext highlighter-rouge">jre-x64</code> 文件夹的内容，一看就是一个 JRE 的文件夹。</p>
+
+<h3 id="创建快捷方式">创建快捷方式</h3>
+
+<p>接下来我们创建一个快捷方式来使得 HMCL 通过 <code class="language-plaintext highlighter-rouge">jre-x64</code> 文件夹里的 Java 运行时启动，并使得 Minecraft 也通过该 Java 运行时启动。</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-4.png" alt=""></p>
+
+<p>在 <code class="language-plaintext highlighter-rouge">tutorial</code> 文件夹内右击空白区域打开快捷菜单，创建快捷方式。</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-5.png" alt=""></p>
+
+<p>在弹出的窗口中（如上图所示），在输入框内输入：<code class="language-plaintext highlighter-rouge">cmd /c start .\jre-x64\bin\javaw.exe -jar .\.minecraft\HMCL.jar</code>，其中 <code class="language-plaintext highlighter-rouge">jre-x64</code> 和 <code class="language-plaintext highlighter-rouge">.minecraft\HMCL.jar</code> 根据实际情况修改，<code class="language-plaintext highlighter-rouge">jre-x64</code> 是你的 Java 运行时的路径，<code class="language-plaintext highlighter-rouge">.minecraft\HMCL.jar</code> 是 HMCL 本体文件。</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-6.png" alt=""></p>
+
+<p>接着给快捷方式取个名字就好了（如上图所示，<code class="language-plaintext highlighter-rouge">开始游戏</code> 是我取的名字）。</p>
+
+<p>生成好快捷方式后我们还要编辑一下属性，右键 <code class="language-plaintext highlighter-rouge">开始游戏</code> 这个新创建的快捷方式（如果你取了别的名字请选中那个文件编辑其属性），在弹出的快捷菜单中选择属性，会打开快捷方式的属性窗口如下图所示：</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-7.png" alt=""></p>
+
+<p>将起始位置内的文字删除干净，留空即可。保存退出该窗口。</p>
+
+<h3 id="完成">完成</h3>
+
+<p>现在这个开始游戏的快捷方式就可以直接使用的，你可以双击该快捷方式打开 HMCL，HMCL 在启动游戏的时候也会直接使用你指定的 Java 运行时。</p>
+
+<h2 id="一些疑问">一些疑问</h2>
+
+<p><strong>1Q</strong>：这些 Java 文件夹中具体该放些什么，直接复制就行了吗？</p>
+
+<p><strong>1A</strong>：是的，复制 jre 内的所有东西就行，可以根据下图参考：</p>
+
+<p><img src="/assets/img/docs/modpack-in-java/2-3.png" alt=""></p>
+
+<p>——————————————————————————————————————————————————</p>
+
+<p><strong>2Q</strong>：去哪里找 Java？</p>
+
+<p><strong>2A</strong>：有很多的Java提供选择，如 <a href="https://bell-sw.com/pages/downloads/?package=jre-full">Liberica JDK</a> 、<a href="https://microsoft.com/openjdk">Microsoft JDK</a>、<a href="https://www.oracle.com/java/technologies/downloads/">Oracle JDK</a>、<a href="https://injdk.cn/" title="对中国大陆的访问速度更友好">中文 Java 镜像站</a> 和 <a href="https://jdk.java.net/">Oracle openJDK</a> 等</p>
+
+<p>只需要在下载时下载<strong>.zip 压缩包文件</strong>，且将压缩包内的所有内容放入对应文件夹即可</p>]]></content><author><name></name></author><summary type="html"><![CDATA[本文介绍了如何在整合包配置中自带 Java 环境]]></summary></entry><entry><title type="html">配置客户端自动更新（宝塔面板）</title><link href="https://docs.hmcl.net/modpack/serverpack2.html" rel="alternate" type="text/html" title="配置客户端自动更新（宝塔面板）" /><published>2021-08-22T23:18:02+08:00</published><updated>2021-08-22T23:18:02+08:00</updated><id>https://docs.hmcl.net/modpack/serverpack2</id><content type="html" xml:base="https://docs.hmcl.net/modpack/serverpack2.html"><![CDATA[<h2 id="备注">备注</h2>
+
+<blockquote>
+  <p>文章原作者：<a href="https://www.mcbbs.net/home.php?mod=space&amp;uid=3051111">hy黑影</a><br>
+转载：Zkitfly<br>
+部分内容进行了稍作打磨<br>
+本教程转载自 https://www.mcbbs.net/thread-1103864-1-1.html</p>
+</blockquote>
+
+<h2 id="前言"><strong>前言</strong></h2>
+
+<ul>
+  <li>我自己开设的服务器有很多不同的子服，每个子服的客户端版本呢都不相同，我又希望能整合到一个客户端里面；找了一圈发现那些辅助更新程序只能更新单个客户端版本，而且界面不太美观；甚至一度想自己开发启动器………</li>
+  <li>这篇帖子的灵感来自于 <strong>HMCL</strong> 启动器的一个功能 <strong>导出服务器自动更新整合包</strong>，我觉得可以利用这个功能来代替一些自动更新的辅助程序。</li>
+  <li>整个功能的实现需要：<strong>一台有公网IP的服务器、一个客户端整合包、HMCL启动器</strong>；如果你都没有，那就换成RMB10元</li>
+  <li>本篇教程默认读者为 萌新，即<strong>没有接触过HTTP服务器，网络应用开发，不懂linux系统，惧怕控制台程序</strong>
+</li>
+</ul>
+
+<h2 id="教程"><strong>教程</strong></h2>
+
+<h3 id="第一步-租服务器如果你有公网ip的服务器请跳过这一步"><strong>第一步-租服务器（▲如果你有公网IP的服务器，请跳过这一步）</strong></h3>
+
+<ul>
+  <li>百度搜索 <a href="https://cloud.tencent.com/act/campus?from=11821">腾讯云学生机</a> 或 <a href="https://promotion.aliyun.com/ntms/act/campus2018.html">阿里云学生机</a>
+</li>
+  <li>可以看到有10元/月 的套餐，如果是阿里云的话选<strong>轻量型应用服务器</strong>，腾讯云就只有一个套餐</li>
+  <li>系统请选择<strong>CentOS 8.0 64位</strong>，其他保持默认即可</li>
+  <li>再次确认是否是十元，是的话直接购买；不是的话可能是你已经买过学生套餐</li>
+  <li>第一次购买可能需要<strong>实名认证</strong>，按照提示操作即可，不需要担心安全问题，都是可靠的大公司</li>
+</ul>
+
+<h3 id="第二步-安装宝塔面板centos-80系统">第二步-安装宝塔面板——CentOS 8.0系统</h3>
+
+<ul>
+  <li>
+    <p>以腾讯云举例，阿里云同理</p>
+  </li>
+  <li>
+    <p>打开控制台面板，找到刚才租的学生机</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.1.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>选择重置密码</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.2.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>点击右侧<strong>登入</strong>按钮，按照说明填写你刚刚重置的密码；之后应该会看到类似这样的提示</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.3.jpg" alt=""></p>
+  </li>
+  <li>
+    <p><strong>不要慌，冷静。如果下面的部分教程失效请去<a href="https://www.bt.cn/">宝塔面板官网</a>，点击Linux-&gt;立即安装</strong></p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.4.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>回到控制台面板，我们需要开放一些通道让面板通过，选择<strong>安全组</strong></p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.5.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>点击<strong>修改规则</strong>，再点击<strong>添加规则</strong></p>
+  </li>
+  <li>
+    <p>图1：</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.6.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>图2：</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.7.jpg" alt=""></p>
+  </li>
+  <li>
+    <p><strong>按照图中所写添加，想要安全的话按照图1，懒的话按照图2</strong></p>
+  </li>
+  <li>
+    <p>回到那个黑黑的界面里输入 <code class="language-plaintext highlighter-rouge">yum install -y wget &amp;&amp; wget -O install.sh https://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</code> ，按下回车</p>
+  </li>
+  <li>
+    <p>这时会刷一大片大的英文，等他停下来的时候仔细看，最后一行在问你要不要安装（就是最后显示y/n），输入y并按下回车</p>
+  </li>
+  <li>
+    <p>耐心等待五分钟左右，直到出现这个字样</p>
+
+    <p><img src="/assets/img/docs/serverpack2/2.8.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>复制<strong>外网面板地址</strong>，在打开的页面中，用户名输入username后面的内容，密码输入password后面的内容</p>
+  </li>
+  <li>
+    <p>点击登入，到此为止面板按照完成</p>
+  </li>
+</ul>
+
+<h3 id="第三步-搭建http静态文件服务器"><strong>第三步-搭建HTTP静态文件服务器</strong></h3>
+
+<ul>
+  <li>
+    <p>打开刚刚的宝塔面板，一般都会有提示安装套件，选择<strong>nginx套装</strong>安装</p>
+  </li>
+  <li>
+    <p>等待安装完成后，选择<strong>网站</strong>，点击<strong>添加网站</strong></p>
+
+    <p><img src="/assets/img/docs/serverpack2/3.1.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>在弹出的页面填写网站IP，就是地址栏里面的那个；比如：我的是 https://233.88.233.44:8888/site ,那么我就填233.88.233.44</p>
+  </li>
+  <li>
+    <p>另外，<strong>租vps的同学请找服务商索要ip地址和开放的端口</strong>，比如我要到的是123.21.123.21:6666，那我就把这个填上去</p>
+
+    <p><img src="/assets/img/docs/serverpack2/3.2.jpg" alt=""></p>
+  </li>
+  <li>
+    <p><strong>其他保持不变，到此为止你已经搭建好了HTTP静态文件服务器✔</strong></p>
+  </li>
+</ul>
+
+<h3 id="第四步-制作整合包"><strong>第四步-制作整合包</strong></h3>
+
+<ul>
+  <li>
+    <p>使用HMCL打开你的MC客户端</p>
+  </li>
+  <li>
+    <p>选择你的游戏版本，点击<strong>导出整合包</strong></p>
+
+    <p><img src="/assets/img/docs/serverpack2/4.1.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>选择<strong>服务器自动更新整合包</strong></p>
+  </li>
+  <li>
+    <p>填写相关信息：</p>
+
+    <p><img src="/assets/img/docs/serverpack2/4.2.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>整合包下载链接前缀：比如我刚刚在【<a href="###%E7%AC%AC%E4%B8%89%E6%AD%A5-%E6%90%AD%E5%BB%BAHTTP%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8">第三步-搭建HTTP静态文件服务器</a>】宝塔里填的是233.88.233.44，我希望能有版本区分，这个版本代号是a；那么我就填https://233.88.233.44/a， <strong>vps注意，端口号也要写▲</strong></p>
+  </li>
+  <li>
+    <p>版本号写1.0 ，以后更新就写2.0以此类推</p>
+  </li>
+  <li>
+    <p>点击<strong>下一步</strong>，导出完成</p>
+  </li>
+</ul>
+
+<h3 id="第五步-上传整合包"><strong>第五步-上传整合包</strong></h3>
+
+<ul>
+  <li>
+    <p>打开宝塔面板，选择<strong>文件</strong>，找到相应的目录，在相应IP目录下新建文件夹；比如我刚刚写的版本代号是a，那我就新建a这个文件夹</p>
+
+    <p><img src="/assets/img/docs/serverpack2/5.1.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>在新建的文件夹里上传刚刚导出的整合包，并解压；成功后如下图</p>
+
+    <p><img src="/assets/img/docs/serverpack2/5.2.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>要是更新整合包，请在解压时将该【a】这个文件夹内的文件覆盖处理</p>
+  </li>
+</ul>
+
+<h3 id="第六步-分发整合包"><strong>第六步-分发整合包</strong></h3>
+
+<ul>
+  <li><strong>大公告成，现在可以把刚刚导出的这个整合包上传分享给玩家了！</strong></li>
+</ul>
+
+<h3 id="第七步-检测整合包"><strong>第七步-检测整合包</strong></h3>
+
+<ul>
+  <li><strong>为了防止一些手滑现象导致整合包可能会出现一些问题，你可以在分发整合包前先测试一下要准备分发的整合包</strong></li>
+</ul>
+
+<h2 id="后续"><strong>后续</strong></h2>
+
+<ul>
+  <li>以后每次更新客户端只要重复<a href="###%E7%AC%AC%E5%9B%9B%E6%AD%A5-%E5%88%B6%E4%BD%9C%E6%95%B4%E5%90%88%E5%8C%85"><strong>第四步</strong></a><strong>和</strong><a href="###%E7%AC%AC%E4%BA%94%E6%AD%A5-%E4%B8%8A%E4%BC%A0%E6%95%B4%E5%90%88%E5%8C%85"><strong>第五步</strong></a>，<strong>玩家重启客户端后就会自动接收更新</strong>
+</li>
+  <li>版本号要记得更新</li>
+  <li>默认的更新方式不会删除玩家自己加入的模组，但会下载玩家删除的模组</li>
+  <li>更新覆盖的是整合包导出时的所有数据</li>
+  <li><strong>每次更新会从整合包提供的链接下载 server-manifest.json 来校验玩家本地的整合包。若校验到整合包里没有匹配这个名字的文件或整合包里这个文件匹配名字但哈希值不匹配，就会下载该文件，不会下载匹配名字且哈希值匹配的文件</strong></li>
+  <li>出网带宽1MB我觉得够用了，除非你想让玩家自己下载全部内容（就是将整合包分发给他人前删除所有模组，玩家启动时就会开始下载回来，这样的好处是可见的整合包大小变小了）</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[本文介绍了如何使用宝塔面板配置客户端自动更新]]></summary></entry><entry><title type="html">服务端自动更新整合包制作教程</title><link href="https://docs.hmcl.net/modpack/serverpack.html" rel="alternate" type="text/html" title="服务端自动更新整合包制作教程" /><published>2021-08-22T23:18:02+08:00</published><updated>2025-12-06T09:37:00+08:00</updated><id>https://docs.hmcl.net/modpack/serverpack</id><content type="html" xml:base="https://docs.hmcl.net/modpack/serverpack.html"><![CDATA[<p>HMCL 允许服务器管理员借助服务端自动更新整合包来实现自动分发整合包更新，这将大大方便有需要频繁更新游戏客户端 Mod、配置等信息的服务器管理员。</p>
+
+<p>HMCL 需要服务器管理员额外提供一个 HTTP 服务器（只需要能提供静态文件服务，比如 Apache 和 Nginx 皆可）来提供检查整合包更新并允许 HMCL 下载更新文件。</p>
+
+<h2 id="第一步导出整合包">第一步：导出整合包</h2>
+
+<p>在 HMCL 中右键做好的客户端版本，选择<code class="language-plaintext highlighter-rouge">导出整合包</code>：</p>
+
+<p><img src="/assets/img/docs/serverpack/img1.png" alt=""></p>
+
+<p>选择导出为<code class="language-plaintext highlighter-rouge">服务器自动更新整合包</code>：</p>
+
+<p><img src="/assets/img/docs/serverpack/img2.png" alt=""></p>
+
+<p>填写整合包信息，整合包下载链接前缀如何填写请看下文</p>
+
+<p><img src="/assets/img/docs/serverpack/img3.png" alt=""></p>
+
+<p>选择需要包含在整合包内的文件后将产生整合包压缩文件</p>
+
+<h2 id="第二步导入整合包">第二步：导入整合包</h2>
+
+<p>接着创建一个全新的空文件夹，将启动器复制进去</p>
+
+<p><img src="/assets/img/docs/serverpack/img4.png" alt=""></p>
+
+<p>运行启动器，并导入刚才导出的整合包，导入完成后，这个文件夹（这里叫“新整合包”）可以打包发给玩家。</p>
+
+<h2 id="第三步部署整合包更新服务器">第三步：部署整合包更新服务器</h2>
+
+<p>你可以借助 Apache、Nginx 等支持静态文件的 HTTP 服务器软件提供文件。首先，决定好整合包下载链接前缀，比如我希望 HMCL 从远程服务器的 http://www.site.com/modpack 目录下存放整合包的更新信息，则在之前导出整合包的整合包下载前缀中填写 http://www.site.com/modpack。</p>
+
+<p><img src="/assets/img/docs/serverpack/img5.png" alt=""></p>
+
+<p>上图为导出的服务器自动更新整合包压缩文件的内容，你需要将这个整合包解压到 http://www.site.com/modpack 下。也就是说，从 http://www.site.com/modpack/server-manifest.json 这个链接下载下来的文件必须和上图中整合包压缩文件中的 server-manifest.json 文件一致，并且，http://www.site.com/modpack/overrides 是一个文件夹，里面存放了整合包文件，比如：</p>
+
+<p><img src="/assets/img/docs/serverpack/img6.png" alt=""></p>
+
+<p>整合包压缩文件 test.zip/overrides/mods/Advancement_Book-1.12-1.0.3.jar 文件必须可以从 http://www.site.com/modpack/overrides/mods/Advancement_Book-1.12-1.0.3.jar 该目录下载下来，且文件内容一致。那么至此更新服务器就部署完成了。</p>
+
+<h2 id="第四步更新整合包">第四步：更新整合包</h2>
+
+<p>如果你需要更新整合包，那么将新的整合包经过第一步导出新的整合包压缩文件，并解压到类似 http://www.site.com/modpack 文件夹下即可完成新整合包的部署。</p>]]></content><author><name>huanghongxun</name></author><summary type="html"><![CDATA[创建可自动更新的服务器整合包]]></summary></entry></feed>
