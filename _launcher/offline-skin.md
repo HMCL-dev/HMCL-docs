@@ -41,7 +41,7 @@ contributors:
 
 ![](/assets/img/docs/offline-skin/img3_1.png)
 
-角色名必须 HMCL 中离线账号的角色名一致。如不一致，请在 HMCL 中切换至对应的离线账户，或新建与角色名匹配的离线账户。
+角色名必须与 HMCL 中离线账号的角色名一致。如不一致，请在 HMCL 中切换至对应的离线账户，或新建与角色名匹配的离线账户。
 
 ![](/assets/img/docs/offline-skin/img3_2.png)
 
