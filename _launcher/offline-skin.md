@@ -18,12 +18,9 @@ contributors:
 
 ![](/assets/img/docs/offline-skin/img1_2.png)
 
-> 默认: 使用默认随机的皮肤显示
->
-> Steve: 使用Steve (史蒂夫) 皮肤显示
->
-> Alex: 使用Alex (艾利克斯) 皮肤显示
->
+> 默认: 使用默认随机的皮肤显示\
+> Steve: 使用Steve (史蒂夫) 皮肤显示\
+> Alex: 使用Alex (艾利克斯) 皮肤显示\
 > [本地皮肤图片文件](#本地皮肤图片文件)、[LittleSkin](#littleskin)、[Blessing Skin 服务器](#blessing-skin-服务器): 请见下文↓
 
 ## 本地皮肤图片文件
