@@ -20,8 +20,8 @@ layout: null
     get(key) {
       const name = formatKey(key);
       if (data[name] !== undefined) return data[name];
-      data[name] = localStorage.getItem(name);
-      if (data[name] !== null) return data[name];
+      const value = localStorage.getItem(name);
+      if (value !== null) return data[name] = value;
       const config = configs[key];
       if (config === undefined || typeof config.default !== "string") return null;
       return config.default;
