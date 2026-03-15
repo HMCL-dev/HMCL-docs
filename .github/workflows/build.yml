@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  JEKYLL_ENV: production
+
+jobs:
+  run:
+    if: ${{ github.repository_owner == 'HMCL-dev' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+          cache-version: main
+      - name: Build
+        run: bundle exec jekyll build --trace --config _config.yml,_config.drone.yml --destination /home/runner/site
+      - name: Deploy to pages branch
+        working-directory: /home/runner/site
+        run: |
+          git init
+          git checkout --orphan pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "deploy: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin pages --force
