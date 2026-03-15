@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://docs.hmcl.net/feed/launcher.xml" rel="self" type="application/atom+xml" /><link href="https://docs.hmcl.net/" rel="alternate" type="text/html" /><updated>2026-03-15T11:53:36+08:00</updated><id>https://docs.hmcl.net/feed/launcher.xml</id><title type="html">HMCL 文档 | Launcher</title><subtitle>HMCL 启动器 \| 跨平台 \| 整合包管理 \| 自动安装 \| 十二年历史 \| 三亿次使用</subtitle><entry><title type="html">界面功能介绍</title><link href="https://docs.hmcl.net/launcher/gui-features.html" rel="alternate" type="text/html" title="界面功能介绍" /><published>2026-01-09T15:19:02+08:00</published><updated>2026-01-09T15:19:02+08:00</updated><id>https://docs.hmcl.net/launcher/gui-features</id><content type="html" xml:base="https://docs.hmcl.net/launcher/gui-features.html"><![CDATA[<p><img src="/assets/img/docs/launcher/gui-features/global.png" alt="启动器预览图"></p>
+
+<p>启动器界面整体由顶部工具栏和页面容器构成。</p>
+
+<h2 id="顶部工具栏">顶部工具栏</h2>
+
+<p><img src="/assets/img/docs/launcher/gui-features/topbar.png" alt="顶部工具栏"></p>
+
+<blockquote class="notice--success">
+  <div><strong>提示</strong></div>
+<p>用户可以通过双击工具栏在最大化与普通窗口状态之间切换。</p>
+</blockquote>
+
+<p>此区域为全局显示，共分为左右两部分。其中左侧由返回按钮（仅在二级或多级页面显示）和标题构成，右侧由帮助按钮、最小化按钮和关闭按钮构成。</p>
+
+<p><strong>返回按钮</strong>：点击后返回上一页，仅在二级或多级页面上显示，首页不显示。<br>
+<strong>标题</strong>：通常用于显示页面名称，首页显示为启动器版本信息。<br>
+<strong>帮助按钮</strong>：点击后跳转至文档帮助页面。<br>
+<strong>最小化按钮</strong>：点击后最小化启动器。<br>
+<strong>关闭按钮</strong>：点击后关闭启动器。</p>
+
+<h2 id="首页">首页</h2>
+
+<p><img src="/assets/img/docs/launcher/gui-features/home.png" alt="首页"></p>
+
+<p>首页是启动器的起始页面，该页面由侧边导航栏、提示面板（仅限开发版和预览版）、更新面板（仅在存在可用更新时显示）和启动游戏面板构成。</p>
+
+<h3 id="侧边导航栏首页">侧边导航栏（首页）</h3>
+
+<p><img src="/assets/img/docs/launcher/gui-features/home-sidebar.png" alt="侧边导航栏（首页）"></p>
+
+<p>此区域共分为三部分：账户分组、游戏分组及通用分组。</p>
+
+<p><strong>账户分组</strong>：该分组中包含一个列表项，该项会显示当前选定的账户头像、名称及账户类型，用户点击该项可进入账户列表页面；右键点击该项可呼出账户切换的快捷菜单。</p>
+
+<blockquote class="notice--success">
+  <div><strong>提示</strong></div>
+<p>用户在该项上滚动鼠标滚轮可在不同账户之间进行快捷切换。</p>
+</blockquote>
+
+<p><strong>游戏分组</strong>：该分组中包含三个列表项，分别是：实例管理、实例列表及下载。</p>
+
+<ul>
+  <li>实例管理：该项会显示当前选定的游戏实例图标及名称。用户点击该项后进入实例管理页面；在该项上滚动鼠标滚轮可在不同游戏实例之间进行快捷切换。</li>
+  <li>实例列表：用户点击该项后进入实例列表页面，用于查看和管理游戏实例。</li>
+  <li>下载：用户点击该项后进入下载页面，用于下载游戏、整合包或者安装模组、资源包、光影或者世界。</li>
+</ul>
+
+<p><strong>通用分组</strong>：该分组中包含三个列表项，分别是：设置、多人联机及官方群组。</p>
+
+<ul>
+  <li>设置：用户点击该项后进入<a href="#%E8%AE%BE%E7%BD%AE">设置</a>页面。</li>
+  <li>多人联机：用户点击该项后进入多人联机页面。</li>
+  <li>官方群组：用户点击该项后跳转至设置·反馈页。</li>
+</ul>
+
+<h3 id="提示面板">提示面板</h3>
+
+<p><img src="/assets/img/docs/launcher/gui-features/home-tip.png" alt="提示面板"></p>
+
+<blockquote class="notice--success">
+  <div><strong>提示</strong></div>
+<p>用户可通过点击右上角关闭按钮隐藏该提示。</p>
+</blockquote>
+
+<p>仅在开发版或预览版中显示，用于提示用户当前启动器不是稳定版本。</p>
+
+<h3 id="更新面板">更新面板</h3>
+
+<p><img src="/assets/img/docs/launcher/gui-features/home-update.png" alt="更新面板"></p>
+
+<p>仅在存在可用更新时显示，此区域用于启动器更新提示。</p>
+
+<h3 id="启动游戏面板">启动游戏面板</h3>
+
+<p><img src="/assets/img/docs/launcher/gui-features/home-launch.png" alt="更新面板"></p>
+
+<p>此区域共分为两部分：启动（开始）游戏按钮、切换实例菜单。</p>
+
+<p><strong>启动（开始）游戏按钮</strong>：若用户当前存在实例，点击后则会启动当前应用的游戏实例；若当前不存在游戏实例，点击后会自动下载最新正式版然后启动游戏。<br>
+<strong>切换实例菜单</strong>：点击显示快捷切换游戏实例列表菜单。</p>
+
+<h2 id="设置">设置</h2>
+
+<p><img src="/assets/img/docs/launcher/gui-features/settings.png" alt="设置"></p>
+
+<p>该页面由侧边导航栏和页面容器构成。</p>
+
+<h3 id="侧边导航栏设置">侧边导航栏（设置）</h3>
+
+<p>此区域共分为四部分：全局游戏设置、Java 管理、启动器分组及帮助分组。</p>
+
+<p><strong>全局游戏设置</strong>：用户点击该项后进入<a href="#%E8%AE%BE%E7%BD%AE-%E5%85%A8%E5%B1%80%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE">全局游戏设置</a>页面。<br>
+<strong>Java 管理</strong>：用户点击该项后进入 Java 管理页面。<br>
+<strong>启动器分组</strong>：该分组中包含三个列表项，分别是：通用、外观及下载。<br>
+<strong>帮助分组</strong>：该分组中包含三个列表项，分别是：帮助、反馈及关于。</p>
+
+<h2 id="设置-全局游戏设置">设置-全局游戏设置</h2>
+
+<p><img src="/assets/img/docs/launcher/gui-features/settings-global.png" alt="设置-全局游戏设置"></p>]]></content><author><name></name></author><summary type="html"><![CDATA[本文整理了启动器部分界面的功能介绍]]></summary></entry><entry><title type="html">离线模式下更换皮肤</title><link href="https://docs.hmcl.net/launcher/offline-skin.html" rel="alternate" type="text/html" title="离线模式下更换皮肤" /><published>2025-12-05T22:25:00+08:00</published><updated>2025-12-05T22:25:00+08:00</updated><id>https://docs.hmcl.net/launcher/offline-skin</id><content type="html" xml:base="https://docs.hmcl.net/launcher/offline-skin.html"><![CDATA[<h1 id="离线模式下更换皮肤">离线模式下更换皮肤</h1>
+<p><strong>注意：</strong></p>
+<blockquote>
+  <p>使用 Steve、Alex、本地皮肤图片文件: 可能无法加入多人联机，其他玩家可能看不到您的皮肤<br>
+使用 LittleSkin、Blessing Skin 服务器: 多人联机下和您使用 <strong>相同方式</strong> 的玩家可以看到您的皮肤, 其他玩家不可以</p>
+</blockquote>
+
+<p>打开HMCL, 进入 <strong>账号列表</strong> , 点击下图离线账号的【上传皮肤】红框处:</p>
+
+<p><img src="/assets/img/docs/offline-skin/img1_1.png" alt=""></p>
+
+<p><img src="/assets/img/docs/offline-skin/img1_2.png" alt=""></p>
+
+<blockquote>
+  <p>默认: 使用默认随机的皮肤显示</p>
+
+  <p>Steve: 使用Steve (史蒂夫) 皮肤显示</p>
+
+  <p>Alex: 使用Alex (艾利克斯) 皮肤显示</p>
+
+  <p><a href="#%E6%9C%AC%E5%9C%B0%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6">本地皮肤图片文件</a>、<a href="#littleskin">LittleSkin</a>、<a href="#blessing-skin-%E6%9C%8D%E5%8A%A1%E5%99%A8">Blessing Skin 服务器</a>: 请见下文↓</p>
+</blockquote>
+
+<h2 id="本地皮肤图片文件">本地皮肤图片文件</h2>
+
+<p>点击 <strong>本地皮肤图片文件</strong> , 设置 <strong>皮肤/披风</strong>皮肤图片 路径, 点击 <strong>确认</strong>, 即可</p>
+
+<p><img src="/assets/img/docs/offline-skin/img2.png" alt=""></p>
+
+<h2 id="littleskin">LittleSkin</h2>
+
+<p>首先您需要一个LittleSkin的账号, <a href="https://mcskin.littleservice.cn/auth/register">注册</a>并<a href="https://mcskin.littleservice.cn/auth/login">登录</a></p>
+
+<p>然后前往 <a href="https://mcskin.littleservice.cn/user/player">角色管理</a>, 查看您的角色名, 如果没有, 请点击 <strong>添加新角色</strong> 进行添加</p>
+
+<p>你可在 <a href="https://mcskin.littleservice.cn/user/closet">我的衣柜</a> 修改此账户名的皮肤与披风</p>
+
+<p><img src="/assets/img/docs/offline-skin/img3_1.png" alt=""></p>
+
+<p>在HMCL中创建的离线账户的 账户名 <strong>必须</strong>和角色名相等, 如果不相等, 请 <strong>重新在HMCL中创建离线账户</strong></p>
+
+<p><img src="/assets/img/docs/offline-skin/img3_2.png" alt=""></p>
+
+<p>确认相等后, 点击 <strong>LittleSkin</strong> 即可同步在LittleSkin上此账户名的皮肤</p>
+
+<p><img src="/assets/img/docs/offline-skin/img3_3.png" alt=""></p>
+
+<h2 id="blessing-skin-服务器">Blessing Skin 服务器</h2>
+
+<p><strong>Blessing Skin 服务器, 进入 **角色管理</strong> , 查看角色名 , 确认 <strong>角色名</strong> 和 <strong>HMCL中创建的离线账号角色名</strong> 相同, 如果不相等, <strong>请重新在HMCL中创建离线账户</strong></p>
+
+<p>你可在 我的衣柜 修改此账户名的皮肤与披风</p>
+
+<p><img src="/assets/img/docs/offline-skin/img4_1.png" alt=""></p>
+
+<p>进入 <strong>配置生成</strong>, 按下图找到 <code class="language-plaintext highlighter-rouge">CustomSkinLoader</code> 中的网址, 复制到HMCL中即可同步在Blessing Skin 服务器上此账户名的皮肤</p>
+
+<p><img src="/assets/img/docs/offline-skin/img4_2.png" alt=""></p>
+
+<p><img src="/assets/img/docs/offline-skin/img4_3.png" alt=""></p>]]></content><author><name>qiaoshouzi</name></author><summary type="html"><![CDATA[使用本地皮肤文件、LittleSkin 或 Blessing Skin 设置离线皮肤]]></summary></entry><entry><title type="html">自动安装与模组下载简介</title><link href="https://docs.hmcl.net/launcher/auto-installing.html" rel="alternate" type="text/html" title="自动安装与模组下载简介" /><published>2025-11-02T09:06:30+08:00</published><updated>2025-11-02T09:06:30+08:00</updated><id>https://docs.hmcl.net/launcher/auto-installing</id><content type="html" xml:base="https://docs.hmcl.net/launcher/auto-installing.html"><![CDATA[<p>要为 Minecraft 安装模组，你首先需要安装一个“模组加载器”（例如 NeoForge 或 Fabric），然后再安装你想要的模组。HMCL 为这两个步骤都提供了强大的支持。</p>
+
+<p>在安装前，最关键的一点是<strong>兼容性</strong>。请记住以下核心原则：</p>
+
+<ul>
+  <li>通常，你只能为单个游戏实例安装一种模组加载器。</li>
+  <li>你下载的<strong>模组</strong>，必须同时兼容你的<strong>游戏版本</strong>（如 1.20.4）和<strong>模组加载器</strong>（如 Fabric）。</li>
+</ul>
+
+<p>简单来说，为游戏安装模组总共分三步，本指南将带你逐一完成：</p>
+<ol>
+  <li>开启版本隔离，为模组创建一个独立干净的环境。</li>
+  <li>安装模组加载器（如 Forge, Fabric）。</li>
+  <li>安装你喜欢的模组。</li>
+</ol>
+
+<h2 id="启用版本隔离">启用版本隔离</h2>
+
+<p>在安装模组之前，必须开启版本隔离以隔离为不同实例安装的模组：</p>
+
+<p>在 HMCL 主界面，点击「设置」，在「全局游戏设置」选项卡中，找到「版本隔离」，点击「版本隔离」，选择「各实例独立」即可</p>
+
+<p><img src="/assets/img/docs/auto-installing/Working_Directory.png" alt="Working_Directory"></p>
+
+<p>更详细的介绍见 <a href="/launcher/isolation.html">全局版本隔离</a></p>
+
+<h2 id="安装模组加载器">安装模组加载器</h2>
+
+<h3 id="模组加载器简介">模组加载器简介</h3>
+
+<p>常见的模组加载器有以下几个：</p>
+
+<p><code class="language-plaintext highlighter-rouge">Forge</code>,<code class="language-plaintext highlighter-rouge">NeoForge</code>,<code class="language-plaintext highlighter-rouge">Fabric</code>,<code class="language-plaintext highlighter-rouge">Quilt</code>,<code class="language-plaintext highlighter-rouge">Cleanroom</code>,<code class="language-plaintext highlighter-rouge">LiteLoader</code> 是 6 个常见的 Mod 加载器。<br>
+<code class="language-plaintext highlighter-rouge">Fabric API</code>,<code class="language-plaintext highlighter-rouge">QSL/QFAPI</code> 是两个随 <code class="language-plaintext highlighter-rouge">Fabric</code> 与 <code class="language-plaintext highlighter-rouge">Quilt</code> 的官方 API（实际是模组）。</p>
+
+<p><strong>兼容性：</strong></p>
+<ul>
+  <li><strong><em>LiteLoader</em> 和 <em>Forge</em> 是兼容的 (<em>Forge</em> 较新版本和 <em>LiteLoader</em> 较老版本可能不兼容)，可以同时安装</strong></li>
+  <li><strong>其它所有模组加载器几乎互不兼容，即你无法同时安装两个模组加载器</strong></li>
+</ul>
+
+<p><strong>Fabric与Quilt 说明：</strong><br>
+非常多的 <em>Fabric Mod</em> 需要 <em>Fabric API</em> 作为前置模组， <em>Quilt Mod</em> 需要 <em>QSL/QFAPI</em> 作为前置模组。<br>
+在安装 <em>Fabric</em> 或 <em>Quilt</em> 加载器时候如果没有其它原因，建议安装 <em>Fabric API</em> 或 <em>QSL/QFAPI</em> , 否则很多 <em>Fabric Mod</em> 或 <em>Quilt Mod</em> 则有可能无法被加载!</p>
+
+<h3 id="安装新实例时安装模组加载器">安装新实例时安装模组加载器</h3>
+
+<p>当你在安装新的游戏客户端时候, 会看到其中有该版本支持的模组加载器安装选项，点击你想安装的模组加载器（根据你想安装模组所支持的加载器进行选择）</p>
+
+<p><img src="/assets/img/docs/auto-installing/AutoInstaller_ModLoader.png" alt="AutoInstaller_ModLoader"></p>
+
+<ul>
+  <li>点击你想要的加载器（如 Fabric）。</li>
+  <li>在弹出的版本选择页面，若无特殊需求，<strong>选择最新稳定版</strong>（通常是第一个）。</li>
+  <li>如果你选择 <code class="language-plaintext highlighter-rouge">Fabric</code> 或 <code class="language-plaintext highlighter-rouge">Quilt</code>，最好同时安装<code class="language-plaintext highlighter-rouge">Fabric API</code> 或 <code class="language-plaintext highlighter-rouge">QSL/QFAPI</code>。</li>
+  <li>点击「安装」即可。</li>
+</ul>
+
+<h3 id="为已有实例安装或更换模组加载器">为已有实例安装或更换模组加载器</h3>
+
+<p>如果你想为已安装好的纯净版游戏添加加载器，或者更换、更新加载器版本：</p>
+
+<ol>
+  <li>在 HMCL 主界面，点击「实例管理」，然后选择你想要修改的游戏实例。</li>
+  <li>在左侧菜单中，点击「自动安装」。</li>
+</ol>
+
+<p><img src="/assets/img/docs/auto-installing/Auto_Install_Page.png" alt="Auto_Install_Page"></p>
+
+<ul>
+  <li>
+<strong>安装</strong>：点击你想要的加载器图标（如 Forge），选择版本（推荐最新版），然后点击安装。</li>
+  <li>
+<strong>更新</strong>：点击已安装的加载器，选择一个更新的版本，然后点击安装。</li>
+  <li>
+<strong>删除</strong>：点击加载器右侧的「X」按钮即可删除。</li>
+  <li>
+<strong>更换</strong>：先删除旧的加载器，再安装新的。</li>
+</ul>
+
+<blockquote>
+  <p><strong>注意</strong>：此处的自动安装页面不支持安装 <code class="language-plaintext highlighter-rouge">Fabric API</code> 或 <code class="language-plaintext highlighter-rouge">QSL/QFAPI</code>。请将它们当作普通模组进行安装。</p>
+</blockquote>
+
+<h2 id="安装模组">安装模组</h2>
+
+<p>安装好加载器后，就可以开始添加模组了。你可以在下列网站获取模组信息，并在 HMCL 内下载和安装：</p>
+<ul>
+  <li>
+<a href="https://www.mcmod.cn/">MC 百科</a> - 中文社区，资料详尽。</li>
+  <li>
+<a href="https://www.curseforge.com/minecraft/search?class=mc-mods">CurseForge</a> - 最大的模组发布站之一。</li>
+  <li>
+<a href="https://modrinth.com/mods">Modrinth</a> - 新兴的现代化模组发布站。</li>
+</ul>
+
+<p>在安装任何模组前，请先确认三件事：</p>
+<ol>
+  <li>
+<strong>游戏版本</strong>：模组是否支持你当前的游戏版本？(例如, 1.20.4)</li>
+  <li>
+<strong>加载器类型</strong>：模组是给 Forge、Fabric 还是其它模组加载器用的？</li>
+  <li>
+<strong>前置模组</strong>：模组是否需要其他模组作为前置？（模组页面通常会说明）</li>
+</ol>
+
+<h3 id="自动安装-推荐">自动安装 (推荐)</h3>
+
+<p>HMCL 内置了 CurseForge 和 Modrinth 的搜索和下载功能，非常方便。</p>
+
+<ol>
+  <li>在 HMCL 主界面，点击「下载」-&gt;「模组」。</li>
+  <li>在搜索框输入模组名（支持中英文），然后点击搜索。如果搜不到，可以尝试切换右上角的下载源。</li>
+  <li>点击你想要的模组，进入版本列表页面。</li>
+  <li>根据<strong>游戏版本</strong>和<strong>加载器</strong>，找到你需要的版本，点击并选择「安装到当前实例」。</li>
+  <li>如果该模组有前置，HMCL 会自动提示，请先安装所有前置模组（但是请不要重复安装前置模组）。</li>
+</ol>
+
+<p>注：点击模组下载页面 上方的蓝色的链接可以到对应的网站查看模组的信息，这会告诉你模组的功能和有可能会提示你一些注意事项</p>
+
+<p><strong>注意: 请查看你要下载的模组是否正常你要安装的游戏版本以及模组加载器，否则模组无法被正常加载!</strong></p>
+
+<p><img src="/assets/img/docs/auto-installing/AutoInstaller_ModAutoAdding.png" alt="AddingModAutomatically"></p>
+
+<h3 id="安装optifine-或其它光影模组">安装OptiFine 或其它光影模组</h3>
+
+<p>光影的安装方式略有不同，请参考专门的指南 <a href="/launcher/shader.html">光影安装</a></p>
+
+<h3 id="手动安装">手动安装</h3>
+
+<p>当你在网站或其它位置手动下载了模组文件，你可以参照以下步骤完成安装：</p>
+
+<p>一般的 Mod 文件后缀为 <code class="language-plaintext highlighter-rouge">jar</code> 或者 <code class="language-plaintext highlighter-rouge">litemod</code>，请确认后缀是正确的。其中<code class="language-plaintext highlighter-rouge">jar</code>为大多数模组加载器支持的格式，<code class="language-plaintext highlighter-rouge">litemod</code>仅<code class="language-plaintext highlighter-rouge">LiteLoader</code>支持。</p>
+
+<h4 id="通过模组管理页面">通过模组管理页面</h4>
+
+<ol>
+  <li>进入「实例管理」-&gt; 选择你的游戏实例 -&gt;「模组管理」。</li>
+  <li>点击「添加模组」并选择你的模组文件，或直接将文件拖拽到窗口内即可。</li>
+</ol>
+
+<h4 id="通过模组文件夹安装">通过模组文件夹安装</h4>
+
+<ol>
+  <li>进入「实例管理」-&gt; 选择你的游戏实例 -&gt;「浏览」-&gt;「模组文件夹」。</li>
+  <li>这会打开该实例的 <code class="language-plaintext highlighter-rouge">mods</code> 文件夹。</li>
+  <li>将你下载的 <code class="language-plaintext highlighter-rouge">.jar</code> 模组文件复制或移动到这个文件夹里。
+（如果 <code class="language-plaintext highlighter-rouge">mods</code> 文件夹不存在，请自行创建一个。）</li>
+</ol>
+
+<p><img src="/assets/img/docs/auto-installing/AutoInstaller_ModManualAdding.png" alt="AddingModManually"></p>
+
+<h2 id="安装-mod-后游戏报错无法启动">安装 Mod 后游戏报错/无法启动</h2>
+
+<p>造成游戏报错的原因有很多, 比如 Mod 之间不兼容, Fabric API 的版本过高, 缺少前置 Mod 等等。</p>
+
+<p><strong>第一步：基础检查（最常见问题）</strong></p>
+<ul>
+  <li>
+<strong>查看 HMCL 错误报告</strong>：新版 HMCL 会直接提示大部分常见错误，这是你的首选信息来源。</li>
+  <li>
+<strong>检查兼容性</strong>：确认模组版本、游戏版本、模组加载器三者是否匹配。</li>
+  <li>
+<strong>检查前置模组</strong>：是否忘记安装必要的API（如 Fabric API）或其他前置模组？</li>
+</ul>
+
+<p><strong>第二步：自己排查</strong></p>
+<ul>
+  <li>
+<strong>使用“二分法”</strong>：在“模组管理”页面，先禁用一半的模组，看游戏能否启动或出错。如果可以，说明问题出在被禁用的那一半里。不断重复此过程，直到找到引发问题的具体模组。</li>
+  <li>
+<strong>查看日志文件</strong>：如果你有能力，可以自行查看游戏日志来定位问题。</li>
+</ul>
+
+<p><strong>第三步：有效求助</strong>
+如果无法自行解决，你需要向社区求助。但请记住，一个有效的求助包含<strong>完整的日志文件</strong>。</p>
+
+<p><strong>如何正确求助</strong>：</p>
+<ol>
+  <li>在游戏崩溃后，点击 HMCL 弹出的错误窗口上的「<strong>导出游戏日志</strong>」按钮，它会生成一个 <code class="language-plaintext highlighter-rouge">minecraft-exported-crash-info-时间戳.zip</code> 文件。</li>
+  <li>带着<strong>这个文件</strong>去社区、论坛或群里提问，并具体描述你遇到的问题。</li>
+</ol>
+
+<blockquote>
+  <p><strong>重要</strong>：对于向他人求助，千万不要只截图，不要只说“游戏出错怎么办”这种及其笼统的话语。<strong>没有日志，谁也帮不了你。</strong></p>
+</blockquote>
+
+<p><img src="/assets/img/docs/auto-installing/Crash_Report_Page.png" alt="CrashReportPage"></p>
+
+<h2 id="补充常见模组加载器简单介绍和支持版本一览">补充：常见模组加载器简单介绍和支持版本一览</h2>
+
+<p>模组加载器简单介绍：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>模组加载器</th>
+      <th>简单介绍</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/forge.png" alt="Forge icon" width="16"> Forge</span></td>
+      <td>老牌的模组加载器，功能强大，支持的模组众多，推荐在1.21之前安装。</td>
+    </tr>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/neoforge.png" alt="NeoForge icon" width="16"> NeoForge</span></td>
+      <td>1.20.1后Forge的继任者，推荐在1.21版本后安装NeoForge。</td>
+    </tr>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric icon" width="16"> Fabric</span></td>
+      <td>轻型模组加载器，非常适合安装优化模组或纯净生存增强类模组。</td>
+    </tr>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/quilt.png" alt="Quilt icon" width="16"> Quilt</span></td>
+      <td>Fabric的一个分支，同样轻量。</td>
+    </tr>
+    <tr>
+      <td>
+<span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric api icon" width="16"> Fabric API</span><br><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/quilt.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI</span>
+</td>
+      <td>由于<code class="language-plaintext highlighter-rouge">Fabric</code>和<code class="language-plaintext highlighter-rouge">Quilt</code>比较轻功能有限，因此提供了增强功能的api，很多模组依赖于此api。</td>
+    </tr>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/cleanroom.png" alt="Cleanroom icon" width="16"> Cleanroom</span></td>
+      <td>1.12.2版本Forge的一个优化代替，提供了相对更强的功能，仅支持1.12.2。</td>
+    </tr>
+    <tr>
+      <td><span style="white-space: nowrap;"><img src="/assets/img/docs/auto-installing/chicken.png" alt="LiteLoader icon" width="16"> LiteLoader</span></td>
+      <td>轻量模组加载器，为Forge的轻量代替，现在已停止维护。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>支持版本一览：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>模组加载器</th>
+      <th>最老版本</th>
+      <th>最新版本</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/forge.png" alt="Forge icon" width="16"> Forge</td>
+      <td>1.5.2</td>
+      <td>游戏最新版本</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/neoforge.png" alt="NeoForge icon" width="16"> NeoForge</td>
+      <td>1.20.1</td>
+      <td>游戏最新版本</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric icon" width="16"> Fabric</td>
+      <td>1.16.3</td>
+      <td>游戏最新版本</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/fabric.png" alt="Fabric api icon" width="16"> Fabric api</td>
+      <td>1.16.3</td>
+      <td>游戏最新版本</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/quilt.png" alt="Quilt icon" width="16"> Quilt</td>
+      <td>1.16.3</td>
+      <td>游戏最新版本</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/quilt.png" alt="QSL/QFAPI icon" width="16"> QSL/QFAPI</td>
+      <td>1.18.2</td>
+      <td>1.21</td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/cleanroom.png" alt="Cleanroom icon" width="16"> Cleanroom</td>
+      <td>1.12.2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>
+<img src="/assets/img/docs/auto-installing/chicken.png" alt="LiteLoader icon" width="16"> LiteLoader</td>
+      <td>1.5.2</td>
+      <td>1.12.2</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>asdqp233,Mine-diamond</name></author><summary type="html"><![CDATA[安装 Forge、Fabric、LiteLoader、OptiFine 及模组的教程]]></summary></entry><entry><title type="html">JVM 选项与环境变量</title><link href="https://docs.hmcl.net/launcher/jvm-options-and-env.html" rel="alternate" type="text/html" title="JVM 选项与环境变量" /><published>2025-04-20T23:18:02+08:00</published><updated>2025-04-20T23:18:02+08:00</updated><id>https://docs.hmcl.net/launcher/jvm-options-and-env</id><content type="html" xml:base="https://docs.hmcl.net/launcher/jvm-options-and-env.html"><![CDATA[<h2 id="jvm-选项">JVM 选项</h2>
+
+<p>HMCL 提供了一些 JVM 选项用于调试目的。你可以通过在启动 HMCL 时添加这些参数来使用这些功能。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.home=&lt;path&gt;</code></td>
+      <td>覆盖 HMCL 全局数据文件夹路径</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.dir=&lt;path&gt;</code></td>
+      <td>覆盖 HMCL 工作路径下的 .hmcl 文件夹路径</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.self_integrity_check.disable=true</code></td>
+      <td>禁用启动器更新时的本体完整性检查</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.bmclapi.override=&lt;url&gt;</code></td>
+      <td>自定义 BMCLAPI 的 API Root 地址（默认为 <code class="language-plaintext highlighter-rouge">https://bmclapi2.bangbang93.com</code>）</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.font.override=&lt;font family&gt;</code></td>
+      <td>指定启动器使用的字族</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.version.override=&lt;version&gt;</code></td>
+      <td>手动指定启动器版本号</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.update_source.override=&lt;url&gt;</code></td>
+      <td>自定义 HMCL 更新源地址</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.authlibinjector.location=&lt;path&gt;</code></td>
+      <td>指定本地 authlib-injector 路径，不从网络下载</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.openjfx.repo=&lt;maven repository url&gt;</code></td>
+      <td>添加用于下载 OpenJFX 的自定义 Maven 仓库地址（默认为 <code class="language-plaintext highlighter-rouge">https://repo1.maven.org/maven2</code>）</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.native.encoding=&lt;encoding&gt;</code></td>
+      <td>指定系统原生编码</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.microsoft.auth.id=&lt;App ID&gt;</code></td>
+      <td>自定义 Microsoft OAuth 应用程序 ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.microsoft.auth.secret=&lt;App Secret&gt;</code></td>
+      <td>自定义 Microsoft OAuth 应用程序密钥</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.curseforge.apikey=&lt;key&gt;</code></td>
+      <td>自定义 CurseForge API 密钥</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.discoapi.override=&lt;url&gt;</code></td>
+      <td>自定义 DiscoAPI 的 API Root 地址（默认为 <code class="language-plaintext highlighter-rouge">https://api.foojay.io/disco/v3.0</code>）</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.native.backend=&lt;auto/jna/none&gt;</code></td>
+      <td>指定 HMCL 的本地后端类型。可选值：<br>- <code class="language-plaintext highlighter-rouge">auto</code>：自动选择（Windows 7+ 使用 JNA，其他系统不使用）<br>- <code class="language-plaintext highlighter-rouge">jna</code>：强制使用 JNA（如果 JNA 不可用会抛出异常）<br>- <code class="language-plaintext highlighter-rouge">none</code>：禁用 JNA<br>默认值：<code class="language-plaintext highlighter-rouge">auto</code>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-Dhmcl.hardware.fastfetch=&lt;true/false&gt;</code></td>
+      <td>是否使用 fastfetch 获取设备信息。默认值：<code class="language-plaintext highlighter-rouge">true</code>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="环境变量">环境变量</h2>
+
+<p>HMCL/HMCLauncher 也支持一些环境变量来配置启动器的行为。你可以在系统环境变量中添加这些变量。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HMCL_JAVA_OPTS</code></td>
+      <td>自定义 HMCLauncher 所使用的 JVM 启动参数（默认为 <code class="language-plaintext highlighter-rouge">-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15</code> 或 <code class="language-plaintext highlighter-rouge">-Xmx1G -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15</code>）</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HMCL_JAVA_HOME</code></td>
+      <td>自定义 HMCLauncher 所使用的 Java 路径</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HMCL_FONT</code></td>
+      <td>指定启动器使用的字族</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HMCL_JRES</code></td>
+      <td>添加 HMCL 所使用的 Java 路径，支持写入多个路径</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="如何使用-jvm-选项">如何使用 JVM 选项</h2>
+
+<p>你可以通过以下几种方式使用这些 JVM 选项。</p>
+
+<h3 id="方法一直接在命令行中添加">方法一：直接在命令行中添加</h3>
+
+<p>在启动 HMCL 时通过命令行添加参数，例如：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-Dhmcl</span>.home<span class="o">=</span><span class="s2">"D:/Games/HMCL"</span> <span class="nt">-jar</span> HMCL.jar
+</code></pre></div></div>
+
+<h3 id="方法二创建启动脚本">方法二：创建启动脚本</h3>
+
+<ol>
+  <li>Windows 用户可以创建 <code class="language-plaintext highlighter-rouge">.cmd</code> 文件：
+    <div class="language-batch highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>@echo <span class="na">off</span>
+<span class="kd">java</span> <span class="na">-Dhmcl</span>.font.override<span class="o">=</span><span class="s2">"Microsoft YaHei"</span> <span class="na">-jar </span><span class="kd">HMCL</span>.jar
+<span class="nb">pause</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Linux/macOS 用户可以创建 <code class="language-plaintext highlighter-rouge">.sh</code> 文件：
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+java <span class="nt">-Dhmcl</span>.font.override<span class="o">=</span><span class="s2">"Noto Sans CJK SC"</span> <span class="nt">-jar</span> HMCL.jar
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="使用注意事项">使用注意事项</h3>
+
+<ul>
+  <li>可以同时使用多个参数，只需要用空格分隔</li>
+  <li>包含空格的参数值需要用半角引号包裹</li>
+  <li>确保 JVM 参数位于 <code class="language-plaintext highlighter-rouge">-jar HMCL.jar</code> 之前</li>
+</ul>
+
+<h2 id="如何使用环境变量">如何使用环境变量</h2>
+
+<h3 id="windows-设置环境变量">Windows 设置环境变量</h3>
+
+<ol>
+  <li>右键点击“此电脑”/“这台电脑”/“我的电脑”，选择“属性”</li>
+  <li>点击“高级系统设置”</li>
+  <li>点击“环境变量”</li>
+  <li>在“用户变量”或“系统变量”中点击“新建”</li>
+  <li>输入变量名（如 <code class="language-plaintext highlighter-rouge">HMCL_JAVA_HOME</code>）和变量值</li>
+  <li>点击“确定”保存</li>
+</ol>
+
+<p>示例值：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>变量名: HMCL_JAVA_HOME
+变量值: C:\Program Files\Java\jdk-17
+</code></pre></div></div>
+
+<h3 id="linuxmacos-设置环境变量">Linux/macOS 设置环境变量</h3>
+
+<ol>
+  <li>编辑你的 Shell 配置文件（比如 <code class="language-plaintext highlighter-rouge">~/.bashrc</code>、<code class="language-plaintext highlighter-rouge">~/.zshrc</code> 等）</li>
+  <li>添加 <code class="language-plaintext highlighter-rouge">export</code> 语句：</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HMCL_JAVA_HOME</span><span class="o">=</span><span class="s2">"/usr/lib/jvm/java-17-openjdk"</span>
+<span class="nb">export </span><span class="nv">HMCL_JAVA_OPTS</span><span class="o">=</span><span class="s2">"-XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=15"</span>
+</code></pre></div></div>
+
+<ol>
+  <li>保存文件并重新加载配置：
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc  <span class="c"># 或 `source ~/.zshrc`</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="使用注意事项-1">使用注意事项</h3>
+
+<ul>
+  <li>设置环境变量后需要重启 HMCL 才能生效</li>
+  <li>如果同时设置了 JVM 参数和环境变量，JVM 参数优先级更高</li>
+  <li>Windows 用户注意使用半角分号（;）分隔多个路径</li>
+  <li>Linux/macOS 用户注意使用半角冒号（:）分隔多个路径</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[配置 JVM 参数和环境变量的说明]]></summary></entry><entry><title type="html">使用密码登录微软账户</title><link href="https://docs.hmcl.net/launcher/use-password-login-microsoft-account.html" rel="alternate" type="text/html" title="使用密码登录微软账户" /><published>2024-07-21T17:50:00+08:00</published><updated>2024-07-21T17:50:00+08:00</updated><id>https://docs.hmcl.net/launcher/use-password-login-microsoft-account</id><content type="html" xml:base="https://docs.hmcl.net/launcher/use-password-login-microsoft-account.html"><![CDATA[<h1 id="为什么使用密码登录">为什么使用密码登录</h1>
+
+<p>我们发现，某些账户在尝试通过非密码方式登录时，可能会遇到设备代码流授权问题，从而无法成功登录。而建议这些用户改用密码登录后，他们的登录成功率显著提高。</p>
+
+<h1 id="如何使用密码登录微软账户">如何使用密码登录微软账户</h1>
+
+<ul>
+  <li>在执行登录操作时，注意检查登录页面是否有“其他登录方式”的选项。一旦看到此选项，立即点击进行选择。</li>
+</ul>
+
+<p><img src="/assets/img/docs/use-password-login-microsoft-account/1.png" alt="点击“其他登录方法”选项"></p>
+
+<ul>
+  <li>在登录页面，系统会询问您希望采用哪种登录方式。此时，需要选择“使用我的密码”，然后输入密码完成登录。</li>
+</ul>
+
+<p><em>如果没有“使用我的密码”选项，或者忘记了密码，请看 <a href="#%E6%B7%BB%E5%8A%A0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81">下方教程</a></em></p>
+
+<p><img src="/assets/img/docs/use-password-login-microsoft-account/2.png" alt="选择“使用我的密码”"></p>
+
+<h1 id="添加更改密码">添加/更改密码</h1>
+
+<p>部分账户可能并未设置密码登录，或者忘记了密码，请按照以下步骤进行操作：</p>
+
+<ul>
+  <li>
+    <p>前往 <a href="https://account.live.com/password/Change">添加/更改密码</a> 页面；</p>
+  </li>
+  <li>
+    <p>在该页面按照指示添加密码即可。若忘记密码，可选择该页面“忘记密码了?”选项进行找回密码操作。</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/docs/use-password-login-microsoft-account/3.png" alt="添加密码"></p>
+
+<p><img src="/assets/img/docs/use-password-login-microsoft-account/4.png" alt="修改密码"></p>
+
+<p>完成上述操作后再按照 <a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95%E5%BE%AE%E8%BD%AF%E8%B4%A6%E6%88%B7">上方教程</a> 操作即可使用密码登录微软账户。</p>]]></content><author><name>zkitefly</name></author><summary type="html"><![CDATA[本文介绍了如何使用密码登录微软账户及修改密码]]></summary></entry><entry><title type="html">设置项详解</title><link href="https://docs.hmcl.net/launcher/set-item-details.html" rel="alternate" type="text/html" title="设置项详解" /><published>2023-06-09T10:26:00+08:00</published><updated>2023-06-09T10:26:00+08:00</updated><id>https://docs.hmcl.net/launcher/set-item-details</id><content type="html" xml:base="https://docs.hmcl.net/launcher/set-item-details.html"><![CDATA[<h2 id="引言">引言</h2>
+
+<p>本篇文章将从”全局游戏设置”, “通用”, “外观”与”下载”这几个维度, 详细的为您介绍HMCL设置中各个选项的作用, 对于一些能够”见名知意”的条目, 在本篇文章中不过多讨论.</p>
+
+<h3 id="约束与注意">约束与注意</h3>
+
+<p>本篇文章是在 <code class="language-plaintext highlighter-rouge">HMCL-3.5.3.230</code> 版本中编写的, 如果您使用的是旧版本, 请注意有些选项可能不存在.</p>
+
+<!---->
+
+<h2 id="全局游戏设置">全局游戏设置</h2>
+
+<p>这是 HMCL 中的第一个设置项, 也是最重要的设置项之一, 它决定了 HMCL 在启动游戏时的行为.</p>
+
+<h3 id="java路径">Java路径</h3>
+
+<p>众所周知, Minecraft 是由 Java 编写的, 因此在启动游戏时 HMCL 需要知道 Java(JRE<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>) 的安装路径才能启动游戏.</p>
+
+<p>由于 HMCL 本身就是一个 Java 程序, 一般能正常启动 HMCL 就能至少在计算机上找到一个 JRE. 但也会由于一些未知因素导致无法找到 JRE, 这时, 就需要手动指定 JRE 的安装路径.</p>
+
+<p>我们先来讨论能够自动识别的情况:</p>
+
+<p>在 HMCL 启动时, 会根据注册表项, 环境变量, 以及 HMCL 自身的启动路径<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>来寻找 JRE. 如果找到了, 就会在 “Java路径” 这一栏显示出来, 并且在启动游戏时使用这个路径.</p>
+
+<p>上述的情况几乎涵盖了所有, 如果你希望 HMCL 能够自动找到 Java, 就应该使用这些技巧配置好你的计算机环境.</p>
+
+<p>接下来我们讨论不能自动识别的情况:</p>
+
+<p>通常我们安装解压版本的 JRE 都不会被 HMCL 自动找到, 这时, 就需要手动指定 JRE 的安装路径. 你可以展开 “Java路径” 条目(通常是点击条目右侧的三角), 在展开的下拉列表中选中”自定义”条目后点击右侧的文件夹图标, 在弹出的对话框中选择你 Java 可执行文件的路径.</p>
+
+<h4 id="自动选择合适的-java">自动选择合适的 Java</h4>
+
+<p>在1.16.5版本后, Minecraft 的最低支持 Java 版本从 8 提升到了 16. HMCL 可以在已添加的版本中找到最合适的 Java 版本, 并在启动游戏时使用这个版本. 整个过程不需要人力介入.</p>
+
+<h3 id="版本隔离">版本隔离</h3>
+
+<p>这是当前主流启动器都支持的功能, 这个功能能够在尽可能共享依赖库的前提下, 将不同的游戏版本隔离开来, 避免你安装的模组加载器被应用在错误的版本上或是加载到不兼容的版本, 同时最大程度的减少磁盘占用.</p>
+
+<p>此功能的底层原理不在此处过多赘述, 对于用户来说最大的区别就是游戏的实际目录发生了改变, 例如: 提取游戏日志的方式<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>被改变了</p>
+
+<p>原本游戏目录默认应该在 <code class="language-plaintext highlighter-rouge">.minecraft</code> 文件夹, 但在开启版本隔离后, 你实际的游戏目录被切换到了 <code class="language-plaintext highlighter-rouge">.minecraft/versions/游戏版本名称</code>, 这会给一些新手或是习惯于使用正版启动器的玩家带来额外的困惑.</p>
+
+<p>通常来说, 只要你玩的不是未修改过的版本, 都应该打开版本隔离避免引发错误, 这也能在你删除某个游戏版本时将日志等数据一并清除.</p>
+
+<h3 id="游戏内存">游戏内存</h3>
+
+<p>这与你计算机上的 RAM 存储器容量有关, 一般来说选择 “自动分配内存” 选项会得到一个相对合适的值. 但也许会有一些 CPU 性能较差希望用内存来交换的玩家愿意分配更多的内存.</p>
+
+<p>但我告诉您, 这里只是在调整 JVM<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> 能够使用的最大内存容量, 只有在模组 / Minecraft 官方开发者没有手动控制 GC<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> 行为的时候, 才能如你预期的通过内存交换 CPU 时间</p>
+
+<h3 id="启动器可见性">启动器可见性</h3>
+
+<p>这个条目有 4 个选项, 分别是:</p>
+
+<ul>
+  <li>游戏启动后结束启动器</li>
+  <li>游戏启动后隐藏启动器</li>
+  <li>保持启动器可见</li>
+  <li>隐藏启动器并在游戏结束后重新打开</li>
+</ul>
+
+<h4 id="游戏启动后结束启动器">游戏启动后结束启动器</h4>
+
+<p>这个选项特别推荐低性能机器使用, 这能节约一些计算机消耗. 代价是启动器无法很好的捕捉您的游戏崩溃信息与日志.</p>
+
+<h4 id="游戏启动后隐藏启动器">游戏启动后隐藏启动器</h4>
+
+<p>这个选项会在您游戏崩溃时收集您计算机上的相关崩溃信息以供向相关开发人员进行反馈. 代价是需要额外消耗一些计算机资源.</p>
+
+<h4 id="保持启动器可见">保持启动器可见</h4>
+
+<p>这个选项会在整个游戏过程中保持启动器可见, 这会在需要同时启动多个游戏的时候起到帮助. 代价是要消耗更多的计算机资源.</p>
+
+<h4 id="隐藏启动器并在游戏结束后重新打开">隐藏启动器并在游戏结束后重新打开</h4>
+
+<p>如果您需要频繁的在不同版本中切换游戏, 例如测试您的模组兼容性, 评估各版本之间的信息, 那么这个选项将会起到一定的帮助作用.</p>
+
+<h3 id="游戏参数">游戏参数</h3>
+
+<p>关于这点, 我没有找到更多的, 能与游戏同时使用的启动参数</p>
+
+<h3 id="jvm参数">JVM参数</h3>
+
+<p>调整JVM参数能够更细腻的控制 JVM 的行为, 例如是否压缩指针(用 CPU 换内存), 是否频繁 GC(还是用 CPU 换内存)等等, 这些一般都可以通过类似于这篇文章<sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>这样进行调整. 不过要注意的一点是, JVM 参数是由实际实现决定的, 是否使用以及是否支持还要看具体的 JVM 实现.</p>
+
+<h3 id="本地库路径">本地库路径</h3>
+
+<p>在一些例如M1芯片之类的设备上, 通用库类可能都不能正常的工作, 要使用版本特殊提供的库类才能令其正常的工作, 你可以使用这个选项对其进行替换</p>
+
+<h3 id="glfw">GLFW</h3>
+
+<p>GLFW是一个轻量级的C语言库，用于创建和管理 OpenGL 在多个操作系统中的上下文，处理用户输入，以及获取时间和帧缓冲。它支持多个窗口、全屏模式、窗口模式、多个输入设备和剪贴板。GLFW是一个独立于操作系统的库，可以在 Windows, MacOS, Linux 等多个平台上使用。</p>
+
+<p>在Linux下，系统自带的窗口管理器（例如 xorg）通常已经包含了可以与 OpenGL 集成的窗口管理器。因此，使用系统自带的窗口管理器可以避免与其他项目的库冲突，并确保对于系统提供的功能和特性有最好的支持。此外，使用系统自带的窗口管理器也能够最大限度地减少安装和配置上的复杂性。</p>
+
+<p>故此, Linux 玩家推荐使用系统自带的</p>
+
+<h3 id="openal">OpenAL</h3>
+
+<p>OpenAL 是一个跨平台的 3D 音频 API，可以用于在多个操作系统上播放音效和音乐。它支持的特性包括定位、重放、3D 效果、回声、滤波等。可以使用 OpenAL 提供的函数对声源和听者的位置、方向、速度等进行控制，以实现 3D 音频效果。</p>
+
+<p>在 Linux 下 OpenAL 通常可以与 ALSA（高级 Linux 音频体系结构）或 PulseAudio（一种现代的音频子系统）进行集成。使用系统自带的音频支持库，可以确保应用程序与底层音频硬件和设备之间的兼容性，并提供最佳的音频性能和功能。此外使用 OpenAL 也可以让应用程序具有跨平台的特性，可以在多个操作系统上使用相同的代码和资源来实现音频效果。</p>
+
+<p>故此 Linux 用户推荐使用系统自带的</p>
+
+<h2 id="通用">通用</h2>
+
+<p>这里提供了一些 HMCL 的通用参数, 例如启动器是否自动检查更新, 文件下载的缓存目录存放位置, 程序界面的显示语言等. 这些基本都属于 “见名知意” 的范畴, 不需要过多讨论.</p>
+
+<h2 id="外观">外观</h2>
+
+<p>这里提供了一些 HMCL 的外观参数, 例如启动器的主题颜色, 动画显示, 背景图片, 字体等. 这些基本都属于 “见名知意” 的范畴, 不需要过多讨论.</p>
+
+<h2 id="下载">下载</h2>
+
+<h3 id="下载源">下载源</h3>
+
+<p>由于网络环境问题, 在之前下载 Minecraft 可能是一件麻烦事, 但在现在, 我们有了 BMCLAPI<sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> 项目, 该项目无偿为大陆地区用户提供 Minecraft 相关文件的镜像. 但有可能存在延迟, 可以按照自己的需求进行选择.</p>
+
+<h3 id="下载并发数">下载并发数</h3>
+
+<p>提高下载并发数能够最大限度的利用您的网络, 但这不是越高越好的. 提高并发数量会对您的计算机和下载源都带来更高的负载, 由于木桶效应的存在, 本地下行带宽, 下载源上行带宽, 您的磁盘读写速度等这过程中的任何一环都会成为下载途中的瓶颈, 所以不要盲目提高并发数, 推荐的家庭带宽并发数在 8~16 之间.</p>
+
+<h3 id="代理设置">代理设置</h3>
+
+<p>用于解决部分网络不佳或需要连接特殊网段的工具, 能够连接到内网服务器之类的.</p>
+
+<h2 id="特别鸣谢">特别鸣谢</h2>
+
+<ul>
+  <li>huangyuhui</li>
+  <li>GitHub Copilot</li>
+</ul>
+
+<h2 id="参考文章">参考文章</h2>
+
+<!---->
+<!---->
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://www.ibm.com/cn-zh/topics/jre" title="点击查看">什么是JRE?</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="/modpack/bundled-java.html" title="点击查看">整合包自带 Java</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://memoryshadow.cn/index.php/2023/06/03/how-do-i-get-minecraft-game-logs/" title="点击查看">如何获取Minecraft的游戏日志?</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://www.ibm.com/support/pages/ibm-i-%E4%B8%8Ajava-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%80%E4%BB%8B" title="点击查看">什么是JVM?</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://blog.csdn.net/weixin_44908159/article/details/123626886" title="点击查看">什么是GC?</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:6">
+      <p><a href="https://www.ibm.com/docs/zh/integration-bus/10.0?topic=command-jvm-parameter-values" title="点击查看">JVM 参数值</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:7">
+      <p><a href="https://bmclapidoc.bangbang93.com/" title="点击查看">BMCLAPI</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>MemoryShadow</name></author><summary type="html"><![CDATA[HMCL 各项设置的详细说明，包括全局游戏设置、外观、下载等]]></summary></entry><entry><title type="html">同时安装 Fabric &amp;amp; OptiFine</title><link href="https://docs.hmcl.net/launcher/fabric_and_optifine_install.html" rel="alternate" type="text/html" title="同时安装 Fabric &amp;amp; OptiFine" /><published>2023-01-04T11:30:00+08:00</published><updated>2023-01-04T11:30:00+08:00</updated><id>https://docs.hmcl.net/launcher/fabric_and_optifine_install</id><content type="html" xml:base="https://docs.hmcl.net/launcher/fabric_and_optifine_install.html"><![CDATA[<p>在 HMCL 的自动安装中，如果先选择了 Fabric 或 OptiFine ，HMCL 就会提示他们互不兼容。</p>
+
+<p>但在本文档中，通过一些简单的操作就可以同时安装 Fabric &amp; OptiFine 的客户端。</p>
+
+<p>原理是安装 OptiFabric 这个 Fabric 模组，该模组的作用是采用官方的 OptiFine 并在运行时与 Fabric 兼容来实现这一点。</p>
+
+<p><strong>如果你使用 OptiFine 纯粹是为了提高性能、使用缩放按钮或动态照明，那么还有<a href="https://lambdaurora.dev/optifine_alternatives#/">其他模组</a>可以单独实现这些功能，具有更可靠的兼容性。</strong></p>
+
+<h2 id="操作方法">操作方法</h2>
+
+<h3 id="1先选择一个版本并选择-fabric-并安装">1.先选择一个版本，并选择 Fabric ，并安装。</h3>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/1.gif" alt="安装fabric客户端"></p>
+
+<p><em>注：如果你想放置其他的 Fabric 模组，建议一并安装 <strong>Fabric API</strong> ，有些 Fabric 模组会依赖他。</em></p>
+
+<h3 id="2获取并安装-optifabric-模组--optifine">2.获取并安装 OptiFabric 模组 &amp; OptiFine</h3>
+
+<h4 id="获取">获取</h4>
+
+<ul>
+  <li><strong>1）获取 OptiFabric ，可以在他的 <a href="https://www.mcmod.cn/download/1703.html">MC百科下载页面（推荐）</a> <a href="https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all">CurseForge 页面</a> 或在 HMCL 的模组搜索中下载</strong></li>
+</ul>
+
+<p><a href="https://www.mcmod.cn/download/1703.html">MC百科下载页面（推荐）</a></p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/2.png" alt="MC百科下载页面"></p>
+
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/optifabric/files/all">CurseForge页面</a> 下载操作：</p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/5.png" alt="CurseForge页面下载操作"></p>
+
+<p>HMCL 模组搜索下载操作：</p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/6.png" alt="1"></p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/7.png" alt="2"></p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/8.png" alt="3"></p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/9.png" alt="4"></p>
+
+<p><em>注：如果你在HMCL模组搜索中下载时，另存该模组，那么就需要按照下面的模组安装方法来安装。</em></p>
+
+<ul>
+  <li><strong>2）获取 OptiFine ，可以在他的 <a href="https://optifine.net/downloads">页面</a> 或非官方 <a href="https://optifine.cn/downloads">中文页面</a> 中可以下载</strong></li>
+</ul>
+
+<p>OptiFine <a href="https://optifine.net/downloads">页面</a> 操作：</p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/5.png" alt="OptiFine页面操作"></p>
+
+<p>OptiFine 非官方 <a href="https://optifine.cn/downloads">中文页面</a> 操作：</p>
+
+<!-- ![OptiFine非官方中文页面操作](/assets/img/docs/fabric_and_optifine_install/3.png) -->
+
+<h4 id="安装">安装</h4>
+
+<p>进入 要安装模组的游戏版本 的 游戏管理 ，切换到 模组管理 ，在这个页面将 OptiFabric 模组 &amp; OptiFine 添加即可</p>
+
+<p><img src="/assets/img/docs/fabric_and_optifine_install/11.gif" alt="安装模组"></p>
+
+<p><strong>然后在 模组管理 中检查是否有 OptiFabric 模组 &amp; OptiFine !</strong></p>
+
+<p>检查完后，至此就完成啦，直接启动游戏即可。</p>]]></content><author><name>zkitefly</name></author><summary type="html"><![CDATA[本文介绍了如何在 HMCL 中同时安装 OptiFine 和 Fabric]]></summary></entry><entry><title type="html">光影</title><link href="https://docs.hmcl.net/launcher/shader.html" rel="alternate" type="text/html" title="光影" /><published>2021-10-09T23:18:02+08:00</published><updated>2021-10-09T23:18:02+08:00</updated><id>https://docs.hmcl.net/launcher/shader</id><content type="html" xml:base="https://docs.hmcl.net/launcher/shader.html"><![CDATA[<h2 id="安装-optifine">安装 OptiFine</h2>
+
+<h3 id="方式一-全新安装">方式一: 全新安装</h3>
+
+<p>当你在安装新的游戏客户端时候，会看到有个 <code class="language-plaintext highlighter-rouge">OptiFine</code> 的选项。</p>
+
+<p><img src="/assets/img/docs/shader/optifine_install.png" alt="OptiFine_Install"></p>
+
+<p>点开之后会看到有 3 个复选框，一般而言，<code class="language-plaintext highlighter-rouge">正式版</code> 会比 <code class="language-plaintext highlighter-rouge">测试版</code> 更加稳定。选择安装 <code class="language-plaintext highlighter-rouge">正式版</code> ，如果没有 <code class="language-plaintext highlighter-rouge">正式版</code> 那么再考虑 <code class="language-plaintext highlighter-rouge">测试版</code> 。</p>
+
+<p><img src="/assets/img/docs/shader/select_optifine.png" alt="OptiFine_Selection"></p>
+
+<p>选择完合适的版本之后就可以点击右下角的<code class="language-plaintext highlighter-rouge">安装</code>继续进行安装。</p>
+
+<h3 id="方式二-修改升级已安装版本">方式二: 修改/升级已安装版本</h3>
+
+<p>在对应的游戏版本管理页面，点击 <code class="language-plaintext highlighter-rouge">自动安装</code> ，你会看到有个 <code class="language-plaintext highlighter-rouge">OptiFine</code> 的选项。</p>
+
+<p><img src="/assets/img/docs/shader/install_auto-16338577874692.png" alt="OptiFine_AutoInstaller"></p>
+
+<p>点开之后选择合适的版本然后等待安装完成即可。
+目前，如果要在  <code class="language-plaintext highlighter-rouge">Fabric</code> 使用 <code class="language-plaintext highlighter-rouge">OptiFine</code> ，需要通过 <strong>方式四</strong> 安装。</p>
+
+<h3 id="方式三官网安装">方式三：官网安装</h3>
+
+<p>在<a href="https://optifine.net/downloads"> OptiFine 官网</a>上下载合适版本的 OptiFine (下载完应为 <code class="language-plaintext highlighter-rouge">OptiFine_&lt;游戏版本&gt;_&lt;OptiFine版本&gt;.jar</code> ) 。</p>
+
+<p>双击打开或者使用 <code class="language-plaintext highlighter-rouge">java -jar 文件名</code> 的方式打开，然后你就会看到这个界面。</p>
+
+<p><img src="/assets/img/docs/shader/change_path.png" alt="Path_Selection"></p>
+
+<p>选择自己游戏的 <code class="language-plaintext highlighter-rouge">.minecraft 目录</code>（默认安装到 <code class="language-plaintext highlighter-rouge">\AppData\Roaming\.minecraft</code> 目录下），然后点击 <code class="language-plaintext highlighter-rouge">Install</code> 按钮，之后你在 HMCL 的版本列表中就可以找到含有 OptiFine 名字的客户端，启动即可。</p>
+
+<p>如果未找到，请确认你是否已安装对应的版本的客户端，且 <strong>命名为对应版本号</strong> 的原本游戏客户端。</p>
+
+<h3 id="方式四optifine-与-mod-加载器共存">方式四：OptiFine 与 Mod 加载器共存</h3>
+
+<p>从<a href="https://www.optifine.net/"> OptiFine 官网</a>上下载的 Jar 文件本身也可作为 Mod 被加载，可以用 Java 运行下载的文件并导出 Mod 版本。Mod 安装具体方法见 <a href="/launcher/auto-installing.html"> Mod 安装教程</a></p>
+
+<p>注意：</p>
+
+<ol>
+  <li>
+    <p>Fabric 和 OptiFine 本身并不能共存，必须同时安装<a href="https://www.curseforge.com/minecraft/mc-mods/optifabric"> OptiFabric </a> (一个 Fabric Mod ) 。
+  OptiFabric 目前 1.17 仅支持 <code class="language-plaintext highlighter-rouge">OptiFine HD U G9</code> ，<code class="language-plaintext highlighter-rouge">Fabric</code> 最高支持的版本为 <code class="language-plaintext highlighter-rouge">0.11.7</code> 。</p>
+  </li>
+  <li>
+    <p>Forge 和 OptiFine 会出现不兼容的情况，但大多数情况下，Forge 和 OptiFine 是相互支持的。在<a href="https://optifine.net/downloads"> OptiFine 官网下载页面 </a>可以查看OptiFine与Forge的兼容情况，位置见下图的红框位置。</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/docs/shader/optifine_compatibility.png" alt="OptiFine_Compatibility"></p>
+
+<ol>
+  <li>若出现不兼容的情况，请使用<a href="https://www.curseforge.com/minecraft/mc-mods/optiforge"> OptiForge </a> (一个 Forge Mod ) 或者等待OptiFine兼容Forge解决。</li>
+</ol>
+
+<h2 id="安装oculus一个-forge-mod">安装Oculus（一个 Forge Mod）</h2>
+
+<p>在高版本的OptiFine中，OptiFine与mod的兼容性较差，以及对性能提升较小，所以可以安装Oculus，但Oculus与OptiFine不兼容，注意依赖关系，Oculus需要前置Rubidium</p>
+
+<p><img src="/assets/img/docs/shader/oculus.png" alt="Oculus"></p>
+
+<p>相关链接：<a href="https://www.curseforge.com/minecraft/mc-mods/oculus"> Oculus Curseforge </a>，<a href="https://modrinth.com/mod/oculus"> Oculus Modrinth </a>，<a href="https://www.curseforge.com/minecraft/mc-mods/rubidium"> Rubidium Curseforge </a>，<a href="https://modrinth.com/mod/rubidium"> Rubidium Modrinth </a></p>
+
+<h2 id="安装iris-shaders一个fabricquilt-mod">安装Iris Shaders（一个Fabric/Quilt Mod）</h2>
+
+<p>在Fabric中，也可以安装Iris Shaders来安装光影，注意依赖关系，Iris Shaders需要前置Sodium</p>
+
+<p><img src="/assets/img/docs/shader/iris.png" alt="Iris"></p>
+
+<p>相关链接：<a href="https://irisshaders.dev/"> Iris Shaders官网 </a>，<a href="https://modrinth.com/mod/iris"> Iris Shaders Modrinth </a>，<a href="https://www.curseforge.com/minecraft/mc-mods/irisshaders"> Iris Shaders Curseforge（不再更新，请到官网或Modrinth下载最新版本） </a>，<a href="https://modrinth.com/mod/sodium"> Sodium Modrinth </a>，<a href="https://www.curseforge.com/minecraft/mc-mods/sodium"> Sodium Curseforge（不再更新，请在Modrinth下载） </a></p>
+
+<h2 id="安装光影包">安装光影包</h2>
+
+<p>一般光影是一个 Zip 格式的文件，将光影文件放入 <code class="language-plaintext highlighter-rouge">\.minecraft\shaderpacks</code> 文件夹中即可 (没有这个文件夹就自己新建一个) 。如果开了版本隔离，那么文件夹是 <code class="language-plaintext highlighter-rouge">\.minecraft\version\&lt;客户端名称&gt;\shaderpacks</code>。若你不知道游戏文件夹在哪，在HMCL中打开游戏文件夹。</p>
+
+<p><img src="/assets/img/docs/shader/game_dir.png" alt="Game_Dir"></p>
+
+<p>如果你不知道版本隔离是啥，也不会创建文件夹，那么请打开游戏，依次点击 <code class="language-plaintext highlighter-rouge">设置—视频设置—光影—光影包文件夹</code> ，在里面放入光影包，然后点击你要加载的光影，最后点击 <code class="language-plaintext highlighter-rouge">完成</code> 即可</p>
+
+<p><img src="/assets/img/docs/shader/shaders_setting.png" alt="Shader_Settings"></p>
+
+<p><strong>注意：光影对于电脑配置的要求比较高，如果开了光影之后出现游戏画面很卡的情况，请升级电脑配置、使用低配置光影或者关闭光影。</strong></p>]]></content><author><name></name></author><summary type="html"><![CDATA[光影的安装方法，包括 OptiFine、Oculus 和 Iris Shaders]]></summary></entry><entry><title type="html">全局版本隔离</title><link href="https://docs.hmcl.net/launcher/isolation.html" rel="alternate" type="text/html" title="全局版本隔离" /><published>2021-10-09T23:18:02+08:00</published><updated>2025-12-03T14:31:42+08:00</updated><id>https://docs.hmcl.net/launcher/isolation</id><content type="html" xml:base="https://docs.hmcl.net/launcher/isolation.html"><![CDATA[<p>请注意该方法会改变默认的游戏文件结构。</p>
+
+<h2 id="使用方式">使用方式</h2>
+
+<p>进入 hmcl 的 <code class="language-plaintext highlighter-rouge">设置</code></p>
+
+<p><img src="/assets/img/docs/isolation/img1.png" alt=""></p>
+
+<p>在全局游戏设置中找到 <code class="language-plaintext highlighter-rouge">版本隔离</code> 并设置为 <code class="language-plaintext highlighter-rouge">各实例独立</code></p>
+
+<p><img src="/assets/img/docs/isolation/img2.png" alt=""></p>
+
+<p>这时候 minecraft 的文件结构就会有所改变，如下方</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.minecraft
+├── asstes
+├── libraries
+└── versions
+    └── 1.16.5-optifine
+        ├── 1.16.5-optifine.jar
+        ├── saves
+        ├── resourcepacks
+        ├── logs
+        ├── mods
+        └── ...
+</code></pre></div></div>
+
+<p>并非在 .minecraft 文件夹中存储一切的 mod 和 资源包<strong>而是各版本的资源互相独立</strong></p>
+
+<p>这样你就可以在一个目录下，安装多个客户端</p>
+
+<h2 id="往后的使用">往后的使用</h2>
+
+<p>在做完版本隔离的设置后，hmcl 的快速打开各个游戏文件夹的功能就会显得十分好用。</p>
+
+<p><img src="/assets/img/docs/isolation/img3.png" alt=""></p>
+
+<p><del>善用该功能也可为你的磁盘剩下不少的空间</del>，现在反思过来其实都差不多</p>]]></content><author><name>LIPiston</name></author><summary type="html"><![CDATA[避免多个游戏版本的存档、模组和配置冲突]]></summary></entry><entry><title type="html">数据包制作指南</title><link href="https://docs.hmcl.net/launcher/datapack.html" rel="alternate" type="text/html" title="数据包制作指南" /><published>2021-08-22T23:18:02+08:00</published><updated>2021-08-22T23:18:02+08:00</updated><id>https://docs.hmcl.net/launcher/datapack</id><content type="html" xml:base="https://docs.hmcl.net/launcher/datapack.html"><![CDATA[<p>本指南只介绍如何制作一个 HMCL 可导入的数据包压缩包。</p>
+
+<h2 id="建议">建议</h2>
+
+<p>始终建议你使用多数据包格式制作数据包压缩包，因为 HMCL 会删除重名的数据包，因此可以借此完成更新功能，只要直接导入新的多数据包格式的压缩包就可以完成更新你制作的数据包。</p>
+
+<h2 id="多数据包">多数据包</h2>
+
+<p>如果你的数据包被分离成多个部分供玩家选择是否启用，或者需要自带资源包，那么你需要制作多数据包格式的压缩包。</p>
+
+<p>多数据包文件（只能是一个 <code class="language-plaintext highlighter-rouge">.zip</code> 文件）格式例子如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crafting++.zip
+\
+* datapacks
+  |\
+  | * block_sky_domain (一个合法的数据包)
+  | * crafting_machine
+  | * craftingpp
+  | * tradepp
+  | * utilitypp
+  |
+* resources.zip (如果你的数据包需要附带材质)
+  \
+    * assets
+      \
+        * ...
+</code></pre></div></div>
+
+<p>其中，<code class="language-plaintext highlighter-rouge">datapacks</code> 下的文件格式和 <code class="language-plaintext highlighter-rouge">.minecraft/saves/New World/datapacks</code> 的一样，因此可直接手动打包你本地的 <code class="language-plaintext highlighter-rouge">datapacks</code> 文件夹，
+就可以直接导入 HMCL 了。如果还需要资源文件，请在压缩包内附带上。</p>
+
+<p>此外，<code class="language-plaintext highlighter-rouge">resources.zip</code> 文件的格式和 <code class="language-plaintext highlighter-rouge">.minecraft/saves/New World/resources.zip</code> 的格式一样，
+导入数据包时，启动器将会合并世界附带的默认资源包和你的数据包附带的资源包，如果有重复的文件，旧的文件将被覆盖。
+如果你的服务器使用了包含资源包的数据包，那么请在服务器上完成这个操作，接着玩家下载服务器资源包即可。</p>
+
+<h2 id="单数据包">单数据包</h2>
+<p>如果你的数据包不需要资源文件，那么你直接打包 <code class="language-plaintext highlighter-rouge">datapacks/&lt;你的数据包名称&gt;</code> 文件夹，即可直接导入 HMCL。</p>
+
+<p>单数据包文件（只能是一个 <code class="language-plaintext highlighter-rouge">.zip</code> 文件）格式例子如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RealisticGlassPane.zip
+\
+* pack.mcmeta
+* data
+  \
+    * 一些文件
+</code></pre></div></div>
+
+<p>HMCL 将会将你打包好的数据包压缩包直接复制到 datapacks 文件夹，不会解压（因为原版游戏支持读取压缩包）。</p>]]></content><author><name>huanghongxun</name></author><summary type="html"><![CDATA[制作可以由 HMCL 导入的数据包]]></summary></entry></feed>
