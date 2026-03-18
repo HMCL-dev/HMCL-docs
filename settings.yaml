@@ -37,4 +37,12 @@ data:
           sunrise: 日出 (Sunrise)
           catppuccin_latte: Catppuccin Latte
           catppuccin_mocha: Catppuccin Mocha
+  - title: 杂项
+    settings:
+      miscellaneous_hits:
+        title: 访问统计服务
+        description: 用于统计页面访问量的服务。
+        options:
+          enable: 启用
+          disable: 禁用
 ---

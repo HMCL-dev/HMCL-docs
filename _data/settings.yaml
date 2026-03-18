@@ -31,3 +31,9 @@ appearance_skin:
     - sunrise
     - catppuccin_latte
     - catppuccin_mocha
+miscellaneous_hits:
+  type: radio
+  default: enable
+  options:
+    - enable
+    - disable
