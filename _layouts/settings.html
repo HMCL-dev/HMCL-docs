@@ -1,46 +1,55 @@
 ---
-layout: document
+layout: single
 ---
 
-{% for group in page.data %}
-
-{% capture notice %}
-
-## {{ group.title }}
-
+{%- for group in page.data %}
+<h2 id="{{ group.title }}">{{ group.title }}</h2>
 {% for pair in group.settings %}
 {% assign name = pair[0] %}
 {% assign value = pair[1] %}
 {% assign setting = site.data.settings[name] %}
-
-{% if setting.type == 'radio' %}
 <div class="notice">
-  <ul class="task-list">
-    <li><strong>{{ value.title }}</strong></li>
-    <li>{{ value.description }}</li>
-    {% for option in setting.options %}
-    <li class="task-list-item">
-      <input type="radio" class="task-list-item-checkbox" name="{{ name }}" value="{{ option }}" id="{{ name }}_{{ option }}"{% if setting.default == option %} checked{% endif %}><label for="{{ name }}_{{ option }}">{{ value.options[option] }}</label>
-    </li>
-    {% endfor %}
-  </ul>
+  <h3 id="{{ group.title }}-{{ value.name }}">{{ value.title }}</h3>
+  {% if value.description %}<p>{{ value.description }}</p>{% endif %}
+  {% if setting.type == 'radio' %}
+  {% for option in setting.options %}
+  <label>
+    <input type="radio"{% if setting.default == option %} checked{% endif %} class="setting-item" name="{{ name }}" value="{{ option }}">
+    {{ value.options[option] }}
+  </label>
+  {% endfor %}
+  {% elsif setting.type == 'multi-radio' %}
+  <table class="setting-multi-radio">
+    <thead>
+      <tr>
+        <th>{{ value.title }}</th>
+        {% for item in setting.children %}
+        {% capture item_name %}{{ item[0] }}{% endcapture %}
+        <th>{{ value.children[item_name] }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for option in setting.options %}
+      <tr>
+        <th>{{ value.options[option] }}</th>
+        {% for item in setting.children %}
+        <td><input class="setting-item"{% if item[1].default == option %} checked{% endif %} type="radio" name="{{ name }}.{{ item[0] }}" value="{{ option }}"></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
 </div>
+{% endfor %}
+{% endfor %}
 
 <script>
-  settings.onChange("{{ name }}", function (newValue, oldValue) {
-    var list = document.getElementsByName("{{ name }}");
-    for (var i = 0; i < list.length; i++) {
-      list[i].checked = list[i].value === newValue;
-      list[i].onchange = function () {
-        if (this.checked) {
-          settings.set(this.name, this.value);
-        }
-      }
-    }
-  });
+  for (const settingItem of document.getElementsByClassName("setting-item")) {
+    settingItem.addEventListener("change", ({ target }) => settings.set(target.name, target.value));
+    settings.onChange(settingItem.name, (value) => settingItem.type === "radio" && (settingItem.checked = settingItem.value === value));
+  }
 </script>
-{% endif %}
-{% endfor %}
-{% endcapture %}
-{{ notice | markdownify }}
-{% endfor %}
+
+<style>.notice label input { display: inline }</style>
