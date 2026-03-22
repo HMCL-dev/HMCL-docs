@@ -71,8 +71,8 @@ author: zkitefly
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("alert-modal");
-  var show = localStorage.getItem("crash-support-group.show");
-  if (show === "1") {
+  var status = settings.get("crash_support_group_rule");
+  if (status === "agree") {
     modal.style.display = "none";
     return;
   }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000);
   btn.addEventListener("click", function () {
-    localStorage.setItem("crash-support-group.show", "1");
+    settings.set("crash_support_group_rule", "agree");
     modal.style.display = "none";
   }, false);
 });
