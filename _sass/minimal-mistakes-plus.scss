@@ -11,14 +11,16 @@ blockquote {
   word-break: break-word;
 }
 
-.notice ul:first-child {
-  margin-top: 0;
-}
-
-.task-list-item label {
-  display: inline
-}
-
-.m0 {
+.preview {
+  top: 0;
+  z-index: 999;
+  padding: 0.4em;
+  position: sticky;
   margin: 0 !important;
+}
+
+table.setting-multi-radio td {
+  border: 0;
+  text-align: center;
+  border-left: 1px solid mix(#000, $border-color, 25%);
 }

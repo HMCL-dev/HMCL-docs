@@ -1,76 +1,36 @@
 ---
 layout: null
 ---
-(function (global) {
-  var PREFIX = "HMCL_DOCS_SETTINGS_";
-  var data = {};
-  var events = {};
-  var config = /*{%comment%}*/{}/*{%endcomment%}*//**{{'/'}}{{ site.data.settings | jsonify }}/**/;
-
-  global.addEventListener("storage", function (event) {
-    if (!event.key) return;
-    if (event.key.indexOf(PREFIX) !== 0) return;
-
-    var handlers = events[event.key];
-    if (!handlers) return;
-
-    var newValue = event.newValue;
-    var oldValue = event.oldValue;
-    if (oldValue === newValue) return;
-
-    data[event.key] = newValue;
-    for (var i = 0; i < handlers.length; i++) {
-      if (typeof handlers[i] === "function") {
-        handlers[i](newValue, oldValue);
-      }
+(function () {
+  const PREFIX = "HMCL_DOCS_SETTINGS_", data = {}, bus = new EventTarget(), configs = /*{%comment%}*/{}/*{%endcomment%}*/ /**{{'/'}}{{ site.data.settings | jsonify }}/**/;
+  window.addEventListener("storage", ({ key, newValue }) => key !== null && key.startsWith(PREFIX) && newValue !== data[key] && bus.dispatchEvent(new CustomEvent(key, { detail: (data[key] = newValue) })));
+  for (const [key, config] of Object.entries(configs)) {
+    if (config.children === undefined) continue; 
+    for (const [childKey, child] of Object.entries(config.children)) {
+      configs[`${key}.${childKey}`] = { ...config, ...child };
     }
-  });
-
-  var settings = {
-    set: function (key, value) {
-      if (config[key] === undefined) return;
-      var strKey = (PREFIX + key).toUpperCase();
-      var newValue = value + "";
-      data[strKey] = newValue;
-      localStorage.setItem(strKey, newValue);
-      var handlers = events[strKey];
-      if (!handlers) return;
-
-      for (var i = 0; i < handlers.length; i++) {
-        if (typeof handlers[i] === "function") {
-          handlers[i](newValue);
-        }
-      }
+  }
+  const formatKey = (key) => PREFIX + key.toUpperCase().replaceAll(".", "_");
+  window.settings = {
+    set(key, value) {
+      const name = formatKey(key);
+      localStorage.setItem(name, (data[name] = String(value)));
+      bus.dispatchEvent(new CustomEvent(name, { detail: data[name] }));
     },
-
-    get: function (key, defaultValue) {
-      if (config[key] === undefined) return;
-      var strKey = (PREFIX + key).toUpperCase();
-      data.hasOwnProperty(strKey) || (data[strKey] = localStorage.getItem(strKey));
-      if (typeof defaultValue === "string" && data[strKey] === null) {
-        return defaultValue;
-      }
-      return data[strKey];
+    get(key) {
+      const name = formatKey(key);
+      if (data[name] !== undefined) return data[name];
+      const value = localStorage.getItem(name);
+      if (value !== null) return data[name] = value;
+      const config = configs[key];
+      if (config === undefined || typeof config.default !== "string") return null;
+      return config.default;
     },
-
-    refresh: function (key) {
-      if (config[key] === undefined) return;
-      settings.set(key, settings.get(key, config[key].default));
+    onChange(key, handler) {
+      const value = this.get(key);
+      if (value === null) return;
+      handler(value);
+      bus.addEventListener(formatKey(key), (event) => handler(event.detail));
     },
-
-    onChange: function (key, handler) {
-      if (config[key] === undefined) return;
-      if (typeof handler !== "function") return;
-      var strKey = (PREFIX + key).toUpperCase();
-      if (config[key].type === "radio") {
-        handler(settings.get(key, config[key].default));
-      }
-      if (!events[strKey]) {
-        events[strKey] = [handler];
-      } else {
-        events[strKey].push(handler);
-      }
-    }
   };
-  global.settings = settings;
-})(window);
+})();
