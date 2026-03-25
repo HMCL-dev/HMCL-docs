@@ -5,7 +5,7 @@ date: 2024-03-05 17:00:00 +0800
 author: zkitefly
 ---
 
-<!----{{'>'}}<div id="alert-modal" class="mfp-hide notice"><!---->
+<!----{{'>'}}<div id="alert-modal" class="mfp-hide well"><!---->
 <h1 id="" class="text-center">加入群聊前请注意</h1>
 
 <ul class="task-list">
