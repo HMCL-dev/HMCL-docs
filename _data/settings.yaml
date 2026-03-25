@@ -5,9 +5,19 @@ appearance_color:
     - light
     - dark
     - auto
-appearance_skin_light:
+appearance_color_switcher:
   type: radio
-  default: default
+  default: enable
+  options:
+    - enable
+    - disable
+appearance_skin:
+  type: multi-radio
+  children:
+    light:
+      default: default
+    dark:
+      default: dark
   options:
     - default
     - air
@@ -19,17 +29,5 @@ appearance_skin_light:
     - mint
     - plum
     - sunrise
-appearance_skin_dark:
-  type: radio
-  default: dark
-  options:
-    - default
-    - air
-    - aqua
-    - contrast
-    - dark
-    - dirt
-    - neon
-    - mint
-    - plum
-    - sunrise
+    - catppuccin_latte
+    - catppuccin_mocha
