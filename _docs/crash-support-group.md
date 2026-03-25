@@ -24,7 +24,7 @@ author: zkitefly
 
 <hr>
 <!----{{'>'}}
-<button id="close-btn" class="btn btn--large align-center" disabled>请认真阅读并等待 <span id="countdown">5</span> 秒</button>
+<button id="close-btn" class="btn btn--large btn--primary align-center" disabled>请认真阅读并等待 <span id="countdown">5</span> 秒</button>
 {% include post_pagination.html %}
 </div>
 {{'<'}}!---->
