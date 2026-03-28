@@ -63,8 +63,8 @@ module Link
           uri.path = "#{Link::HtmlExtension.baseurl}#{uri.path}"
           return uri.to_s
         end
-        input
       end
+      input
     end
   end
 end
