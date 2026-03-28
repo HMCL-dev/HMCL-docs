@@ -37,4 +37,4 @@ module Alert
   end
 end
 
-Kramdown::Converter::Html.prepend(Alerts::HtmlExtension)
+Kramdown::Converter::Html.prepend(Alert::HtmlExtension)
