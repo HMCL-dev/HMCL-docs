@@ -3,6 +3,26 @@
 blockquote {
   margin-inline: 0;
   font-style: normal;
+
+  &[data-type="note"] {
+    @extend .notice--info;
+  }
+
+  &[data-type="tip"] {
+    @extend .notice--success;
+  }
+
+  &[data-type="important"] {
+    @extend .notice--primary;
+  }
+
+  &[data-type="warning"] {
+    @extend .notice--warning;
+  }
+
+  &[data-type="caution"] {
+    @extend .notice--danger;
+  }
 }
 
 * {
