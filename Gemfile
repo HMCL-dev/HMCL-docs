@@ -33,4 +33,3 @@ gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
 gem "nokogiri", "1.18.10"
-gem "addressable", "2.8.7"
