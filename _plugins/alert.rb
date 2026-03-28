@@ -1,6 +1,3 @@
-require "kramdown/converter/html"
-require "kramdown/element"
-
 module Alert
   module HtmlExtension
     def convert_blockquote(el, indent)
