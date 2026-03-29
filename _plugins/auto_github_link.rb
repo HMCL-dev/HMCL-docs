@@ -15,7 +15,7 @@ module AutoGithubLink
             else
               "https://github.com/HMCL-dev/HMCL/commit/#{item[3..]}"
             end
-          link = Kramdown::Element.new(:a, nil, {"href": href})
+          link = Kramdown::Element.new(:a, nil, {"href": href, "target": "_blank"})
           link.children = [Kramdown::Element.new(:text, item, nil, :github_link => true)]
           link
         else
