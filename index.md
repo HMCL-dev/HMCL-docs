@@ -23,7 +23,7 @@ title: 新手导航
 {% for group in site.data.navigation.docs -%}
 ## {{ group.title }}
 {% for item in group.children -%}
-1. [{{ item.title }}]({{ item.url | relative_url }})
+1. [{{ item.title }}]({{ item.url }})
 {%- if item.description %}\
    {{ item.description }}
 {%- endif %}
