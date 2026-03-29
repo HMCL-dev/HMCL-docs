@@ -21,29 +21,29 @@ module Link
     end
 
     def convert_a(el, indent)
-      unless el.attr["data-relative"]
+      unless el.options[:relative]
         el.attr["href"] = relative_url(el.attr["href"])
-        el.attr["data-relative"] = ""
+        el.options[:relative] = true
       end
       super
     end
 
     def convert_img(el, indent)
-      unless el.attr["data-relative"]
+      unless el.options[:relative]
         el.attr["src"] = relative_url(el.attr["src"])
-        el.attr["data-relative"] = ""
+        el.options[:relative] = true
       end
       super
     end
 
     def convert_html_element(el, indent)
-      unless el.attr["data-relative"]
+      unless el.options[:relative]
         if el.value == "a"
           el.attr["href"] = relative_url(el.attr["href"])
-          el.attr["data-relative"] = ""
+          el.options[:relative] = true
         elsif el.value == "img"
           el.attr["src"] = relative_url(el.attr["src"])
-          el.attr["data-relative"] = ""
+          el.options[:relative] = true
         end
       end
       super
