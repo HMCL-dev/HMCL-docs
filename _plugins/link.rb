@@ -1,3 +1,5 @@
+require "webp-ffi" if ENV["WEBP"] == "enabled"
+
 module Link
   class WebpFile < Jekyll::StaticFile
     def write(dest)
@@ -110,16 +112,15 @@ Jekyll::Hooks.register :site, :post_read do |site|
   webp_list = []
   site.each_site_file do |file|
     Link::HtmlExtension.file[file.relative_path] = file
-    require "webp-ffi" if ENV["JEKYLL_ENV"] == "production" && ENV["WEBP"] == "enabled"
-    if file.is_a?(Jekyll::StaticFile) && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+    if file.is_a?(Jekyll::StaticFile)
       url = "#{file.url}.webp"
       source = "#{file.path}.webp"
       destination = File.join(site.dest, url)
-      if File.exist?(source) || ENV["JEKYLL_ENV"] == "production" && ENV["WEBP"] == "enabled"
-        unless File.exist?(source)
-          FileUtils.mkdir_p(File.dirname(destination))
-          WebP.encode(file.path, destination)
-        end
+      if File.exist?(source)
+        Link::HtmlExtension.webp[file.url] = url
+      elsif ENV["WEBP"] == "enabled" && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+        FileUtils.mkdir_p(File.dirname(destination))
+        WebP.encode(file.path, destination)
         webp_list.push(Link::WebpFile.new(site, site.dest, File.dirname(url), File.basename(url)))
         Link::HtmlExtension.webp[file.url] = url
       end

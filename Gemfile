@@ -33,5 +33,4 @@ gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
 gem "nokogiri", "1.18.10"
-gem "addressable", "2.8.7"
-gem "webp-ffi", "0.4.0" if ENV["JEKYLL_ENV"] == "production" && ENV["WEBP"] == "enabled"
+gem "webp-ffi", "0.4.0" if ENV["WEBP"] == "enabled"
