@@ -33,3 +33,9 @@ appearance_skin_dark:
     - mint
     - plum
     - sunrise
+crash_support_group_rule:
+  type: radio
+  default: disagree
+  options:
+    - disagree
+    - agree
