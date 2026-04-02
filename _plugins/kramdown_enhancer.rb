@@ -1,43 +1,54 @@
 require "webp-ffi" if ENV["WEBP"] == "enabled" || ENV["CI"] == "true"
 
-module Link
+module KramdownEnhancer
+  class << self
+    def webp
+      @webp ||= {}
+    end
+
+    def file
+      @file ||= {}
+    end
+
+    def baseurl
+      @baseurl
+    end
+
+    def baseurl=(input)
+      @baseurl =
+        if input.is_a?(String) && !input.empty?
+          str = input.start_with?("/") ? input : "/#{input}"
+          str.chomp("/")
+        else
+          ""
+        end
+    end
+
+    def blockquote_types
+      @blockquote_types ||= {
+        :note => "notice--info",
+        :tip => "notice--success",
+        :important => "notice--primary",
+        :warning => "notice--warning",
+        :caution => "notice--danger",
+      }
+    end
+  end
+
   class WebpFile < Jekyll::StaticFile
     def write(dest)
       true
     end
   end
 
-  module HtmlExtension
-    class << self
-      def webp
-        @webp ||= {}
-      end
-
-      def file
-        @file ||= {}
-      end
-
-      def baseurl
-        @baseurl
-      end
-
-      def baseurl=(input)
-        @baseurl =
-          if input.is_a?(String) && !input.empty?
-            str = input.start_with?("/") ? input : "/#{input}"
-            str.chomp("/")
-          else
-            ""
-          end
-      end
-    end
-
+  module Html
     def convert_a(el, indent)
       if el.attr["href"].is_a?(String) && !el.options[:relative]
         el.attr["href"] = relative_url(el.attr["href"])
         el.options[:relative] = true
       end
-      super(el, indent)
+
+      super
     end
 
     def convert_img(el, indent)
@@ -46,8 +57,8 @@ module Link
         el.attr["src"] = relative_url(src)
         el.options[:relative] = true
 
-        if Link::HtmlExtension.webp[src] && !el.options[:webp] && !el.options[:picture]
-          webp_src = Link::HtmlExtension.webp[src]
+        if KramdownEnhancer.webp[src] && !el.options[:webp] && !el.options[:picture]
+          webp_src = KramdownEnhancer.webp[src]
           pic = Kramdown::Element.new(:html_element, "picture")
           pic.children << Kramdown::Element.new(:html_element, "source", { "srcset" => relative_url(webp_src), "type" => "image/webp" })
           el.options[:picture] = true
@@ -57,7 +68,35 @@ module Link
         end
       end
 
-      super(el, indent)
+      super
+    end
+
+    def convert_blockquote(el, indent)
+      p = el.children.first
+      return super if p&.type != :p || p.children.empty?
+
+      first = p.children.first
+      return super unless first&.type == :text
+
+      text = first.value.downcase
+      KramdownEnhancer.blockquote_types.each do |type, class_name|
+        prefix = "[!#{type}]"
+        prefix_with_newline = "#{prefix}\n"
+
+        # case A: <p>[!NOTE]</p>
+        if text == prefix
+          el.attr["class"] = [el.attr["class"], class_name].compact.join(" ")
+          p.children.shift
+          break
+        # case B: <p>[!NOTE]\n some text</p>
+        elsif text.start_with?(prefix_with_newline)
+          el.attr["class"] = [el.attr["class"], class_name].compact.join(" ")
+          first.value = first.value[prefix_with_newline.length..-1] || ""
+          break
+        end
+      end
+
+      super
     end
 
     def convert_html_element(el, indent)
@@ -70,8 +109,8 @@ module Link
           el.attr["src"] = relative_url(el.attr["src"])
           el.options[:relative] = true
 
-          if Link::HtmlExtension.webp[src] && !el.options[:webp] && !el.options[:picture]
-            webp_src = Link::HtmlExtension.webp[src]
+          if KramdownEnhancer.webp[src] && !el.options[:webp] && !el.options[:picture]
+            webp_src = KramdownEnhancer.webp[src]
             pic = Kramdown::Element.new(:html_element, "picture")
             pic.children << Kramdown::Element.new(:html_element, "source", { "srcset" => relative_url(webp_src), "type" => "image/webp" })
             el.options[:webp] = true
@@ -95,10 +134,10 @@ module Link
         uri = Addressable::URI.parse(input)
         if uri
           if uri.path.length > 1
-            file = Link::HtmlExtension.file[uri.path[1..]]
+            file = KramdownEnhancer.file[uri.path[1..]]
             uri.path = file.url if file
           end
-          uri.path = "#{Link::HtmlExtension.baseurl}#{uri.path}"
+          uri.path = "#{KramdownEnhancer.baseurl}#{uri.path}"
           return uri.to_s
         end
       end
@@ -108,25 +147,25 @@ module Link
 end
 
 Jekyll::Hooks.register :site, :post_read do |site|
-  Link::HtmlExtension.baseurl = site.config["baseurl"]
+  KramdownEnhancer.baseurl = site.config["baseurl"]
   webp_list = []
   webp_enabled = ENV["WEBP"] == "enabled" || ENV["CI"] == "true"
   site.each_site_file do |file|
-    Link::HtmlExtension.file[file.relative_path] = file
+    KramdownEnhancer.file[file.relative_path] = file
     if file.is_a?(Jekyll::StaticFile)
       url = "#{file.url}.webp"
       source = "#{file.path}.webp"
       destination = File.join(site.dest, url)
       if File.exist?(source)
-        Link::HtmlExtension.webp[file.url] = url
-      elsif if webp_enabled && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+        KramdownEnhancer.webp[file.url] = url
+      elsif webp_enabled && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
         FileUtils.mkdir_p(File.dirname(destination))
         WebP.encode(file.path, destination)
-        webp_list.push(Link::WebpFile.new(site, site.dest, File.dirname(url), File.basename(url)))
-        Link::HtmlExtension.webp[file.url] = url
+        webp_list.push(KramdownEnhancer::WebpFile.new(site, site.dest, File.dirname(url), File.basename(url)))
+        KramdownEnhancer.webp[file.url] = url
       end
     end
   end
   site.static_files.concat(webp_list)
-  Kramdown::Converter::Html.prepend(Link::HtmlExtension)
+  Kramdown::Converter::Html.prepend(KramdownEnhancer::Html)
 end
