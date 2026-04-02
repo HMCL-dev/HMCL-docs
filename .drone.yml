@@ -9,7 +9,6 @@ steps:
 - name: build
   image: ruby:3.4
   environment:
-    WEBP: enabled
     JEKYLL_ENV: production
     BUNDLE_PATH: vendor/bundle
   commands:
