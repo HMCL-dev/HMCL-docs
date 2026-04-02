@@ -4,11 +4,14 @@ layout: null
 window.addEventListener("DOMContentLoaded", function () {
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  function applySkin(skin) {
+    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + skin + ".css";
+  }
   function applyDarkSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_dark", "dark") + ".css";
+    applySkin(settings.get("appearance_skin.dark"));
   }
   function applyLightSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_light", "default") + ".css";
+    applySkin(settings.get("appearance_skin.light"));
   }
   function autoSchemeHandler() {
     if (darkModeQuery.matches) {
@@ -61,10 +64,15 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
   settings.onChange("appearance_color", applyTheme);
-  settings.onChange("appearance_skin_dark", function () {
-    settings.refresh("appearance_color");
+  settings.onChange("appearance_skin.dark", function () {
+    applyTheme(settings.get("appearance_color"));
   });
-  settings.onChange("appearance_skin_light", function () {
-    settings.refresh("appearance_color");
+  settings.onChange("appearance_skin.light", function () {
+    applyTheme(settings.get("appearance_color"));
+  });
+  settings.onChange("appearance_color_switcher", function (value) {
+    if (modeSwitcher !== null) {
+      modeSwitcher.style.display = value === "enable" ? "" : "none";
+    }
   });
 });
