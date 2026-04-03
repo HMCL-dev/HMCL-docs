@@ -44,4 +44,13 @@ data:
           sunrise: 日出 (Sunrise)
           catppuccin_latte: Catppuccin Latte
           catppuccin_mocha: Catppuccin Mocha
+  - title: 杂项
+    settings:
+      miscellaneous_april_fools:
+        title: 愚人节彩蛋
+        description: 控制愚人节相关彩蛋功能的启用策略。
+        options:
+          april_fools_only: 仅愚人节当天启用
+          enable: 启用
+          disable: 禁用
 ---

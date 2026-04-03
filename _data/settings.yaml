@@ -37,3 +37,10 @@ appearance_skin_dark:
     - sunrise
     - catppuccin_latte
     - catppuccin_mocha
+miscellaneous_april_fools:
+  type: radio
+  default: april_fools_only
+  options:
+    - april_fools_only
+    - enable
+    - disable
