@@ -20,7 +20,7 @@
     margin-inline: auto;
     margin-block-start: 2em;
     max-inline-size: 100%;
-    padding-inline: 0 1em;
+    padding-inline: 1em;
     padding-block: 0 2em;
 
     @include breakpoint($x-large) {
