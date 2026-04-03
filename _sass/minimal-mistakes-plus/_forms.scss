@@ -3,20 +3,20 @@
    ========================================================================== */
 
 form {
-  margin-bottom: 5px;
+  margin-block-end: 5px;
   padding: 1em;
   background-color: $form-background-color;
 
   fieldset {
-    margin-bottom: 5px;
+    margin-block-end: 5px;
     padding: 0;
     border-width: 0;
   }
 
   legend {
     display: block;
-    width: 100%;
-    margin-bottom: 5px * 2;
+    inline-size: 100%;
+    margin-block-end: 5px * 2;
     margin-inline-start: -7px;
     padding: 0;
     color: $text-color;
@@ -25,7 +25,7 @@ form {
   }
 
   p {
-    margin-bottom: (5px / 2);
+    margin-block-end: (5px / 2);
   }
 
   ul {
@@ -57,7 +57,7 @@ textarea {
 
 label {
   display: block;
-  margin-bottom: 0.25em;
+  margin-block-end: 0.25em;
   color: $text-color;
   cursor: pointer;
 
@@ -76,9 +76,9 @@ input,
 textarea,
 select {
   display: inline-block;
-  width: 100%;
+  inline-size: 100%;
   padding: 0.25em;
-  margin-bottom: 0.5em;
+  margin-block-end: 0.5em;
   color: $text-color;
   background-color: $background-color;
   border: $border-color;
@@ -87,18 +87,18 @@ select {
 }
 
 .input-mini {
-  width: 60px;
+  inline-size: 60px;
 }
 
 .input-small {
-  width: 90px;
+  inline-size: 90px;
 }
 
 input[type="image"],
 input[type="checkbox"],
 input[type="radio"] {
-  width: auto;
-  height: auto;
+  inline-size: auto;
+  block-size: auto;
   padding: 0;
   margin: 3px 0;
   line-height: normal;
@@ -119,7 +119,7 @@ input[type="image"] {
 }
 
 input[type="file"] {
-  width: auto;
+  inline-size: auto;
   padding: initial;
   line-height: initial;
   border: initial;
@@ -131,24 +131,24 @@ input[type="file"] {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  width: auto;
-  height: auto;
+  inline-size: auto;
+  block-size: auto;
   cursor: pointer;
 }
 
 select {
-  width: auto;
+  inline-size: auto;
   background-color: #fff;
 }
 
 select[multiple],
 select[size] {
-  height: auto;
+  block-size: auto;
 }
 
 textarea {
-  resize: vertical;
-  height: auto;
+  resize: block;
+  block-size: auto;
   overflow: auto;
   vertical-align: top;
 }
@@ -176,8 +176,8 @@ input[type="hidden"] {
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
-  padding-top: 5px;
-  margin-bottom: 0;
+  padding-block-start: 5px;
+  margin-block-end: 0;
   vertical-align: middle;
 }
 
@@ -231,7 +231,7 @@ select:focus {
 
 .help-block {
   display: block;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
   line-height: 1em;
 }
 
@@ -246,7 +246,7 @@ select:focus {
      ========================================================================== */
 
 .form-group {
-  margin-bottom: 5px;
+  margin-block-end: 5px;
   padding: 0;
   border-width: 0;
 }
@@ -259,7 +259,7 @@ select:focus {
 .form-inline textarea,
 .form-inline select {
   display: inline-block;
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .form-inline label {
@@ -270,7 +270,7 @@ select:focus {
 .form-inline .checkbox,
 .form-inline .radio {
   padding-inline-start: 0;
-  margin-bottom: 0;
+  margin-block-end: 0;
   vertical-align: middle;
 }
 
@@ -289,12 +289,12 @@ select:focus {
 .form-search textarea,
 .form-search select {
   display: inline-block;
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .form-search .search-query {
   padding-inline: 14px;
-  margin-bottom: 0;
+  margin-block-end: 0;
   border-radius: 14px;
 }
 
@@ -306,7 +306,7 @@ select:focus {
 .form-search .checkbox,
 .form-inline .radio {
   padding-inline-start: 0;
-  margin-bottom: 0;
+  margin-block-end: 0;
   vertical-align: middle;
 }
 
@@ -331,10 +331,10 @@ select:focus {
 
 .form::before {
   position: absolute;
-  top: 0;
+  inset-block-start: 0;
   inset-inline-start: 0;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 10;
 }
@@ -342,7 +342,7 @@ select:focus {
 .form__spinner {
   display: none;
   position: absolute;
-  top: 50%;
+  inset-block-start: 50%;
   inset-inline-start: 50%;
   z-index: 11;
 }

@@ -4,21 +4,21 @@
 
 table {
   display: block;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
   width: 100%;
   font-family: $global-font-family;
   font-size: $type-size-6;
   border-collapse: collapse;
-  overflow-x: auto;
+  overflow-inline: auto;
 
   & + table {
-    margin-top: 1em;
+    margin-block-start: 1em;
   }
 }
 
 thead {
   background-color: $border-color;
-  border-bottom: 2px solid mix(#000, $border-color, 25%);
+  border-block-end: 2px solid mix(#000, $border-color, 25%);
 }
 
 th {
@@ -29,7 +29,7 @@ th {
 
 td {
   padding: 0.5em;
-  border-bottom: 1px solid mix(#000, $border-color, 25%);
+  border-block-end: 1px solid mix(#000, $border-color, 25%);
 }
 
 tr,

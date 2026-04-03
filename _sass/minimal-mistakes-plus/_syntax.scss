@@ -5,7 +5,7 @@
 div.highlighter-rouge,
 figure.highlight {
   position: relative;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
   background: $base00;
   color: $base05;
   font-family: $monospace;
@@ -26,20 +26,20 @@ figure.highlight {
 }
 
 .highlight table {
-  margin-bottom: 0;
+  margin-block-end: 0;
   font-size: 1em;
   border: 0;
 
   td {
     padding: 0;
-    width: calc(100% - 1em);
+    inline-size: calc(100% - 1em);
     border: 0;
 
     /* line numbers*/
     &.gutter,
     &.rouge-gutter {
       padding-inline-end: 1em;
-      width: 1em;
+      inline-size: 1em;
       color: $base04;
       border-inline-end: 1px solid $base04;
       text-align: end;
@@ -58,7 +58,7 @@ figure.highlight {
 }
 
 .highlight pre {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .highlight .hll {
@@ -324,6 +324,6 @@ figure.highlight {
 
 .gist {
   th, td {
-    border-bottom: 0;
+    border-block-end: 0;
   }
 }

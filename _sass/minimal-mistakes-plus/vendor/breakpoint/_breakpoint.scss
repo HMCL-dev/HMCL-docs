@@ -33,6 +33,16 @@ $breakpoint: () !default;
 
 @import "legacy-settings";
 
+@function str-replace($text, $search, $replace) {
+  $index: str-index($text, $search);
+  @if $index == null {
+    @return $text;
+  }
+  $prefix: str-slice($text, 1, $index - 1);
+  $suffix: str-replace(str-slice($text, $index + str-length($search)), $search, $replace);
+  @return $prefix + $replace + $suffix;
+}
+
 //////////////////////////////
 // Breakpoint Mixin
 //////////////////////////////
@@ -62,8 +72,36 @@ $breakpoint: () !default;
 
   // Print Out Query String
   @if not breakpoint-get('no queries') {
-    @media #{$query-string} {
-      @content;
+    @if str-index($query-string, "width") {
+      @at-root html.horizontal #{&} {
+        @media #{$query-string} {
+          @content;
+        }
+      }
+
+      $vertical-query-string: str-replace($query-string, "width", "height");
+      @at-root html.vertical #{&} {
+        @media #{$vertical-query-string} {
+          @content;
+        }
+      }
+    } @else if (str-index($query-string, "height")) {
+      @at-root html.horizontal #{&} {
+        @media #{$query-string} {
+          @content;
+        }
+      }
+
+      $vertical-query-string: str-replace($query-string, "height", "width");
+      @at-root html.vertical #{&} {
+        @media #{$vertical-query-string} {
+          @content;
+        }
+      }
+    } @else {
+      @media #{$query-string} {
+        @content;
+      }
     }
   }
 

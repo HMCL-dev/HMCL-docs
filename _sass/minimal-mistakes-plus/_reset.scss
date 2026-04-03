@@ -100,20 +100,20 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  inset-block-start: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  inset-block-end: -0.25em;
 }
 
 /* img border in anchor's and image quality */
 
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-  max-width: 100%; /* part 1: Set a maximum relative to the parent*/
-  width: auto\9; /* IE7-8 need help adjusting responsive images*/
-  height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
+  max-inline-size: 100%; /* part 1: Set a maximum relative to the parent*/
+  inline-size: auto\9; /* IE7-8 need help adjusting responsive images*/
+  block-size: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
 
   vertical-align: middle;
   border: 0;
@@ -124,7 +124,7 @@ img {
 
 #map_canvas img,
 .google-maps img {
-  max-width: none;
+  max-inline-size: none;
 }
 
 /* Consistent form font size in all browsers, margin changes, misc */

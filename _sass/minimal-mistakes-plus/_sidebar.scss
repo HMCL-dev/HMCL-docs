@@ -18,7 +18,7 @@
 
   @include breakpoint($large) {
     float: inline-start;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    inline-size: calc(#{$right-sidebar-width-narrow} - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -28,21 +28,21 @@
     }
 
     &.sticky {
-      overflow-y: auto;
+      overflow-block: auto;
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      max-block-size: calc(100vb - #{$nav-height} - 2em);
     }
   }
 
   @include breakpoint($x-large) {
-    width: calc(#{$right-sidebar-width} - 1em);
+    inline-size: calc(#{$right-sidebar-width} - 1em);
   }
 
   > * {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
   }
 
   h2,
@@ -50,7 +50,7 @@
   h4,
   h5,
   h6 {
-    margin-bottom: 0;
+    margin-block-end: 0;
     font-family: $sans-serif-narrow;
   }
 
@@ -62,23 +62,23 @@
   }
 
   img {
-    width: 100%;
+    inline-size: 100%;
 
     &.emoji {
-      width: 20px;
-      height: 20px;
+      inline-size: 20px;
+      block-size: 20px;
     }
   }
 }
 
 .sidebar__right {
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 
   @include breakpoint($large) {
     position: absolute;
-    top: 0;
+    inset-block-start: 0;
     inset-inline-end: 0;
-    width: $right-sidebar-width-narrow;
+    inline-size: $right-sidebar-width-narrow;
     margin-inline-end: -1 * $right-sidebar-width-narrow;
     padding-inline-start: 1em;
     z-index: 10;
@@ -87,20 +87,20 @@
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
-      top: 2em;
+      inset-block-start: 2em;
       float: inline-end;
 
       .toc {
         .toc__menu {
-          overflow-y: auto;
-          max-height: calc(100vh - 7em);
+          overflow-block: auto;
+          max-block-size: calc(100vb - 7em);
         }
       }
     }
   }
 
   @include breakpoint($x-large) {
-    width: $right-sidebar-width;
+    inline-size: $right-sidebar-width;
     margin-inline-end: -1 * $right-sidebar-width;
   }
 }
@@ -124,17 +124,17 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  inline-size: 36px;
+  block-size: 36px;
 
   @include breakpoint($large) {
     display: block;
-    width: auto;
-    height: auto;
+    inline-size: auto;
+    block-size: auto;
   }
 
   img {
-    max-width: 110px;
+    max-inline-size: 110px;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -152,7 +152,7 @@
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
+    inline-size: 100%;
     padding-inline: 0;
   }
 
@@ -166,8 +166,8 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
   }
 }
 .sidebar .author__name {
@@ -179,8 +179,8 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-block-start: 10px;
+    margin-block-end: 20px;
   }
 }
 
@@ -194,7 +194,7 @@
 
   li:last-child {
     a {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 
@@ -210,16 +210,16 @@
 
   button {
     position: relative;
-    margin-bottom: 0;
+    margin-block-end: 0;
 
     &:before {
       @supports (pointer-events: none) {
         content: '';
         position: fixed;
-        top: 0;
+        inset-block-start: 0;
         inset-inline-start: 0;
-        width: 100%;
-        height: 100%;
+        inline-size: 100%;
+        block-size: 100%;
         pointer-events: none;
       }
     }
@@ -240,7 +240,7 @@
   display: none;
   position: absolute;
   inset-inline-end: 0;
-  margin-top: 15px;
+  margin-block-start: 15px;
   padding: 10px;
   list-style-type: none;
   border: 1px solid $border-color;
@@ -267,9 +267,9 @@
     display: block;
     content: "";
     position: absolute;
-    top: -11px;
+    inset-block-start: -11px;
     inset-inline-start: calc(50% - 10px);
-    width: 0;
+    inline-size: 0;
     border-style: solid;
     border-width: 0 10px 10px;
     border-color: $border-color transparent;
@@ -284,9 +284,9 @@
     display: block;
     content: "";
     position: absolute;
-    top: -10px;
+    inset-block-start: -10px;
     inset-inline-start: calc(50% - 10px);
-    width: 0;
+    inline-size: 0;
     border-style: solid;
     border-width: 0 10px 10px;
     border-color: $background-color transparent;
@@ -308,7 +308,7 @@
 
   a {
     display: block;
-    margin-bottom: 5px;
+    margin-block-end: 5px;
     padding-block: 2px;
     padding-inline-end: 5px;
     color: inherit;
@@ -326,13 +326,13 @@
    ========================================================================== */
 
 .wide .sidebar__right {
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 
   @include breakpoint($large) {
     position: initial;
-    top: initial;
+    inset-block-start: initial;
     inset-inline-end: initial;
-    width: initial;
+    inline-size: initial;
     margin-inline-end: initial;
     padding-inline-start: initial;
     z-index: initial;
@@ -343,7 +343,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: initial;
+    inline-size: initial;
     margin-inline-end: initial;
   }
 }

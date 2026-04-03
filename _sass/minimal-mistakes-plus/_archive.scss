@@ -3,17 +3,17 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin-block-start: 1em;
+  margin-block-end: 2em;
 
   @include breakpoint($large) {
     float: inline-end;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    inline-size: calc(100% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    inline-size: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
   }
 }
@@ -32,19 +32,20 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
-  padding-bottom: 0.5em;
+  margin-inline: 0;
+  margin-block: 1.414em 0.5em;
+  padding-block-end: 0.5em;
   font-size: $type-size-5;
   color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
+  border-block-end: 1px solid $border-color;
 
   + .list__item .archive__item-title {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
   }
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin-block-end: 0.25em;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
@@ -64,13 +65,13 @@
 /* remove border*/
 .page__content {
   .archive__item-title {
-    margin-top: 1em;
-    border-bottom: none;
+    margin-block-start: 1em;
+    border-block-end: none;
   }
 }
 
 .archive__item-excerpt {
-  margin-top: 0;
+  margin-block-start: 0;
   font-size: $type-size-6;
 
   & + p {
@@ -88,16 +89,18 @@
   overflow: hidden;
 
   img {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
 .archive__item-caption {
   position: absolute;
-  bottom: 0;
+  inset-block-end: 0;
   inset-inline-end: 0;
-  margin: 0 auto;
-  padding: 2px 5px;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-inline: 5px;
+  padding-block: 2px;
   color: #fff;
   font-family: $caption-font-family;
   font-size: $type-size-8;
@@ -108,7 +111,8 @@
   border-radius: $border-radius 0 0 0;
 
   @include breakpoint($large) {
-    padding: 5px 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
   }
 
   a {
@@ -123,7 +127,8 @@
 
 .list__item {
   .page__meta {
-    margin: 0 0 4px;
+    margin-inline: 0;
+    margin-block: 0 4px;
     font-size: 0.6em;
   }
 }
@@ -147,11 +152,11 @@
 }
 
 .grid__item {
-  margin-bottom: 2em;
+  margin-block-end: 2em;
 
   @include breakpoint($small) {
     float: inline-start;
-    width: span(5 of 10);
+    inline-size: span(5 of 10);
 
     &:nth-child(2n + 1) {
       clear: both;
@@ -166,7 +171,7 @@
 
   @include breakpoint($medium) {
     margin-inline: 0; /* override margin*/
-    width: span(3 of 12);
+    inline-size: span(3 of 12);
 
     &:nth-child(2n + 1) {
       clear: none;
@@ -193,7 +198,8 @@
   }
 
   .page__meta {
-    margin: 0 0 4px;
+    margin-inline: 0;
+    margin-block: 0 4px;
     font-size: 0.6em;
   }
 
@@ -206,7 +212,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
     font-size: $type-size-5;
   }
 
@@ -221,11 +227,11 @@
 
   .archive__item-teaser {
     @include breakpoint($small) {
-      max-height: 200px;
+      max-block-size: 200px;
     }
 
     @include breakpoint($medium) {
-      max-height: 120px;
+      max-block-size: 120px;
     }
   }
 }
@@ -236,23 +242,23 @@
 
 .feature__wrapper {
   @include clearfix();
-  margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
+  margin-block-end: 2em;
+  border-block-end: 1px solid $border-color;
 
   .archive__item-title {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .feature__item {
   position: relative;
-  margin-bottom: 2em;
+  margin-block-end: 2em;
   font-size: 1.125em;
 
   @include breakpoint($small) {
     float: inline-start;
-    margin-bottom: 0;
-    width: span(4 of 12);
+    margin-block-end: 0;
+    inline-size: span(4 of 12);
 
     &:nth-child(3n + 1) {
       clear: both;
@@ -270,7 +276,7 @@
     }
 
     .feature__item-teaser {
-      max-height: 200px;
+      max-block-size: 200px;
       overflow: hidden;
     }
   }
@@ -288,7 +294,7 @@
   &--left, &--right {
     position: relative;
     margin-inline: 0;
-    width: 100%;
+    inline-size: 100%;
     clear: both;
     font-size: 1.125em;
 
@@ -299,7 +305,7 @@
     }
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-block-end: 2em;
     }
   }
 
@@ -313,12 +319,12 @@
     @include breakpoint($small) {
       .archive__item-teaser {
         float: inline-start;
-        width: span(5 of 12);
+        inline-size: span(5 of 12);
       }
 
       .archive__item-body {
         float: inline-end;
-        width: span(7 of 12);
+        inline-size: span(7 of 12);
         padding-inline-start: gutter(0.5 of 12);
         padding-inline-end: gutter(1 of 12);
       }
@@ -337,12 +343,12 @@
 
       .archive__item-teaser {
         float: inline-end;
-        width: span(5 of 12);
+        inline-size: span(5 of 12);
       }
 
       .archive__item-body {
         float: inline-start;
-        width: span(7 of 12);
+        inline-size: span(7 of 12);
         padding-inline-start: gutter(1 of 12);
         padding-inline-end: gutter(0.5 of 12);
       }
@@ -353,17 +359,17 @@
     position: relative;
     float: inline-start;
     margin-inline: 0;
-    width: 100%;
+    inline-size: 100%;
     clear: both;
     font-size: 1.125em;
 
     .archive__item {
       float: inline-start;
-      width: 100%;
+      inline-size: 100%;
     }
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-block-end: 2em;
     }
 
     a.btn::before {
@@ -377,12 +383,12 @@
 
       .archive__item-teaser {
         margin: 0 auto;
-        width: span(5 of 12);
+        inline-size: span(5 of 12);
       }
 
       .archive__item-body {
         margin: 0 auto;
-        width: span(7 of 12);
+        inline-size: span(7 of 12);
       }
     }
   }
@@ -393,7 +399,7 @@
 .archive {
   .feature__wrapper {
     .archive__item-title {
-      margin-top: 0.25em;
+      margin-block-start: 0.25em;
       font-size: 1em;
     }
   }
@@ -425,7 +431,7 @@
 /* Place inside a single layout */
 
 .layout--single {
-	.feature__wrapper {
-		display: inline-block;
-	}
+  .feature__wrapper {
+    display: inline-block;
+  }
 }

@@ -4,13 +4,13 @@
 
 .layout--search {
   .archive__item-teaser {
-    margin-bottom: 0.25em;
+    margin-block-end: 0.25em;
   }
 }
 
 .search__toggle {
   margin-inline: 1rem;
-  height: $nav-toggle-height;
+  block-size: $nav-toggle-height;
   border: 0;
   outline: none;
   color: $primary-color;
@@ -25,18 +25,17 @@
 }
 
 .search-icon {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .search-content {
   display: none;
   visibility: hidden;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-block: 1em;
 
   &__inner-wrap {
-    width: 100%;
+    inline-size: 100%;
     margin-inline: auto;
     padding-inline: 1em;
     -webkit-animation: $intro-transition;
@@ -45,7 +44,7 @@
     animation-delay: 0.15s;
 
     @include breakpoint($x-large) {
-      max-width: $max-width;
+      max-inline-size: $max-width;
     }
 
   }
@@ -84,36 +83,36 @@
   }
 
   .results__found {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
     font-size: $type-size-6;
   }
 
   .archive__item {
-    margin-bottom: 2em;
+    margin-block-end: 2em;
 
     @include breakpoint($large) {
-      width: 75%;
+      inline-size: 75%;
     }
 
     @include breakpoint($x-large) {
-      width: 50%;
+      inline-size: 50%;
     }
   }
 
   .archive__item-title {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 
   .archive__item-excerpt {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 /* Algolia search */
 
 .ais-search-box {
-  max-width: 100% !important;
-  margin-bottom: 2em;
+  max-inline-size: 100% !important;
+  margin-block-end: 2em;
 }
 
 .archive__item-title .ais-Highlight {

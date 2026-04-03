@@ -9,7 +9,7 @@
 .breadcrumbs {
   @include clearfix;
   margin: 0 auto;
-  max-width: 100%;
+  max-inline-size: 100%;
   padding-inline: 1em;
   font-family: $sans-serif;
   -webkit-animation: $intro-transition;
@@ -18,7 +18,7 @@
   animation-delay: 0.3s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-inline-size: $x-large;
   }
 
   ol {
@@ -28,11 +28,11 @@
 
     @include breakpoint($large) {
       float: inline-end;
-      width: calc(100% - #{$right-sidebar-width-narrow});
+      inline-size: calc(100% - #{$right-sidebar-width-narrow});
     }
 
     @include breakpoint($x-large) {
-      width: calc(100% - #{$right-sidebar-width});
+      inline-size: calc(100% - #{$right-sidebar-width});
     }
   }
 
@@ -52,9 +52,9 @@
 .pagination {
   @include clearfix();
   float: inline-start;
-  margin-top: 1em;
-  padding-top: 1em;
-  width: 100%;
+  margin-block-start: 1em;
+  padding-block-start: 1em;
+  inline-size: 100%;
 
   ul {
     margin: 0;
@@ -70,8 +70,9 @@
 
     a {
       display: block;
-      margin-bottom: 0.25em;
-      padding: 0.5em 1em;
+      margin-block-end: 0.25em;
+      padding-inline: 1em;
+      padding-block: 0.5em;
       font-family: $sans-serif;
       font-size: 14px;
       font-weight: bold;
@@ -119,9 +120,10 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
+    padding-inline: 2em;
+    padding-block: 1em;
     float: inline-start;
-    width: 50%;
+    inline-size: 50%;
     font-family: $sans-serif;
     font-size: $type-size-5;
     font-weight: bold;
@@ -158,9 +160,9 @@
 .page__meta + .pagination,
 .page__share + .pagination,
 .page__comments + .pagination {
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid $border-color;
+  margin-block-start: 2em;
+  padding-block-start: 2em;
+  border-block-start: 1px solid $border-color;
 }
 
 /*
@@ -180,7 +182,8 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin-inline: 1rem;
+    margin-block: 0;
     color: $masthead-link-color;
     text-decoration: none;
     -webkit-transition: none;
@@ -208,7 +211,7 @@
   &__toggle {
     -ms-flex-item-align: center;
     align-self: center;
-    height: $nav-toggle-height;
+    block-size: $nav-toggle-height;
     border: 0;
     outline: none;
     background-color: transparent;
@@ -240,10 +243,10 @@
         content: "";
         position: absolute;
         inset-inline-start: 0;
-        bottom: 0;
-        height: 4px;
+        inset-block-end: 0;
+        block-size: 4px;
         background: $primary-color;
-        width: 100%;
+        inline-size: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0) translate3d(0, 0, 0);
@@ -260,9 +263,9 @@
 
   .hidden-links {
     position: absolute;
-    top: 100%;
+    inset-block-start: 100%;
     inset-inline-end: 0;
-    margin-top: 15px;
+    margin-block-start: 15px;
     padding: 5px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -277,7 +280,8 @@
 
     a {
       margin: 0;
-      padding: 10px 20px;
+      padding-inline: 20px;
+      padding-block: 10px;
       font-size: $type-size-5;
 
       &:hover {
@@ -289,11 +293,14 @@
     &::before {
       content: "";
       position: absolute;
-      top: -11px;
+      inset-block-start: -11px;
       inset-inline-end: 10px;
-      width: 0;
+      inline-size: 0;
       border-style: solid;
-      border-width: 0 10px 10px;
+      border-block-start-width: 0;
+      border-inline-end-width: 10px;
+      border-block-end-width: 10px;
+      border-inline-start-width: 0;
       border-color: $border-color transparent;
       display: block;
       z-index: 0;
@@ -302,11 +309,14 @@
     &::after {
       content: "";
       position: absolute;
-      top: -10px;
+      inset-block-start: -10px;
       inset-inline-end: 10px;
-      width: 0;
+      inline-size: 0;
       border-style: solid;
-      border-width: 0 10px 10px;
+      border-block-start-width: 0;
+      border-inline-end-width: 10px;
+      border-block-end-width: 10px;
+      border-inline-start-width: 0;
       border-color: $background-color transparent;
       display: block;
       z-index: 1;
@@ -314,10 +324,10 @@
 
     li {
       display: block;
-      border-bottom: 1px solid $border-color;
+      border-block-end: 1px solid $border-color;
 
       &:last-child {
-        border-bottom: none;
+        border-block-end: none;
       }
     }
   }
@@ -338,7 +348,7 @@
      ========================================================================== */
 
 .nav__list {
-  margin-bottom: 1.5em;
+  margin-block-end: 1.5em;
 
   input[type="checkbox"],
   label {
@@ -349,7 +359,8 @@
     label {
       position: relative;
       display: inline-block;
-      padding: 0.5em 2.5em 0.5em 1em;
+      padding-inline: 1em 2.5em;
+      padding-block: 0.5em;
       color: $gray;
       font-size: $type-size-6;
       font-weight: bold;
@@ -365,9 +376,9 @@
         content: "";
         position: absolute;
         inset-inline-end: 1em;
-        top: 1.25em;
-        width: 0.75em;
-        height: 0.125em;
+        inset-block-start: 1.25em;
+        inline-size: 0.75em;
+        block-size: 0.125em;
         line-height: 1;
         background-color: $gray;
         -webkit-transition: 0.2s ease-out;
@@ -417,16 +428,16 @@
     }
 
     ul {
-      margin-bottom: 1em;
+      margin-block-end: 1em;
     }
 
     a {
       display: block;
-      padding: 0.25em 0;
+      padding-inline: 0;
+      padding-block: 0.25em;
 
       @include breakpoint($large) {
-        padding-top: 0.125em;
-        padding-bottom: 0.125em;
+        padding-block: 0.125em;
       }
 
       &:hover {
@@ -452,7 +463,7 @@
 
   @include breakpoint(max-width $large - 1px) {
     position: relative;
-    max-height: 0;
+    max-block-size: 0;
     opacity: 0%;
     overflow: hidden;
     z-index: 10;
@@ -468,10 +479,10 @@
   .nav__list input:checked ~ .nav__items {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
-    max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
+    max-block-size: 9999px; /* exaggerate max-height to accommodate tall lists*/
     overflow: visible;
     opacity: 1;
-    margin-top: 1em;
+    margin-block-start: 1em;
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -480,7 +491,8 @@
 
 .nav__title {
   margin: 0;
-  padding: 0.5rem 0.75rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
   font-family: $sans-serif-narrow;
   font-size: $type-size-5;
   font-weight: bold;
@@ -488,13 +500,15 @@
 
 .nav__sub-title {
   display: block;
-  margin: 0.5rem 0;
-  padding: 0.25rem 0;
+  margin-inline: 0;
+  margin-block: 0.5rem;
+  padding-inline: 0;
+  padding-block: 0.25rem;
   font-family: $sans-serif-narrow;
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 1px solid $border-color;
+  border-block-end: 1px solid $border-color;
 }
 
 /*
@@ -527,7 +541,7 @@
 .toc__menu {
   margin: 0;
   padding: 0;
-  width: 100%;
+  inline-size: 100%;
   list-style: none;
   font-size: $type-size-6;
 
@@ -537,11 +551,12 @@
 
   a {
     display: block;
-    padding: 0.25rem 0.75rem;
+    padding-inline: 0.75rem;
+    padding-block: 0.25rem;
     color: $muted-text-color;
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
+    border-block-end: 1px solid $border-color;
 
     &:hover {
       color: $text-color;

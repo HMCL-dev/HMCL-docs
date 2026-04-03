@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-block-end: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -15,7 +15,7 @@
     @include clearfix;
     margin-inline: auto;
     padding: 1em;
-    max-width: 100%;
+    max-inline-size: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -25,7 +25,7 @@
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
-      max-width: $max-width;
+      max-inline-size: $max-width;
     }
 
     nav {
@@ -39,7 +39,7 @@
 }
 
 .site-logo img {
-  max-height: 2rem;
+  max-block-size: 2rem;
 }
 
 .site-title {
@@ -60,7 +60,7 @@
 .masthead__menu {
   float: inline-start;
   margin-inline: 0;
-  width: 100%;
+  inline-size: 100%;
   clear: both;
 
   .site-nav {

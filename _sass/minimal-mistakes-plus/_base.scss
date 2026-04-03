@@ -5,9 +5,13 @@
 html {
   /* sticky footer fix */
   position: relative;
-  min-height: 100%;
+  min-block-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.vertical {
+    writing-mode: vertical-rl;
+  }
 }
 
 body {
@@ -29,14 +33,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.5em;
+  margin-inline: 0;
+  margin-block: 2em 0.5em;
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
 }
 
 h1 {
-  margin-top: 0;
+  margin-block-start: 0;
   font-size: $h-size-1;
 }
 
@@ -66,13 +71,13 @@ small,
 }
 
 p {
-  margin-bottom: 1.3em;
+  margin-block-end: 1.3em;
 }
 
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  border-block-end: 1px solid $text-color;
   a {
     color: inherit;
   }
@@ -103,7 +108,7 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: none;
   cursor: help;
-  border-bottom: 1px dotted $text-color;
+  border-block-end: 1px dotted $text-color;
 }
 
 /* blockquotes */
@@ -159,28 +164,29 @@ pre {
 }
 
 pre {
-  overflow-x: auto; /* add scrollbars to wide code blocks*/
+  overflow-inline: auto; /* add scrollbars to wide code blocks*/
 }
 
 /* horizontal rule */
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin-inline: 0;
+  margin-block: 1em;
   border: 0;
-  border-top: 1px solid $border-color;
+  border-block-start: 1px solid $border-color;
 }
 
 /* lists */
 
 ul li,
 ol li {
-  margin-bottom: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 li ul,
 li ol {
-  margin-top: 0.5em;
+  margin-block-start: 0.5em;
 }
 
 /*
@@ -197,16 +203,17 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin-inline: 0;
+  margin-block: 2em;
 
   img,
   iframe,
   .fluid-width-video-wrapper {
-    margin-bottom: 1em;
+    margin-block-end: 1em;
   }
 
   img {
-    width: 100%;
+    inline-size: 100%;
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
@@ -220,12 +227,12 @@ figure {
     > a,
     > img {
       @include breakpoint($small) {
-        width: calc(50% - 0.5em);
+        inline-size: calc(50% - 0.5em);
       }
     }
 
     figcaption {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 
@@ -233,12 +240,12 @@ figure {
     > a,
     > img {
       @include breakpoint($small) {
-        width: calc(33.3333% - 0.5em);
+        inline-size: calc(33.3333% - 0.5em);
       }
     }
 
     figcaption {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 }
@@ -246,7 +253,7 @@ figure {
 /* Figure captions */
 
 figcaption {
-  margin-bottom: 0.5em;
+  margin-block-end: 0.5em;
   color: $muted-text-color;
   font-family: $caption-font-family;
   font-size: $type-size-6;
@@ -301,12 +308,12 @@ nav {
   /* override white-space for nested lists */
   ul li,
   ol li {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   li ul,
   li ol {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 

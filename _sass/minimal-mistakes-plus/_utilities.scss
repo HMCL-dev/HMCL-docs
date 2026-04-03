@@ -34,8 +34,8 @@
 .sr-only-focusable:not(:focus) {
   position: absolute !important;
   clip: rect(0, 0, 0, 0);
-  height: 1px !important;
-  width: 1px !important;
+  block-size: 1px !important;
+  inline-size: 1px !important;
   padding: 0 !important;
   border: 0 !important;
   margin: -1px;
@@ -54,12 +54,13 @@ body:hover .visually-hidden button {
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus {
   clip: auto !important;
-  height: auto !important;
-  width: auto !important;
+  block-size: auto !important;
+  inline-size: auto !important;
   display: block;
   font-size: 1em;
   font-weight: bold;
-  padding: 15px 23px 14px;
+  padding-inline: 0 23px;
+  padding-block: 15px 14px;
   background: #fff;
   z-index: 100000;
   text-decoration: none;
@@ -79,8 +80,8 @@ body:hover .visually-hidden button {
 }
 
 .skip-link li {
-  height: 0;
-  width: 0;
+  block-size: 0;
+  inline-size: 0;
   list-style: none;
 }
 
@@ -91,7 +92,13 @@ body:hover .visually-hidden button {
 $text-alignments: left, right, start, end, center, justify;
 @each $alignment in $text-alignments {
   .text-#{$alignment} {
-    text-align: $alignment;
+    @if ($alignment == "left" or $alignment == "start") {
+      text-align: start;
+    } @else if ($alignment == "right" or $alignment == "end") {
+      text-align: start;
+    } @else {
+      text-align: $alignment;
+    }
   }
 }
 
@@ -132,7 +139,7 @@ $text-alignments: left, right, start, end, center, justify;
 
 .wrapper {
   margin-inline: auto;
-  width: 100%;
+  inline-size: 100%;
 }
 
 /*
@@ -146,8 +153,8 @@ $text-alignments: left, right, start, end, center, justify;
   margin-inline: auto;
 
   @include breakpoint($small) {
-    float: left;
-    margin-right: 1em;
+    float: inline-start;
+    margin-inline-end: 1em;
   }
 }
 
@@ -158,8 +165,8 @@ $text-alignments: left, right, start, end, center, justify;
   margin-inline: auto;
 
   @include breakpoint($small) {
-    float: right;
-    margin-left: 1em;
+    float: inline-end;
+    margin-inline-start: 1em;
   }
 }
 
@@ -185,11 +192,11 @@ $text-alignments: left, right, start, end, center, justify;
 .icon {
   display: inline-block;
   fill: currentColor;
-  width: 1em;
-  height: 1.1em;
+  inline-size: 1em;
+  block-size: 1.1em;
   line-height: 1;
   position: relative;
-  top: -0.1em;
+  inset-block-start: -0.1em;
   vertical-align: middle;
 }
 
@@ -250,8 +257,8 @@ $text-alignments: left, right, start, end, center, justify;
 
 .navicon {
   position: relative;
-  width: $navicon-width;
-  height: $navicon-height;
+  inline-size: $navicon-width;
+  block-size: $navicon-height;
   background: $primary-color;
   margin: auto;
   -webkit-transition: 0.3s;
@@ -262,19 +269,19 @@ $text-alignments: left, right, start, end, center, justify;
     content: "";
     position: absolute;
     inset-inline-start: 0;
-    width: $navicon-width;
-    height: $navicon-height;
+    inline-size: $navicon-width;
+    block-size: $navicon-height;
     background: $primary-color;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 
   &:before {
-    top: (-2 * $navicon-height);
+    inset-block-start: (-2 * $navicon-height);
   }
 
   &:after {
-    bottom: (-2 * $navicon-height);
+    inset-block-end: (-2 * $navicon-height);
   }
 }
 
@@ -288,8 +295,8 @@ $text-alignments: left, right, start, end, center, justify;
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    top: 0;
-    width: $navicon-width;
+    inset-block-start: 0;
+    inline-size: $navicon-width;
   }
 
   /* rotate the lines to form the x shape*/
@@ -308,10 +315,10 @@ $text-alignments: left, right, start, end, center, justify;
     @supports (pointer-events: none) {
       content: '';
       position: fixed;
-      top: 0;
+      inset-block-start: 0;
       inset-inline-start: 0;
-      width: 100%;
-      height: 100%;
+      inline-size: 100%;
+      block-size: 100%;
       opacity: 0;
       background-color: $background-color;
       -webkit-transition: $global-transition;
@@ -353,7 +360,7 @@ $text-alignments: left, right, start, end, center, justify;
     @include clearfix();
     position: -webkit-sticky;
     position: sticky;
-    top: 2em;
+    inset-block-start: 2em;
 
     > * {
       display: block;
@@ -366,9 +373,9 @@ $text-alignments: left, right, start, end, center, justify;
    ========================================================================== */
 
 .well {
-  min-height: 20px;
+  min-block-size: 20px;
   padding: 19px;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: $border-radius;
@@ -386,10 +393,10 @@ $text-alignments: left, right, start, end, center, justify;
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    inset-block-start: 0;
     inset-inline-start: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.85);
   }
@@ -402,12 +409,12 @@ $text-alignments: left, right, start, end, center, justify;
 .modal {
   display: none;
   position: fixed;
-  width: 300px;
-  top: 50%;
+  inline-size: 300px;
+  inset-block-start: 50%;
   inset-inline-start: 50%;
   margin-inline-start: -150px;
-  margin-top: -150px;
-  min-height: 0;
+  margin-block-start: -150px;
+  min-block-size: 0;
   z-index: 9999;
   background: #fff;
   border: 1px solid $border-color;
@@ -416,16 +423,19 @@ $text-alignments: left, right, start, end, center, justify;
 
   &__title {
     margin: 0;
-    padding: 0.5em 1em;
+    padding-inline: 1em;
+    padding-block: 0.5em;
   }
 
   &__supporting-text {
-    padding: 0 1em 0.5em 1em;
+    padding-inline: 1em;
+    padding-block: 0 0.5em;
   }
 
   &__actions {
-    padding: 0.5em 1em;
-    border-top: 1px solid $border-color;
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    border-block-start: 1px solid $border-color;
   }
 }
 
@@ -444,7 +454,7 @@ $text-alignments: left, right, start, end, center, justify;
   ol,
   li,
   p {
-    margin-bottom: 0;
+    margin-block-end: 0;
     font-size: $type-size-6;
   }
 }
@@ -485,20 +495,20 @@ a.reversefootnote {
 
 .responsive-video-container {
   position: relative;
-  margin-bottom: 1em;
-  padding-bottom: 56.25%;
-  height: 0;
+  margin-block-end: 1em;
+  padding-block-end: 56.25%;
+  block-size: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-inline-size: 100%;
 
   iframe,
   object,
   embed {
     position: absolute;
-    top: 0;
+    inset-block-start: 0;
     inset-inline-start: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
   }
 }
 
@@ -533,16 +543,17 @@ pre {
   .clipboard-copy-button {
     display: block;
     position: absolute;
-    top: 0.6em;
+    inset-block-start: 0.6em;
     inset-inline-end: 0.5em;
-    width: 1.8em;
-    height: 1.5em;
+    inline-size: 1.8em;
+    block-size: 1.5em;
     z-index: 1;
     background: none;
     border: none;
     outline: none;
     border-radius: 0.1em;
-    padding: 0.2em 0.5em;
+    padding-inline: 0.5em;
+    padding-block: 0.2em;
     opacity: 0.4;
     transition: color 0.25s linear -0.25s, opacity 0.25s linear;
 
@@ -555,7 +566,7 @@ pre {
 
     i {
       position: absolute;
-      top: 0.25em;
+      inset-block-start: 0.25em;
       inset-inline-end: 0.25em;
       &.copied {
         opacity: 0;
