@@ -73,7 +73,7 @@ $breakpoint: () !default;
   // Print Out Query String
   @if not breakpoint-get('no queries') {
     @if str-index($query-string, "width") {
-      &:is(.horizontal, .horizontal *) {
+      &:not(html.vertical, html.vertical *) {
         @media #{$query-string} {
           @content;
         }
@@ -86,7 +86,7 @@ $breakpoint: () !default;
         }
       }
     } @else if (str-index($query-string, "height")) {
-      &:is(.horizontal, .horizontal *) {
+      &:not(html.vertical, html.vertical *) {
         @media #{$query-string} {
           @content;
         }

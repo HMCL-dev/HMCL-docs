@@ -72,7 +72,9 @@ window.addEventListener("DOMContentLoaded", function () {
   var isAprilFoolsDay = now.getMonth() === 3 && now.getDate() === 1;
   settings.onChange("miscellaneous_april_fools", function (strategy) {
     var root = document.documentElement;
-    root.classList.remove("vertical", "horizontal");
-    root.classList.add((strategy === "disable" || strategy !== "enable" && !isAprilFoolsDay) ? "horizontal" : "vertical");
+    root.classList.remove("vertical");
+    if (strategy !== "disable" && (strategy === "enable" || isAprilFoolsDay)) {
+      root.classList.add("vertical");
+    }
   });
 });
