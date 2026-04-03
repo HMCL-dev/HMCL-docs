@@ -177,7 +177,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: $nav-height;
+  min-block-size: $nav-height;
   background: $background-color;
 
   a {
@@ -297,10 +297,8 @@
       inset-inline-end: 10px;
       inline-size: 0;
       border-style: solid;
-      border-block-start-width: 0;
-      border-inline-end-width: 10px;
-      border-block-end-width: 10px;
-      border-inline-start-width: 0;
+      border-inline-width: 10px;
+      border-block-width: 0 10px;
       border-color: $border-color transparent;
       display: block;
       z-index: 0;
@@ -313,10 +311,8 @@
       inset-inline-end: 10px;
       inline-size: 0;
       border-style: solid;
-      border-block-start-width: 0;
-      border-inline-end-width: 10px;
-      border-block-end-width: 10px;
-      border-inline-start-width: 0;
+      border-inline-width: 10px;
+      border-block-width: 0 10px;
       border-color: $background-color transparent;
       display: block;
       z-index: 1;

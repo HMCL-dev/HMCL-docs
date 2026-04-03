@@ -271,7 +271,8 @@
     inset-inline-start: calc(50% - 10px);
     inline-size: 0;
     border-style: solid;
-    border-width: 0 10px 10px;
+    border-inline-width: 10px;
+    border-block-width: 0 10px;
     border-color: $border-color transparent;
     z-index: 0;
 
@@ -288,7 +289,8 @@
     inset-inline-start: calc(50% - 10px);
     inline-size: 0;
     border-style: solid;
-    border-width: 0 10px 10px;
+    border-inline-width: 10px;
+    border-block-width: 0 10px;
     border-color: $background-color transparent;
     z-index: 1;
 
