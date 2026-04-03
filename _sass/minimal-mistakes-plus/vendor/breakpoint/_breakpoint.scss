@@ -80,7 +80,7 @@ $breakpoint: () !default;
       }
 
       $vertical-query-string: str-replace($query-string, "width", "height");
-      &:is(.vertical, .vertical *) {
+      &:is(html.vertical, html.vertical *) {
         @media #{$vertical-query-string} {
           @content;
         }
@@ -93,7 +93,7 @@ $breakpoint: () !default;
       }
 
       $vertical-query-string: str-replace($query-string, "height", "width");
-      &:is(.vertical, .vertical *) {
+      &:is(html.vertical, html.vertical *) {
         @media #{$vertical-query-string} {
           @content;
         }
