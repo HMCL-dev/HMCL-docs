@@ -149,7 +149,7 @@ end
 Jekyll::Hooks.register :site, :post_read do |site|
   KramdownEnhancer.baseurl = site.config["baseurl"]
   webp_list = []
-  webp_enabled = ENV["WEBP"] == "enabled" || ENV["CI"] == "true"
+  webp_enabled = defined?(WebP)
   site.each_site_file do |file|
     KramdownEnhancer.file[file.relative_path] = file
     if file.is_a?(Jekyll::StaticFile)
