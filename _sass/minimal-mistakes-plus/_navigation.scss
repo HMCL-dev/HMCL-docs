@@ -471,8 +471,8 @@
   }
 }
 
-@include breakpoint(max-width $large - 1px) {
-  .nav__list input:checked ~ .nav__items {
+.nav__list input:checked ~ .nav__items {
+  @include breakpoint(max-width $large - 1px) {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     max-block-size: 9999px; /* exaggerate max-height to accommodate tall lists*/
