@@ -23,15 +23,15 @@ $breakpoint: () !default;
 //////////////////////////////
 // Imports
 //////////////////////////////
-@import "settings";
-@import "context";
-@import "helpers";
-@import "parsers";
-@import "no-query";
+@import "minimal-mistakes/vendor/breakpoint/settings";
+@import "minimal-mistakes/vendor/breakpoint/context";
+@import "minimal-mistakes/vendor/breakpoint/helpers";
+@import "minimal-mistakes/vendor/breakpoint/parsers";
+@import "minimal-mistakes/vendor/breakpoint/no-query";
 
-@import "respond-to";
+@import "minimal-mistakes/vendor/breakpoint/respond-to";
 
-@import "legacy-settings";
+@import "minimal-mistakes/vendor/breakpoint/legacy-settings";
 
 @function str-replace($text, $search, $replace) {
   $index: str-index($text, $search);
