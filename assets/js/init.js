@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // april_fools
   var now = new Date();
   var isAprilFoolsDay = now.getMonth() === 3 && now.getDate() === 1;
-  settings.onChange("miscellaneous_april_fools", function (strategy) {
+  settings.onChange("miscellaneous_layout_vertical", function (strategy) {
     var root = document.documentElement;
     root.classList.remove("vertical");
     if (strategy !== "disable" && (strategy === "enable" || isAprilFoolsDay)) {
