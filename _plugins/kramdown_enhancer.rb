@@ -1,4 +1,6 @@
-require "webp-ffi" if ENV["WEBP"] == "enabled" || ENV["CI"] == "true"
+begin
+  require "webp-ffi"
+rescue LoadError; end
 
 module KramdownEnhancer
   class << self

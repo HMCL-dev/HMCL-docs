@@ -10,9 +10,9 @@ concurrency:
   group: pr-preview
   cancel-in-progress: false
 env:
-  GITHUB_PR_NUMBER: ${{ github.event_name == 'issue_comment' && github.event.issue.number || github.event.pull_request.number }}
   JEKYLL_ENV: production
-  WEBP: enabled
+  ENABLE_WEBP_AUTO_CONVERSION: "true"
+  GITHUB_PR_NUMBER: ${{ github.event_name == 'issue_comment' && github.event.issue.number || github.event.pull_request.number }}
 jobs:
   cache-refresh:
     if: ${{ !github.event.repository.fork && github.event_name == 'schedule' && github.event.schedule == '0 0 */6 * *' }}

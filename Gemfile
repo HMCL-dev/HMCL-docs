@@ -32,4 +32,4 @@ gem "wdm", "0.2.0", :platforms => [:windows]
 gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
-gem "webp-ffi", "0.4.0" if ENV["WEBP"] == "enabled" || ENV["CI"] == "true"
+gem "webp-ffi", "0.4.0" if ENV["ENABLE_WEBP_AUTO_CONVERSION"] == "true" || ENV["DRONE"] == "true"
