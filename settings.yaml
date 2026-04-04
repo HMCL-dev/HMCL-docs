@@ -44,4 +44,13 @@ data:
           sunrise: 日出 (Sunrise)
           catppuccin_latte: Catppuccin Latte
           catppuccin_mocha: Catppuccin Mocha
+  - title: 杂项
+    settings:
+      miscellaneous_layout_vertical:
+        title: 纵向布局
+        description: 设置页面内容是否采用纵向排列布局。
+        options:
+          april_fools_only: 仅愚人节当天启用
+          enable: 启用
+          disable: 禁用
 ---

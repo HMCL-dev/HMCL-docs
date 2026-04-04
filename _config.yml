@@ -320,7 +320,7 @@ compress_html:
 
 head_scripts:
   - /assets/js/settings.js
-  - /assets/js/theme.js
+  - /assets/js/init.js
 after_footer_scripts:
   - /assets/js/plugins/jquery.auto-redirect.js
 

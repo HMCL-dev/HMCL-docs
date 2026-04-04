@@ -2,6 +2,7 @@
 layout: null
 ---
 window.addEventListener("DOMContentLoaded", function () {
+  // skin
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
   function applyDarkSkin() {
@@ -34,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     menuList.appendChild(modeSwitcher);
   }
-  function applyTheme(mode) {
+  settings.onChange("appearance_color", function (mode) {
     var newIndex = modeKeys.indexOf(mode);
     if (newIndex < 0) newIndex = 0;
 
@@ -59,12 +60,21 @@ window.addEventListener("DOMContentLoaded", function () {
       darkModeQuery.addEventListener("change", autoSchemeHandler);
       autoSchemeHandler();
     }
-  }
-  settings.onChange("appearance_color", applyTheme);
+  });
   settings.onChange("appearance_skin_dark", function () {
     settings.refresh("appearance_color");
   });
   settings.onChange("appearance_skin_light", function () {
     settings.refresh("appearance_color");
+  });
+  // april_fools
+  var now = new Date();
+  var isAprilFoolsDay = now.getMonth() === 3 && now.getDate() === 1;
+  settings.onChange("miscellaneous_layout_vertical", function (strategy) {
+    var root = document.documentElement;
+    root.classList.remove("vertical");
+    if (strategy !== "disable" && (strategy === "enable" || isAprilFoolsDay)) {
+      root.classList.add("vertical");
+    }
   });
 });

@@ -1,0 +1,348 @@
+/* ==========================================================================
+   BASE ELEMENTS
+   ========================================================================== */
+
+html {
+  /* sticky footer fix */
+  position: relative;
+  min-block-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-family: $global-font-family;
+  line-height: 1.5;
+
+  &.overflow--hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-inline: 0;
+  margin-block: 2em 0.5em;
+  line-height: 1.2;
+  font-family: $header-font-family;
+  font-weight: bold;
+}
+
+h1 {
+  margin-block-start: 0;
+  font-size: $h-size-1;
+}
+
+h2 {
+  font-size: $h-size-2;
+}
+
+h3 {
+  font-size: $h-size-3;
+}
+
+h4 {
+  font-size: $h-size-4;
+}
+
+h5 {
+  font-size: $h-size-5;
+}
+
+h6 {
+  font-size: $h-size-6;
+}
+
+small,
+.small {
+  font-size: $type-size-6;
+}
+
+p {
+  margin-block-end: 1.3em;
+}
+
+u,
+ins {
+  text-decoration: none;
+  border-block-end: 1px solid $text-color;
+  a {
+    color: inherit;
+  }
+}
+
+del a {
+  color: inherit;
+}
+
+/* reduce orphans and widows when printing */
+
+p,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+figure,
+table,
+fieldset {
+  orphans: 3;
+  widows: 3;
+}
+
+/* abbreviations */
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+  cursor: help;
+  border-block-end: 1px dotted $text-color;
+}
+
+/* blockquotes */
+
+blockquote {
+  margin-block: 2em;
+  margin-inline-end: 1em;
+  padding-inline: 1em;
+  font-style: italic;
+  border-inline-start: 0.25em solid $primary-color;
+
+  cite {
+    font-style: italic;
+
+    &::before {
+      content: "\2014";
+      padding-inline-end: 5px;
+    }
+  }
+}
+
+/* links */
+
+a {
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    outline: 0;
+  }
+}
+
+/* buttons */
+
+button:focus {
+  @extend %tab-focus;
+}
+
+/* code */
+
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: $monospace;
+}
+
+pre {
+  overflow-inline: auto; /* add scrollbars to wide code blocks*/
+}
+
+/* horizontal rule */
+
+hr {
+  display: block;
+  margin-inline: 0;
+  margin-block: 1em;
+  border: 0;
+  border-block-start: 1px solid $border-color;
+}
+
+/* lists */
+
+ul li,
+ol li {
+  margin-block-end: 0.5em;
+}
+
+li ul,
+li ol {
+  margin-block-start: 0.5em;
+}
+
+/*
+   Media and embeds
+   ========================================================================== */
+
+/* Figures and images */
+
+figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-inline: 0;
+  margin-block: 2em;
+
+  img,
+  iframe,
+  .fluid-width-video-wrapper {
+    margin-block-end: 1em;
+  }
+
+  img {
+    inline-size: 100%;
+    border-radius: $border-radius;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+  }
+
+  > a {
+    display: block;
+  }
+
+  &.half {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        inline-size: calc(50% - 0.5em);
+      }
+    }
+
+    figcaption {
+      inline-size: 100%;
+    }
+  }
+
+  &.third {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        inline-size: calc(33.3333% - 0.5em);
+      }
+    }
+
+    figcaption {
+      inline-size: 100%;
+    }
+  }
+}
+
+/* Figure captions */
+
+figcaption {
+  margin-block-end: 0.5em;
+  color: $muted-text-color;
+  font-family: $caption-font-family;
+  font-size: $type-size-6;
+
+  a {
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
+/* Fix IE9 SVG bug */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*
+   Navigation lists
+   ========================================================================== */
+
+/**
+ * Removes margins, padding, and bullet points from navigation lists
+ *
+ * Example usage:
+ * <nav>
+ *    <ul>
+ *      <li><a href="#link-1">Link 1</a></li>
+ *      <li><a href="#link-2">Link 2</a></li>
+ *      <li><a href="#link-3">Link 3</a></li>
+ *    </ul>
+ *  </nav>
+ */
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* override white-space for nested lists */
+  ul li,
+  ol li {
+    margin-block-end: 0;
+  }
+
+  li ul,
+  li ol {
+    margin-block-start: 0;
+  }
+}
+
+/*
+   Global animation transition
+   ========================================================================== */
+
+b,
+i,
+strong,
+em,
+blockquote,
+p,
+q,
+span,
+figure,
+img,
+h1,
+h2,
+header,
+input,
+a,
+tr,
+td,
+form button,
+input[type="submit"],
+.btn,
+.highlight,
+.archive__item-teaser {
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+}
