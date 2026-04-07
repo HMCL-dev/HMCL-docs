@@ -32,5 +32,5 @@ gem "wdm", "0.2.0", :platforms => [:windows]
 gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
-gem "nokogiri", "1.18.10"
+gem "nokogiri", "1.19.1"
 gem "addressable", "2.8.7"
