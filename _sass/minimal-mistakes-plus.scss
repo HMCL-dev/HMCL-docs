@@ -11,10 +11,27 @@ blockquote {
   word-break: break-word;
 }
 
-.task-list-item label {
-  display: inline
-}
-
 .m0 {
   margin: 0 !important;
+}
+
+table.setting-multi-radio td {
+  border: 0;
+  text-align: center;
+  border-left: 1px solid mix(#000, $border-color, 25%);
+}
+
+input[type="radio"] {
+  width: 0;
+  margin: 0;
+  margin-inline-end: 1em;
+  font-family: var(--fa-family-classic);
+}
+
+input[type="radio"]::before {
+  content: "\f111";
+}
+
+input[type="radio"]:checked::before {
+  content: "\f192";
 }
