@@ -34,3 +34,5 @@ gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 # plugin dependencies
 gem "nokogiri", "1.18.10"
 gem "addressable", "2.8.7"
+gem "mini_racer", "0.20.0" if ENV["ENABLE_EMBEDDED_V8"] == "true" || ENV["DRONE"] == "true"
+gem "terser", "1.2.7"
