@@ -1,8 +1,17 @@
 ---
 ---
 
-@charset "utf-8";
-
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes-plus/skins/air";
+@import "minimal-mistakes-plus/skins/aqua";
+@import "minimal-mistakes-plus/skins/contrast";
+@import "minimal-mistakes-plus/skins/dark";
+@import "minimal-mistakes-plus/skins/dirt";
+@import "minimal-mistakes-plus/skins/mint";
+@import "minimal-mistakes-plus/skins/neon";
+@import "minimal-mistakes-plus/skins/plum";
+@import "minimal-mistakes-plus/skins/sunrise";
+@import "minimal-mistakes-plus/skins/catppuccin-latte";
+@import "minimal-mistakes-plus/skins/catppuccin-frappe";
+@import "minimal-mistakes-plus/skins/catppuccin-macchiato";
+@import "minimal-mistakes-plus/skins/catppuccin-mocha";
 @import "minimal-mistakes-plus";

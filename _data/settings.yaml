@@ -19,8 +19,10 @@ appearance_skin_light:
     - mint
     - plum
     - sunrise
-    - catppuccin_latte
-    - catppuccin_mocha
+    - catppuccin-latte
+    - catppuccin-frappe
+    - catppuccin-macchiato
+    - catppuccin-mocha
 appearance_skin_dark:
   type: radio
   default: dark
@@ -35,5 +37,7 @@ appearance_skin_dark:
     - mint
     - plum
     - sunrise
-    - catppuccin_latte
-    - catppuccin_mocha
+    - catppuccin-latte
+    - catppuccin-frappe
+    - catppuccin-macchiato
+    - catppuccin-mocha

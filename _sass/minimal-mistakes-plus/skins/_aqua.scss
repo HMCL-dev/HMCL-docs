@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Aqua skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$aqua-config: () !default;
+
+$aqua-config: map-merge((
+  "gray": #1976d2,
+  "body-color": #fff,
+  "background-color": #f0fff0,
+  "success-color": #27ae60,
+  "warning-color": #e67e22,
+  "danger-color": #c0392b,
+  "info-color": #03a9f4,
+  "notice-background-mix": 90%,
+  "code-notice-background-mix": 95%,
+), $aqua-config);
+
+@if $aqua-config {
+  $config: $aqua-config;
+  $gray: map-get($config, "gray");
+  @if $gray {
+    @if not map-get($config, "dark-gray") {
+      $config: map-merge($config, ("dark-gray": mix(#000, $gray, 40%)));
+    }
+    @if not map-get($config, "darker-gray") {
+      $config: map-merge($config, ("darker-gray": mix(#000, $gray, 60%)));
+    }
+    @if not map-get($config, "light-gray") {
+      $config: map-merge($config, ("light-gray": mix(#fff, $gray, 50%)));
+    }
+    @if not map-get($config, "lighter-gray") {
+      $config: map-merge($config, ("lighter-gray": mix(#fff, $gray, 90%)));
+    }
+    @if not map-get($config, "primary-color") {
+      $config: map-merge($config, ("primary-color": $gray));
+    }
+  }
+
+  $lighter-gray: map-get($config, "lighter-gray");
+  @if $lighter-gray {
+    @if not map-get($config, "code-background-color") {
+      $config: map-merge($config, ("code-background-color": $lighter-gray));
+    }
+    @if not map-get($config, "border-color") {
+      $config: map-merge($config, ("border-color": $lighter-gray));
+    }
+  }
+
+  $light-gray: map-get($config, "light-gray");
+  @if $light-gray {
+    @if not map-get($config, "code-background-color-dark") {
+      $config: map-merge($config, ("code-background-color-dark": $light-gray));
+    }
+  }
+
+  $dark-gray: map-get($config, "dark-gray");
+  @if $dark-gray {
+    @if not map-get($config, "text-color") {
+      $config: map-merge($config, ("text-color": $dark-gray));
+    }
+  }
+
+  $info-color: map-get($config, "info-color");
+  @if $info-color {
+    @if not map-get($config, "link-color") {
+      $config: map-merge($config, ("link-color": $info-color));
+    }
+    @if not map-get($config, "link-color-hover") {
+      $config: map-merge($config, ("link-color-hover": mix(#000, $info-color, 25%)));
+    }
+    @if not map-get($config, "link-color-visited") {
+      $config: map-merge($config, ("link-color-visited": mix(#fff, $info-color, 25%)));
+    }
+  }
+
+  $primary-color: map-get($config, "primary-color");
+  @if $primary-color {
+    @if not map-get($config, "masthead-link-color") {
+      $config: map-merge($config, ("masthead-link-color": $primary-color));
+    }
+    @if not map-get($config, "masthead-link-color-hover") {
+      $config: map-merge($config, ("masthead-link-color-hover": mix(#000, $primary-color, 25%)));
+    }
+  }
+
+  $configs: map-merge($configs, ("aqua": $config));
+}

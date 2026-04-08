@@ -26,8 +26,10 @@ data:
           mint: 薄荷 (Mint)
           plum: 梅紫 (Plum)
           sunrise: 日出 (Sunrise)
-          catppuccin_latte: Catppuccin Latte
-          catppuccin_mocha: Catppuccin Mocha
+          catppuccin-latte: Catppuccin Latte
+          catppuccin-frappe: Catppuccin Frappe
+          catppuccin-macchiato: Catppuccin Macchiato
+          catppuccin-mocha: Catppuccin Mocha
       appearance_skin_dark:
         title: 暗色皮肤
         description: 暗色模式下应用的皮肤。
@@ -42,6 +44,8 @@ data:
           mint: 薄荷 (Mint)
           plum: 梅紫 (Plum)
           sunrise: 日出 (Sunrise)
-          catppuccin_latte: Catppuccin Latte
-          catppuccin_mocha: Catppuccin Mocha
+          catppuccin-latte: Catppuccin Latte
+          catppuccin-frappe: Catppuccin Frappe
+          catppuccin-macchiato: Catppuccin Macchiato
+          catppuccin-mocha: Catppuccin Mocha
 ---

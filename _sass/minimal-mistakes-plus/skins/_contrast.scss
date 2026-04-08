@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Contrast skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$contrast-config: () !default;
+
+$contrast-config: map-merge((
+  "text-color": #000,
+  "primary-color": #b60000,
+  "footer-background-color": #000,
+  "link-color": #0000ff,
+  "base00": #000000,
+  "base01": #242422,
+  "base02": #484844,
+  "base03": #6c6c66,
+  "base04": #918f88,
+  "base05": #b5b3aa,
+  "base06": #d9d7cc,
+  "base07": #fdfbee,
+  "base08": #ff6c60,
+  "base09": #e9c062,
+  "base0a": #ffffb6,
+  "base0b": #a8ff60,
+  "base0c": #c6c5fe,
+  "base0d": #96cbfe,
+  "base0e": #ff73fd,
+  "base0f": #b18a3d,
+), $contrast-config);
+
+
+@if $contrast-config {
+  $config: $contrast-config;
+  $text-color: map-get($config, "text-color");
+  @if $text-color {
+    @if not map-get($config, "muted-text-color") {
+      $config: map-merge($config, ("muted-text-color": $text-color));
+    }
+    @if not map-get($config, "border-color") {
+      $config: map-merge($config, ("border-color": mix(#fff, $text-color, 75%)));
+    }
+    @if not map-get($config, "masthead-link-color") {
+      $config: map-merge($config, ("masthead-link-color": $text-color));
+    }
+    @if not map-get($config, "masthead-link-color-hover") {
+      $config: map-merge($config, ("masthead-link-color-hover": $text-color));
+    }
+    @if not map-get($config, "navicon-link-color-hover") {
+      $config: map-merge($config, ("navicon-link-color-hover": mix(#fff, $text-color, 80%)));
+    }
+  }
+
+  $configs: map-merge($configs, ("contrast": $config));
+
+  [data-skin=contrast] {
+    .page__content {
+      .notice,
+      .notice--primary,
+      .notice--info,
+      .notice--warning,
+      .notice--success,
+      .notice--danger {
+        color: $text-color;
+      }
+    }
+
+    .page__footer {
+      color: #fff !important; // override
+    }
+
+    .page__footer-follow .social-icons i,
+    .page__footer-follow .social-icons .svg-inline--fa  {
+      color: inherit;
+    }
+  }
+}

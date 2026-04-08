@@ -2,13 +2,12 @@
 layout: null
 ---
 window.addEventListener("DOMContentLoaded", function () {
-  var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
   function applyDarkSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_dark", "dark") + ".css";
+    document.documentElement.dataset["skin"] = settings.get("appearance_skin_dark", "dark");
   }
   function applyLightSkin() {
-    skinLink.href = "{{ '/assets/css/skins/' | relative_url }}" + settings.get("appearance_skin_light", "default") + ".css";
+    document.documentElement.dataset["skin"] = settings.get("appearance_skin_light", "default");
   }
   function autoSchemeHandler() {
     if (darkModeQuery.matches) {

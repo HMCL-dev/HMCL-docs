@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Air skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$air-config: () !default;
+
+$air-config: map-merge((
+  "background-color": #eeeeee,
+  "text-color": #222831,
+  "muted-text-color": #393e46,
+  "primary-color": #0092ca,
+  "border-color": mix(#fff, #393e46, 75%),
+  "link-color": #393e46,
+), $air-config);
+
+@if $air-config {
+  $config: $air-config;
+  $primary-color: map-get($config, "primary-color");
+  @if $primary-color {
+    @if not map-get($config, "footer-background-color") {
+      $config: map-merge($config, ("footer-background-color": $primary-color));
+    }
+  }
+
+  $text-color: map-get($config, "text-color");
+  @if $text-color {
+    @if not map-get($config, "masthead-link-color") {
+      $config: map-merge($config, ("masthead-link-color": $text-color));
+    }
+    @if not map-get($config, "masthead-link-color-hover") {
+      $config: map-merge($config, ("masthead-link-color-hover": $text-color));
+    }
+    @if not map-get($config, "navicon-link-color-hover") {
+      $config: map-merge($config, ("navicon-link-color-hover": mix(#fff, $text-color, 80%)));
+    }
+  }
+
+  $configs: map-merge($configs, ("air": $config));
+
+  [data-skin=air] {
+    .page__footer {
+      color: #fff !important; // override
+    }
+
+    .page__footer-follow .social-icons .svg-inline--fa {
+      color: inherit;
+    }
+  }
+}

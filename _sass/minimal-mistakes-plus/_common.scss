@@ -1,0 +1,647 @@
+@function yiq-is-light($color, $threshold) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+
+  $yiq: (($red * 299) + ($green * 587) + ($blue*114)) / 1000;
+
+  @return if($yiq >= $threshold, true, false);
+}
+
+@function yiq-contrast-color($color, $dark, $light, $threshold) {
+  @return if(yiq-is-light($color, $threshold), $dark, $light);
+}
+
+@mixin clearfix {
+  clear: both;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+$configs: () !default;
+
+$default-config: () !default;
+
+$default-config: map-merge((
+  "doc-font-size": 16px,
+  "paragraph-indent": false,
+  "indent-var": 1.3em,
+  "helvetica": (Helvetica, "Helvetica Neue", Arial, sans-serif),
+  "georgia": (Georgia, serif),
+  "times": (Times, serif),
+  "bodoni": ("Bodoni MT", serif),
+  "calisto": ("Calisto MT", serif),
+  "garamond": (Garamond, serif),
+  "monospace-code": (ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace),
+  "handwritten": ('Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive),
+  "default-sans-serif": (-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif),
+  "default-serif": (Georgia, Times, serif),
+  "default-monospace": (Monaco, Consolas, "Lucida Console", monospace),
+  "emoji-native": ('Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'),
+  "type-size-1": 2.441em,
+  "type-size-2": 1.953em,
+  "type-size-3": 1.563em,
+  "type-size-4": 1.25em,
+  "type-size-5": 1em,
+  "type-size-6": 0.75em,
+  "type-size-7": 0.6875em,
+  "type-size-8": 0.625em,
+  "h-size-1": 1.563em,
+  "h-size-2": 1.25em,
+  "h-size-3": 1.125em,
+  "h-size-4": 1.0625em,
+  "h-size-5": 1.03125em,
+  "h-size-6": 1em,
+  "gray": #7a8288,
+  "background-color": #fff,
+  "code-background-color": #fafafa,
+  "primary-color": #6f777d,
+  "success-color": #3fa63f,
+  "warning-color": #d67f05,
+  "danger-color": #ee5f5b,
+  "info-color": #3b9cba,
+  "yiq-contrasted-light-default": #fff,
+  "yiq-contrasted-threshold": 175,
+  // "yiq-debug": false,
+  "behance-color": #1769ff,
+  "bitbucket-color": #205081,
+  "bluesky-color": #1083fe,
+  "discord-color": #5865f2,
+  "dribbble-color": #ea4c89,
+  "facebook-color": #3b5998,
+  "flickr-color": #ff0084,
+  "foursquare-color": #0072b1,
+  "github-color": #171516,
+  "gitlab-color": #e24329,
+  "instagram-color": #cd3376,
+  "keybase-color": #ef7639,
+  "lastfm-color": #d51007,
+  "linkedin-color": #007bb6,
+  "mastodon-color": #2b90d9,
+  "pinterest-color": #cb2027,
+  "reddit-color": #ff4500,
+  "rss-color": #fa9b39,
+  "signal-color": #3a76f0,
+  "soundcloud-color": #ff3300,
+  "stackoverflow-color": #fe7a15,
+  "telegram-color": #2aabee,
+  "tumblr-color": #32506d,
+  "twitter-color": #55acee,
+  "x-color": #0f1419,
+  "vimeo-color": #1ab7ea,
+  "vine-color": #00bf8f,
+  "whatsapp-color": #25d366,
+  "xing-color": #006567,
+  "youtube-color": #bb0000,
+  "notice-background-mix": 80%,
+  "code-notice-background-mix": 90%,
+  "base00": #263238,
+  "base01": #2e3c43,
+  "base02": #314549,
+  "base03": #546e7a,
+  "base04": #b2ccd6,
+  "base05": #eeffff,
+  "base06": #eeffff,
+  "base07": #ffffff,
+  "base08": #f07178,
+  "base09": #f78c6c,
+  "base0a": #ffcb6b,
+  "base0b": #c3e88d,
+  "base0c": #89ddff,
+  "base0d": #82aaff,
+  "base0e": #c792ea,
+  "base0f": #ff5370,
+  "small": 600px,
+  "medium": 768px,
+  "medium-wide": 900px,
+  "large": 1024px,
+  "x-large": 1280px,
+  "right-sidebar-width-narrow": 200px,
+  "right-sidebar-width": 300px,
+  "right-sidebar-width-wide": 400px,
+  "border-radius": 4px,
+  "box-shadow": (0 1px 1px rgba(0, 0, 0, 0.125)),
+  "nav-height": 2em,
+  "nav-toggle-height": 2rem,
+  "navicon-width": 1.5rem,
+  "navicon-height": 0.25rem,
+  "global-transition": (all 0.2s ease-in-out),
+  "intro-transition": (intro 0.3s both),
+), $default-config);
+
+$configs: map-merge($configs, ("default": $default-config));
+
+@each $name, $config in $configs {
+  $config: map-merge($default-config, $config);
+
+  $doc-font-size: map-get($config, "doc-font-size");
+  @if $doc-font-size {
+    @if not map-get($config, "doc-font-size-medium") {
+      $config: map-merge($config, ("doc-font-size-medium": $doc-font-size * 1.125));
+    }
+    @if not map-get($config, "doc-font-size-medium") {
+      $config: map-merge($config, ("doc-font-size-medium": $doc-font-size * 1.125));
+    }
+    @if not map-get($config, "doc-font-size-large") {
+      $config: map-merge($config, ("doc-font-size-large": $doc-font-size * 1.25));
+    }
+    @if not map-get($config, "doc-font-size-x-large") {
+      $config: map-merge($config, ("doc-font-size-x-large": $doc-font-size * 1.375));
+    }
+  }
+
+  $default-serif: map-get($config, "default-serif");
+  @if $default-serif {
+    @if not map-get($config, "serif") {
+      $config: map-merge($config, ("serif": $default-serif));
+    }
+  }
+
+  $default-sans-serif: map-get($config, "default-sans-serif");
+  @if $default-sans-serif {
+    @if not map-get($config, "sans-serif") {
+      $config: map-merge($config, ("sans-serif": $default-sans-serif));
+    }
+  }
+
+  $sans-serif: map-get($config, "sans-serif");
+  @if $sans-serif {
+    @if not map-get($config, "sans-serif-narrow") {
+      $config: map-merge($config, ("sans-serif-narrow": $sans-serif));
+    }
+    @if not map-get($config, "global-font-family") {
+      $config: map-merge($config, ("global-font-family": $sans-serif));
+    }
+    @if not map-get($config, "header-font-family") {
+      $config: map-merge($config, ("header-font-family": $sans-serif));
+    }
+  }
+
+  $default-monospace: map-get($config, "default-monospace");
+  @if $default-monospace {
+    @if not map-get($config, "monospace") {
+      $config: map-merge($config, ("monospace": $default-monospace));
+    }
+  }
+
+  $serif: map-get($config, "serif");
+  @if $serif {
+    @if not map-get($config, "caption-font-family") {
+      $config: map-merge($config, ("caption-font-family": $serif));
+    }
+  }
+
+  $gray: map-get($config, "gray");
+  @if $gray {
+    @if not map-get($config, "dark-gray") {
+      $config: map-merge($config, ("dark-gray": mix(#000, $gray, 50%)));
+    }
+    @if not map-get($config, "darker-gray") {
+      $config: map-merge($config, ("darker-gray": mix(#000, $gray, 60%)));
+    }
+    @if not map-get($config, "light-gray") {
+      $config: map-merge($config, ("light-gray": mix(#fff, $gray, 50%)));
+    }
+    @if not map-get($config, "lighter-gray") {
+      $config: map-merge($config, ("lighter-gray": mix(#fff, $gray, 90%)));
+    }
+  }
+
+  $light-gray: map-get($config, "light-gray");
+  @if $light-gray {
+    @if not map-get($config, "code-background-color-dark") {
+      $config: map-merge($config, ("code-background-color-dark": $light-gray));
+    }
+  }
+
+  $dark-gray: map-get($config, "dark-gray");
+  @if $dark-gray {
+    @if not map-get($config, "text-color") {
+      $config: map-merge($config, ("text-color": $dark-gray));
+    }
+    @if not map-get($config, "yiq-contrasted-dark-default") {
+      $config: map-merge($config, ("yiq-contrasted-dark-default": $dark-gray));
+    }
+  }
+
+  $text-color: map-get($config, "text-color");
+  @if $text-color {
+    @if not map-get($config, "muted-text-color") {
+      $config: map-merge($config, ("muted-text-color": mix(#fff, $text-color, 20%)));
+    }
+    @if not map-get($config, "func-rgba-text-color-6") {
+      $config: map-merge($config, ("func-rgba-text-color-6": rgba($text-color, 0.06)));
+    }
+  }
+
+  $lighter-gray: map-get($config, "lighter-gray");
+  @if $lighter-gray {
+    @if not map-get($config, "border-color") {
+      $config: map-merge($config, ("border-color": $lighter-gray));
+    }
+    @if not map-get($config, "form-background-color") {
+      $config: map-merge($config, ("form-background-color": $lighter-gray));
+    }
+    @if not map-get($config, "footer-background-color") {
+      $config: map-merge($config, ("footer-background-color": $lighter-gray));
+    }
+  }
+
+  $primary-color: map-get($config, "primary-color");
+  @if $primary-color {
+    @if not map-get($config, "focus-color") {
+      $config: map-merge($config, ("focus-color": $primary-color));
+    }
+    @if not map-get($config, "active-color") {
+      $config: map-merge($config, ("active-color": mix(#fff, $primary-color, 80%)));
+    }
+    @if not map-get($config, "masthead-link-color") {
+      $config: map-merge($config, ("masthead-link-color": $primary-color));
+    }
+    @if not map-get($config, "masthead-link-color-hover") {
+      $config: map-merge($config, ("masthead-link-color-hover": mix(#000, $primary-color, 25%)));
+    }
+    @if not map-get($config, "navicon-link-color-hover") {
+      $config: map-merge($config, ("navicon-link-color-hover": mix(#fff, $primary-color, 75%)));
+    }
+    @if not map-get($config, "func-rgba-primary-color-70") {
+      $config: map-merge($config, ("func-rgba-primary-color-70": rgba($primary-color, 0.7)));
+    }
+  }
+
+  $info-color: map-get($config, "info-color");
+  @if $info-color {
+    @if not map-get($config, "link-color") {
+      $config: map-merge($config, ("link-color": mix(#000, $info-color, 20%)));
+    }
+  }
+
+  $link-color: map-get($config, "link-color");
+  @if $link-color {
+    @if not map-get($config, "link-color-hover") {
+      $config: map-merge($config, ("link-color-hover": mix(#000, $link-color, 25%)));
+    }
+    @if not map-get($config, "link-color-visited") {
+      $config: map-merge($config, ("link-color-visited": mix(#fff, $link-color, 15%)));
+    }
+  }
+
+  $x-large: map-get($config, "x-large");
+  @if $x-large {
+    @if not map-get($config, "max-width") {
+      $config: map-merge($config, ("max-width": $x-large));
+    }
+  }
+
+  $border-color: map-get($config, "border-color");
+  @if $border-color {
+    @if not map-get($config, "func-mix-000-border-color-25") {
+      $config: map-merge($config, ("func-mix-000-border-color-25": mix(#000, $border-color, 25%)));
+    }
+  }
+
+  $primary-color: map-get($config, "primary-color");
+  @if $primary-color {
+    @if not map-get($config, "func-mix-000-primary-color-25") {
+      $config: map-merge($config, ("func-mix-000-primary-color-25": mix(#000, $primary-color, 25%)));
+    }
+  }
+
+  $gray: map-get($config, "gray");
+  @if $gray {
+    @if not map-get($config, "func-mix-fff-gray-25") {
+      $config: map-merge($config, ("func-mix-fff-gray-25": mix(#fff, $gray, 25%)));
+    }
+  }
+
+  $background-color: map-get($config, "background-color");
+  $notice-background-mix: map-get($config, "notice-background-mix");
+  $code-notice-background-mix: map-get($config, "code-notice-background-mix");
+
+  $notice-color-keys: (
+    "light-gray",
+    "primary-color",
+    "info-color",
+    "warning-color",
+    "success-color",
+    "danger-color"
+  );
+  @each $notice-color-key in $notice-color-keys {
+    $notice-color: map-get($config, $notice-color-key);
+    @if $notice-color {
+      @if $background-color and $notice-background-mix {
+        @if not map-get($config, "func-mix-background-color-#{$notice-color-key}-notice-background-mix") {
+          $config: map-merge($config, ("func-mix-background-color-#{$notice-color-key}-notice-background-mix": mix($background-color, $notice-color, $notice-background-mix)));
+        }
+      }
+      @if $background-color and $code-notice-background-mix {
+        @if not map-get($config, "func-mix-background-color-#{$notice-color-key}-code-notice-background-mix") {
+          $config: map-merge($config, ("func-mix-background-color-#{$notice-color-key}-code-notice-background-mix": mix($background-color, $notice-color, $code-notice-background-mix)));
+        }
+      }
+      @if not map-get($config, "func-rgba-#{$notice-color-key}-25") {
+        $config: map-merge($config, ("func-rgba-#{$notice-color-key}-25": rgba($notice-color, 0.25)));
+      }
+      @if not map-get($config, "func-mix-000-#{$notice-color-key}-10") {
+        $config: map-merge($config, ("func-mix-000-#{$notice-color-key}-10": mix(#000, $notice-color, 10%)));
+      }
+      @if not map-get($config, "func-mix-000-#{$notice-color-key}-50") {
+        $config: map-merge($config, ("func-mix-000-#{$notice-color-key}-50": mix(#000, $notice-color, 50%)));
+      }
+    }
+  }
+
+  $yiq-contrasted-dark-default: map-get($config, "yiq-contrasted-dark-default");
+  $yiq-contrasted-light-default: map-get($config, "yiq-contrasted-light-default");
+  $yiq-contrasted-threshold: map-get($config, "yiq-contrasted-threshold");
+
+  @if $yiq-contrasted-dark-default and $yiq-contrasted-light-default and $yiq-contrasted-threshold {
+    $button-colors: (
+      "primary": map-get($config, "primary-color"),
+      "inverse": #fff,
+      "light-outline": transparent,
+      "success": map-get($config, "success-color"),
+      "warning": map-get($config, "warning-color"),
+      "danger": map-get($config, "danger-color"),
+      "info": map-get($config, "info-color"),
+      "bluesky": map-get($config, "bluesky-color"),
+      "facebook": map-get($config, "facebook-color"),
+      "linkedin": map-get($config, "linkedin-color"),
+      "mastodon": map-get($config, "mastodon-color"),
+      "twitter": map-get($config, "twitter-color"),
+      "x": map-get($config, "x-color"),
+    );
+
+    @each $button-color-key, $button-color in $button-colors {
+      @if $button-color {
+        @if not map-get($config, "func-yiq-contrast-button-color-#{$button-color-key}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold") {
+          $config: map-merge($config, ("func-yiq-contrast-button-color-#{$button-color-key}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold": yiq-contrast-color($button-color, $yiq-contrasted-dark-default, $yiq-contrasted-light-default, $yiq-contrasted-threshold)));
+        }
+      }
+    }
+
+    $muted-text-color: map-get($config, "muted-text-color");
+    @if $muted-text-color {
+      @if not map-get($config, "func-yiq-contrast-muted-text-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold") {
+        $config: map-merge($config, ("func-yiq-contrast-muted-text-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold": yiq-contrast-color($muted-text-color, $yiq-contrasted-dark-default, $yiq-contrasted-light-default, $yiq-contrasted-threshold)));
+      }
+      @if not map-get($config, "func-rgba-muted-text-color-50") {
+        $config: map-merge($config, ("func-rgba-muted-text-color-50": rgba($muted-text-color, 0.5)));
+      }
+    }
+
+    $active-color: map-get($config, "active-color");
+    @if $active-color {
+      @if not map-get($config, "func-yiq-contrast-active-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold") {
+        $config: map-merge($config, ("func-yiq-contrast-active-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold": yiq-contrast-color($active-color, $yiq-contrasted-dark-default, $yiq-contrasted-light-default, $yiq-contrasted-threshold)));
+      }
+    }
+  }
+
+  $configs: map-merge($configs, (#{$name}: $config))
+}
+
+$default-config: map-get($configs, "default");
+
+@each $name, $config in $configs {
+  $selector: if($name == "default", ":root", "[data-skin=#{$name}]:root");
+  #{$selector} {
+    @each $key, $value in $config {
+      @if str-slice($key, 1, 8) != "private-" {
+        @if $name == "default" or map-get($default-config, $key) != map-get($config, $key) {
+          --mm-#{$key}: #{$value};
+        } 
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+$doc-font-size: var(--mm-doc-font-size);
+$doc-font-size-medium: var(--mm-doc-font-size-medium);
+$doc-font-size-large: var(--mm-doc-font-size-large);
+$doc-font-size-x-large: var(--mm-doc-font-size-x-large);
+
+/* paragraph indention */
+$paragraph-indent: var(--mm-paragraph-indent);
+$indent-var: var(--mm-indent-var);
+
+/* Modern font stack */
+/* https://github.com/system-fonts/modern-font-stacks */
+
+/* Sans serif - modern font stack */
+$system-ui: system-ui, sans-serif;
+$humanist: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+$geometric-humanist: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+$classical-humanist: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+$neo-grotesque: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+$industrial: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+$rounded-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+
+/* sans serif typefaces - defined in Minimal Mistakes */
+$helvetica: var(--mm-helvetica);
+
+/* Serif - modern font stack */
+$transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+$old-style: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;;
+$monospace-slab-serif: 'Nimbus Mono PS', 'Courier New', monospace;
+$slab-serif: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+$antique: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+$didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+
+/* serif typefaces - defined in Minimal Mistakes */
+$georgia: var(--mm-georgia);
+$times: var(--mm-times);
+$bodoni: var(--mm-bodoni);
+$calisto: var(--mm-calisto);
+$garamond: var(--mm-garamond);
+
+/* Monospace - modern font stack */
+$monospace-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+
+/* Handwritten - modern font stack */
+$handwritten: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+
+/* Defaults used in Minimal mistakes */
+$default-sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$default-serif: Georgia, Times, serif;
+$default-monospace: Monaco, Consolas, "Lucida Console", monospace;
+
+/* Emoji native from modern font stack - add to the end of the font-face for native emojis */
+$emoji-native: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+/* system typefaces */
+$serif: var(--mm-serif);
+$sans-serif: var(--mm-sans-serif);
+$sans-serif-narrow: var(--mm-sans-serif-narrow);
+$monospace: var(--mm-monospace);
+
+$global-font-family: var(--mm-global-font-family);
+$header-font-family: var(--mm-header-font-family);
+$caption-font-family: var(--mm-caption-font-family);
+
+/* type scale */
+$type-size-1: var(--mm-type-size-1);
+$type-size-2: var(--mm-type-size-2);
+$type-size-3: var(--mm-type-size-3);
+$type-size-4: var(--mm-type-size-4);
+$type-size-5: var(--mm-type-size-5);
+$type-size-6: var(--mm-type-size-6);
+$type-size-7: var(--mm-type-size-7);
+$type-size-8: var(--mm-type-size-8);
+
+/* headline scale */
+$h-size-1: var(--mm-h-size-1);
+$h-size-2: var(--mm-h-size-2);
+$h-size-3: var(--mm-h-size-3);
+$h-size-4: var(--mm-h-size-4);
+$h-size-5: var(--mm-h-size-5);
+$h-size-6: var(--mm-h-size-6);
+
+/*
+   Colors
+   ========================================================================== */
+
+$gray: var(--mm-gray);
+$dark-gray: var(--mm-dark-gray);
+$darker-gray: var(--mm-darker-gray);
+$light-gray: var(--mm-light-gray);
+$lighter-gray: var(--mm-lighter-gray);
+
+$background-color: var(--mm-background-color);
+$code-background-color: var(--mm-code-background-color);
+$code-background-color-dark: var(--mm-code-background-color-dark);
+$text-color: var(--mm-text-color);
+$muted-text-color: var(--mm-muted-text-color);
+$border-color: var(--mm-border-color);
+$form-background-color: var(--mm-form-background-color);
+$footer-background-color: var(--mm-footer-background-color);
+
+$primary-color: var(--mm-primary-color);
+$success-color: var(--mm-success-color);
+$warning-color: var(--mm-warning-color);
+$danger-color: var(--mm-danger-color);
+$info-color: var(--mm-info-color);
+$focus-color: var(--mm-focus-color);
+$active-color: var(--mm-active-color);
+
+/* YIQ color contrast */
+$yiq-contrasted-dark-default: var(--mm-yiq-contrasted-dark-default);
+$yiq-contrasted-light-default: var(--mm-yiq-contrasted-light-default);
+$yiq-contrasted-threshold: var(--mm-yiq-contrasted-threshold);
+// $yiq-debug: var(--mm-yiq-debug);
+
+/* brands */
+$behance-color: var(--mm-behance-color);
+$bitbucket-color: var(--mm-bitbucket-color);
+$bluesky-color: var(--mm-bluesky-color);
+$discord-color: var(--mm-discord-color);
+$dribbble-color: var(--mm-dribbble-color);
+$facebook-color: var(--mm-facebook-color);
+$flickr-color: var(--mm-flickr-color);
+$foursquare-color: var(--mm-foursquare-color);
+$github-color: var(--mm-github-color);
+$gitlab-color: var(--mm-gitlab-color);
+$instagram-color: var(--mm-instagram-color);
+$keybase-color: var(--mm-keybase-color);
+$lastfm-color: var(--mm-lastfm-color);
+$linkedin-color: var(--mm-linkedin-color);
+$mastodon-color: var(--mm-mastodon-color);
+$pinterest-color: var(--mm-pinterest-color);
+$reddit-color: var(--mm-reddit-color);
+$rss-color: var(--mm-rss-color);
+$signal-color: var(--mm-signal-color);
+$soundcloud-color: var(--mm-soundcloud-color);
+$stackoverflow-color: var(--mm-stackoverflow-color);
+$telegram-color: var(--mm-telegram-color);
+$tumblr-color: var(--mm-tumblr-color);
+$twitter-color: var(--mm-twitter-color);
+$x-color: var(--mm-x-color);
+$vimeo-color: var(--mm-vimeo-color);
+$vine-color: var(--mm-vine-color);
+$whatsapp-color: var(--mm-whatsapp-color);
+$xing-color: var(--mm-xing-color);
+$youtube-color: var(--mm-youtube-color);
+
+$black-color: #000000;
+
+/* links */
+$link-color: var(--mm-link-color);
+$link-color-hover: var(--mm-link-color-hover);
+$link-color-visited: var(--mm-link-color-visited);
+$masthead-link-color: var(--mm-masthead-link-color);
+$masthead-link-color-hover: var(--mm-masthead-link-color-hover);
+$navicon-link-color-hover: var(--mm-navicon-link-color-hover);
+
+/* notices */
+$notice-background-mix: var(--mm-notice-background-mix);
+$code-notice-background-mix: var(--mm-code-notice-background-mix);
+
+/* syntax highlighting (base16) */
+$base00: var(--mm-base00);
+$base01: var(--mm-base01);
+$base02: var(--mm-base02);
+$base03: var(--mm-base03);
+$base04: var(--mm-base04);
+$base05: var(--mm-base05);
+$base06: var(--mm-base06);
+$base07: var(--mm-base07);
+$base08: var(--mm-base08);
+$base09: var(--mm-base09);
+$base0a: var(--mm-base0a);
+$base0b: var(--mm-base0b);
+$base0c: var(--mm-base0c);
+$base0d: var(--mm-base0d);
+$base0e: var(--mm-base0e);
+$base0f: var(--mm-base0f);
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+$small: var(--mm-small);
+$medium: var(--mm-medium);
+$medium-wide: var(--mm-medium-wide);
+$large: var(--mm-large);
+$x-large: var(--mm-x-large);
+$max-width: var(--mm-max-width);
+
+/*
+   Grid
+   ========================================================================== */
+
+$right-sidebar-width-narrow: var(--mm-right-sidebar-width-narrow);
+$right-sidebar-width: var(--mm-right-sidebar-width);
+$right-sidebar-width-wide: var(--mm-right-sidebar-width-wide);
+
+/*
+   Other
+   ========================================================================== */
+
+$border-radius: var(--mm-border-radius);
+$box-shadow: var(--mm-box-shadow);
+$nav-height: var(--mm-nav-height);
+$nav-toggle-height: var(--mm-nav-toggle-height);
+$navicon-width: var(--mm-navicon-width);
+$navicon-height: var(--mm-navicon-height);
+$global-transition: var(--mm-global-transition);
+$intro-transition: var(--mm-intro-transition);
+
+%tab-focus {
+  /* Default*/
+  outline: thin dotted $focus-color;
+  /* Webkit*/
+  outline: 5px auto $focus-color;
+  outline-offset: -2px;
+}
