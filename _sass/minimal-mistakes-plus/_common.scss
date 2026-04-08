@@ -12,6 +12,32 @@
   @return if(yiq-is-light($color, $threshold), $dark, $light);
 }
 
+@function num-key($num, $str: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz") {
+  @if $num < 0 {
+    @return "-#{num62(-$num)}";
+  }
+
+  $size: str-length($str);
+  @if $num < $size {
+    $i: $num + 1;
+    @return str-slice($str, $i, $i);
+  }
+
+  $result: "";
+  @while $num > 0 {
+    $i: ($num % $size) + 1;
+    $result: str-slice($str, $i, $i) + $result;
+    $num: floor($num / 62);
+  }
+
+  @return $result;
+}
+
+$key-map: ();
+@function short-var($key) {
+  @return var(map-get($key-map, $key));
+}
+
 @mixin clearfix {
   clear: both;
 
@@ -413,7 +439,12 @@ $default-config: map-get($configs, "default");
     @each $key, $value in $config {
       @if str-slice($key, 1, 8) != "private-" {
         @if $name == "default" or map-get($default-config, $key) != map-get($config, $key) {
-          --mm-#{$key}: #{$value};
+          $short-key: map-get($key-map, $key);
+          @if not $short-key {
+            $short-key: --#{num-key(length($key-map))};
+            $key-map: map-merge($key-map, ($key: $short-key)) !global;
+          }
+          #{$short-key}: #{$value};
         } 
       }
     }
@@ -428,14 +459,14 @@ $default-config: map-get($configs, "default");
    Typography
    ========================================================================== */
 
-$doc-font-size: var(--mm-doc-font-size);
-$doc-font-size-medium: var(--mm-doc-font-size-medium);
-$doc-font-size-large: var(--mm-doc-font-size-large);
-$doc-font-size-x-large: var(--mm-doc-font-size-x-large);
+$doc-font-size: short-var("doc-font-size");
+$doc-font-size-medium: short-var("doc-font-size-medium");
+$doc-font-size-large: short-var("doc-font-size-large");
+$doc-font-size-x-large: short-var("doc-font-size-x-large");
 
 /* paragraph indention */
-$paragraph-indent: var(--mm-paragraph-indent);
-$indent-var: var(--mm-indent-var);
+$paragraph-indent: short-var("paragraph-indent");
+$indent-var: short-var("indent-var");
 
 /* Modern font stack */
 /* https://github.com/system-fonts/modern-font-stacks */
@@ -450,7 +481,7 @@ $industrial: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus San
 $rounded-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
 /* sans serif typefaces - defined in Minimal Mistakes */
-$helvetica: var(--mm-helvetica);
+$helvetica: short-var("helvetica");
 
 /* Serif - modern font stack */
 $transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
@@ -461,11 +492,11 @@ $antique: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', '
 $didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 
 /* serif typefaces - defined in Minimal Mistakes */
-$georgia: var(--mm-georgia);
-$times: var(--mm-times);
-$bodoni: var(--mm-bodoni);
-$calisto: var(--mm-calisto);
-$garamond: var(--mm-garamond);
+$georgia: short-var("georgia");
+$times: short-var("times");
+$bodoni: short-var("bodoni");
+$calisto: short-var("calisto");
+$garamond: short-var("garamond");
 
 /* Monospace - modern font stack */
 $monospace-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
@@ -482,161 +513,161 @@ $default-monospace: Monaco, Consolas, "Lucida Console", monospace;
 $emoji-native: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 /* system typefaces */
-$serif: var(--mm-serif);
-$sans-serif: var(--mm-sans-serif);
-$sans-serif-narrow: var(--mm-sans-serif-narrow);
-$monospace: var(--mm-monospace);
+$serif: short-var("serif");
+$sans-serif: short-var("sans-serif");
+$sans-serif-narrow: short-var("sans-serif-narrow");
+$monospace: short-var("monospace");
 
-$global-font-family: var(--mm-global-font-family);
-$header-font-family: var(--mm-header-font-family);
-$caption-font-family: var(--mm-caption-font-family);
+$global-font-family: short-var("global-font-family");
+$header-font-family: short-var("header-font-family");
+$caption-font-family: short-var("caption-font-family");
 
 /* type scale */
-$type-size-1: var(--mm-type-size-1);
-$type-size-2: var(--mm-type-size-2);
-$type-size-3: var(--mm-type-size-3);
-$type-size-4: var(--mm-type-size-4);
-$type-size-5: var(--mm-type-size-5);
-$type-size-6: var(--mm-type-size-6);
-$type-size-7: var(--mm-type-size-7);
-$type-size-8: var(--mm-type-size-8);
+$type-size-1: short-var("type-size-1");
+$type-size-2: short-var("type-size-2");
+$type-size-3: short-var("type-size-3");
+$type-size-4: short-var("type-size-4");
+$type-size-5: short-var("type-size-5");
+$type-size-6: short-var("type-size-6");
+$type-size-7: short-var("type-size-7");
+$type-size-8: short-var("type-size-8");
 
 /* headline scale */
-$h-size-1: var(--mm-h-size-1);
-$h-size-2: var(--mm-h-size-2);
-$h-size-3: var(--mm-h-size-3);
-$h-size-4: var(--mm-h-size-4);
-$h-size-5: var(--mm-h-size-5);
-$h-size-6: var(--mm-h-size-6);
+$h-size-1: short-var("h-size-1");
+$h-size-2: short-var("h-size-2");
+$h-size-3: short-var("h-size-3");
+$h-size-4: short-var("h-size-4");
+$h-size-5: short-var("h-size-5");
+$h-size-6: short-var("h-size-6");
 
 /*
    Colors
    ========================================================================== */
 
-$gray: var(--mm-gray);
-$dark-gray: var(--mm-dark-gray);
-$darker-gray: var(--mm-darker-gray);
-$light-gray: var(--mm-light-gray);
-$lighter-gray: var(--mm-lighter-gray);
+$gray: short-var("gray");
+$dark-gray: short-var("dark-gray");
+$darker-gray: short-var("darker-gray");
+$light-gray: short-var("light-gray");
+$lighter-gray: short-var("lighter-gray");
 
-$background-color: var(--mm-background-color);
-$code-background-color: var(--mm-code-background-color);
-$code-background-color-dark: var(--mm-code-background-color-dark);
-$text-color: var(--mm-text-color);
-$muted-text-color: var(--mm-muted-text-color);
-$border-color: var(--mm-border-color);
-$form-background-color: var(--mm-form-background-color);
-$footer-background-color: var(--mm-footer-background-color);
+$background-color: short-var("background-color");
+$code-background-color: short-var("code-background-color");
+$code-background-color-dark: short-var("code-background-color-dark");
+$text-color: short-var("text-color");
+$muted-text-color: short-var("muted-text-color");
+$border-color: short-var("border-color");
+$form-background-color: short-var("form-background-color");
+$footer-background-color: short-var("footer-background-color");
 
-$primary-color: var(--mm-primary-color);
-$success-color: var(--mm-success-color);
-$warning-color: var(--mm-warning-color);
-$danger-color: var(--mm-danger-color);
-$info-color: var(--mm-info-color);
-$focus-color: var(--mm-focus-color);
-$active-color: var(--mm-active-color);
+$primary-color: short-var("primary-color");
+$success-color: short-var("success-color");
+$warning-color: short-var("warning-color");
+$danger-color: short-var("danger-color");
+$info-color: short-var("info-color");
+$focus-color: short-var("focus-color");
+$active-color: short-var("active-color");
 
 /* YIQ color contrast */
-$yiq-contrasted-dark-default: var(--mm-yiq-contrasted-dark-default);
-$yiq-contrasted-light-default: var(--mm-yiq-contrasted-light-default);
-$yiq-contrasted-threshold: var(--mm-yiq-contrasted-threshold);
-// $yiq-debug: var(--mm-yiq-debug);
+$yiq-contrasted-dark-default: short-var("yiq-contrasted-dark-default");
+$yiq-contrasted-light-default: short-var("yiq-contrasted-light-default");
+$yiq-contrasted-threshold: short-var("yiq-contrasted-threshold");
+// $yiq-debug: short-var("yiq-debug");
 
 /* brands */
-$behance-color: var(--mm-behance-color);
-$bitbucket-color: var(--mm-bitbucket-color);
-$bluesky-color: var(--mm-bluesky-color);
-$discord-color: var(--mm-discord-color);
-$dribbble-color: var(--mm-dribbble-color);
-$facebook-color: var(--mm-facebook-color);
-$flickr-color: var(--mm-flickr-color);
-$foursquare-color: var(--mm-foursquare-color);
-$github-color: var(--mm-github-color);
-$gitlab-color: var(--mm-gitlab-color);
-$instagram-color: var(--mm-instagram-color);
-$keybase-color: var(--mm-keybase-color);
-$lastfm-color: var(--mm-lastfm-color);
-$linkedin-color: var(--mm-linkedin-color);
-$mastodon-color: var(--mm-mastodon-color);
-$pinterest-color: var(--mm-pinterest-color);
-$reddit-color: var(--mm-reddit-color);
-$rss-color: var(--mm-rss-color);
-$signal-color: var(--mm-signal-color);
-$soundcloud-color: var(--mm-soundcloud-color);
-$stackoverflow-color: var(--mm-stackoverflow-color);
-$telegram-color: var(--mm-telegram-color);
-$tumblr-color: var(--mm-tumblr-color);
-$twitter-color: var(--mm-twitter-color);
-$x-color: var(--mm-x-color);
-$vimeo-color: var(--mm-vimeo-color);
-$vine-color: var(--mm-vine-color);
-$whatsapp-color: var(--mm-whatsapp-color);
-$xing-color: var(--mm-xing-color);
-$youtube-color: var(--mm-youtube-color);
+$behance-color: short-var("behance-color");
+$bitbucket-color: short-var("bitbucket-color");
+$bluesky-color: short-var("bluesky-color");
+$discord-color: short-var("discord-color");
+$dribbble-color: short-var("dribbble-color");
+$facebook-color: short-var("facebook-color");
+$flickr-color: short-var("flickr-color");
+$foursquare-color: short-var("foursquare-color");
+$github-color: short-var("github-color");
+$gitlab-color: short-var("gitlab-color");
+$instagram-color: short-var("instagram-color");
+$keybase-color: short-var("keybase-color");
+$lastfm-color: short-var("lastfm-color");
+$linkedin-color: short-var("linkedin-color");
+$mastodon-color: short-var("mastodon-color");
+$pinterest-color: short-var("pinterest-color");
+$reddit-color: short-var("reddit-color");
+$rss-color: short-var("rss-color");
+$signal-color: short-var("signal-color");
+$soundcloud-color: short-var("soundcloud-color");
+$stackoverflow-color: short-var("stackoverflow-color");
+$telegram-color: short-var("telegram-color");
+$tumblr-color: short-var("tumblr-color");
+$twitter-color: short-var("twitter-color");
+$x-color: short-var("x-color");
+$vimeo-color: short-var("vimeo-color");
+$vine-color: short-var("vine-color");
+$whatsapp-color: short-var("whatsapp-color");
+$xing-color: short-var("xing-color");
+$youtube-color: short-var("youtube-color");
 
 $black-color: #000000;
 
 /* links */
-$link-color: var(--mm-link-color);
-$link-color-hover: var(--mm-link-color-hover);
-$link-color-visited: var(--mm-link-color-visited);
-$masthead-link-color: var(--mm-masthead-link-color);
-$masthead-link-color-hover: var(--mm-masthead-link-color-hover);
-$navicon-link-color-hover: var(--mm-navicon-link-color-hover);
+$link-color: short-var("link-color");
+$link-color-hover: short-var("link-color-hover");
+$link-color-visited: short-var("link-color-visited");
+$masthead-link-color: short-var("masthead-link-color");
+$masthead-link-color-hover: short-var("masthead-link-color-hover");
+$navicon-link-color-hover: short-var("navicon-link-color-hover");
 
 /* notices */
-$notice-background-mix: var(--mm-notice-background-mix);
-$code-notice-background-mix: var(--mm-code-notice-background-mix);
+$notice-background-mix: short-var("notice-background-mix");
+$code-notice-background-mix: short-var("code-notice-background-mix");
 
 /* syntax highlighting (base16) */
-$base00: var(--mm-base00);
-$base01: var(--mm-base01);
-$base02: var(--mm-base02);
-$base03: var(--mm-base03);
-$base04: var(--mm-base04);
-$base05: var(--mm-base05);
-$base06: var(--mm-base06);
-$base07: var(--mm-base07);
-$base08: var(--mm-base08);
-$base09: var(--mm-base09);
-$base0a: var(--mm-base0a);
-$base0b: var(--mm-base0b);
-$base0c: var(--mm-base0c);
-$base0d: var(--mm-base0d);
-$base0e: var(--mm-base0e);
-$base0f: var(--mm-base0f);
+$base00: short-var("base00");
+$base01: short-var("base01");
+$base02: short-var("base02");
+$base03: short-var("base03");
+$base04: short-var("base04");
+$base05: short-var("base05");
+$base06: short-var("base06");
+$base07: short-var("base07");
+$base08: short-var("base08");
+$base09: short-var("base09");
+$base0a: short-var("base0a");
+$base0b: short-var("base0b");
+$base0c: short-var("base0c");
+$base0d: short-var("base0d");
+$base0e: short-var("base0e");
+$base0f: short-var("base0f");
 
 /*
    Breakpoints
    ========================================================================== */
 
-$small: var(--mm-small);
-$medium: var(--mm-medium);
-$medium-wide: var(--mm-medium-wide);
-$large: var(--mm-large);
-$x-large: var(--mm-x-large);
-$max-width: var(--mm-max-width);
+$small: short-var("small");
+$medium: short-var("medium");
+$medium-wide: short-var("medium-wide");
+$large: short-var("large");
+$x-large: short-var("x-large");
+$max-width: short-var("max-width");
 
 /*
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: var(--mm-right-sidebar-width-narrow);
-$right-sidebar-width: var(--mm-right-sidebar-width);
-$right-sidebar-width-wide: var(--mm-right-sidebar-width-wide);
+$right-sidebar-width-narrow: short-var("right-sidebar-width-narrow");
+$right-sidebar-width: short-var("right-sidebar-width");
+$right-sidebar-width-wide: short-var("right-sidebar-width-wide");
 
 /*
    Other
    ========================================================================== */
 
-$border-radius: var(--mm-border-radius);
-$box-shadow: var(--mm-box-shadow);
-$nav-height: var(--mm-nav-height);
-$nav-toggle-height: var(--mm-nav-toggle-height);
-$navicon-width: var(--mm-navicon-width);
-$navicon-height: var(--mm-navicon-height);
-$global-transition: var(--mm-global-transition);
-$intro-transition: var(--mm-intro-transition);
+$border-radius: short-var("border-radius");
+$box-shadow: short-var("box-shadow");
+$nav-height: short-var("nav-height");
+$nav-toggle-height: short-var("nav-toggle-height");
+$navicon-width: short-var("navicon-width");
+$navicon-height: short-var("navicon-height");
+$global-transition: short-var("global-transition");
+$intro-transition: short-var("intro-transition");
 
 %tab-focus {
   /* Default*/

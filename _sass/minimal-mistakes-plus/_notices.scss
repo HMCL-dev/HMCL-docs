@@ -17,9 +17,9 @@
   font-family: $global-font-family;
   font-size: $type-size-6 !important;
   text-indent: initial; /* override*/
-  background-color: var(--mm-func-mix-background-color-#{$notice-color-key}-notice-background-mix);
+  background-color: short-var("func-mix-background-color-#{$notice-color-key}-notice-background-mix");
   border-radius: $border-radius;
-  box-shadow: 0 1px 1px var(--mm-func-rgba-#{$notice-color-key}-25);
+  box-shadow: 0 1px 1px short-var("func-rgba-#{$notice-color-key}-25");
 
   h4 {
     margin-top: 0 !important; /* override*/
@@ -46,19 +46,19 @@
   }
 
   a {
-    color: var(--mm-func-mix-000-#{$notice-color-key}-10);
+    color: short-var("func-mix-000-#{$notice-color-key}-10");
 
     &:hover {
-      color: var(--mm-func-mix-000-#{$notice-color-key}-50);
+      color: short-var("func-mix-000-#{$notice-color-key}-50");
     }
   }
 
   @at-root #{selector-unify(&, "blockquote")} {
-    border-inline-start-color: var(--mm-func-mix-000-#{$notice-color-key}-10);
+    border-inline-start-color: short-var("func-mix-000-#{$notice-color-key}-10");
   }
 
   code {
-    background-color: var(--mm-func-mix-background-color-#{$notice-color-key}-code-notice-background-mix);
+    background-color: short-var("func-mix-background-color-#{$notice-color-key}-code-notice-background-mix");
   }
 
 	pre code {

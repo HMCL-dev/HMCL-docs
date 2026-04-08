@@ -20,7 +20,7 @@
   transition: 0.2s;
 
   &:hover {
-    color: var(--mm-func-mix-000-primary-color-25);
+    color: short-var("func-mix-000-primary-color-25");
   }
 }
 
