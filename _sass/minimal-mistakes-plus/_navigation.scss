@@ -80,7 +80,7 @@
       text-align: center;
       text-decoration: none;
       color: $muted-text-color;
-      border: 1px solid short-var("func-mix-000-border-color-25");
+      border: 1px solid skin-var("func-mix-000-border-color-25");
       border-radius: 0;
 
       &:hover {
@@ -94,7 +94,7 @@
       }
 
       &.disabled {
-        color: short-var("func-rgba-muted-text-color-50");
+        color: skin-var("func-rgba-muted-text-color-50");
         pointer-events: none;
         cursor: not-allowed;
       }
@@ -129,12 +129,12 @@
     text-align: center;
     text-decoration: none;
     color: $muted-text-color;
-    border: 1px solid short-var("func-mix-000-border-color-25");
+    border: 1px solid skin-var("func-mix-000-border-color-25");
     border-radius: $border-radius;
 
     &:hover {
       background-color: $muted-text-color;
-      color: short-var("func-yiq-contrast-muted-text-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+      color: skin-var("func-yiq-contrast-muted-text-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
     }
 
     &:first-child {
@@ -149,7 +149,7 @@
     }
 
     &.disabled {
-      color: short-var("func-rgba-muted-text-color-50");
+      color: skin-var("func-rgba-muted-text-color-50");
       pointer-events: none;
       cursor: not-allowed;
     }
@@ -523,7 +523,7 @@
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
     background-color: $active-color;
-    color: short-var("func-yiq-contrast-active-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+    color: skin-var("func-yiq-contrast-active-color-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
   }
 }
 

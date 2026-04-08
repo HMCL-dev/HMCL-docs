@@ -1,6 +1,12 @@
 ---
 ---
 
+/**{{'/'}}
+{% if jekyll.environment == "production" %}
+$compress_css_variables: true;
+{% endif %}
+/**/
+
 @import "minimal-mistakes-plus/skins/air";
 @import "minimal-mistakes-plus/skins/aqua";
 @import "minimal-mistakes-plus/skins/contrast";

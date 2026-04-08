@@ -344,7 +344,7 @@ body {
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid short-var("func-mix-000-border-color-25");
+  border: 1px solid skin-var("func-mix-000-border-color-25");
   border-radius: $border-radius;
 
   &:hover {

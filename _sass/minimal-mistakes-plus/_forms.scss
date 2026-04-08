@@ -209,8 +209,8 @@ textarea:focus {
   border-color: $primary-color;
   outline: 0;
   outline: thin dotted \9;
-  box-shadow: inset 0 1px 3px short-var("func-rgba-text-color-6"),
-    0 0 5px short-var("func-rgba-primary-color-70");
+  box-shadow: inset 0 1px 3px skin-var("func-rgba-text-color-6"),
+    0 0 5px skin-var("func-rgba-primary-color-70");
 }
 
 input[type="file"]:focus,

@@ -48,7 +48,7 @@
   @each $buttoncolor, $color in $buttoncolors {
     &--#{$buttoncolor} {
       background-color: $color;
-      color: short-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+      color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
       @if ($buttoncolor == inverse) {
         border: 1px solid $border-color;
       }
@@ -58,12 +58,12 @@
 
       &:visited {
         background-color: $color;
-        color: short-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+        color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
       }
 
       &:hover {
-        background-color: short-var("func-mix-000-color-20");
-        color: short-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+        background-color: skin-var("func-mix-000-color-20");
+        color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
       }
     }
   }

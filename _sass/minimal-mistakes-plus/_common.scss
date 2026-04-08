@@ -33,9 +33,15 @@
   @return $result;
 }
 
+$compress_css_variables: false !default;
+
 $key-map: ();
-@function short-var($key) {
-  @return var(map-get($key-map, $key));
+@function skin-var($key) {
+  @if $compress_css_variables {
+    @return var(map-get($key-map, $key));
+  } @else {
+    @return var(--mm-#{$key});
+  }
 }
 
 @mixin clearfix {
@@ -439,13 +445,17 @@ $default-config: map-get($configs, "default");
     @each $key, $value in $config {
       @if str-slice($key, 1, 8) != "private-" {
         @if $name == "default" or map-get($default-config, $key) != map-get($config, $key) {
-          $short-key: map-get($key-map, $key);
-          @if not $short-key {
-            $short-key: --#{num-key(length($key-map))};
-            $key-map: map-merge($key-map, ($key: $short-key)) !global;
+          @if $compress_css_variables {
+            $short-key: map-get($key-map, $key);
+            @if not $short-key {
+              $short-key: --#{num-key(length($key-map))};
+              $key-map: map-merge($key-map, ($key: $short-key)) !global;
+            }
+            #{$short-key}: #{$value};
+          } @else {
+            --mm-#{$key}: #{$value};
           }
-          #{$short-key}: #{$value};
-        } 
+        }
       }
     }
   }
@@ -459,14 +469,14 @@ $default-config: map-get($configs, "default");
    Typography
    ========================================================================== */
 
-$doc-font-size: short-var("doc-font-size");
-$doc-font-size-medium: short-var("doc-font-size-medium");
-$doc-font-size-large: short-var("doc-font-size-large");
-$doc-font-size-x-large: short-var("doc-font-size-x-large");
+$doc-font-size: skin-var("doc-font-size");
+$doc-font-size-medium: skin-var("doc-font-size-medium");
+$doc-font-size-large: skin-var("doc-font-size-large");
+$doc-font-size-x-large: skin-var("doc-font-size-x-large");
 
 /* paragraph indention */
-$paragraph-indent: short-var("paragraph-indent");
-$indent-var: short-var("indent-var");
+$paragraph-indent: skin-var("paragraph-indent");
+$indent-var: skin-var("indent-var");
 
 /* Modern font stack */
 /* https://github.com/system-fonts/modern-font-stacks */
@@ -481,7 +491,7 @@ $industrial: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus San
 $rounded-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
 /* sans serif typefaces - defined in Minimal Mistakes */
-$helvetica: short-var("helvetica");
+$helvetica: skin-var("helvetica");
 
 /* Serif - modern font stack */
 $transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
@@ -492,11 +502,11 @@ $antique: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', '
 $didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 
 /* serif typefaces - defined in Minimal Mistakes */
-$georgia: short-var("georgia");
-$times: short-var("times");
-$bodoni: short-var("bodoni");
-$calisto: short-var("calisto");
-$garamond: short-var("garamond");
+$georgia: skin-var("georgia");
+$times: skin-var("times");
+$bodoni: skin-var("bodoni");
+$calisto: skin-var("calisto");
+$garamond: skin-var("garamond");
 
 /* Monospace - modern font stack */
 $monospace-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
@@ -513,161 +523,161 @@ $default-monospace: Monaco, Consolas, "Lucida Console", monospace;
 $emoji-native: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 /* system typefaces */
-$serif: short-var("serif");
-$sans-serif: short-var("sans-serif");
-$sans-serif-narrow: short-var("sans-serif-narrow");
-$monospace: short-var("monospace");
+$serif: skin-var("serif");
+$sans-serif: skin-var("sans-serif");
+$sans-serif-narrow: skin-var("sans-serif-narrow");
+$monospace: skin-var("monospace");
 
-$global-font-family: short-var("global-font-family");
-$header-font-family: short-var("header-font-family");
-$caption-font-family: short-var("caption-font-family");
+$global-font-family: skin-var("global-font-family");
+$header-font-family: skin-var("header-font-family");
+$caption-font-family: skin-var("caption-font-family");
 
 /* type scale */
-$type-size-1: short-var("type-size-1");
-$type-size-2: short-var("type-size-2");
-$type-size-3: short-var("type-size-3");
-$type-size-4: short-var("type-size-4");
-$type-size-5: short-var("type-size-5");
-$type-size-6: short-var("type-size-6");
-$type-size-7: short-var("type-size-7");
-$type-size-8: short-var("type-size-8");
+$type-size-1: skin-var("type-size-1");
+$type-size-2: skin-var("type-size-2");
+$type-size-3: skin-var("type-size-3");
+$type-size-4: skin-var("type-size-4");
+$type-size-5: skin-var("type-size-5");
+$type-size-6: skin-var("type-size-6");
+$type-size-7: skin-var("type-size-7");
+$type-size-8: skin-var("type-size-8");
 
 /* headline scale */
-$h-size-1: short-var("h-size-1");
-$h-size-2: short-var("h-size-2");
-$h-size-3: short-var("h-size-3");
-$h-size-4: short-var("h-size-4");
-$h-size-5: short-var("h-size-5");
-$h-size-6: short-var("h-size-6");
+$h-size-1: skin-var("h-size-1");
+$h-size-2: skin-var("h-size-2");
+$h-size-3: skin-var("h-size-3");
+$h-size-4: skin-var("h-size-4");
+$h-size-5: skin-var("h-size-5");
+$h-size-6: skin-var("h-size-6");
 
 /*
    Colors
    ========================================================================== */
 
-$gray: short-var("gray");
-$dark-gray: short-var("dark-gray");
-$darker-gray: short-var("darker-gray");
-$light-gray: short-var("light-gray");
-$lighter-gray: short-var("lighter-gray");
+$gray: skin-var("gray");
+$dark-gray: skin-var("dark-gray");
+$darker-gray: skin-var("darker-gray");
+$light-gray: skin-var("light-gray");
+$lighter-gray: skin-var("lighter-gray");
 
-$background-color: short-var("background-color");
-$code-background-color: short-var("code-background-color");
-$code-background-color-dark: short-var("code-background-color-dark");
-$text-color: short-var("text-color");
-$muted-text-color: short-var("muted-text-color");
-$border-color: short-var("border-color");
-$form-background-color: short-var("form-background-color");
-$footer-background-color: short-var("footer-background-color");
+$background-color: skin-var("background-color");
+$code-background-color: skin-var("code-background-color");
+$code-background-color-dark: skin-var("code-background-color-dark");
+$text-color: skin-var("text-color");
+$muted-text-color: skin-var("muted-text-color");
+$border-color: skin-var("border-color");
+$form-background-color: skin-var("form-background-color");
+$footer-background-color: skin-var("footer-background-color");
 
-$primary-color: short-var("primary-color");
-$success-color: short-var("success-color");
-$warning-color: short-var("warning-color");
-$danger-color: short-var("danger-color");
-$info-color: short-var("info-color");
-$focus-color: short-var("focus-color");
-$active-color: short-var("active-color");
+$primary-color: skin-var("primary-color");
+$success-color: skin-var("success-color");
+$warning-color: skin-var("warning-color");
+$danger-color: skin-var("danger-color");
+$info-color: skin-var("info-color");
+$focus-color: skin-var("focus-color");
+$active-color: skin-var("active-color");
 
 /* YIQ color contrast */
-$yiq-contrasted-dark-default: short-var("yiq-contrasted-dark-default");
-$yiq-contrasted-light-default: short-var("yiq-contrasted-light-default");
-$yiq-contrasted-threshold: short-var("yiq-contrasted-threshold");
-// $yiq-debug: short-var("yiq-debug");
+$yiq-contrasted-dark-default: skin-var("yiq-contrasted-dark-default");
+$yiq-contrasted-light-default: skin-var("yiq-contrasted-light-default");
+$yiq-contrasted-threshold: skin-var("yiq-contrasted-threshold");
+// $yiq-debug: skin-var("yiq-debug");
 
 /* brands */
-$behance-color: short-var("behance-color");
-$bitbucket-color: short-var("bitbucket-color");
-$bluesky-color: short-var("bluesky-color");
-$discord-color: short-var("discord-color");
-$dribbble-color: short-var("dribbble-color");
-$facebook-color: short-var("facebook-color");
-$flickr-color: short-var("flickr-color");
-$foursquare-color: short-var("foursquare-color");
-$github-color: short-var("github-color");
-$gitlab-color: short-var("gitlab-color");
-$instagram-color: short-var("instagram-color");
-$keybase-color: short-var("keybase-color");
-$lastfm-color: short-var("lastfm-color");
-$linkedin-color: short-var("linkedin-color");
-$mastodon-color: short-var("mastodon-color");
-$pinterest-color: short-var("pinterest-color");
-$reddit-color: short-var("reddit-color");
-$rss-color: short-var("rss-color");
-$signal-color: short-var("signal-color");
-$soundcloud-color: short-var("soundcloud-color");
-$stackoverflow-color: short-var("stackoverflow-color");
-$telegram-color: short-var("telegram-color");
-$tumblr-color: short-var("tumblr-color");
-$twitter-color: short-var("twitter-color");
-$x-color: short-var("x-color");
-$vimeo-color: short-var("vimeo-color");
-$vine-color: short-var("vine-color");
-$whatsapp-color: short-var("whatsapp-color");
-$xing-color: short-var("xing-color");
-$youtube-color: short-var("youtube-color");
+$behance-color: skin-var("behance-color");
+$bitbucket-color: skin-var("bitbucket-color");
+$bluesky-color: skin-var("bluesky-color");
+$discord-color: skin-var("discord-color");
+$dribbble-color: skin-var("dribbble-color");
+$facebook-color: skin-var("facebook-color");
+$flickr-color: skin-var("flickr-color");
+$foursquare-color: skin-var("foursquare-color");
+$github-color: skin-var("github-color");
+$gitlab-color: skin-var("gitlab-color");
+$instagram-color: skin-var("instagram-color");
+$keybase-color: skin-var("keybase-color");
+$lastfm-color: skin-var("lastfm-color");
+$linkedin-color: skin-var("linkedin-color");
+$mastodon-color: skin-var("mastodon-color");
+$pinterest-color: skin-var("pinterest-color");
+$reddit-color: skin-var("reddit-color");
+$rss-color: skin-var("rss-color");
+$signal-color: skin-var("signal-color");
+$soundcloud-color: skin-var("soundcloud-color");
+$stackoverflow-color: skin-var("stackoverflow-color");
+$telegram-color: skin-var("telegram-color");
+$tumblr-color: skin-var("tumblr-color");
+$twitter-color: skin-var("twitter-color");
+$x-color: skin-var("x-color");
+$vimeo-color: skin-var("vimeo-color");
+$vine-color: skin-var("vine-color");
+$whatsapp-color: skin-var("whatsapp-color");
+$xing-color: skin-var("xing-color");
+$youtube-color: skin-var("youtube-color");
 
 $black-color: #000000;
 
 /* links */
-$link-color: short-var("link-color");
-$link-color-hover: short-var("link-color-hover");
-$link-color-visited: short-var("link-color-visited");
-$masthead-link-color: short-var("masthead-link-color");
-$masthead-link-color-hover: short-var("masthead-link-color-hover");
-$navicon-link-color-hover: short-var("navicon-link-color-hover");
+$link-color: skin-var("link-color");
+$link-color-hover: skin-var("link-color-hover");
+$link-color-visited: skin-var("link-color-visited");
+$masthead-link-color: skin-var("masthead-link-color");
+$masthead-link-color-hover: skin-var("masthead-link-color-hover");
+$navicon-link-color-hover: skin-var("navicon-link-color-hover");
 
 /* notices */
-$notice-background-mix: short-var("notice-background-mix");
-$code-notice-background-mix: short-var("code-notice-background-mix");
+$notice-background-mix: skin-var("notice-background-mix");
+$code-notice-background-mix: skin-var("code-notice-background-mix");
 
 /* syntax highlighting (base16) */
-$base00: short-var("base00");
-$base01: short-var("base01");
-$base02: short-var("base02");
-$base03: short-var("base03");
-$base04: short-var("base04");
-$base05: short-var("base05");
-$base06: short-var("base06");
-$base07: short-var("base07");
-$base08: short-var("base08");
-$base09: short-var("base09");
-$base0a: short-var("base0a");
-$base0b: short-var("base0b");
-$base0c: short-var("base0c");
-$base0d: short-var("base0d");
-$base0e: short-var("base0e");
-$base0f: short-var("base0f");
+$base00: skin-var("base00");
+$base01: skin-var("base01");
+$base02: skin-var("base02");
+$base03: skin-var("base03");
+$base04: skin-var("base04");
+$base05: skin-var("base05");
+$base06: skin-var("base06");
+$base07: skin-var("base07");
+$base08: skin-var("base08");
+$base09: skin-var("base09");
+$base0a: skin-var("base0a");
+$base0b: skin-var("base0b");
+$base0c: skin-var("base0c");
+$base0d: skin-var("base0d");
+$base0e: skin-var("base0e");
+$base0f: skin-var("base0f");
 
 /*
    Breakpoints
    ========================================================================== */
 
-$small: short-var("small");
-$medium: short-var("medium");
-$medium-wide: short-var("medium-wide");
-$large: short-var("large");
-$x-large: short-var("x-large");
-$max-width: short-var("max-width");
+$small: skin-var("small");
+$medium: skin-var("medium");
+$medium-wide: skin-var("medium-wide");
+$large: skin-var("large");
+$x-large: skin-var("x-large");
+$max-width: skin-var("max-width");
 
 /*
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: short-var("right-sidebar-width-narrow");
-$right-sidebar-width: short-var("right-sidebar-width");
-$right-sidebar-width-wide: short-var("right-sidebar-width-wide");
+$right-sidebar-width-narrow: skin-var("right-sidebar-width-narrow");
+$right-sidebar-width: skin-var("right-sidebar-width");
+$right-sidebar-width-wide: skin-var("right-sidebar-width-wide");
 
 /*
    Other
    ========================================================================== */
 
-$border-radius: short-var("border-radius");
-$box-shadow: short-var("box-shadow");
-$nav-height: short-var("nav-height");
-$nav-toggle-height: short-var("nav-toggle-height");
-$navicon-width: short-var("navicon-width");
-$navicon-height: short-var("navicon-height");
-$global-transition: short-var("global-transition");
-$intro-transition: short-var("intro-transition");
+$border-radius: skin-var("border-radius");
+$box-shadow: skin-var("box-shadow");
+$nav-height: skin-var("nav-height");
+$nav-toggle-height: skin-var("nav-toggle-height");
+$navicon-width: skin-var("navicon-width");
+$navicon-height: skin-var("navicon-height");
+$global-transition: skin-var("global-transition");
+$intro-transition: skin-var("intro-transition");
 
 %tab-focus {
   /* Default*/

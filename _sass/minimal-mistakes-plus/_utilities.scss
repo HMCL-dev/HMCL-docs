@@ -334,7 +334,7 @@ $text-alignments: left, right, start, end, center, justify;
   .navicon,
   .navicon:before,
   .navicon:after {
-    background: short-var("func-mix-000-primary-color-25");
+    background: skin-var("func-mix-000-primary-color-25");
   }
 
   &.close {
@@ -434,12 +434,12 @@ $text-alignments: left, right, start, end, center, justify;
    ========================================================================== */
 
 .footnote {
-  color: short-var("func-mix-fff-gray-25");
+  color: skin-var("func-mix-fff-gray-25");
   text-decoration: none;
 }
 
 .footnotes {
-  color: short-var("func-mix-fff-gray-25");
+  color: skin-var("func-mix-fff-gray-25");
 
   ol,
   li,
