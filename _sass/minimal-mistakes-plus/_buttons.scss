@@ -62,7 +62,7 @@
       }
 
       &:hover {
-        background-color: skin-var("func-mix-000-color-20");
+        background-color: skin-var("func-mix-000-button-color-#{$buttoncolor}-20");
         color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
       }
     }

@@ -35,13 +35,22 @@
 
 $compress_css_variables: false !default;
 
-$key-map: ();
-@function skin-var($key) {
-  @if $compress_css_variables {
-    @return var(map-get($key-map, $key));
-  } @else {
-    @return var(--mm-#{$key});
+$skin-key-map: ();
+@function skin-key($key) {
+  $real-key: map-get($skin-key-map, $key);
+  @if not $real-key {
+    $real-key: if($compress_css_variables, num-key(length($skin-key-map)), mm-#{$key});
+    $skin-key-map: map-merge($skin-key-map, ($key: $real-key)) !global;
   }
+  @return $real-key;
+}
+
+@function skin-var($key) {
+  $real-key: map-get($skin-key-map, $key);
+  @if not $real-key {
+    @warn("skin-key-map: not found #{$key}");
+  }
+  @return var(--#{$real-key});
 }
 
 @mixin clearfix {
@@ -413,6 +422,9 @@ $configs: map-merge($configs, ("default": $default-config));
         @if not map-get($config, "func-yiq-contrast-button-color-#{$button-color-key}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold") {
           $config: map-merge($config, ("func-yiq-contrast-button-color-#{$button-color-key}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold": yiq-contrast-color($button-color, $yiq-contrasted-dark-default, $yiq-contrasted-light-default, $yiq-contrasted-threshold)));
         }
+        @if not map-get($config, "func-mix-000-button-color-#{$button-color-key}-20") {
+          $config: map-merge($config, ("func-mix-000-button-color-#{$button-color-key}-20": mix(#000, $button-color, 20)));
+        }
       }
     }
 
@@ -445,16 +457,7 @@ $default-config: map-get($configs, "default");
     @each $key, $value in $config {
       @if str-slice($key, 1, 8) != "private-" {
         @if $name == "default" or map-get($default-config, $key) != map-get($config, $key) {
-          @if $compress_css_variables {
-            $short-key: map-get($key-map, $key);
-            @if not $short-key {
-              $short-key: --#{num-key(length($key-map))};
-              $key-map: map-merge($key-map, ($key: $short-key)) !global;
-            }
-            #{$short-key}: #{$value};
-          } @else {
-            --mm-#{$key}: #{$value};
-          }
+          --#{skin-key($key)}: #{$value};
         }
       }
     }
