@@ -8,8 +8,9 @@ $compress_css_variables: true;
 
 {% assign skins = site.data.settings.appearance_skin_light.options | concat: site.data.settings.appearance_skin_dark.options | uniq %}
 {% for skin in skins %}
-{% if skin == "default" %}{% continue %}{% endif %}
+{% if skin != "default" %}
 @import "minimal-mistakes-plus/skins/{{ skin }}";
+{% endif %}
 {% endfor %}
 /**/
 
