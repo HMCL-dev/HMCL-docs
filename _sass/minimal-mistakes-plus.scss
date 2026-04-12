@@ -1,4 +1,40 @@
-@import "minimal-mistakes";
+/* Copyright comment */
+@import "minimal-mistakes/copyright";
+
+/* Variables */
+@import "minimal-mistakes/variables";
+
+/* Mixins and functions */
+@import "minimal-mistakes-plus/vendor/breakpoint/breakpoint";
+@include breakpoint-set("to ems", true);
+@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "minimal-mistakes/vendor/susy/susy";
+@import "minimal-mistakes/mixins";
+
+/* Core CSS */
+@import "minimal-mistakes-plus/reset";
+@import "minimal-mistakes-plus/base";
+@import "minimal-mistakes-plus/forms";
+@import "minimal-mistakes-plus/tables";
+@import "minimal-mistakes/animations";
+
+/* Components */
+@import "minimal-mistakes-plus/buttons";
+@import "minimal-mistakes-plus/notices";
+@import "minimal-mistakes-plus/masthead";
+@import "minimal-mistakes-plus/navigation";
+@import "minimal-mistakes-plus/footer";
+@import "minimal-mistakes-plus/search";
+@import "minimal-mistakes-plus/syntax";
+
+/* Utility classes */
+@import "minimal-mistakes-plus/utilities";
+
+/* Layout specific */
+@import "minimal-mistakes-plus/page";
+@import "minimal-mistakes-plus/archive";
+@import "minimal-mistakes-plus/sidebar";
+@import "minimal-mistakes/print";
 
 blockquote {
   margin-inline: 0;

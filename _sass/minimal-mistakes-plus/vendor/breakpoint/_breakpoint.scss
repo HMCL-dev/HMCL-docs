@@ -1,0 +1,152 @@
+//////////////////////////////
+// Default Variables
+//////////////////////////////
+$Breakpoint-Settings: (
+  'default media': all,
+  'default feature': min-width,
+  'default pair': width,
+
+  'force all media type': false,
+  'to ems': false,
+  'transform resolutions': true,
+
+  'no queries': false,
+  'no query fallbacks': false,
+
+  'base font size': 16px,
+
+  'legacy syntax': false
+);
+
+$breakpoint: () !default;
+
+//////////////////////////////
+// Imports
+//////////////////////////////
+@import "minimal-mistakes/vendor/breakpoint/settings";
+@import "minimal-mistakes/vendor/breakpoint/context";
+@import "minimal-mistakes/vendor/breakpoint/helpers";
+@import "minimal-mistakes/vendor/breakpoint/parsers";
+@import "minimal-mistakes/vendor/breakpoint/no-query";
+
+@import "minimal-mistakes/vendor/breakpoint/respond-to";
+
+@import "minimal-mistakes/vendor/breakpoint/legacy-settings";
+
+@function str-replace($text, $search, $replace) {
+  $index: str-index($text, $search);
+  @if $index == null {
+    @return $text;
+  }
+  $prefix: str-slice($text, 1, $index - 1);
+  $suffix: str-replace(str-slice($text, $index + str-length($search)), $search, $replace);
+  @return $prefix + $replace + $suffix;
+}
+
+//////////////////////////////
+// Breakpoint Mixin
+//////////////////////////////
+
+@mixin breakpoint($query, $no-query: false) {
+  @include legacy-settings-warning;
+
+  // Reset contexts
+  @include private-breakpoint-reset-contexts();
+
+  $breakpoint: breakpoint($query, false);
+
+  $query-string: map-get($breakpoint, 'query');
+  $query-fallback: map-get($breakpoint, 'fallback');
+
+  $private-breakpoint-context-holder: map-get($breakpoint, 'context holder') !global;
+  $private-breakpoint-query-count: map-get($breakpoint, 'query count') !global;
+
+  // Allow for an as-needed override or usage of no query fallback.
+  @if $no-query != false {
+    $query-fallback: $no-query;
+  }
+
+  @if $query-fallback != false {
+    $context-setter: private-breakpoint-set-context('no-query', $query-fallback);
+  }
+
+  // Print Out Query String
+  @if not breakpoint-get('no queries') {
+    @if str-index($query-string, "width") {
+      &:not(html.vertical, html.vertical *) {
+        @media #{$query-string} {
+          @content;
+        }
+      }
+
+      $vertical-query-string: str-replace($query-string, "width", "height");
+      &:is(html.vertical, html.vertical *) {
+        @media #{$vertical-query-string} {
+          @content;
+        }
+      }
+    } @else if (str-index($query-string, "height")) {
+      &:not(html.vertical, html.vertical *) {
+        @media #{$query-string} {
+          @content;
+        }
+      }
+
+      $vertical-query-string: str-replace($query-string, "height", "width");
+      &:is(html.vertical, html.vertical *) {
+        @media #{$vertical-query-string} {
+          @content;
+        }
+      }
+    } @else {
+      @media #{$query-string} {
+        @content;
+      }
+    }
+  }
+
+  @if breakpoint-get('no query fallbacks') != false or breakpoint-get('no queries') == true {
+
+    $type: type-of(breakpoint-get('no query fallbacks'));
+    $print: false;
+
+    @if ($type == 'bool') {
+      $print: true;
+    }
+    @else if ($type == 'string') {
+      @if $query-fallback == breakpoint-get('no query fallbacks') {
+        $print: true;
+      }
+    }
+    @else if ($type == 'list') {
+      @each $wrapper in breakpoint-get('no query fallbacks') {
+        @if $query-fallback == $wrapper {
+          $print: true;
+        }
+      }
+    }
+
+    // Write Fallback
+    @if ($query-fallback != false) and ($print == true) {
+      $type-fallback: type-of($query-fallback);
+
+      @if ($type-fallback != 'bool') {
+        #{$query-fallback} & {
+          @content;
+        }
+      }
+      @else {
+        @content;
+      }
+    }
+  }
+
+  @include private-breakpoint-reset-contexts();
+}
+
+
+@mixin mq($query, $no-query: false) {
+  @include breakpoint($query, $no-query) {
+    @content;
+  }
+}

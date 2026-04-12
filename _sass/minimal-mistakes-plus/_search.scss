@@ -1,0 +1,128 @@
+/* ==========================================================================
+   SEARCH
+   ========================================================================== */
+
+.layout--search {
+  .archive__item-teaser {
+    margin-block-end: 0.25em;
+  }
+}
+
+.search__toggle {
+  margin-inline: 1rem;
+  block-size: $nav-toggle-height;
+  border: 0;
+  outline: none;
+  color: $primary-color;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+  &:hover {
+    color: mix(#000, $primary-color, 25%);
+  }
+}
+
+.search-icon {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.search-content {
+  display: none;
+  visibility: hidden;
+  padding-block: 1em;
+
+  &__inner-wrap {
+    inline-size: 100%;
+    margin-inline: auto;
+    padding-inline: 1em;
+    -webkit-animation: $intro-transition;
+    animation: $intro-transition;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+
+    @include breakpoint($x-large) {
+      max-inline-size: $max-width;
+    }
+
+  }
+
+  &__form {
+    background-color: transparent;
+  }
+
+  .search-input {
+    display: block;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    font-size: $type-size-3;
+
+    @include breakpoint($large) {
+      font-size: $type-size-2;
+    }
+
+    @include breakpoint($x-large) {
+      font-size: $type-size-1;
+    }
+  }
+
+  &.is--visible {
+    display: block;
+    visibility: visible;
+
+    &::after {
+      content: "";
+      display: block;
+    }
+  }
+
+  .results__found {
+    margin-block-start: 0.5em;
+    font-size: $type-size-6;
+  }
+
+  .archive__item {
+    margin-block-end: 2em;
+
+    @include breakpoint($large) {
+      inline-size: 75%;
+    }
+
+    @include breakpoint($x-large) {
+      inline-size: 50%;
+    }
+  }
+
+  .archive__item-title {
+    margin-block-start: 0;
+  }
+
+  .archive__item-excerpt {
+    margin-block-end: 0;
+  }
+}
+
+/* Algolia search */
+
+.ais-search-box {
+  max-inline-size: 100% !important;
+  margin-block-end: 2em;
+}
+
+.archive__item-title .ais-Highlight {
+  color: $primary-color;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.archive__item-excerpt .ais-Highlight {
+  color: $primary-color;
+  font-style: normal;
+  font-weight: bold;
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table {
+  display: block;
+  margin-block-end: 1em;
+  inline-size: 100%;
+  font-family: $global-font-family;
+  font-size: $type-size-6;
+  border-collapse: collapse;
+  overflow-inline: auto;
+
+  & + table {
+    margin-block-start: 1em;
+  }
+}
+
+thead {
+  background-color: $border-color;
+  border-block-end: 2px solid mix(#000, $border-color, 25%);
+}
+
+th {
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: start;
+}
+
+td {
+  padding: 0.5em;
+  border-block-end: 1px solid mix(#000, $border-color, 25%);
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
