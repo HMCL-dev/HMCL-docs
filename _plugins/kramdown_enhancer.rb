@@ -3,7 +3,7 @@ begin
 rescue LoadError; end
 
 module KramdownEnhancer
-  GITHUB_LINK_REGEX = /\b(?:GP-\d+|GC-[0-9a-f]{7})\b/
+  GITHUB_LINK_REGEX = /\b(GP-\d+|GC-[0-9a-f]{7})\b/
   BLOCKQUOTE_TYPES = {
     note: "notice--info",
     tip: "notice--success",
