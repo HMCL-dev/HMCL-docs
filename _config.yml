@@ -87,7 +87,7 @@ whitelist:
 # Serving
 # detach: false
 # port: 4000
-host: localhost
+# host: 127.0.0.1
 baseurl: ""
 # show_dir_listing: false
 
