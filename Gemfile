@@ -8,7 +8,7 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "4.4.1"
-gem "minimal-mistakes-jekyll", "4.27.3"
+gem "minimal-mistakes-jekyll", "4.28.0"
 
 group :jekyll_plugins do
   gem "jekyll-paginate", "1.1.0"
@@ -32,5 +32,4 @@ gem "wdm", "0.2.0", :platforms => [:windows]
 gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
-gem "nokogiri", "1.18.10"
-gem "addressable", "2.8.7"
+gem "webp-ffi", "0.4.0" if ENV["ENABLE_WEBP_AUTO_CONVERSION"] == "true" || ENV["DRONE"] == "true"

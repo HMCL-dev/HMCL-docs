@@ -1,4 +1,40 @@
-@import "minimal-mistakes";
+/* Copyright comment */
+@import "minimal-mistakes/copyright";
+
+/* Variables */
+@import "minimal-mistakes/variables";
+
+/* Mixins and functions */
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@include breakpoint-set("to ems", true);
+@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "minimal-mistakes/vendor/susy/susy";
+@import "minimal-mistakes/mixins";
+
+/* Core CSS */
+@import "minimal-mistakes/reset";
+@import "minimal-mistakes/base";
+@import "minimal-mistakes/forms";
+@import "minimal-mistakes/tables";
+@import "minimal-mistakes/animations";
+
+/* Components */
+@import "minimal-mistakes/buttons";
+@import "minimal-mistakes/notices";
+@import "minimal-mistakes/masthead";
+@import "minimal-mistakes/navigation";
+@import "minimal-mistakes/footer";
+@import "minimal-mistakes/search";
+@import "minimal-mistakes/syntax";
+
+/* Utility classes */
+@import "minimal-mistakes/utilities";
+
+/* Layout specific */
+@import "minimal-mistakes/page";
+@import "minimal-mistakes-plus/archive";
+@import "minimal-mistakes/sidebar";
+@import "minimal-mistakes/print";
 
 blockquote {
   margin-inline: 0;
@@ -9,10 +45,6 @@ blockquote {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-}
-
-.notice ul:first-child {
-  margin-top: 0;
 }
 
 .task-list-item label {
