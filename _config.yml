@@ -9,6 +9,7 @@
 # data_dir: _data
 # includes_dir: _includes
 # cache_dir: .jekyll-cache
+disable_disk_cache: true
 sass:
   # sass_dir: _sass
   # minimal-mistakes
