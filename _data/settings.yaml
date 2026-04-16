@@ -37,3 +37,9 @@ appearance_skin_dark:
     - sunrise
     - catppuccin_latte
     - catppuccin_mocha
+crash_support_group_rule:
+  type: radio
+  default: disagree
+  options:
+    - disagree
+    - agree
