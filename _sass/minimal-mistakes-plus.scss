@@ -46,7 +46,7 @@ blockquote {
 table.setting-multi-radio td {
   border: 0;
   text-align: center;
-  border-left: 1px solid skin-var("func-mix-000-border-color-25");
+  border-left: 1px solid $border-color;
 }
 
 input[type="radio"] {
