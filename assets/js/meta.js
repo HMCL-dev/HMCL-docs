@@ -25,9 +25,7 @@
   };
   window.hits = (tag) => {
     if (settings.get("miscellaneous_hits") === "disable") return;
-    const hitsUrl = new URL("https://hits.zkitefly.eu.org");
-    hitsUrl.searchParams.set("tag", tag);
-    fetch(hitsUrl, { method: "HEAD" }).then((response) => {
+    fetch("https://hits.zkitefly.eu.org/?tag=" + tag, { method: "HEAD" }).then((response) => {
       if (response.status !== 200) return;
       const { headers } = response;
       const total = headers.get("X-Total-Hits");
