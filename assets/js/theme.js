@@ -60,10 +60,15 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
   settings.onChange("appearance_color", applyTheme);
-  settings.onChange("appearance_skin_dark", function () {
-    settings.refresh("appearance_color");
+  settings.onChange("appearance_skin.dark", function () {
+    applyTheme(settings.get("appearance_color"));
   });
-  settings.onChange("appearance_skin_light", function () {
-    settings.refresh("appearance_color");
+  settings.onChange("appearance_skin.light", function () {
+    applyTheme(settings.get("appearance_color"));
+  });
+  settings.onChange("appearance_color_switcher", function (value) {
+    if (modeSwitcher !== null) {
+      modeSwitcher.style.display = value === "enable" ? "" : "none";
+    }
   });
 });

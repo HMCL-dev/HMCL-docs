@@ -2,20 +2,17 @@
 
 @import "minimal-mistakes-plus/common";
 
-/* Mixins and functions */
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
 @import "minimal-mistakes/vendor/susy/susy";
 
-/* Core CSS */
 @import "minimal-mistakes-plus/reset";
 @import "minimal-mistakes-plus/base";
 @import "minimal-mistakes-plus/forms";
 @import "minimal-mistakes-plus/tables";
 @import "minimal-mistakes/animations";
 
-/* Components */
 @import "minimal-mistakes-plus/buttons";
 @import "minimal-mistakes-plus/notices";
 @import "minimal-mistakes-plus/masthead";
@@ -24,10 +21,8 @@
 @import "minimal-mistakes-plus/search";
 @import "minimal-mistakes/syntax";
 
-/* Utility classes */
 @import "minimal-mistakes-plus/utilities";
 
-/* Layout specific */
 @import "minimal-mistakes-plus/page";
 @import "minimal-mistakes-plus/archive";
 @import "minimal-mistakes-plus/sidebar";
@@ -44,10 +39,27 @@ blockquote {
   word-break: break-word;
 }
 
-.task-list-item label {
-  display: inline
-}
-
 .m0 {
   margin: 0 !important;
+}
+
+table.setting-multi-radio td {
+  border: 0;
+  text-align: center;
+  border-left: 1px solid mix(#000, $border-color, 25%);
+}
+
+input[type="radio"] {
+  width: 0;
+  margin: 0;
+  margin-inline-end: 1em;
+  font-family: var(--fa-family-classic);
+}
+
+input[type="radio"]::before {
+  content: "\f111";
+}
+
+input[type="radio"]:checked::before {
+  content: "\f192";
 }

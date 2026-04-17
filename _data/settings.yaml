@@ -5,9 +5,19 @@ appearance_color:
     - light
     - dark
     - auto
-appearance_skin_light:
+appearance_color_switcher:
   type: radio
-  default: default
+  default: enable
+  options:
+    - enable
+    - disable
+appearance_skin:
+  type: multi-radio
+  children:
+    light:
+      default: default
+    dark:
+      default: dark
   options:
     - default
     - air
@@ -23,21 +33,9 @@ appearance_skin_light:
     - catppuccin-frappe
     - catppuccin-macchiato
     - catppuccin-mocha
-appearance_skin_dark:
+miscellaneous_hits:
   type: radio
-  default: dark
+  default: enable
   options:
-    - default
-    - air
-    - aqua
-    - contrast
-    - dark
-    - dirt
-    - neon
-    - mint
-    - plum
-    - sunrise
-    - catppuccin-latte
-    - catppuccin-frappe
-    - catppuccin-macchiato
-    - catppuccin-mocha
+    - enable
+    - disable
