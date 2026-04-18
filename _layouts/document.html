@@ -9,6 +9,6 @@ layout: single
 <script>
   {%- if page.author %}appendMeta("{{ page.author }}", "fas fa-user-pen");{% endif -%}
   {%- for contributor in page.contributors %}appendMeta("{{ contributor }}", "fas fa-user-pen");{% endfor -%}
-  {%- if jekyll.environment == 'production' and page.hits %}hits("{{ page.url | absolute_url | jsonify }}");{% endif -%}
+  {%- if jekyll.environment == 'production' and page.hits %}hits({{ page.url | absolute_url | jsonify }});{% endif -%}
 </script>
 {% endif %}
