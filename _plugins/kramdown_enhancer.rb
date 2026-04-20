@@ -3,6 +3,15 @@ begin
 rescue LoadError; end
 
 module KramdownEnhancer
+  GITHUB_LINK_REGEX = /\b(GP-\d+|GC-[0-9a-f]{7})\b/
+  BLOCKQUOTE_TYPES = {
+    note: "notice--info",
+    tip: "notice--success",
+    important: "notice--primary",
+    warning: "notice--warning",
+    caution: "notice--danger",
+  }
+
   class << self
     def webp
       @webp ||= {}
@@ -24,16 +33,6 @@ module KramdownEnhancer
         else
           ""
         end
-    end
-
-    def blockquote_types
-      @blockquote_types ||= {
-        :note => "notice--info",
-        :tip => "notice--success",
-        :important => "notice--primary",
-        :warning => "notice--warning",
-        :caution => "notice--danger",
-      }
     end
   end
 
@@ -81,7 +80,7 @@ module KramdownEnhancer
       return super unless first&.type == :text
 
       text = first.value.downcase
-      KramdownEnhancer.blockquote_types.each do |type, class_name|
+      KramdownEnhancer::BLOCKQUOTE_TYPES.each do |type, class_name|
         prefix = "[!#{type}]"
         prefix_with_newline = "#{prefix}\n"
 
@@ -126,6 +125,29 @@ module KramdownEnhancer
         end
       end
       super(el, indent)
+    end
+
+    def convert_text(el, indent)
+      return super(el, indent) unless !el.options[:github_link] && KramdownEnhancer::GITHUB_LINK_REGEX.match?(el.value)
+      list = el.value.split(KramdownEnhancer::GITHUB_LINK_REGEX)
+      el.type = :html_element
+      el.value = "span"
+      el.children = list.reject(&:empty?).map do |item|
+        if KramdownEnhancer::GITHUB_LINK_REGEX.match(item)
+          href =
+            if item.start_with?("GP-")
+              "https://github.com/HMCL-dev/HMCL/pull/#{item[3..]}"
+            else
+              "https://github.com/HMCL-dev/HMCL/commit/#{item[3..]}"
+            end
+          link = Kramdown::Element.new(:a, nil, {"href": href, "target": "_blank"})
+          link.children = [Kramdown::Element.new(:text, item, nil, :github_link => true)]
+          link
+        else
+          Kramdown::Element.new(:text, item, nil, :github_link => true)
+        end
+      end
+      convert_html_element(el, indent)
     end
 
     private
