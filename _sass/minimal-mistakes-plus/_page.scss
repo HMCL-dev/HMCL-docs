@@ -12,7 +12,7 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     max-width: $max-width;
   }
 }
@@ -34,13 +34,13 @@ body {
 }
 
 .page {
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
   }
@@ -207,7 +207,7 @@ body {
     .wrapper {
       padding-inline: 1em;
 
-      @include breakpoint(map-get($default-config, "x-large")) {
+      @include breakpoint($x-large) {
         max-width: $x-large;
       }
     }
@@ -227,7 +227,7 @@ body {
     .page__title {
       font-size: $type-size-2;
 
-      @include breakpoint(map-get($default-config, "small")) {
+      @include breakpoint($small) {
         font-size: $type-size-1;
       }
     }
@@ -255,7 +255,7 @@ body {
   opacity: 0.5;
   border-radius: $border-radius 0 0 0;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     padding: 5px 10px;
   }
 
@@ -393,7 +393,7 @@ body {
   font-size: 0.75em;
   list-style: none;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -473,7 +473,7 @@ body {
   width: 60px;
   height: 60px;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     width: 100px;
     height: 100px;
   }
@@ -484,7 +484,7 @@ body {
   height: 40px;
   border-radius: 50%;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     width: 80px;
     height: 80px;
     padding: 5px;
@@ -496,7 +496,7 @@ body {
   float: inline-end;
   width: calc(100% - 60px);
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     width: calc(100% - 100px);
   }
 }
@@ -529,12 +529,12 @@ body {
   padding-top: 1em;
   border-top: 1px solid $border-color;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
   }
 
@@ -556,11 +556,11 @@ body {
 
 .wide {
   .page, .page__related {
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       padding-inline-end: 0;
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       padding-inline-end: 0;
     }
   }

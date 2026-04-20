@@ -16,7 +16,7 @@
   //   transform: translate3d(0, 0, 0);
   // }
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     float: inline-start;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
     opacity: 0.75;
@@ -36,7 +36,7 @@
     }
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: calc(#{$right-sidebar-width} - 1em);
   }
 
@@ -74,7 +74,7 @@
 .sidebar__right {
   margin-bottom: 1em;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     position: absolute;
     top: 0;
     inset-inline-end: 0;
@@ -99,20 +99,20 @@
     }
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: $right-sidebar-width;
     margin-inline-end: calc(-1 * #{$right-sidebar-width});
   }
 }
 
 .splash .sidebar__right {
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     position: relative;
     float: inline-end;
     margin-inline-end: 0;
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     margin-inline-end: 0;
   }
 }
@@ -127,7 +127,7 @@
   width: 36px;
   height: 36px;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     display: block;
     width: auto;
     height: auto;
@@ -137,7 +137,7 @@
     max-width: 110px;
     border-radius: 50%;
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;
     }
@@ -150,7 +150,7 @@
   padding-inline: 15px 25px;
   line-height: 1;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-inline: 0;
@@ -165,7 +165,7 @@
 .author__name {
   margin: 0;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -178,7 +178,7 @@
 .author__bio {
   margin: 0;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -204,7 +204,7 @@
     }
   }
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     display: block;
   }
 
@@ -230,7 +230,7 @@
       }
     }
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       display: none;
     }
   }
@@ -253,7 +253,7 @@
     display: block;
   }
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     display: block;
     position: relative;
     margin: 0;
@@ -275,7 +275,7 @@
     border-color: $border-color transparent;
     z-index: 0;
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       display: none;
     }
   }
@@ -292,7 +292,7 @@
     border-color: $background-color transparent;
     z-index: 1;
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       display: none;
     }
   }
@@ -328,7 +328,7 @@
 .wide .sidebar__right {
   margin-bottom: 1em;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     position: initial;
     top: initial;
     inset-inline-end: initial;
@@ -342,7 +342,7 @@
     }
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: initial;
     margin-inline-end: initial;
   }

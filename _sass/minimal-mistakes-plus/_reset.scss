@@ -10,15 +10,15 @@ html {
   background-color: $background-color;
   font-size: $doc-font-size;
 
-  @include breakpoint(map-get($default-config, "medium")) {
+  @include breakpoint($medium) {
     font-size: $doc-font-size-medium;
   }
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     font-size: $doc-font-size-large;
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     font-size: $doc-font-size-x-large;
   }
 

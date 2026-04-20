@@ -14,7 +14,7 @@
 
 @function num-key($num, $str: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz") {
   @if $num < 0 {
-    @return "-#{num62(-$num)}";
+    @return "-#{num-key(-$num)}";
   }
 
   $size: str-length($str);
@@ -69,7 +69,6 @@ $default-config: () !default;
 
 $default-config: map-merge((
   "doc-font-size": 16px,
-  "paragraph-indent": false,
   "indent-var": 1.3em,
   "helvetica": (Helvetica, "Helvetica Neue", Arial, sans-serif),
   "georgia": (Georgia, serif),
@@ -156,11 +155,6 @@ $default-config: map-merge((
   "base0d": #82aaff,
   "base0e": #c792ea,
   "base0f": #ff5370,
-  "small": 600px,
-  "medium": 768px,
-  "medium-wide": 900px,
-  "large": 1024px,
-  "x-large": 1280px,
   "right-sidebar-width-narrow": 200px,
   "right-sidebar-width": 300px,
   "right-sidebar-width-wide": 400px,
@@ -331,13 +325,6 @@ $configs: map-merge($configs, ("default": $default-config));
     }
   }
 
-  $x-large: map-get($config, "x-large");
-  @if $x-large {
-    @if not map-get($config, "max-width") {
-      $config: map-merge($config, ("max-width": $x-large));
-    }
-  }
-
   $border-color: map-get($config, "border-color");
   @if $border-color {
     @if not map-get($config, "func-mix-000-border-color-25") {
@@ -478,7 +465,7 @@ $doc-font-size-large: skin-var("doc-font-size-large");
 $doc-font-size-x-large: skin-var("doc-font-size-x-large");
 
 /* paragraph indention */
-$paragraph-indent: skin-var("paragraph-indent");
+$paragraph-indent: false;
 $indent-var: skin-var("indent-var");
 
 /* Modern font stack */
@@ -654,12 +641,12 @@ $base0f: skin-var("base0f");
    Breakpoints
    ========================================================================== */
 
-$small: skin-var("small");
-$medium: skin-var("medium");
-$medium-wide: skin-var("medium-wide");
-$large: skin-var("large");
-$x-large: skin-var("x-large");
-$max-width: skin-var("max-width");
+$small: 600px;
+$medium: 768px;
+$medium-wide: 900px;
+$large: 1024px;
+$x-large: 1280px;
+$max-width: $x-large;
 
 /*
    Grid

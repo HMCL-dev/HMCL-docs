@@ -24,7 +24,7 @@
     justify-content: space-between;
     font-family: $sans-serif-narrow;
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       max-width: $max-width;
     }
 
@@ -66,7 +66,7 @@
   .site-nav {
     margin-inline-start: 0;
 
-    @include breakpoint(map-get($default-config, "small")) {
+    @include breakpoint($small) {
       float: inline-end;
     }
   }

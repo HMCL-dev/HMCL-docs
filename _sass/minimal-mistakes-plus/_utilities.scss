@@ -145,7 +145,7 @@ $text-alignments: left, right, start, end, center, justify;
   display: block;
   margin-inline: auto;
 
-  @include breakpoint(map-get($default-config, "small")) {
+  @include breakpoint($small) {
     float: left;
     margin-right: 1em;
   }
@@ -157,7 +157,7 @@ $text-alignments: left, right, start, end, center, justify;
   display: block;
   margin-inline: auto;
 
-  @include breakpoint(map-get($default-config, "small")) {
+  @include breakpoint($small) {
     float: right;
     margin-left: 1em;
   }
@@ -173,7 +173,7 @@ $text-alignments: left, right, start, end, center, justify;
 /* file page content container */
 
 .full {
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     margin-inline-end: -1 * span(2.5 of 12) !important;
   }
 }
@@ -349,7 +349,7 @@ $text-alignments: left, right, start, end, center, justify;
    ========================================================================== */
 
 .sticky {
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     @include clearfix();
     position: -webkit-sticky;
     position: sticky;

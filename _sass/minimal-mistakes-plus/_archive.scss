@@ -6,13 +6,13 @@
   margin-top: 1em;
   margin-bottom: 2em;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
   }
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
   }
@@ -107,7 +107,7 @@
   opacity: 0.5;
   border-radius: $border-radius 0 0 0;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     padding: 5px 10px;
   }
 
@@ -136,11 +136,11 @@
   .grid__wrapper {
     /* extend grid elements to the right */
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       margin-inline-end: calc(-1 * #{$right-sidebar-width-narrow});
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       margin-inline-end: calc(-1 * #{$right-sidebar-width});
     }
   }
@@ -149,7 +149,7 @@
 .grid__item {
   margin-bottom: 2em;
 
-  @include breakpoint(map-get($default-config, "small")) {
+  @include breakpoint($small) {
     float: inline-start;
     width: span(5 of 10);
 
@@ -187,11 +187,11 @@
   }
 
   .archive__item-teaser {
-    @include breakpoint(map-get($default-config, "small")) {
+    @include breakpoint($small) {
       max-height: 200px;
     }
 
-    @include breakpoint(map-get($default-config, "medium")) {
+    @include breakpoint($medium) {
       max-height: 120px;
     }
   }
@@ -216,7 +216,7 @@
   margin-bottom: 2em;
   font-size: 1.125em;
 
-  @include breakpoint(map-get($default-config, "small")) {
+  @include breakpoint($small) {
     float: inline-start;
     margin-bottom: 0;
     width: span(4 of 12);
@@ -277,7 +277,7 @@
       float: inline-start;
     }
 
-    @include breakpoint(map-get($default-config, "small")) {
+    @include breakpoint($small) {
       .archive__item-teaser {
         float: inline-start;
         width: span(5 of 12);
@@ -299,7 +299,7 @@
       float: inline-end;
     }
 
-    @include breakpoint(map-get($default-config, "small")) {
+    @include breakpoint($small) {
       text-align: end;
 
       .archive__item-teaser {
@@ -339,7 +339,7 @@
       inset: 0;
     }
 
-    @include breakpoint(map-get($default-config, "small")) {
+    @include breakpoint($small) {
       text-align: center;
 
       .archive__item-teaser {
@@ -379,11 +379,11 @@
 
 .wide {
   .archive {
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       padding-inline-end: 0;
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       padding-inline-end: 0;
     }
   }

@@ -44,7 +44,7 @@
     -webkit-animation-delay: 0.15s;
     animation-delay: 0.15s;
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       max-width: $max-width;
     }
 
@@ -64,11 +64,11 @@
     background-color: transparent;
     font-size: $type-size-3;
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       font-size: $type-size-2;
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       font-size: $type-size-1;
     }
   }
@@ -91,11 +91,11 @@
   .archive__item {
     margin-bottom: 2em;
 
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       width: 75%;
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       width: 50%;
     }
   }

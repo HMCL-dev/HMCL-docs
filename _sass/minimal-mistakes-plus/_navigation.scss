@@ -17,7 +17,7 @@
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 
-  @include breakpoint(map-get($default-config, "x-large")) {
+  @include breakpoint($x-large) {
     max-width: $x-large;
   }
 
@@ -27,12 +27,12 @@
     font-size: $type-size-6;
 
     // TODO
-    @include breakpoint(map-get($default-config, "large")) {
+    @include breakpoint($large) {
       float: inline-end;
       width: calc(100% - #{$right-sidebar-width-narrow});
     }
 
-    @include breakpoint(map-get($default-config, "x-large")) {
+    @include breakpoint($x-large) {
       width: calc(100% - #{$right-sidebar-width});
     }
   }
@@ -426,7 +426,7 @@
       display: block;
       padding: 0.25em 0;
 
-      @include breakpoint(map-get($default-config, "large")) {
+      @include breakpoint($large) {
         padding-top: 0.125em;
         padding-bottom: 0.125em;
       }
@@ -534,7 +534,7 @@
   list-style: none;
   font-size: $type-size-6;
 
-  @include breakpoint(map-get($default-config, "large")) {
+  @include breakpoint($large) {
     font-size: $type-size-7;
   }
 
