@@ -347,7 +347,7 @@
     display: none;
   }
 
-  @include breakpoint(max-width map-get($default-config, "large") - 1px) {
+  @include breakpoint(max-width $large - 1px) {
     label {
       position: relative;
       display: inline-block;
@@ -452,7 +452,7 @@
     font-weight: bold;
   }
 
-  @include breakpoint(max-width map-get($default-config, "large") - 1px) {
+  @include breakpoint(max-width $large - 1px) {
     position: relative;
     max-height: 0;
     opacity: 0%;
@@ -466,7 +466,7 @@
   }
 }
 
-@include breakpoint(max-width map-get($default-config, "large") - 1px) {
+@include breakpoint(max-width $large - 1px) {
   .nav__list input:checked ~ .nav__items {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
