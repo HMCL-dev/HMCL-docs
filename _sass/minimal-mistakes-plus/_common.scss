@@ -1,9 +1,19 @@
+$yiq-debug: false !default;
+
+$small: 600px !default;
+$medium: 768px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+$max-width: $x-large !default;
+
 @function yiq-is-light($color, $threshold) {
   $red: red($color);
   $green: green($color);
   $blue: blue($color);
 
   $yiq: (($red * 299) + ($green * 587) + ($blue*114)) / 1000;
+
+  @if $yiq-debug { @debug $yiq, $threshold; }
 
   @return if($yiq >= $threshold, true, false);
 }
@@ -106,7 +116,6 @@ $default-config: map-merge((
   "info-color": #3b9cba,
   "yiq-contrasted-light-default": #fff,
   "yiq-contrasted-threshold": 175,
-  // "yiq-debug": false,
   "behance-color": #1769ff,
   "bitbucket-color": #205081,
   "bluesky-color": #1083fe,
@@ -571,7 +580,6 @@ $active-color: skin-var("active-color");
 $yiq-contrasted-dark-default: skin-var("yiq-contrasted-dark-default");
 $yiq-contrasted-light-default: skin-var("yiq-contrasted-light-default");
 $yiq-contrasted-threshold: skin-var("yiq-contrasted-threshold");
-// $yiq-debug: skin-var("yiq-debug");
 
 /* brands */
 $behance-color: skin-var("behance-color");
@@ -636,17 +644,6 @@ $base0c: skin-var("base0c");
 $base0d: skin-var("base0d");
 $base0e: skin-var("base0e");
 $base0f: skin-var("base0f");
-
-/*
-   Breakpoints
-   ========================================================================== */
-
-$small: 600px !default;
-$medium: 768px !default;
-$medium-wide: 900px !default;
-$large: 1024px !default;
-$x-large: 1280px !default;
-$max-width: $x-large !default;
 
 /*
    Grid
