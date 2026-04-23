@@ -4,10 +4,10 @@ layout: null
 window.addEventListener("DOMContentLoaded", function () {
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
   function applyDarkSkin() {
-    document.documentElement.dataset["skin"] = settings.get("appearance_skin_dark");
+    document.documentElement.dataset["skin"] = settings.get("appearance_skin.dark");
   }
   function applyLightSkin() {
-    document.documentElement.dataset["skin"] = settings.get("appearance_skin_light");
+    document.documentElement.dataset["skin"] = settings.get("appearance_skin.light");
   }
   function autoSchemeHandler() {
     if (darkModeQuery.matches) {
