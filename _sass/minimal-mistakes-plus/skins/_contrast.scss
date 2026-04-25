@@ -51,25 +51,23 @@ $contrast-config: map-merge((
 
   $configs: map-merge($configs, ("contrast": $config));
 
-  [data-skin=contrast] {
-    .page__content {
-      .notice,
-      .notice--primary,
-      .notice--info,
-      .notice--warning,
-      .notice--success,
-      .notice--danger {
-        color: $text-color;
-      }
+  .page__content:where([data-skin=contrast] *) {
+    .notice,
+    .notice--primary,
+    .notice--info,
+    .notice--warning,
+    .notice--success,
+    .notice--danger {
+      color: $text-color;
     }
+  }
 
-    .page__footer {
-      color: #fff !important; // override
-    }
+  .page__footer:where([data-skin=contrast] *) {
+    color: #fff !important; // override
+  }
 
-    .page__footer-follow .social-icons i,
-    .page__footer-follow .social-icons .svg-inline--fa  {
-      color: inherit;
-    }
+  .page__footer-follow .social-icons i:where([data-skin=contrast] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=contrast] *)  {
+    color: inherit;
   }
 }

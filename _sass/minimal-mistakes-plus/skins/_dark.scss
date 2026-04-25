@@ -55,16 +55,14 @@ $dark-config: map-merge((
 
   $configs: map-merge($configs, ("dark": $config));
 
-  [data-skin=dark] {
-    .author__urls.social-icons i,
-    .author__urls.social-icons .svg-inline--fa,
-    .page__footer-follow .social-icons i,
-    .page__footer-follow .social-icons .svg-inline--fa  {
-      color: inherit;
-    }
+  .author__urls.social-icons i:where([data-skin=dark] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=dark] *),
+  .page__footer-follow .social-icons i:where([data-skin=dark] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=dark] *) {
+    color: inherit;
+  }
 
-    .ais-search-box .ais-search-box--input {
-      background-color: $form-background-color;
-    }
+  .ais-search-box .ais-search-box--input:where([data-skin=dark] *) {
+    background-color: $form-background-color;
   }
 }

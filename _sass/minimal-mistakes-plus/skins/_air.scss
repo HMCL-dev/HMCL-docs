@@ -35,13 +35,11 @@ $air-config: map-merge((
 
   $configs: map-merge($configs, ("air": $config));
 
-  [data-skin=air] {
-    .page__footer {
-      color: #fff !important; // override
-    }
+  .page__footer:where([data-skin=air] *) {
+    color: #fff !important; // override
+  }
 
-    .page__footer-follow .social-icons .svg-inline--fa {
-      color: inherit;
-    }
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=air] *) {
+    color: inherit;
   }
 }

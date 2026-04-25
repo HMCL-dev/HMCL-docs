@@ -74,27 +74,25 @@ $neon-config: map-merge((
 
   $configs: map-merge($configs, ("neon": $config));
 
-  [data-skin=neon] {
-    .author__urls.social-icons i,
-    .author__urls.social-icons .svg-inline--fa,
-    .page__footer-follow .social-icons i,
-    .page__footer-follow .social-icons .svg-inline--fa  {
-      color: inherit;
-    }
+  .author__urls.social-icons i:where([data-skin=neon] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=neon] *),
+  .page__footer-follow .social-icons i:where([data-skin=neon] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=neon] *) {
+    color: inherit;
+  }
 
-    /* next/previous buttons */
-    .pagination--pager {
+  /* next/previous buttons */
+  .pagination--pager:where([data-skin=neon] *) {
+    color: $text-color;
+    background-color: $primary-color;
+    border-color: transparent;
+
+    &:visited {
       color: $text-color;
-      background-color: $primary-color;
-      border-color: transparent;
-
-      &:visited {
-        color: $text-color;
-      }
     }
+  }
 
-    .ais-search-box .ais-search-box--input {
-      background-color: $form-background-color;
-    }
+  .ais-search-box .ais-search-box--input:where([data-skin=neon] *) {
+    background-color: $form-background-color;
   }
 }

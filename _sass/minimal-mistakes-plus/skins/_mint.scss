@@ -31,14 +31,12 @@ $mint-config: map-merge((
 
   $configs: map-merge($configs, ("mint": $config));
 
-  [data-skin=mint] {
-    .page__footer {
-      color: #fff !important; // override
-    }
+  .page__footer:where([data-skin=mint] *) {
+    color: #fff !important; // override
+  }
 
-    .page__footer-follow .social-icons i,
-    .page__footer-follow .social-icons .svg-inline--fa {
-      color: inherit;
-    }
+  .page__footer-follow .social-icons i:where([data-skin=mint] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=mint] *) {
+    color: inherit;
   }
 }

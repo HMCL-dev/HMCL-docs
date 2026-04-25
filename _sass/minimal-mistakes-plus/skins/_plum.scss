@@ -74,34 +74,32 @@ $plum-config: map-merge((
 
   $configs: map-merge($configs, ("plum": $config));
 
-  [data-skin=plum] {
-    .author__urls.social-icons i,
-    .author__urls.social-icons .svg-inline--fa,
-    .page__footer-follow .social-icons i,
-    .page__footer-follow .social-icons .svg-inline--fa  {
+  .author__urls.social-icons i:where([data-skin=plum] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=plum] *),
+  .page__footer-follow .social-icons i:where([data-skin=plum] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=plum] *) {
+    color: inherit;
+  }
+
+  .page__content:where([data-skin=plum] *) {
+    a,
+    a:visited {
       color: inherit;
     }
+  }
 
-    .page__content {
-      a,
-      a:visited {
-        color: inherit;
-      }
-    }
+  /* next/previous buttons */
+  .pagination--pager:where([data-skin=plum] *) {
+    color: $text-color;
+    background-color: $primary-color;
+    border-color: transparent;
 
-    /* next/previous buttons */
-    .pagination--pager {
+    &:visited {
       color: $text-color;
-      background-color: $primary-color;
-      border-color: transparent;
-
-      &:visited {
-        color: $text-color;
-      }
     }
+  }
 
-    .ais-search-box .ais-search-box--input {
-      background-color: $form-background-color;
-    }
+  .ais-search-box .ais-search-box--input:where([data-skin=plum] *) {
+    background-color: $form-background-color;
   }
 }
