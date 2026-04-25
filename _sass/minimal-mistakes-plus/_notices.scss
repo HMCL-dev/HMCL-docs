@@ -61,9 +61,9 @@
     background-color: skin-var("func-mix-background-color-#{$notice-color-key}-code-notice-background-mix");
   }
 
-	pre code {
-		background-color: inherit;
-	}
+  pre code {
+    background-color: inherit;
+  }
 
   ul {
     &:last-child {
