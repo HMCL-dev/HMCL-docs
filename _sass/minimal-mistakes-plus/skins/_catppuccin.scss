@@ -131,27 +131,25 @@ $catppuccin-config: map-merge((
 
   $configs: map-merge($configs, (#{$name}: $config));
 
-  [data-skin=#{$name}] {
-    div.highlighter-rouge,
-    figure.highlight {
-      background-color: $code-background-color !important;
+  div.highlighter-rouge:where([data-skin=#{$name}] *),
+  figure.highlight:where([data-skin=#{$name}] *) {
+    background-color: $code-background-color !important;
+  }
+
+  pre.highlight .clipboard-copy-button:where([data-skin=#{$name}] *) {
+    color: $text-color !important;
+  }
+
+  @if not map-get($palette, "light") {
+    .author__urls.social-icons i:where([data-skin=#{$name}] *),
+    .author__urls.social-icons .svg-inline--fa:where([data-skin=#{$name}] *),
+    .page__footer-follow .social-icons i:where([data-skin=#{$name}] *),
+    .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=#{$name}] *) {
+      color: inherit;
     }
 
-    pre.highlight .clipboard-copy-button {
-      color: $text-color !important;
-    }
-
-    @if not map-get($palette, "light") {
-      .author__urls.social-icons i,
-      .author__urls.social-icons .svg-inline--fa,
-      .page__footer-follow .social-icons i,
-      .page__footer-follow .social-icons .svg-inline--fa  {
-        color: inherit;
-      }
-
-      .ais-search-box .ais-search-box--input {
-        background-color: $form-background-color;
-      }
+    .ais-search-box .ais-search-box--input:where([data-skin=#{$name}] *) {
+      background-color: $form-background-color;
     }
   }
 }
