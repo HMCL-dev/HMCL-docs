@@ -1,0 +1,155 @@
+$configs: () !default;
+
+$catppuccin-config: () !default;
+
+$catppuccin-config: map-merge((
+  "private-name": "catppuccin",
+  "private-palette": (
+    "light": true,
+    "rosewater": #dc8a78,
+    "flamingo": #dd7878,
+    "pink": #ea76cb,
+    "mauve": #8839ef,
+    "red": #d20f39,
+    "maroon": #e64553,
+    "peach": #fe640b,
+    "yellow": #df8e1d,
+    "green": #40a02b,
+    "teal": #179299,
+    "sky": #04a5e5,
+    "sapphire": #209fb5,
+    "blue": #1e66f5,
+    "lavender": #7287fd,
+    "text": #4c4f69,
+    "subtext1": #5c5f77,
+    "subtext0": #6c6f85,
+    "overlay2": #7c7f93,
+    "overlay1": #8c8fa1,
+    "overlay0": #9ca0b0,
+    "surface2": #acb0be,
+    "surface1": #bcc0cc,
+    "surface0": #ccd0da,
+    "base": #eff1f5,
+    "mantle": #e6e9ef,
+    "crust": #dce0e8,
+  ),
+  "private-accent": "mauve",
+), $catppuccin-config);
+
+@if $catppuccin-config {
+  $config: $catppuccin-config;
+  $palette: map-get($config, "private-palette");
+  @if not map-get($config, "gray") {
+    $config: map-merge($config, ("gray": map-get($palette, "subtext0")));
+  }
+  @if not map-get($config, "background-color") {
+    $config: map-merge($config, ("background-color": map-get($palette, "base")));
+  }
+  @if not map-get($config, "code-background-color") {
+    $config: map-merge($config, ("code-background-color": map-get($palette, "mantle")));
+  }
+  @if not map-get($config, "text-color") {
+    $config: map-merge($config, ("text-color": map-get($palette, "text")));
+  }
+  @if not map-get($config, "border-color") {
+    $config: map-merge($config, ("border-color": map-get($palette, "surface2")));
+  }
+  @if not map-get($config, "form-background-color") {
+    $config: map-merge($config, ("form-background-color": map-get($palette, "mantle")));
+  }
+  @if not map-get($config, "footer-background-color") {
+    $config: map-merge($config, ("footer-background-color": map-get($palette, "crust")));
+  }
+  $accent: map-get($config, "private-accent");
+  @if not map-get($config, "primary-color") {
+    $config: map-merge($config, ("primary-color": map-get($palette, $accent)));
+  }
+  @if not map-get($config, "success-color") {
+    $config: map-merge($config, ("success-color": map-get($palette, "green")));
+  }
+  @if not map-get($config, "warning-color") {
+    $config: map-merge($config, ("warning-color": map-get($palette, "yellow")));
+  }
+  @if not map-get($config, "danger-color") {
+    $config: map-merge($config, ("danger-color": map-get($palette, "red")));
+  }
+  @if not map-get($config, "info-color") {
+    $config: map-merge($config, ("info-color": map-get($palette, "blue")));
+  }
+  @if not map-get($config, "base00") {
+    $config: map-merge($config, ("base00": map-get($palette, "base")));
+  }
+  @if not map-get($config, "base01") {
+    $config: map-merge($config, ("base01": map-get($palette, "mantle")));
+  }
+  @if not map-get($config, "base02") {
+    $config: map-merge($config, ("base02": map-get($palette, "surface0")));
+  }
+  @if not map-get($config, "base03") {
+    $config: map-merge($config, ("base03": map-get($palette, "surface1")));
+  }
+  @if not map-get($config, "base04") {
+    $config: map-merge($config, ("base04": map-get($palette, "surface2")));
+  }
+  @if not map-get($config, "base05") {
+    $config: map-merge($config, ("base05": map-get($palette, "text")));
+  }
+  @if not map-get($config, "base06") {
+    $config: map-merge($config, ("base06": map-get($palette, "rosewater")));
+  }
+  @if not map-get($config, "base07") {
+    $config: map-merge($config, ("base07": map-get($palette, "lavender")));
+  }
+  @if not map-get($config, "base08") {
+    $config: map-merge($config, ("base08": map-get($palette, "red")));
+  }
+  @if not map-get($config, "base09") {
+    $config: map-merge($config, ("base09": map-get($palette, "peach")));
+  }
+  @if not map-get($config, "base0a") {
+    $config: map-merge($config, ("base0a": map-get($palette, "yellow")));
+  }
+  @if not map-get($config, "base0b") {
+    $config: map-merge($config, ("base0b": map-get($palette, "green")));
+  }
+  @if not map-get($config, "base0c") {
+    $config: map-merge($config, ("base0c": map-get($palette, "teal")));
+  }
+  @if not map-get($config, "base0d") {
+    $config: map-merge($config, ("base0d": map-get($palette, "blue")));
+  }
+  @if not map-get($config, "base0e") {
+    $config: map-merge($config, ("base0e": map-get($palette, "mauve")));
+  }
+  @if not map-get($config, "base0f") {
+    $config: map-merge($config, ("base0f": map-get($palette, "flamingo")));
+  }
+  $name: map-get($config, "private-name");
+  $code-background-color: map-get($config, "code-background-color");
+  $text-color: map-get($config, "text-color");
+  $form-background-color: map-get($config, "form-background-color");
+
+  $configs: map-merge($configs, (#{$name}: $config));
+
+  div.highlighter-rouge:where([data-skin=#{$name}] *),
+  figure.highlight:where([data-skin=#{$name}] *) {
+    background-color: $code-background-color !important;
+  }
+
+  pre.highlight .clipboard-copy-button:where([data-skin=#{$name}] *) {
+    color: $text-color !important;
+  }
+
+  @if not map-get($palette, "light") {
+    .author__urls.social-icons i:where([data-skin=#{$name}] *),
+    .author__urls.social-icons .svg-inline--fa:where([data-skin=#{$name}] *),
+    .page__footer-follow .social-icons i:where([data-skin=#{$name}] *),
+    .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=#{$name}] *) {
+      color: inherit;
+    }
+
+    .ais-search-box .ais-search-box--input:where([data-skin=#{$name}] *) {
+      background-color: $form-background-color;
+    }
+  }
+}

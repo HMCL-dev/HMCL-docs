@@ -29,8 +29,10 @@ appearance_skin:
     - mint
     - plum
     - sunrise
-    - catppuccin_latte
-    - catppuccin_mocha
+    - catppuccin-latte
+    - catppuccin-frappe
+    - catppuccin-macchiato
+    - catppuccin-mocha
 miscellaneous_hits:
   type: radio
   default: enable

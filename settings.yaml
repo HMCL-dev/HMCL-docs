@@ -35,8 +35,10 @@ data:
           mint: 薄荷 (Mint)
           plum: 梅紫 (Plum)
           sunrise: 日出 (Sunrise)
-          catppuccin_latte: Catppuccin Latte
-          catppuccin_mocha: Catppuccin Mocha
+          catppuccin-latte: Catppuccin Latte
+          catppuccin-frappe: Catppuccin Frappe
+          catppuccin-macchiato: Catppuccin Macchiato
+          catppuccin-mocha: Catppuccin Mocha
   - title: 杂项
     settings:
       miscellaneous_hits:

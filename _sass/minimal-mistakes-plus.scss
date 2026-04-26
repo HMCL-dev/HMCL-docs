@@ -1,45 +1,32 @@
-/* Copyright comment */
 @import "minimal-mistakes/copyright";
 
-/* Variables */
-@import "minimal-mistakes/variables";
+@import "minimal-mistakes-plus/common";
 
-/* Mixins and functions */
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
 @import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
 @import "minimal-mistakes/vendor/susy/susy";
-@import "minimal-mistakes/mixins";
 
-/* Core CSS */
-@import "minimal-mistakes/reset";
-@import "minimal-mistakes/base";
-@import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
+@import "minimal-mistakes-plus/reset";
+@import "minimal-mistakes-plus/base";
+@import "minimal-mistakes-plus/forms";
+@import "minimal-mistakes-plus/tables";
 @import "minimal-mistakes/animations";
 
-/* Components */
-@import "minimal-mistakes/buttons";
-@import "minimal-mistakes/notices";
-@import "minimal-mistakes/masthead";
-@import "minimal-mistakes/navigation";
-@import "minimal-mistakes/footer";
-@import "minimal-mistakes/search";
+@import "minimal-mistakes-plus/buttons";
+@import "minimal-mistakes-plus/notices";
+@import "minimal-mistakes-plus/masthead";
+@import "minimal-mistakes-plus/navigation";
+@import "minimal-mistakes-plus/footer";
+@import "minimal-mistakes-plus/search";
 @import "minimal-mistakes/syntax";
 
-/* Utility classes */
-@import "minimal-mistakes/utilities";
+@import "minimal-mistakes-plus/utilities";
 
-/* Layout specific */
-@import "minimal-mistakes/page";
+@import "minimal-mistakes-plus/page";
 @import "minimal-mistakes-plus/archive";
-@import "minimal-mistakes/sidebar";
+@import "minimal-mistakes-plus/sidebar";
 @import "minimal-mistakes/print";
-
-blockquote {
-  margin-inline: 0;
-  font-style: normal;
-}
 
 * {
   overflow-wrap: break-word;
@@ -54,7 +41,7 @@ blockquote {
 table.setting-multi-radio td {
   border: 0;
   text-align: center;
-  border-left: 1px solid mix(#000, $border-color, 25%);
+  border-left: 1px solid $text-color;
 }
 
 input[type="radio"] {

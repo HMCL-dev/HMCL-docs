@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Neon skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$neon-config: () !default;
+
+$neon-config: map-merge((
+  "background-color": #141010,
+  "text-color": #fff6fb,
+  "primary-color": #f21368,
+  "notice-background-mix": 90%,
+  "code-notice-background-mix": 95%,
+  "base00": #ffffff,
+  "base01": #e0e0e0,
+  "base02": #d0d0d0,
+  "base03": #b0b0b0,
+  "base04": #000000,
+  "base05": #101010,
+  "base06": #151515,
+  "base07": #202020,
+  "base08": #ff0086,
+  "base09": #fd8900,
+  "base0a": #aba800,
+  "base0b": #00c918,
+  "base0c": #1faaaa,
+  "base0d": #3777e6,
+  "base0e": #ad00a1,
+  "base0f": #cc6633,
+), $neon-config);
+
+
+@if $neon-config {
+  $config: $neon-config;
+  $background-color: map-get($config, "background-color");
+  @if not map-get($config, "border-color") {
+    $config: map-merge($config, ("border-color": mix(#fff, $background-color, 20%)));
+  }
+  @if not map-get($config, "code-background-color") {
+    $config: map-merge($config, ("code-background-color": mix(#000, $background-color, 15%)));
+  }
+  @if not map-get($config, "code-background-color-dark") {
+    $config: map-merge($config, ("code-background-color-dark": mix(#000, $background-color, 20%)));
+  }
+  @if not map-get($config, "form-background-color") {
+    $config: map-merge($config, ("form-background-color": mix(#000, $background-color, 15%)));
+  }
+  @if not map-get($config, "navicon-link-color-hover") {
+    $config: map-merge($config, ("navicon-link-color-hover": mix(#000, $background-color, 30%)));
+  }
+  $primary-color: map-get($config, "primary-color");
+  @if not map-get($config, "footer-background-color") {
+    $config: map-merge($config, ("footer-background-color": mix($primary-color, #000, 10%)));
+  }
+  @if not map-get($config, "link-color") {
+    $config: map-merge($config, ("link-color": $primary-color));
+  }
+  $link-color: map-get($config, "link-color");
+  @if not map-get($config, "link-color-hover") {
+    $config: map-merge($config, ("link-color-hover": mix(#fff, $link-color, 25%)));
+  }
+  @if not map-get($config, "link-color-visited") {
+    $config: map-merge($config, ("link-color-visited": mix(#000, $link-color, 25%)));
+  }
+  $text-color: map-get($config, "text-color");
+  @if not map-get($config, "masthead-link-color") {
+    $config: map-merge($config, ("masthead-link-color": $text-color));
+  }
+  @if not map-get($config, "masthead-link-color-hover") {
+    $config: map-merge($config, ("masthead-link-color-hover": mix(#000, $text-color, 20%)));
+  }
+  $form-background-color: map-get($config, "form-background-color");
+
+  $configs: map-merge($configs, ("neon": $config));
+
+  .author__urls.social-icons i:where([data-skin=neon] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=neon] *),
+  .page__footer-follow .social-icons i:where([data-skin=neon] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=neon] *) {
+    color: inherit;
+  }
+
+  /* next/previous buttons */
+  .pagination--pager:where([data-skin=neon] *) {
+    color: $text-color;
+    background-color: $primary-color;
+    border-color: transparent;
+
+    &:visited {
+      color: $text-color;
+    }
+  }
+
+  .ais-search-box .ais-search-box--input:where([data-skin=neon] *) {
+    background-color: $form-background-color;
+  }
+}

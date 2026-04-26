@@ -1,0 +1,104 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+/*
+   Default button
+   ========================================================================== */
+
+.btn {
+  /* default */
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.5em 1em;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  .icon {
+    margin-inline-end: 0.5em;
+  }
+
+  .icon + .hidden {
+    margin-inline-start: -0.5em; /* override for hidden text*/
+  }
+
+  /* button colors */
+  $buttoncolors:
+  (primary, $primary-color),
+  (inverse, #fff),
+  (light-outline, transparent),
+  (success, $success-color),
+  (warning, $warning-color),
+  (danger, $danger-color),
+  (info, $info-color),
+  /* brands */
+  (bluesky, $bluesky-color),
+  (facebook, $facebook-color),
+  (linkedin, $linkedin-color),
+  (mastodon, $mastodon-color),
+  (twitter, $twitter-color),
+  (x, $x-color);
+
+  @each $buttoncolor, $color in $buttoncolors {
+    &--#{$buttoncolor} {
+      background-color: $color;
+      color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+      @if ($buttoncolor == inverse) {
+        border: 1px solid $border-color;
+      }
+      @if ($buttoncolor == light-outline) {
+        border: 1px solid #fff;
+      }
+
+      &:visited {
+        background-color: $color;
+        color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+      }
+
+      &:hover {
+        background-color: skin-var("func-mix-000-button-color-#{$buttoncolor}-20");
+        color: skin-var("func-yiq-contrast-button-color-#{$buttoncolor}-yiq-contrasted-dark-default-yiq-contrasted-light-default-yiq-contrasted-threshold");
+      }
+    }
+  }
+
+  /* fills width of parent container */
+  &--block {
+    display: block;
+    width: 100%;
+
+    + .btn--block {
+      margin-top: 0.25em;
+    }
+  }
+
+  /* disabled */
+  &--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: 0.65;
+  }
+
+  /* extra large button */
+  &--x-large {
+    font-size: $type-size-4;
+  }
+
+  /* large button */
+  &--large {
+    font-size: $type-size-5;
+  }
+
+  /* small button */
+  &--small {
+    font-size: $type-size-7;
+  }
+}

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Dark skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$dark-config: () !default;
+
+$dark-config: map-merge((
+  "background-color": #252a34,
+  "text-color": #eaeaea,
+  "primary-color": #00adb5,
+), $dark-config);
+
+@if $dark-config {
+  $config: $dark-config;
+  $background-color: map-get($config, "background-color");
+  @if not map-get($config, "border-color") {
+    $config: map-merge($config, ("border-color": mix(#fff, $background-color, 20%)));
+  }
+  @if not map-get($config, "code-background-color") {
+    $config: map-merge($config, ("code-background-color": mix(#000, $background-color, 15%)));
+  }
+  @if not map-get($config, "code-background-color-dark") {
+    $config: map-merge($config, ("code-background-color-dark": mix(#000, $background-color, 20%)));
+  }
+  @if not map-get($config, "form-background-color") {
+    $config: map-merge($config, ("form-background-color": mix(#000, $background-color, 15%)));
+  }
+  @if not map-get($config, "footer-background-color") {
+    $config: map-merge($config, ("footer-background-color": mix(#000, $background-color, 30%)));
+  }
+  $primary-color: map-get($config, "primary-color");
+  $text-color: map-get($config, "text-color");
+  @if not map-get($config, "link-color") {
+    $config: map-merge($config, ("link-color": mix($primary-color, $text-color, 40%)));
+  }
+  $link-color: map-get($config, "link-color");
+  @if not map-get($config, "link-color-hover") {
+    $config: map-merge($config, ("link-color-hover": mix(#fff, $link-color, 25%)));
+  }
+  @if not map-get($config, "link-color-visited") {
+    $config: map-merge($config, ("link-color-visited": mix(#000, $link-color, 25%)));
+  }
+  @if not map-get($config, "masthead-link-color") {
+    $config: map-merge($config, ("masthead-link-color": $text-color));
+  }
+  @if not map-get($config, "masthead-link-color-hover") {
+    $config: map-merge($config, ("masthead-link-color-hover": mix(#000, $text-color, 20%)));
+  }
+  @if not map-get($config, "navicon-link-color-hover") {
+    $config: map-merge($config, ("navicon-link-color-hover": mix(#000, $background-color, 30%)));
+  }
+  $form-background-color: map-get($config, "form-background-color");
+
+  $configs: map-merge($configs, ("dark": $config));
+
+  .author__urls.social-icons i:where([data-skin=dark] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=dark] *),
+  .page__footer-follow .social-icons i:where([data-skin=dark] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=dark] *) {
+    color: inherit;
+  }
+
+  .ais-search-box .ais-search-box--input:where([data-skin=dark] *) {
+    background-color: $form-background-color;
+  }
+}
