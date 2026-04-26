@@ -316,12 +316,6 @@ compress_html:
   ignore:
     envs: development
 
-head_scripts:
-  - /assets/js/settings.js
-  - /assets/js/theme.js
-after_footer_scripts:
-  - /assets/js/plugins/jquery.auto-redirect.js
-
 # jekyll-feed
 feed:
   collections:
@@ -330,3 +324,27 @@ feed:
     - modpack
     - eula
     - multiplayer
+
+post_process:
+  terser:
+    /assets/js/main.min.js:
+      - /assets/js/settings.js
+      - /assets/js/theme.js
+      - /assets/js/vendor/jquery/jquery-3.6.0.js
+      - /assets/js/plugins/gumshoe.js
+      - /assets/js/plugins/jquery.ba-throttle-debounce.js
+      - /assets/js/plugins/jquery.fitvids.js
+      - /assets/js/plugins/jquery.greedy-navigation.js
+      - /assets/js/plugins/jquery.magnific-popup.js
+      - /assets/js/plugins/smooth-scroll.js
+      - /assets/js/plugins/jquery.auto-redirect.js
+      - /assets/js/_main.js
+  remove_dirs:
+    - /assets/images/
+    - /assets/js/plugins/
+    - /assets/js/vendor/
+  remove_files:
+    - /assets/js/_main.js
+    - /assets/js/theme.js
+    - /assets/js/settings.js
+    - /assets/js/main.min.js.map

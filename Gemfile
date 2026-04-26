@@ -33,3 +33,5 @@ gem "http_parser.rb", "0.8.0", :platforms => [:jruby]
 
 # plugin dependencies
 gem "webp-ffi", "0.4.0" if ENV["ENABLE_WEBP_AUTO_CONVERSION"] == "true" || ENV["DRONE"] == "true"
+gem "mini_racer", "0.20.0" if ENV["ENABLE_EMBEDDED_V8"] == "true" || ENV["DRONE"] == "true"
+gem "terser", "1.2.7"
