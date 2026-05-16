@@ -330,6 +330,7 @@ post_process:
     /assets/js/main.min.js:
       - /assets/js/settings.js
       - /assets/js/theme.js
+      - /assets/js/meta.js
       - /assets/js/vendor/jquery/jquery-3.6.0.js
       - /assets/js/plugins/gumshoe.js
       - /assets/js/plugins/jquery.ba-throttle-debounce.js
@@ -339,8 +340,6 @@ post_process:
       - /assets/js/plugins/smooth-scroll.js
       - /assets/js/plugins/jquery.auto-redirect.js
       - /assets/js/_main.js
-    /assets/js/meta.min.js:
-      - /assets/js/meta.js
   remove_dirs:
     - /assets/images/
     - /assets/js/plugins/
