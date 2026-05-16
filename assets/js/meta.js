@@ -36,5 +36,5 @@
         appendMeta(today + " / " + total, "far fa-eye");
       }
     });
-  })};
+  });
 })();
