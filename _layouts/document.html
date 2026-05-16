@@ -5,7 +5,7 @@ layout: single
 {{ content }}
 
 {% if page.author or page.contributors or jekyll.environment == 'production' and page.hits  %}
-<script src="{{ '/assets/js/meta.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/meta.min.js' | relative_url }}"></script>
 <script>
   {%- if page.author %}appendMeta("{{ page.author }}", "fas fa-user-pen");{% endif -%}
   {%- for contributor in page.contributors %}appendMeta("{{ contributor }}", "fas fa-user-pen");{% endfor -%}

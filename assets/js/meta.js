@@ -23,7 +23,7 @@
     meta.append(text.trim());
     metas.append(meta);
   };
-  window.hits = (tag) => {
+  window.hits = (tag) => window.addEventListener("load", () => {
     if (settings.get("miscellaneous_hits") === "disable") return;
     const hitsUrl = new URL("https://hits.zkitefly.eu.org");
     hitsUrl.searchParams.set("tag", tag);
@@ -36,5 +36,5 @@
         appendMeta(today + " / " + total, "far fa-eye");
       }
     });
-  };
+  })};
 })();
