@@ -46,10 +46,12 @@ layout: single
 {% endfor %}
 
 <script>
-  for (const settingItem of document.getElementsByClassName("setting-item")) {
-    settingItem.addEventListener("change", ({ target }) => settings.set(target.name, target.value));
-    settings.onChange(settingItem.name, (value) => settingItem.type === "radio" && (settingItem.checked = settingItem.value === value));
-  }
+  window.addEventListener("load", () => {
+    for (const settingItem of document.getElementsByClassName("setting-item")) {
+      settingItem.addEventListener("change", ({ target }) => settings.set(target.name, target.value));
+      settings.onChange(settingItem.name, (value) => settingItem.type === "radio" && (settingItem.checked = settingItem.value === value));
+    }
+  });
 </script>
 
 <style>.notice label input { display: inline }</style>
