@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Mint skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$mint-config: () !default;
+
+$mint-config: map-merge((
+  "background-color": #f3f6f6,
+  "text-color": #40514e,
+  "muted-text-color": #40514e,
+  "primary-color": #11999e,
+  "border-color": mix(#fff, #40514e, 75%),
+  "footer-background-color": #30e3ca,
+  "link-color": #11999e,
+), $mint-config);
+
+@if $mint-config {
+  $config: $mint-config;
+  $text-color: map-get($config, "text-color");
+  @if not map-get($config, "masthead-link-color") {
+    $config: map-merge($config, ("masthead-link-color": $text-color));
+  }
+  @if not map-get($config, "masthead-link-color-hover") {
+    $config: map-merge($config, ("masthead-link-color-hover": $text-color));
+  }
+  @if not map-get($config, "navicon-link-color-hover") {
+    $config: map-merge($config, ("navicon-link-color-hover": mix(#fff, $text-color, 80%)));
+  }
+
+  $configs: map-merge($configs, ("mint": $config));
+
+  .page__footer:where([data-skin=mint] *) {
+    color: #fff !important; // override
+  }
+
+  .page__footer-follow .social-icons i:where([data-skin=mint] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=mint] *) {
+    color: inherit;
+  }
+}

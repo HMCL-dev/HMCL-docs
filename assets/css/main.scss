@@ -1,8 +1,17 @@
 ---
 ---
 
-@charset "utf-8";
+/**{{'/'}}
+{% if jekyll.environment == "production" %}
+$compress_css_variables: true;
+{% endif %}
 
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-@import "minimal-mistakes/skins/default";
+{% assign skins = site.data.settings.appearance_skin.options | uniq %}
+{% for skin in skins %}
+{% if skin != "default" %}
+@import "minimal-mistakes-plus/skins/{{ skin }}";
+{% endif %}
+{% endfor %}
+/**/
+
 @import "minimal-mistakes-plus";

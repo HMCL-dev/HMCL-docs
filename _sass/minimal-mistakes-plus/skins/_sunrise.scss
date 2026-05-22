@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Sunrise skin
+   ========================================================================== */
+
+$configs: () !default;
+
+$sunrise-config: () !default;
+
+$sunrise-config: map-merge((
+  "dark-gray": #0e2431,
+  "background-color": #e8d5b7,
+  "text-color": #000,
+  "primary-color": #fc3a52,
+  "footer-background-color": #f9b248,
+  "notice-background-mix": 75%,
+  "base00": #1d1f21,
+  "base01": #282a2e,
+  "base02": #373b41,
+  "base03": #969896,
+  "base04": #b4b7b4,
+  "base05": #c5c8c6,
+  "base06": #e0e0e0,
+  "base07": #ffffff,
+  "base08": #cc6666,
+  "base09": #de935f,
+  "base0a": #f0c674,
+  "base0b": #b5bd68,
+  "base0c": #8abeb7,
+  "base0d": #81a2be,
+  "base0e": #b294bb,
+  "base0f": #a3685a,
+), $sunrise-config);
+
+
+@if $sunrise-config {
+  $config: $sunrise-config;
+  $dark-gray: map-get($config, "dark-gray");
+  @if not map-get($config, "muted-text-color") {
+    $config: map-merge($config, ("muted-text-color": $dark-gray));
+  }
+  $background-color: map-get($config, "background-color");
+  @if not map-get($config, "border-color") {
+    $config: map-merge($config, ("border-color": mix(#000, $background-color, 20%)));
+  }
+  @if not map-get($config, "code-background-color") {
+    $config: map-merge($config, ("code-background-color": mix(#fff, $background-color, 20%)));
+  }
+  @if not map-get($config, "code-background-color-dark") {
+    $config: map-merge($config, ("code-background-color-dark": mix(#000, $background-color, 10%)));
+  }
+  @if not map-get($config, "form-background-color") {
+    $config: map-merge($config, ("form-background-color": mix(#fff, $background-color, 15%)));
+  }
+  @if not map-get($config, "navicon-link-color-hover") {
+    $config: map-merge($config, ("navicon-link-color-hover": mix(#000, $background-color, 30%)));
+  }
+  $primary-color: map-get($config, "primary-color");
+  @if not map-get($config, "link-color") {
+    $config: map-merge($config, ("link-color": mix(#000, $primary-color, 10%)));
+  }
+  $link-color: map-get($config, "link-color");
+  @if not map-get($config, "link-color-hover") {
+    $config: map-merge($config, ("link-color-hover": mix(#fff, $link-color, 25%)));
+  }
+  @if not map-get($config, "link-color-visited") {
+    $config: map-merge($config, ("link-color-visited": mix(#000, $link-color, 25%)));
+  }
+  $text-color: map-get($config, "text-color");
+  @if not map-get($config, "masthead-link-color") {
+    $config: map-merge($config, ("masthead-link-color": $text-color));
+  }
+  @if not map-get($config, "masthead-link-color-hover") {
+    $config: map-merge($config, ("masthead-link-color-hover": mix(#000, $text-color, 20%)));
+  }
+
+  $configs: map-merge($configs, ("sunrise": $config));
+
+  .author__urls.social-icons i:where([data-skin=sunrise] *),
+  .author__urls.social-icons .svg-inline--fa:where([data-skin=sunrise] *),
+  .page__footer-follow .social-icons i:where([data-skin=sunrise] *),
+  .page__footer-follow .social-icons .svg-inline--fa:where([data-skin=sunrise] *) {
+    color: inherit;
+  }
+}
