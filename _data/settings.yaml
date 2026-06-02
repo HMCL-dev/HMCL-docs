@@ -37,3 +37,9 @@ miscellaneous_hits:
   options:
     - enable
     - disable
+crash_support_group_rule:
+  type: radio
+  default: disagree
+  options:
+    - disagree
+    - agree
