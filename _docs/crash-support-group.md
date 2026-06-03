@@ -13,7 +13,7 @@ toc: false
     <li>
       <details open>
         <summary>游戏非正常退出时请点击左下角导出游戏崩溃日志按钮（注意不是日志按钮），并完整发送生成的报错压缩包</summary>
-        <div class="notice--success"><img src="/assets/img/docs/groups/button-1.png" title="导出游戏崩溃日志" decoding="async"> <img src="/assets/img/docs/groups/button-2.png" title="日志" decoding="async"></div>
+        <div class="notice--success"><img src="/assets/img/docs/groups/button-1.png" title="导出游戏崩溃日志" loading="lazy"> <img src="/assets/img/docs/groups/button-2.png" title="日志" loading="lazy"></div>
       </details>
     </li>
     <li>遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助</li>
@@ -39,7 +39,7 @@ toc: false
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 
-<img src="/assets/img/docs/groups/crash.png" alt="Minecraft 报错崩溃交流群 (666546887) 二维码" decoding="async">
+<img src="/assets/img/docs/groups/crash.png" alt="Minecraft 报错崩溃交流群 (666546887) 二维码" loading="lazy">
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
