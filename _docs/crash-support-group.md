@@ -13,7 +13,7 @@ toc: false
     <li>
       <details open>
         <summary>游戏非正常退出时请点击左下角导出游戏崩溃日志按钮（注意不是日志按钮），并完整发送生成的报错压缩包</summary>
-        <div class="notice--success"><img src="/assets/img/docs/groups/button-1.png" title="导出游戏崩溃日志"> <img src="/assets/img/docs/groups/button-2.png" title="日志"></div>
+        <div class="notice--success"><img src="/assets/img/docs/groups/button-1.png" title="导出游戏崩溃日志" decoding="async"> <img src="/assets/img/docs/groups/button-2.png" title="日志" decoding="async"></div>
       </details>
     </li>
     <li>遇到其他问题时，请详细说明情况并提供相关截图，以便我们提供帮助</li>
@@ -32,14 +32,14 @@ toc: false
   <div>
     <a class="btn btn--inverse" href="{{ page.previous.url | relative_url }}">上一页</a>
     <a class="btn btn--inverse" href="{{ page.next.url | relative_url }}">下一页</a>
-    <button id="close-btn" class="btn" disabled style="float: inline-end">我已了解</button>
+    <button id="close-btn" class="btn align-right" disabled>我已了解</button>
   </div>
   {{'<'}}!---->
 </div>
 
 如果你遇到了游戏非正常退出问题，欢迎加入报错崩溃交流群咨询解决方案：[Minecraft 报错崩溃交流群 (666546887)](https://qm.qq.com/q/nG0Ti1kJri)
 
-![](/assets/img/docs/groups/crash.png)
+<img src="/assets/img/docs/groups/crash.png" alt="Minecraft 报错崩溃交流群 (666546887) 二维码" decoding="async">
 
 **本群仅处理游戏报错崩溃问题，无关话题请前往其他群聊讨论。**
 
