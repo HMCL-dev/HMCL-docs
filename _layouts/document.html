@@ -4,11 +4,11 @@ layout: single
 
 {{ content }}
 
-{% if page.author or page.contributors or jekyll.environment == 'production' and page.hits  %}
+{% if page.author or page.authors or jekyll.environment == 'production' and page.hits  %}
 <script>
   window.addEventListener("load", () => {
     {%- if page.author %}appendMeta("{{ page.author }}", "fas fa-user-pen");{% endif -%}
-    {%- for contributor in page.contributors %}appendMeta("{{ contributor }}", "fas fa-user-pen");{% endfor -%}
+    {%- for author in page.authors %}appendMeta("{{ author }}", "fas fa-user-pen");{% endfor -%}
     {%- if jekyll.environment == 'production' and page.hits %}hits({{ page.url | absolute_url | jsonify }});{% endif -%}
   });
 </script>

@@ -1,8 +1,10 @@
 ---
-title:  "自动安装与模组下载简介"
+title: 自动安装与模组下载简介
 excerpt: 安装 Forge、Fabric、LiteLoader、OptiFine 及模组的教程
-date:   2025-11-02 09:06:30 +0800
-author: asdqp233,Mine-diamond
+date: 2025-11-02 09:06:30 +0800
+authors:
+  - asdqp233
+  - Mine-diamond
 ---
 
 要为 Minecraft 安装模组，你首先需要安装一个“模组加载器”（例如 NeoForge 或 Fabric），然后再安装你想要的模组。HMCL 为这两个步骤都提供了强大的支持。
