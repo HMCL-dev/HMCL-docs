@@ -48,13 +48,16 @@ toc: false
 <!----{{'>'}}
 <style>
   .mfp-content { max-width: 798px; }
-  .mfp-hide ~ * { filter: blur(8px); }
-  #alert-modal.mfp-hide ~ * { filter: none; }
+  .page__content { filter: blur(8px); }
+  .page__content.hide-filter { filter: none; }
 </style>
 <script>
 window.addEventListener("load", () => {
   const status = settings.get("crash_support_group_rule");
-  if (status === "agree") return;
+  const $modal = $("#alert-modal");
+  if (status === "agree") {
+    return $modal.parent().addClass("hide-filter");
+  }
   $.magnificPopup.open({
     items: { src: '#alert-modal', type: 'inline' },
     modal: true
@@ -72,6 +75,7 @@ window.addEventListener("load", () => {
   $btn.on("click", () => {
     settings.set("crash_support_group_rule", "agree");
     $.magnificPopup.close();
+    $modal.parent().addClass("hide-filter");
   });
 });
 </script>
