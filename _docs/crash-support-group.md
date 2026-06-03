@@ -46,7 +46,11 @@ toc: false
 由于加群人数过多，我们会移出问题已解决的用户。如果你在被移出后遇到了新的问题需要求助，你可以再次加群。
 
 <!----{{'>'}}
-<style>.mfp-content { max-width: 798px; }</style>
+<style>
+  .mfp-content { max-width: 798px; }
+  .mfp-hide ~ * { filter: blur(8px); }
+  #alert-modal.mfp-hide ~ * { filter: none; }
+</style>
 <script>
 window.addEventListener("load", () => {
   const status = settings.get("crash_support_group_rule");
