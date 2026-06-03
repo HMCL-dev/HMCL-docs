@@ -57,7 +57,6 @@ window.addEventListener("load", () => {
   });
   let sec = 10;
   const $btn = $("#close-btn");
-  $btn.attr("data-countdown", sec);
   const timer = setInterval(function() {
     $btn.text("请等待 " + --sec + " 秒");
     if (sec <= 0) {
