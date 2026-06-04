@@ -4,16 +4,12 @@ ExecJS.runtime = ExecJS::Runtimes::MiniRacer if ExecJS::Runtimes::MiniRacer.avai
 
 module TypescriptCompiler
   class << self
-    def context
-      @context
-    end
-
     def context=(input)
       @context = input
     end
 
     def compile(input)
-      TypescriptCompiler.context.call("compile", input)
+      @context.call("compile", input)
     end
   end
 end
