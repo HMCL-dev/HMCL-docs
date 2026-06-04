@@ -1,6 +1,7 @@
----
+/* @frontmatter
 layout: null
----
+*/
+
 (function () {
   const PREFIX = "HMCL_DOCS_SETTINGS_", data = {}, bus = new EventTarget(), configs = /*{%comment%}*/{}/*{%endcomment%}*/ /**{{'/'}}{{ site.data.settings | jsonify }}/**/;
   window.addEventListener("storage", ({ key, newValue }) => key !== null && key.startsWith(PREFIX) && newValue !== data[key] && bus.dispatchEvent(new CustomEvent(key, { detail: (data[key] = newValue) })));

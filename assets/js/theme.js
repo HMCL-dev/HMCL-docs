@@ -1,6 +1,7 @@
----
+/* @frontmatter
 layout: null
----
+*/
+
 window.addEventListener("DOMContentLoaded", function () {
   var skinLink = document.getElementById("skin");
   var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
