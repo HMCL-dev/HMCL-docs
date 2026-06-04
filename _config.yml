@@ -354,4 +354,5 @@ post_process:
     - /assets/js/_main.js
     - /assets/js/theme.js
     - /assets/js/settings.js
+    - /assets/js/meta.ts.js
     - /assets/js/main.min.js.map
