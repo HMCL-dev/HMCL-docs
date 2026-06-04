@@ -350,7 +350,6 @@ post_process:
     - /assets/js/plugins/
     - /assets/js/vendor/
   remove_files:
-    - /assets/js/meta.js
     - /assets/js/_main.js
     - /assets/js/theme.js
     - /assets/js/settings.js
