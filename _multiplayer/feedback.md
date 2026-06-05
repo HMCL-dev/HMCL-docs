@@ -2,8 +2,8 @@
 title: 多人联机反馈
 date: 2025-10-07T18:44:00+08:00
 last_modified_at: 2025-12-03T16:39:00+08:00
-author: Burning_TNT
-contributors:
+authors:
+  - Burning_TNT
   - TyMxy
 ---
 

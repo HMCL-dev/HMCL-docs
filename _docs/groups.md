@@ -1,8 +1,8 @@
 ---
 title: 加入 HMCL 用户群
 date: 2024-03-05 17:00:00 +0800
-author: Glavo
-contributors:
+authors:
+  - Glavo
   - 8Mi_Yile
   - zkitefly
 ---
