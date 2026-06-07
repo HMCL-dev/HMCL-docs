@@ -1,6 +1,6 @@
----
+/* @frontmatter
 layout: null
----
+*/
 
 interface Window {
   $: JQueryStatic;
