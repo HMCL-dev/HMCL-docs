@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "types": ["node", "bun"]
+  },
+  "include": ["_plugins/scripts/**/*"]
+}

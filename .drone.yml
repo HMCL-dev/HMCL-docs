@@ -7,11 +7,13 @@ clone:
 
 steps:
 - name: build
-  image: ruby:3.4
+  image: cimg/ruby:3.4.9-node
   environment:
     JEKYLL_ENV: production
     BUNDLE_PATH: vendor/bundle
   commands:
+    - npm config set registry http://mirrors.cloud.tencent.com/npm
+    - npm install
     - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
     - bundle install --verbose
     - bundle exec jekyll build --trace --verbose
@@ -22,6 +24,8 @@ steps:
     path: /drone/src/vendor
   - name: jekyll-cache
     path: /drone/src/.jekyll-cache
+  - name: node_modules
+    path: /drone/src/node_modules
   when:
     branch: [main]
 
@@ -35,3 +39,6 @@ volumes:
 - name: jekyll-cache
   host:
     path: /home/ubuntu/docs.hmcl.net/cache/jekyll-cache
+- name: node_modules
+  host:
+    path: /home/ubuntu/docs.hmcl.net/cache/node_modules

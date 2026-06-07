@@ -8,8 +8,8 @@
 # layouts_dir: _layouts
 # data_dir: _data
 # includes_dir: _includes
-# cache_dir: .jekyll-cache
-disable_disk_cache: true
+cache_dir: .jekyll-cache/v260607
+# disable_disk_cache: false
 sass:
   # sass_dir: _sass
   # minimal-mistakes
@@ -50,6 +50,13 @@ include:
 exclude:
   - README.md
   - LICENSE
+  - tsconfig.json
+  - tsconfig.node.json
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - pnpm-lock.yaml
+  - bun.lock
 keep_files: []
 encoding: "utf-8"
 # markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -330,7 +337,6 @@ post_process:
     /assets/js/main.min.js:
       - /assets/js/settings.js
       - /assets/js/theme.js
-      - /assets/js/meta.js
       - /assets/js/vendor/jquery/jquery-3.6.0.js
       - /assets/js/plugins/gumshoe.js
       - /assets/js/plugins/jquery.ba-throttle-debounce.js
@@ -339,14 +345,16 @@ post_process:
       - /assets/js/plugins/jquery.magnific-popup.js
       - /assets/js/plugins/smooth-scroll.js
       - /assets/js/plugins/jquery.auto-redirect.js
+      - /assets/js/meta.ts.js
       - /assets/js/_main.js
   remove_dirs:
     - /assets/images/
-    - /assets/js/plugins/
+    - /assets/js/lunr/
     - /assets/js/vendor/
+    - /assets/js/plugins/
   remove_files:
-    - /assets/js/meta.js
     - /assets/js/_main.js
     - /assets/js/theme.js
+    - /assets/js/meta.ts.js
     - /assets/js/settings.js
     - /assets/js/main.min.js.map
