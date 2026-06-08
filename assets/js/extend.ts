@@ -199,10 +199,6 @@ type SettingSchema = Record<string, Setting>;
         .children("i")
         .removeClass(modeIcons)
         .addClass(modeIcons[currentModeIndex]);
-
-      settings.onChange("appearance_color_switcher", (value) => {
-        $switcher.css("display", value === "enable" ? "" : "none");
-      });
     }
 
     if (currentMode === "auto") {
@@ -211,6 +207,12 @@ type SettingSchema = Record<string, Setting>;
     } else {
       applySkin(settings.get("appearance_skin." + currentMode));
     }
+  }
+
+  if ($switcher) {
+    settings.onChange("appearance_color_switcher", (value) => {
+      $switcher.css("display", value === "enable" ? "" : "none");
+    });
   }
 
   settings.onChange("appearance_color", applyTheme);
