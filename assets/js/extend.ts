@@ -75,7 +75,7 @@ type SettingSchema = Record<string, Setting>;
         throw new Error("unknow key [" + key + "]");
       }
 
-      let id = settingNamePrefix + "_" + keys[0].toUpperCase();
+      let id = settingNamePrefix + keys[0].toUpperCase();
       if (item.type === "multi-radio") {
         if (keys.length === 1) {
           throw new Error("unknow key [" + key + "]");
