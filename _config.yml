@@ -335,8 +335,6 @@ feed:
 post_process:
   terser:
     /assets/js/main.min.js:
-      - /assets/js/settings.js
-      - /assets/js/theme.js
       - /assets/js/vendor/jquery/jquery-3.6.0.js
       - /assets/js/plugins/gumshoe.js
       - /assets/js/plugins/jquery.ba-throttle-debounce.js
@@ -345,7 +343,7 @@ post_process:
       - /assets/js/plugins/jquery.magnific-popup.js
       - /assets/js/plugins/smooth-scroll.js
       - /assets/js/plugins/jquery.auto-redirect.js
-      - /assets/js/meta.ts.js
+      - /assets/js/extend.ts.js
       - /assets/js/_main.js
   remove_dirs:
     - /assets/images/
@@ -354,7 +352,5 @@ post_process:
     - /assets/js/plugins/
   remove_files:
     - /assets/js/_main.js
-    - /assets/js/theme.js
-    - /assets/js/meta.ts.js
-    - /assets/js/settings.js
+    - /assets/js/extend.ts.js
     - /assets/js/main.min.js.map

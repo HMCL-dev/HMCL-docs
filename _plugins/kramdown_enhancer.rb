@@ -178,7 +178,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
       destination = File.join(site.dest, url)
       if File.exist?(source)
         KramdownEnhancer.webp[file.url] = url
-      elsif %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+      elsif Jekyll.env == "production" && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
         source_base64 = Base64.encode64(File.read(file.path, mode: "rb"))
         hash = Digest::SHA256.hexdigest(source_base64)
         if KramdownEnhancer::CACHE.key?("webp_#{hash}")
