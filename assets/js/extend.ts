@@ -177,14 +177,10 @@ type SettingSchema = Record<string, Setting>;
     $menu.after($switcher);
   }
 
-  function applyTheme(mode: string) {
+  function applyMode(mode: string) {
     const modeIndex = modeKeys.indexOf(mode);
     if (modeIndex < 0) {
       throw new Error("error mode [" + mode + "]");
-    }
-
-    if (currentModeIndex === modeIndex) {
-      return;
     }
 
     if (modeKeys[currentModeIndex] === "auto") {
@@ -215,9 +211,9 @@ type SettingSchema = Record<string, Setting>;
     });
   }
 
-  settings.onChange("appearance_color", applyTheme);
+  settings.onChange("appearance_color", applyMode);
   settings.onChange(["appearance_skin.dark", "appearance_skin.light"], () => {
-    applyTheme(settings.get("appearance_color"));
+    applyMode(settings.get("appearance_color"));
   });
 
   const $header = $("#main article.page div.page__inner-wrap > header");
