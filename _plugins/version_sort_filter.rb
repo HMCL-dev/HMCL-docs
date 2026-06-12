@@ -14,7 +14,7 @@ module VersionSortFilter
   end
 
   def version_to_numbers(version_string)
-    version_string.split('.').map { |n| n.to_i }
+    version_string.split(".").map { |n| n.to_i }
   end
 end
 

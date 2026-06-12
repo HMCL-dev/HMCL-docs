@@ -225,12 +225,14 @@ jobs:
           git fetch https://github.com/${{ needs.preview-create-init.outputs.repository }} ${{ needs.preview-create-init.outputs.sha }}
           git merge --squash ${{ needs.preview-create-init.outputs.sha }} --no-edit
           git commit -m "Merge #${{ env.GITHUB_PR_NUMBER }} for preview build"
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.4"
-          bundler-cache: ${{ env.PREVIEW_WATCH }}
-          cache-version: PR-${{ env.GITHUB_PR_NUMBER }}
       - name: Jekyll Build
         run: |
           echo "url: https://${{ needs.preview-create-init.outputs.domain }}" > _action.yml
@@ -239,7 +241,7 @@ jobs:
           echo "destination: /home/runner/site" >> _action.yml
           echo "preview:" >> _action.yml
           echo "  pr-number: ${{ env.GITHUB_PR_NUMBER }}" >> _action.yml
-          ${{ env.PREVIEW_WATCH }} || bundle install --jobs 4
+          npm install && bundle install --jobs 4
           bundle exec jekyll build --trace --config _config.yml,_action.yml
       - id: upload-site
         name: Upload Site
