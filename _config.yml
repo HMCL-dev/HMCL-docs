@@ -8,8 +8,8 @@
 # layouts_dir: _layouts
 # data_dir: _data
 # includes_dir: _includes
-# cache_dir: .jekyll-cache
-disable_disk_cache: true
+cache_dir: .jekyll-cache/v260615
+# disable_disk_cache: false
 sass:
   # sass_dir: _sass
   # minimal-mistakes
