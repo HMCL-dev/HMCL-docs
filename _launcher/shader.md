@@ -24,7 +24,7 @@ authors:
 
 在对应的游戏版本管理页面，点击 `自动安装` ，你会看到有个 `OptiFine` 的选项。
 
-![OptiFine_AutoInstaller](/assets/img/docs/shader/install_auto-16338577874692.png)
+![OptiFine_AutoInstaller](/assets/img/docs/shader/install_auto.png)
 
 点开之后选择合适的版本然后等待安装完成即可。
 目前，如果要在  `Fabric` 使用 `OptiFine` ，需要通过 **方式四** 安装。
