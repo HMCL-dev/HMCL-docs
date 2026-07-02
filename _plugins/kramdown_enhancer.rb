@@ -1,8 +1,5 @@
-begin
-  require "webp-ffi"
-rescue LoadError; end
-
 module KramdownEnhancer
+  CACHE = Jekyll::Cache.new("KramdownEnhancer")
   GITHUB_LINK_REGEX = /\b(GP-\d+|GC-[0-9a-f]{7})\b/
   BLOCKQUOTE_TYPES = {
     note: "notice--info",
@@ -173,7 +170,6 @@ end
 Jekyll::Hooks.register :site, :post_read do |site|
   KramdownEnhancer.baseurl = site.config["baseurl"]
   webp_list = []
-  webp_enabled = defined?(WebP)
   site.each_site_file do |file|
     KramdownEnhancer.file[file.relative_path] = file
     if file.is_a?(Jekyll::StaticFile)
@@ -182,9 +178,18 @@ Jekyll::Hooks.register :site, :post_read do |site|
       destination = File.join(site.dest, url)
       if File.exist?(source)
         KramdownEnhancer.webp[file.url] = url
-      elsif webp_enabled && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+      elsif Jekyll.env == "production" && %w[.png .jpg .jpeg .tif .tiff].include?(file.extname.downcase)
+        source_base64 = Base64.encode64(File.read(file.path, mode: "rb"))
+        hash = Digest::SHA256.hexdigest(source_base64)
+        if KramdownEnhancer::CACHE.key?("webp_#{hash}")
+          Jekyll.logger.info "Kramdown Enhancer:", "[webp] Hit Cache #{url}"
+        else
+          destination_base64 = Script.call("webp", source: source_base64)
+          KramdownEnhancer::CACHE["webp_#{hash}"] = Base64.decode64(destination_base64)
+          Jekyll.logger.info "Kramdown Enhancer:", "[webp] Generated #{url}"
+        end
         FileUtils.mkdir_p(File.dirname(destination))
-        WebP.encode(file.path, destination)
+        File.write(destination, KramdownEnhancer::CACHE["webp_#{hash}"], mode: "wb")
         webp_list.push(KramdownEnhancer::WebpFile.new(site, site.dest, File.dirname(url), File.basename(url)))
         KramdownEnhancer.webp[file.url] = url
       end

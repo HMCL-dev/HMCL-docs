@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["DOM"],
+    "types": ["jquery"]
+  },
+  "include": ["assets/**/*"]
+}
