@@ -7,6 +7,7 @@
 
   const fileInput = document.getElementById("hmcl-verify-file");
   const resultElement = document.getElementById("hmcl-verify-result");
+  const selectedFileElement = document.getElementById("hmcl-verify-selected-file");
 
   if (!fileInput || !resultElement) {
     return;
@@ -15,26 +16,28 @@
   fileInput.addEventListener("change", async () => {
     const file = fileInput.files && fileInput.files[0];
     if (!file) {
+      setSelectedFileName("");
       setResult("尚未选择文件。");
       return;
     }
 
-    setResult("正在读取文件...");
+    setSelectedFileName(file.name);
+    setResult("正在验证，请稍候...");
 
     try {
       const verification = await verifyHmclFile(file);
       setResult(
         [
-          "签名有效。",
-          `文件名：${file.name}`,
-          `文件大小：${formatBytes(file.size)}`,
-          `启动器头部：${verification.launcherHeaderMessage}`,
-          `参与校验的 zip entry 数量：${verification.checkedEntries}`,
+          "验证通过。",
+          "该文件由 HMCL 官方签名，内容完整。",
+          `文件：${file.name}`,
+          `大小：${formatBytes(file.size)}`,
+          `类型：${verification.fileTypeMessage}`,
         ].join("\n"),
         "ok"
       );
     } catch (error) {
-      setResult(`验证失败：${error.message}`, "error");
+      setResult(`验证失败。\n${formatVerificationError(error)}`, "error");
     }
   });
 
@@ -93,8 +96,7 @@
     const launcherHeader = await verifyLauncherHeader(fileBuffer, entries);
 
     return {
-      checkedEntries: signedEntries.length,
-      launcherHeaderMessage: launcherHeader.message,
+      fileTypeMessage: launcherHeader.message,
     };
   }
 
@@ -204,7 +206,7 @@
 
     if (prefixLength === 0) {
       return {
-        message: "无，普通 jar 文件",
+        message: "jar 文件",
       };
     }
 
@@ -219,7 +221,7 @@
       const launcherContent = await readEntryContent(buffer, launcherEntry);
       if (bytesEqual(prefix, launcherContent)) {
         return {
-          message: `${entryName}，${formatBytes(prefixLength)}，内容一致`,
+          message: fileTypeName(entryName),
         };
       }
     }
@@ -312,12 +314,67 @@
     return `${value.toFixed(2)} ${units[unitIndex]}`;
   }
 
+  function fileTypeName(entryName) {
+    if (entryName.endsWith(".exe")) {
+      return "Windows 可执行文件";
+    }
+
+    if (entryName.endsWith(".sh")) {
+      return "启动脚本文件";
+    }
+
+    return "已验证";
+  }
+
+  function formatVerificationError(error) {
+    const message = error && error.message ? error.message : "";
+
+    if (message.startsWith(`missing ${SIGNATURE_ENTRY_NAME}`)) {
+      return "这个文件没有 HMCL 官方签名。";
+    }
+
+    if (message === "invalid signature") {
+      return "签名无效，文件可能已损坏或被修改。";
+    }
+
+    if (message === "launcher header does not match signed assets") {
+      return "文件开头的启动器程序不匹配，文件可能已被修改。";
+    }
+
+    if (
+      message === "end of central directory not found" ||
+      message === "invalid central directory" ||
+      message === "central directory size mismatch" ||
+      message === "invalid zip offsets" ||
+      message.startsWith("invalid local header") ||
+      message.startsWith("entry data is truncated")
+    ) {
+      return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
+    }
+
+    if (message === "Zip64 is not supported" || message.startsWith("unsupported compression method")) {
+      return "暂不支持验证这种文件格式。";
+    }
+
+    if (message.includes("DecompressionStream") || message.includes("cannot decompress")) {
+      return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox。";
+    }
+
+    return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件。";
+  }
+
   function setResult(message, state) {
     resultElement.textContent = message;
     if (state) {
       resultElement.dataset.state = state;
     } else {
       delete resultElement.dataset.state;
+    }
+  }
+
+  function setSelectedFileName(fileName) {
+    if (selectedFileElement) {
+      selectedFileElement.textContent = fileName || "未选择文件";
     }
   }
 })();
