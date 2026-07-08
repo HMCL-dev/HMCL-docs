@@ -5,6 +5,24 @@
   const LAUNCHER_ENTRY_NAMES = ["assets/HMCLauncher.exe", "assets/HMCLauncher.sh"];
   const PUBLIC_KEY_DER_BASE64 = "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAypkXnIxC3KzQsICAK9lEan3icR8OUREbW1vqANzi7ne0EXAyFh1Ow10HIY+SIWHVhsIkS/mvNyUyW5TIPc22djWNQKf6OukOY2/htJpolj4l/uhPGe4BoFiV8m2jvyKq0X7truazc9/BDrLKkoIVIkXb0PenVs1AlFLnXzLEu9Lj4kxfkRO4zdV4CMHYWLWLLP9Dj0/Xg+tj9n/QX/IWVVrBporKiJgg99WztKw7wQ/Zd+Syu8vfa6IjpgRojtOiCb8MUvEUHcs8RG/PPRACJ8bNwCaNc0RNLoyfVGjjZGFh95XPr6huJYmn/11j45GTB9I5w77JnF83AWwAPyx15z6yHKm4epzXJ9yFrTK5nATQGD1H2i8rdg4ZvsjFE4nxEYTWDTkk9nQdZs3n5Os+pUh8hyyjsa4Hh2yjmfcivcE/KzyP8JH15OWH9QOHwdfRTDu3v4AxSZCuQKlhaSpYbHFahE+jqP+Pr0+Bc/e5ybu6SdAELlOJrVYU6pkgrvYJmkV6Ahfm3P8OZKt72MAGxDfdYNUA70QWMMC1YP+GQYedC+oLA4/BhQ1Su9AfUUdQGN0a8a6uaZFX5QyiA/6KrRUC06dQdXi9ZOCx8LY28Snl7TjgmOef15HnnmmQTbARJuR0eenprzOXJXJzkS6/Vx1ak/9gNRA8yMiVM9lIilsCAwEAAQ==";
 
+  const VerificationErrorCode = Object.freeze({
+    MISSING_SIGNATURE: "missing-signature",
+    INVALID_SIGNATURE: "invalid-signature",
+    INVALID_LAUNCHER_HEADER: "invalid-launcher-header",
+    INVALID_ZIP: "invalid-zip",
+    UNSUPPORTED_ZIP: "unsupported-zip",
+    UNSUPPORTED_BROWSER: "unsupported-browser",
+  });
+
+  class VerificationError extends Error {
+    constructor(code, message, cause) {
+      super(message);
+      this.name = "VerificationError";
+      this.code = code;
+      this.cause = cause;
+    }
+  }
+
   const fileInput = document.getElementById("hmcl-verify-file");
   const resultElement = document.getElementById("hmcl-verify-result");
   const selectedFileElement = document.getElementById("hmcl-verify-selected-file");
@@ -47,7 +65,7 @@
     const signatureEntry = entries.find((entry) => entry.name === SIGNATURE_ENTRY_NAME);
 
     if (!signatureEntry) {
-      throw new Error(`missing ${SIGNATURE_ENTRY_NAME}`);
+      throw new VerificationError(VerificationErrorCode.MISSING_SIGNATURE, `missing ${SIGNATURE_ENTRY_NAME}`);
     }
 
     const signature = await readEntryContent(fileBuffer, signatureEntry);
@@ -90,7 +108,7 @@
     );
 
     if (!valid) {
-      throw new Error("invalid signature");
+      throw new VerificationError(VerificationErrorCode.INVALID_SIGNATURE, "invalid signature");
     }
 
     const launcherHeader = await verifyLauncherHeader(fileBuffer, entries);
@@ -108,12 +126,12 @@
     const centralDirectoryOffset = view.getUint32(end + 16, true);
 
     if (centralDirectorySize === 0xffffffff || centralDirectoryOffset === 0xffffffff) {
-      throw new Error("Zip64 is not supported");
+      throw new VerificationError(VerificationErrorCode.UNSUPPORTED_ZIP, "Zip64 is not supported");
     }
 
     const zipStartOffset = end - centralDirectorySize - centralDirectoryOffset;
     if (zipStartOffset < 0) {
-      throw new Error("invalid zip offsets");
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, "invalid zip offsets");
     }
 
     const entries = [];
@@ -122,7 +140,7 @@
 
     for (let index = 0; index < totalEntries; index += 1) {
       if (offset + 46 > view.byteLength || view.getUint32(offset, true) !== 0x02014b50) {
-        throw new Error("invalid central directory");
+        throw new VerificationError(VerificationErrorCode.INVALID_ZIP, "invalid central directory");
       }
 
       const flags = view.getUint16(offset + 8, true);
@@ -149,7 +167,7 @@
     }
 
     if (offset !== centralDirectoryEnd) {
-      throw new Error("central directory size mismatch");
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, "central directory size mismatch");
     }
 
     entries.zipStartOffset = zipStartOffset;
@@ -168,7 +186,7 @@
       }
     }
 
-    throw new Error("end of central directory not found");
+    throw new VerificationError(VerificationErrorCode.INVALID_ZIP, "end of central directory not found");
   }
 
   async function readEntryContent(buffer, entry) {
@@ -176,7 +194,7 @@
     const offset = entry.localHeaderOffset;
 
     if (offset + 30 > view.byteLength || view.getUint32(offset, true) !== 0x04034b50) {
-      throw new Error(`invalid local header: ${entry.name}`);
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `invalid local header: ${entry.name}`);
     }
 
     const fileNameLength = view.getUint16(offset + 26, true);
@@ -185,7 +203,7 @@
     const dataEnd = dataStart + entry.compressedSize;
 
     if (dataEnd > view.byteLength) {
-      throw new Error(`entry data is truncated: ${entry.name}`);
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `entry data is truncated: ${entry.name}`);
     }
 
     const compressedData = new Uint8Array(buffer, dataStart, entry.compressedSize);
@@ -198,7 +216,10 @@
       return inflateRaw(compressedData, entry.name, entry.uncompressedSize);
     }
 
-    throw new Error(`unsupported compression method ${entry.method}: ${entry.name}`);
+    throw new VerificationError(
+      VerificationErrorCode.UNSUPPORTED_ZIP,
+      `unsupported compression method ${entry.method}: ${entry.name}`
+    );
   }
 
   async function verifyLauncherHeader(buffer, entries) {
@@ -226,24 +247,40 @@
       }
     }
 
-    throw new Error("launcher header does not match signed assets");
+    throw new VerificationError(
+      VerificationErrorCode.INVALID_LAUNCHER_HEADER,
+      "launcher header does not match signed assets"
+    );
   }
 
   async function inflateRaw(data, entryName, expectedSize) {
     if (typeof DecompressionStream === "undefined") {
-      throw new Error("this browser does not support DecompressionStream");
+      throw new VerificationError(
+        VerificationErrorCode.UNSUPPORTED_BROWSER,
+        "this browser does not support DecompressionStream"
+      );
     }
 
     let stream;
     try {
       stream = new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
     } catch (error) {
-      throw new Error(`this browser cannot decompress deflated zip entries: ${entryName}`);
+      throw new VerificationError(
+        VerificationErrorCode.UNSUPPORTED_BROWSER,
+        `this browser cannot decompress deflated zip entries: ${entryName}`,
+        error
+      );
     }
 
-    const output = new Uint8Array(await new Response(stream).arrayBuffer());
+    let output;
+    try {
+      output = new Uint8Array(await new Response(stream).arrayBuffer());
+    } catch (error) {
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `cannot decompress zip entry: ${entryName}`, error);
+    }
+
     if (output.byteLength !== expectedSize) {
-      throw new Error(`uncompressed size mismatch: ${entryName}`);
+      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `uncompressed size mismatch: ${entryName}`);
     }
     return output;
   }
@@ -327,34 +364,26 @@
   }
 
   function formatVerificationError(error) {
-    const message = error && error.message ? error.message : "";
+    switch (error && error.code) {
+      case VerificationErrorCode.MISSING_SIGNATURE:
+        return "这个文件没有 HMCL 官方签名。";
 
-    if (message.startsWith(`missing ${SIGNATURE_ENTRY_NAME}`)) {
-      return "这个文件没有 HMCL 官方签名。";
+      case VerificationErrorCode.INVALID_SIGNATURE:
+      case VerificationErrorCode.INVALID_LAUNCHER_HEADER:
+        return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
+
+      case VerificationErrorCode.INVALID_ZIP:
+        return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
+
+      case VerificationErrorCode.UNSUPPORTED_ZIP:
+        return "暂不支持验证这种文件格式。";
+
+      case VerificationErrorCode.UNSUPPORTED_BROWSER:
+        return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox。";
+
+      default:
+        return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件。";
     }
-
-    if (message === "invalid signature" || message === "launcher header does not match signed assets") {
-      return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
-    }
-
-    if (
-      message === "end of central directory not found" ||
-      message === "invalid central directory" ||
-      message === "central directory size mismatch" ||
-      message === "invalid zip offsets" ||
-      message === "Zip64 is not supported" ||
-      message.startsWith("unsupported compression method") ||
-      message.startsWith("invalid local header") ||
-      message.startsWith("entry data is truncated")
-    ) {
-      return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
-    }
-
-    if (message.includes("DecompressionStream") || message.includes("cannot decompress")) {
-      return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox。";
-    }
-
-    return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件。";
   }
 
   function setResult(message, state) {
