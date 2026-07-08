@@ -30,12 +30,14 @@
   const fileInput = document.getElementById("hmcl-verify-file");
   const resultElement = document.getElementById("hmcl-verify-result");
   const selectedFileElement = document.getElementById("hmcl-verify-selected-file");
+  let verificationRequestId = 0;
 
   if (!fileInput || !resultElement) {
     return;
   }
 
   fileInput.addEventListener("change", async () => {
+    const requestId = ++verificationRequestId;
     const file = fileInput.files && fileInput.files[0];
     if (!file) {
       setSelectedFileName("");
@@ -48,14 +50,24 @@
 
     try {
       await verifyHmclFile(file);
+      if (!isCurrentVerification(requestId)) {
+        return;
+      }
       setResult(
         "验证通过，该文件是 HMCL 的官方构建，可以放心使用。",
         "ok"
       );
     } catch (error) {
+      if (!isCurrentVerification(requestId)) {
+        return;
+      }
       setResult(`验证失败。\n${formatVerificationError(error)}`, "error");
     }
   });
+
+  function isCurrentVerification(requestId) {
+    return requestId === verificationRequestId;
+  }
 
   async function verifyHmclFile(file) {
     const fileBuffer = await file.arrayBuffer();
