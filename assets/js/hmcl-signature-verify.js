@@ -2,11 +2,14 @@
   "use strict";
 
   const SIGNATURE_ENTRY_NAME = "META-INF/hmcl_signature";
+  const PUBLIC_KEY_ENTRY_NAME = "assets/hmcl_signature_publickey.der";
   const LAUNCHER_ENTRY_NAMES = ["assets/HMCLauncher.exe", "assets/HMCLauncher.sh"];
   const PUBLIC_KEY_DER_BASE64 = "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAypkXnIxC3KzQsICAK9lEan3icR8OUREbW1vqANzi7ne0EXAyFh1Ow10HIY+SIWHVhsIkS/mvNyUyW5TIPc22djWNQKf6OukOY2/htJpolj4l/uhPGe4BoFiV8m2jvyKq0X7truazc9/BDrLKkoIVIkXb0PenVs1AlFLnXzLEu9Lj4kxfkRO4zdV4CMHYWLWLLP9Dj0/Xg+tj9n/QX/IWVVrBporKiJgg99WztKw7wQ/Zd+Syu8vfa6IjpgRojtOiCb8MUvEUHcs8RG/PPRACJ8bNwCaNc0RNLoyfVGjjZGFh95XPr6huJYmn/11j45GTB9I5w77JnF83AWwAPyx15z6yHKm4epzXJ9yFrTK5nATQGD1H2i8rdg4ZvsjFE4nxEYTWDTkk9nQdZs3n5Os+pUh8hyyjsa4Hh2yjmfcivcE/KzyP8JH15OWH9QOHwdfRTDu3v4AxSZCuQKlhaSpYbHFahE+jqP+Pr0+Bc/e5ybu6SdAELlOJrVYU6pkgrvYJmkV6Ahfm3P8OZKt72MAGxDfdYNUA70QWMMC1YP+GQYedC+oLA4/BhQ1Su9AfUUdQGN0a8a6uaZFX5QyiA/6KrRUC06dQdXi9ZOCx8LY28Snl7TjgmOef15HnnmmQTbARJuR0eenprzOXJXJzkS6/Vx1ak/9gNRA8yMiVM9lIilsCAwEAAQ==";
 
   const VerificationErrorCode = Object.freeze({
+    MISSING_PUBLIC_KEY: "missing-public-key",
     MISSING_SIGNATURE: "missing-signature",
+    INVALID_PUBLIC_KEY: "invalid-public-key",
     INVALID_SIGNATURE: "invalid-signature",
     INVALID_LAUNCHER_HEADER: "invalid-launcher-header",
     INVALID_ZIP: "invalid-zip",
@@ -62,10 +65,21 @@
   async function verifyHmclFile(file) {
     const fileBuffer = await file.arrayBuffer();
     const entries = readZipEntries(fileBuffer);
+    const publicKeyEntry = entries.find((entry) => entry.name === PUBLIC_KEY_ENTRY_NAME);
     const signatureEntry = entries.find((entry) => entry.name === SIGNATURE_ENTRY_NAME);
+
+    if (!publicKeyEntry) {
+      throw new VerificationError(VerificationErrorCode.MISSING_PUBLIC_KEY, `missing ${PUBLIC_KEY_ENTRY_NAME}`);
+    }
 
     if (!signatureEntry) {
       throw new VerificationError(VerificationErrorCode.MISSING_SIGNATURE, `missing ${SIGNATURE_ENTRY_NAME}`);
+    }
+
+    const publicKeyDer = new Uint8Array(base64ToArrayBuffer(PUBLIC_KEY_DER_BASE64));
+    const bundledPublicKey = await readEntryContent(fileBuffer, publicKeyEntry);
+    if (!bytesEqual(bundledPublicKey, publicKeyDer)) {
+      throw new VerificationError(VerificationErrorCode.INVALID_PUBLIC_KEY, "public key mismatch");
     }
 
     const signature = await readEntryContent(fileBuffer, signatureEntry);
@@ -91,7 +105,7 @@
 
     const publicKey = await crypto.subtle.importKey(
       "spki",
-      base64ToArrayBuffer(PUBLIC_KEY_DER_BASE64),
+      publicKeyDer,
       {
         name: "RSASSA-PKCS1-v1_5",
         hash: "SHA-512",
@@ -365,9 +379,13 @@
 
   function formatVerificationError(error) {
     switch (error && error.code) {
-      case VerificationErrorCode.MISSING_SIGNATURE:
-        return "这个文件没有 HMCL 官方签名。";
+      case VerificationErrorCode.MISSING_PUBLIC_KEY:
+        return "这不是可验证的 HMCL 文件，或者 HMCL 版本过低，无法验证。";
 
+      case VerificationErrorCode.MISSING_SIGNATURE:
+        return "这是非官方构建，请谨慎甄别其来源。";
+
+      case VerificationErrorCode.INVALID_PUBLIC_KEY:
       case VerificationErrorCode.INVALID_SIGNATURE:
       case VerificationErrorCode.INVALID_LAUNCHER_HEADER:
         return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
