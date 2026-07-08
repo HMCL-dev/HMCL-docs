@@ -5,6 +5,7 @@
   const PUBLIC_KEY_ENTRY_NAME = "assets/hmcl_signature_publickey.der";
   const LAUNCHER_ENTRY_NAMES = ["assets/HMCLauncher.exe", "assets/HMCLauncher.sh"];
   const PUBLIC_KEY_DER_BASE64 = "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAypkXnIxC3KzQsICAK9lEan3icR8OUREbW1vqANzi7ne0EXAyFh1Ow10HIY+SIWHVhsIkS/mvNyUyW5TIPc22djWNQKf6OukOY2/htJpolj4l/uhPGe4BoFiV8m2jvyKq0X7truazc9/BDrLKkoIVIkXb0PenVs1AlFLnXzLEu9Lj4kxfkRO4zdV4CMHYWLWLLP9Dj0/Xg+tj9n/QX/IWVVrBporKiJgg99WztKw7wQ/Zd+Syu8vfa6IjpgRojtOiCb8MUvEUHcs8RG/PPRACJ8bNwCaNc0RNLoyfVGjjZGFh95XPr6huJYmn/11j45GTB9I5w77JnF83AWwAPyx15z6yHKm4epzXJ9yFrTK5nATQGD1H2i8rdg4ZvsjFE4nxEYTWDTkk9nQdZs3n5Os+pUh8hyyjsa4Hh2yjmfcivcE/KzyP8JH15OWH9QOHwdfRTDu3v4AxSZCuQKlhaSpYbHFahE+jqP+Pr0+Bc/e5ybu6SdAELlOJrVYU6pkgrvYJmkV6Ahfm3P8OZKt72MAGxDfdYNUA70QWMMC1YP+GQYedC+oLA4/BhQ1Su9AfUUdQGN0a8a6uaZFX5QyiA/6KrRUC06dQdXi9ZOCx8LY28Snl7TjgmOef15HnnmmQTbARJuR0eenprzOXJXJzkS6/Vx1ak/9gNRA8yMiVM9lIilsCAwEAAQ==";
+  const PUBLIC_KEY_DER = base64ToUint8Array(PUBLIC_KEY_DER_BASE64);
 
   const VerificationErrorCode = Object.freeze({
     MISSING_PUBLIC_KEY: "missing-public-key",
@@ -64,7 +65,8 @@
 
   async function verifyHmclFile(file) {
     const fileBuffer = await file.arrayBuffer();
-    const entries = readZipEntries(fileBuffer);
+    const archive = readZipArchive(fileBuffer);
+    const entries = archive.entries;
     const publicKeyEntry = entries.find((entry) => entry.name === PUBLIC_KEY_ENTRY_NAME);
     const signatureEntry = entries.find((entry) => entry.name === SIGNATURE_ENTRY_NAME);
 
@@ -76,9 +78,8 @@
       throw new VerificationError(VerificationErrorCode.MISSING_SIGNATURE, `missing ${SIGNATURE_ENTRY_NAME}`);
     }
 
-    const publicKeyDer = new Uint8Array(base64ToArrayBuffer(PUBLIC_KEY_DER_BASE64));
     const bundledPublicKey = await readEntryContent(fileBuffer, publicKeyEntry);
-    if (!bytesEqual(bundledPublicKey, publicKeyDer)) {
+    if (!bytesEqual(bundledPublicKey, PUBLIC_KEY_DER)) {
       throw new VerificationError(VerificationErrorCode.INVALID_PUBLIC_KEY, "public key mismatch");
     }
 
@@ -105,7 +106,7 @@
 
     const publicKey = await crypto.subtle.importKey(
       "spki",
-      publicKeyDer,
+      PUBLIC_KEY_DER,
       {
         name: "RSASSA-PKCS1-v1_5",
         hash: "SHA-512",
@@ -125,14 +126,14 @@
       throw new VerificationError(VerificationErrorCode.INVALID_SIGNATURE, "invalid signature");
     }
 
-    const launcherHeader = await verifyLauncherHeader(fileBuffer, entries);
+    const fileTypeMessage = await detectFileType(fileBuffer, archive);
 
     return {
-      fileTypeMessage: launcherHeader.message,
+      fileTypeMessage,
     };
   }
 
-  function readZipEntries(buffer) {
+  function readZipArchive(buffer) {
     const view = new DataView(buffer);
     const end = findEndOfCentralDirectory(view);
     const totalEntries = view.getUint16(end + 10, true);
@@ -184,8 +185,10 @@
       throw new VerificationError(VerificationErrorCode.INVALID_ZIP, "central directory size mismatch");
     }
 
-    entries.zipStartOffset = zipStartOffset;
-    return entries;
+    return {
+      entries,
+      zipStartOffset,
+    };
   }
 
   function findEndOfCentralDirectory(view) {
@@ -236,28 +239,24 @@
     );
   }
 
-  async function verifyLauncherHeader(buffer, entries) {
-    const prefixLength = entries.zipStartOffset || 0;
+  async function detectFileType(buffer, archive) {
+    const prefixLength = archive.zipStartOffset;
 
     if (prefixLength === 0) {
-      return {
-        message: "jar 文件",
-      };
+      return "jar 文件";
     }
 
     const prefix = new Uint8Array(buffer, 0, prefixLength);
 
     for (const entryName of LAUNCHER_ENTRY_NAMES) {
-      const launcherEntry = entries.find((entry) => entry.name === entryName);
+      const launcherEntry = archive.entries.find((entry) => entry.name === entryName);
       if (!launcherEntry) {
         continue;
       }
 
       const launcherContent = await readEntryContent(buffer, launcherEntry);
       if (bytesEqual(prefix, launcherContent)) {
-        return {
-          message: fileTypeName(entryName),
-        };
+        return fileTypeName(entryName);
       }
     }
 
@@ -290,11 +289,18 @@
     try {
       output = new Uint8Array(await new Response(stream).arrayBuffer());
     } catch (error) {
-      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `cannot decompress zip entry: ${entryName}`, error);
+      throw new VerificationError(
+        VerificationErrorCode.INVALID_ZIP,
+        `cannot decompress entry: ${entryName}`,
+        error
+      );
     }
 
     if (output.byteLength !== expectedSize) {
-      throw new VerificationError(VerificationErrorCode.INVALID_ZIP, `uncompressed size mismatch: ${entryName}`);
+      throw new VerificationError(
+        VerificationErrorCode.INVALID_ZIP,
+        `uncompressed size mismatch: ${entryName}`
+      );
     }
     return output;
   }
@@ -337,7 +343,7 @@
     return true;
   }
 
-  function base64ToArrayBuffer(base64) {
+  function base64ToUint8Array(base64) {
     const binary = atob(base64);
     const bytes = new Uint8Array(binary.length);
 
@@ -345,7 +351,7 @@
       bytes[index] = binary.charCodeAt(index);
     }
 
-    return bytes.buffer;
+    return bytes;
   }
 
   function formatBytes(bytes) {
