@@ -333,12 +333,8 @@
       return "这个文件没有 HMCL 官方签名。";
     }
 
-    if (message === "invalid signature") {
-      return "签名无效，文件可能已损坏或被修改。";
-    }
-
-    if (message === "launcher header does not match signed assets") {
-      return "文件开头的启动器程序不匹配，文件可能已被修改。";
+    if (message === "invalid signature" || message === "launcher header does not match signed assets") {
+      return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
     }
 
     if (
@@ -346,14 +342,12 @@
       message === "invalid central directory" ||
       message === "central directory size mismatch" ||
       message === "invalid zip offsets" ||
+      message === "Zip64 is not supported" ||
+      message.startsWith("unsupported compression method") ||
       message.startsWith("invalid local header") ||
       message.startsWith("entry data is truncated")
     ) {
       return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
-    }
-
-    if (message === "Zip64 is not supported" || message.startsWith("unsupported compression method")) {
-      return "暂不支持验证这种文件格式。";
     }
 
     if (message.includes("DecompressionStream") || message.includes("cannot decompress")) {
