@@ -29,7 +29,7 @@
       setResult(
         [
           "验证通过。",
-          "该文件由 HMCL 官方签名，内容完整。",
+          "该文件是 HMCL 的官方构建。",
           `文件：${file.name}`,
           `大小：${formatBytes(file.size)}`,
           `类型：${verification.fileTypeMessage}`,
