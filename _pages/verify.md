@@ -10,7 +10,7 @@ toc: false
   <div class="hmcl-verify__actions">
     <label class="hmcl-verify__button" for="hmcl-verify-file">选择文件</label>
     <span id="hmcl-verify-selected-file" class="hmcl-verify__file">未选择文件</span>
-    <input id="hmcl-verify-file" class="hmcl-verify__input" type="file" accept=".jar,.zip,.exe,.sh,application/java-archive,application/zip">
+    <input id="hmcl-verify-file" class="hmcl-verify__input" type="file" accept=".jar,.exe,.sh">
   </div>
 
   <div id="hmcl-verify-result" class="hmcl-verify__result" role="status" aria-live="polite" hidden></div>

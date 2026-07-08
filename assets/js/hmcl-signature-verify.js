@@ -47,15 +47,9 @@
     setResult("正在验证，请稍候...");
 
     try {
-      const verification = await verifyHmclFile(file);
+      await verifyHmclFile(file);
       setResult(
-        [
-          "验证通过。",
-          "该文件是 HMCL 的官方构建。",
-          `文件：${file.name}`,
-          `大小：${formatBytes(file.size)}`,
-          `类型：${verification.fileTypeMessage}`,
-        ].join("\n"),
+        "验证通过，该文件是 HMCL 的官方构建，可以放心使用。",
         "ok"
       );
     } catch (error) {
@@ -126,11 +120,7 @@
       throw new VerificationError(VerificationErrorCode.INVALID_SIGNATURE, "invalid signature");
     }
 
-    const fileTypeMessage = await detectFileType(fileBuffer, archive);
-
-    return {
-      fileTypeMessage,
-    };
+    await verifyLauncherPrefix(fileBuffer, archive);
   }
 
   function readZipArchive(buffer) {
@@ -239,11 +229,11 @@
     );
   }
 
-  async function detectFileType(buffer, archive) {
+  async function verifyLauncherPrefix(buffer, archive) {
     const prefixLength = archive.zipStartOffset;
 
     if (prefixLength === 0) {
-      return "jar 文件";
+      return;
     }
 
     const prefix = new Uint8Array(buffer, 0, prefixLength);
@@ -256,7 +246,7 @@
 
       const launcherContent = await readEntryContent(buffer, launcherEntry);
       if (bytesEqual(prefix, launcherContent)) {
-        return fileTypeName(entryName);
+        return;
       }
     }
 
@@ -352,35 +342,6 @@
     }
 
     return bytes;
-  }
-
-  function formatBytes(bytes) {
-    if (bytes < 1024) {
-      return `${bytes} B`;
-    }
-
-    const units = ["KB", "MB", "GB"];
-    let value = bytes / 1024;
-    let unitIndex = 0;
-
-    while (value >= 1024 && unitIndex < units.length - 1) {
-      value /= 1024;
-      unitIndex += 1;
-    }
-
-    return `${value.toFixed(2)} ${units[unitIndex]}`;
-  }
-
-  function fileTypeName(entryName) {
-    if (entryName.endsWith(".exe")) {
-      return "Windows 可执行文件";
-    }
-
-    if (entryName.endsWith(".sh")) {
-      return "启动脚本文件";
-    }
-
-    return "已验证";
   }
 
   function formatVerificationError(error) {
