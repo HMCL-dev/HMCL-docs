@@ -5,7 +5,7 @@ toc: false
 ---
 
 <div class="hmcl-verify">
-  <p>选择你下载的 HMCL 文件，页面会在本机完成验证，不会上传文件。</p>
+  <p>检查 HMCL 文件是否是官方构建。</p>
 
   <div class="hmcl-verify__actions">
     <label class="hmcl-verify__button" for="hmcl-verify-file">选择文件</label>
