@@ -39,7 +39,7 @@
     const file = fileInput.files && fileInput.files[0];
     if (!file) {
       setSelectedFileName("");
-      setResult("尚未选择文件。");
+      hideResult();
       return;
     }
 
@@ -412,11 +412,18 @@
 
   function setResult(message, state) {
     resultElement.textContent = message;
+    resultElement.hidden = false;
     if (state) {
       resultElement.dataset.state = state;
     } else {
       delete resultElement.dataset.state;
     }
+  }
+
+  function hideResult() {
+    resultElement.textContent = "";
+    resultElement.hidden = true;
+    delete resultElement.dataset.state;
   }
 
   function setSelectedFileName(fileName) {

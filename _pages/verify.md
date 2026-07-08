@@ -13,9 +13,7 @@ toc: false
     <input id="hmcl-verify-file" class="hmcl-verify__input" type="file" accept=".jar,.zip,.exe,.sh,application/java-archive,application/zip">
   </div>
 
-  <div id="hmcl-verify-result" class="hmcl-verify__result" role="status" aria-live="polite">
-    尚未选择文件。
-  </div>
+  <div id="hmcl-verify-result" class="hmcl-verify__result" role="status" aria-live="polite" hidden></div>
 </div>
 
 <style>
@@ -82,6 +80,10 @@ toc: false
     font-size: .95rem;
     line-height: 1.6;
     white-space: pre-wrap;
+  }
+
+  .hmcl-verify__result[hidden] {
+    display: none;
   }
 
   .hmcl-verify__result[data-state="ok"] {
