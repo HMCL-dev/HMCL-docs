@@ -49,6 +49,8 @@ docs:
         url: /changelog/dev.html
   - title: 其他
     children:
+      - title: 验证 HMCL
+        url: /verify.html
       - title: 用户协议
         url: /eula/hmcl.html
       - title: 贡献指南
