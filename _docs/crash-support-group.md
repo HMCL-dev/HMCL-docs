@@ -63,9 +63,10 @@ author: zkitefly
   z-index: 20;
 }
 #alert-modal img {
-  display: inline;
-  height: 1.5em;
   vertical-align: middle;
+  margin-block: -0.5em;
+  display: inline;
+  height: 2.5em;
 }
 </style>
 <script>
