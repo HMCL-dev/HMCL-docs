@@ -27,26 +27,53 @@
     }
   }
 
-  const fileInput = document.getElementById("hmcl-verify-file");
-  const resultElement = document.getElementById("hmcl-verify-result");
-  const selectedFileElement = document.getElementById("hmcl-verify-selected-file");
-  let verificationRequestId = 0;
+  const container = document.getElementById("hmcl-verify");
+  if (!container) return;
+  ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+    container.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    }, false);
+  });
+
+  ["dragenter", "dragover"].forEach(eventName => {
+    container.addEventListener(eventName, () => {
+      container.className = "notice--info";
+    }, false);
+  });
+
+  ["dragleave", "drop"].forEach(eventName => {
+    container.addEventListener(eventName, () => {
+      container.className = "notice";
+    }, false);
+  });
+
+  container.addEventListener("drop", (event) => handleFiles(event.dataTransfer.files), false);
+
+  const fileInput = document.getElementById("hmcl-verify-input");
+  if (!fileInput) return;
+
+  container.addEventListener("click", () => fileInput.click());
+  const resultElement = document.getElementById("hmcl-verify-alert");
+  const selectedFileElement = document.getElementById("hmcl-verify-file");
 
   if (!fileInput || !resultElement) {
     return;
   }
 
-  fileInput.addEventListener("change", async () => {
+  fileInput.addEventListener("change", async () => handleFiles(fileInput.files));
+
+  let verificationRequestId = 0;
+  async function handleFiles(files) {
     const requestId = ++verificationRequestId;
-    const file = fileInput.files && fileInput.files[0];
+    const file = files && files[0];
     if (!file) {
       setSelectedFileName("");
-      hideResult();
       return;
     }
 
     setSelectedFileName(file.name);
-    setResult("正在验证，请稍候...");
+    setResult("正在校验中");
 
     try {
       await verifyHmclFile(file);
@@ -54,16 +81,16 @@
         return;
       }
       setResult(
-        "验证通过，该文件是 HMCL 的官方构建，可以放心使用。",
+        "校验成功，该文件是 HMCL 的官方构建，可以放心使用",
         "ok"
       );
     } catch (error) {
       if (!isCurrentVerification(requestId)) {
         return;
       }
-      setResult(`验证失败。\n${formatVerificationError(error)}`, "error");
+      setResult(`校验失败，${formatVerificationError(error)}`, "error");
     }
-  });
+  }
 
   function isCurrentVerification(requestId) {
     return requestId === verificationRequestId;
@@ -385,18 +412,14 @@
 
   function setResult(message, state) {
     resultElement.textContent = message;
-    resultElement.hidden = false;
-    if (state) {
-      resultElement.dataset.state = state;
+    resultElement.style.display = "block";
+    if (state === "ok") {
+      container.className = "notice--success";
+    } else if (state === "error") {
+      container.className = "notice--danger";
     } else {
-      delete resultElement.dataset.state;
+      container.className = "notice";
     }
-  }
-
-  function hideResult() {
-    resultElement.textContent = "";
-    resultElement.hidden = true;
-    delete resultElement.dataset.state;
   }
 
   function setSelectedFileName(fileName) {

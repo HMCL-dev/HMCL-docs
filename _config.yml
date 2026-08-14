@@ -341,7 +341,7 @@ post_process:
       - /assets/js/plugins/jquery.auto-redirect.js
       - /assets/js/_main.js
     /assets/js/hmcl-signature-verify.min.js:
-      - assets/js/hmcl-signature-verify.js
+      - /assets/js/hmcl-signature-verify.js
   remove_dirs:
     - /assets/images/
     - /assets/js/plugins/
@@ -352,3 +352,4 @@ post_process:
     - /assets/js/theme.js
     - /assets/js/settings.js
     - /assets/js/main.min.js.map
+    - /assets/js/hmcl-signature-verify.js
