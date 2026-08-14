@@ -386,27 +386,27 @@
   function formatVerificationError(error) {
     switch (error && error.code) {
       case VerificationErrorCode.MISSING_PUBLIC_KEY:
-        return "这不是可验证的 HMCL 文件，或者 HMCL 版本过低，无法验证。";
+        return "这不是可验证的 HMCL 文件，或者 HMCL 版本过低，无法验证";
 
       case VerificationErrorCode.MISSING_SIGNATURE:
-        return "这是非官方构建，请谨慎甄别其来源。";
+        return "这是非官方构建，请谨慎甄别其来源";
 
       case VerificationErrorCode.INVALID_PUBLIC_KEY:
       case VerificationErrorCode.INVALID_SIGNATURE:
       case VerificationErrorCode.INVALID_LAUNCHER_HEADER:
-        return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
+        return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件；你可以从 HMCL 官方网站重新下载 HMCL";
 
       case VerificationErrorCode.INVALID_ZIP:
-        return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
+        return "这个文件不是有效的 HMCL 文件，或文件已经损坏";
 
       case VerificationErrorCode.UNSUPPORTED_ZIP:
-        return "暂不支持验证这种文件格式。";
+        return "暂不支持验证这种文件格式";
 
       case VerificationErrorCode.UNSUPPORTED_BROWSER:
-        return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox。";
+        return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox";
 
       default:
-        return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件。";
+        return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件";
     }
   }
 
