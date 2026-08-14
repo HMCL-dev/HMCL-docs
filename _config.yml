@@ -340,6 +340,8 @@ post_process:
       - /assets/js/plugins/smooth-scroll.js
       - /assets/js/plugins/jquery.auto-redirect.js
       - /assets/js/_main.js
+    /assets/js/hmcl-signature-verify.min.js:
+      - assets/js/hmcl-signature-verify.js
   remove_dirs:
     - /assets/images/
     - /assets/js/plugins/

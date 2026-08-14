@@ -95,4 +95,4 @@ toc: false
   }
 </style>
 
-<script src="{{ '/assets/js/hmcl-signature-verify.js' | relative_url }}"></script>
+<script src="/assets/js/hmcl-signature-verify.min.js"></script>
