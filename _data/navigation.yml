@@ -49,7 +49,7 @@ docs:
         url: /changelog/dev.html
   - title: 其他
     children:
-      - title: 验证 HMCL
+      - title: HMCL 校验
         url: /verify.html
       - title: 用户协议
         url: /eula/hmcl.html

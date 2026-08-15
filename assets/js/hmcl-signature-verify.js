@@ -27,26 +27,53 @@
     }
   }
 
-  const fileInput = document.getElementById("hmcl-verify-file");
-  const resultElement = document.getElementById("hmcl-verify-result");
-  const selectedFileElement = document.getElementById("hmcl-verify-selected-file");
-  let verificationRequestId = 0;
+  const container = document.getElementById("hmcl-verify");
+  if (!container) return;
+  ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+    container.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    }, false);
+  });
+
+  ["dragenter", "dragover"].forEach(eventName => {
+    container.addEventListener(eventName, () => {
+      container.className = "notice--info";
+    }, false);
+  });
+
+  ["dragleave", "drop"].forEach(eventName => {
+    container.addEventListener(eventName, () => {
+      container.className = "notice";
+    }, false);
+  });
+
+  container.addEventListener("drop", (event) => handleFiles(event.dataTransfer.files), false);
+
+  const fileInput = document.getElementById("hmcl-verify-input");
+  if (!fileInput) return;
+
+  container.addEventListener("click", () => fileInput.click());
+  const resultElement = document.getElementById("hmcl-verify-alert");
+  const selectedFileElement = document.getElementById("hmcl-verify-file");
 
   if (!fileInput || !resultElement) {
     return;
   }
 
-  fileInput.addEventListener("change", async () => {
+  fileInput.addEventListener("change", async () => handleFiles(fileInput.files));
+
+  let verificationRequestId = 0;
+  async function handleFiles(files) {
     const requestId = ++verificationRequestId;
-    const file = fileInput.files && fileInput.files[0];
+    const file = files && files[0];
     if (!file) {
       setSelectedFileName("");
-      hideResult();
       return;
     }
 
     setSelectedFileName(file.name);
-    setResult("正在验证，请稍候...");
+    setResult("正在校验中");
 
     try {
       await verifyHmclFile(file);
@@ -54,16 +81,16 @@
         return;
       }
       setResult(
-        "验证通过，该文件是 HMCL 的官方构建，可以放心使用。",
+        "校验成功，该文件是 HMCL 的官方构建，可以放心使用",
         "ok"
       );
     } catch (error) {
       if (!isCurrentVerification(requestId)) {
         return;
       }
-      setResult(`验证失败。\n${formatVerificationError(error)}`, "error");
+      setResult(`校验失败，${formatVerificationError(error)}`, "error");
     }
-  });
+  }
 
   function isCurrentVerification(requestId) {
     return requestId === verificationRequestId;
@@ -359,44 +386,40 @@
   function formatVerificationError(error) {
     switch (error && error.code) {
       case VerificationErrorCode.MISSING_PUBLIC_KEY:
-        return "这不是可验证的 HMCL 文件，或者 HMCL 版本过低，无法验证。";
+        return "这不是可验证的 HMCL 文件，或者 HMCL 版本过低，无法验证";
 
       case VerificationErrorCode.MISSING_SIGNATURE:
-        return "这是非官方构建，请谨慎甄别其来源。";
+        return "这是非官方构建，请谨慎甄别其来源";
 
       case VerificationErrorCode.INVALID_PUBLIC_KEY:
       case VerificationErrorCode.INVALID_SIGNATURE:
       case VerificationErrorCode.INVALID_LAUNCHER_HEADER:
-        return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件。你可以从 HMCL 官方网站重新下载 HMCL。";
+        return "该 HMCL 文件可能被篡改或已损坏，请不要使用此文件；你可以从 HMCL 官方网站重新下载 HMCL";
 
       case VerificationErrorCode.INVALID_ZIP:
-        return "这个文件不是有效的 HMCL 文件，或文件已经损坏。";
+        return "这个文件不是有效的 HMCL 文件，或文件已经损坏";
 
       case VerificationErrorCode.UNSUPPORTED_ZIP:
-        return "暂不支持验证这种文件格式。";
+        return "暂不支持验证这种文件格式";
 
       case VerificationErrorCode.UNSUPPORTED_BROWSER:
-        return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox。";
+        return "当前浏览器不支持读取这个文件，请换用新版 Chrome、Edge 或 Firefox";
 
       default:
-        return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件。";
+        return "无法完成验证，请确认你选择的是从官方渠道下载的 HMCL 文件";
     }
   }
 
   function setResult(message, state) {
     resultElement.textContent = message;
-    resultElement.hidden = false;
-    if (state) {
-      resultElement.dataset.state = state;
+    resultElement.style.display = "block";
+    if (state === "ok") {
+      container.className = "notice--success";
+    } else if (state === "error") {
+      container.className = "notice--danger";
     } else {
-      delete resultElement.dataset.state;
+      container.className = "notice";
     }
-  }
-
-  function hideResult() {
-    resultElement.textContent = "";
-    resultElement.hidden = true;
-    delete resultElement.dataset.state;
   }
 
   function setSelectedFileName(fileName) {

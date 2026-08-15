@@ -105,6 +105,10 @@ module KramdownEnhancer
         if el.value == "a" && el.attr["href"].is_a?(String)
           el.attr["href"] = relative_url(el.attr["href"])
           el.options[:relative] = true
+        elsif el.value == "script" && el.attr["src"].is_a?(String)
+          puts el.attr["src"]
+          el.attr["src"] = relative_url(el.attr["src"])
+          el.options[:relative] = true
         elsif el.value == "img" && el.attr["src"].is_a?(String)
           src = el.attr["src"]
           el.attr["src"] = relative_url(el.attr["src"])
