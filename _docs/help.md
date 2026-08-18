@@ -4,6 +4,8 @@ date: 2023-08-09 11:12:00 +0800
 author: zkitefly
 ---
 
+test content.
+
 ## QQ 群聊
 
 Hello Minecraft! Launcher 的官方 QQ 群聊。
