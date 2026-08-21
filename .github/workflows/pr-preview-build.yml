@@ -13,8 +13,8 @@ concurrency:
 
 env:
   JEKYLL_ENV: production
+  CLOUDFLARE_PAGES_PROJECT_NAME: preview-hmcl-docs
   PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
-  PREVIEW_DOMAIN: "pr${{ github.event.pull_request.number }}.preview-hmcl-docs.pages.dev"
 
 jobs:
   pr-preview-build:
@@ -28,6 +28,8 @@ jobs:
         with:
           ruby-version: "3.4"
       - name: Build Artifact
+        env:
+          PREVIEW_DOMAIN: "pr${{ env.PULL_REQUEST_NUMBER }}.${{ env.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev"
         run: |
           echo "${{ env.PULL_REQUEST_NUMBER }}" > "${{ runner.temp }}/PULL_REQUEST_NUMBER"
           cat <<EOF > /home/runner/_action.yml
