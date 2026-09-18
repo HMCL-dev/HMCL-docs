@@ -18,6 +18,8 @@ title: 新手导航
 > 如果您遇到 BUG，请及时在 [HMCL/issues](https://github.com/HMCL-dev/HMCL/issues) 发送反馈。\
 > 您也可以在这里提交您的建议。
 
+这里是HMCL的官方帮助文档。如欲了解HMCL的使用方法、解决常见问题，请翻阅下方目录。如欲咨询崩溃原因，可前往[QQ群](https://docs.hmcl.net/groups.html)或[Discord群](https://discord.com/invite/jVvC7HfM6U)寻求帮助。
+
 {% include toc %}
 
 {% for group in site.data.navigation.docs -%}
