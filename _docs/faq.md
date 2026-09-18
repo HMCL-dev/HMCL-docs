@@ -1,6 +1,6 @@
 ---
 title: 各大问题集合
-date: 2026-09-12 23:50:00 +8000
+date: 2026-09-12 23:50:00 +0800
 authors:
   - LIPiston
   - Mine-diamond
