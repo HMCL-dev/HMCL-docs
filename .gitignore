@@ -3,6 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+!theme/minimal-mistakes/assets/js/vendor/
 Gemfile.lock
 .bundle
 /.idea/
