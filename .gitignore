@@ -6,3 +6,11 @@ vendor
 Gemfile.lock
 .bundle
 /.idea/
+node_modules/
+.cache/
+reports/
+playwright-report/
+test-results/
+.ci/
+__pycache__/
+.plans/

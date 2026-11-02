@@ -1,37 +1,57 @@
 kind: pipeline
 type: docker
-name: default
+name: docs
 
+platform:
+  os: linux
+  arch: amd64
+concurrency:
+  limit: 1
 clone:
   depth: 1
+trigger:
+  branch: [main]
+  event: [push, custom]
 
 steps:
-- name: build
-  image: ruby:3.4
-  environment:
-    JEKYLL_ENV: production
-    BUNDLE_PATH: vendor/bundle
-  commands:
-    - bundle config mirror.https://rubygems.org https://mirrors.cloud.tencent.com/rubygems
-    - bundle install --verbose
-    - bundle exec jekyll build --trace --verbose
-  volumes:
-  - name: dist
-    path: /drone/src/_site
-  - name: vendor
-    path: /drone/src/vendor
-  - name: jekyll-cache
-    path: /drone/src/.jekyll-cache
-  when:
-    branch: [main]
+  - name: build
+    image: node:24.18.0-bookworm-slim@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
+    environment:
+      COREPACK_NPM_REGISTRY: https://mirrors.cloud.tencent.com/npm
+    commands:
+      - corepack enable
+      - pnpm install --frozen-lockfile
+      - pnpm build
 
-volumes:
-- name: dist
-  host:
-    path: /home/ubuntu/docs.hmcl.net/www
-- name: vendor
-  host:
-    path: /home/ubuntu/docs.hmcl.net/cache/vendor
-- name: jekyll-cache
-  host:
-    path: /home/ubuntu/docs.hmcl.net/cache/jekyll-cache
+  - name: image
+    image: plugins/kaniko@sha256:c36f0ad14cec5b418f9ef72796d543e82aaaae56e6147fa7d7f23438fa0880c5
+    settings:
+      registry: registry.hmcl.net
+      repo: registry.hmcl.net/image/hmcl-docs
+      username:
+        from_secret: docs_registry_username
+      password:
+        from_secret: docs_registry_password
+      dockerfile: Dockerfile
+      context: .
+      registry_mirrors: [mirror.ccs.tencentyun.com]
+      build_args:
+        - DOCS_REVISION=${DRONE_COMMIT_SHA}
+      tags: [latest]
+      enable_cache: false
+
+  - name: deploy
+    image: appleboy/drone-ssh:1.8.4@sha256:99276dab0dc485e01ce2ffe1faab7af136808ad85734d84762aa46f61f7fb8d9
+    settings:
+      host:
+        from_secret: docs_deploy_host
+      username: docs-deploy
+      key:
+        from_secret: docs_deploy_key
+      fingerprint:
+        from_secret: docs_deploy_fingerprint
+      command_timeout: 5m
+      script_stop: true
+      script:
+        - sudo -H -n /usr/bin/docker-compose -p docshmclnet -f /data/docs.hmcl.net/docker-compose.yml pull nginx
+        - sudo -H -n /usr/bin/docker-compose -p docshmclnet -f /data/docs.hmcl.net/docker-compose.yml up -d --no-deps nginx

@@ -1,0 +1,2 @@
+overrides:
+  '@11ty/recursive-copy>minimatch': 11.0.3

@@ -1,0 +1,25 @@
+version: "2.4"
+services:
+  nginx:
+    image: "${DOCS_IMAGE:-registry.hmcl.net/image/hmcl-docs:latest}"
+    restart: unless-stopped
+    user: "101:101"
+    entrypoint: [nginx]
+    command: [-g, "daemon off;"]
+    ports: ["127.0.0.1:${DOCS_PORT:-3005}:8080"]
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    pids_limit: 64
+    mem_limit: 128m
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    stop_signal: SIGQUIT
+    stop_grace_period: 10s
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
