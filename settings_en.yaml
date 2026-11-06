@@ -1,0 +1,47 @@
+---
+title: Settings
+layout: settings
+data:
+  - title: Appearance
+    settings:
+      appearance_color:
+        title: Color Mode
+        description: Switches the color mode of the site theme.
+        options:
+          light: Light
+          dark: Dark
+          auto: Auto
+      appearance_color_switcher:
+        title: Color Mode Quick Switch
+        description: A switch to quickly change the color mode of the site theme, located at the top right of the page.
+        options:
+          enable: Enabled
+          disable: Disabled
+      appearance_skin:
+        title: Skin
+        description: The skin applied in each color mode.
+        children:
+          light: Light
+          dark: Dark
+        options:
+          default: Default
+          air: Air
+          aqua: Aqua
+          contrast: Contrast
+          dark: Dark
+          dirt: Dirt
+          neon: Neon
+          mint: Mint
+          plum: Plum
+          sunrise: Sunrise
+          catppuccin_latte: Catppuccin Latte
+          catppuccin_mocha: Catppuccin Mocha
+  - title: Miscellaneous
+    settings:
+      miscellaneous_hits:
+        title: Visit Statistics
+        description: A service that counts page visits.
+        options:
+          enable: Enabled
+          disable: Disabled
+---

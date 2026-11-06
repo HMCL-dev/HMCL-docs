@@ -1,0 +1,10 @@
+# 站点级多语言信息，键为语言代码。
+# 新增语言时，请同时补充对应语言的 _data/<locale>/navigation.yml。
+zh:
+  name: 简体中文
+  title: HMCL 文档
+  description: HMCL 启动器 \| 跨平台 \| 整合包管理 \| 自动安装 \| 十二年历史 \| 三亿次使用
+en:
+  name: English
+  title: HMCL Documentation
+  description: Hello Minecraft! Launcher \| Cross-platform \| Modpack management \| Automatic installation \| Twelve years of history \| 300 million uses

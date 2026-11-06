@@ -3,6 +3,12 @@
 
 {% include seo.html locale=locale %}
 
+{%- comment %} 多语言版本之间的 hreflang 标注 {% endcomment -%}
+{% if page.translation_url %}
+<link rel="alternate" hreflang="{{ page.alternate_locale }}" href="{{ page.translation_url | absolute_url }}">
+{% endif %}
+<link rel="alternate" hreflang="{{ page.lang | default: site.locale }}" href="{{ page.url | absolute_url }}">
+
 {% unless site.atom_feed.hide %}
   <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 {% endunless %}

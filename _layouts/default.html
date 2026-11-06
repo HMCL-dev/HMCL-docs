@@ -13,11 +13,11 @@ layout: compress
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
     {% if site.preview and site.preview.pr-number %}
-    <div class="notice--warning text-center m0" style="position: sticky; top: 0; z-index: 999; padding: 0.4em;">当前站点为预览构建而非官方文档。如需反馈问题，请前往 <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a> 留言。</div>
+    <div class="notice--warning text-center m0" style="position: sticky; top: 0; z-index: 999; padding: 0.4em;">{% if page.lang == "en" %}This is a preview build rather than the official documentation. Please leave feedback at <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a>.{% else %}当前站点为预览构建而非官方文档。如需反馈问题，请前往 <a href="https://github.com/HMCL-dev/HMCL-docs/pull/{{ site.preview.pr-number }}">#{{ site.preview.pr-number }}</a> 留言。{% endif %}</div>
     {% endif %}
 
-    {% include_cached skip-links.html locale=locale %}
-    {% include_cached masthead.html locale=locale %}
+    {% include skip-links.html locale=locale %}
+    {% include masthead.html locale=locale %}
 
     <div class="initial-content">
       {{ content }}
@@ -26,14 +26,14 @@ layout: compress
 
     {% if site.search == true %}
       <div class="search-content">
-        {% include_cached search/search_form.html locale=locale %}
+        {% include search/search_form.html locale=locale %}
       </div>
     {% endif %}
 
     <div id="footer" class="page__footer">
       <footer>
         {% include footer/custom.html %}
-        {% include_cached footer.html locale=locale %}
+        {% include footer.html locale=locale %}
       </footer>
     </div>
 

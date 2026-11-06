@@ -6,3 +6,8 @@
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 @import "minimal-mistakes/skins/default";
 @import "minimal-mistakes-plus";
+
+/* 多语言语言切换器 */
+.masthead__menu-item--lang a {
+  white-space: nowrap;
+}
