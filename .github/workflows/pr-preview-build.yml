@@ -1,0 +1,50 @@
+name: PR Preview Build
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  group: pr-preview-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  JEKYLL_ENV: production
+  CLOUDFLARE_PAGES_PROJECT_NAME: preview-hmcl-docs
+  PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+
+jobs:
+  pr-preview-build:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+      - name: Build Artifact
+        env:
+          PREVIEW_DOMAIN: "pr${{ env.PULL_REQUEST_NUMBER }}.${{ env.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev"
+        run: |
+          echo "${{ env.PULL_REQUEST_NUMBER }}" > "${{ runner.temp }}/PULL_REQUEST_NUMBER"
+          cat <<EOF > /home/runner/_action.yml
+          url: "https://${{ env.PREVIEW_DOMAIN }}"
+          source: "${{ github.workspace }}"
+          destination: "${{ runner.temp }}/site"
+          preview:
+            pr-number: "${{ env.PULL_REQUEST_NUMBER }}"
+          EOF
+          bundle install --jobs 4
+          bundle exec jekyll build --trace --config _config.yml,/home/runner/_action.yml
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: artifact
+          path: |
+            ${{ runner.temp }}/site
+            ${{ runner.temp }}/PULL_REQUEST_NUMBER
