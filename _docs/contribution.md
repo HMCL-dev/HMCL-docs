@@ -9,3 +9,5 @@ toc: false
 如果你认为你有能力为 HMCL 添加高质量的帮助文档，或希望修改错误，你可以到 [https://github.com/HMCL-dev/HMCL-docs](https://github.com/HMCL-dev/HMCL-docs) 仓库中发 Pull Request，或者提 Issue。
 
 或者你可以进入我们的 [Discord](https://discord.gg/jVvC7HfM6U) 或 [HMCL 用户群](/_docs/groups.md) 群以向 HMCL 反馈。
+
+你也可以帮助我们把文档翻译成其他语言：在中文原文所在目录下创建 `<name>_en.md` 翻译文件并提交 Pull Request，具体约定请参阅仓库 README 的「多语言」一节。

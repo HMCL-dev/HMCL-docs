@@ -1,0 +1,43 @@
+{% assign locale = include.locale | default: site.locale %}
+
+{%- comment -%}
+  多语言站点中同一集合里的中文与翻译文档会交错排列，直接使用
+  page.previous / page.next 会跳到另一种语言的页面，因此这里按当前
+  页面语言过滤后再取前后篇。
+{%- endcomment -%}
+{% assign previous_page = page.previous %}
+{% assign next_page = page.next %}
+
+{% if page.collection %}
+  {% assign siblings = site[page.collection] | where: "lang", locale %}
+  {% assign previous_page = nil %}
+  {% assign next_page = nil %}
+  {% assign current_found = false %}
+  {% for sibling in siblings %}
+    {% if current_found %}
+      {% if next_page == nil %}
+        {% assign next_page = sibling %}
+        {% break %}
+      {% endif %}
+    {% elsif sibling.url == page.url %}
+      {% assign current_found = true %}
+    {% else %}
+      {% assign previous_page = sibling %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if previous_page or next_page %}
+  <nav class="pagination" aria-label="Post pagination">
+    {% if previous_page %}
+      <a href="{{ previous_page.url | relative_url }}" class="pagination--pager" title="{{ previous_page.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_previous | default: "Previous" }}</a>
+    {% endif %}
+    {% if next_page %}
+      <a href="{{ next_page.url | relative_url }}" class="pagination--pager" title="{{ next_page.title | markdownify | strip_html | strip}}">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[locale].pagination_next | default: "Next" }}</a>
+    {% endif %}
+  </nav>
+{% endif %}

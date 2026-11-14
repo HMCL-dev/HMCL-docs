@@ -7,7 +7,7 @@ title: 新手导航
 > [!NOTE]
 > <!--{% endcomment %}-->
 > <!----{{ '>' }} **Notice** <br> {{ '<' }}!---->
-> The articles were written in Simplified Chinese. If you want to help translate them, please send a pull request to [HMCL-docs/pulls](https://github.com/HMCL-dev/HMCL-docs/pulls). Or you can enable your translation tool to read.\
+> An [English version](https://docs.hmcl.net/en/) of this documentation is available. The articles were written in Simplified Chinese; if you want to help translate them, please send a pull request to [HMCL-docs/pulls](https://github.com/HMCL-dev/HMCL-docs/pulls).\
 > If you encounter a BUG, please send feedback in time to [HMCL/issues](https://github.com/HMCL-dev/HMCL/issues).\
 > You can also submit your suggestions here.
 <!----{{ '>' }}
