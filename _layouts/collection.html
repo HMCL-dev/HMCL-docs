@@ -1,0 +1,18 @@
+---
+layout: archive
+---
+{% comment %}覆盖 minimal-mistakes 的 collection 布局：只列出当前页面语言的文章。{% endcomment %}
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign entries = site[page.collection] | where_exp: "item", "item.hidden != true" | where: "lang", locale %}
+{% if page.sort_by %}{% assign entries = entries | sort: page.sort_by %}{% endif %}
+{% if page.sort_order == 'reverse' %}{% assign entries = entries | reverse %}{% endif %}
+
+<div class="entries-{{ entries_layout }}">
+  {%- for post in entries -%}
+    {% include archive-single.html locale=locale type=entries_layout %}
+  {%- endfor -%}
+</div>

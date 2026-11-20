@@ -11,6 +11,8 @@ Hello Minecraft! Launcher 帮助文档仓库，使用 [Eleventy（11ty）](https
 
 [Hello Minecraft! Launcher 帮助文档仓库网站](https://docs.hmcl.net)
 
+[English documentation](https://docs.hmcl.net/en/)
+
 ## Markdown
 
 每篇文章由 Markdown 编写。如果你不知道什么是 Markdown，我们推荐你先大概了解一下这个排版工具。
@@ -55,7 +57,30 @@ assets
 
 ### 更新索引
 
-在添加或修改文章后，请更新索引文件 `index.json`，以便 HMCL 展示你新添加的文件。
+在添加或修改文章后，请更新索引文件 `index.json`，以便 HMCL 展示你新添加的文件。默认语言（简体中文）的文章会自动同步到 `index.json`，翻译文章不会出现在其中。
+
+### 多语言
+
+本站默认语言为简体中文。英文翻译文件与中文原文放在同一目录下，文件名追加 `_en` 后缀即可：
+
+```text
+_launcher/isolation.md      # 中文，输出 /launcher/isolation.html
+_launcher/isolation_en.md   # 英文，输出 /en/launcher/isolation.html
+```
+
+约定：
+
+- 翻译文件的 front matter **不需要**写 `permalink`、`lang`、`locale`，`_plugins/i18n.rb` 会自动继承中文原文的 URL 并在前面加上 `/en`。
+- 翻译文件需要翻译 `title`、`excerpt`/`description` 等元数据；`date`、`author`、`authors`、`layout` 等字段与原文保持一致。
+- 翻译文件不要保留 `redirect_from`，避免中英文重定向路径冲突。
+- 正文中的站内链接保持与中文原文相同的 URL 即可，构建时会自动改写为指向对应英文页面的链接（前提是该页面存在英文翻译）。
+- 站点标题、描述与导航分别由 `_data/i18n.yml`、`_data/en/navigation.yml` 提供。新增语言时，需要：
+  1. 在 `_config.yml` 的 `i18n.locales` 中登记语言代码；
+  2. 在 `_data/i18n.yml` 中补充站点标题与描述；
+  3. 新建 `_data/<locale>/navigation.yml` 导航文件；
+  4. 用 `_<locale>` 后缀创建翻译文件。
+- 页面标题栏右侧会显示语言切换入口，页面头部会自动输出 `hreflang` 标注。
+- 更新日志（`_changelogs/`）目前只有中文内容，英文更新日志页面直接展示中文条目，并附带说明。
 
 ### 本地部署
 

@@ -150,6 +150,15 @@ defaults:
 # Theme Settings
 theme: minimal-mistakes-jekyll
 
+# 多语言支持
+# 默认语言的内容保持原有 URL；其他语言使用 `_<locale>` 文件名后缀，
+# 由 _plugins/i18n.rb 自动生成 /<locale>/... 路径。
+i18n:
+  default_locale: zh
+  locales:
+    - zh
+    - en
+
 # Site Settings
 locale: zh
 # rtl:
