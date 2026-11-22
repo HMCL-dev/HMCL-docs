@@ -1,0 +1,27 @@
+---
+title: Download Java Required by HMCL and Minecraft for Windows on Arm
+date: 2022-12-03 17:30:00 +0800
+---
+
+The Java installation package has started to download. Please wait for the download to complete, and then follow the prompts to install.
+
+![windows-x86_64-1](/assets/img/docs/java-download-pages/windows-x86_64-1.gif)
+
+![windows-x86_64-2](/assets/img/docs/java-download-pages/windows-x86_64-2.gif)
+
+No redirect? [Click here to start downloading](https://aka.ms/download-jdk/microsoft-jdk-25-windows-aarch64.msi)
+
+Can't download? [Click here to download (alternative)](https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-25-windows-aarch64.msi)
+
+
+<script>
+    /* Wait 5 seconds. */
+    setTimeout(function() {
+        const isZhCN = /^zh-CN/i.test(navigator.language);
+        const url = isZhCN 
+            ? "https://alist.8mi.tech/d/mirror/ms-jdk/Auto/microsoft-jdk-25-windows-aarch64.msi" 
+            : "https://aka.ms/download-jdk/microsoft-jdk-25-windows-aarch64.msi";
+        location.href = url;
+    }, 5000);
+</script>
+

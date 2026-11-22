@@ -1,0 +1,63 @@
+main:
+  - title: Settings
+    url: /en/settings.html
+
+docs:
+  - title: Questions
+    children:
+      - title: FAQ
+        url: /en/faq.html
+      - title: Launcher Usage
+        url: /en/launcher/
+      - title: Modpack Help
+        url: /en/modpack/
+      - title: Multiplayer Help
+        url: /en/multiplayer/
+  - title: User Guide
+    children:
+      - title: Version Isolation
+        url: /en/launcher/isolation.html
+        description: This article helps you separate maps, mods and other content between game instances.
+      - title: Set an Offline Skin
+        url: /en/launcher/offline-skin.html
+        description: This article shows you how to set up your own offline skin.
+      - title: HMCL Auto-Installation Guide
+        url: /en/launcher/auto-installing.html
+        description: This article shows you how to use HMCL to install Forge, Fabric, Fabric API, LiteLoader, OptiFine, mods and more.
+      - title: Install Shaders
+        url: /en/launcher/shader.html
+        description: This article shows you how to install shaders.
+      - title: Settings Reference
+        url: /en/launcher/set-item-details.html
+        description: This article explains each HMCL setting in detail.
+  - title: Developer Guide
+    children:
+      - title: Create HMCL Datapacks
+        url: /en/launcher/datapack.html
+        description: This article shows you how to create datapacks that HMCL can recognize.
+      - title: Create a Modpack
+        url: /en/modpack/serverpack.html
+        description: This article shows you how to create a modpack.
+      - title: Add a Default authlib-injector Authentication Server
+        url: /en/launcher/authlib-injector.html
+        description: This article shows you how to configure a default authentication server.
+  - title: Changelogs
+    children:
+      - title: Stable
+        url: /en/changelog/stable.html
+      - title: Development
+        url: /en/changelog/dev.html
+  - title: Others
+    children:
+      - title: HMCL Verification
+        url: /en/verify.html
+      - title: User Agreement
+        url: /en/eula/hmcl.html
+      - title: Contributing Guide
+        url: /en/contribution.html
+      - title: Official Website
+        url: https://hmcl.huangyuhui.net
+      - title: Source Code
+        url: https://github.com/HMCL-dev/HMCL
+      - title: Documentation Repository
+        url: https://github.com/HMCL-dev/HMCL-docs
